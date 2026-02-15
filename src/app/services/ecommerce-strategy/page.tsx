@@ -48,7 +48,7 @@ export default function EcommerceStrategyPage() {
             </svg>
             All Services
           </Link>
-          <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">Strategy</span>
+          <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Strategy</span>
           <h1 className="text-3xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-4">
             E-commerce Strategy
           </h1>
@@ -105,7 +105,7 @@ export default function EcommerceStrategyPage() {
           </p>
           <Link
             href="/free-strategy-session"
-            className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Let&apos;s Build Your Growth Strategy
           </Link>

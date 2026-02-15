@@ -134,7 +134,7 @@ export default function AboutPage() {
         <div className="relative max-w-4xl mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_280px] gap-12 items-start">
             <div>
-              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">About</span>
+              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">About</span>
               <h1 className="text-3xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-3">
                 E-commerce Strategist &amp; Digital Transformation Consultant
               </h1>
@@ -194,7 +194,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">My Story</span>
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">My Story</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               How I Got Here
             </h2>
@@ -294,7 +294,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Values</span>
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Values</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               What Guides Me
             </h2>
@@ -318,7 +318,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Building</span>
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Building</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">
               What I&apos;m Building
             </h2>
@@ -364,7 +364,7 @@ export default function AboutPage() {
       {/* A Little More About Me */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-          <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Personal</span>
+          <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Personal</span>
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-6">
             A Little More About Me
           </h2>
@@ -374,7 +374,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 bg-brand-accent text-white font-semibold px-6 py-3 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+              className="inline-flex items-center gap-2 bg-brand-gold text-white font-semibold px-6 py-3 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
             >
               Start Here
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -406,7 +406,7 @@ export default function AboutPage() {
       {/* Connect */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-          <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Connect</span>
+          <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Connect</span>
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-4">
             Let&apos;s Connect
           </h2>

@@ -244,7 +244,7 @@ export default function GEOPage() {
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
 
         <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
-          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">Pillar Resource</span>
+          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Pillar Resource</span>
           <h1 className="text-3xl md:text-[2.75rem] font-bold text-white leading-tight tracking-tight mb-5">
             Generative Engine Optimization for E-commerce
           </h1>
@@ -253,7 +253,7 @@ export default function GEOPage() {
           </p>
           <Link
             href="/geo-audit"
-            className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Get a GEO Audit
           </Link>
@@ -345,7 +345,7 @@ export default function GEOPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Framework</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Framework</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               How I Approach GEO for E-commerce Brands
             </h2>
@@ -435,7 +435,7 @@ export default function GEOPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-10">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">FAQ</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">FAQ</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               Frequently Asked Questions
             </h2>
@@ -471,7 +471,7 @@ export default function GEOPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/geo-audit"
-              className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Get a GEO Audit
             </Link>

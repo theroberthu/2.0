@@ -133,7 +133,7 @@ export default function GeoAuditPage() {
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
 
         <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
-          <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">Free Audit</span>
+          <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Free Audit</span>
           <h1 className="text-3xl md:text-[2.75rem] font-bold text-white leading-tight tracking-tight mb-5">
             Get a GEO Audit for Your Brand
           </h1>
@@ -142,7 +142,7 @@ export default function GeoAuditPage() {
           </p>
           <Link
             href="/free-strategy-session"
-            className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Book Your GEO Audit
           </Link>
@@ -153,7 +153,7 @@ export default function GeoAuditPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">What You Get</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">What You Get</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               A Clear Picture of Your AI Visibility
             </h2>
@@ -207,7 +207,7 @@ export default function GeoAuditPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Process</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Process</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               How It Works
             </h2>
@@ -254,7 +254,7 @@ export default function GeoAuditPage() {
           </p>
           <Link
             href="/free-strategy-session"
-            className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Book Your GEO Audit — Free 30-Minute Call
           </Link>

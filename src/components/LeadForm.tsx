@@ -127,7 +127,7 @@ export default function LeadForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-brand-accent text-white font-semibold px-6 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 disabled:opacity-50 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        className="w-full bg-brand-gold text-white font-semibold px-6 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 disabled:opacity-50 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
       >
         {loading ? 'Submitting...' : 'Book My Free Strategy Session'}
       </button>

@@ -31,14 +31,14 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-[13px] font-medium text-gray-400 hover:text-brand-gold transition-colors duration-200"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/free-strategy-session"
-            className="text-[13px] font-semibold bg-brand-accent text-white px-5 py-2.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-sm hover:shadow-md"
+            className="text-[13px] font-semibold bg-brand-gold text-white px-5 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-sm hover:shadow-md"
           >
             Free Strategy Session
           </Link>
@@ -74,7 +74,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-[15px] font-medium text-gray-400 hover:text-white py-2.5 px-3 rounded-md hover:bg-white/[0.05] transition-all duration-200"
+                className="text-[15px] font-medium text-gray-400 hover:text-brand-gold py-2.5 px-3 rounded-md hover:bg-white/[0.05] transition-all duration-200"
               >
                 {link.label}
               </Link>
@@ -83,7 +83,7 @@ export default function Header() {
               <Link
                 href="/free-strategy-session"
                 onClick={() => setMobileOpen(false)}
-                className="block text-[15px] font-semibold bg-brand-accent text-white px-5 py-3 rounded-md text-center hover:bg-brand-accent/85 transition-all duration-200"
+                className="block text-[15px] font-semibold bg-brand-gold text-white px-5 py-3 rounded-md text-center hover:bg-brand-gold/85 transition-all duration-200"
               >
                 Free Strategy Session
               </Link>

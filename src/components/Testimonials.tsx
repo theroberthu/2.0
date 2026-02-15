@@ -30,7 +30,7 @@ function StarRating({ rating }: { rating: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          className={`w-4 h-4 ${i < rating ? 'text-yellow-400' : 'text-gray-600'}`}
+          className={`w-4 h-4 ${i < rating ? 'text-brand-gold' : 'text-gray-600'}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -73,7 +73,7 @@ export default function Testimonials() {
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="text-center mb-12">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">
             Testimonials
           </span>
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">

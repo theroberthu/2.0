@@ -109,8 +109,8 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Text */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-brand-accent/[0.12] text-brand-accent text-[11px] font-semibold uppercase tracking-[0.15em] px-3.5 py-1.5 rounded-full mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
+              <div className="inline-flex items-center gap-2 bg-brand-gold/[0.12] text-brand-gold text-[11px] font-semibold uppercase tracking-[0.15em] px-3.5 py-1.5 rounded-full mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
                 E-commerce Strategy
               </div>
               <h1 className="text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-bold text-white leading-[1.15] tracking-tight mb-5">
@@ -122,7 +122,7 @@ export default async function HomePage() {
               <div className="flex flex-col sm:flex-row gap-3 mb-10">
                 <Link
                   href="/free-strategy-session"
-                  className="bg-brand-accent text-white font-semibold px-7 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center"
+                  className="bg-brand-gold text-white font-semibold px-7 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center"
                 >
                   Book a Free Strategy Session
                 </Link>
@@ -258,7 +258,7 @@ export default async function HomePage() {
           <div className="mt-10">
             <Link
               href="/free-strategy-session"
-              className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Free Strategy Session
             </Link>
@@ -272,7 +272,7 @@ export default async function HomePage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block font-mono">Services</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block font-mono">Services</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">How I Can Help</h2>
             <p className="text-sm text-gray-400 max-w-lg mx-auto">Strategic consulting for brand owners who want to grow smarter, not just faster.</p>
           </div>
@@ -342,7 +342,7 @@ export default async function HomePage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Process</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Process</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">My Approach: Clarity Before Action</h2>
             <p className="text-sm text-gray-400 max-w-lg mx-auto">Every engagement follows a simple, repeatable process designed to get you results without wasted time or money.</p>
           </div>
@@ -374,7 +374,7 @@ export default async function HomePage() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Featured Work</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Featured Work</span>
               <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">Results That Speak for Themselves</h2>
             </div>
             <Link href="/case-studies" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">
@@ -415,7 +415,7 @@ export default async function HomePage() {
           <div className="max-w-6xl mx-auto px-5 sm:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
               <div>
-                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Blog</span>
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Blog</span>
                 <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">Latest Insights</h2>
               </div>
               <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">

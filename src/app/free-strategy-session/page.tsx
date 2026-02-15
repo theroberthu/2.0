@@ -76,7 +76,7 @@ export default function FreeStrategySessionPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left - Hero text */}
             <div className="lg:sticky lg:top-28">
-              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">Free Session</span>
+              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Free Session</span>
               <h1 className="text-3xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-4">
                 Let&apos;s Talk About Growing Your E-commerce Brand
               </h1>
@@ -119,7 +119,7 @@ export default function FreeStrategySessionPage() {
       <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-10">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Process</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Process</span>
             <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">
               What to Expect
             </h2>
@@ -164,7 +164,7 @@ export default function FreeStrategySessionPage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-2xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-10">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">FAQ</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">FAQ</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
               Common Questions
             </h2>
