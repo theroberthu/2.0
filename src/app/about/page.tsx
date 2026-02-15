@@ -8,12 +8,12 @@ import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Robert Hu is an e-commerce strategist with 15+ years of experience helping brands implement AI and digital transformation strategies.',
+    'Robert Hu is an e-commerce strategist with 20+ years of experience helping brands implement AI and digital transformation strategies.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Robert Hu',
     description:
-      'E-commerce strategist with 15+ years of experience helping brands grow with AI and digital transformation.',
+      'E-commerce strategist with 20+ years of experience helping brands grow with AI and digital transformation.',
     url: `${SITE_URL}/about`,
   },
 }
@@ -80,7 +80,7 @@ export default function AboutPage() {
               </p>
               <div className="space-y-5 text-[15px] text-brand-muted leading-relaxed">
             <p>
-              I&apos;ve spent 15+ years building, optimizing, and scaling e-commerce
+              I&apos;ve spent 20+ years building, optimizing, and scaling e-commerce
               businesses. I currently work as a Merchandising Manager at a leading consumer brand, where
               I lead digital marketing and e-commerce strategy. Before that, I built
               and ran my own online businesses from the ground up.

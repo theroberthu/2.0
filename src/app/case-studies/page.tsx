@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
             Results That Speak for Themselves
           </h1>
           <p className="text-base text-gray-400 max-w-xl mx-auto">
-            Real outcomes from 15+ years of e-commerce strategy. Client details anonymized.
+            Real outcomes from 20+ years of e-commerce strategy. Client details anonymized.
           </p>
         </div>
       </section>

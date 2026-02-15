@@ -67,7 +67,7 @@ export default function EcommerceStrategyPage() {
             <h2 className="text-xl font-semibold text-white">What I Do</h2>
           </div>
           <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
-            Help brands build growth strategies across marketplaces and DTC channels. Listing optimization, catalog strategy, pricing, competitive positioning, and channel expansion. I use AI tools to accelerate research and analysis, but every recommendation is grounded in 15+ years of hands-on e-commerce experience.
+            Help brands build growth strategies across marketplaces and DTC channels. Listing optimization, catalog strategy, pricing, competitive positioning, and channel expansion. I use AI tools to accelerate research and analysis, but every recommendation is grounded in 20+ years of hands-on e-commerce experience.
           </p>
         </div>
       </section>
