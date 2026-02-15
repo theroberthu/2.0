@@ -2,16 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
 import { CASE_STUDIES } from '@/lib/case-studies-data'
-import ServiceCard from '@/components/ServiceCard'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
 
 export default async function HomePage() {
-  const { data: services } = await supabase
-    .from('services')
-    .select('*')
-    .order('created_at', { ascending: true })
-
   const { data: posts } = await supabase
     .from('blog_posts')
     .select('*')
@@ -166,22 +160,76 @@ export default async function HomePage() {
       </section>
 
       {/* Services grid */}
-      {services && services.length > 0 && (
-        <section className="py-20 md:py-28">
-          <div className="max-w-6xl mx-auto px-5 sm:px-8">
-            <div className="text-center mb-14">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Services</span>
-              <h2 className="text-2xl md:text-[2rem] font-bold text-brand-dark tracking-tight mb-3">How I Can Help</h2>
-              <p className="text-sm text-brand-muted max-w-md mx-auto">Focused consulting engagements designed to get you from where you are to where you want to be.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {services.map((service) => (
-                <ServiceCard key={service.id} service={service} />
-              ))}
-            </div>
+      <section className="relative py-20 md:py-28 bg-brand-dark overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-14">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block font-mono">Services</span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">How I Can Help</h2>
+            <p className="text-sm text-gray-400 max-w-lg mx-auto">Strategic consulting for brand owners who want to grow smarter, not just faster.</p>
           </div>
-        </section>
-      )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'E-commerce Strategy',
+                slug: 'ai-ecommerce-consulting',
+                desc: 'Strategic consulting for brands selling on Amazon, Walmart, and DTC — from listing optimization to full-channel growth planning. AI-enhanced workflows, human-driven decisions.',
+                icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+                label: 'Strategy',
+              },
+              {
+                title: 'Product Listing Optimization & GEO',
+                slug: 'product-listing-optimization',
+                desc: 'Your listings need to convert humans AND rank in AI-powered search. I optimize product detail pages for traditional SEO and Generative Engine Optimization (GEO) — so your products show up whether customers are browsing Amazon or asking ChatGPT.',
+                icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
+                label: 'Optimization',
+              },
+              {
+                title: 'Digital Marketing Strategy',
+                slug: 'ai-marketing-strategy',
+                desc: 'Marketing strategy built for the AI era. From GEO readiness to paid advertising and content strategy, I help brands stay visible as search evolves from keywords to conversations.',
+                icon: 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z',
+                label: 'Marketing',
+              },
+              {
+                title: 'Digital Transformation',
+                slug: 'digital-transformation',
+                desc: 'Modernize your e-commerce operations with AI-powered workflows, better tooling, and smarter processes. Technology should serve your strategy, not replace your judgment.',
+                icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+                label: 'Transformation',
+              },
+            ].map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 hover:-translate-y-1 hover:border-brand-accent/40 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-brand-accent/[0.12] flex items-center justify-center">
+                    <svg className="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={service.icon} />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/70">{service.label}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-brand-accent transition-colors duration-200">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed mb-5">
+                  {service.desc}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent group-hover:gap-2.5 transition-all duration-200">
+                  Learn more
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Approach */}
       <section className="py-20 md:py-28 bg-white border-y border-gray-100">
