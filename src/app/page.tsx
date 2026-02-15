@@ -145,7 +145,7 @@ export default async function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
             {[
               { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', label: '15+ Years in E-commerce' },
-              { icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', label: 'Merchandising Manager at Kent' },
+              { icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', label: 'E-commerce Merchandising Lead' },
               { icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z', label: 'Creator of The Vibe Marketing OS' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-2.5">
@@ -173,7 +173,7 @@ export default async function HomePage() {
             {[
               {
                 title: 'E-commerce Strategy',
-                slug: 'ai-ecommerce-consulting',
+                slug: 'ecommerce-strategy',
                 desc: 'Strategic consulting for brands selling on Amazon, Walmart, and DTC — from listing optimization to full-channel growth planning. AI-enhanced workflows, human-driven decisions.',
                 icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
                 label: 'Strategy',
@@ -187,7 +187,7 @@ export default async function HomePage() {
               },
               {
                 title: 'Digital Marketing Strategy',
-                slug: 'ai-marketing-strategy',
+                slug: 'digital-marketing-strategy',
                 desc: 'Marketing strategy built for the AI era. From GEO readiness to paid advertising and content strategy, I help brands stay visible as search evolves from keywords to conversations.',
                 icon: 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z',
                 label: 'Marketing',

@@ -4,6 +4,14 @@ import { CASE_STUDIES } from '@/lib/case-studies-data'
 
 const SITE_URL = process.env.SITE_URL || 'https://theroberthu.com'
 
+// Hardcoded service slugs (no longer fetched from Supabase)
+const SERVICE_SLUGS = [
+  'ecommerce-strategy',
+  'product-listing-optimization',
+  'digital-marketing-strategy',
+  'digital-transformation',
+]
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   const staticPages = [
@@ -23,23 +31,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  // Dynamic service pages
-  const { data: services } = await supabase.from('services').select('slug')
-  const servicePages = (services || []).map((s: { slug: string }) => ({
-    url: `${SITE_URL}/services/${s.slug}`,
+  // Service pages (hardcoded)
+  const servicePages = SERVICE_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/services/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  // Dynamic blog pages
-  const { data: posts } = await supabase.from('blog_posts').select('slug, published_at').eq('published', true)
-  const blogPages = (posts || []).map((p: { slug: string; published_at: string }) => ({
-    url: `${SITE_URL}/blog/${p.slug}`,
-    lastModified: new Date(p.published_at),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
+  // Dynamic blog pages (still from Supabase)
+  let blogPages: MetadataRoute.Sitemap = []
+  try {
+    const { data: posts } = await supabase.from('blog_posts').select('slug, published_at').eq('published', true)
+    blogPages = (posts || []).map((p: { slug: string; published_at: string }) => ({
+      url: `${SITE_URL}/blog/${p.slug}`,
+      lastModified: new Date(p.published_at),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  } catch {
+    // If Supabase is unavailable, skip blog pages in sitemap
+  }
 
   return [...staticPages, ...caseStudyPages, ...servicePages, ...blogPages]
 }
