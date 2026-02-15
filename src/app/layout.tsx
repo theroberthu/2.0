@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { DM_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -58,6 +58,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#1a2a32',
 }
 
 const personSchema = {

@@ -20,6 +20,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'E-commerce Strategy',
+  serviceType: 'E-commerce Consulting',
   description:
     'Strategic consulting for brands selling on Amazon, Walmart, and DTC — from listing optimization to full-channel growth planning.',
   provider: {

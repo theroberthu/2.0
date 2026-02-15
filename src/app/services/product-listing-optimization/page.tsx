@@ -20,6 +20,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Product Listing Optimization & GEO',
+  serviceType: 'Product Listing Optimization',
   description:
     'Full listing audits covering keyword strategy, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered product discovery.',
   provider: {

@@ -20,6 +20,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Digital Transformation',
+  serviceType: 'Digital Transformation Consulting',
   description:
     'E-commerce tech stack evaluation, AI tool implementation, process automation, and workflow optimization for growing brands.',
   provider: {

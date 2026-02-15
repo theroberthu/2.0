@@ -63,9 +63,17 @@ export default async function BlogPostPage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Robert Hu',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Robert Hu',
+      url: SITE_URL,
     },
     url: `${SITE_URL}/blog/${post.slug}`,
+    image: `${SITE_URL}/images/robert-hu-headshot.png`,
     ...(post.published_at && { datePublished: post.published_at }),
+    ...(post.updated_at && { dateModified: post.updated_at }),
   }
 
   return (

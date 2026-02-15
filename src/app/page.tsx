@@ -1,9 +1,57 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
 import { CASE_STUDIES } from '@/lib/case-studies-data'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
+import SchemaMarkup from '@/components/SchemaMarkup'
+import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Robert Hu \u2014 E-commerce Strategist & Digital Transformation Consultant',
+  },
+  description:
+    'Helping $100K\u2013$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Robert Hu \u2014 E-commerce Strategist & Digital Transformation Consultant',
+    description:
+      'Helping $100K\u2013$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
+    url: SITE_URL,
+  },
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Robert Hu',
+  url: SITE_URL,
+  description:
+    'E-commerce strategist helping $100K\u2013$2M brands implement AI and digital transformation strategies that actually work.',
+  publisher: {
+    '@type': 'Person',
+    name: 'Robert Hu',
+    url: SITE_URL,
+  },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Robert Hu Consulting',
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/theroberthulogo.png`,
+  sameAs: [
+    SOCIAL_LINKS.linkedin,
+    SOCIAL_LINKS.x,
+    SOCIAL_LINKS.youtube,
+    SOCIAL_LINKS.instagram,
+  ],
+  description:
+    'E-commerce strategy, product listing optimization, GEO, digital marketing, and digital transformation consulting for growing brands.',
+}
 
 export default async function HomePage() {
   const { data: posts } = await supabase
@@ -18,6 +66,9 @@ export default async function HomePage() {
 
   return (
     <>
+      <SchemaMarkup data={websiteSchema} />
+      <SchemaMarkup data={organizationSchema} />
+
       {/* Hero - Split layout */}
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-bg via-white to-brand-bg">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1a3a4a 1px, transparent 0)', backgroundSize: '32px 32px' }} />

@@ -2,17 +2,41 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { CASE_STUDIES } from '@/lib/case-studies-data'
 import CTABanner from '@/components/CTABanner'
+import SchemaMarkup from '@/components/SchemaMarkup'
+import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Case Studies',
   description:
     'Real results from real e-commerce brands. See how AI and digital transformation strategies drive growth.',
   alternates: { canonical: '/case-studies' },
+  openGraph: {
+    title: 'Case Studies | Robert Hu \u2014 E-commerce Strategist',
+    description:
+      'Real results from real e-commerce brands. See how AI and digital transformation strategies drive growth.',
+    url: `${SITE_URL}/case-studies`,
+  },
+}
+
+const caseStudiesCollectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Case Studies \u2014 Robert Hu',
+  description:
+    'Real results from real e-commerce brands. See how AI and digital transformation strategies drive growth.',
+  url: `${SITE_URL}/case-studies`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Robert Hu',
+    url: SITE_URL,
+  },
 }
 
 export default function CaseStudiesPage() {
   return (
     <>
+      <SchemaMarkup data={caseStudiesCollectionSchema} />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #2d7d9a 1px, transparent 0)', backgroundSize: '32px 32px' }} />

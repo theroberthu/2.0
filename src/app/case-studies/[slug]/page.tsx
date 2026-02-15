@@ -48,8 +48,16 @@ export default function CaseStudyPage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Robert Hu',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Robert Hu',
+      url: SITE_URL,
     },
     url: `${SITE_URL}/case-studies/${cs.slug}`,
+    image: `${SITE_URL}/images/robert-hu-headshot.png`,
+    articleSection: cs.category,
   }
 
   return (

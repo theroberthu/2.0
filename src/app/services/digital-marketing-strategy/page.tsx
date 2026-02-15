@@ -20,6 +20,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Digital Marketing Strategy',
+  serviceType: 'Digital Marketing Strategy',
   description:
     'Marketing strategy built for the AI era — GEO readiness, paid advertising, content strategy, and cross-channel planning.',
   provider: {

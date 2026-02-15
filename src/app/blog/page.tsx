@@ -1,12 +1,34 @@
 import { Metadata } from 'next'
 import { supabase } from '@/lib/supabase'
 import BlogCard from '@/components/BlogCard'
+import SchemaMarkup from '@/components/SchemaMarkup'
+import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
   alternates: { canonical: '/blog' },
+  openGraph: {
+    title: 'Blog | Robert Hu \u2014 E-commerce Strategist',
+    description:
+      'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
+    url: `${SITE_URL}/blog`,
+  },
+}
+
+const blogCollectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Blog \u2014 Robert Hu',
+  description:
+    'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
+  url: `${SITE_URL}/blog`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Robert Hu',
+    url: SITE_URL,
+  },
 }
 
 export default async function BlogPage() {
@@ -18,6 +40,8 @@ export default async function BlogPage() {
 
   return (
     <>
+      <SchemaMarkup data={blogCollectionSchema} />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-bg via-white to-brand-bg py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1a3a4a 1px, transparent 0)', backgroundSize: '32px 32px' }} />

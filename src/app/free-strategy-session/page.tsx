@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import LeadForm from '@/components/LeadForm'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -15,9 +16,32 @@ export const metadata: Metadata = {
   },
 }
 
+const strategySessionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Free E-commerce Strategy Session',
+  description:
+    'A free 30-minute strategy session to discuss how AI and digital transformation can grow your e-commerce brand. No sales pitch, no obligation.',
+  provider: {
+    '@type': 'Person',
+    name: 'Robert Hu',
+    url: SITE_URL,
+  },
+  url: `${SITE_URL}/free-strategy-session`,
+  serviceType: 'Consulting',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    description: 'Free 30-minute strategy session',
+  },
+}
+
 export default function FreeStrategySessionPage() {
   return (
     <>
+      <SchemaMarkup data={strategySessionSchema} />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-bg via-white to-brand-bg py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1a3a4a 1px, transparent 0)', backgroundSize: '32px 32px' }} />
