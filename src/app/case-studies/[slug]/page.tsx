@@ -87,6 +87,33 @@ export default function CaseStudyPage({ params }: Props) {
       {/* Content */}
       <article className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 space-y-16">
+          {/* The Brand (if expanded) */}
+          {cs.brandDescription && (
+            <section>
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-9 h-9 rounded-lg bg-brand-accent/[0.12] flex items-center justify-center">
+                  <svg className="w-[18px] h-[18px] text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h2 className="text-xl font-semibold text-white">The Brand</h2>
+              </div>
+              <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
+                {cs.brandDescription}
+              </p>
+              {cs.timeline && (
+                <div className="mt-4 pl-12">
+                  <span className="inline-flex items-center gap-2 text-[13px] font-mono font-semibold text-brand-accent bg-brand-accent/[0.1] px-3 py-1.5 rounded-lg">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Timeline: {cs.timeline}
+                  </span>
+                </div>
+              )}
+            </section>
+          )}
+
           {/* The Challenge */}
           <section>
             <div className="flex items-center gap-3 mb-5">
@@ -97,12 +124,22 @@ export default function CaseStudyPage({ params }: Props) {
               </div>
               <h2 className="text-xl font-semibold text-white">The Challenge</h2>
             </div>
-            <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
-              {cs.challenge}
-            </p>
+            {cs.challengeExpanded ? (
+              <div className="space-y-4 pl-12">
+                {cs.challengeExpanded.map((paragraph, i) => (
+                  <p key={i} className="text-[15px] text-gray-400 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
+                {cs.challenge}
+              </p>
+            )}
           </section>
 
-          {/* The Approach */}
+          {/* The Approach / What I Did */}
           <section>
             <div className="flex items-center gap-3 mb-5">
               <div className="w-9 h-9 rounded-lg bg-blue-500/[0.12] flex items-center justify-center">
@@ -110,11 +147,22 @@ export default function CaseStudyPage({ params }: Props) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
-              <h2 className="text-xl font-semibold text-white">The Approach</h2>
+              <h2 className="text-xl font-semibold text-white">{cs.approachSteps ? 'What I Did' : 'The Approach'}</h2>
             </div>
-            <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
-              {cs.approach}
-            </p>
+            {cs.approachSteps ? (
+              <div className="space-y-6 pl-12">
+                {cs.approachSteps.map((step, i) => (
+                  <div key={i} className="relative">
+                    <h3 className="text-sm font-semibold text-white mb-2">{step.label}</h3>
+                    <p className="text-[15px] text-gray-400 leading-relaxed">{step.description}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
+                {cs.approach}
+              </p>
+            )}
           </section>
 
           {/* The Results */}
