@@ -53,25 +53,25 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case study cards grid */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {CASE_STUDIES.map((cs) => (
               <Link
                 key={cs.slug}
                 href={`/case-studies/${cs.slug}`}
-                className="group relative bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-7 md:p-8 hover:border-brand-accent/30 hover:-translate-y-1 hover:shadow-elevated transition-all duration-300 bg-gradient-to-br from-brand-dark/40 to-transparent"
+                className="group bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 md:p-8 hover:border-brand-accent/40 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300"
               >
                 {/* Category tag */}
-                <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.08] px-3 py-1 rounded-full mb-5">
+                <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-white/[0.1] px-3 py-1 rounded-full mb-5">
                   {cs.category}
                 </span>
 
-                <h2 className="text-lg font-semibold text-brand-dark group-hover:text-brand-accent transition-colors duration-200 leading-snug mb-3">
+                <h2 className="text-lg font-semibold text-white leading-snug mb-3">
                   {cs.title}
                 </h2>
 
-                <p className="text-sm text-brand-muted leading-relaxed mb-6">
+                <p className="text-sm text-gray-400 leading-relaxed mb-6">
                   {cs.resultTeaser}
                 </p>
 

@@ -22,28 +22,33 @@ export type BlogCategory =
   | 'Digital Transformation'
   | 'The Messy Middle'
 
+export interface BlogPostSchemaJson {
+  faq_data?: { q: string; a: string }[]
+  has_faq_schema?: boolean
+  related_posts?: string[]
+  related_services?: string[]
+  featured_image_alt?: string
+  author?: string
+}
+
 export interface BlogPost {
   id: string
   slug: string
   title: string
   excerpt: string | null
   content: string | null
-  published: boolean
-  published_at: string | null
   meta_title: string | null
   meta_description: string | null
-  featured_image: string | null
-  featured_image_alt: string | null
-  category: BlogCategory | null
-  author: string | null
-  keywords: string[] | null
-  related_posts: string[] | null
-  related_services: string[] | null
-  reading_time: number | null
-  has_faq_schema: boolean | null
-  faq_data: { q: string; a: string }[] | null
-  updated_at: string | null
+  og_image: string | null
+  category: string | null
+  tags: string[] | null
+  status: string
+  featured: boolean
+  read_time_minutes: number | null
+  schema_json: BlogPostSchemaJson | null
+  published_at: string | null
   created_at: string
+  updated_at: string | null
 }
 
 export interface CaseStudy {

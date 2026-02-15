@@ -21,7 +21,7 @@ export async function generateStaticParams() {
   const { data: posts } = await supabase
     .from('blog_posts')
     .select('slug')
-    .eq('published', true)
+    .eq('status', 'published')
   return (posts || []).map((p) => ({ slug: p.slug }))
 }
 
@@ -35,8 +35,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   if (!post) return {}
 
-  const ogImages = post.featured_image
-    ? [{ url: post.featured_image, width: 1200, height: 630, alt: post.featured_image_alt || post.title }]
+  const ogImages = post.og_image
+    ? [{ url: post.og_image, width: 1200, height: 630, alt: post.schema_json?.featured_image_alt || post.title }]
     : [{ url: '/images/robert-hu-headshot.png', width: 1200, height: 630, alt: 'Robert Hu' }]
 
   return {
@@ -52,12 +52,12 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       ...(post.published_at && { publishedTime: post.published_at }),
       ...(post.updated_at && { modifiedTime: post.updated_at }),
       ...(post.category && { section: post.category }),
-      ...(post.keywords && { tags: post.keywords }),
+      ...(post.tags && { tags: post.tags }),
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@throberthu',
-      creator: '@throberthu',
+      site: '@theroberthu',
+      creator: '@theroberthu',
       title: post.meta_title || post.title,
       description: post.meta_description || post.excerpt || '',
       images: ogImages.map((img) => img.url),
@@ -107,17 +107,18 @@ export default async function BlogPostPage(props: Props) {
 
   // Fetch related posts
   let relatedPosts: typeof post[] = []
-  if (post.related_posts && post.related_posts.length > 0) {
+  const relatedPostSlugs = post.schema_json?.related_posts
+  if (relatedPostSlugs && relatedPostSlugs.length > 0) {
     const { data } = await supabase
       .from('blog_posts')
       .select('*')
-      .in('slug', post.related_posts)
-      .eq('published', true)
+      .in('slug', relatedPostSlugs)
+      .eq('status', 'published')
       .limit(3)
     relatedPosts = data || []
   }
 
-  const ctaProps = getCTAProps(post.slug, post.related_services)
+  const ctaProps = getCTAProps(post.slug, post.schema_json?.related_services)
 
   return (
     <>
@@ -151,7 +152,7 @@ export default async function BlogPostPage(props: Props) {
 
           {/* Author / Date / Reading time */}
           <div className="flex flex-wrap items-center gap-3 text-[13px] text-gray-400">
-            <span className="font-medium text-gray-300">{post.author || 'Robert Hu'}</span>
+            <span className="font-medium text-gray-300">{post.schema_json?.author || 'Robert Hu'}</span>
             {post.published_at && (
               <>
                 <span className="text-gray-600">·</span>
@@ -164,20 +165,20 @@ export default async function BlogPostPage(props: Props) {
                 </time>
               </>
             )}
-            {post.reading_time && (
+            {post.read_time_minutes && (
               <>
                 <span className="text-gray-600">·</span>
-                <span>{post.reading_time} min read</span>
+                <span>{post.read_time_minutes} min read</span>
               </>
             )}
           </div>
 
           {/* Featured image */}
-          {post.featured_image && (
+          {post.og_image && (
             <div className="relative w-full aspect-[1200/630] mt-8 rounded-xl overflow-hidden">
               <Image
-                src={post.featured_image}
-                alt={post.featured_image_alt || post.title}
+                src={post.og_image}
+                alt={post.schema_json?.featured_image_alt || post.title}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 720px"

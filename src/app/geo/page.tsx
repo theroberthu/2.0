@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@throberthu',
-    creator: '@throberthu',
+    site: '@theroberthu',
+    creator: '@theroberthu',
     title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu',
     description:
       'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
@@ -37,8 +37,8 @@ const articleSchema = {
     url: `${SITE_URL}/about`,
     jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
     sameAs: [
-      'https://www.linkedin.com/in/throberthu',
-      'https://x.com/throberthu',
+      'https://www.linkedin.com/in/theroberthu',
+      'https://x.com/theroberthu',
     ],
   },
   publisher: {
@@ -252,7 +252,7 @@ export default function GEOPage() {
             Your products need to show up in AI-powered search, not just Google. Here&apos;s how.
           </p>
           <Link
-            href="/free-strategy-session"
+            href="/geo-audit"
             className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Get a GEO Audit
@@ -301,7 +301,7 @@ export default function GEOPage() {
             ))}
           </div>
           <p className="text-base text-gray-300 leading-relaxed">
-            Early movers have a massive advantage. Most brands haven&apos;t even started thinking about this. Robert Hu has been working at the intersection of e-commerce and AI for over 20 years, and GEO is where both of those worlds converge.
+            Early movers have a massive advantage. Most brands haven&apos;t even started thinking about this. Robert Hu has been working at the intersection of e-commerce and AI for 20+ years, and GEO is where both of those worlds converge.
           </p>
         </div>
       </section>
@@ -470,7 +470,7 @@ export default function GEOPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/free-strategy-session"
+              href="/geo-audit"
               className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Get a GEO Audit

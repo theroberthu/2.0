@@ -10,10 +10,10 @@ export default function BlogCard({ post }: { post: BlogPost }) {
     >
       {/* Featured image */}
       <div className="relative w-full aspect-[1200/630] bg-gradient-to-br from-brand-deep/60 to-brand-dark/80">
-        {post.featured_image ? (
+        {post.og_image ? (
           <Image
-            src={post.featured_image}
-            alt={post.featured_image_alt || post.title}
+            src={post.og_image}
+            alt={post.schema_json?.featured_image_alt || post.title}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -29,7 +29,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
       <div className="p-6">
         {/* Category tag */}
-        {post.category && (
+        {post.category && post.category !== 'general' && (
           <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full mb-3">
             {post.category}
           </span>
@@ -57,11 +57,11 @@ export default function BlogCard({ post }: { post: BlogPost }) {
                 })}
               </time>
             )}
-            {post.reading_time && (
+            {post.read_time_minutes && (
               <>
                 <span className="text-gray-600">·</span>
                 <span className="text-[11px] font-medium text-gray-500">
-                  {post.reading_time} min read
+                  {post.read_time_minutes} min read
                 </span>
               </>
             )}

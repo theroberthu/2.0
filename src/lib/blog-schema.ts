@@ -29,11 +29,11 @@ export function generateArticleSchema(post: BlogPost) {
       '@type': 'WebPage',
       '@id': `${SITE_URL}/blog/${post.slug}`,
     },
-    image: post.featured_image
-      ? `${SITE_URL}${post.featured_image}`
+    image: post.og_image
+      ? `${SITE_URL}${post.og_image}`
       : `${SITE_URL}/images/theroberthulogo.png`,
     articleSection: post.category || 'E-commerce Strategy',
-    keywords: post.keywords || [],
+    keywords: post.tags || [],
   }
 }
 
@@ -65,14 +65,15 @@ export function generateBreadcrumbSchema(post: BlogPost) {
 }
 
 export function generateFAQSchema(post: BlogPost) {
-  if (!post.has_faq_schema || !post.faq_data || post.faq_data.length === 0) {
+  const schema = post.schema_json
+  if (!schema?.has_faq_schema || !schema?.faq_data || schema.faq_data.length === 0) {
     return null
   }
 
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: post.faq_data.map((faq) => ({
+    mainEntity: schema.faq_data.map((faq) => ({
       '@type': 'Question',
       name: faq.q,
       acceptedAnswer: {

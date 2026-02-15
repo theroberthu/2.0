@@ -6,7 +6,6 @@ import { dirname, join } from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-// Parse .env.local manually
 const envFile = readFileSync(join(__dirname, '..', '.env.local'), 'utf-8')
 const envVars = {}
 envFile.split('\n').forEach(line => {
@@ -20,44 +19,58 @@ const supabase = createClient(
   envVars.SUPABASE_SERVICE_ROLE_KEY
 )
 
-// Uses actual DB schema columns:
-// id, title, slug, excerpt, content, meta_title, meta_description, og_image,
-// category, tags, status, featured, read_time_minutes, schema_json,
-// published_at, created_at, updated_at
-const post = {
+// Step 1: Check current columns
+console.log('--- Step 1: Checking current table structure ---')
+const { data: checkData, error: checkErr } = await supabase.from('blog_posts').select('*').limit(0)
+if (checkErr) {
+  console.log('Table check error:', checkErr)
+}
+
+// Step 2: Run migration via SQL
+console.log('\n--- Step 2: Running migration ---')
+const migrationSQL = readFileSync(join(__dirname, 'sql', 'add-blog-columns.sql'), 'utf-8')
+
+// Split into individual statements and run them
+const statements = migrationSQL
+  .split(';')
+  .map(s => s.trim())
+  .filter(s => s.length > 0 && !s.startsWith('--'))
+
+for (const stmt of statements) {
+  const { error } = await supabase.rpc('exec_sql', { sql: stmt + ';' }).maybeSingle()
+  if (error) {
+    // rpc might not exist, try raw SQL approach
+    // We'll just try the insert and see if columns exist
+    console.log('Note: Direct SQL execution not available via client. Migration may need to be run in Supabase dashboard.')
+    break
+  }
+}
+
+// Step 3: Try inserting with all columns first, fall back to basic columns
+console.log('\n--- Step 3: Inserting blog post ---')
+
+const fullPost = {
   slug: 'costco-digital-ecommerce-strategy',
   title: 'Costco Is Finally Going Digital. Here\'s What It Means for E-commerce Brands.',
   excerpt: 'Costco just reported a 20.5% surge in digitally enabled sales and is rolling out AI-powered inventory systems. When the last holdout goes digital, it changes the game for every brand in its ecosystem.',
   meta_title: 'Costco Goes Digital: What It Means for E-commerce Brands',
   meta_description: 'Costco reported 20.5% growth in digital sales and is investing in AI inventory systems. Robert Hu breaks down what this means for e-commerce brands doing $100K to $2M.',
-  og_image: null,
-  category: 'E-commerce Strategy',
-  tags: ['Costco e-commerce', 'digital transformation retail', 'Walmart e-commerce', 'marketplace strategy', 'AI inventory systems'],
-  status: 'published',
-  featured: false,
-  read_time_minutes: 5,
-  schema_json: {
-    author: 'Robert Hu',
-    has_faq_schema: true,
-    faq_data: [
-      {
-        q: 'How Does Costco\'s Digital Push Affect Amazon and Walmart Sellers?',
-        a: 'When a major retailer like Costco goes digital, it changes the playing field for every brand in its ecosystem. Brands already optimized for digital discovery will win. Those treating online as an afterthought will get left behind as platforms compete on technology, not just shelf space.'
-      },
-      {
-        q: 'Should E-commerce Brands Start Selling on Costco.com?',
-        a: 'If your products fit Costco\'s value-oriented model and you can handle the margin structure, yes. Costco\'s digital platform is still maturing, which means less competition, more visibility for early movers, and a retailer actively investing in making its digital shelf better.'
-      },
-      {
-        q: 'What Does AI-Powered Inventory Mean for Brands Selling Through Retailers?',
-        a: 'When retailers deploy AI for inventory management, the entire supplier relationship changes. Better demand forecasting means the retailer expects tighter fulfillment from you. Late shipments and inconsistent supply will be flagged automatically and cost you placement.'
-      }
-    ],
-    related_services: ['ecommerce-strategy', 'digital-transformation'],
-    related_posts: [],
-    featured_image_alt: null
-  },
+  featured_image: null,
+  published: true,
   published_at: new Date().toISOString(),
+  category: 'E-commerce Strategy',
+  author: 'Robert Hu',
+  keywords: ['Costco e-commerce', 'digital transformation retail', 'Walmart e-commerce', 'marketplace strategy', 'AI inventory systems'],
+  reading_time: 5,
+  featured_image_alt: 'Costco digital e-commerce strategy analysis',
+  related_posts: [],
+  related_services: ['ecommerce-strategy', 'digital-transformation'],
+  has_faq_schema: true,
+  faq_data: [
+    { q: 'How does Costco\'s digital push affect Amazon and Walmart sellers?', a: 'When Costco invests heavily in digital infrastructure, it creates more competition for the same consumer dollars online. Brands selling across multiple marketplaces need to optimize their listings and content for each platform\'s unique discovery system, including Costco\'s growing digital shelf.' },
+    { q: 'Should e-commerce brands start selling on Costco.com?', a: 'If your products fit Costco\'s value-oriented model and you can handle the margin structure, now is a strategic window. Costco\'s digital platform is still maturing, which means less competition and more visibility for early movers compared to saturated marketplaces like Amazon.' },
+    { q: 'What does AI-powered inventory mean for brands selling through retailers?', a: 'Retailers using AI for inventory management will have better demand forecasting and fewer stockouts. For brands, this means your supply chain needs to be tighter and more responsive. Late shipments or inconsistent supply will hurt you more when the retailer\'s system expects precision.' }
+  ],
   content: `<p>Costco just reported a 20.5% surge in digitally enabled comparable sales, driven by a 24% increase in site traffic and a 48% uptick in app traffic. The company is rolling out a digital wallet, AI-powered inventory systems, and pre-scanning checkout tools. For years, Costco resisted the digital shift. Now they're all in, and the ripple effects will hit brands selling across every major marketplace.</p>
 
 <h2>What Happened?</h2>
@@ -113,42 +126,60 @@ const post = {
 <p>If you're thinking about expanding your marketplace strategy or need help getting your brand ready for AI-powered retail, <a href="/free-strategy-session">let's talk about what that looks like for your business</a>.</p>`
 }
 
-async function insertPost() {
-  // Check if post already exists
+// Basic post (only existing columns)
+const basicPost = {
+  slug: fullPost.slug,
+  title: fullPost.title,
+  excerpt: fullPost.excerpt,
+  meta_title: fullPost.meta_title,
+  meta_description: fullPost.meta_description,
+  published: fullPost.published,
+  published_at: fullPost.published_at,
+  content: fullPost.content,
+}
+
+async function tryInsert(postData, label) {
+  // Check if already exists
   const { data: existing } = await supabase
     .from('blog_posts')
     .select('id')
-    .eq('slug', post.slug)
-    .single()
+    .eq('slug', postData.slug)
+    .maybeSingle()
 
   if (existing) {
-    console.log('Post already exists, updating...')
+    console.log(`Post already exists (id: ${existing.id}), updating with ${label} fields...`)
     const { data, error } = await supabase
       .from('blog_posts')
-      .update(post)
-      .eq('slug', post.slug)
-      .select()
-
-    if (error) {
-      console.error('Error updating post:', error)
-      process.exit(1)
-    }
-    console.log('Post updated successfully:', data[0].id)
+      .update(postData)
+      .eq('slug', postData.slug)
+      .select('id, slug, title')
+    if (error) return { success: false, error }
+    return { success: true, data }
   } else {
     const { data, error } = await supabase
       .from('blog_posts')
-      .insert(post)
-      .select()
-
-    if (error) {
-      console.error('Error inserting post:', error)
-      process.exit(1)
-    }
-    console.log('Post inserted successfully:', data[0].id)
+      .insert(postData)
+      .select('id, slug, title')
+    if (error) return { success: false, error }
+    return { success: true, data }
   }
-
-  console.log('Slug:', post.slug)
-  console.log('Title:', post.title)
 }
 
-insertPost()
+// Try full post first
+let result = await tryInsert(fullPost, 'full')
+if (!result.success) {
+  console.log('Full insert failed:', result.error.message)
+  console.log('Trying with basic columns only...')
+  result = await tryInsert(basicPost, 'basic')
+  if (!result.success) {
+    console.error('Basic insert also failed:', result.error)
+    process.exit(1)
+  }
+  console.log('\nInserted with basic columns. Run add-blog-columns.sql in Supabase dashboard to add extended fields.')
+}
+
+console.log('\nPost inserted/updated successfully!')
+console.log('ID:', result.data[0].id)
+console.log('Slug:', result.data[0].slug)
+console.log('Title:', result.data[0].title)
+console.log('\nView at: https://theroberthu.com/blog/' + result.data[0].slug)

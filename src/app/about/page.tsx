@@ -37,6 +37,7 @@ const personSchema = {
   worksFor: {
     '@type': 'Organization',
     name: 'KENT\u00AE Worldwide',
+    url: 'https://kentww.com',
   },
   knowsAbout: [
     'E-commerce Strategy',
@@ -272,7 +273,7 @@ export default function AboutPage() {
               </div>
               <p className="text-[15px] text-gray-400 leading-relaxed">
                 COVID brought me back to the U.S., where I started an Amazon-focused agency and later joined as a Brand Manager. Today, I&apos;m a Merchandising Manager at{' '}
-                <a href="https://kentworldwide.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
+                <a href="https://kentww.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
                   KENT&reg; Worldwide
                 </a>
                 , leading e-commerce strategy across Amazon and marketplace channels &mdash; including evaluating and implementing the team&apos;s e-commerce tech stack. I also consult independently with brand owners on growth strategy, listing optimization, GEO (Generative Engine Optimization), and digital transformation.

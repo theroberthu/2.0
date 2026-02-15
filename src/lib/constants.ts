@@ -3,10 +3,10 @@ export const SITE_NAME = 'Robert Hu'
 export const SITE_TAGLINE = 'E-commerce Strategist'
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://www.linkedin.com/in/throberthu',
-  x: 'https://x.com/throberthu',
-  youtube: 'https://www.youtube.com/@throberthu',
-  instagram: 'https://www.instagram.com/throberthu',
+  linkedin: 'https://www.linkedin.com/in/theroberthu',
+  x: 'https://x.com/theroberthu',
+  youtube: 'https://www.youtube.com/@theroberthu',
+  instagram: 'https://www.instagram.com/theroberthu',
 }
 
 export const NAV_LINKS = [
@@ -41,7 +41,7 @@ export const AUTHOR_INFO = {
   url: 'https://theroberthu.com/about',
   jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
   sameAs: [
-    'https://www.linkedin.com/in/throberthu',
-    'https://x.com/throberthu',
+    'https://www.linkedin.com/in/theroberthu',
+    'https://x.com/theroberthu',
   ],
 }

@@ -5,7 +5,7 @@ export async function GET() {
   const { data: posts } = await supabase
     .from('blog_posts')
     .select('slug, title, excerpt, published_at, category')
-    .eq('published', true)
+    .eq('status', 'published')
     .order('published_at', { ascending: false })
     .limit(50)
 
