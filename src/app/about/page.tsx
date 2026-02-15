@@ -9,12 +9,12 @@ import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'About Robert Hu | E-commerce Strategist & Digital Transformation Consultant',
   description:
-    '15+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
+    '20+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Robert Hu | E-commerce Strategist & Digital Transformation Consultant',
     description:
-      '15+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
+      '20+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
     url: `${SITE_URL}/about`,
   },
 }
@@ -51,7 +51,7 @@ const milestones = [
   },
   {
     label: 'Now helping e-commerce brands scale',
-    desc: '15+ years of experience in e-commerce strategy, digital marketing, and digital transformation',
+    desc: '20+ years of experience in e-commerce strategy, digital marketing, and digital transformation',
     icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
   },
 ]
