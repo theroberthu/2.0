@@ -13,7 +13,7 @@ function generateReviewSchema(testimonial: Testimonial) {
     reviewBody: testimonial.text,
     itemReviewed: {
       '@type': 'ProfessionalService',
-      name: 'Robert Hu \u2014 E-commerce Strategy Consulting',
+      name: 'Robert Hu - E-commerce Strategy Consulting',
       url: SITE_URL,
     },
     reviewRating: {
@@ -41,7 +41,7 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
-function SourceBadge({ source }: { source: 'linkedin' | 'upwork' }) {
+function SourceBadge({ source }: { source: 'linkedin' | 'verified' }) {
   if (source === 'linkedin') {
     return (
       <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-[#0A66C2] bg-[#0A66C2]/[0.1] px-2.5 py-1 rounded-full">
@@ -54,11 +54,11 @@ function SourceBadge({ source }: { source: 'linkedin' | 'upwork' }) {
   }
 
   return (
-    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-[#14A800] bg-[#14A800]/[0.1] px-2.5 py-1 rounded-full">
-      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l-.228-.183-1.573 1.931.272.228c1.313 1.015 2.89 1.574 4.603 1.574 3.186 0 5.439-2.043 5.439-4.919 0-2.784-2.253-4.91-5.439-4.91-1.713 0-3.29.559-4.603 1.574l-.272.228 1.573 1.931.228-.183c.939-.76 1.972-1.227 3.074-1.227 1.623 0 2.874 1.037 2.874 2.587 0 1.542-1.251 2.596-2.874 2.596zm-15.122 0c-1.623 0-2.874-1.054-2.874-2.596 0-1.55 1.251-2.587 2.874-2.587 1.102 0 2.135.467 3.074 1.227l.228.183 1.573-1.931-.272-.228C6.729 6.211 5.152 5.652 3.439 5.652 .253 5.652-2 7.695-2 10.562c0 2.876 2.253 4.919 5.439 4.919 1.713 0 3.29-.559 4.603-1.574l.272-.228-1.573-1.931-.228.183c-.939.76-1.972 1.227-3.074 1.227z" />
+    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-emerald-400 bg-emerald-400/[0.1] px-2.5 py-1 rounded-full">
+      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
-      Upwork
+      Verified Client
     </span>
   )
 }
@@ -90,7 +90,7 @@ export default function Testimonials() {
               {/* Source badge + rating */}
               <div className="flex items-center justify-between mb-5">
                 <SourceBadge source={testimonial.source} />
-                {testimonial.source === 'upwork' && (
+                {testimonial.source === 'verified' && (
                   <StarRating rating={testimonial.rating} />
                 )}
               </div>

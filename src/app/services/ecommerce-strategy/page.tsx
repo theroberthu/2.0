@@ -4,12 +4,12 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'E-commerce Strategy | Robert Hu — E-commerce Strategist',
+  title: 'E-commerce Strategy',
   description:
     'Strategic e-commerce consulting for brands selling on Amazon, Walmart, and DTC. Listing optimization, catalog strategy, pricing, and AI-enhanced growth planning.',
   alternates: { canonical: '/services/ecommerce-strategy' },
   openGraph: {
-    title: 'E-commerce Strategy | Robert Hu — E-commerce Strategist',
+    title: 'E-commerce Strategy | Robert Hu - E-commerce Strategist',
     description:
       'Strategic e-commerce consulting for brands selling on Amazon, Walmart, and DTC. Listing optimization, catalog strategy, pricing, and AI-enhanced growth planning.',
     url: `${SITE_URL}/services/ecommerce-strategy`,

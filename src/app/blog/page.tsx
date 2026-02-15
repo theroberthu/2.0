@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'Blog | Robert Hu \u2014 E-commerce Strategist',
+    title: 'Blog | Robert Hu - E-commerce Strategist',
     description:
       'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
     url: `${SITE_URL}/blog`,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const blogCollectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Blog \u2014 Robert Hu',
+  name: 'Blog - Robert Hu',
   description:
     'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
   url: `${SITE_URL}/blog`,

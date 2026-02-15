@@ -7,12 +7,12 @@ import CTABanner from '@/components/CTABanner'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'About Robert Hu | E-commerce Strategist & Digital Transformation Consultant',
+  title: 'About Robert Hu',
   description:
     '20+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Robert Hu | E-commerce Strategist & Digital Transformation Consultant',
+    title: 'About Robert Hu | Robert Hu - E-commerce Strategist',
     description:
       '20+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
     url: `${SITE_URL}/about`,

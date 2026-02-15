@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus. Get a GEO audit.',
   alternates: { canonical: '/geo' },
   openGraph: {
-    title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu',
+    title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu - E-commerce Strategist',
     description:
       'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus. Get a GEO audit.',
     url: `${SITE_URL}/geo`,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@theroberthu',
     creator: '@theroberthu',
-    title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu',
+    title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu - E-commerce Strategist',
     description:
       'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
   },

@@ -5,12 +5,12 @@ import Testimonials from '@/components/Testimonials'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Free GEO Audit for E-commerce Brands | Robert Hu',
+  title: 'Free GEO Audit for E-commerce Brands',
   description:
     'Find out how your brand shows up in AI-powered search. Get a free GEO audit covering ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus visibility.',
   alternates: { canonical: '/geo-audit' },
   openGraph: {
-    title: 'Free GEO Audit for E-commerce Brands | Robert Hu',
+    title: 'Free GEO Audit for E-commerce Brands | Robert Hu - E-commerce Strategist',
     description:
       'Find out how your brand shows up in AI-powered search. Get a free GEO audit covering ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus visibility.',
     url: `${SITE_URL}/geo-audit`,

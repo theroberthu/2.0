@@ -33,19 +33,19 @@ export default function FAQSection({ items }: { items: FAQItem[] }) {
             key={i}
             className={`border rounded-lg transition-all duration-200 ${
               openIndex === i
-                ? 'border-brand-accent/30 bg-white shadow-soft'
-                : 'border-gray-200 bg-white hover:border-gray-300'
+                ? 'border-brand-accent/30 bg-white/[0.08]'
+                : 'border-white/[0.08] bg-white/[0.05] hover:border-white/[0.12]'
             }`}
           >
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
             >
-              <span className="text-[15px] font-medium text-brand-dark leading-snug">
+              <span className="text-[15px] font-medium text-white leading-snug">
                 {item.q}
               </span>
               <svg
-                className={`w-4 h-4 text-brand-muted shrink-0 transition-transform duration-200 ${
+                className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ${
                   openIndex === i ? 'rotate-180' : ''
                 }`}
                 fill="none"
@@ -61,7 +61,7 @@ export default function FAQSection({ items }: { items: FAQItem[] }) {
               }`}
             >
               <div className="px-6 pb-5">
-                <p className="text-sm text-brand-muted leading-relaxed">{item.a}</p>
+                <p className="text-sm text-gray-400 leading-relaxed">{item.a}</p>
               </div>
             </div>
           </div>

@@ -4,14 +4,14 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Product Listing Optimization & GEO | Robert Hu — E-commerce Strategist',
+  title: 'Product Listing Optimization & GEO',
   description:
-    'Product listing optimization for Amazon and Walmart sellers — SEO, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered search.',
+    'Product listing optimization for Amazon and Walmart sellers - SEO, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered search.',
   alternates: { canonical: '/services/product-listing-optimization' },
   openGraph: {
-    title: 'Product Listing Optimization & GEO | Robert Hu — E-commerce Strategist',
+    title: 'Product Listing Optimization & GEO | Robert Hu - E-commerce Strategist',
     description:
-      'Product listing optimization for Amazon and Walmart sellers — SEO, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered search.',
+      'Product listing optimization for Amazon and Walmart sellers - SEO, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered search.',
     url: `${SITE_URL}/services/product-listing-optimization`,
   },
 }

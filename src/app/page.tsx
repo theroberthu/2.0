@@ -11,15 +11,15 @@ import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Robert Hu \u2014 E-commerce Strategist & Digital Transformation Consultant',
+    absolute: 'Robert Hu - E-commerce Strategist & Digital Transformation Consultant',
   },
   description:
-    'Helping $100K\u2013$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
+    'Helping $100K-$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Robert Hu \u2014 E-commerce Strategist & Digital Transformation Consultant',
+    title: 'Robert Hu - E-commerce Strategist & Digital Transformation Consultant',
     description:
-      'Helping $100K\u2013$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
+      'Helping $100K-$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
     url: SITE_URL,
   },
 }
@@ -46,7 +46,7 @@ const websiteSchema = {
 const professionalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Robert Hu \u2014 E-commerce Strategy Consulting',
+  name: 'Robert Hu - E-commerce Strategy Consulting',
   url: SITE_URL,
   logo: `${SITE_URL}/images/theroberthulogo.png`,
   description:
@@ -226,7 +226,7 @@ export default async function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
             {[
               { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', label: '20+ Years in E-commerce' },
-              { icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', label: 'E-commerce Merchandising Lead' },
+              { icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', label: 'Merchandising Manager at KENT\u00AE Worldwide' },
               { icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z', label: 'Creator of The Vibe Marketing OS' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-2.5">
@@ -236,6 +236,32 @@ export default async function HomePage() {
                 <span className="text-[13px] font-medium text-gray-400">{item.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who this is for */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-[720px] mx-auto px-5 sm:px-8 text-center">
+          <div className="space-y-6 text-base md:text-lg text-gray-300 leading-relaxed">
+            <p>
+              You&apos;re an Amazon or Walmart brand owner doing $100K to $2M in revenue. You&apos;ve outgrown the DIY phase, but you&apos;re not ready to hand your business to a $10K/month agency that treats you like their smallest account.
+            </p>
+            <p>
+              Your listings need work. Your ads aren&apos;t scaling the way they should. You keep hearing that AI is changing everything, but nobody&apos;s showing you what that actually looks like for your business.
+            </p>
+            <p>
+              You don&apos;t need more noise. You need someone who&apos;s spent 20+ years inside the platforms you sell on, who can look at your catalog and tell you exactly what&apos;s working, what&apos;s not, and what to fix first.
+            </p>
+            <p className="text-white font-medium">That&apos;s what I do.</p>
+          </div>
+          <div className="mt-10">
+            <Link
+              href="/free-strategy-session"
+              className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              Free Strategy Session
+            </Link>
           </div>
         </div>
       </section>
@@ -322,9 +348,9 @@ export default async function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
             {[
-              { step: '01', title: 'Scope', desc: 'We map your current state, identify the real bottlenecks, and define what success looks like for your brand.', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
+              { step: '01', title: 'Scope', desc: 'I map your current state, identify the real bottlenecks, and define what success looks like for your brand.', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
               { step: '02', title: 'Strategize', desc: 'I build a custom roadmap with prioritized actions, the right tools, and clear milestones to hit your goals.', icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01' },
-              { step: '03', title: 'Execute', desc: 'We implement together. I guide the process, train your team, and make sure everything actually gets done.', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+              { step: '03', title: 'Execute', desc: 'I implement alongside you, guide the process, train your team, and make sure everything actually gets done.', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
             ].map((item) => (
               <div key={item.step} className="relative bg-white/[0.05] backdrop-blur-md rounded-xl p-7 border border-white/[0.08]">
                 <div className="flex items-center gap-3 mb-4">

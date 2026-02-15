@@ -1,6 +1,8 @@
 'use server'
 
 import { supabase } from '@/lib/supabase'
+import { resend, EMAIL_FROM, NOTIFICATION_EMAIL } from '@/lib/resend'
+import { leadNotificationEmail, leadConfirmationEmail } from '@/lib/email-templates'
 
 export async function submitLead(formData: FormData) {
   const name = formData.get('name') as string
@@ -19,6 +21,26 @@ export async function submitLead(formData: FormData) {
 
   if (error) {
     return { error: 'Something went wrong. Please try again.' }
+  }
+
+  // Send emails after successful DB insert (non-blocking, failure-tolerant)
+  try {
+    await Promise.allSettled([
+      resend.emails.send({
+        from: EMAIL_FROM,
+        to: NOTIFICATION_EMAIL,
+        subject: `New Strategy Session Request from ${name}`,
+        html: leadNotificationEmail({ name, email, website_url, revenue_range, challenge }),
+      }),
+      resend.emails.send({
+        from: EMAIL_FROM,
+        to: email,
+        subject: 'Your Strategy Session Request - Robert Hu',
+        html: leadConfirmationEmail(name),
+      }),
+    ])
+  } catch (emailError) {
+    console.error('Failed to send lead emails:', emailError)
   }
 
   return { success: true }

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'Real results from real e-commerce brands. See how AI and digital transformation strategies drive growth.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
-    title: 'Case Studies | Robert Hu \u2014 E-commerce Strategist',
+    title: 'Case Studies | Robert Hu - E-commerce Strategist',
     description:
       'Real results from real e-commerce brands. See how AI and digital transformation strategies drive growth.',
     url: `${SITE_URL}/case-studies`,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const caseStudiesCollectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Case Studies \u2014 Robert Hu',
+  name: 'Case Studies - Robert Hu',
   description:
     'Real results from real e-commerce brands. See how AI and digital transformation strategies drive growth.',
   url: `${SITE_URL}/case-studies`,
