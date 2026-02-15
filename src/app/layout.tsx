@@ -3,6 +3,7 @@ import { DM_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import BackToTop from '@/components/BackToTop'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
       'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
     images: [
       {
-        url: '/images/theroberthulogo.png',
+        url: '/images/robert-hu-headshot.png',
         width: 1200,
         height: 630,
         alt: 'Robert Hu - E-commerce Strategist',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     title: 'Robert Hu - E-commerce Strategist',
     description:
       'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
-    images: ['/images/theroberthulogo.png'],
+    images: ['/images/robert-hu-headshot.png'],
   },
   alternates: {
     canonical: SITE_URL,
@@ -87,6 +88,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   )

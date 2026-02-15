@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
 import { CASE_STUDIES } from '@/lib/case-studies-data'
 import ServiceCard from '@/components/ServiceCard'
@@ -58,16 +59,32 @@ export default async function HomePage() {
                 </Link>
               </div>
               <div className="flex items-center gap-3 text-[13px] text-brand-muted">
-                <div className="flex -space-x-1.5">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-accent/20 to-brand-deep/20 border-2 border-white" />
-                  ))}
-                </div>
+                <Image
+                  src="/images/robert-hu-headshot.png"
+                  alt="Robert Hu"
+                  width={36}
+                  height={36}
+                  className="rounded-full border-2 border-white shadow-sm object-cover"
+                />
                 <span>Trusted by 50+ e-commerce brands</span>
               </div>
             </div>
 
-            {/* Right - Visual element */}
+            {/* Mobile stats row - visible only on small screens */}
+            <div className="flex lg:hidden gap-3 -mx-1">
+              {[
+                { label: 'Revenue', value: '$2.1M' },
+                { label: 'Conversion', value: '+47%' },
+                { label: 'ROAS', value: '4.2x' },
+              ].map((m) => (
+                <div key={m.label} className="flex-1 bg-white rounded-xl border border-gray-100 shadow-soft p-4 text-center">
+                  <div className="text-[10px] text-brand-muted uppercase tracking-wider">{m.label}</div>
+                  <div className="text-xl font-bold text-brand-gold mt-1">{m.value}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right - Visual element (desktop) */}
             <div className="relative hidden lg:block">
               <div className="relative bg-white rounded-2xl border border-gray-100 shadow-elevated p-6">
                 <div className="flex items-center gap-1.5 mb-5">
@@ -191,6 +208,77 @@ export default async function HomePage() {
                 <p className="text-sm text-brand-muted leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-14">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Testimonials</span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-brand-dark tracking-tight mb-3">What People Say</h2>
+            <p className="text-sm text-brand-muted max-w-md mx-auto">Real feedback from colleagues and clients.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* LinkedIn - Jack Sherrill */}
+            <div className="bg-white border border-gray-100 rounded-xl p-7 shadow-soft hover:shadow-lifted transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-[10px] font-medium text-[#0a66c2] bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-100 inline-flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </span>
+              </div>
+              <p className="text-[14px] text-brand-dark/80 leading-relaxed mb-5 italic">&ldquo;We collaborated on various projects and marketing campaigns. Throughout our collaboration, he consistently displayed great attention to detail, strong problem-solving skills, and extensive knowledge in the ecommerce and marketing fields. Robert is truly an asset to any team.&rdquo;</p>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="text-[13px] font-semibold text-brand-dark">Jack Sherrill</div>
+                <div className="text-[11px] text-brand-muted mt-0.5">Purchasing Specialist at A&amp;W Supply</div>
+              </div>
+            </div>
+
+            {/* Upwork - FBA & Seller Central */}
+            <div className="bg-white border border-gray-100 rounded-xl p-7 shadow-soft hover:shadow-lifted transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-[10px] font-medium text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100 inline-flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                  Upwork
+                </span>
+              </div>
+              <p className="text-[14px] text-brand-dark/80 leading-relaxed mb-5 italic">&ldquo;Robert was professional, friendly and knew his ways around Amazon Seller Central, and helped me resolve my Amazon FBA issue. Hope to work with him again in the future.&rdquo;</p>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="text-[13px] font-semibold text-brand-dark">Verified Client</div>
+                <div className="text-[11px] text-brand-muted mt-0.5">Amazon FBA &amp; Seller Central Support</div>
+              </div>
+            </div>
+
+            {/* Upwork - Listing Optimization */}
+            <div className="bg-white border border-gray-100 rounded-xl p-7 shadow-soft hover:shadow-lifted transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-[10px] font-medium text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100 inline-flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                  Upwork
+                </span>
+              </div>
+              <p className="text-[14px] text-brand-dark/80 leading-relaxed mb-5 italic">&ldquo;Robert is down-to-earth, cool, and great at what he does. His mini-videos really help us understand what needs to be done.&rdquo;</p>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="text-[13px] font-semibold text-brand-dark">Verified Client</div>
+                <div className="text-[11px] text-brand-muted mt-0.5">Amazon FBA Listing Optimization</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

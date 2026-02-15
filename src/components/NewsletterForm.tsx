@@ -23,11 +23,14 @@ export default function NewsletterForm() {
 
   if (submitted) {
     return (
-      <div className="flex items-center gap-2 text-sm text-emerald-400">
-        <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-        </svg>
-        You are subscribed!
+      <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-4 text-center">
+        <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-3">
+          <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p className="text-sm font-semibold text-emerald-400 mb-1">You&apos;re subscribed!</p>
+        <p className="text-[11px] text-gray-400">Check your inbox for a welcome email.</p>
       </div>
     )
   }

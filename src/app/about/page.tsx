@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABanner from '@/components/CTABanner'
@@ -67,15 +68,17 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-bg via-white to-brand-bg py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1a3a4a 1px, transparent 0)', backgroundSize: '32px 32px' }} />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-accent/[0.04] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8">
-          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">About</span>
-          <h1 className="text-3xl md:text-[2.5rem] font-bold text-brand-dark leading-tight tracking-tight mb-3">
-            Hi, I&apos;m Robert Hu.
-          </h1>
-          <p className="text-lg text-brand-accent font-medium mb-8">
-            E-commerce strategist. Digital transformation consultant. Quiet operator.
-          </p>
-          <div className="space-y-5 text-[15px] text-brand-muted leading-relaxed">
+        <div className="relative max-w-4xl mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_280px] gap-12 items-start">
+            <div>
+              <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">About</span>
+              <h1 className="text-3xl md:text-[2.5rem] font-bold text-brand-dark leading-tight tracking-tight mb-3">
+                Hi, I&apos;m Robert Hu.
+              </h1>
+              <p className="text-lg text-brand-accent font-medium mb-8">
+                E-commerce strategist. Digital transformation consultant. Quiet operator.
+              </p>
+              <div className="space-y-5 text-[15px] text-brand-muted leading-relaxed">
             <p>
               I&apos;ve spent 15+ years building, optimizing, and scaling e-commerce
               businesses. I currently work as a Merchandising Manager at a leading consumer brand, where
@@ -98,6 +101,30 @@ export default function AboutPage() {
               implement AI and digital transformation strategies that actually fit
               their business.
             </p>
+          </div>
+            </div>
+
+            {/* Headshot */}
+            <div className="hidden md:flex justify-center">
+              <div className="relative">
+                <div className="w-[260px] h-[320px] rounded-2xl bg-gradient-to-br from-brand-accent/10 to-brand-deep/10 overflow-hidden border border-gray-100 shadow-elevated">
+                  <Image
+                    src="/images/robert-hu-headshot.png"
+                    alt="Robert Hu - E-commerce Strategist"
+                    width={260}
+                    height={320}
+                    className="object-cover object-top w-full h-full"
+                    priority
+                  />
+                </div>
+                <div className="absolute -bottom-3 -right-3 bg-white rounded-lg border border-gray-100 shadow-lifted px-3 py-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[11px] font-semibold text-brand-dark">Available for consulting</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
