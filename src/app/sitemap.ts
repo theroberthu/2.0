@@ -21,6 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/case-studies`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${SITE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${SITE_URL}/free-strategy-session`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${SITE_URL}/geo`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
   ]
 
   // Case study pages
@@ -42,10 +43,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic blog pages (still from Supabase)
   let blogPages: MetadataRoute.Sitemap = []
   try {
-    const { data: posts } = await supabase.from('blog_posts').select('slug, published_at').eq('published', true)
-    blogPages = (posts || []).map((p: { slug: string; published_at: string }) => ({
+    const { data: posts } = await supabase.from('blog_posts').select('slug, published_at, updated_at').eq('published', true)
+    blogPages = (posts || []).map((p: { slug: string; published_at: string; updated_at?: string }) => ({
       url: `${SITE_URL}/blog/${p.slug}`,
-      lastModified: new Date(p.published_at),
+      lastModified: new Date(p.updated_at || p.published_at),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }))

@@ -7,6 +7,11 @@ const nextConfig = {
         destination: '/about',
         permanent: true,
       },
+      {
+        source: '/generative-search-optimization',
+        destination: '/geo',
+        permanent: true,
+      },
     ]
   },
 };

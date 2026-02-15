@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase'
 import { CASE_STUDIES } from '@/lib/case-studies-data'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
+import Testimonials from '@/components/Testimonials'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
@@ -35,6 +36,34 @@ const websiteSchema = {
     name: 'Robert Hu',
     url: SITE_URL,
   },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE_URL}/blog?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+const professionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Robert Hu \u2014 E-commerce Strategy Consulting',
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/theroberthulogo.png`,
+  description:
+    'E-commerce strategy, product listing optimization, GEO, and digital transformation consulting for brand owners doing $100K\u2013$2M in revenue.',
+  founder: {
+    '@type': 'Person',
+    name: 'Robert Hu',
+  },
+  areaServed: 'US',
+  serviceType: [
+    'E-commerce Strategy',
+    'Product Listing Optimization',
+    'Generative Engine Optimization',
+    'Digital Marketing Strategy',
+    'Digital Transformation',
+  ],
+  priceRange: '$$',
 }
 
 const organizationSchema = {
@@ -68,6 +97,7 @@ export default async function HomePage() {
     <>
       <SchemaMarkup data={websiteSchema} />
       <SchemaMarkup data={organizationSchema} />
+      <SchemaMarkup data={professionalServiceSchema} />
 
       {/* Hero - Split layout */}
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-bg via-white to-brand-bg">
@@ -419,14 +449,17 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* Latest blog posts */}
       {posts && posts.length > 0 && (
-        <section className="py-20 md:py-28 bg-white border-y border-gray-100">
+        <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
           <div className="max-w-6xl mx-auto px-5 sm:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
               <div>
                 <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3 block">Blog</span>
-                <h2 className="text-2xl md:text-[2rem] font-bold text-brand-dark tracking-tight">Latest Insights</h2>
+                <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">Latest Insights</h2>
               </div>
               <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">
                 View all

@@ -15,6 +15,13 @@ export interface Service {
   created_at: string
 }
 
+export type BlogCategory =
+  | 'E-commerce Strategy'
+  | 'GEO & SEO'
+  | 'Digital Marketing'
+  | 'Digital Transformation'
+  | 'The Messy Middle'
+
 export interface BlogPost {
   id: string
   slug: string
@@ -26,6 +33,16 @@ export interface BlogPost {
   meta_title: string | null
   meta_description: string | null
   featured_image: string | null
+  featured_image_alt: string | null
+  category: BlogCategory | null
+  author: string | null
+  keywords: string[] | null
+  related_posts: string[] | null
+  related_services: string[] | null
+  reading_time: number | null
+  has_faq_schema: boolean | null
+  faq_data: { q: string; a: string }[] | null
+  updated_at: string | null
   created_at: string
 }
 

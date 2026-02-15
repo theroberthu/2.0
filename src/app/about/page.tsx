@@ -23,13 +23,28 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Robert Hu',
-  url: SITE_URL,
+  url: `${SITE_URL}/about`,
+  image: `${SITE_URL}/images/robert-hu-headshot.png`,
   jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+  description:
+    'E-commerce strategist with 20+ years of experience helping brands grow on Amazon, Walmart, and DTC channels. Specializing in GEO, listing optimization, and AI-powered digital transformation.',
   sameAs: [
     SOCIAL_LINKS.linkedin,
     SOCIAL_LINKS.x,
     SOCIAL_LINKS.youtube,
     SOCIAL_LINKS.instagram,
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'KENT\u00AE Worldwide',
+  },
+  knowsAbout: [
+    'E-commerce Strategy',
+    'Amazon Marketplace',
+    'Generative Engine Optimization',
+    'Product Listing Optimization',
+    'Digital Transformation',
+    'AI Workflows',
   ],
 }
 

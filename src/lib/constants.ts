@@ -12,6 +12,7 @@ export const SOCIAL_LINKS = {
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
+  { label: 'GEO', href: '/geo' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
@@ -24,3 +25,23 @@ export const REVENUE_RANGES = [
   '$1M-$2M',
   '$2M+',
 ]
+
+export const BLOG_CATEGORIES = [
+  'E-commerce Strategy',
+  'GEO & SEO',
+  'Digital Marketing',
+  'Digital Transformation',
+  'The Messy Middle',
+] as const
+
+export const POSTS_PER_PAGE = 10
+
+export const AUTHOR_INFO = {
+  name: 'Robert Hu',
+  url: 'https://theroberthu.com/about',
+  jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+  sameAs: [
+    'https://www.linkedin.com/in/throberthu',
+    'https://x.com/throberthu',
+  ],
+}

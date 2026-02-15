@@ -26,7 +26,9 @@ const serviceSchema = {
   provider: {
     '@type': 'Person',
     name: 'Robert Hu',
+    url: `${SITE_URL}/about`,
   },
+  areaServed: 'US',
   url: `${SITE_URL}/services/ecommerce-strategy`,
 }
 
