@@ -6,12 +6,12 @@ import { SITE_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Digital Transformation | Robert Hu — E-commerce Strategist',
   description:
-    'Modernize your e-commerce operations with AI-powered workflows, better tooling, and smarter processes. Practical AI adoption for e-commerce teams.',
+    'E-commerce tech stack evaluation, AI tool implementation, process automation, and workflow optimization. Build a tech foundation that scales with your business.',
   alternates: { canonical: '/services/digital-transformation' },
   openGraph: {
     title: 'Digital Transformation | Robert Hu — E-commerce Strategist',
     description:
-      'Modernize your e-commerce operations with AI-powered workflows, better tooling, and smarter processes. Practical AI adoption for e-commerce teams.',
+      'E-commerce tech stack evaluation, AI tool implementation, process automation, and workflow optimization. Build a tech foundation that scales with your business.',
     url: `${SITE_URL}/services/digital-transformation`,
   },
 }
@@ -21,7 +21,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Digital Transformation',
   description:
-    'Audit your e-commerce operations and identify where AI-powered tools, better workflows, and smarter processes can save time and increase output.',
+    'E-commerce tech stack evaluation, AI tool implementation, process automation, and workflow optimization for growing brands.',
   provider: {
     '@type': 'Person',
     name: 'Robert Hu',
@@ -50,7 +50,7 @@ export default function DigitalTransformationPage() {
             Digital Transformation
           </h1>
           <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl">
-            Technology should serve your strategy, not replace your judgment
+            Build an e-commerce tech stack that actually works
           </p>
         </div>
       </section>
@@ -66,9 +66,44 @@ export default function DigitalTransformationPage() {
             </div>
             <h2 className="text-xl font-semibold text-white">What I Do</h2>
           </div>
-          <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
-            Audit your current e-commerce operations and identify where AI-powered tools, better workflows, and smarter processes can save time and increase output. From prompt engineering for your team to automating repetitive tasks, I help you adopt AI practically — not chase hype.
-          </p>
+          <div className="text-[15px] text-gray-400 leading-relaxed pl-12 space-y-4">
+            <p>
+              I help e-commerce brands evaluate, select, and implement the right technology stack — from AI tools and automation to inventory systems, analytics platforms, and workflow optimization. I&apos;ve led tech stack evaluations for enterprise e-commerce operations and bring that same rigor to growing brands.
+            </p>
+            <p>
+              This isn&apos;t about chasing every new AI tool. It&apos;s about building a tech foundation that scales with your business and makes your team more effective.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Areas */}
+      <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-lg bg-brand-accent/[0.12] flex items-center justify-center">
+              <svg className="w-4.5 h-4.5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-semibold text-white">Key Areas</h2>
+          </div>
+          <ul className="space-y-3 pl-12">
+            {[
+              'E-commerce tech stack evaluation and selection',
+              'AI tool implementation and workflow design',
+              'Process automation and SOP development',
+              'Team training on AI-powered workflows',
+              'Vendor evaluation and integration planning',
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3 text-[15px] text-gray-400">
+                <svg className="w-4.5 h-4.5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -84,7 +119,7 @@ export default function DigitalTransformationPage() {
             <h2 className="text-xl font-semibold text-white">Who It&apos;s For</h2>
           </div>
           <p className="text-[15px] text-gray-400 leading-relaxed pl-12">
-            E-commerce teams and brand owners who want to use AI but don&apos;t know where to start or are overwhelmed by the options.
+            E-commerce brand owners and teams who know their tools and processes need upgrading but don&apos;t want to waste time and money on the wrong solutions.
           </p>
         </div>
       </section>
@@ -95,7 +130,7 @@ export default function DigitalTransformationPage() {
         <div className="absolute bottom-0 left-0 w-56 h-56 bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
         <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
           <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
-            Modernize Your Operations
+            Let&apos;s Fix Your Tech Stack
           </h2>
           <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
             30 minutes. No pitch. Just honest strategy for your brand.
@@ -104,7 +139,7 @@ export default function DigitalTransformationPage() {
             href="/free-strategy-session"
             className="inline-block bg-brand-accent text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-accent/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Modernize Your Operations
+            Let&apos;s Fix Your Tech Stack
           </Link>
         </div>
       </section>

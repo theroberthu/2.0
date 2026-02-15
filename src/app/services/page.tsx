@@ -77,7 +77,7 @@ const services = [
   {
     title: 'Digital Transformation',
     slug: 'digital-transformation',
-    desc: 'Modernize your e-commerce operations with AI-powered workflows, better tooling, and smarter processes. Technology should serve your strategy, not replace your judgment.',
+    desc: 'Evaluate, select, and implement the right e-commerce tech stack — from AI tools and automation to analytics platforms and workflow optimization. Build a tech foundation that scales.',
     icon: 'M13 10V3L4 14h7v7l9-11h-7z',
     label: 'Transformation',
   },
