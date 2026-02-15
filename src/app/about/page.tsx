@@ -129,6 +129,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <CTABanner />
+
       {/* Projects & Tools */}
       <section className="py-20 md:py-28 bg-white border-y border-gray-100">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
@@ -204,8 +206,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <CTABanner />
     </>
   )
 }
