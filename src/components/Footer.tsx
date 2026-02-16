@@ -119,7 +119,7 @@ export default function Footer() {
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-brand-gold text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200"
+              className="inline-block border border-brand-gold text-brand-gold text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold hover:text-white transition-all duration-200"
             >
               Subscribe to Hu&apos;s Weekly Hoot
             </a>
