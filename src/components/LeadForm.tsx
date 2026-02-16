@@ -1,13 +1,47 @@
 'use client'
 
 import { useState } from 'react'
-import { submitLead } from '@/app/actions/leads'
+import { submitLead, type BrandSnapshot } from '@/app/actions/leads'
 import { REVENUE_RANGES } from '@/lib/constants'
+
+function SnapshotCard({ snapshot }: { snapshot: BrandSnapshot }) {
+  const fields: { label: string; value: string | string[] }[] = [
+    { label: 'Brand', value: snapshot.brandName },
+    { label: 'Category', value: snapshot.category },
+    { label: 'Marketplace', value: snapshot.estimatedMarketplace },
+    { label: 'Top Products', value: snapshot.topProducts },
+    { label: 'First Impression', value: snapshot.firstImpression },
+  ]
+
+  return (
+    <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 mb-8 text-left">
+      <div className="flex items-center gap-2 mb-5">
+        <span className="text-lg">✨</span>
+        <h4 className="text-[15px] font-semibold text-white">
+          Here&apos;s what I found about your brand:
+        </h4>
+      </div>
+      <div className="space-y-3">
+        {fields.map(({ label, value }) => {
+          const display = Array.isArray(value) ? value.join(', ') : value
+          if (!display || display.toLowerCase() === 'unknown') return null
+          return (
+            <div key={label} className="flex gap-3">
+              <span className="text-[13px] text-gray-500 w-28 shrink-0">{label}</span>
+              <span className="text-[13px] text-white">{display}</span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [snapshot, setSnapshot] = useState<BrandSnapshot | null>(null)
 
   async function handleSubmit(formData: FormData) {
     setLoading(true)
@@ -18,24 +52,30 @@ export default function LeadForm() {
     if (result.error) {
       setError(result.error)
     } else {
+      if (result.snapshot) {
+        setSnapshot(result.snapshot)
+      }
       setSubmitted(true)
     }
   }
 
   if (submitted) {
     return (
-      <div className="text-center py-12">
-        <div className="w-12 h-12 rounded-full bg-emerald-500/[0.12] flex items-center justify-center mx-auto mb-4">
-          <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
+      <div className="py-12">
+        {snapshot && <SnapshotCard snapshot={snapshot} />}
+        <div className="text-center">
+          <div className="w-12 h-12 rounded-full bg-emerald-500/[0.12] flex items-center justify-center mx-auto mb-4">
+            <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-2">
+            Thanks for reaching out!
+          </h3>
+          <p className="text-sm text-gray-400">
+            I&apos;ll review your info and send you a calendar link within 24 hours.
+          </p>
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">
-          Thanks for reaching out!
-        </h3>
-        <p className="text-sm text-gray-400">
-          I&apos;ll review your info and send you a calendar link within 24 hours.
-        </p>
       </div>
     )
   }
@@ -78,10 +118,10 @@ export default function LeadForm() {
             Website URL
           </label>
           <input
-            type="url"
+            type="text"
             id="website_url"
             name="website_url"
-            placeholder="https://"
+            placeholder="yourstore.com"
             autoComplete="url"
             className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
           />
