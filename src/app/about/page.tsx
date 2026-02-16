@@ -276,7 +276,7 @@ export default function AboutPage() {
                 <a href="https://kentww.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
                   KENT&reg; Worldwide
                 </a>
-                , leading e-commerce strategy across Amazon and marketplace channels &mdash; including evaluating and implementing the team&apos;s e-commerce tech stack. I also consult independently with brand owners on growth strategy, listing optimization, GEO (Generative Engine Optimization), and digital transformation.
+                , leading e-commerce strategy across Amazon and marketplace channels &mdash; including evaluating and implementing the team&apos;s e-commerce tech stack. I also consult independently with brand owners on growth strategy, listing optimization, GEO (Generative Engine Optimization), and digital transformation. I consult with a select number of brands alongside my role at KENT, which keeps me in the platforms every day, testing, optimizing, and seeing what&apos;s actually working right now, not what worked six months ago.
               </p>
             </div>
 

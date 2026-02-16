@@ -1,6 +1,6 @@
 'use server'
 
-import { supabase } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 import { resend, EMAIL_FROM, NOTIFICATION_EMAIL } from '@/lib/resend'
 import { leadNotificationEmail, leadConfirmationEmail } from '@/lib/email-templates'
 
@@ -15,7 +15,7 @@ export async function submitLead(formData: FormData) {
     return { error: 'Name and email are required.' }
   }
 
-  const { error } = await supabase
+  const { error } = await supabaseAdmin
     .from('leads')
     .insert({ name, email, website_url, revenue_range, challenge })
 

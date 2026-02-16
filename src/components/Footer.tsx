@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { NAV_LINKS, SOCIAL_LINKS } from '@/lib/constants'
-import NewsletterForm from './NewsletterForm'
 
 export default function Footer() {
   return (
@@ -114,9 +113,16 @@ export default function Footer() {
               Newsletter
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">
-              Get actionable e-commerce insights delivered to your inbox. No spam, unsubscribe anytime.
+              Weekly e-commerce insights on LinkedIn.
             </p>
-            <NewsletterForm />
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-gold text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200"
+            >
+              Subscribe to Hu&apos;s Weekly Hoot
+            </a>
           </div>
         </div>
       </div>
