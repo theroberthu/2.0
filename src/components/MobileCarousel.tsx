@@ -23,26 +23,35 @@ export default function MobileCarousel({
   const hideClass = breakpoint === 'lg' ? 'lg:hidden' : 'md:hidden'
   const showClass = breakpoint === 'lg' ? 'hidden lg:grid' : 'hidden md:grid'
 
+  const getCardWidth = useCallback(() => {
+    if (!scrollRef.current) return 0
+    const firstCard = scrollRef.current.querySelector('[data-carousel-item]') as HTMLElement
+    return firstCard ? firstCard.offsetWidth : scrollRef.current.offsetWidth
+  }, [])
+
   const scrollToIndex = useCallback((index: number) => {
     if (!scrollRef.current) return
-    const cardWidth = scrollRef.current.offsetWidth
-    scrollRef.current.scrollTo({ left: index * cardWidth, behavior: 'smooth' })
-  }, [])
+    const cardW = getCardWidth()
+    const gap = 16 // gap-4 = 16px
+    scrollRef.current.scrollTo({ left: index * (cardW + gap), behavior: 'smooth' })
+  }, [getCardWidth])
 
   useEffect(() => {
     const container = scrollRef.current
     if (!container) return
 
     const handleScroll = () => {
-      const cardWidth = container.offsetWidth
-      if (cardWidth === 0) return
-      const newIndex = Math.round(container.scrollLeft / cardWidth)
+      const cardW = getCardWidth()
+      const gap = 16
+      const slotWidth = cardW + gap
+      if (slotWidth === 0) return
+      const newIndex = Math.round(container.scrollLeft / slotWidth)
       setActiveIndex(Math.max(0, Math.min(newIndex, children.length - 1)))
     }
 
     container.addEventListener('scroll', handleScroll, { passive: true })
     return () => container.removeEventListener('scroll', handleScroll)
-  }, [children.length])
+  }, [children.length, getCardWidth])
 
   return (
     <>
@@ -50,7 +59,7 @@ export default function MobileCarousel({
       <div className={hideClass}>
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory -mx-5 px-5 gap-4"
+          className="flex overflow-x-auto snap-x snap-mandatory -mx-5 px-5 gap-4 pb-1"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -65,7 +74,8 @@ export default function MobileCarousel({
           {children.map((child, i) => (
             <div
               key={i}
-              className="snap-center shrink-0 w-[calc(100vw-40px)] max-w-[380px]"
+              data-carousel-item
+              className="snap-start shrink-0 w-[calc(100vw-40px)]"
             >
               {child}
             </div>

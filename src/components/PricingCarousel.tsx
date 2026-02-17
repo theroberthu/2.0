@@ -49,8 +49,8 @@ const cards = [
   },
 ]
 
-// Order for mobile: Growth Strategy first (index 1), then Listing Audit (0), then Ongoing Advisory (2)
-const mobileOrder = [1, 0, 2]
+// Order for mobile: Listing Audit first, then Growth Strategy (Most Popular), then Ongoing Advisory
+const mobileOrder = [0, 1, 2]
 
 function Card({ card }: { card: (typeof cards)[number] }) {
   return (
@@ -104,12 +104,18 @@ export default function PricingCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const isScrolling = useRef(false)
 
+  const getCardWidth = useCallback(() => {
+    if (!scrollRef.current) return 0
+    const firstCard = scrollRef.current.querySelector('[data-carousel-item]') as HTMLElement
+    return firstCard ? firstCard.offsetWidth : scrollRef.current.offsetWidth
+  }, [])
+
   const scrollToIndex = useCallback((index: number) => {
     if (!scrollRef.current) return
-    const container = scrollRef.current
-    const cardWidth = container.offsetWidth
-    container.scrollTo({ left: index * cardWidth, behavior: 'smooth' })
-  }, [])
+    const cardW = getCardWidth()
+    const gap = 16
+    scrollRef.current.scrollTo({ left: index * (cardW + gap), behavior: 'smooth' })
+  }, [getCardWidth])
 
   useEffect(() => {
     const container = scrollRef.current
@@ -117,14 +123,17 @@ export default function PricingCarousel() {
 
     const handleScroll = () => {
       if (isScrolling.current) return
-      const cardWidth = container.offsetWidth
-      const newIndex = Math.round(container.scrollLeft / cardWidth)
+      const cardW = getCardWidth()
+      const gap = 16
+      const slotWidth = cardW + gap
+      if (slotWidth === 0) return
+      const newIndex = Math.round(container.scrollLeft / slotWidth)
       setActiveIndex(Math.max(0, Math.min(newIndex, mobileOrder.length - 1)))
     }
 
     container.addEventListener('scroll', handleScroll, { passive: true })
     return () => container.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [getCardWidth])
 
   return (
     <>
@@ -132,13 +141,15 @@ export default function PricingCarousel() {
       <div className="md:hidden mb-10">
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 gap-4"
+          className="flex overflow-x-auto snap-x snap-mandatory -mx-5 px-5 gap-4 pb-1"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
         >
+          <style jsx>{`div::-webkit-scrollbar { display: none; }`}</style>
           {mobileOrder.map((cardIndex) => (
             <div
               key={cards[cardIndex].id}
-              className="snap-center shrink-0 w-[calc(100vw-40px)] max-w-[380px]"
+              data-carousel-item
+              className="snap-start shrink-0 w-[calc(100vw-40px)]"
             >
               <Card card={cards[cardIndex]} />
             </div>
