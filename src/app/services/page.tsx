@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import PricingCarousel from '@/components/PricingCarousel'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -147,76 +148,7 @@ export default function ServicesPage() {
               Clear scope, transparent pricing, and no surprises. Pick the level that fits where you are right now.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {/* Listing Audit */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 flex flex-col">
-              <div className="mb-4">
-                <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/70">Starting Point</span>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-1">Listing Audit</h3>
-              <p className="text-2xl font-bold text-brand-gold mb-4">$500</p>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                A deep-dive audit of your top 5 to 10 listings with a scored rubric, competitive analysis, and a prioritized action plan you can execute yourself or bring me in to implement.
-              </p>
-              <div className="mt-auto space-y-3 pt-4 border-t border-white/[0.06]">
-                <div>
-                  <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/60 mb-1">Best for</p>
-                  <p className="text-sm text-gray-400">Brands who want clarity on what&apos;s wrong before committing to a bigger engagement.</p>
-                </div>
-                <div>
-                  <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/60 mb-1">Delivery</p>
-                  <p className="text-sm text-gray-400">5 to 7 business days.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Growth Strategy */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-brand-accent/30 rounded-xl p-7 flex flex-col relative shadow-[0_0_20px_rgba(45,125,154,0.1)]">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-brand-accent text-white text-[10px] font-mono font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full">Most Popular</span>
-              </div>
-              <div className="mb-4">
-                <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/70">Full Strategy</span>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-1">Growth Strategy</h3>
-              <p className="text-2xl font-bold text-brand-gold mb-4">$2,000 &ndash; $3,500</p>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                A full-channel strategy covering listings, ads, catalog optimization, and AI search readiness. Includes a 90-day roadmap with specific priorities, timelines, and expected outcomes.
-              </p>
-              <div className="mt-auto space-y-3 pt-4 border-t border-white/[0.06]">
-                <div>
-                  <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/60 mb-1">Best for</p>
-                  <p className="text-sm text-gray-400">Brands doing $100K to $2M who need a real plan, not just tactical fixes.</p>
-                </div>
-                <div>
-                  <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/60 mb-1">Delivery</p>
-                  <p className="text-sm text-gray-400">2 to 3 weeks. Includes a 60-minute strategy walkthrough.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Ongoing Advisory */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 flex flex-col">
-              <div className="mb-4">
-                <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/70">Partnership</span>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-1">Ongoing Advisory</h3>
-              <p className="text-2xl font-bold text-brand-gold mb-4">$1,500 &ndash; $3,000<span className="text-sm font-normal text-gray-400">/month</span></p>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                Monthly strategic partnership. I review your performance data, adjust the plan, identify new opportunities, and keep your listings and ads optimized as the marketplace evolves.
-              </p>
-              <div className="mt-auto space-y-3 pt-4 border-t border-white/[0.06]">
-                <div>
-                  <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/60 mb-1">Best for</p>
-                  <p className="text-sm text-gray-400">Brands who want a dedicated strategist without the cost of a full-time hire.</p>
-                </div>
-                <div>
-                  <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/60 mb-1">Includes</p>
-                  <p className="text-sm text-gray-400">Bi-weekly calls, monthly performance review, priority Slack/email access.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PricingCarousel />
           <p className="text-center text-sm text-gray-400 max-w-xl mx-auto">
             Every engagement starts with a free 30-minute strategy session so I can understand your business before recommending anything. No pressure, no pitch.
           </p>
