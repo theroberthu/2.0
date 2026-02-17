@@ -6,7 +6,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl overflow-hidden hover:border-brand-accent/40 hover:-translate-y-1 hover:shadow-elevated transition-all duration-300"
+      className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl overflow-hidden hover:border-brand-accent/40 hover:-translate-y-1 hover:shadow-elevated transition-all duration-300 h-full"
     >
       {/* Featured image */}
       <div className="relative w-full aspect-[1200/630] bg-gradient-to-br from-brand-deep/60 to-brand-dark/80">

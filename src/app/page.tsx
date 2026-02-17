@@ -6,6 +6,7 @@ import { CASE_STUDIES } from '@/lib/case-studies-data'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
 import Testimonials from '@/components/Testimonials'
+import MobileCarousel from '@/components/MobileCarousel'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
@@ -275,7 +276,7 @@ export default async function HomePage() {
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">How I Can Help</h2>
             <p className="text-sm text-gray-400 max-w-lg mx-auto">Strategic consulting for brand owners who want to grow smarter, not just faster.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <MobileCarousel desktopGridCols="md:grid-cols-2">
             {[
               {
                 title: 'E-commerce Strategy',
@@ -309,7 +310,7 @@ export default async function HomePage() {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 hover:-translate-y-1 hover:border-brand-accent/40 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300"
+                className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 hover:-translate-y-1 hover:border-brand-accent/40 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300 h-full"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-brand-accent/[0.12] flex items-center justify-center">
@@ -333,7 +334,7 @@ export default async function HomePage() {
                 </span>
               </Link>
             ))}
-          </div>
+          </MobileCarousel>
         </div>
       </section>
 
@@ -381,12 +382,12 @@ export default async function HomePage() {
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <MobileCarousel desktopGridCols="md:grid-cols-3">
             {featuredStudies.map((cs) => (
               <Link
                 key={cs.slug}
                 href={`/case-studies/${cs.slug}`}
-                className="group bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 hover:border-brand-accent/40 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300"
+                className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-7 hover:border-brand-accent/40 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300 h-full"
               >
                 <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-white/[0.1] px-3 py-1 rounded-full mb-4">
                   {cs.category}
@@ -401,7 +402,7 @@ export default async function HomePage() {
                 </span>
               </Link>
             ))}
-          </div>
+          </MobileCarousel>
         </div>
       </section>
 
@@ -422,11 +423,11 @@ export default async function HomePage() {
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <MobileCarousel desktopGridCols="md:grid-cols-3">
               {posts.map((post) => (
                 <BlogCard key={post.id} post={post} />
               ))}
-            </div>
+            </MobileCarousel>
           </div>
         </section>
       )}

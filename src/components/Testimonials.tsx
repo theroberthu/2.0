@@ -1,4 +1,5 @@
 import SchemaMarkup from './SchemaMarkup'
+import MobileCarousel from './MobileCarousel'
 import { TESTIMONIALS, Testimonial } from '@/lib/testimonials-data'
 import { SITE_URL } from '@/lib/constants'
 
@@ -81,11 +82,11 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <MobileCarousel desktopGridCols="md:grid-cols-3">
           {TESTIMONIALS.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 md:p-7 hover:border-brand-accent/30 transition-colors duration-300"
+              className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 md:p-7 hover:border-brand-accent/30 transition-colors duration-300 h-full"
             >
               {/* Source badge + rating */}
               <div className="flex items-center justify-between mb-5">
@@ -113,7 +114,7 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
-        </div>
+        </MobileCarousel>
       </div>
     </section>
   )
