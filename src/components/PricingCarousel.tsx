@@ -141,7 +141,7 @@ export default function PricingCarousel() {
       <div className="md:hidden mb-10">
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory -mx-5 px-5 gap-4 pb-1"
+          className="flex overflow-x-auto snap-x snap-mandatory -mx-5 px-5 gap-4 pt-4 pb-1"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
         >
           <style jsx>{`div::-webkit-scrollbar { display: none; }`}</style>
