@@ -246,7 +246,7 @@ export default function EcommerceStrategyPage() {
             Let&apos;s Build Your Growth Strategy
           </h2>
           <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
-            30 minutes. No pitch. Just honest strategy for your brand.
+            15 minutes. No pitch. Just honest strategy for your brand.
           </p>
           <Link
             href="/free-strategy-session"

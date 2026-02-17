@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const strategySessionFAQs = [
   {
     q: 'Is this really free?',
-    a: "Yes. No credit card, no commitment. It's a 30-minute conversation where I look at your current setup and tell you what I'd prioritize.",
+    a: "Yes. No credit card, no commitment. It's a 15-minute conversation where I look at your current setup and tell you what I'd prioritize.",
   },
   {
     q: 'Will you try to sell me something?',
@@ -36,7 +36,7 @@ const strategySessionFAQs = [
   },
   {
     q: 'How long is the call?',
-    a: '30 minutes. Enough time to dig into your situation and give you at least one actionable takeaway, whether we work together or not.',
+    a: '15 minutes. Enough time to dig into your situation and give you at least one actionable takeaway, whether we work together or not.',
   },
 ]
 
@@ -45,7 +45,7 @@ const strategySessionSchema = {
   '@type': 'Service',
   name: 'Free E-commerce Strategy Session',
   description:
-    'A free 30-minute strategy session to discuss how AI and digital transformation can grow your e-commerce brand. No sales pitch, no obligation.',
+    'A free 15-minute strategy session to discuss how AI and digital transformation can grow your e-commerce brand. No sales pitch, no obligation.',
   provider: {
     '@type': 'Person',
     name: 'Robert Hu',
@@ -57,7 +57,7 @@ const strategySessionSchema = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
-    description: 'Free 30-minute strategy session',
+    description: 'Free 15-minute strategy session',
   },
 }
 
@@ -141,7 +141,7 @@ export default function FreeStrategySessionPage() {
               {
                 step: '03',
                 title: 'We talk strategy',
-                desc: 'A 30-minute call where I give you honest, actionable feedback you can use immediately.',
+                desc: 'A 15-minute call where I give you honest, actionable feedback you can use immediately.',
                 icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
               },
             ].map((item) => (

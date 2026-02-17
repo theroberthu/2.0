@@ -36,7 +36,7 @@ const serviceSchema = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
-    description: 'Free 30-minute GEO audit session',
+    description: 'Free 15-minute GEO audit session',
   },
 }
 
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does a GEO audit cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The initial 30-minute GEO audit call is free. No pitch, no obligation. You walk away with actionable insights about your AI search visibility.',
+        text: 'The initial 15-minute GEO audit call is free. No pitch, no obligation. You walk away with actionable insights about your AI search visibility.',
       },
     },
     {
@@ -115,7 +115,7 @@ const STEPS = [
   {
     step: '03',
     title: 'We Talk Strategy',
-    description: 'A focused 30-minute call where I share what I found and what to fix first. No pitch. Just honest feedback.',
+    description: 'A focused 15-minute call where I share what I found and what to fix first. No pitch. Just honest feedback.',
     icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
   },
 ]
@@ -250,13 +250,13 @@ export default function GeoAuditPage() {
             Book Your GEO Audit
           </h2>
           <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
-            30 minutes. No pitch. Just an honest look at how your brand shows up in AI-powered search.
+            15 minutes. No pitch. Just an honest look at how your brand shows up in AI-powered search.
           </p>
           <Link
             href="/free-strategy-session"
             className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Book Your GEO Audit — Free 30-Minute Call
+            Book Your GEO Audit — Free 15-Minute Call
           </Link>
         </div>
       </section>

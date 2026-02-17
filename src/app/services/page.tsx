@@ -150,7 +150,7 @@ export default function ServicesPage() {
           </div>
           <PricingCarousel />
           <p className="text-center text-sm text-gray-400 max-w-xl mx-auto">
-            Every engagement starts with a free 30-minute strategy session so I can understand your business before recommending anything. No pressure, no pitch.
+            Every engagement starts with a free 15-minute strategy session so I can understand your business before recommending anything. No pressure, no pitch.
           </p>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function ServicesPage() {
             Not Sure Which Service You Need?
           </h2>
           <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
-            30 minutes. No pitch. Just honest strategy for your brand.
+            15 minutes. No pitch. Just honest strategy for your brand.
           </p>
           <Link
             href="/free-strategy-session"
