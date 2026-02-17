@@ -29,8 +29,12 @@ export const metadata: Metadata = {
   description:
     'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
   icons: {
-    icon: '/images/theroberthulogo.png',
-    apple: '/images/theroberthulogo.png',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
