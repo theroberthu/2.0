@@ -6,7 +6,6 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/theroberthu',
   x: 'https://x.com/theroberthu',
   youtube: 'https://www.youtube.com/@theroberthu',
-  instagram: 'https://www.instagram.com/theroberthu',
 }
 
 export const NAV_LINKS = [

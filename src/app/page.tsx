@@ -76,7 +76,6 @@ const organizationSchema = {
     SOCIAL_LINKS.linkedin,
     SOCIAL_LINKS.x,
     SOCIAL_LINKS.youtube,
-    SOCIAL_LINKS.instagram,
   ],
   description:
     'E-commerce strategy, product listing optimization, GEO, digital marketing, and digital transformation consulting for growing brands.',

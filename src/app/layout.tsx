@@ -82,7 +82,6 @@ const personSchema = {
     SOCIAL_LINKS.linkedin,
     SOCIAL_LINKS.x,
     SOCIAL_LINKS.youtube,
-    SOCIAL_LINKS.instagram,
   ],
 }
 
