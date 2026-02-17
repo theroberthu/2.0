@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { DM_Sans, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
       'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
     images: [
       {
-        url: '/images/robert-hu-headshot.png',
+        url: '/images/og-default.svg',
         width: 1200,
         height: 630,
         alt: 'Robert Hu - E-commerce Strategist',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     title: 'Robert Hu - E-commerce Strategist',
     description:
       'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
-    images: ['/images/robert-hu-headshot.png'],
+    images: ['/images/og-default.svg'],
   },
   alternates: {
     canonical: SITE_URL,
@@ -88,6 +89,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-V9BV9F9MPM"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-V9BV9F9MPM');`}
+        </Script>
+      </head>
       <body
         className={`${dmSans.variable} ${jetbrainsMono.variable} font-sans antialiased bg-brand-bg text-brand-dark`}
       >

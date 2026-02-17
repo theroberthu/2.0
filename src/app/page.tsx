@@ -113,7 +113,7 @@ export default async function HomePage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
                 E-commerce Strategy
               </div>
-              <h1 className="text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-bold text-white leading-[1.15] tracking-tight mb-5">
+              <h1 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-bold text-white leading-[1.15] tracking-tight mb-5">
                 Grow Your E-commerce Brand with AI That Actually Works
               </h1>
               <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-lg mb-8">
@@ -146,15 +146,15 @@ export default async function HomePage() {
             </div>
 
             {/* Mobile stats row - visible only on small screens */}
-            <div className="flex lg:hidden gap-3 -mx-1">
+            <div className="flex lg:hidden gap-2 sm:gap-3">
               {[
                 { label: 'Revenue', value: '$2.1M' },
                 { label: 'Conversion', value: '+47%' },
                 { label: 'ROAS', value: '4.2x' },
               ].map((m) => (
-                <div key={m.label} className="flex-1 bg-white/[0.05] backdrop-blur-md rounded-xl border border-white/[0.08] p-4 text-center">
+                <div key={m.label} className="flex-1 min-w-0 bg-white/[0.05] backdrop-blur-md rounded-xl border border-white/[0.08] p-3 sm:p-4 text-center">
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider">{m.label}</div>
-                  <div className="text-xl font-bold text-brand-gold mt-1">{m.value}</div>
+                  <div className="text-lg sm:text-xl font-bold text-brand-gold mt-1">{m.value}</div>
                 </div>
               ))}
             </div>
