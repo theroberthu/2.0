@@ -78,6 +78,7 @@ export function generateOgImage(slug, title, category) {
 
   const categoryY = startY - 50
   const escapedCategory = category
+    .toUpperCase()
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -99,7 +100,7 @@ export function generateOgImage(slug, title, category) {
   <rect x="60" y="50" width="3" height="30" fill="#2d7d9a" opacity="0.4"/>
 
   <!-- Category tag -->
-  <text x="600" y="${categoryY}" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#2d7d9a" letter-spacing="3" text-transform="uppercase">${escapedCategory.toUpperCase()}</text>
+  <text x="600" y="${categoryY}" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#2d7d9a" letter-spacing="3" text-transform="uppercase">${escapedCategory}</text>
 
   <!-- Title -->
 ${titleLines}
