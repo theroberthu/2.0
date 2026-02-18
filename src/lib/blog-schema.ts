@@ -83,3 +83,19 @@ export function generateFAQSchema(post: BlogPost) {
     })),
   }
 }
+
+export function generateVideoSchema(post: BlogPost) {
+  const video = post.schema_json?.video_data
+  if (!video) return null
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    uploadDate: video.uploadDate,
+    contentUrl: video.contentUrl,
+    embedUrl: video.embedUrl,
+  }
+}

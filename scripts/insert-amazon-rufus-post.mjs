@@ -57,7 +57,15 @@ const post = {
     ],
     related_services: ['product-listing-optimization'],
     related_posts: ['costco-digital-ecommerce-strategy'],
-    featured_image_alt: 'Amazon AI shopping tools and Rufus reshaping product discovery for e-commerce sellers'
+    featured_image_alt: 'Amazon AI shopping tools and Rufus reshaping product discovery for e-commerce sellers',
+    video_data: {
+      name: "Amazon's AI Shopping Tools Are Redirecting Your Customers",
+      description: "Robert Hu breaks down how Amazon Rufus, Buy for Me, and Shop Direct are reshaping product discovery, and why GEO (Generative Engine Optimization) matters for Amazon sellers.",
+      thumbnailUrl: 'https://img.youtube.com/vi/3TfjmWpA1HQ/maxresdefault.jpg',
+      uploadDate: '2026-01-08',
+      contentUrl: 'https://www.youtube.com/watch?v=3TfjmWpA1HQ',
+      embedUrl: 'https://www.youtube.com/embed/3TfjmWpA1HQ'
+    }
   },
   published_at: '2026-01-08T12:00:00.000Z',
   content: `<p>Amazon's AI shopping tools are no longer an experiment. They are the product discovery layer for over 250 million shoppers. And most Amazon sellers have no strategy for it.</p>
@@ -65,6 +73,10 @@ const post = {
 <p>Rufus, Amazon's conversational AI assistant, is now embedded in the shopping experience. Alongside it, Amazon has rolled out Buy for Me and Shop Direct, tools that let AI agents find, compare, and purchase products on behalf of customers. <a href="https://www.cnbc.com/2026/01/06/amazons-ai-shopping-tool-sparks-backlash-from-some-online-retailers.html" target="_blank" rel="noopener noreferrer">CNBC recently reported</a> that these tools have sparked backlash from retailers who say Amazon scraped their sites and listed products without permission. Over 180 business owners came forward with complaints, and more than 500,000 products are now available through the Buy for Me program alone.</p>
 
 <p>The scraping controversy is a real issue. But if you are an Amazon seller, it is not the part of this story that should keep you up at night.</p>
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/3TfjmWpA1HQ" title="Amazon AI Shopping Tools and GEO for Sellers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <h2>How Is Amazon Rufus Changing Product Discovery for Sellers?</h2>
 

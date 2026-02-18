@@ -11,6 +11,7 @@ import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema,
+  generateVideoSchema,
 } from '@/lib/blog-schema'
 
 interface Props {
@@ -104,6 +105,7 @@ export default async function BlogPostPage(props: Props) {
   const articleSchema = generateArticleSchema(post)
   const breadcrumbSchema = generateBreadcrumbSchema(post)
   const faqSchema = generateFAQSchema(post)
+  const videoSchema = generateVideoSchema(post)
 
   // Fetch related posts
   let relatedPosts: typeof post[] = []
@@ -125,6 +127,7 @@ export default async function BlogPostPage(props: Props) {
       <SchemaMarkup data={articleSchema} />
       <SchemaMarkup data={breadcrumbSchema} />
       {faqSchema && <SchemaMarkup data={faqSchema} />}
+      {videoSchema && <SchemaMarkup data={videoSchema} />}
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-16 md:py-24">

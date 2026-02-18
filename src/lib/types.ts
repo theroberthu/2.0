@@ -29,6 +29,14 @@ export interface BlogPostSchemaJson {
   related_services?: string[]
   featured_image_alt?: string
   author?: string
+  video_data?: {
+    name: string
+    description: string
+    thumbnailUrl: string
+    uploadDate: string
+    contentUrl: string
+    embedUrl: string
+  }
 }
 
 export interface BlogPost {
