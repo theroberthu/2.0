@@ -32,4 +32,12 @@ export const TESTIMONIALS: Testimonial[] = [
     text: 'Robert is down-to-earth, cool, and great at what he does. His mini-videos really help us understand what needs to be done.',
     rating: 5,
   },
+  {
+    id: 'clutch-dog-treats',
+    author: 'Verified Client',
+    role: 'Owner, Dog Treats Manufacturer',
+    source: 'verified',
+    text: "He didn't give us a one-size-fits-all solution and instead tailored an approach that is very helpful for us.",
+    rating: 5,
+  },
 ]
