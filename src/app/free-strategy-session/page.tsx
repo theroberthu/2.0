@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import LeadForm from '@/components/LeadForm'
 import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
@@ -170,6 +171,15 @@ export default function FreeStrategySessionPage() {
             </h2>
           </div>
           <FAQSection items={strategySessionFAQs} />
+
+          {/* Pricing reassurance */}
+          <p className="mt-12 text-center text-[13px] text-gray-500 leading-relaxed">
+            Wondering about cost? Engagements start at $500 for a{' '}
+            <Link href="/services#pricing" className="text-gray-400 underline underline-offset-2 hover:text-gray-300 transition-colors duration-150">
+              listing audit
+            </Link>
+            , with strategic and advisory options for brands ready to grow. We&apos;ll talk through what makes sense for you on the call.
+          </p>
         </div>
       </section>
     </>

@@ -137,7 +137,7 @@ export default function ServicesPage() {
       </section>
 
       {/* How Engagements Work */}
-      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+      <section id="pricing" className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-12">
             <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Pricing</span>
