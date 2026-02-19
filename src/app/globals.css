@@ -196,6 +196,34 @@
   border: 0;
 }
 
+/* Inline CTA callout box injected into blog post content */
+.blog-inline-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 3px solid #c5a94e;
+  background: rgba(197, 169, 78, 0.06);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+}
+.blog-inline-cta-text {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #e8edf0;
+  margin: 0 !important;
+}
+.blog-inline-cta-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #c5a94e !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+.blog-inline-cta-link:hover {
+  color: #d9bc6e !important;
+}
+
 /* Page section fade-in animations */
 @keyframes fadeInUp {
   from {

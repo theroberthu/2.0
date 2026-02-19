@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
+import BlogSidebar from '@/components/BlogSidebar'
 import { SITE_URL } from '@/lib/constants'
 import {
   generateArticleSchema,
@@ -13,6 +14,63 @@ import {
   generateFAQSchema,
   generateVideoSchema,
 } from '@/lib/blog-schema'
+
+// Category → service page mapping for the contextual service card
+const CATEGORY_SERVICE_MAP: Record<string, { href: string; label: string; description: string }> = {
+  'GEO & SEO': {
+    href: '/services/product-listing-optimization',
+    label: 'Product Listing Optimization',
+    description: 'Structured for AI-driven discovery — Rufus, ChatGPT, and every channel where your buyers search.',
+  },
+  'E-commerce Strategy': {
+    href: '/services/ecommerce-strategy',
+    label: 'E-commerce Strategy',
+    description: 'A clear growth plan built around your specific catalog, margins, and market position.',
+  },
+  'Digital Marketing': {
+    href: '/services/digital-marketing-strategy',
+    label: 'Digital Marketing Strategy',
+    description: 'Channel strategy, content, and paid media that drives measurable return.',
+  },
+  'Digital Transformation': {
+    href: '/services/digital-transformation',
+    label: 'Digital Transformation',
+    description: 'Systems, automation, and process design that scale your operations without scaling headcount.',
+  },
+}
+
+/**
+ * Split HTML content at the Nth <h2> tag and inject an inline CTA callout.
+ * Returns the full content string with the callout inserted.
+ */
+function injectInlineCTA(html: string, afterH2Index = 1): string {
+  const h2Regex = /<h2[\s>]/gi
+  let match
+  let count = 0
+  let insertAt = -1
+
+  while ((match = h2Regex.exec(html)) !== null) {
+    count++
+    if (count === afterH2Index + 1) {
+      insertAt = match.index
+      break
+    }
+  }
+
+  // If we didn't find a 2nd H2, insert before the last 25% of the content
+  if (insertAt === -1 && count >= 1) {
+    insertAt = Math.floor(html.length * 0.55)
+  }
+
+  if (insertAt === -1) return html
+
+  const callout = `<div class="blog-inline-cta">
+  <p class="blog-inline-cta-text">Want help applying this to your brand?</p>
+  <a href="/free-strategy-session" class="blog-inline-cta-link">Book a free 15-minute strategy session →</a>
+</div>`
+
+  return html.slice(0, insertAt) + callout + html.slice(insertAt)
+}
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -200,17 +258,51 @@ export default async function BlogPostPage(props: Props) {
         </div>
       </section>
 
-      {/* Content */}
+      {/* Content + Sidebar */}
       <article className="py-16 md:py-20 bg-brand-dark">
-        <div className="max-w-[720px] mx-auto px-5 sm:px-8">
-          {post.content ? (
-            <div
-              className="prose-custom-dark"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-          ) : (
-            <p className="text-gray-500 text-center py-12">Content coming soon.</p>
-          )}
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
+          <div className="xl:grid xl:grid-cols-[720px_1fr] xl:gap-12 xl:items-start">
+            {/* Main content */}
+            <div>
+              {post.content ? (
+                <div
+                  className="prose-custom-dark"
+                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(post.content) }}
+                />
+              ) : (
+                <p className="text-gray-500 text-center py-12">Content coming soon.</p>
+              )}
+
+              {/* Contextual service card — shown after content, before end CTA */}
+              {(() => {
+                const service = post.category ? CATEGORY_SERVICE_MAP[post.category] : null
+                if (!service) return null
+                return (
+                  <div className="mt-12 rounded-xl border border-brand-accent/20 bg-brand-accent/[0.05] p-6">
+                    <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent mb-3">
+                      Related Service
+                    </span>
+                    <h3 className="text-base font-bold text-white mb-2">{service.label}</h3>
+                    <p className="text-[0.875rem] text-gray-400 leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent hover:text-white transition-colors duration-200"
+                    >
+                      Learn more
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                )
+              })()}
+            </div>
+
+            {/* Sticky sidebar — desktop only */}
+            <BlogSidebar />
+          </div>
         </div>
       </article>
 
