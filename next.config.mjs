@@ -16,6 +16,11 @@ const nextConfig = {
         destination: '/geo',
         permanent: true,
       },
+      {
+        source: '/contact',
+        destination: '/free-strategy-session',
+        permanent: true,
+      },
     ]
   },
 };
