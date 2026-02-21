@@ -231,7 +231,7 @@ excerpt: "" # 1-2 sentence summary for blog index cards
 - Include a Key Takeaways section at the top for all posts (see Scannability Rules below)
 
 ### Scannability Rules
-- Every blog post MUST include a **Key Takeaways** section at the very top (2-4 bullet points: key takeaway + one compelling number)
+- Every blog post MUST include a **Key Takeaways** section at the very top, formatted as a bulleted list (never paragraphs). 2-4 bullets, each leading with the key takeaway and including at least one specific number or dollar figure.
 - Bold key numbers, statistics, and dollar figures throughout — readers scan for data points
 - No H2 section should exceed 4 paragraphs before the next heading
 - Every H2 section must lead with the most important sentence first, not a warm-up or lead-in paragraph
