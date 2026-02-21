@@ -228,7 +228,16 @@ excerpt: "" # 1-2 sentence summary for blog index cards
 - Use subheadings every 200-300 words
 - Bold key takeaways or important phrases sparingly
 - No em dashes — use commas, periods, or parentheses instead
-- Include a TL;DR or key takeaway at the top for longer posts (500+ words)
+- Include a Key Takeaways section at the top for all posts (see Scannability Rules below)
+
+### Scannability Rules
+- Every blog post MUST include a **Key Takeaways** section at the very top (2-4 bullet points: key takeaway + one compelling number)
+- Bold key numbers, statistics, and dollar figures throughout — readers scan for data points
+- No H2 section should exceed 4 paragraphs before the next heading
+- Every H2 section must lead with the most important sentence first, not a warm-up or lead-in paragraph
+- Use callout boxes for before/after examples, key quotes, or math breakdowns to make them visually distinct
+- Short paragraphs: 2-3 sentences max. Wall of text = reader leaves
+- If a post exceeds 2,000 words, it needs a subheading every 200-300 words without exception
 
 ### Length
 - Standard posts: 800–1,500 words
@@ -270,6 +279,10 @@ Every post must have:
 
 ## Checklist Before Publishing
 
+- [ ] Key Takeaways section is at the top (2-4 bullets, includes at least one number)
+- [ ] Key numbers and dollar figures are bolded throughout
+- [ ] No H2 section exceeds 4 paragraphs
+- [ ] Every H2 opens with the most important sentence (no warm-up paragraphs)
 - [ ] Title under 60 characters with primary keyword
 - [ ] Meta description 150-160 characters with keyword and CTA
 - [ ] URL slug is short and clean
