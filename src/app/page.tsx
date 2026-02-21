@@ -272,6 +272,44 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Meet Robert */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-10 md:gap-16">
+            {/* Video */}
+            <div className="w-full shrink-0 sm:w-[480px]">
+              <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/Wpj1pPcyao4?rel=0&modestbranding=1"
+                  title="Meet Robert Hu — E-commerce Strategist"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">About</span>
+              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-4">Meet Robert</h2>
+              <p className="text-base text-gray-400 leading-relaxed max-w-xl mb-6">
+                I&apos;ve spent 20+ years inside Amazon and Walmart, first building brands, now helping others grow theirs. I combine hands-on marketplace experience with AI-powered strategies to help brands scale smarter.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200"
+              >
+                Read my story
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Approach */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
@@ -342,44 +380,6 @@ export default async function HomePage() {
 
       {/* Testimonials */}
       <Testimonials />
-
-      {/* Meet Robert */}
-      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="flex flex-col sm:flex-row items-center gap-10 md:gap-16">
-            {/* Video */}
-            <div className="w-full shrink-0 sm:w-[480px]">
-              <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                <iframe
-                  src="https://www.youtube.com/embed/Wpj1pPcyao4?rel=0&modestbranding=1"
-                  title="Meet Robert Hu — E-commerce Strategist"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
-              </div>
-            </div>
-
-            {/* Text */}
-            <div>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">About</span>
-              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-4">Meet Robert</h2>
-              <p className="text-base text-gray-400 leading-relaxed max-w-xl mb-6">
-                I&apos;ve spent 20+ years inside Amazon and Walmart, first building brands, now helping others grow theirs. I combine hands-on marketplace experience with AI-powered strategies to help brands scale smarter.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200"
-              >
-                Read my story
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Latest blog posts */}
       {posts && posts.length > 0 && (
