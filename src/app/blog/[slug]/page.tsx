@@ -237,22 +237,14 @@ export default async function BlogPostPage(props: Props) {
           {/* Featured image */}
           {post.og_image && (
             <div className="relative w-full aspect-[1200/630] mt-8 rounded-xl overflow-hidden">
-              {post.og_image.endsWith('.svg') ? (
-                <img
-                  src={post.og_image}
-                  alt={post.schema_json?.featured_image_alt || post.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              ) : (
-                <Image
-                  src={post.og_image}
-                  alt={post.schema_json?.featured_image_alt || post.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 720px"
-                  priority
-                />
-              )}
+              <Image
+                src={post.og_image}
+                alt={post.schema_json?.featured_image_alt || post.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 720px"
+                priority
+              />
             </div>
           )}
         </div>

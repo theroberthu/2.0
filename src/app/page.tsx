@@ -8,6 +8,7 @@ import CTABanner from '@/components/CTABanner'
 import Testimonials from '@/components/Testimonials'
 import MobileCarousel from '@/components/MobileCarousel'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import LazyYouTube from '@/components/LazyYouTube'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -206,15 +207,10 @@ export default async function HomePage() {
           <div className="flex flex-col sm:flex-row items-center gap-10 md:gap-16">
             {/* Video */}
             <div className="w-full shrink-0 sm:w-[480px]">
-              <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                <iframe
-                  src="https://www.youtube.com/embed/Wpj1pPcyao4?rel=0&modestbranding=1"
-                  title="Meet Robert Hu — E-commerce Strategist"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
-              </div>
+              <LazyYouTube
+                videoId="Wpj1pPcyao4"
+                title="Meet Robert Hu — E-commerce Strategist"
+              />
             </div>
 
             {/* Text */}

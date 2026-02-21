@@ -10,13 +10,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
     >
       {/* Featured image */}
       <div className="relative w-full aspect-[1200/630] bg-gradient-to-br from-brand-deep/60 to-brand-dark/80">
-        {post.og_image?.endsWith('.svg') ? (
-          <img
-            src={post.og_image}
-            alt={post.schema_json?.featured_image_alt || post.title}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        ) : post.og_image ? (
+        {post.og_image ? (
           <Image
             src={post.og_image}
             alt={post.schema_json?.featured_image_alt || post.title}

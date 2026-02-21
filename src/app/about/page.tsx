@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABanner from '@/components/CTABanner'
+import LazyYouTube from '@/components/LazyYouTube'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -170,15 +171,10 @@ export default function AboutPage() {
       {/* Intro video */}
       <section className="py-12 md:py-16 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-[720px] mx-auto px-5 sm:px-8">
-          <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
-            <iframe
-              src="https://www.youtube.com/embed/Wpj1pPcyao4?rel=0&modestbranding=1"
-              title="Robert Hu — E-commerce Strategist Introduction"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <LazyYouTube
+            videoId="Wpj1pPcyao4"
+            title="Robert Hu — E-commerce Strategist Introduction"
+          />
         </div>
       </section>
 
