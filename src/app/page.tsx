@@ -106,7 +106,7 @@ export default async function HomePage() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
 
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28 lg:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left - Text */}
             <div>
               <div className="inline-flex items-center gap-2 bg-brand-gold/[0.12] text-brand-gold text-[11px] font-semibold uppercase tracking-[0.15em] px-3.5 py-1.5 rounded-full mb-6">
@@ -117,9 +117,9 @@ export default async function HomePage() {
                 Grow Your E-commerce Brand with AI That Actually Works
               </h1>
               <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-lg mb-8">
-                Helping $100K-$2M e-commerce brands implement AI-powered strategies for sustainable growth. No hype. No fluff. Just results.
+                Helping $100K–$2M e-commerce brands implement AI-powered strategies for sustainable growth. No hype. No fluff. Just results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/free-strategy-session"
                   className="bg-brand-gold text-white font-semibold px-7 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center"
@@ -133,87 +133,21 @@ export default async function HomePage() {
                   See How I Work
                 </Link>
               </div>
-              <div className="flex items-center gap-3 text-[13px] text-gray-400">
+            </div>
+
+            {/* Right - Headshot */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
                 <Image
                   src="/images/robert-hu-headshot.png"
-                  alt="Robert Hu"
-                  width={36}
-                  height={36}
-                  className="rounded-full border-2 border-white/20 shadow-sm object-cover"
+                  alt="Robert Hu, e-commerce strategist"
+                  width={400}
+                  height={400}
+                  className="rounded-2xl object-cover shadow-elevated"
+                  priority
                 />
-                <span>Trusted by 50+ e-commerce brands</span>
-              </div>
-            </div>
-
-            {/* Mobile stats row - visible only on small screens */}
-            <div className="flex lg:hidden gap-2 sm:gap-3">
-              {[
-                { label: 'Revenue', value: '$2.1M' },
-                { label: 'Conversion', value: '+47%' },
-                { label: 'ROAS', value: '4.2x' },
-              ].map((m) => (
-                <div key={m.label} className="flex-1 min-w-0 bg-white/[0.05] backdrop-blur-md rounded-xl border border-white/[0.08] p-3 sm:p-4 text-center">
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider">{m.label}</div>
-                  <div className="text-lg sm:text-xl font-bold text-brand-gold mt-1">{m.value}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Right - Visual element (desktop) */}
-            <div className="relative hidden lg:block">
-              <div className="relative bg-white/[0.05] backdrop-blur-md rounded-2xl border border-white/[0.08] p-6">
-                <div className="flex items-center gap-1.5 mb-5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-amber-400/60" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/60" />
-                  <div className="ml-3 h-5 w-40 bg-white/[0.06] rounded" />
-                </div>
-                <div className="space-y-3">
-                  <div className="h-3 w-24 bg-white/[0.06] rounded" />
-                  <div className="flex items-end gap-2 h-32">
-                    {[40, 55, 35, 65, 50, 80, 70, 90, 75, 95, 85, 100].map((h, i) => (
-                      <div key={i} className="flex-1 rounded-sm bg-gradient-to-t from-brand-accent/40 to-brand-accent/10" style={{ height: `${h}%` }} />
-                    ))}
-                  </div>
-                  <div className="flex justify-between">
-                    <div className="h-2 w-16 bg-white/[0.06] rounded" />
-                    <div className="h-2 w-16 bg-white/[0.06] rounded" />
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 gap-3 mt-5">
-                  {[
-                    { label: 'Revenue', value: '$2.1M' },
-                    { label: 'Conversion', value: '+47%' },
-                    { label: 'ROAS', value: '4.2x' },
-                  ].map((m) => (
-                    <div key={m.label} className="bg-white/[0.05] rounded-lg p-3 text-center">
-                      <div className="text-[10px] text-gray-500 uppercase tracking-wider">{m.label}</div>
-                      <div className="text-lg font-bold text-brand-gold mt-0.5">{m.value}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-4 bg-white/[0.08] backdrop-blur-md rounded-xl border border-white/[0.1] p-4 animate-fade-up">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/[0.12] flex items-center justify-center">
-                    <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                  </div>
-                  <div>
-                    <div className="text-[10px] text-gray-500">Conversion Rate</div>
-                    <div className="text-sm font-bold text-brand-gold">+47%</div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-3 -left-4 bg-white/[0.08] backdrop-blur-md rounded-xl border border-white/[0.1] p-4 animate-fade-up" style={{ animationDelay: '0.15s' }}>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/[0.12] flex items-center justify-center">
-                    <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  </div>
-                  <div>
-                    <div className="text-[10px] text-gray-500">Ad Spend Waste</div>
-                    <div className="text-sm font-bold text-brand-gold">-32%</div>
-                  </div>
-                </div>
+                {/* Subtle accent line */}
+                <div className="absolute -bottom-3 -left-3 w-full h-full rounded-2xl border border-brand-accent/20 -z-10" />
               </div>
             </div>
           </div>
