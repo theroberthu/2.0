@@ -224,6 +224,62 @@
   color: #d9bc6e !important;
 }
 
+/* Key Takeaways box — top-of-post summary */
+.tldr-box {
+  background: rgba(45, 125, 154, 0.08);
+  border: 1px solid rgba(45, 125, 154, 0.25);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 2rem 0;
+}
+.tldr-box .tldr-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2d7d9a;
+  margin: 0 0 0.75rem 0 !important;
+}
+.tldr-box ul {
+  margin: 0 !important;
+  padding-left: 1.25rem;
+}
+.tldr-box li {
+  color: #c0cdd4;
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.tldr-box li:last-child {
+  margin-bottom: 0;
+}
+
+/* Callout box — before/after examples, math breakdowns, key quotes */
+.callout-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+}
+.callout-box .callout-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a9aa2;
+  margin: 0 0 1rem 0 !important;
+}
+.callout-box p {
+  margin-bottom: 0.75rem !important;
+}
+.callout-box p:last-child {
+  margin-bottom: 0 !important;
+}
+.callout-box blockquote {
+  margin: 0.75rem 0 !important;
+}
+
 /* Page section fade-in animations */
 @keyframes fadeInUp {
   from {
