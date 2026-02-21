@@ -167,6 +167,21 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Intro video */}
+      <section className="py-12 md:py-16 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-[720px] mx-auto px-5 sm:px-8">
+          <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+            <iframe
+              src="https://www.youtube.com/embed/Wpj1pPcyao4?rel=0&modestbranding=1"
+              title="Robert Hu — E-commerce Strategist Introduction"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Timeline Milestones */}
       <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">

@@ -347,15 +347,17 @@ export default async function HomePage() {
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex flex-col sm:flex-row items-center gap-10 md:gap-16">
-            {/* Headshot */}
-            <div className="shrink-0">
-              <Image
-                src="/images/robert-hu-headshot.png"
-                alt="Robert Hu, e-commerce strategist"
-                width={160}
-                height={160}
-                className="rounded-full border border-white/[0.1] object-cover shadow-elevated"
-              />
+            {/* Video */}
+            <div className="w-full shrink-0 sm:w-[480px]">
+              <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/Wpj1pPcyao4?rel=0&modestbranding=1"
+                  title="Meet Robert Hu — E-commerce Strategist"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
             </div>
 
             {/* Text */}
