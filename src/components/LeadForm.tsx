@@ -12,6 +12,14 @@ export default function LeadForm() {
   async function handleSubmit(formData: FormData) {
     setLoading(true)
     setError(null)
+
+    // Capture values before the server action (for the background notification fetch)
+    const name = formData.get('name') as string
+    const email = formData.get('email') as string
+    const website_url = (formData.get('website_url') as string)?.trim() || ''
+    const revenue_range = (formData.get('revenue_range') as string) || ''
+    const challenge = (formData.get('challenge') as string) || ''
+
     const result = await submitLead(formData)
     setLoading(false)
 
@@ -19,6 +27,12 @@ export default function LeadForm() {
       setError(result.error)
     } else {
       setSubmitted(true)
+      // Fire-and-forget: snapshot + emails run in background, never block the UI
+      fetch('/api/lead-notifications', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, website_url, revenue_range, challenge }),
+      }).catch(() => {})
     }
   }
 
