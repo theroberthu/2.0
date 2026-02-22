@@ -99,13 +99,19 @@ export async function submitLead(formData: FormData) {
       console.error('Supabase error:', dbError)
     }
 
+    // Generate Brand Snapshot before notification email so it can be included
+    let snapshot: BrandSnapshot | null = null
+    if (website_url) {
+      snapshot = await generateBrandSnapshot(website_url)
+    }
+
     // Always send notification email to Robert (this is the critical path)
     try {
       await resend.emails.send({
         from: EMAIL_FROM,
         to: NOTIFICATION_EMAIL,
         subject: `New Strategy Session Request from ${name}`,
-        html: leadNotificationEmail({ name, email, website_url, revenue_range, challenge }),
+        html: leadNotificationEmail({ name, email, website_url, revenue_range, challenge }, snapshot),
       })
     } catch (notifyError) {
       console.error('Failed to send notification email:', notifyError)
@@ -127,13 +133,7 @@ export async function submitLead(formData: FormData) {
       console.error('Failed to send confirmation email:', confirmError)
     }
 
-    // Generate Brand Snapshot if URL was provided (non-blocking)
-    let snapshot: BrandSnapshot | null = null
-    if (website_url) {
-      snapshot = await generateBrandSnapshot(website_url)
-    }
-
-    return { success: true, snapshot }
+    return { success: true }
   } catch (err) {
     console.error('submitLead unexpected error:', err)
     return { error: 'Something went wrong. Please try again or email robert@theroberthu.com directly.' }

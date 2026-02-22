@@ -1,47 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { submitLead, type BrandSnapshot } from '@/app/actions/leads'
+import { submitLead } from '@/app/actions/leads'
 import { REVENUE_RANGES } from '@/lib/constants'
-
-function SnapshotCard({ snapshot }: { snapshot: BrandSnapshot }) {
-  const fields: { label: string; value: string | string[] }[] = [
-    { label: 'Brand', value: snapshot.brandName },
-    { label: 'Category', value: snapshot.category },
-    { label: 'Marketplace', value: snapshot.estimatedMarketplace },
-    { label: 'Top Products', value: snapshot.topProducts },
-    { label: 'First Impression', value: snapshot.firstImpression },
-  ]
-
-  return (
-    <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 mb-8 text-left">
-      <div className="flex items-center gap-2 mb-5">
-        <span className="text-lg">✨</span>
-        <h4 className="text-[15px] font-semibold text-white">
-          Here&apos;s what I found about your brand:
-        </h4>
-      </div>
-      <div className="space-y-3">
-        {fields.map(({ label, value }) => {
-          const display = Array.isArray(value) ? value.join(', ') : value
-          if (!display || display.toLowerCase() === 'unknown') return null
-          return (
-            <div key={label} className="flex gap-3">
-              <span className="text-[13px] text-gray-500 w-28 shrink-0">{label}</span>
-              <span className="text-[13px] text-white">{display}</span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
-  const [snapshot, setSnapshot] = useState<BrandSnapshot | null>(null)
 
   async function handleSubmit(formData: FormData) {
     setLoading(true)
@@ -52,9 +18,6 @@ export default function LeadForm() {
     if (result.error) {
       setError(result.error)
     } else {
-      if (result.snapshot) {
-        setSnapshot(result.snapshot)
-      }
       setSubmitted(true)
     }
   }
@@ -62,7 +25,6 @@ export default function LeadForm() {
   if (submitted) {
     return (
       <div className="py-12">
-        {snapshot && <SnapshotCard snapshot={snapshot} />}
         <div className="text-center">
           <div className="w-12 h-12 rounded-full bg-emerald-500/[0.12] flex items-center justify-center mx-auto mb-4">
             <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

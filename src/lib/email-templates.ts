@@ -2,6 +2,14 @@
 // All styles are inline for email client compatibility
 // Brand colors from tailwind.config.ts
 
+interface BrandSnapshot {
+  brandName: string
+  category: string
+  estimatedMarketplace: string
+  topProducts: string[]
+  firstImpression: string
+}
+
 function emailWrapper(content: string): string {
   return `
     <!DOCTYPE html>
@@ -32,13 +40,16 @@ function emailWrapper(content: string): string {
 }
 
 // Notification to Robert when a lead submits the strategy session form
-export function leadNotificationEmail(lead: {
-  name: string
-  email: string
-  website_url: string | null
-  revenue_range: string | null
-  challenge: string | null
-}): string {
+export function leadNotificationEmail(
+  lead: {
+    name: string
+    email: string
+    website_url: string | null
+    revenue_range: string | null
+    challenge: string | null
+  },
+  snapshot: BrandSnapshot | null = null
+): string {
   const rows = [
     { label: 'Name', value: lead.name },
     { label: 'Email', value: lead.email },
@@ -55,12 +66,33 @@ export function leadNotificationEmail(lead: {
       </tr>
     `).join('')
 
+  const snapshotSection = snapshot ? `
+    <h2 style="margin:28px 0 8px;font-size:15px;font-weight:700;color:#1a2a32;">Brand Snapshot</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0f7fa;border-radius:6px;border:1px solid #c8e0ea;">
+      ${[
+        { label: 'Brand', value: snapshot.brandName },
+        { label: 'Category', value: snapshot.category },
+        { label: 'Marketplace', value: snapshot.estimatedMarketplace },
+        { label: 'Top Products', value: snapshot.topProducts.join(', ') },
+        { label: 'First Impression', value: snapshot.firstImpression },
+      ]
+        .filter(r => r.value && r.value.toLowerCase() !== 'unknown')
+        .map(r => `
+          <tr>
+            <td style="padding:8px 12px;font-size:13px;color:#2d7d9a;font-weight:600;white-space:nowrap;vertical-align:top;">${r.label}</td>
+            <td style="padding:8px 12px;font-size:13px;color:#1a2a32;">${r.value}</td>
+          </tr>
+        `).join('')}
+    </table>
+  ` : ''
+
   return emailWrapper(`
     <h1 style="margin:0 0 8px;font-size:20px;color:#1a2a32;">New Strategy Session Request</h1>
     <p style="margin:0 0 20px;font-size:14px;color:#8a9aa2;">Someone just submitted the strategy session form.</p>
     <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f7f9fb;border-radius:6px;border:1px solid #e8edf0;">
       ${tableRows}
     </table>
+    ${snapshotSection}
     <p style="margin:20px 0 0;font-size:13px;color:#8a9aa2;">
       <a href="mailto:${lead.email}" style="color:#2d7d9a;text-decoration:none;font-weight:600;">Reply to ${lead.name}</a>
     </p>
