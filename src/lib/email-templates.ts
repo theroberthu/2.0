@@ -68,22 +68,38 @@ export function leadNotificationEmail(lead: {
 }
 
 // Confirmation email to the lead who submitted
+// Plain-text style — feels like a real person wrote it, not a marketing tool
 export function leadConfirmationEmail(name: string): string {
-  return emailWrapper(`
-    <h1 style="margin:0 0 8px;font-size:20px;color:#1a2a32;">Thanks for reaching out, ${name}!</h1>
-    <p style="margin:0 0 16px;font-size:14px;color:#1a2a32;line-height:1.6;">
-      I received your strategy session request and will be in touch within 24 hours to schedule our call.
-    </p>
-    <p style="margin:0 0 16px;font-size:14px;color:#1a2a32;line-height:1.6;">
-      In the meantime, I will review the details you shared so our conversation is focused and productive.
-    </p>
-    <p style="margin:0 0 24px;font-size:14px;color:#8a9aa2;line-height:1.6;">
-      No sales pitch. No obligation. Just a focused conversation about what is possible for your brand.
-    </p>
-    <a href="https://theroberthu.com" style="display:inline-block;background-color:#2d7d9a;color:#ffffff;font-size:14px;font-weight:600;padding:12px 24px;border-radius:6px;text-decoration:none;">
-      Visit theroberthu.com
-    </a>
-  `)
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+    <body style="margin:0;padding:40px 20px;background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr><td style="max-width:520px;">
+          <p style="margin:0 0 20px;font-size:15px;color:#1a2a32;line-height:1.7;">Hi ${name},</p>
+          <p style="margin:0 0 20px;font-size:15px;color:#1a2a32;line-height:1.7;">
+            Got it. I've got your info and I'll personally review it within 24 hours. You'll hear back from me with a link to book your strategy session.
+          </p>
+          <p style="margin:0 0 12px;font-size:15px;color:#1a2a32;line-height:1.7;">In the meantime, here are a few things worth reading:</p>
+          <ul style="margin:0 0 24px;padding-left:20px;">
+            <li style="margin-bottom:8px;font-size:15px;color:#1a2a32;line-height:1.7;">
+              <a href="https://theroberthu.com/blog/amazon-rufus-optimization" style="color:#2d7d9a;text-decoration:underline;">How to Optimize Your Amazon Listings for Rufus</a>
+            </li>
+            <li style="margin-bottom:8px;font-size:15px;color:#1a2a32;line-height:1.7;">
+              <a href="https://theroberthu.com/blog/amazon-listing-optimization-cost" style="color:#2d7d9a;text-decoration:underline;">The Real Cost of Bad Amazon Listings</a>
+            </li>
+          </ul>
+          <p style="margin:0 0 8px;font-size:15px;color:#1a2a32;line-height:1.7;">Talk soon,</p>
+          <p style="margin:0 0 40px;font-size:15px;color:#1a2a32;font-weight:600;line-height:1.7;">Robert</p>
+          <p style="margin:0;font-size:11px;color:#8a9aa2;">
+            <a href="https://theroberthu.com" style="color:#8a9aa2;text-decoration:none;">theroberthu.com</a>
+          </p>
+        </td></tr>
+      </table>
+    </body>
+    </html>
+  `
 }
 
 // Welcome email to new newsletter subscribers

@@ -120,7 +120,7 @@ export async function submitLead(formData: FormData) {
       await resend.emails.send({
         from: EMAIL_FROM,
         to: email,
-        subject: 'Your Strategy Session Request - Robert Hu',
+        subject: "Got it — I'll be in touch soon",
         html: leadConfirmationEmail(name),
       })
     } catch (confirmError) {
