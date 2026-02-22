@@ -105,10 +105,6 @@ export default function FreeStrategySessionPage() {
             {/* Right - Form */}
             <div>
               <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-2xl p-6 md:p-10">
-                <div className="text-center mb-8">
-                  <h2 className="text-lg font-semibold text-white mb-1">Tell Me About Your Brand</h2>
-                  <p className="text-[13px] text-gray-400">All fields are optional except name and email.</p>
-                </div>
                 <LeadForm />
               </div>
             </div>

@@ -43,7 +43,12 @@ export default function LeadForm() {
   }
 
   return (
-    <form action={handleSubmit} className="space-y-5">
+    <>
+      <div className="text-center mb-8">
+        <h2 className="text-lg font-semibold text-white mb-1">Tell Me About Your Brand</h2>
+        <p className="text-[13px] text-gray-400">All fields are optional except name and email.</p>
+      </div>
+      <form action={handleSubmit} className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="name" className="block text-[13px] font-medium text-white mb-1.5">
@@ -147,5 +152,6 @@ export default function LeadForm() {
         )}
       </button>
     </form>
+    </>
   )
 }

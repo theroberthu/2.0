@@ -1,5 +1,6 @@
 'use server'
 
+import { waitUntil } from '@vercel/functions'
 import { getSupabaseAdmin } from '@/lib/supabase-admin'
 import { resend, EMAIL_FROM, NOTIFICATION_EMAIL } from '@/lib/resend'
 import { leadNotificationEmail, leadConfirmationEmail } from '@/lib/email-templates'
@@ -80,7 +81,6 @@ export async function submitLead(formData: FormData) {
     }
 
     // Try Supabase insert — non-blocking if it fails
-    let dbSuccess = false
     try {
       const supabase = getSupabaseAdmin()
       if (supabase) {
@@ -89,8 +89,6 @@ export async function submitLead(formData: FormData) {
           .insert({ name, email, website_url, revenue_range, challenge })
         if (error) {
           console.error('Supabase insert error:', error.message)
-        } else {
-          dbSuccess = true
         }
       } else {
         console.error('Supabase admin client not available — missing env vars')
@@ -99,39 +97,33 @@ export async function submitLead(formData: FormData) {
       console.error('Supabase error:', dbError)
     }
 
-    // Generate Brand Snapshot before notification email so it can be included
-    let snapshot: BrandSnapshot | null = null
-    if (website_url) {
-      snapshot = await generateBrandSnapshot(website_url)
-    }
+    // Fire snapshot generation + emails after response is sent (non-blocking)
+    const leadData = { name, email, website_url, revenue_range, challenge }
+    waitUntil((async () => {
+      const snapshot = website_url ? await generateBrandSnapshot(website_url) : null
 
-    // Always send notification email to Robert (this is the critical path)
-    try {
-      await resend.emails.send({
-        from: EMAIL_FROM,
-        to: NOTIFICATION_EMAIL,
-        subject: `New Strategy Session Request from ${name}`,
-        html: leadNotificationEmail({ name, email, website_url, revenue_range, challenge }, snapshot),
-      })
-    } catch (notifyError) {
-      console.error('Failed to send notification email:', notifyError)
-      // If both DB and email fail, the form is truly broken
-      if (!dbSuccess) {
-        return { error: 'Something went wrong. Please email robert@theroberthu.com directly.' }
+      try {
+        await resend.emails.send({
+          from: EMAIL_FROM,
+          to: NOTIFICATION_EMAIL,
+          subject: `New Strategy Session Request from ${name}`,
+          html: leadNotificationEmail(leadData, snapshot),
+        })
+      } catch (notifyError) {
+        console.error('Failed to send notification email:', notifyError)
       }
-    }
 
-    // Send confirmation email to the lead (non-critical, best-effort)
-    try {
-      await resend.emails.send({
-        from: EMAIL_FROM,
-        to: email,
-        subject: "Got it — I'll be in touch soon",
-        html: leadConfirmationEmail(name),
-      })
-    } catch (confirmError) {
-      console.error('Failed to send confirmation email:', confirmError)
-    }
+      try {
+        await resend.emails.send({
+          from: EMAIL_FROM,
+          to: email,
+          subject: "Got it — I'll be in touch soon",
+          html: leadConfirmationEmail(name),
+        })
+      } catch (confirmError) {
+        console.error('Failed to send confirmation email:', confirmError)
+      }
+    })())
 
     return { success: true }
   } catch (err) {
