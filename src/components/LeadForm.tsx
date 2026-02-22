@@ -1,39 +1,43 @@
 'use client'
 
 import { useState } from 'react'
-import { submitLead } from '@/app/actions/leads'
 import { REVENUE_RANGES } from '@/lib/constants'
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [websiteUrl, setWebsiteUrl] = useState('')
+  const [revenueRange, setRevenueRange] = useState('')
+  const [challenge, setChallenge] = useState('')
 
-  async function handleSubmit(formData: FormData) {
-    setLoading(true)
+  function handleSubmit() {
     setError(null)
 
-    // Capture values before the server action (for the background notification fetch)
-    const name = formData.get('name') as string
-    const email = formData.get('email') as string
-    const website_url = (formData.get('website_url') as string)?.trim() || ''
-    const revenue_range = (formData.get('revenue_range') as string) || ''
-    const challenge = (formData.get('challenge') as string) || ''
+    const trimmedName = name.trim()
+    const trimmedEmail = email.trim()
 
-    const result = await submitLead(formData)
-    setLoading(false)
-
-    if (result.error) {
-      setError(result.error)
-    } else {
-      setSubmitted(true)
-      // Fire-and-forget: snapshot + emails run in background, never block the UI
-      fetch('/api/lead-notifications', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, website_url, revenue_range, challenge }),
-      }).catch(() => {})
+    if (!trimmedName || !trimmedEmail) {
+      setError('Name and email are required.')
+      return
     }
+
+    // Flip to success immediately — zero network wait for the user
+    setSubmitted(true)
+
+    // DB insert + snapshot + emails all run in the background
+    fetch('/api/lead-notifications', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: trimmedName,
+        email: trimmedEmail,
+        website_url: websiteUrl.trim(),
+        revenue_range: revenueRange,
+        challenge: challenge.trim(),
+      }),
+    }).catch(() => {})
   }
 
   if (submitted) {
@@ -62,110 +66,107 @@ export default function LeadForm() {
         <h2 className="text-lg font-semibold text-white mb-1">Tell Me About Your Brand</h2>
         <p className="text-[13px] text-gray-400">All fields are optional except name and email.</p>
       </div>
-      <form action={handleSubmit} className="space-y-5">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+      {/* No <form> — avoids Next.js 14 form-action interceptor that crashes on onSubmit */}
+      <div className="space-y-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="name" className="block text-[13px] font-medium text-white mb-1.5">
+              Name <span className="text-brand-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              autoComplete="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+              className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-[13px] font-medium text-white mb-1.5">
+              Email <span className="text-brand-accent">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              autoComplete="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+              className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="website_url" className="block text-[13px] font-medium text-white mb-1.5">
+              Website URL
+            </label>
+            <input
+              type="text"
+              id="website_url"
+              placeholder="yourstore.com"
+              autoComplete="url"
+              value={websiteUrl}
+              onChange={e => setWebsiteUrl(e.target.value)}
+              className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="revenue_range" className="block text-[13px] font-medium text-white mb-1.5">
+              Annual Revenue
+            </label>
+            <select
+              id="revenue_range"
+              value={revenueRange}
+              onChange={e => setRevenueRange(e.target.value)}
+              className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
+            >
+              <option value="" className="bg-brand-dark text-gray-400">Select range</option>
+              {REVENUE_RANGES.map((range) => (
+                <option key={range} value={range} className="bg-brand-dark text-white">
+                  {range}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
         <div>
-          <label htmlFor="name" className="block text-[13px] font-medium text-white mb-1.5">
-            Name <span className="text-brand-accent">*</span>
+          <label htmlFor="challenge" className="block text-[13px] font-medium text-white mb-1.5">
+            What is your biggest challenge right now?
           </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            autoComplete="name"
-            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
+          <textarea
+            id="challenge"
+            rows={4}
+            value={challenge}
+            onChange={e => setChallenge(e.target.value)}
+            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200 resize-none"
           />
         </div>
 
-        <div>
-          <label htmlFor="email" className="block text-[13px] font-medium text-white mb-1.5">
-            Email <span className="text-brand-accent">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            autoComplete="email"
-            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="website_url" className="block text-[13px] font-medium text-white mb-1.5">
-            Website URL
-          </label>
-          <input
-            type="text"
-            id="website_url"
-            name="website_url"
-            placeholder="yourstore.com"
-            autoComplete="url"
-            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="revenue_range" className="block text-[13px] font-medium text-white mb-1.5">
-            Annual Revenue
-          </label>
-          <select
-            id="revenue_range"
-            name="revenue_range"
-            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
-          >
-            <option value="" className="bg-brand-dark text-gray-400">Select range</option>
-            {REVENUE_RANGES.map((range) => (
-              <option key={range} value={range} className="bg-brand-dark text-white">
-                {range}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label htmlFor="challenge" className="block text-[13px] font-medium text-white mb-1.5">
-          What is your biggest challenge right now?
-        </label>
-        <textarea
-          id="challenge"
-          name="challenge"
-          rows={4}
-          className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200 resize-none"
-        />
-      </div>
-
-      {error && (
-        <div className="flex items-center gap-2 text-sm text-red-400 bg-red-500/[0.1] border border-red-500/[0.2] rounded-md px-4 py-2.5">
-          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          {error}
-        </div>
-      )}
-
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full bg-brand-gold text-white font-semibold px-6 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 disabled:opacity-50 shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
-      >
-        {loading ? (
-          <>
-            <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+        {error && (
+          <div className="flex items-center gap-2 text-sm text-red-400 bg-red-500/[0.1] border border-red-500/[0.2] rounded-md px-4 py-2.5">
+            <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Submitting...
-          </>
-        ) : (
-          'Book My Free Strategy Session'
+            {error}
+          </div>
         )}
-      </button>
-    </form>
+
+        <button
+          type="button"
+          onClick={handleSubmit}
+          className="w-full bg-brand-gold text-white font-semibold px-6 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        >
+          Book My Free Strategy Session
+        </button>
+      </div>
     </>
   )
 }

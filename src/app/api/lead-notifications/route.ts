@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { getSupabaseAdmin } from '@/lib/supabase-admin'
 import { resend, EMAIL_FROM, NOTIFICATION_EMAIL } from '@/lib/resend'
 import { leadNotificationEmail, leadConfirmationEmail } from '@/lib/email-templates'
 import Anthropic from '@anthropic-ai/sdk'
@@ -71,7 +72,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    // Normalize URL (client sends raw value; server action normalized separately for DB)
+    // Normalize URL
     if (website_url && !/^https?:\/\//i.test(website_url)) {
       website_url = `https://${website_url}`
     }
@@ -79,32 +80,37 @@ export async function POST(request: NextRequest) {
 
     const leadData = { name, email, website_url, revenue_range, challenge }
 
-    // Snapshot (the slow part — fine here since client didn't await this route)
+    // 1. Persist the lead (moved here so the form shows success immediately with zero blocking)
+    try {
+      const supabase = getSupabaseAdmin()
+      if (supabase) {
+        const { error } = await supabase
+          .from('leads')
+          .insert({ name, email, website_url, revenue_range, challenge })
+        if (error) console.error('Supabase insert error:', error.message)
+      }
+    } catch (e) {
+      console.error('Supabase error:', e)
+    }
+
+    // 2. Brand snapshot (slow — fine since client never awaits this route)
     const snapshot = website_url ? await generateBrandSnapshot(website_url) : null
 
-    // Notification email to Robert
-    try {
-      await resend.emails.send({
+    // 3. Emails in parallel
+    await Promise.allSettled([
+      resend.emails.send({
         from: EMAIL_FROM,
         to: NOTIFICATION_EMAIL,
         subject: `New Strategy Session Request from ${name}`,
         html: leadNotificationEmail(leadData, snapshot),
-      })
-    } catch (e) {
-      console.error('Notification email failed:', e)
-    }
-
-    // Confirmation email to lead
-    try {
-      await resend.emails.send({
+      }),
+      resend.emails.send({
         from: EMAIL_FROM,
         to: email,
         subject: "Got it — I'll be in touch soon",
         html: leadConfirmationEmail(name),
-      })
-    } catch (e) {
-      console.error('Confirmation email failed:', e)
-    }
+      }),
+    ])
 
     return NextResponse.json({ ok: true })
   } catch (err) {
