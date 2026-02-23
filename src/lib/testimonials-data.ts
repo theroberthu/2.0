@@ -17,19 +17,19 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
   },
   {
-    id: 'jack-sherrill',
-    author: 'Jack Sherrill',
-    role: 'Purchasing Specialist at A&W Supply',
-    source: 'linkedin',
-    text: 'We collaborated on various projects and marketing campaigns. Throughout our collaboration, he consistently displayed great attention to detail, strong problem-solving skills, and extensive knowledge in the ecommerce and marketing fields. Robert is truly an asset to any team.',
-    rating: 5,
-  },
-  {
     id: 'ryan-bloms',
     author: 'Ryan Bloms',
     role: 'Director of Partnerships at Codal Inc.',
     source: 'linkedin',
     text: "Robert stands out because he approaches eCommerce with a founder's mindset. He sees the 'Big Picture' connections that others miss. His total transparency and quick turnaround times made him an invaluable partner on the DTC brand launch projects we've been working on over the past few years.",
+    rating: 5,
+  },
+  {
+    id: 'jack-sherrill',
+    author: 'Jack Sherrill',
+    role: 'Purchasing Specialist at A&W Supply',
+    source: 'linkedin',
+    text: 'We collaborated on various projects and marketing campaigns. Throughout our collaboration, he consistently displayed great attention to detail, strong problem-solving skills, and extensive knowledge in the ecommerce and marketing fields. Robert is truly an asset to any team.',
     rating: 5,
   },
   {
