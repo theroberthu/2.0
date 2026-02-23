@@ -25,11 +25,11 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
   },
   {
-    id: 'upwork-fba-support',
-    author: 'Verified Client',
-    role: 'Amazon FBA & Seller Central Support',
-    source: 'verified',
-    text: 'Robert was professional, friendly and knew his ways around Amazon Seller Central, and helped me resolve my Amazon FBA issue. Hope to work with him again in the future.',
+    id: 'ryan-bloms',
+    author: 'Ryan Bloms',
+    role: 'Director of Partnerships at Codal Inc.',
+    source: 'linkedin',
+    text: "Robert stands out because he approaches eCommerce with a founder's mindset. He sees the 'Big Picture' connections that others miss. His total transparency and quick turnaround times made him an invaluable partner on the DTC brand launch projects we've been working on over the past few years.",
     rating: 5,
   },
   {
