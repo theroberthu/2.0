@@ -18,20 +18,50 @@ function getAnthropicClient(): Anthropic | null {
   return new Anthropic({ apiKey: key })
 }
 
+async function fetchPageMeta(url: string): Promise<string> {
+  try {
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 5000)
+    const res = await fetch(url, {
+      signal: controller.signal,
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; brandbot/1.0)' },
+    })
+    clearTimeout(timeout)
+    const html = await res.text()
+    const ogTitle = html.match(/<meta[^>]*property="og:title"[^>]*content="([^"]{1,200})"/i)?.[1] ?? ''
+    const title = html.match(/<title[^>]*>([^<]{1,200})<\/title>/i)?.[1] ?? ''
+    const ogDesc = html.match(/<meta[^>]*property="og:description"[^>]*content="([^"]{1,400})"/i)?.[1] ?? ''
+    const metaDesc = html.match(/<meta[^>]*name="description"[^>]*content="([^"]{1,400})"/i)?.[1] ?? ''
+    return [
+      `URL: ${url}`,
+      ogTitle ? `OG Title: ${ogTitle}` : '',
+      title ? `Page Title: ${title}` : '',
+      ogDesc ? `OG Description: ${ogDesc}` : '',
+      metaDesc ? `Meta Description: ${metaDesc}` : '',
+    ].filter(Boolean).join('\n')
+  } catch {
+    return `URL: ${url}`
+  }
+}
+
 async function generateBrandSnapshot(url: string): Promise<BrandSnapshot | null> {
   try {
     const client = getAnthropicClient()
     if (!client) return null
 
+    const pageInfo = await fetchPageMeta(url)
+
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 300,
+      model: 'claude-3-5-haiku-20241022',
+      max_tokens: 400,
       messages: [
         {
           role: 'user',
-          content: `Based on this website URL: ${url}
+          content: `Here is metadata fetched from a brand's website. Generate a brief brand snapshot.
 
-Give me a brief brand snapshot in JSON format only (no markdown, no code fences, just the raw JSON object):
+${pageInfo}
+
+Return raw JSON only (no markdown, no code fences):
 {
   "brandName": "...",
   "category": "...",
@@ -40,7 +70,7 @@ Give me a brief brand snapshot in JSON format only (no markdown, no code fences,
   "firstImpression": "One sentence about the brand"
 }
 
-If you can't determine something, use "Unknown" as the value. For topProducts, list 2-3 if visible, or ["Unknown"] if not clear.`,
+Use "Unknown" for anything you cannot determine from the data above.`,
         },
       ],
     })
