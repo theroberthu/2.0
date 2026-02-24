@@ -139,14 +139,27 @@ export default async function HomePage() {
             {/* Right - Headshot */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <Image
-                  src="/images/robert-hu-headshot.png"
-                  alt="Robert Hu, e-commerce strategist"
-                  width={400}
-                  height={400}
-                  className="rounded-2xl object-cover shadow-elevated"
-                  priority
-                />
+                <div className="relative overflow-hidden rounded-2xl shadow-elevated">
+                  <Image
+                    src="/images/robert-hu-headshot.png"
+                    alt="Robert Hu, e-commerce strategist"
+                    width={400}
+                    height={400}
+                    className="object-cover"
+                    priority
+                  />
+                  {/* Gradient overlays: fades white image background into dark site background */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: [
+                        'linear-gradient(to bottom, transparent 55%, #1a2a32 95%)',
+                        'linear-gradient(to top, transparent 85%, #1a2a32 100%)',
+                        'linear-gradient(to right, #1a2a32, transparent 18%, transparent 82%, #1a2a32)',
+                      ].join(', '),
+                    }}
+                  />
+                </div>
                 {/* Subtle accent line */}
                 <div className="absolute -bottom-3 -left-3 w-full h-full rounded-2xl border border-brand-accent/20 -z-10" />
               </div>
