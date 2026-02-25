@@ -58,6 +58,25 @@ Every post follows this structure:
 - All schema markup (Article, FAQ, BreadcrumbList)
 - Auto-generate featured image SVG using the utility function
 
+## Key Takeaways Section (required in every post)
+
+Every post MUST open with a Key Takeaways callout box. Always use this exact HTML structure — using `<p>` tags instead of `<ul>/<li>` will break the bullet rendering:
+
+```html
+<div class="callout-box">
+  <p class="callout-label">Key Takeaways</p>
+  <ul>
+    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+  </ul>
+</div>
+```
+
+- 2-4 bullets, each with at least one bolded number or stat
+- Always `<ul>/<li>`, never `<p>` tags for the bullet items
+- Place this immediately after the opening 1-2 hook paragraphs
+
 ## What NOT To Do
 - Don't just summarize the article — add original analysis
 - Don't copy phrases or sentences from the source

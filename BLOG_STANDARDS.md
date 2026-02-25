@@ -239,6 +239,27 @@ excerpt: "" # 1-2 sentence summary for blog index cards
 - Short paragraphs: 2-3 sentences max. Wall of text = reader leaves
 - If a post exceeds 2,000 words, it needs a subheading every 200-300 words without exception
 
+### Key Takeaways HTML Template (required — always use this exact structure)
+
+The Key Takeaways section MUST use the `.callout-box` div with a `<ul>` list. Do NOT use `<p>` tags for the bullets — they will not render as a bulleted list.
+
+```html
+<div class="callout-box">
+  <p class="callout-label">Key Takeaways</p>
+  <ul>
+    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+  </ul>
+</div>
+```
+
+Rules:
+- Always `<ul>` inside `.callout-box`, never `<p>` tags for bullets
+- 2-4 `<li>` items only
+- Each `<li>` must include at least one `<strong>` number, stat, or dollar figure
+- The `<p class="callout-label">` must come before the `<ul>`
+
 ### Length
 - Standard posts: 800–1,500 words
 - Deep dives: 1,500–3,000 words
