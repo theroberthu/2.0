@@ -280,6 +280,24 @@
 .callout-box blockquote {
   margin: 0.75rem 0 !important;
 }
+.callout-box ul,
+.callout-box ol {
+  list-style-type: disc;
+  margin: 0 !important;
+  padding-left: 1.25rem;
+}
+.callout-box ol {
+  list-style-type: decimal;
+}
+.callout-box li {
+  color: #c0cdd4;
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.callout-box li:last-child {
+  margin-bottom: 0;
+}
 
 /* Page section fade-in animations */
 @keyframes fadeInUp {
