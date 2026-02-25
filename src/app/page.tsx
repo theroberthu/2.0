@@ -139,7 +139,14 @@ export default async function HomePage() {
             {/* Right - Headshot */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="relative overflow-hidden rounded-2xl shadow-elevated">
+                {/* mask-image fades the headshot's white background naturally into the dark hero */}
+                <div
+                  className="relative overflow-hidden rounded-2xl shadow-elevated"
+                  style={{
+                    maskImage: 'linear-gradient(to bottom, black 58%, transparent 92%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, black 58%, transparent 92%)',
+                  }}
+                >
                   <Image
                     src="/images/robert-hu-headshot.png"
                     alt="Robert Hu, e-commerce strategist"
@@ -147,17 +154,6 @@ export default async function HomePage() {
                     height={400}
                     className="object-cover"
                     priority
-                  />
-                  {/* Gradient overlays: fades white image background into dark site background */}
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background: [
-                        'linear-gradient(to bottom, transparent 55%, #1a2a32 95%)',
-                        'linear-gradient(to top, transparent 85%, #1a2a32 100%)',
-                        'linear-gradient(to right, #1a2a32, transparent 18%, transparent 82%, #1a2a32)',
-                      ].join(', '),
-                    }}
                   />
                 </div>
                 {/* Subtle accent line */}
