@@ -11,7 +11,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'ken-zordani',
     author: 'Ken Zordani',
-    role: 'VP of Sales',
+    role: 'VP of Sales at Avyre',
     source: 'linkedin',
     text: 'Having partnered with many merchandising and e-commerce leaders over the years, Robert distinguishes himself through his strategic grasp of how structured data and personalized content must work together to deliver a seamless B2B and B2C experience. During our Orange Logic implementation, his clarity of vision, thoughtful input, and steady leadership were instrumental in keeping the initiative aligned, focused, and delivered successfully on schedule.',
     rating: 5,
