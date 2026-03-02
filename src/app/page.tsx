@@ -11,6 +11,8 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import LazyYouTube from '@/components/LazyYouTube'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: {
     absolute: 'Robert Hu - E-commerce Strategist & Digital Transformation Consultant',

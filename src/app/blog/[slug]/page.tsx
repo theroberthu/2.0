@@ -15,6 +15,9 @@ import {
   generateVideoSchema,
 } from '@/lib/blog-schema'
 
+export const revalidate = 60
+export const dynamicParams = true
+
 // Category → service page mapping for the contextual service card
 const CATEGORY_SERVICE_MAP: Record<string, { href: string; label: string; description: string }> = {
   'GEO & SEO': {
