@@ -4,6 +4,8 @@ import BlogPostGrid from '@/components/BlogPostGrid'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: 'Blog',
   description:
