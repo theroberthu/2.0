@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import BackToTop from '@/components/BackToTop'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
+import { Analytics } from '@vercel/analytics/next'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -112,6 +113,7 @@ gtag('config', 'G-V9BV9F9MPM');`}
         <main className="min-h-screen">{children}</main>
         <Footer />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   )
