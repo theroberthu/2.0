@@ -1,0 +1,62 @@
+name: Publish Blog Post
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/insert-*.mjs'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Find new or modified insert scripts
+        id: changed
+        run: |
+          SCRIPTS=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'scripts/insert-*.mjs')
+          if [ -z "$SCRIPTS" ]; then
+            echo "No new insert scripts found"
+            echo "has_scripts=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Found scripts:"
+            echo "$SCRIPTS"
+            echo "has_scripts=true" >> "$GITHUB_OUTPUT"
+            # Store as multiline output
+            {
+              echo "scripts<<EOF"
+              echo "$SCRIPTS"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.changed.outputs.has_scripts == 'true'
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        if: steps.changed.outputs.has_scripts == 'true'
+        run: npm install @supabase/supabase-js
+
+      - name: Create .env.local from secrets
+        if: steps.changed.outputs.has_scripts == 'true'
+        run: |
+          cat > .env.local << EOF
+          NEXT_PUBLIC_SUPABASE_URL=${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          EOF
+
+      - name: Run insert scripts
+        if: steps.changed.outputs.has_scripts == 'true'
+        run: |
+          echo "${{ steps.changed.outputs.scripts }}" | while read -r script; do
+            if [ -n "$script" ]; then
+              echo "Publishing: $script"
+              node "$script"
+              echo "---"
+            fi
+          done
