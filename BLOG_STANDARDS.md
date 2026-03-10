@@ -141,7 +141,21 @@ Every blog post MUST include the following structured data in the page head:
 ```
 
 ### FAQ Schema (when applicable)
-If the post contains question-based H2s, add FAQ schema:
+If the post contains question-based H2s, add FAQ schema.
+
+**CRITICAL: Always use `q` and `a` as the key names in `faq_data` — not `question`/`answer`. The schema generator reads `faq.q` and `faq.a`. Wrong keys produce an invalid FAQ item in Google Search Console.**
+
+Store in `schema_json.faq_data` as:
+```json
+{
+  "has_faq_schema": true,
+  "faq_data": [
+    { "q": "Question text here?", "a": "Answer text here." }
+  ]
+}
+```
+
+The generated JSON-LD output looks like:
 ```json
 {
   "@context": "https://schema.org",
