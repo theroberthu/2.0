@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Do you manage ad accounts, or just build the strategy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'I build the strategy, campaign architecture, and optimization framework. If you need ongoing management, I can recommend trusted partners or train your team to execute. My value is in the strategic thinking that determines where your money goes and why, not in the daily bid adjustments.',
+        text: 'Both. I offer one-time strategy engagements for brands that want a plan they can run themselves, and ongoing Amazon Ads management for brands that want someone in the account every week. Ongoing management starts at $1,000/month with no long-term contracts.',
       },
     },
     {
@@ -210,6 +210,52 @@ export default function DigitalMarketingStrategyPage() {
                   I help you implement the strategy and build the reporting frameworks that let you (or your team) optimize ongoing. The goal is not to create a dependency on me. It&apos;s to give you a system that works and the knowledge to keep it running.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond Strategy: Ongoing Ad Management */}
+      <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-lg bg-brand-accent/[0.12] flex items-center justify-center">
+              <svg className="w-[18px] h-[18px] text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-semibold text-white">Beyond Strategy: Ongoing Ad Management</h2>
+          </div>
+          <div className="pl-12">
+            <p className="text-[15px] text-gray-400 leading-relaxed mb-6">
+              Some brands want a strategy they can run themselves. Others want someone in the account every week, optimizing bids, mining search terms, and managing spend. I offer ongoing Amazon Ads management for brands that want hands-on help — not just a plan.
+            </p>
+            <ul className="space-y-3 mb-8">
+              {[
+                'Weekly bid optimization and search term harvesting',
+                'Campaign restructuring and ongoing A/B testing',
+                'Monthly performance reporting tied to your unit economics',
+                'Direct access to me, not a junior account manager',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg className="w-4 h-4 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[15px] text-gray-400 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+              <p className="text-[15px] font-semibold text-white">
+                Starting at $1,000/month.{' '}
+                <span className="text-gray-400 font-normal">No long-term contracts.</span>
+              </p>
+              <Link
+                href="/free-strategy-session"
+                className="inline-block shrink-0 border border-brand-gold text-brand-gold text-[13px] font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold hover:text-white transition-all duration-200"
+              >
+                Book a Free Strategy Session
+              </Link>
             </div>
           </div>
         </div>
