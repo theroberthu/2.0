@@ -23,7 +23,7 @@ export default function NotFound() {
     <div
       style={{
         backgroundColor: '#0B0E17',
-        minHeight: '80vh',
+        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
