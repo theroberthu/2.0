@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2a32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f1e25;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d7d9a;stop-opacity:0.22" />
+      <stop offset="100%" style="stop-color:#2d7d9a;stop-opacity:0.08" />
+    </linearGradient>
+    <linearGradient id="centerNode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d7d9a;stop-opacity:0.55" />
+      <stop offset="100%" style="stop-color:#2d7d9a;stop-opacity:0.32" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="72" y="60" width="4" height="510" rx="2" fill="#2d7d9a" opacity="0.3"/>
+
+  <!-- Category label -->
+  <rect x="88" y="72" width="218" height="28" rx="4" fill="#2d7d9a" opacity="0.2"/>
+  <text x="197" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">E-COMMERCE STRATEGY</text>
+
+  <!-- Main headline -->
+  <text x="88" y="170" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">Amazon Just Opened</text>
+  <text x="88" y="228" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">Its Search Results</text>
+  <text x="88" y="286" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#2d7d9a" letter-spacing="-1">to External Stores.</text>
+
+  <!-- Divider -->
+  <line x1="88" y1="318" x2="570" y2="318" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Subtext -->
+  <text x="88" y="353" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#8baab8">Your DTC catalog can now appear in front of</text>
+  <text x="88" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#8baab8">hundreds of millions of Amazon shoppers.</text>
+  <text x="88" y="403" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#5a7a8a">But only if your product data is clean.</text>
+
+  <!-- Author -->
+  <text x="88" y="462" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
+  <text x="88" y="482" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
+
+  <!-- Right panel background -->
+  <rect x="695" y="90" width="450" height="450" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Panel title -->
+  <text x="920" y="126" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">HOW SHOP DIRECT WORKS</text>
+
+  <!-- Flow Node 1: DTC Store -->
+  <rect x="712" y="162" width="116" height="66" rx="6" fill="url(#nodeGrad)" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="770" y="189" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#8baab8" text-anchor="middle" letter-spacing="1">YOUR DTC</text>
+  <text x="770" y="212" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#f7f9fb" text-anchor="middle">STORE</text>
+
+  <!-- Arrow 1 -->
+  <line x1="828" y1="195" x2="855" y2="195" stroke="#2d7d9a" stroke-width="2" stroke-opacity="0.55"/>
+  <polygon points="855,189 867,195 855,201" fill="#2d7d9a" fill-opacity="0.55"/>
+
+  <!-- Flow Node 2: Shop Direct (center, highlighted) -->
+  <rect x="867" y="150" width="134" height="90" rx="6" fill="url(#centerNode)" stroke="#2d7d9a" stroke-opacity="0.75" stroke-width="1.5"/>
+  <text x="934" y="181" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#a0c8d8" text-anchor="middle" letter-spacing="1">AMAZON</text>
+  <text x="934" y="204" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#2d7d9a" text-anchor="middle">Shop Direct</text>
+  <text x="934" y="224" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#5a8aaa" text-anchor="middle">+ Rufus AI</text>
+
+  <!-- Arrow 2 -->
+  <line x1="1001" y1="195" x2="1028" y2="195" stroke="#2d7d9a" stroke-width="2" stroke-opacity="0.55"/>
+  <polygon points="1028,189 1040,195 1028,201" fill="#2d7d9a" fill-opacity="0.55"/>
+
+  <!-- Flow Node 3: Amazon Shoppers -->
+  <rect x="1040" y="162" width="88" height="66" rx="6" fill="url(#nodeGrad)" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="1084" y="189" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#8baab8" text-anchor="middle" letter-spacing="1">AMAZON</text>
+  <text x="1084" y="211" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#f7f9fb" text-anchor="middle">SHOPPERS</text>
+
+  <!-- Purchase paths label -->
+  <text x="920" y="270" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#3a6070" text-anchor="middle" font-style="italic">Shop Direct button (your store) or Buy for Me (AI checkout)</text>
+
+  <!-- Stat divider -->
+  <line x1="712" y1="295" x2="1128" y2="295" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Three stats -->
+  <!-- Stat 1: 100M+ Products -->
+  <text x="790" y="345" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" fill="#c5a94e" text-anchor="middle">100M+</text>
+  <text x="790" y="370" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4a6a7a" text-anchor="middle" letter-spacing="1">PRODUCTS</text>
+
+  <line x1="862" y1="322" x2="862" y2="380" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Stat 2: 400K+ Merchants -->
+  <text x="934" y="345" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" fill="#c5a94e" text-anchor="middle">400K+</text>
+  <text x="934" y="370" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4a6a7a" text-anchor="middle" letter-spacing="1">MERCHANTS</text>
+
+  <line x1="1006" y1="322" x2="1006" y2="380" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Stat 3: Millions of Referrals -->
+  <text x="1074" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" fill="#c5a94e" text-anchor="middle">Millions</text>
+  <text x="1074" y="362" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4a6a7a" text-anchor="middle" letter-spacing="1">REFERRALS</text>
+  <text x="1074" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4a6a7a" text-anchor="middle" letter-spacing="1">ALREADY SENT</text>
+
+  <!-- Feed partners footer -->
+  <text x="920" y="430" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#3a5a6a" text-anchor="middle" letter-spacing="1">VIA: FEEDONOMICS · SALSIFY · CEDCOMMERCE</text>
+</svg>
