@@ -66,9 +66,9 @@ Every post MUST open with a Key Takeaways callout box. Always use this exact HTM
 <div class="callout-box">
   <p class="callout-label">Key Takeaways</p>
   <ul>
-    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
-    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
-    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+    <li><strong>[Bold stat or number]</strong> one sentence takeaway (no em dash).</li>
+    <li><strong>[Bold stat or number]</strong> one sentence takeaway (no em dash).</li>
+    <li><strong>[Bold stat or number]</strong> one sentence takeaway (no em dash).</li>
   </ul>
 </div>
 ```

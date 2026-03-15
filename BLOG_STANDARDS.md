@@ -261,9 +261,9 @@ The Key Takeaways section MUST use the `.callout-box` div with a `<ul>` list. Do
 <div class="callout-box">
   <p class="callout-label">Key Takeaways</p>
   <ul>
-    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
-    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
-    <li><strong>[Bold stat or number]</strong> — one sentence takeaway.</li>
+    <li><strong>[Bold stat or number]</strong> one sentence takeaway (no em dash before the sentence).</li>
+    <li><strong>[Bold stat or number]</strong> one sentence takeaway (no em dash before the sentence).</li>
+    <li><strong>[Bold stat or number]</strong> one sentence takeaway (no em dash before the sentence).</li>
   </ul>
 </div>
 ```

@@ -247,6 +247,7 @@ export default async function BlogPostPage(props: Props) {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 720px"
                 priority
+                unoptimized={post.og_image.endsWith('.svg')}
               />
             </div>
           )}
