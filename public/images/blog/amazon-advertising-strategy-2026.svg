@@ -1,74 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2a32;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f1e25;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="barOrganic" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#2d7d9a;stop-opacity:0.5" />
-      <stop offset="100%" style="stop-color:#2d7d9a;stop-opacity:0.2" />
-    </linearGradient>
-    <linearGradient id="barAds" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#2d7d9a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1a6080;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-
   <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="#1a2a32"/>
 
-  <!-- Subtle grid lines -->
-  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
-  <line x1="0" y1="315" x2="1200" y2="315" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
-  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="#2d7d9a" opacity="0.6"/>
+
+  <!-- Panel divider -->
+  <line x1="610" y1="60" x2="610" y2="570" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
 
   <!-- Left accent bar -->
   <rect x="72" y="60" width="4" height="510" rx="2" fill="#2d7d9a" opacity="0.3"/>
 
-  <!-- Category label -->
-  <rect x="88" y="72" width="200" height="28" rx="4" fill="#2d7d9a" opacity="0.2"/>
-  <text x="188" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">DIGITAL MARKETING</text>
+  <!-- Category badge -->
+  <rect x="88" y="72" width="174" height="28" rx="4" fill="#2d7d9a" opacity="0.2"/>
+  <text x="175" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">DIGITAL MARKETING</text>
 
-  <!-- Main headline -->
-  <text x="88" y="175" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Amazon Organic Is</text>
-  <text x="88" y="240" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Declining. Here's How</text>
-  <text x="88" y="305" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#2d7d9a" letter-spacing="-1">to Fix Your Ad Strategy.</text>
+  <!-- Headline -->
+  <text x="88" y="150" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">Amazon Organic Is</text>
+  <text x="88" y="208" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">Declining. Fix Your</text>
+  <text x="88" y="266" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#2d7d9a" letter-spacing="-1">Ad Strategy.</text>
 
   <!-- Divider -->
-  <line x1="88" y1="340" x2="600" y2="340" stroke="#2d7d9a" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="88" y1="336" x2="570" y2="336" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
 
-  <!-- Subtext -->
-  <text x="88" y="375" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#8baab8" letter-spacing="0">70% of Amazon sellers now run ads. More spend alone</text>
-  <text x="88" y="402" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#8baab8" letter-spacing="0">doesn't solve the problem. Listings do.</text>
+  <!-- Tagline -->
+  <text x="88" y="372" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">More spend alone won't save you.</text>
+  <text x="88" y="396" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">Your listings need to do the work.</text>
 
   <!-- Author -->
-  <text x="88" y="460" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
-  <text x="88" y="480" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a" letter-spacing="0">theroberthu.com</text>
+  <text x="88" y="464" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
+  <text x="88" y="484" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
 
-  <!-- Chart area (right side) -->
-  <!-- Chart background -->
-  <rect x="700" y="100" width="420" height="400" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Right panel box -->
+  <rect x="625" y="90" width="530" height="450" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#2d7d9a" stroke-opacity="0.12" stroke-width="1"/>
 
-  <!-- Chart title -->
-  <text x="910" y="135" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a" text-anchor="middle" letter-spacing="1">SELLERS RUNNING ADS</text>
+  <!-- Stats -->
+  <text x="758" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="700" fill="#c5a94e" text-anchor="middle">70%</text>
+  <text x="758" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">SELLERS RUN ADS</text>
+  <line x1="890" y1="285" x2="890" y2="400" stroke="#2d7d9a" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="1023" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="76" font-weight="700" fill="#c5a94e" text-anchor="middle">$31B</text>
+  <text x="1023" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">AD REVENUE</text>
 
-  <!-- Year labels -->
-  <text x="790" y="460" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a" text-anchor="middle">2020</text>
-  <text x="910" y="460" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a" text-anchor="middle">2023</text>
-  <text x="1030" y="460" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2d7d9a" text-anchor="middle" font-weight="600">2026</text>
-
-  <!-- Bar 2020 (40%) -->
-  <rect x="750" y="313" width="80" height="132" rx="4" fill="url(#barOrganic)"/>
-  <text x="790" y="305" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#5a8a9a" text-anchor="middle">40%</text>
-
-  <!-- Bar 2023 (58%) -->
-  <rect x="870" y="254" width="80" height="191" rx="4" fill="url(#barOrganic)"/>
-  <text x="910" y="246" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#5a8a9a" text-anchor="middle">58%</text>
-
-  <!-- Bar 2026 (70%+) - highlighted -->
-  <rect x="990" y="180" width="80" height="265" rx="4" fill="url(#barAds)"/>
-  <text x="1030" y="172" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#2d7d9a" text-anchor="middle">70%+</text>
-
-  <!-- Trend arrow -->
-  <polyline points="790,313 910,254 1030,180" fill="none" stroke="#2d7d9a" stroke-width="2" stroke-opacity="0.5" stroke-dasharray="6,4"/>
+  <!-- HU mark -->
+  <text x="1150" y="605" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#8a9aa2" opacity="0.5">HU</text>
 </svg>

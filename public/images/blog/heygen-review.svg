@@ -2,24 +2,44 @@
   <!-- Background -->
   <rect width="1200" height="630" fill="#1a2a32"/>
 
-  <!-- Subtle geometric accents -->
-  <line x1="0" y1="580" x2="1200" y2="580" stroke="#2d7d9a" stroke-width="2" opacity="0.3"/>
-  <line x1="80" y1="0" x2="80" y2="630" stroke="#2d7d9a" stroke-width="1" opacity="0.08"/>
-  <line x1="1120" y1="0" x2="1120" y2="630" stroke="#2d7d9a" stroke-width="1" opacity="0.08"/>
-
   <!-- Top accent bar -->
   <rect x="0" y="0" width="1200" height="4" fill="#2d7d9a" opacity="0.6"/>
 
-  <!-- Corner accent -->
-  <rect x="60" y="50" width="40" height="3" fill="#2d7d9a" opacity="0.4"/>
-  <rect x="60" y="50" width="3" height="30" fill="#2d7d9a" opacity="0.4"/>
+  <!-- Panel divider -->
+  <line x1="610" y1="60" x2="610" y2="570" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
 
-  <!-- Category tag -->
-  <text x="600" y="257" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#2d7d9a" letter-spacing="3" text-transform="uppercase">DIGITAL TRANSFORMATION</text>
+  <!-- Left accent bar -->
+  <rect x="72" y="60" width="4" height="510" rx="2" fill="#2d7d9a" opacity="0.3"/>
 
-  <!-- Title -->
-    <text x="600" y="307" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="36" font-weight="700" fill="#f7f9fb">HeyGen Review: AI Video Creation</text>
-    <text x="600" y="355" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="36" font-weight="700" fill="#f7f9fb">That Actually Delivers</text>
+  <!-- Category badge -->
+  <rect x="88" y="72" width="217" height="28" rx="4" fill="#2d7d9a" opacity="0.2"/>
+  <text x="197" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">DIGITAL TRANSFORMATION</text>
+
+  <!-- Headline -->
+  <text x="88" y="150" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">HeyGen Review:</text>
+  <text x="88" y="208" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">AI Video That</text>
+  <text x="88" y="266" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#2d7d9a" letter-spacing="-1">Actually Delivers</text>
+
+  <!-- Divider -->
+  <line x1="88" y1="336" x2="570" y2="336" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="88" y="372" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">Video production without a studio or crew.</text>
+  <text x="88" y="396" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">Here's what it can and can't do.</text>
+
+  <!-- Author -->
+  <text x="88" y="464" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
+  <text x="88" y="484" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
+
+  <!-- Right panel box -->
+  <rect x="625" y="90" width="530" height="450" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#2d7d9a" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Stats -->
+  <text x="758" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="700" fill="#c5a94e" text-anchor="middle">4/5</text>
+  <text x="758" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">REVIEW SCORE</text>
+  <line x1="890" y1="285" x2="890" y2="400" stroke="#2d7d9a" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="1023" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="76" font-weight="700" fill="#c5a94e" text-anchor="middle">100+</text>
+  <text x="1023" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">TEMPLATES</text>
 
   <!-- HU mark -->
   <text x="1150" y="605" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#8a9aa2" opacity="0.5">HU</text>
