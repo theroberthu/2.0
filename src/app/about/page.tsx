@@ -8,14 +8,14 @@ import LazyYouTube from '@/components/LazyYouTube'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'About Robert Hu',
+  title: 'About Robert Hu — E-commerce Strategist',
   description:
-    '20+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
+    'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $100K–$2M brands. No fluff.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Robert Hu | Robert Hu - E-commerce Strategist',
+    title: 'About Robert Hu — E-commerce Strategist',
     description:
-      '20+ years of e-commerce experience. From building startups to leading marketplace strategy at KENT\u00AE Worldwide. Now helping brand owners grow smarter with strategy, GEO, and AI-powered operations.',
+      'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $100K–$2M brands. No fluff.',
     url: `${SITE_URL}/about`,
   },
 }

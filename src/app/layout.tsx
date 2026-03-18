@@ -62,7 +62,6 @@ export const metadata: Metadata = {
     images: ['/images/og-default.svg'],
   },
   alternates: {
-    canonical: SITE_URL,
     types: {
       'application/rss+xml': `${SITE_URL}/feed.xml`,
     },

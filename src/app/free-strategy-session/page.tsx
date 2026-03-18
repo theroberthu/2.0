@@ -6,14 +6,14 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Free Strategy Session',
+  title: 'Free E-commerce Strategy Session — 15 Minutes, No Pitch',
   description:
-    'Book a free strategy session to discuss how AI and digital transformation can grow your e-commerce brand.',
+    'Get a free 15-minute strategy session for your Amazon or DTC brand. Identify your biggest growth lever today. No pitch, no obligation — just an honest take.',
   alternates: { canonical: '/free-strategy-session' },
   openGraph: {
-    title: 'Free Strategy Session | Robert Hu - E-commerce Strategist',
+    title: 'Free E-commerce Strategy Session — 15 Minutes, No Pitch | Robert Hu',
     description:
-      'Book a free strategy session to discuss how AI and digital transformation can grow your e-commerce brand.',
+      'Get a free 15-minute strategy session for your Amazon or DTC brand. Identify your biggest growth lever today. No pitch, no obligation — just an honest take.',
     url: `${SITE_URL}/free-strategy-session`,
   },
 }

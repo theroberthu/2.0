@@ -7,14 +7,14 @@ import { SITE_URL } from '@/lib/constants'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'E-commerce Strategy Blog',
   description:
-    'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
+    'Amazon, Walmart, AI, and GEO insights for brand owners doing $100K–$2M. Clear analysis on what's changing and what to do about it. No filler.',
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'Blog | Robert Hu - E-commerce Strategist',
+    title: 'E-commerce Strategy Blog | Robert Hu',
     description:
-      'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
+      'Amazon, Walmart, AI, and GEO insights for brand owners doing $100K–$2M. Clear analysis on what's changing and what to do about it. No filler.',
     url: `${SITE_URL}/blog`,
   },
 }

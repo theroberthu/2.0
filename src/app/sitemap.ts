@@ -12,23 +12,37 @@ const SERVICE_SLUGS = [
   'digital-transformation',
 ]
 
+// Last-reviewed dates for stable pages — update when content changes
+const STATIC_LAST_MODIFIED = {
+  home: new Date('2026-03-01'),
+  about: new Date('2025-12-01'),
+  services: new Date('2026-03-01'),
+  caseStudies: new Date('2025-11-01'),
+  blog: new Date('2026-03-18'),
+  freeStrategySession: new Date('2026-03-01'),
+  geo: new Date('2026-02-01'),
+  geoAudit: new Date('2026-02-01'),
+  servicePages: new Date('2026-03-01'),
+  caseStudyPages: new Date('2025-11-01'),
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   const staticPages = [
-    { url: SITE_URL, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${SITE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${SITE_URL}/services`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${SITE_URL}/case-studies`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${SITE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${SITE_URL}/free-strategy-session`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${SITE_URL}/geo`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${SITE_URL}/geo-audit`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: SITE_URL, lastModified: STATIC_LAST_MODIFIED.home, changeFrequency: 'weekly' as const, priority: 1 },
+    { url: `${SITE_URL}/about`, lastModified: STATIC_LAST_MODIFIED.about, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${SITE_URL}/services`, lastModified: STATIC_LAST_MODIFIED.services, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${SITE_URL}/case-studies`, lastModified: STATIC_LAST_MODIFIED.caseStudies, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${SITE_URL}/blog`, lastModified: STATIC_LAST_MODIFIED.blog, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${SITE_URL}/free-strategy-session`, lastModified: STATIC_LAST_MODIFIED.freeStrategySession, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${SITE_URL}/geo`, lastModified: STATIC_LAST_MODIFIED.geo, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${SITE_URL}/geo-audit`, lastModified: STATIC_LAST_MODIFIED.geoAudit, changeFrequency: 'monthly' as const, priority: 0.9 },
   ]
 
   // Case study pages
   const caseStudyPages = CASE_STUDIES.map((cs) => ({
     url: `${SITE_URL}/case-studies/${cs.slug}`,
-    lastModified: new Date(),
+    lastModified: STATIC_LAST_MODIFIED.caseStudyPages,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -36,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Service pages (hardcoded)
   const servicePages = SERVICE_SLUGS.map((slug) => ({
     url: `${SITE_URL}/services/${slug}`,
-    lastModified: new Date(),
+    lastModified: STATIC_LAST_MODIFIED.servicePages,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))

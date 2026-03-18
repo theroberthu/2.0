@@ -42,6 +42,7 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // ── Legacy page URL redirects ────────────────────────────────────────
       {
         source: '/about-me-robert-hu-ecommerce',
         destination: '/about',
@@ -55,6 +56,142 @@ const nextConfig = {
       {
         source: '/contact',
         destination: '/free-strategy-session',
+        permanent: true,
+      },
+      {
+        source: '/contact-me',
+        destination: '/free-strategy-session',
+        permanent: true,
+      },
+      {
+        source: '/book',
+        destination: '/free-strategy-session',
+        permanent: true,
+      },
+      {
+        source: '/book-a-call',
+        destination: '/free-strategy-session',
+        permanent: true,
+      },
+      {
+        source: '/consultation',
+        destination: '/free-strategy-session',
+        permanent: true,
+      },
+      {
+        source: '/work-with-me',
+        destination: '/free-strategy-session',
+        permanent: true,
+      },
+
+      // ── Legacy service page slugs ────────────────────────────────────────
+      {
+        source: '/services/amazon-ppc',
+        destination: '/services/digital-marketing-strategy',
+        permanent: true,
+      },
+      {
+        source: '/services/amazon-advertising',
+        destination: '/services/digital-marketing-strategy',
+        permanent: true,
+      },
+      {
+        source: '/services/geo',
+        destination: '/services/product-listing-optimization',
+        permanent: true,
+      },
+      {
+        source: '/services/listing-optimization',
+        destination: '/services/product-listing-optimization',
+        permanent: true,
+      },
+      {
+        source: '/services/ai-strategy',
+        destination: '/services/digital-transformation',
+        permanent: true,
+      },
+
+      // ── Blog post slug variants and renamed posts ────────────────────────
+      // v2 SVG exists but is not a separate blog post — redirect to canonical
+      {
+        source: '/blog/amazon-rufus-ai-shopping-sellers-v2',
+        destination: '/blog/amazon-rufus-ai-shopping-sellers',
+        permanent: true,
+      },
+      // ChatGPT checkout post was renamed — redirect old slug to current
+      {
+        source: '/blog/chatgpt-checkout-pullback-sellers',
+        destination: '/blog/chatgpt-shopping-pullback-sellers',
+        permanent: true,
+      },
+      {
+        source: '/blog/chatgpt-checkout',
+        destination: '/blog/chatgpt-shopping-pullback-sellers',
+        permanent: true,
+      },
+      {
+        source: '/blog/chatgpt-shopping',
+        destination: '/blog/chatgpt-shopping-pullback-sellers',
+        permanent: true,
+      },
+      // Common short-form guesses for other posts
+      {
+        source: '/blog/amazon-rufus',
+        destination: '/blog/amazon-rufus-ai-shopping-sellers',
+        permanent: true,
+      },
+      {
+        source: '/blog/walmart-sparky',
+        destination: '/blog/walmart-sparky-ai-ads',
+        permanent: true,
+      },
+      {
+        source: '/blog/tiktok-shop',
+        destination: '/blog/tiktok-shop-revolution-2025',
+        permanent: true,
+      },
+      {
+        source: '/blog/costco',
+        destination: '/blog/costco-digital-ecommerce-strategy',
+        permanent: true,
+      },
+      {
+        source: '/blog/heygen',
+        destination: '/blog/heygen-review',
+        permanent: true,
+      },
+      {
+        source: '/blog/black-friday',
+        destination: '/blog/black-friday-2025-online-sales',
+        permanent: true,
+      },
+      {
+        source: '/blog/amazon-openai',
+        destination: '/blog/amazon-openai-partnership-sellers',
+        permanent: true,
+      },
+
+      // ── Catch-all for /geo-audit legacy paths ────────────────────────────
+      {
+        source: '/geo-audit/results',
+        destination: '/geo-audit',
+        permanent: true,
+      },
+
+      // ── Trailing-slash normalization (Next.js handles most, belt+suspenders)
+      {
+        source: '/blog/',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/services/',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/case-studies/',
+        destination: '/case-studies',
         permanent: true,
       },
     ]

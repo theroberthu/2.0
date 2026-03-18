@@ -4,31 +4,31 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Generative Engine Optimization (GEO) for E-commerce',
+  title: 'Generative Engine Optimization (GEO) for Amazon & DTC Brands',
   description:
-    'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus. Get a GEO audit.',
+    'AI search is changing how buyers find products. GEO gets your listings into ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus results. Get a free GEO audit.',
   alternates: { canonical: '/geo' },
   openGraph: {
-    title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu - E-commerce Strategist',
+    title: 'Generative Engine Optimization (GEO) for Amazon & DTC Brands | Robert Hu',
     description:
-      'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus. Get a GEO audit.',
+      'AI search is changing how buyers find products. GEO gets your listings into ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus results. Get a free GEO audit.',
     url: `${SITE_URL}/geo`,
-    type: 'article',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@theroberthu',
     creator: '@theroberthu',
-    title: 'Generative Engine Optimization (GEO) for E-commerce | Robert Hu - E-commerce Strategist',
+    title: 'Generative Engine Optimization (GEO) for Amazon & DTC Brands | Robert Hu',
     description:
-      'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
+      'AI search is changing how buyers find products. GEO gets your listings into ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus results.',
   },
 }
 
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Generative Engine Optimization for E-commerce',
+  '@type': 'WebPage',
+  name: 'Generative Engine Optimization (GEO) for E-commerce',
   description:
     'AI is changing how consumers find products. GEO helps your listings and content show up in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
   author: {
@@ -49,10 +49,6 @@ const articleSchema = {
       '@type': 'ImageObject',
       url: `${SITE_URL}/images/theroberthulogo.png`,
     },
-  },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': `${SITE_URL}/geo`,
   },
   url: `${SITE_URL}/geo`,
 }
