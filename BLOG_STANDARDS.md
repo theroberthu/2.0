@@ -274,11 +274,11 @@ Rules:
 - Each `<li>` must include at least one `<strong>` number, stat, or dollar figure
 - The `<p class="callout-label">` must come before the `<ul>`
 
-### Length
-- Standard posts: 800–1,500 words
-- Deep dives: 1,500–3,000 words
-- Quick takes: 400–800 words
-- Don't pad for word count — say what needs to be said and stop
+### Post Length by Type
+- **News reaction posts:** 1,200–1,500 words (5–6 min read). Lead with the take, keep sections tight, end with 3–5 action items.
+- **Evergreen strategy posts:** 1,800–2,500 words (8–10 min read). Full breakdown with examples, math, and frameworks.
+- Both types still require Key Takeaways section, FAQ with schema, and internal links.
+- Don't pad for word count — say what needs to be said and stop.
 
 ### CTA Rules
 - Every post ends with a CTA
