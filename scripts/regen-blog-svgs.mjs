@@ -42,32 +42,26 @@ function statFontSize(n, numStats) {
  * @param {string}   p.slug     - Used for output filename
  * @param {string}   p.category - e.g. "E-commerce Strategy"
  * @param {string[]} p.lines    - Headline lines (2–3). Last line renders in brand blue.
- * @param {string[]} p.tagline  - Subtext lines (1–2). Max ~46 chars each.
  * @param {Array<{n:string, l:string}>} p.stats - 2–3 stat objects {n: number, l: short label}
  */
-function generateSvg({ slug, category, lines, tagline = [], stats }) {
+function generateSvg({ slug, category, lines, stats }) {
   const cat = esc(category.toUpperCase())
   const badgeW = Math.max(120, cat.length * 8.6 + 28)
 
-  // Title lines
-  const lineH = 58
-  const titleStartY = lines.length === 3 ? 150 : lines.length === 2 ? 176 : 202
+  // Title lines — 52px for mobile readability (renders ~16px at 375px)
+  const lineH = 63
+  const titleStartY = lines.length === 3 ? 175 : lines.length === 2 ? 210 : 240
   const titleSvg = lines
     .map((line, i) => {
       const color = i === lines.length - 1 ? '#2d7d9a' : '#ffffff'
-      return `  <text x="88" y="${titleStartY + i * lineH}" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="${color}" letter-spacing="-1">${esc(line)}</text>`
+      return `  <text x="88" y="${titleStartY + i * lineH}" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="${color}" letter-spacing="-1">${esc(line)}</text>`
     })
     .join('\n')
 
   const dividerY = titleStartY + lines.length * lineH + 12
 
-  const taglineSvg = tagline
-    .map((t, i) =>
-      `  <text x="88" y="${dividerY + 36 + i * 24}" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">${esc(t)}</text>`
-    )
-    .join('\n')
-
-  const authorY = Math.max(454, dividerY + 36 + tagline.length * 24 + 44)
+  // Author sits right below the divider — no tagline (unreadable on mobile)
+  const authorY = dividerY + 40
 
   // Right panel — large stats
   const panelX = 625
@@ -115,9 +109,6 @@ ${titleSvg}
 
   <!-- Divider -->
   <line x1="88" y1="${dividerY}" x2="570" y2="${dividerY}" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
-
-  <!-- Tagline -->
-${taglineSvg}
 
   <!-- Author -->
   <text x="88" y="${authorY}" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
@@ -354,13 +345,10 @@ const posts = [
     tagline: ['The liability question nobody is asking.', 'Until an agent buys the wrong thing.'],
     stats: [{ n: '40%', l: 'AGENT ERROR RATE' }, { n: '$1T', l: 'AGENT MARKET' }],
   },
-]
-
   {
     slug: 'walmart-sparky-chatgpt-gemini',
     category: 'E-commerce Strategy',
     lines: ['Walmart Dumped', 'OpenAI\'s Checkout.', 'Plugged In Sparky.'],
-    tagline: ['Own the agent, rent the distribution.', 'The new model for AI-powered commerce.'],
     stats: [{ n: '1/3x', l: 'CHECKOUT CONV.' }, { n: '300M+', l: 'NEW REACH' }],
   },
 ]

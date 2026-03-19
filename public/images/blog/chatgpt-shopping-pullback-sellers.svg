@@ -16,20 +16,16 @@
   <text x="158" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">GEO &amp; SEO</text>
 
   <!-- Headline -->
-  <text x="88" y="150" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">ChatGPT Dropped</text>
-  <text x="88" y="208" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">Checkout. Good News</text>
-  <text x="88" y="266" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#2d7d9a" letter-spacing="-1">for Sellers.</text>
+  <text x="88" y="175" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">ChatGPT Dropped</text>
+  <text x="88" y="238" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Checkout. Good News</text>
+  <text x="88" y="301" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#2d7d9a" letter-spacing="-1">for Sellers.</text>
 
   <!-- Divider -->
-  <line x1="88" y1="336" x2="570" y2="336" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
-
-  <!-- Tagline -->
-  <text x="88" y="372" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">The marketplace model stays intact for now.</text>
-  <text x="88" y="396" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8baab8">But AI shopping is still coming.</text>
+  <line x1="88" y1="376" x2="570" y2="376" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
 
   <!-- Author -->
-  <text x="88" y="464" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
-  <text x="88" y="484" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
+  <text x="88" y="416" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
+  <text x="88" y="436" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
 
   <!-- Right panel box -->
   <rect x="625" y="90" width="530" height="450" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#2d7d9a" stroke-opacity="0.12" stroke-width="1"/>
