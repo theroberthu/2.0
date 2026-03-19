@@ -351,6 +351,12 @@ const posts = [
     lines: ['Walmart Dumped', 'OpenAI\'s Checkout.', 'Plugged In Sparky.'],
     stats: [{ n: '1/3x', l: 'CHECKOUT CONV.' }, { n: '300M+', l: 'NEW REACH' }],
   },
+  {
+    slug: 'shopify-agentic-merit-based-shopping',
+    category: 'GEO & SEO',
+    lines: ['AI Shopping Is', 'Merit-Based.', 'Small Sellers Win.'],
+    stats: [{ n: '14x', l: 'AGENT ORDERS' }, { n: '$385B', l: 'BY 2030' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
