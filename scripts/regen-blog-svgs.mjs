@@ -356,6 +356,15 @@ const posts = [
   },
 ]
 
+  {
+    slug: 'walmart-sparky-chatgpt-gemini',
+    category: 'E-commerce Strategy',
+    lines: ['Walmart Dumped', 'OpenAI\'s Checkout.', 'Plugged In Sparky.'],
+    tagline: ['Own the agent, rent the distribution.', 'The new model for AI-powered commerce.'],
+    stats: [{ n: '1/3x', l: 'CHECKOUT CONV.' }, { n: '300M+', l: 'NEW REACH' }],
+  },
+]
+
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
 
 let generated = 0
