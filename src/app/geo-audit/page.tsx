@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import LeadForm from '@/components/LeadForm'
 import Testimonials from '@/components/Testimonials'
 import { SITE_URL } from '@/lib/constants'
 
@@ -132,20 +132,42 @@ export default function GeoAuditPage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
 
-        <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
-          <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Free Audit</span>
-          <h1 className="text-3xl md:text-[2.75rem] font-bold text-white leading-tight tracking-tight mb-5">
-            Get a GEO Audit for Your Brand
-          </h1>
-          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-            Find out how your products show up in AI-powered search — and what to fix first.
-          </p>
-          <Link
-            href="/free-strategy-session"
-            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Book Your GEO Audit
-          </Link>
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Left - Hero text */}
+            <div className="lg:sticky lg:top-28 text-center lg:text-left">
+              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">Free Audit</span>
+              <h1 className="text-3xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-5">
+                Get a GEO Audit for Your Brand
+              </h1>
+              <p className="text-base md:text-lg text-gray-400 max-w-lg mx-auto lg:mx-0 mb-8">
+                Find out how your products show up in AI-powered search and what to fix first.
+              </p>
+
+              {/* Trust signals */}
+              <div className="flex flex-col gap-3 items-center lg:items-start">
+                {[
+                  { icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z', label: 'I search for your products in ChatGPT, Perplexity & Google AI' },
+                  { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', label: '15 minutes. No pitch. No obligation.' },
+                  { icon: 'M13 10V3L4 14h7v7l9-11h-7z', label: 'Walk away with a prioritized action plan' },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center gap-2.5">
+                    <svg className="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
+                    </svg>
+                    <span className="text-[13px] text-gray-400 font-medium">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right - Form */}
+            <div>
+              <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-2xl p-6 md:p-10">
+                <LeadForm />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -247,17 +269,17 @@ export default function GeoAuditPage() {
 
         <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
           <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
-            Book Your GEO Audit
+            Ready to See Where You Stand?
           </h2>
           <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
             15 minutes. No pitch. Just an honest look at how your brand shows up in AI-powered search.
           </p>
-          <Link
-            href="/free-strategy-session"
+          <a
+            href="#top"
             className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Book Your GEO Audit — Free 15-Minute Call
-          </Link>
+            Fill Out the Form Above
+          </a>
         </div>
       </section>
     </>
