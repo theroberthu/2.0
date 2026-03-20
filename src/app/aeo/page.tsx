@@ -1,0 +1,662 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
+import SchemaMarkup from '@/components/SchemaMarkup'
+import AEOTimeline from '@/components/AEOTimeline'
+import { SITE_URL } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce',
+  description:
+    'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+  alternates: { canonical: '/aeo' },
+  openGraph: {
+    title: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce | Robert Hu',
+    description:
+      'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+    url: `${SITE_URL}/aeo`,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@theroberthu',
+    creator: '@theroberthu',
+    title: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce | Robert Hu',
+    description:
+      'AI agents are learning to shop on behalf of your customers. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+  },
+}
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce',
+  description:
+    'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen when AI agents make purchase decisions.',
+  author: {
+    '@type': 'Person',
+    name: 'Robert Hu',
+    url: `${SITE_URL}/about`,
+    jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+    sameAs: [
+      'https://www.linkedin.com/in/theroberthu',
+      'https://x.com/theroberthu',
+    ],
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Robert Hu',
+    url: SITE_URL,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/images/theroberthulogo.png`,
+    },
+  },
+  url: `${SITE_URL}/aeo`,
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: SITE_URL,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'AEO',
+      item: `${SITE_URL}/aeo`,
+    },
+  ],
+}
+
+const SIGNALS = [
+  {
+    name: 'Perplexity Shopping',
+    description: 'AI-generated product recommendations with direct purchase capability. The user asks, the AI shops.',
+    status: 'Live',
+  },
+  {
+    name: 'OpenAI Operator',
+    description: 'An AI agent that browses the web, compares products, and completes transactions on the user\'s behalf.',
+    status: 'Live',
+  },
+  {
+    name: 'Google Agentic Commerce',
+    description: 'Google\'s investment in AI agents that help users complete purchases, not just find products.',
+    status: 'Building',
+  },
+  {
+    name: 'Amazon Rufus',
+    description: 'Started as a recommendation engine. The trajectory toward agentic purchase assistance is clear.',
+    status: 'Expanding',
+  },
+  {
+    name: 'ChatGPT Shopping',
+    description: 'Product recommendations with structured comparisons already influencing purchase decisions at scale.',
+    status: 'Live',
+  },
+  {
+    name: 'Apple Intelligence + Siri',
+    description: 'Apple\'s AI layer is being built to act on behalf of users across their device ecosystem, including commerce.',
+    status: 'Building',
+  },
+]
+
+const EVALUATION_FACTORS = [
+  {
+    title: 'Structured Data Completeness',
+    description: 'Agents can\'t infer what isn\'t explicitly stated. Every missing attribute — dimensions, materials, compatibility, certifications — is a reason to choose a competitor instead.',
+  },
+  {
+    title: 'Price Transparency & Context',
+    description: 'Agents compare across competitors instantly. Your price needs context — why it\'s premium, what\'s included, how it compares. Raw numbers without context lose.',
+  },
+  {
+    title: 'Fulfillment & Logistics Signals',
+    description: 'Shipping speed, fulfillment method, availability, return policy clarity. Agents are risk-averse. Ambiguity is a disqualifier.',
+  },
+  {
+    title: 'Review Quality & Sentiment',
+    description: 'Not just star ratings — sentiment analysis across review text. Agents can parse thousands of reviews in seconds and identify patterns humans would miss.',
+  },
+  {
+    title: 'Cross-Platform Consistency',
+    description: 'Agents pull from multiple sources. If your Amazon listing says one thing and your DTC site says another, the inconsistency creates friction. Agents avoid friction.',
+  },
+  {
+    title: 'Brand Entity Clarity',
+    description: 'Can the agent clearly identify what your brand is, what it sells, and how it\'s differentiated? Vague positioning gets skipped.',
+  },
+]
+
+export default function AEOPage() {
+  return (
+    <>
+      <SchemaMarkup data={pageSchema} />
+      <SchemaMarkup data={breadcrumbSchema} />
+
+      {/* ───────────────────── Hero ───────────────────── */}
+      <section className="relative overflow-hidden bg-brand-dark py-24 md:py-36">
+        {/* Background texture */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 1px 1px, #2d7d9a 1px, transparent 0)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+        {/* Decorative blurs — shifted vs /geo for visual distinction */}
+        <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-brand-accent/[0.05] rounded-full blur-3xl -translate-x-1/3" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-gold/[0.04] rounded-full blur-3xl translate-y-1/4 translate-x-1/4" />
+
+        <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
+          <h1 className="text-3xl md:text-[3rem] font-bold text-white leading-tight tracking-tight mb-6">
+            The Shopper Is Becoming the Algorithm
+          </h1>
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+            AI agents are learning to buy on behalf of your customers. The brands
+            that prepare now will win. The ones that don&apos;t won&apos;t know
+            what happened.
+          </p>
+
+          {/* Tagline progression */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-0">
+            <span className="text-sm sm:text-base font-semibold text-gray-500 sm:pr-3">
+              SEO gets you found.
+            </span>
+            <span className="hidden sm:block w-px h-5 bg-white/20" />
+            <span className="text-sm sm:text-base font-semibold text-brand-accent sm:px-3">
+              GEO gets you recommended.
+            </span>
+            <span className="hidden sm:block w-px h-5 bg-white/20" />
+            <span className="text-sm sm:text-base font-bold text-brand-gold sm:pl-3">
+              AEO gets you purchased.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────────────── The Shift ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">
+            The Shift
+          </span>
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-8">
+            The Assumption That&apos;s About to Break
+          </h2>
+
+          <div className="space-y-5 text-base text-gray-300 leading-relaxed">
+            <p>
+              For 25 years, e-commerce optimization has assumed the buyer is a
+              human. Someone scrolling, scanning, clicking, comparing tabs. Every
+              strategy — from SEO to PPC to listing optimization — is built
+              around human attention and human decision-making.
+            </p>
+            <p>That assumption is about to break.</p>
+            <p>
+              AI shopping agents are emerging that don&apos;t browse like humans.
+              They don&apos;t see your hero image. They don&apos;t read your
+              clever headline. They don&apos;t click your sponsored ad. They
+              parse structured data, evaluate trust signals, compare attributes,
+              and make purchase decisions — or recommendations so strong
+              they&apos;re functionally decisions — on behalf of the user.
+            </p>
+          </div>
+
+          <p className="mt-8 text-sm text-brand-accent/80 font-medium border-l-2 border-brand-accent pl-4">
+            This isn&apos;t a prediction about 2030. This is happening now, in
+            early forms, and the trajectory is steep.
+          </p>
+        </div>
+      </section>
+
+      {/* ───────────────────── The Signals ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-gold" />
+              </span>
+              Signal Observatory
+            </span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">
+              Every Major Platform Is Building Toward the Same Future
+            </h2>
+            <p className="text-sm text-gray-400 max-w-xl mx-auto">
+              These aren&apos;t isolated experiments. They&apos;re waypoints on a trajectory.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {SIGNALS.map((signal) => (
+              <div
+                key={signal.name}
+                className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 hover:border-brand-accent/30 transition-colors duration-300 group"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-[15px] font-semibold text-white group-hover:text-brand-accent transition-colors duration-300">
+                    {signal.name}
+                  </h3>
+                  <span
+                    className={`text-[10px] font-mono font-semibold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full shrink-0 ml-3 ${
+                      signal.status === 'Live'
+                        ? 'text-emerald-400/80 bg-emerald-400/[0.1]'
+                        : signal.status === 'Expanding'
+                        ? 'text-brand-gold/80 bg-brand-gold/[0.1]'
+                        : 'text-brand-accent/80 bg-brand-accent/[0.1]'
+                    }`}
+                  >
+                    {signal.status}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {signal.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────────────── The Question Nobody's Asking ───────────────────── */}
+      <section className="relative py-20 md:py-28 bg-brand-dark border-t border-white/[0.06] overflow-hidden">
+        {/* Full-width accent background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/60 via-brand-dark to-brand-dark" />
+        <div className="absolute top-0 left-1/2 w-[800px] h-[400px] bg-brand-accent/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8">
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-red-400/70 mb-4">
+            The Provocation
+          </span>
+          <h2 className="text-2xl md:text-[2.25rem] font-bold text-white tracking-tight mb-8 leading-snug">
+            What Happens to Your Ad Spend When the Shopper Is an Algorithm?
+          </h2>
+
+          <div className="space-y-5 text-base text-gray-300 leading-relaxed">
+            <p>
+              Right now, most e-commerce brands spend 20&ndash;40% of revenue on
+              paid advertising. That spend assumes a human shopper will see the
+              ad, click it, and convert.
+            </p>
+            <p>
+              AI agents don&apos;t click ads. They don&apos;t see sponsored
+              placements. They evaluate product data.
+            </p>
+            <p>
+              If 10% of your sales eventually come through agent-mediated
+              shopping, and your organic product data isn&apos;t strong enough to
+              win on merit, you don&apos;t just lose that 10%. You lose it to a
+              competitor whose data is better.
+            </p>
+          </div>
+
+          {/* Pull quote */}
+          <div className="my-10 py-6 border-y border-white/[0.08]">
+            <p className="text-lg md:text-xl font-semibold text-brand-gold leading-snug">
+              &ldquo;The brands spending the most on ads may be the most
+              vulnerable — because they&apos;ve been able to buy visibility
+              instead of earning it through data quality.&rdquo;
+            </p>
+          </div>
+
+          <p className="text-base text-gray-300 leading-relaxed">
+            This isn&apos;t an argument against paid ads. It&apos;s an argument
+            that paid ads alone are no longer a sufficient strategy.
+          </p>
+        </div>
+      </section>
+
+      {/* ───────────────────── What Is AEO? ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">
+            Definition
+          </span>
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-6">
+            What Is Agentic Engine Optimization?
+          </h2>
+
+          <p className="text-base text-gray-300 leading-relaxed mb-8">
+            Agentic Engine Optimization (AEO) is the practice of preparing your
+            products, listings, and digital presence to be evaluated, compared,
+            and selected by AI shopping agents acting on behalf of consumers.
+          </p>
+
+          {/* SEO → GEO → AEO visual progression */}
+          <div className="relative mb-10">
+            {/* Connecting line */}
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-gray-600 via-brand-accent to-brand-gold hidden md:block" />
+
+            <div className="space-y-4 md:space-y-0 md:grid md:grid-rows-3 md:gap-4">
+              {/* SEO — Foundation */}
+              <div className="relative md:pl-16">
+                <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-gray-500 border-2 border-brand-dark ring-2 ring-gray-500/30" />
+                </div>
+                <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-gray-500 bg-gray-500/[0.1] px-2.5 py-1 rounded-full">
+                      Foundation
+                    </span>
+                    <span className="text-[15px] font-semibold text-gray-400">SEO</span>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Ensures you&apos;re findable in traditional search. Keywords,
+                    rankings, organic traffic.
+                  </p>
+                </div>
+              </div>
+
+              {/* GEO — Middle layer */}
+              <div className="relative md:pl-16">
+                <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-brand-accent border-2 border-brand-dark ring-2 ring-brand-accent/30" />
+                </div>
+                <div className="bg-white/[0.05] border border-brand-accent/20 rounded-xl p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full">
+                      Discovery
+                    </span>
+                    <span className="text-[15px] font-semibold text-brand-accent">GEO</span>
+                  </div>
+                  <p className="text-sm text-gray-400">
+                    Ensures you&apos;re recommended by AI-powered search.{' '}
+                    <Link href="/geo" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                      Learn more
+                    </Link>
+                  </p>
+                </div>
+              </div>
+
+              {/* AEO — Top layer */}
+              <div className="relative md:pl-16">
+                <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center">
+                  <div className="w-4 h-4 rounded-full bg-brand-gold border-2 border-brand-dark ring-2 ring-brand-gold/30" />
+                </div>
+                <div className="bg-brand-gold/[0.06] border border-brand-gold/25 rounded-xl p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-brand-gold bg-brand-gold/[0.15] px-2.5 py-1 rounded-full">
+                      Transaction
+                    </span>
+                    <span className="text-[15px] font-semibold text-brand-gold">AEO</span>
+                  </div>
+                  <p className="text-sm text-gray-300">
+                    Ensures you&apos;re chosen when an AI agent is making or
+                    influencing a purchase decision.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-sm text-brand-accent/80 font-medium border-l-2 border-brand-gold pl-4">
+            GEO is about being mentioned. AEO is about being selected. The
+            difference is the gap between &ldquo;ChatGPT recommended your
+            product&rdquo; and &ldquo;an AI agent bought your product for the
+            customer.&rdquo;
+          </p>
+        </div>
+      </section>
+
+      {/* ───────────────────── What Agents Evaluate ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-12">
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-3">
+              How the Machine Thinks
+            </span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
+              What Agents Actually Evaluate
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {EVALUATION_FACTORS.map((factor, i) => (
+              <div
+                key={factor.title}
+                className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 hover:border-brand-accent/30 transition-colors duration-300"
+              >
+                <div className="flex gap-4 items-start">
+                  <span className="text-[11px] font-mono font-bold text-brand-accent/40 tracking-widest mt-1 shrink-0">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="text-[15px] font-semibold text-white mb-2">
+                      {factor.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      {factor.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────────────── Timeline ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-12">
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3">
+              The Arc
+            </span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">
+              How We Got Here and Where This Goes
+            </h2>
+            <p className="text-sm text-gray-400 max-w-xl mx-auto">
+              Each era built on the last. AEO isn&apos;t a fad — it&apos;s the next
+              logical step. Click any milestone to expand.
+            </p>
+          </div>
+
+          <AEOTimeline />
+        </div>
+      </section>
+
+      {/* ───────────────────── When Should You Act? ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">
+            Readiness
+          </span>
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-10">
+            When Should You Act?
+          </h2>
+
+          <div className="space-y-6">
+            {/* Phase 1 */}
+            <div className="bg-white/[0.05] backdrop-blur-md border border-emerald-400/20 rounded-xl p-6 md:p-7">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-emerald-400/80 bg-emerald-400/[0.1] px-2.5 py-1 rounded-full">
+                  Right Now
+                </span>
+                <span className="text-[13px] font-semibold text-white">
+                  2025–2026: Build the GEO Foundation
+                </span>
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed mb-3">
+                Agent-mediated shopping volume is small today. No $100K–$2M brand
+                is losing meaningful revenue to AI agents choosing competitors —
+                yet. But everything AEO demands (structured data completeness,
+                review quality, entity clarity, cross-platform consistency) is
+                already what GEO demands.
+              </p>
+              <p className="text-sm text-brand-accent/80 font-medium">
+                GEO is AEO preparation whether you realize it or not.
+              </p>
+            </div>
+
+            {/* Phase 2 */}
+            <div className="bg-white/[0.05] backdrop-blur-md border border-brand-gold/20 rounded-xl p-6 md:p-7">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-brand-gold/80 bg-brand-gold/[0.1] px-2.5 py-1 rounded-full">
+                  Next 12–18 Months
+                </span>
+                <span className="text-[13px] font-semibold text-white">
+                  Monitor and Prepare
+                </span>
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed mb-3">
+                Start watching for agent-mediated traffic and purchase signals in
+                your category. Track how Perplexity Shopping, Google&apos;s agentic
+                features, and Amazon Rufus are evolving. This is when early
+                AEO-specific moves — like ensuring your fulfillment signals and
+                return policies are machine-readable — start mattering.
+              </p>
+              <p className="text-sm text-brand-gold/80 font-medium">
+                The brands paying attention now will have a 12-month head start
+                on everyone else.
+              </p>
+            </div>
+
+            {/* Phase 3 */}
+            <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 md:p-7">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-gray-400/80 bg-gray-400/[0.1] px-2.5 py-1 rounded-full">
+                  2027+
+                </span>
+                <span className="text-[13px] font-semibold text-white">
+                  AEO Becomes a Competitive Differentiator
+                </span>
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed mb-3">
+                This is when agent-mediated shopping hits meaningful volume. The
+                brands that built the GEO foundation early and layered AEO
+                preparation on top will have a structural advantage that&apos;s
+                expensive to reverse.
+              </p>
+              <p className="text-sm text-gray-500 font-medium">
+                The brands that waited will be playing catch-up across two layers
+                of optimization simultaneously.
+              </p>
+            </div>
+          </div>
+
+          {/* Key message */}
+          <div className="mt-8 py-5 border-l-2 border-brand-gold pl-4">
+            <p className="text-sm text-brand-gold/90 font-medium leading-relaxed">
+              You don&apos;t need to panic, but you do need to start. And starting
+              means GEO.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────────────── The GEO → AEO Bridge ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-6">
+            Already Doing GEO? You&apos;re Ahead.
+          </h2>
+
+          <p className="text-base text-gray-300 leading-relaxed mb-5">
+            The good news: if you&apos;re already doing GEO right, you have a
+            head start. GEO creates the foundation AEO needs — structured data,
+            entity clarity, AI readability. AEO adds the transaction layer on
+            top.
+          </p>
+
+          <p className="text-base text-gray-300 leading-relaxed mb-8">
+            The risk: if you&apos;ve been ignoring GEO, you now have two layers
+            of optimization to catch up on. And the brands that started with GEO
+            early are already closer to AEO readiness than you are.
+          </p>
+
+          <Link
+            href="/geo"
+            className="inline-flex items-center gap-2 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
+          >
+            Start with Generative Engine Optimization
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+        </div>
+      </section>
+
+      {/* ───────────────────── CTA ───────────────────── */}
+      <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/80 via-brand-dark to-brand-dark" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-56 h-56 bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
+
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
+            This Shift Isn&apos;t Waiting for You to Be Ready
+          </h2>
+          <p className="text-sm text-gray-400 mb-10 max-w-lg mx-auto">
+            The brands that prepare for agentic commerce now will have a
+            structural advantage that&apos;s hard to reverse. Start with a GEO
+            audit to build the foundation, or talk to me about where your brand
+            stands on the AEO readiness spectrum.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/free-strategy-session"
+              className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              Book a Free Strategy Session
+            </Link>
+            <Link
+              href="/geo"
+              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
+            >
+              Start with GEO
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+          </div>
+          <div className="mt-5">
+            <Link
+              href="/blog"
+              className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
+            >
+              Read my latest thinking &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────────────── Closing Line ───────────────────── */}
+      <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+          <p className="text-base md:text-lg font-medium text-gray-500 italic">
+            Your next customer might not be a person. Make sure your product is
+            ready anyway.
+          </p>
+        </div>
+      </section>
+    </>
+  )
+}

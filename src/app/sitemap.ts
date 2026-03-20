@@ -21,6 +21,7 @@ const STATIC_LAST_MODIFIED = {
   blog: new Date('2026-03-18'),
   freeStrategySession: new Date('2026-03-01'),
   geo: new Date('2026-02-01'),
+  aeo: new Date('2026-03-19'),
   geoAudit: new Date('2026-02-01'),
   servicePages: new Date('2026-03-01'),
   caseStudyPages: new Date('2025-11-01'),
@@ -36,6 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/blog`, lastModified: STATIC_LAST_MODIFIED.blog, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${SITE_URL}/free-strategy-session`, lastModified: STATIC_LAST_MODIFIED.freeStrategySession, changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${SITE_URL}/geo`, lastModified: STATIC_LAST_MODIFIED.geo, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${SITE_URL}/aeo`, lastModified: STATIC_LAST_MODIFIED.aeo, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${SITE_URL}/geo-audit`, lastModified: STATIC_LAST_MODIFIED.geoAudit, changeFrequency: 'monthly' as const, priority: 0.9 },
   ]
 
