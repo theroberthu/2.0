@@ -1,5 +1,5 @@
 import { BlogPost } from './types'
-import { SITE_URL, AUTHOR_INFO } from './constants'
+import { SITE_URL, AUTHOR_INFO, slugifyCategory } from './constants'
 
 export function generateArticleSchema(post: BlogPost) {
   return {
@@ -38,6 +38,9 @@ export function generateArticleSchema(post: BlogPost) {
 }
 
 export function generateBreadcrumbSchema(post: BlogPost) {
+  const categoryName = post.category || 'Blog'
+  const categorySlug = post.category ? slugifyCategory(post.category) : null
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -51,8 +54,10 @@ export function generateBreadcrumbSchema(post: BlogPost) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Blog',
-        item: `${SITE_URL}/blog`,
+        name: categoryName,
+        item: categorySlug
+          ? `${SITE_URL}/blog?category=${categorySlug}`
+          : `${SITE_URL}/blog`,
       },
       {
         '@type': 'ListItem',

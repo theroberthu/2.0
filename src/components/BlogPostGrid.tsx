@@ -1,13 +1,24 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { Suspense, useState, useEffect, useMemo } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { BlogPost } from '@/lib/types'
-import { BLOG_CATEGORIES, POSTS_PER_PAGE } from '@/lib/constants'
+import { BLOG_CATEGORIES, POSTS_PER_PAGE, categoryFromSlug, slugifyCategory } from '@/lib/constants'
 import BlogCard from './BlogCard'
 
-export default function BlogPostGrid({ posts }: { posts: BlogPost[] }) {
+function BlogPostGridInner({ posts }: { posts: BlogPost[] }) {
   const [activeCategory, setActiveCategory] = useState<string>('All')
   const [currentPage, setCurrentPage] = useState(1)
+  const searchParams = useSearchParams()
+
+  // Sync category filter from ?category= URL param on mount / param change
+  useEffect(() => {
+    const slug = searchParams.get('category')
+    if (slug) {
+      const match = categoryFromSlug(slug)
+      if (match) setActiveCategory(match)
+    }
+  }, [searchParams])
 
   const filteredPosts = useMemo(() => {
     if (activeCategory === 'All') return posts
@@ -23,6 +34,11 @@ export default function BlogPostGrid({ posts }: { posts: BlogPost[] }) {
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category)
     setCurrentPage(1)
+    // Update URL without full navigation so breadcrumb links work
+    const url = category === 'All'
+      ? '/blog'
+      : `/blog?category=${slugifyCategory(category)}`
+    window.history.replaceState(null, '', url)
   }
 
   return (
@@ -88,5 +104,13 @@ export default function BlogPostGrid({ posts }: { posts: BlogPost[] }) {
         </div>
       )}
     </div>
+  )
+}
+
+export default function BlogPostGrid({ posts }: { posts: BlogPost[] }) {
+  return (
+    <Suspense>
+      <BlogPostGridInner posts={posts} />
+    </Suspense>
   )
 }

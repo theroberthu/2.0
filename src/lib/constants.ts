@@ -36,6 +36,20 @@ export const BLOG_CATEGORIES = [
 
 export const POSTS_PER_PAGE = 10
 
+/** Turn a category name into a URL-safe slug: "GEO & SEO" → "geo-seo" */
+export function slugifyCategory(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/&/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
+
+/** Reverse lookup: slug → display name */
+export function categoryFromSlug(slug: string): string | undefined {
+  return BLOG_CATEGORIES.find((c) => slugifyCategory(c) === slug) as string | undefined
+}
+
 export const AUTHOR_INFO = {
   name: 'Robert Hu',
   url: 'https://theroberthu.com/about',
