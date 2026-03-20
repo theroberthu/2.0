@@ -5,12 +5,12 @@ import AEOTimeline from '@/components/AEOTimeline'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce',
+  title: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce',
   description:
     'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
   alternates: { canonical: '/aeo' },
   openGraph: {
-    title: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce | Robert Hu',
+    title: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce | Robert Hu',
     description:
       'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
     url: `${SITE_URL}/aeo`,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@theroberthu',
     creator: '@theroberthu',
-    title: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce | Robert Hu',
+    title: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce | Robert Hu',
     description:
       'AI agents are learning to shop on behalf of your customers. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Agentic Engine Optimization (AEO) — The Next Evolution of AI Commerce',
+  name: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce',
   description:
     'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen when AI agents make purchase decisions.',
   author: {
@@ -109,11 +109,11 @@ const SIGNALS = [
 const EVALUATION_FACTORS = [
   {
     title: 'Structured Data Completeness',
-    description: 'Agents can\'t infer what isn\'t explicitly stated. Every missing attribute — dimensions, materials, compatibility, certifications — is a reason to choose a competitor instead.',
+    description: 'Agents can\'t infer what isn\'t explicitly stated. Every missing attribute (dimensions, materials, compatibility, certifications) is a reason to choose a competitor instead.',
   },
   {
     title: 'Price Transparency & Context',
-    description: 'Agents compare across competitors instantly. Your price needs context — why it\'s premium, what\'s included, how it compares. Raw numbers without context lose.',
+    description: 'Agents compare across competitors instantly. Your price needs context: why it\'s premium, what\'s included, how it compares. Raw numbers without context lose.',
   },
   {
     title: 'Fulfillment & Logistics Signals',
@@ -121,7 +121,7 @@ const EVALUATION_FACTORS = [
   },
   {
     title: 'Review Quality & Sentiment',
-    description: 'Not just star ratings — sentiment analysis across review text. Agents can parse thousands of reviews in seconds and identify patterns humans would miss.',
+    description: 'Not just star ratings. Agents run sentiment analysis across review text. They can parse thousands of reviews in seconds and identify patterns humans would miss.',
   },
   {
     title: 'Cross-Platform Consistency',
@@ -150,7 +150,6 @@ export default function AEOPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        {/* Decorative blurs — shifted vs /geo for visual distinction */}
         <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-brand-accent/[0.05] rounded-full blur-3xl -translate-x-1/3" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-gold/[0.04] rounded-full blur-3xl translate-y-1/4 translate-x-1/4" />
 
@@ -195,7 +194,7 @@ export default function AEOPage() {
             <p>
               For 25 years, e-commerce optimization has assumed the buyer is a
               human. Someone scrolling, scanning, clicking, comparing tabs. Every
-              strategy — from SEO to PPC to listing optimization — is built
+              strategy, from SEO to PPC to listing optimization, is built
               around human attention and human decision-making.
             </p>
             <p>That assumption is about to break.</p>
@@ -204,8 +203,8 @@ export default function AEOPage() {
               They don&apos;t see your hero image. They don&apos;t read your
               clever headline. They don&apos;t click your sponsored ad. They
               parse structured data, evaluate trust signals, compare attributes,
-              and make purchase decisions — or recommendations so strong
-              they&apos;re functionally decisions — on behalf of the user.
+              and make purchase decisions (or recommendations so strong
+              they&apos;re functionally decisions) on behalf of the user.
             </p>
           </div>
 
@@ -268,7 +267,6 @@ export default function AEOPage() {
 
       {/* ───────────────────── The Question Nobody's Asking ───────────────────── */}
       <section className="relative py-20 md:py-28 bg-brand-dark border-t border-white/[0.06] overflow-hidden">
-        {/* Full-width accent background */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/60 via-brand-dark to-brand-dark" />
         <div className="absolute top-0 left-1/2 w-[800px] h-[400px] bg-brand-accent/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
@@ -282,7 +280,7 @@ export default function AEOPage() {
 
           <div className="space-y-5 text-base text-gray-300 leading-relaxed">
             <p>
-              Right now, most e-commerce brands spend 20&ndash;40% of revenue on
+              Right now, most e-commerce brands spend 20 to 40% of revenue on
               paid advertising. That spend assumes a human shopper will see the
               ad, click it, and convert.
             </p>
@@ -302,7 +300,7 @@ export default function AEOPage() {
           <div className="my-10 py-6 border-y border-white/[0.08]">
             <p className="text-lg md:text-xl font-semibold text-brand-gold leading-snug">
               &ldquo;The brands spending the most on ads may be the most
-              vulnerable — because they&apos;ve been able to buy visibility
+              vulnerable. They&apos;ve been able to buy visibility
               instead of earning it through data quality.&rdquo;
             </p>
           </div>
@@ -330,13 +328,13 @@ export default function AEOPage() {
             and selected by AI shopping agents acting on behalf of consumers.
           </p>
 
-          {/* SEO → GEO → AEO visual progression */}
+          {/* SEO / GEO / AEO visual progression */}
           <div className="relative mb-10">
             {/* Connecting line */}
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-gray-600 via-brand-accent to-brand-gold hidden md:block" />
 
             <div className="space-y-4 md:space-y-0 md:grid md:grid-rows-3 md:gap-4">
-              {/* SEO — Foundation */}
+              {/* SEO: Foundation */}
               <div className="relative md:pl-16">
                 <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center">
                   <div className="w-3 h-3 rounded-full bg-gray-500 border-2 border-brand-dark ring-2 ring-gray-500/30" />
@@ -355,7 +353,7 @@ export default function AEOPage() {
                 </div>
               </div>
 
-              {/* GEO — Middle layer */}
+              {/* GEO: Middle layer */}
               <div className="relative md:pl-16">
                 <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center">
                   <div className="w-3 h-3 rounded-full bg-brand-accent border-2 border-brand-dark ring-2 ring-brand-accent/30" />
@@ -376,7 +374,7 @@ export default function AEOPage() {
                 </div>
               </div>
 
-              {/* AEO — Top layer */}
+              {/* AEO: Top layer */}
               <div className="relative md:pl-16">
                 <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center">
                   <div className="w-4 h-4 rounded-full bg-brand-gold border-2 border-brand-dark ring-2 ring-brand-gold/30" />
@@ -454,7 +452,7 @@ export default function AEOPage() {
               How We Got Here and Where This Goes
             </h2>
             <p className="text-sm text-gray-400 max-w-xl mx-auto">
-              Each era built on the last. AEO isn&apos;t a fad — it&apos;s the next
+              Each era built on the last. AEO isn&apos;t a fad. It&apos;s the next
               logical step. Click any milestone to expand.
             </p>
           </div>
@@ -481,13 +479,13 @@ export default function AEOPage() {
                   Right Now
                 </span>
                 <span className="text-[13px] font-semibold text-white">
-                  2025–2026: Build the GEO Foundation
+                  2025&ndash;2026: Build the GEO Foundation
                 </span>
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-3">
-                Agent-mediated shopping volume is small today. No $100K–$2M brand
-                is losing meaningful revenue to AI agents choosing competitors —
-                yet. But everything AEO demands (structured data completeness,
+                Agent-mediated shopping volume is small today. No $100K&ndash;$2M brand
+                is losing meaningful revenue to AI agents choosing competitors.
+                Not yet. But everything AEO demands (structured data completeness,
                 review quality, entity clarity, cross-platform consistency) is
                 already what GEO demands.
               </p>
@@ -500,7 +498,7 @@ export default function AEOPage() {
             <div className="bg-white/[0.05] backdrop-blur-md border border-brand-gold/20 rounded-xl p-6 md:p-7">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-brand-gold/80 bg-brand-gold/[0.1] px-2.5 py-1 rounded-full">
-                  Next 12–18 Months
+                  Next 12&ndash;18 Months
                 </span>
                 <span className="text-[13px] font-semibold text-white">
                   Monitor and Prepare
@@ -510,8 +508,8 @@ export default function AEOPage() {
                 Start watching for agent-mediated traffic and purchase signals in
                 your category. Track how Perplexity Shopping, Google&apos;s agentic
                 features, and Amazon Rufus are evolving. This is when early
-                AEO-specific moves — like ensuring your fulfillment signals and
-                return policies are machine-readable — start mattering.
+                AEO-specific moves start mattering: ensuring your fulfillment signals and
+                return policies are machine-readable, for example.
               </p>
               <p className="text-sm text-brand-gold/80 font-medium">
                 The brands paying attention now will have a 12-month head start
@@ -552,7 +550,7 @@ export default function AEOPage() {
         </div>
       </section>
 
-      {/* ───────────────────── The GEO → AEO Bridge ───────────────────── */}
+      {/* ───────────────────── The GEO to AEO Bridge ───────────────────── */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-6">
@@ -561,7 +559,7 @@ export default function AEOPage() {
 
           <p className="text-base text-gray-300 leading-relaxed mb-5">
             The good news: if you&apos;re already doing GEO right, you have a
-            head start. GEO creates the foundation AEO needs — structured data,
+            head start. GEO creates the foundation AEO needs. Structured data,
             entity clarity, AI readability. AEO adds the transaction layer on
             top.
           </p>

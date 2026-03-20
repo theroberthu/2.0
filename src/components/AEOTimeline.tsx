@@ -31,7 +31,7 @@ const MILESTONES: Milestone[] = [
     year: '2005',
     title: 'Amazon Prime & XML Sitemaps',
     description:
-      'Two-day shipping redefines consumer expectations. XML Sitemaps launch — webmasters can now tell Google what to crawl.',
+      'Two-day shipping redefines consumer expectations. XML Sitemaps launch, letting webmasters tell Google what to crawl.',
     era: 'seo',
   },
   {
@@ -114,7 +114,7 @@ const MILESTONES: Milestone[] = [
   },
   // AEO ERA
   {
-    year: '2025–26',
+    year: '2025/26',
     title: 'The Agentic Inflection Point',
     description:
       'OpenAI Operator launches. Google announces agentic shopping. Perplexity Shopping goes live. The first generation of AI shopping agents enters the market.',
@@ -122,7 +122,7 @@ const MILESTONES: Milestone[] = [
     current: true,
   },
   {
-    year: '2026–27',
+    year: '2026/27',
     title: 'Agent Shopping Gains Volume',
     description:
       'Agent-mediated shopping grows from novelty to meaningful channel. Early adopter brands with strong structured data start seeing agent-driven purchases. Brands reliant on paid ads begin feeling the gap.',
@@ -141,21 +141,21 @@ const MILESTONES: Milestone[] = [
 
 const ERA_CONFIG = {
   seo: {
-    label: 'The SEO Era — "Get Found"',
+    label: 'The SEO Era // Get Found',
     color: 'text-gray-400',
     dotColor: 'bg-gray-500',
     borderColor: 'border-gray-500/30',
     bgActive: 'bg-gray-500/[0.08]',
   },
   geo: {
-    label: 'The GEO Era — "Get Recommended"',
+    label: 'The GEO Era // Get Recommended',
     color: 'text-brand-accent',
     dotColor: 'bg-brand-accent',
     borderColor: 'border-brand-accent/30',
     bgActive: 'bg-brand-accent/[0.08]',
   },
   aeo: {
-    label: 'The AEO Era — "Get Purchased"',
+    label: 'The AEO Era // Get Purchased',
     color: 'text-brand-gold',
     dotColor: 'bg-brand-gold',
     borderColor: 'border-brand-gold/30',
