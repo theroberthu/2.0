@@ -7,14 +7,15 @@ import { SITE_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce',
   description:
-    'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+    'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) ensures your products get chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
   alternates: { canonical: '/aeo' },
   openGraph: {
     title: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce | Robert Hu',
     description:
-      'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+      'AI agents are learning to shop on behalf of your customers. Is your brand ready to be chosen? SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
     url: `${SITE_URL}/aeo`,
     type: 'website',
+    siteName: 'Robert Hu',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,16 +23,30 @@ export const metadata: Metadata = {
     creator: '@theroberthu',
     title: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce | Robert Hu',
     description:
-      'AI agents are learning to shop on behalf of your customers. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+      'AI agents are learning to shop on behalf of your customers. Is your brand ready to be chosen? SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
   },
 }
 
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Agentic Engine Optimization (AEO): The Next Evolution of AI Commerce',
+  name: 'Agentic Engine Optimization (AEO) for Amazon & DTC Brands',
   description:
-    'AI agents are learning to shop on behalf of your customers. Agentic Engine Optimization (AEO) prepares your brand to be chosen when AI agents make purchase decisions.',
+    'AI shopping agents are starting to buy on behalf of your customers. Agentic Engine Optimization (AEO) ensures your products get chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+  url: `${SITE_URL}/aeo`,
+  datePublished: '2026-03-19',
+  dateModified: '2026-03-19',
+  mainEntityOfPage: `${SITE_URL}/aeo`,
+  isPartOf: {
+    '@type': 'WebSite',
+    url: SITE_URL,
+  },
+  about: [
+    { '@type': 'Thing', name: 'Agentic Engine Optimization' },
+    { '@type': 'Thing', name: 'AI Commerce' },
+    { '@type': 'Thing', name: 'E-commerce' },
+    { '@type': 'Thing', name: 'Product Listing Optimization' },
+  ],
   author: {
     '@type': 'Person',
     name: 'Robert Hu',
@@ -51,7 +66,62 @@ const pageSchema = {
       url: `${SITE_URL}/images/theroberthulogo.png`,
     },
   },
-  url: `${SITE_URL}/aeo`,
+}
+
+const FAQS = [
+  {
+    q: 'Is AEO replacing GEO?',
+    a: 'No. AEO builds on GEO, which builds on SEO. You need all three layers. SEO gets you found. GEO gets you recommended. AEO gets you purchased. Each layer supports the next. If you skip GEO, your AEO foundation doesn\'t exist.',
+  },
+  {
+    q: 'Are AI shopping agents actually buying products today?',
+    a: 'Early versions are live. Perplexity\'s shopping features let users purchase directly from AI-generated recommendations. OpenAI\'s Operator can browse and transact. Google is building agentic shopping capabilities. The volume is small today, but the trajectory is clear: every major platform is investing in this direction.',
+  },
+  {
+    q: 'Do AI agents ignore paid ads?',
+    a: 'Generally, yes. Agents optimize for product fit, not ad placement. They evaluate structured data, reviews, pricing, and fulfillment, not sponsored positions. This doesn\'t mean ads are dead, but it means your organic product data needs to be strong enough to win without them.',
+  },
+  {
+    q: 'What\'s the difference between AEO and Answer Engine Optimization?',
+    a: 'Different things, same acronym. Answer Engine Optimization focuses on featured snippets and voice search answers. Agentic Engine Optimization (what this page is about) focuses on AI agents that evaluate, compare, and purchase products on behalf of users. We\'re talking about agents that shop, not search engines that answer questions.',
+  },
+  {
+    q: 'When should a $100K\u20132M brand start thinking about AEO?',
+    a: 'Now, but start with GEO. Agent-mediated shopping volume is small today, so you\'re not losing sales to AI agents yet. But everything AEO will demand (structured data, review quality, entity clarity, cross-platform consistency) is already what GEO demands. Building your GEO foundation now is the smartest AEO preparation you can do.',
+  },
+  {
+    q: 'Can I do AEO myself?',
+    a: 'You can start by auditing your structured data completeness: check whether your listings have every attribute an agent would need to make a confident purchase decision. But a strategic AEO readiness assessment looks at the full picture across data, trust signals, pricing, fulfillment, and cross-platform consistency, which is where working with a specialist helps.',
+  },
+  {
+    q: 'What if I only sell on Amazon?',
+    a: 'AEO still applies. Amazon Rufus is already using AI to recommend products, and its trajectory points toward more agentic behavior. How your listings are structured (attributes, fulfillment signals, review quality) directly affects whether an AI agent would select your product over a competitor\'s. And agents outside Amazon (Perplexity, OpenAI Operator) can still evaluate your Amazon listings.',
+  },
+  {
+    q: 'How is AEO different from just having good product listings?',
+    a: 'Good listings are necessary but not sufficient. AEO goes beyond accurate titles and bullet points. It requires machine-readable structured data across every attribute an agent might evaluate, explicit fulfillment and return policy signals, cross-platform data consistency, and review quality that holds up under sentiment analysis. A listing that looks good to a human shopper may still be missing what an agent needs to make a confident purchase decision.',
+  },
+  {
+    q: 'Will AEO make SEO and GEO obsolete?',
+    a: 'No. Think of it as a stack. SEO ensures your brand exists in traditional search. GEO ensures AI recommends you. AEO ensures agents choose you. Remove any layer and the ones above it weaken. The brands that win will be the ones optimized across all three.',
+  },
+  {
+    q: 'How do I know if my products are ready for AEO?',
+    a: 'Ask yourself: if an AI agent had to choose between your product and your top competitor\'s, with no human to persuade, no hero image to impress, no ad to click, would your structured data, reviews, pricing context, and fulfillment signals win? If you\'re not sure, that\'s your answer.',
+  },
+]
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
 }
 
 const breadcrumbSchema = {
@@ -137,6 +207,7 @@ export default function AEOPage() {
   return (
     <>
       <SchemaMarkup data={pageSchema} />
+      <SchemaMarkup data={faqSchema} />
       <SchemaMarkup data={breadcrumbSchema} />
 
       {/* ───────────────────── Hero ───────────────────── */}
@@ -589,6 +660,30 @@ export default function AEOPage() {
               />
             </svg>
           </Link>
+        </div>
+      </section>
+
+      {/* ───────────────────── FAQ ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-10">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">FAQ</span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {FAQS.map((faq) => (
+              <div
+                key={faq.q}
+                className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6"
+              >
+                <h3 className="text-[15px] font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

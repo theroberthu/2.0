@@ -91,10 +91,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: "What's the difference between GEO and AEO (Answer Engine Optimization)?",
+      name: "What's the difference between GEO and AEO (Agentic Engine Optimization)?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "They're closely related. AEO focuses on featured snippets and voice search. GEO is broader, covering all AI-generated results including shopping recommendations and conversational AI.",
+        text: "GEO focuses on getting your products recommended by AI search engines like ChatGPT, Perplexity, and Google AI Overviews. AEO (Agentic Engine Optimization) goes a step further: it prepares your products to be evaluated, compared, and selected by AI shopping agents that act on behalf of buyers. GEO gets you mentioned. AEO gets you purchased. They're complementary layers. GEO is the foundation that AEO builds on.",
       },
     },
     {
@@ -217,8 +217,9 @@ const FAQS = [
     a: 'It varies. Some structural changes (like adding proper schema markup) have immediate impact on how AI engines read your content. Broader authority building, like becoming a cited source in your category, takes 3-6 months.',
   },
   {
-    q: "What's the difference between GEO and AEO (Answer Engine Optimization)?",
-    a: "They're closely related. AEO focuses on featured snippets and voice search. GEO is broader. It covers all AI-generated results, including shopping recommendations, conversational AI, and AI-powered product discovery tools.",
+    q: "What's the difference between GEO and AEO (Agentic Engine Optimization)?",
+    a: "GEO focuses on getting your products recommended by AI search engines like ChatGPT, Perplexity, and Google AI Overviews. AEO (Agentic Engine Optimization) goes a step further: it prepares your products to be evaluated, compared, and selected by AI shopping agents that act on behalf of buyers. GEO gets you mentioned. AEO gets you purchased. They're complementary layers. GEO is the foundation that AEO builds on.",
+    link: '/aeo',
   },
   {
     q: 'Can I do GEO myself?',
@@ -444,7 +445,17 @@ export default function GEOPage() {
                 className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6"
               >
                 <h3 className="text-[15px] font-semibold text-white mb-3">{faq.q}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{faq.a}</p>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {faq.a}
+                  {faq.link && (
+                    <>
+                      {' '}
+                      <Link href={faq.link} className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                        Learn more about AEO &rarr;
+                      </Link>
+                    </>
+                  )}
+                </p>
               </div>
             ))}
           </div>
