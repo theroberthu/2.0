@@ -363,6 +363,12 @@ const posts = [
     lines: ['Walmart Hits 200K', 'Sellers. US Brands', 'Should Pay Attention.'],
     stats: [{ n: '200K', l: 'SELLERS' }, { n: '27%', l: 'ONLINE GROWTH' }],
   },
+  {
+    slug: 'walmart-marty-ad-agent',
+    category: 'Digital Marketing',
+    lines: ["Walmart's Marty Ad", 'Agent Is Coming for', 'Your Ad Campaigns.'],
+    stats: [{ n: '$4.4B', l: 'AD REVENUE' }, { n: '33%', l: 'US GROWTH' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────

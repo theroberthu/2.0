@@ -2,8 +2,6 @@ import { createClient } from '@supabase/supabase-js'
 import { readFileSync } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
-import { generateOgImage } from './generate-og-image.mjs'
-
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
@@ -19,12 +17,7 @@ const supabase = createClient(
   envVars.SUPABASE_SERVICE_ROLE_KEY
 )
 
-const ogImagePath = generateOgImage(
-  'walmart-marketplace-200k-sellers',
-  "Walmart's Marketplace Just Hit 200,000 Sellers. Here's Why That's Good News for US Brands.",
-  'E-commerce Strategy'
-)
-console.log('Generated OG image:', ogImagePath)
+const ogImagePath = '/images/blog/walmart-marketplace-200k-sellers.svg'
 
 const post = {
   slug: 'walmart-marketplace-200k-sellers',
