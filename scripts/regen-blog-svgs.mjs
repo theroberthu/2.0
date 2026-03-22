@@ -357,6 +357,12 @@ const posts = [
     lines: ['AI Shopping Is', 'Merit-Based.', 'Small Sellers Win.'],
     stats: [{ n: '14x', l: 'AGENT ORDERS' }, { n: '$385B', l: 'BY 2030' }],
   },
+  {
+    slug: 'walmart-marketplace-200k-sellers',
+    category: 'E-commerce Strategy',
+    lines: ['Walmart Hits 200K', 'Sellers. US Brands', 'Should Pay Attention.'],
+    stats: [{ n: '200K', l: 'SELLERS' }, { n: '27%', l: 'ONLINE GROWTH' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
