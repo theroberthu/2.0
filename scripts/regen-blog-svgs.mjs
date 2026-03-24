@@ -369,6 +369,12 @@ const posts = [
     lines: ["Walmart's Marty Ad", 'Agent Is Coming for', 'Your Ad Campaigns.'],
     stats: [{ n: '$4.4B', l: 'AD REVENUE' }, { n: '33%', l: 'US GROWTH' }],
   },
+  {
+    slug: 'chatgpt-sephora-retailer-apps',
+    category: 'GEO & SEO',
+    lines: ['Sephora Just Launched', 'Inside ChatGPT.', 'Now What?'],
+    stats: [{ n: '100M+', l: 'WEEKLY USERS' }, { n: '3', l: 'RETAILERS LIVE' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
