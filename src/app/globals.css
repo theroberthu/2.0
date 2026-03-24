@@ -224,6 +224,50 @@
   color: #d9bc6e !important;
 }
 
+/* Testimonial + CTA block at bottom of mid/bottom-funnel posts */
+.blog-testimonial-cta {
+  margin-top: 3rem;
+}
+.blog-testimonial-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 2rem;
+}
+.blog-testimonial-quote {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.blog-testimonial-quote p {
+  font-size: 0.9375rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #c5c5c5 !important;
+  line-height: 1.65;
+  margin: 0 0 0.5rem 0 !important;
+}
+.blog-testimonial-quote cite {
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #6a7a82;
+  display: block;
+}
+.blog-testimonial-cta-link {
+  margin: 0 !important;
+}
+.blog-testimonial-cta-link a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #c5a94e !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+.blog-testimonial-cta-link a:hover {
+  color: #d9bc6e !important;
+}
+
 /* Key Takeaways box — top-of-post summary */
 .tldr-box {
   background: rgba(45, 125, 154, 0.08);
