@@ -99,7 +99,7 @@ export function generateVideoSchema(post: BlogPost) {
     name: video.name,
     description: video.description,
     thumbnailUrl: video.thumbnailUrl,
-    uploadDate: video.uploadDate,
+    uploadDate: video.uploadDate.length === 10 ? `${video.uploadDate}T12:00:00-07:00` : video.uploadDate,
     contentUrl: video.contentUrl,
     embedUrl: video.embedUrl,
   }
