@@ -375,6 +375,12 @@ const posts = [
     lines: ['Sephora Just Launched', 'Inside ChatGPT.', 'Now What?'],
     stats: [{ n: '100M+', l: 'WEEKLY USERS' }, { n: '3', l: 'RETAILERS LIVE' }],
   },
+  {
+    slug: 'small-brands-win-ai-doesnt-care-about-ad-budget',
+    category: 'GEO & SEO',
+    lines: ['Small Brands Win:', "AI Doesn't Care", 'About Your Ad Budget.'],
+    stats: [{ n: '92%', l: 'NOT READY' }, { n: '3-5', l: 'AI PICKS' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
