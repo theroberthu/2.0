@@ -384,7 +384,7 @@ const posts = [
   {
     slug: 'walmart-negative-feedback-rate',
     category: 'E-commerce Strategy',
-    lines: ['Walmart\u2019s New', 'Feedback Metric', 'Rewards AI-Ready Brands.'],
+    lines: ['Walmart\u2019s New', 'Feedback Metric', 'Rewards AI Brands.'],
     stats: [{ n: '2%', l: 'THRESHOLD' }, { n: '60', l: 'DAY WINDOW' }],
   },
 ]

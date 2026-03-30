@@ -18,7 +18,7 @@
   <!-- Headline -->
   <text x="88" y="175" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Walmart’s New</text>
   <text x="88" y="238" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Feedback Metric</text>
-  <text x="88" y="301" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#2d7d9a" letter-spacing="-1">Rewards AI-Ready Brands.</text>
+  <text x="88" y="301" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#2d7d9a" letter-spacing="-1">Rewards AI Brands.</text>
 
   <!-- Divider -->
   <line x1="88" y1="376" x2="570" y2="376" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
