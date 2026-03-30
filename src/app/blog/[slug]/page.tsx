@@ -97,9 +97,11 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   if (!post) return {}
 
-  const ogImages = post.og_image
-    ? [{ url: post.og_image, width: 1200, height: 630, alt: post.schema_json?.featured_image_alt || post.title }]
-    : [{ url: '/images/robert-hu-headshot.png', width: 1200, height: 630, alt: 'Robert Hu' }]
+  // Use PNG API route for OG/Twitter (social platforms don't support SVG)
+  const ogImageUrl = post.og_image && post.og_image.endsWith('.svg')
+    ? `/api/og/${post.slug}`
+    : post.og_image || '/images/robert-hu-headshot.png'
+  const ogImages = [{ url: ogImageUrl, width: 1200, height: 630, alt: post.schema_json?.featured_image_alt || post.title }]
 
   return {
     title: post.meta_title || post.title,
