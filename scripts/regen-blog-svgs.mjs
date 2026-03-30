@@ -381,6 +381,12 @@ const posts = [
     lines: ['Small Brands Win:', "AI Doesn't Care", 'About Your Ad Budget.'],
     stats: [{ n: '92%', l: 'NOT READY' }, { n: '3-5', l: 'AI PICKS' }],
   },
+  {
+    slug: 'walmart-negative-feedback-rate',
+    category: 'E-commerce Strategy',
+    lines: ['Walmart\u2019s New', 'Feedback Metric', 'Rewards AI-Ready Brands.'],
+    stats: [{ n: '2%', l: 'THRESHOLD' }, { n: '60', l: 'DAY WINDOW' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
