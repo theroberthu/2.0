@@ -193,7 +193,7 @@ export default async function BlogPostPage(props: Props) {
       {videoSchema && <SchemaMarkup data={videoSchema} />}
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-brand-dark py-16 md:py-24">
+      <section className="relative overflow-hidden bg-brand-dark pt-16 md:pt-24 pb-10 md:pb-12">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #2d7d9a 1px, transparent 0)', backgroundSize: '32px 32px' }} />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
 
@@ -259,7 +259,7 @@ export default async function BlogPostPage(props: Props) {
       </section>
 
       {/* Content + Sidebar */}
-      <article className="py-16 md:py-20 bg-brand-dark">
+      <article className="pt-10 md:pt-12 pb-16 md:pb-20 bg-brand-dark">
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
           <div className="xl:grid xl:grid-cols-[720px_1fr] xl:gap-12 xl:items-start">
             {/* Main content */}
