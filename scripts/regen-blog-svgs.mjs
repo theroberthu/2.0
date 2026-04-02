@@ -387,6 +387,12 @@ const posts = [
     lines: ['Walmart\u2019s New', 'Feedback Metric', 'Rewards AI Brands.'],
     stats: [{ n: '2%', l: 'THRESHOLD' }, { n: '60', l: 'DAY WINDOW' }],
   },
+  {
+    slug: 'amazon-rufus-account-memory',
+    category: 'GEO & SEO',
+    lines: ['Rufus Remembers', 'Every Shopper.', 'Your Data Is the Filter.'],
+    stats: [{ n: '250M+', l: 'USERS' }, { n: '60%', l: 'BUY RATE' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
