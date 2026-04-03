@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide global Header/Footer/BackToTop on standalone pages like /work */
+body.hide-global-chrome > header,
+body.hide-global-chrome > footer,
+body.hide-global-chrome > button[aria-label="Back to top"] {
+  display: none !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
