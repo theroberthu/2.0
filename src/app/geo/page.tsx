@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import LeadForm from '@/components/LeadForm'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -249,11 +250,12 @@ export default function GEOPage() {
             Your products need to show up in AI-powered search, not just Google. Here&apos;s how.
           </p>
           <Link
-            href="/geo-audit"
+            href="#geo-audit-form"
             className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Get a GEO Audit
+            Find My GEO Gaps &mdash; Free
           </Link>
+          <p className="text-sm text-white/50 mt-3">Free &middot; 15 minutes &middot; No sales pitch</p>
         </div>
       </section>
 
@@ -428,6 +430,27 @@ export default function GEOPage() {
         </div>
       </section>
 
+      {/* Mid-page CTA banner */}
+      <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="border-l-4 border-brand-gold bg-brand-gold/[0.08] rounded-r-xl p-6 md:p-8">
+            <h3 className="text-lg md:text-xl font-bold text-white mb-2">
+              See exactly where your brand shows up &mdash; and where it doesn&apos;t.
+            </h3>
+            <p className="text-sm text-gray-400 leading-relaxed mb-5">
+              A free 15-minute GEO audit covers ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus. No pitch. Just a prioritized action plan.
+            </p>
+            <Link
+              href="#geo-audit-form"
+              className="inline-block bg-brand-gold text-white font-semibold px-6 py-3 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+            >
+              Get My Free GEO Audit
+            </Link>
+            <p className="text-xs text-white/40 mt-3">Free &middot; 15 min &middot; No obligation</p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
@@ -462,35 +485,56 @@ export default function GEOPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
+      {/* Embedded Audit Form */}
+      <section id="geo-audit-form" className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/80 via-brand-dark to-brand-dark" />
         <div className="absolute top-0 right-0 w-72 h-72 bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-56 h-56 bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
-          <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
-            Ready to Optimize for the Future of Search?
-          </h2>
-          <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
-            A GEO audit shows you exactly where your brand stands in AI-powered search and what to fix first.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/geo-audit"
-              className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-            >
-              Get a GEO Audit
-            </Link>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
-            >
-              Read my latest GEO insights
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+        <div className="relative max-w-5xl mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+            {/* Left: value pitch */}
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4 block">Free Audit</span>
+              <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
+                Get a Free GEO Audit for Your Brand
+              </h2>
+              <p className="text-sm text-gray-400 leading-relaxed mb-8">
+                Find out how your products show up in AI-powered search and what to fix first.
+              </p>
+
+              <div className="space-y-5">
+                {[
+                  'I search for your products in ChatGPT, Perplexity & Google AI',
+                  '15 minutes. No pitch. No obligation.',
+                  'Walk away with a prioritized action plan',
+                ].map((text) => (
+                  <div key={text} className="flex gap-3 items-start">
+                    <svg className="w-5 h-5 text-brand-gold mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <span className="text-sm text-gray-300">{text}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
+                >
+                  Read my latest GEO insights
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: embedded form */}
+            <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-2xl p-6 md:p-10">
+              <LeadForm />
+            </div>
           </div>
         </div>
       </section>
