@@ -85,6 +85,38 @@ const personSchema = {
   ],
 }
 
+const siteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Robert Hu',
+  url: SITE_URL,
+  description: 'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies.',
+  publisher: { '@type': 'Person', name: 'Robert Hu', url: SITE_URL },
+}
+
+const siteNavSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SiteNavigationElement',
+  name: [
+    'Services',
+    'AI Search (GEO)',
+    'AI Agents (AEO)',
+    'Case Studies',
+    'Blog',
+    'About',
+    'Free Strategy Session',
+  ],
+  url: [
+    `${SITE_URL}/services`,
+    `${SITE_URL}/geo`,
+    `${SITE_URL}/aeo`,
+    `${SITE_URL}/case-studies`,
+    `${SITE_URL}/blog`,
+    `${SITE_URL}/about`,
+    `${SITE_URL}/free-strategy-session`,
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -108,6 +140,8 @@ gtag('config', 'G-V9BV9F9MPM');`}
         className={`${dmSans.variable} ${jetbrainsMono.variable} font-sans antialiased bg-brand-bg text-brand-dark`}
       >
         <SchemaMarkup data={personSchema} />
+        <SchemaMarkup data={siteSchema} />
+        <SchemaMarkup data={siteNavSchema} />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
