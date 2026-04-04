@@ -97,28 +97,20 @@ const values = [
 
 const projects = [
   {
-    name: 'FlightPrompts',
-    desc: 'An AI-powered decision tool that helps travelers find and evaluate flight options. Built to test prompt-driven product design and real-world AI UX.',
+    name: 'YourGEOReport',
+    desc: 'Free AI visibility reports for e-commerce brands. Tests real buyer-style prompts across ChatGPT and Claude, then generates a report showing which competitors AI recommends instead of your brand.',
     status: 'Live',
     statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/[0.08]',
     dotColor: 'bg-emerald-400',
-    link: 'https://flightprompts.com',
+    link: 'https://yourgeoreport.com',
   },
   {
-    name: 'ProductListingHelp',
-    desc: 'A GEO audit tool for Amazon and Walmart sellers. Analyzes product listings for traditional SEO and Generative Engine Optimization readiness.',
+    name: 'RecoScope',
+    desc: 'AI recommendation benchmarks for consumer brands. Tracks how ChatGPT, Claude, and Gemini recommend brands across categories over time. Surfaces the gap between marketplace popularity and AI visibility.',
     status: 'Live',
     statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/[0.08]',
     dotColor: 'bg-emerald-400',
-    link: 'https://productlistinghelp.com',
-  },
-  {
-    name: 'Scoparo',
-    desc: 'A framework for scoping AI tools before committing time or money. Designed to help teams evaluate AI solutions with clarity, not hype.',
-    status: 'In Development',
-    statusColor: 'text-gray-400 border-gray-400/30 bg-gray-400/[0.08]',
-    dotColor: 'bg-gray-400',
-    link: null,
+    link: 'https://getrecoscope.com',
   },
 ]
 
