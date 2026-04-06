@@ -393,6 +393,12 @@ const posts = [
     lines: ['Rufus Remembers', 'Every Shopper.', 'Your Data Is the Filter.'],
     stats: [{ n: '250M+', l: 'USERS' }, { n: '60%', l: 'BUY RATE' }],
   },
+  {
+    slug: 'rufus-sparky-ai-revenue-impact',
+    category: 'GEO & SEO',
+    lines: ['Rufus: $10B.', 'Sparky: +35% AOV.', 'AI Brands Pull Away.'],
+    stats: [{ n: '$10B', l: 'RUFUS SALES' }, { n: '35%', l: 'SPARKY AOV' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
