@@ -399,6 +399,12 @@ const posts = [
     lines: ['Rufus: $10B.', 'Sparky: +35% AOV.', 'AI Brands Pull Away.'],
     stats: [{ n: '$10B', l: 'RUFUS SALES' }, { n: '35%', l: 'SPARKY AOV' }],
   },
+  {
+    slug: 'amazon-buy-for-me-scraping-dtc',
+    category: 'E-commerce Strategy',
+    lines: ["Amazon's Buy for Me", 'Is Scraping DTC Stores.', 'Without Permission.'],
+    stats: [{ n: '0', l: 'CONSENT' }, { n: '100M+', l: 'PRODUCTS' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
