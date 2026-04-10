@@ -405,6 +405,12 @@ const posts = [
     lines: ["Amazon's Buy for Me", 'Is Scraping DTC Stores.', 'Without Permission.'],
     stats: [{ n: '0', l: 'CONSENT' }, { n: '100M+', l: 'PRODUCTS' }],
   },
+  {
+    slug: 'walmart-search-analytics-sparky-optimization',
+    category: 'GEO & SEO',
+    lines: ['Best Ways to Use', "Walmart's New Search", 'Analytics for Sparky.'],
+    stats: [{ n: '35%', l: 'HIGHER AOV' }, { n: '4', l: 'DATA SIGNALS' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
