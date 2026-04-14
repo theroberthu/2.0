@@ -417,6 +417,12 @@ const posts = [
     lines: ['Walmart Is Putting', 'Ads Inside Sparky.', 'Best Seller Strategy.'],
     stats: [{ n: '81%', l: 'CHECK AVAIL.' }, { n: '$4.4B', l: 'AD REVENUE' }],
   },
+  {
+    slug: 'ai-shopping-spending-macys-walmart-amazon',
+    category: 'GEO & SEO',
+    lines: ["Macy's 4.75x.", "Walmart's 35%.", "Amazon's $10B."],
+    stats: [{ n: '4.75x', l: "MACY'S LIFT" }, { n: '$10B', l: 'RUFUS SALES' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
