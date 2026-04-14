@@ -411,6 +411,12 @@ const posts = [
     lines: ['Best Ways to Use', "Walmart's New Search", 'Analytics for Sparky.'],
     stats: [{ n: '35%', l: 'HIGHER AOV' }, { n: '4', l: 'DATA SIGNALS' }],
   },
+  {
+    slug: 'walmart-sparky-sponsored-prompts-ads',
+    category: 'Digital Marketing',
+    lines: ['Walmart Is Putting', 'Ads Inside Sparky.', 'Best Seller Strategy.'],
+    stats: [{ n: '81%', l: 'CHECK AVAIL.' }, { n: '$4.4B', l: 'AD REVENUE' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
