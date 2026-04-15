@@ -73,9 +73,9 @@ const faqSchema = {
 
 const AUDIT_CARDS = [
   {
-    title: 'AI Search Visibility Check',
+    title: 'AI Recommendation Benchmark',
     description:
-      'See how your brand and products appear (or don\'t) in ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
+      'Using data from RecoScope, my AI recommendation tracking platform, I compare how ChatGPT, Claude, Gemini, and Perplexity recommend products in your category. You\'ll see exactly where your brand shows up, where it doesn\'t, and who\'s winning the recommendations you\'re missing.',
     icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
   },
   {
@@ -109,7 +109,7 @@ const STEPS = [
   {
     step: '02',
     title: 'I Audit Your Brand',
-    description: 'Before we talk, I search for your products in ChatGPT, Perplexity, and Google AI Overviews to see where you stand.',
+    description: 'I pull your category\'s latest data from RecoScope and run your brand through ChatGPT, Claude, Gemini, and Perplexity to see exactly where you stand vs. competitors.',
     icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
   },
   {
@@ -141,7 +141,7 @@ export default function GeoAuditPage() {
                 Get a GEO Audit for Your Brand
               </h1>
               <p className="text-base md:text-lg text-gray-400 max-w-lg mx-auto lg:mx-0 mb-8">
-                Find out how your products show up in AI-powered search and what to fix first.
+                I&apos;ll show you exactly how AI models recommend products in your category and where your brand is missing.
               </p>
 
               {/* Trust signals */}
