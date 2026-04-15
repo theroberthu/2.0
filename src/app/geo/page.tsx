@@ -390,8 +390,8 @@ export default function GEOPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             {[
-              { category: 'Office Chairs', type: 'Weekly Tracker', href: 'https://getrecoscope.com/tracker/weekly/office-chairs' },
-              { category: 'Running Shoes', type: 'Weekly Tracker', href: 'https://getrecoscope.com/tracker/weekly/running-shoes' },
+              { category: 'Office Chairs', type: 'Evergreen Tracker', href: 'https://www.getrecoscope.com/tracker/evergreen/office-chairs' },
+              { category: 'Running Shoes', type: 'Evergreen Tracker', href: 'https://www.getrecoscope.com/tracker/evergreen/running-shoes' },
               { category: 'Protein Powder', type: 'Monthly Tracker', href: 'https://getrecoscope.com/tracker/evergreen/protein-powder' },
             ].map((report) => (
               <a
