@@ -3,7 +3,14 @@
 import { useState } from 'react'
 import { REVENUE_RANGES } from '@/lib/constants'
 
-export default function LeadForm() {
+interface LeadFormProps {
+  /** Hide revenue + challenge fields for a slim 3-field form */
+  slim?: boolean
+  /** Override the submit button text */
+  buttonText?: string
+}
+
+export default function LeadForm({ slim = false, buttonText = 'Book My Free Strategy Session' }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [name, setName] = useState('')
@@ -101,54 +108,57 @@ export default function LeadForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div>
-            <label htmlFor="website_url" className="block text-[13px] font-medium text-white mb-1.5">
-              Website URL
-            </label>
-            <input
-              type="text"
-              id="website_url"
-              placeholder="yourstore.com"
-              autoComplete="url"
-              value={websiteUrl}
-              onChange={e => setWebsiteUrl(e.target.value)}
-              className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="revenue_range" className="block text-[13px] font-medium text-white mb-1.5">
-              Annual Revenue
-            </label>
-            <select
-              id="revenue_range"
-              value={revenueRange}
-              onChange={e => setRevenueRange(e.target.value)}
-              className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
-            >
-              <option value="" className="bg-brand-dark text-gray-400">Select range</option>
-              {REVENUE_RANGES.map((range) => (
-                <option key={range} value={range} className="bg-brand-dark text-white">
-                  {range}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
         <div>
-          <label htmlFor="challenge" className="block text-[13px] font-medium text-white mb-1.5">
-            What is your biggest challenge right now?
+          <label htmlFor="website_url" className="block text-[13px] font-medium text-white mb-1.5">
+            Website URL
           </label>
-          <textarea
-            id="challenge"
-            rows={4}
-            value={challenge}
-            onChange={e => setChallenge(e.target.value)}
-            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200 resize-none"
+          <input
+            type="text"
+            id="website_url"
+            placeholder="yourstore.com"
+            autoComplete="url"
+            value={websiteUrl}
+            onChange={e => setWebsiteUrl(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+            className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
           />
         </div>
+
+        {!slim && (
+          <>
+            <div>
+              <label htmlFor="revenue_range" className="block text-[13px] font-medium text-white mb-1.5">
+                Annual Revenue
+              </label>
+              <select
+                id="revenue_range"
+                value={revenueRange}
+                onChange={e => setRevenueRange(e.target.value)}
+                className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200"
+              >
+                <option value="" className="bg-brand-dark text-gray-400">Select range</option>
+                {REVENUE_RANGES.map((range) => (
+                  <option key={range} value={range} className="bg-brand-dark text-white">
+                    {range}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="challenge" className="block text-[13px] font-medium text-white mb-1.5">
+                What is your biggest challenge right now?
+              </label>
+              <textarea
+                id="challenge"
+                rows={4}
+                value={challenge}
+                onChange={e => setChallenge(e.target.value)}
+                className="w-full border border-white/[0.1] rounded-md px-4 py-2.5 text-sm text-white bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all duration-200 resize-none"
+              />
+            </div>
+          </>
+        )}
 
         {error && (
           <div className="flex items-center gap-2 text-sm text-red-400 bg-red-500/[0.1] border border-red-500/[0.2] rounded-md px-4 py-2.5">
@@ -164,7 +174,7 @@ export default function LeadForm() {
           onClick={handleSubmit}
           className="w-full bg-brand-gold text-white font-semibold px-6 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
-          Book My Free Strategy Session
+          {buttonText}
         </button>
       </div>
     </>
