@@ -371,6 +371,64 @@ export default function GEOPage() {
         </div>
       </section>
 
+      {/* Live AI Recommendation Data */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Proprietary Data</span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">
+              Live AI Recommendation Data
+            </h2>
+            <p className="text-base text-gray-400 max-w-2xl mx-auto">
+              I don&apos;t just talk about AI visibility. I track it.
+            </p>
+          </div>
+
+          <p className="text-base text-gray-300 leading-relaxed mb-10 max-w-3xl mx-auto text-center">
+            Through <a href="https://getrecoscope.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">RecoScope</a>, my AI recommendation tracking platform, I benchmark which brands get recommended by ChatGPT, Claude, Gemini, and Perplexity across product categories every week. This proprietary data powers every audit and strategy engagement, so when I tell you where your brand stands, it&apos;s backed by real numbers, not guesswork.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            {[
+              { category: 'Office Chairs', type: 'Weekly Tracker', href: 'https://getrecoscope.com/tracker/weekly/office-chairs' },
+              { category: 'Running Shoes', type: 'Weekly Tracker', href: 'https://getrecoscope.com/tracker/weekly/running-shoes' },
+              { category: 'Protein Powder', type: 'Monthly Tracker', href: 'https://getrecoscope.com/tracker/evergreen/protein-powder' },
+            ].map((report) => (
+              <a
+                key={report.category}
+                href={report.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 hover:border-brand-accent/30 transition-all duration-300 group block"
+              >
+                <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full">
+                  {report.type}
+                </span>
+                <h3 className="text-base font-semibold text-white mt-4 mb-3 group-hover:text-brand-accent transition-colors duration-300">
+                  {report.category}
+                </h3>
+                <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand-accent/70 group-hover:text-brand-accent transition-colors duration-200">
+                  View on RecoScope
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-sm text-gray-400 mb-4">Want to see where your brand ranks?</p>
+            <Link
+              href="#geo-audit-form"
+              className="inline-block bg-brand-gold text-white font-semibold px-6 py-3 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+            >
+              Get Your Free AI Visibility Audit
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* What Does GEO Look Like in Practice? */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
