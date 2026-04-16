@@ -423,6 +423,12 @@ const posts = [
     lines: ["Macy's 4.75x.", "Walmart's 35%.", "Amazon's $10B."],
     stats: [{ n: '4.75x', l: "MACY'S LIFT" }, { n: '$10B', l: 'RUFUS SALES' }],
   },
+  {
+    slug: 'amazon-walmart-divergent-strategies-2026',
+    category: 'Digital Transformation',
+    lines: ['Amazon vs Walmart:', '$715B Each.', 'Different Playbooks.'],
+    stats: [{ n: '$200B', l: 'AMZN AI SPEND' }, { n: '$25B', l: 'WMT AUTOMATION' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
