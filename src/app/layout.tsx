@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
     images: [
       {
-        url: '/images/og-default.svg',
+        url: '/images/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Robert Hu - E-commerce Strategist',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Robert Hu - E-commerce Strategist',
     description:
       'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
-    images: ['/images/og-default.svg'],
+    images: ['/images/og-default.png'],
   },
   alternates: {
     types: {
