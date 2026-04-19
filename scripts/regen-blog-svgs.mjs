@@ -429,6 +429,12 @@ const posts = [
     lines: ['Amazon vs Walmart:', '$715B Each.', 'Different Playbooks.'],
     stats: [{ n: '$200B', l: 'AMZN AI SPEND' }, { n: '$25B', l: 'WMT AUTOMATION' }],
   },
+  {
+    slug: 'starbucks-chatgpt-app-playbook',
+    category: 'E-commerce Strategy',
+    lines: ['Starbucks Just', 'Launched Inside ChatGPT.', 'Steal the Playbook.'],
+    stats: [{ n: '3x', l: 'HIGHER CONV.' }, { n: '35.5M', l: 'REWARDS' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
