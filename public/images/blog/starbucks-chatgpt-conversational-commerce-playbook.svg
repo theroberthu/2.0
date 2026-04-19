@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a2a32"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="#2d7d9a" opacity="0.6"/>
+
+  <!-- Panel divider -->
+  <line x1="610" y1="60" x2="610" y2="570" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="72" y="60" width="4" height="510" rx="2" fill="#2d7d9a" opacity="0.3"/>
+
+  <!-- Category badge -->
+  <rect x="88" y="72" width="191" height="28" rx="4" fill="#2d7d9a" opacity="0.2"/>
+  <text x="184" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">E-COMMERCE STRATEGY</text>
+
+  <!-- Headline -->
+  <text x="88" y="175" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Starbucks Just Launched</text>
+  <text x="88" y="238" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Inside ChatGPT.</text>
+  <text x="88" y="301" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#2d7d9a" letter-spacing="-1">Here's the Playbook.</text>
+
+  <!-- Divider -->
+  <line x1="88" y1="376" x2="570" y2="376" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Author -->
+  <text x="88" y="416" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
+  <text x="88" y="436" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
+
+  <!-- Right panel box -->
+  <rect x="625" y="90" width="530" height="450" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#2d7d9a" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Stats -->
+  <text x="758" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="76" font-weight="700" fill="#c5a94e" text-anchor="middle">35.5M</text>
+  <text x="758" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">REWARDS MEMBERS</text>
+  <line x1="890" y1="285" x2="890" y2="400" stroke="#2d7d9a" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="1023" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="700" fill="#c5a94e" text-anchor="middle">3x</text>
+  <text x="1023" y="378" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#4a6a7a" text-anchor="middle" letter-spacing="2">REDIRECT CONV.</text>
+
+  <!-- HU mark -->
+  <text x="1150" y="605" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#8a9aa2" opacity="0.5">HU</text>
+</svg>
