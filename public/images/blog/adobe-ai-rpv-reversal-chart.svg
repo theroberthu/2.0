@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="'Instrument Sans', 'Helvetica Neue', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="720" fill="#0B0E17"/>
+
+  <!-- Subtle grid lines / accents -->
+  <line x1="0" y1="4" x2="1200" y2="4" stroke="#D4A843" stroke-opacity="0.4" stroke-width="4"/>
+
+  <!-- Title -->
+  <text x="80" y="88" font-family="'Big Shoulders', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-0.5">AI-Driven Revenue Per Visit vs Non-AI Traffic</text>
+  <!-- Subtitle -->
+  <text x="80" y="122" font-size="18" font-weight="500" fill="#8a9aa2" letter-spacing="0.3">March 2025 to March 2026</text>
+
+  <!-- Zero baseline -->
+  <line x1="120" y1="400" x2="1080" y2="400" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+  <text x="104" y="406" font-size="13" font-weight="600" fill="#8a9aa2" text-anchor="end" letter-spacing="1">0%</text>
+
+  <!-- Horizontal guidelines -->
+  <line x1="120" y1="240" x2="1080" y2="240" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="120" y1="320" x2="1080" y2="320" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="120" y1="480" x2="1080" y2="480" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="120" y1="560" x2="1080" y2="560" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Y-axis labels -->
+  <text x="104" y="246" font-size="12" fill="#8a9aa2" text-anchor="end">+80%</text>
+  <text x="104" y="326" font-size="12" fill="#8a9aa2" text-anchor="end">+40%</text>
+  <text x="104" y="486" font-size="12" fill="#8a9aa2" text-anchor="end">-40%</text>
+  <text x="104" y="566" font-size="12" fill="#8a9aa2" text-anchor="end">-80%</text>
+  <text x="104" y="646" font-size="12" fill="#8a9aa2" text-anchor="end">-120%</text>
+
+  <!-- BAR 1: March 2025 (negative, muted red) -->
+  <!-- Range: 0% at y=400, -128% at y=400 + 128*4 = 912... too far. Let's use scale: 40% = 80px -->
+  <!-- So -128% = 400 + (128/40)*80 = 400 + 256 = 656 (stops before bottom) -->
+  <rect x="260" y="400" width="280" height="256" fill="#c94e4e" fill-opacity="0.85" rx="4"/>
+  <!-- Value label -->
+  <text x="400" y="700" font-family="'Big Shoulders', 'Helvetica Neue', Arial, sans-serif" font-size="54" font-weight="700" fill="#c94e4e" text-anchor="middle" letter-spacing="-1">-128%</text>
+  <!-- Category label -->
+  <text x="400" y="370" font-size="14" font-weight="600" fill="#8a9aa2" text-anchor="middle" letter-spacing="2" text-transform="uppercase">MARCH 2025</text>
+  <text x="400" y="388" font-size="13" fill="#8a9aa2" text-anchor="middle">AI losing to non-AI</text>
+
+  <!-- BAR 2: March 2026 (positive, gold) -->
+  <!-- +37% = 400 - (37/40)*80 = 400 - 74 = 326 -->
+  <rect x="660" y="326" width="280" height="74" fill="#D4A843" rx="4"/>
+  <!-- Value label -->
+  <text x="800" y="300" font-family="'Big Shoulders', 'Helvetica Neue', Arial, sans-serif" font-size="54" font-weight="700" fill="#D4A843" text-anchor="middle" letter-spacing="-1">+37%</text>
+  <!-- Category label -->
+  <text x="800" y="428" font-size="14" font-weight="600" fill="#8a9aa2" text-anchor="middle" letter-spacing="2" text-transform="uppercase">MARCH 2026</text>
+  <text x="800" y="446" font-size="13" fill="#D4A843" text-anchor="middle">AI winning vs non-AI</text>
+
+  <!-- Source caption -->
+  <text x="80" y="688" font-size="13" fill="#8a9aa2" letter-spacing="0.3">Source: Adobe Analytics Q1 2026 AI Traffic Report</text>
+
+  <!-- HU mark -->
+  <text x="1150" y="688" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="500" fill="#8a9aa2" opacity="0.5">HU</text>
+</svg>

@@ -441,6 +441,12 @@ const posts = [
     lines: ['Walmart Paid Its AI', 'Chief More Than CEO.', 'Here\u2019s the Signal.'],
     stats: [{ n: '$44M', l: 'AI CHIEF' }, { n: '$29M', l: 'CEO' }],
   },
+  {
+    slug: 'adobe-ai-traffic-393-percent-retail',
+    category: 'GEO & SEO',
+    lines: ['AI Traffic: +393%.', 'Conversion: +42%.', 'Fix Before Q4.'],
+    stats: [{ n: '393%', l: 'AI GROWTH' }, { n: '42%', l: 'HIGHER CONV.' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
