@@ -435,6 +435,12 @@ const posts = [
     lines: ['Starbucks Just', 'Launched Inside ChatGPT.', 'Steal the Playbook.'],
     stats: [{ n: '3x', l: 'HIGHER CONV.' }, { n: '35.5M', l: 'REWARDS' }],
   },
+  {
+    slug: 'walmart-ai-chief-paid-more-than-ceo',
+    category: 'Digital Transformation',
+    lines: ['Walmart Paid Its AI', 'Chief More Than CEO.', 'Here\u2019s the Signal.'],
+    stats: [{ n: '$44M', l: 'AI CHIEF' }, { n: '$29M', l: 'CEO' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
