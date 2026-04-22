@@ -447,6 +447,12 @@ const posts = [
     lines: ['AI Traffic: +393%.', 'Conversion: +42%.', 'Fix Before Q4.'],
     stats: [{ n: '393%', l: 'AI GROWTH' }, { n: '42%', l: 'HIGHER CONV.' }],
   },
+  {
+    slug: 'amazon-price-fixing-lawsuit-dual-channel-sellers',
+    category: 'E-commerce Strategy',
+    lines: ['Amazon Accused of', 'Price-Fixing Brands', 'Across Marketplaces.'],
+    stats: [{ n: '4+', l: 'MARKETPLACES' }, { n: 'JAN', l: '2027 TRIAL' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
