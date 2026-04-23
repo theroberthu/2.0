@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import LeadForm from '@/components/LeadForm'
-import Testimonials from '@/components/Testimonials'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -251,8 +250,9 @@ export default function GeoAuditPage() {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Social Proof hidden
       <Testimonials />
+      */}
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">

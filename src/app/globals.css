@@ -285,6 +285,15 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   color: #d9bc6e !important;
 }
 
+/* Testimonials hidden site-wide */
+.blog-testimonial-block,
+.blog-testimonial-cta,
+.blog-testimonial-divider,
+.blog-testimonial-quote,
+.blog-testimonial-attribution {
+  display: none !important;
+}
+
 /* Testimonial + CTA block at bottom of mid/bottom-funnel posts */
 .blog-testimonial-cta {
   margin-top: 3rem;

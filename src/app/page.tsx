@@ -5,7 +5,6 @@ import { supabase } from '@/lib/supabase'
 import { CASE_STUDIES } from '@/lib/case-studies-data'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
-import Testimonials from '@/components/Testimonials'
 import MobileCarousel from '@/components/MobileCarousel'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import LazyYouTube from '@/components/LazyYouTube'
@@ -385,8 +384,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials hidden
       <Testimonials />
+      */}
 
       {/* Latest blog posts */}
       {posts && posts.length > 0 && (
