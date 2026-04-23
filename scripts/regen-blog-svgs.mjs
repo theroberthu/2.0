@@ -453,6 +453,12 @@ const posts = [
     lines: ['Amazon Accused of', 'Price-Fixing Brands', 'Across Marketplaces.'],
     stats: [{ n: '4+', l: 'MARKETPLACES' }, { n: 'JAN', l: '2027 TRIAL' }],
   },
+  {
+    slug: 'google-geo-partner-manager-job-listing',
+    category: 'GEO & SEO',
+    lines: ['Google Hired a', 'GEO Partner Manager.', 'The Signal Is Clear.'],
+    stats: [{ n: '7x', l: 'GEO MENTIONS' }, { n: '1', l: 'CONTRADICTION' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
