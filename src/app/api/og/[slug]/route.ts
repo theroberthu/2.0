@@ -17,8 +17,15 @@ export async function GET(
     return new NextResponse('Not found', { status: 404 })
   }
 
-  const svgBuffer = readFileSync(svgPath)
-  const pngBuffer = await sharp(svgBuffer, { density: 150 })
+  // Rewrite font-family strings to generic families so Linux fontconfig
+  // on Vercel can resolve them. Helvetica Neue and JetBrains Mono are not
+  // installed on the render server, which caused glyphs to render as tofu boxes.
+  const svgRaw = readFileSync(svgPath, 'utf-8')
+  const svgNormalized = svgRaw
+    .replace(/font-family="[^"]*monospace[^"]*"/gi, 'font-family="monospace"')
+    .replace(/font-family="[^"]*"/gi, 'font-family="sans-serif"')
+
+  const pngBuffer = await sharp(Buffer.from(svgNormalized), { density: 150 })
     .resize(1200, 630)
     .png()
     .toBuffer()
