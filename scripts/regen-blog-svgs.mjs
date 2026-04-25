@@ -459,6 +459,12 @@ const posts = [
     lines: ['Google Hired a', 'GEO Partner Manager.', 'The Signal Is Clear.'],
     stats: [{ n: '7x', l: 'GEO MENTIONS' }, { n: '1', l: 'CONTRADICTION' }],
   },
+  {
+    slug: 'amazon-joins-universal-commerce-protocol',
+    category: 'Digital Transformation',
+    lines: ['Amazon Joins UCP.', 'After 8 Months of', 'Fighting It.'],
+    stats: [{ n: '5', l: 'NEW MEMBERS' }, { n: '180°', l: 'REVERSAL' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
