@@ -10,12 +10,15 @@
 import { writeFileSync, mkdirSync } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
+import sharp from 'sharp'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const OUTPUT_DIR = join(__dirname, '..', 'public', 'images', 'blog')
+const PNG_DIR = join(__dirname, '..', 'public', 'images', 'blog-og')
 
 mkdirSync(OUTPUT_DIR, { recursive: true })
+mkdirSync(PNG_DIR, { recursive: true })
 
 function esc(s) {
   return String(s)
@@ -477,7 +480,17 @@ for (const post of posts) {
     const svg = generateSvg(post)
     const outputPath = join(OUTPUT_DIR, `${post.slug}.svg`)
     writeFileSync(outputPath, svg, 'utf-8')
-    console.log(`✓ ${post.slug}`)
+
+    // Also render a PNG version for OG/Twitter cards (Vercel serverless
+    // has no fonts, so we pre-render here on the local machine where
+    // Helvetica Neue is available, and ship the PNG as a static asset).
+    const pngPath = join(PNG_DIR, `${post.slug}.png`)
+    await sharp(Buffer.from(svg), { density: 150 })
+      .resize(1200, 630)
+      .png()
+      .toFile(pngPath)
+
+    console.log(`✓ ${post.slug} (svg + png)`)
     generated++
   } catch (err) {
     console.error(`✗ ${post.slug}: ${err.message}`)
