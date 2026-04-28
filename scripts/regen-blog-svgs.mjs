@@ -468,6 +468,12 @@ const posts = [
     lines: ['Amazon Joins UCP.', 'After 8 Months of', 'Fighting It.'],
     stats: [{ n: '5', l: 'NEW MEMBERS' }, { n: '180°', l: 'REVERSAL' }],
   },
+  {
+    slug: 'amex-ai-agent-purchase-protection',
+    category: 'E-commerce Strategy',
+    lines: ['Amex Insures', 'AI Agent Purchases.', 'Trust Unlocks Volume.'],
+    stats: [{ n: '393%', l: 'AI TRAFFIC' }, { n: '4.75x', l: 'AI SPEND' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
