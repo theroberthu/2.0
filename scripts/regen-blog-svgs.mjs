@@ -474,6 +474,12 @@ const posts = [
     lines: ['Amex Insures', 'AI Agent Purchases.', 'Trust Unlocks Volume.'],
     stats: [{ n: '393%', l: 'AI TRAFFIC' }, { n: '4.75x', l: 'AI SPEND' }],
   },
+  {
+    slug: 'walmart-annual-report-2026-ai-organic',
+    category: 'E-commerce Strategy',
+    lines: ['Walmart’s $715.9B', 'Annual Report:', 'AI Is the New Organic.'],
+    stats: [{ n: '$150B', l: 'E-COMM REV' }, { n: '24%', l: 'YoY GROWTH' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
