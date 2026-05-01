@@ -144,26 +144,18 @@ const AI_SURFACES = [
   {
     name: 'Amazon Rufus',
     body: "Rufus handles 13% or more of Amazon searches and growing. It reads your product listing, customer reviews, the Q&A section, and A+ content. It cross-references this against the COSMO knowledge graph, which is Amazon's proprietary commonsense reasoning engine for shopping. Rufus ignores image-locked text, vague marketing copy, and any data Amazon's structured attribute fields cannot parse. RecoScope's Rufus tracker shows category coverage that often differs from organic Amazon search rankings, especially in categories with strong review sentiment patterns.",
-    href: '/geo', // TODO: cluster page /geo/amazon-rufus
-    linkLabel: 'Learn more about optimizing for Rufus',
   },
   {
     name: 'Walmart Sparky',
     body: "Sparky drives 35% higher average order values than non-Sparky shoppers on walmart.com and is now embedded inside ChatGPT and Gemini conversations. It reads Walmart's structured catalog data, including backend attributes, specifications, and product descriptions. It also reads reviews and Q&A but weights structured attribute completeness more heavily than Rufus does. Sparky ignores listings with empty backend attribute fields and inconsistent cross-platform data. RecoScope's Sparky tracker shows that the brands winning organic Sparky recommendations are not always the ones spending the most on Walmart Connect ads.",
-    href: '/geo', // TODO: cluster page /geo/walmart-sparky
-    linkLabel: 'Learn more about optimizing for Sparky',
   },
   {
     name: 'ChatGPT and Perplexity',
     body: 'ChatGPT (consumer plus the Operator agent) and Perplexity (with its Comet shopping agent) are off-platform recommendation engines. They pull from indexed web content, third-party reviews, retailer product pages, and structured product data exposed through schema markup. They ignore unstructured marketing pages and content locked behind login walls. RecoScope tracks both engines weekly across 10 categories. The data shows that ChatGPT and Perplexity often surface different brands than the Amazon or Walmart organic top performers, which means visibility on these platforms requires a separate optimization track.',
-    href: '/geo', // TODO: cluster page /geo/chatgpt-recommendations
-    linkLabel: 'Learn more about optimizing for ChatGPT and Perplexity',
   },
   {
     name: 'Google AI Overviews',
     body: "Google AI Overviews are top-of-funnel discovery for product research queries. They pull from indexed web content, schema markup on retailer and brand sites, and YouTube video transcripts. They ignore content that lacks structured data and content that does not match the conversational query intent. AI Overviews are less mature than the dedicated shopping AI surfaces but cover a wider range of informational shopping queries. RecoScope monitors AI Overviews coverage as a leading indicator for which brands will show up in Google's eventual agentic shopping rollouts.",
-    href: '/geo', // TODO: cluster page /geo/google-ai-overviews
-    linkLabel: 'Learn more about optimizing for AI Overviews',
   },
 ]
 
@@ -380,17 +372,7 @@ export default function GEOPage() {
             {AI_SURFACES.map((surface) => (
               <div key={surface.name} className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 md:p-7 hover:border-brand-accent/30 transition-colors duration-300 flex flex-col">
                 <h3 className="text-lg font-semibold text-white mb-3">{surface.name}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-1">{surface.body}</p>
-                {/* TODO: replace href with cluster page when published */}
-                <Link
-                  href={surface.href}
-                  className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
-                >
-                  {surface.linkLabel}
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                <p className="text-sm text-gray-400 leading-relaxed">{surface.body}</p>
               </div>
             ))}
           </div>
