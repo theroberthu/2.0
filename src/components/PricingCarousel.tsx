@@ -26,7 +26,7 @@ const cards = [
     description:
       'A full-channel strategy covering listings, ads, catalog optimization, and AI search readiness. Includes a 90-day roadmap with specific priorities, timelines, and expected outcomes.',
     bestFor:
-      'Brands doing $100K to $2M who need a real plan, not just tactical fixes.',
+      'Brands doing $500K to $5M who need a real plan, not just tactical fixes.',
     deliveryLabel: 'Delivery',
     deliveryValue:
       '2 to 3 weeks. Includes a 60-minute strategy walkthrough.',

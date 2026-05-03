@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     absolute: 'Robert Hu - E-commerce Strategist & Digital Transformation Consultant',
   },
   description:
-    'Helping $100K-$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
+    'Helping $500K-$5M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Robert Hu - E-commerce Strategist & Digital Transformation Consultant',
     description:
-      'Helping $100K-$2M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
+      'Helping $500K-$5M e-commerce brands implement AI-powered strategies for sustainable growth. E-commerce strategy, product listing optimization, GEO, and digital transformation consulting.',
     url: SITE_URL,
   },
 }
@@ -33,7 +33,7 @@ const websiteSchema = {
   name: 'Robert Hu',
   url: SITE_URL,
   description:
-    'E-commerce strategist helping $100K\u2013$2M brands implement AI and digital transformation strategies that actually work.',
+    'E-commerce strategist helping $500K\u2013$5M brands implement AI and digital transformation strategies that actually work.',
   publisher: {
     '@type': 'Person',
     name: 'Robert Hu',
@@ -53,7 +53,7 @@ const professionalServiceSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/images/theroberthulogo.png`,
   description:
-    'E-commerce strategy, product listing optimization, GEO, and digital transformation consulting for brand owners doing $100K\u2013$2M in revenue.',
+    'E-commerce strategy, product listing optimization, GEO, and digital transformation consulting for brand owners doing $500K\u2013$5M in revenue.',
   founder: {
     '@type': 'Person',
     name: 'Robert Hu',
@@ -119,7 +119,7 @@ export default async function HomePage() {
                 Grow Your E-commerce Brand with AI That Actually Works
               </h1>
               <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-lg mb-8">
-                Helping $100K–$2M e-commerce brands implement AI-powered strategies for sustainable growth. No hype. No fluff. Just results.
+                Helping $500K–$5M e-commerce brands implement AI-powered strategies for sustainable growth. No hype. No fluff. Just results.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
@@ -190,7 +190,7 @@ export default async function HomePage() {
         <div className="max-w-[720px] mx-auto px-5 sm:px-8 text-center">
           <div className="space-y-6 text-base md:text-lg text-gray-300 leading-relaxed">
             <p>
-              You&apos;re an Amazon or Walmart brand owner doing $100K to $2M in revenue. You&apos;ve outgrown the DIY phase, but you&apos;re not ready to hand your business to a $10K/month agency that treats you like their smallest account.
+              You&apos;re an Amazon or Walmart brand owner doing $500K to $5M in revenue. You&apos;ve outgrown the DIY phase, but you&apos;re not ready to hand your business to a $10K/month agency that treats you like their smallest account.
             </p>
             <p>
               Your listings need work. Your ads aren&apos;t scaling the way they should. You keep hearing that AI is changing everything, but nobody&apos;s showing you what that actually looks like for your business.

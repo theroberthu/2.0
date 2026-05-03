@@ -19,11 +19,11 @@ export const NAV_LINKS = [
 ]
 
 export const REVENUE_RANGES = [
-  'Under $100K',
-  '$100K-$500K',
+  'Under $500K',
   '$500K-$1M',
   '$1M-$2M',
-  '$2M+',
+  '$2M-$5M',
+  '$5M+',
 ]
 
 export const BLOG_CATEGORIES = [

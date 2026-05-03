@@ -21,7 +21,7 @@ Every post follows this structure:
 
 ### 3. Why It Matters (Robert's Analysis — this is the core)
 - This is where 20+ years of experience shows up
-- What does this mean for e-commerce brand owners doing $100K–$2M?
+- What does this mean for e-commerce brand owners doing $500K-$5M?
 - What are the second-order effects most people aren't seeing?
 - How does this connect to broader trends you're tracking?
 - Reference your own experience where natural ("I've seen this pattern before when...")
@@ -117,7 +117,7 @@ Read BLOG_STANDARDS.md and NEWS_TO_BLOG.md. Then create a new blog post based on
 Follow the news-to-blog conversion formula:
 1. Hook with the news, make it relevant to e-commerce brand owners
 2. Brief summary of what happened (in your own words, credit the source)
-3. Robert Hu's analysis — what does this mean for brands doing $100K–$2M? What are people missing?
+3. Robert Hu's analysis — what does this mean for brands doing $500K-$5M? What are people missing?
 4. 2-4 actionable takeaways
 5. Bigger picture connection
 6. Natural CTA

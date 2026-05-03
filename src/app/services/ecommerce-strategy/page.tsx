@@ -6,12 +6,12 @@ import { SITE_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Amazon & DTC E-commerce Strategy Consulting',
   description:
-    'E-commerce strategy consulting for Amazon and DTC brands doing $100K–$2M. Marketplace growth roadmaps, catalog strategy, channel planning, and profitable scaling.',
+    'E-commerce strategy consulting for Amazon and DTC brands doing $500K-$5M. Marketplace growth roadmaps, catalog strategy, channel planning, and profitable scaling.',
   alternates: { canonical: '/services/ecommerce-strategy' },
   openGraph: {
     title: 'Amazon & DTC E-commerce Strategy Consulting | Robert Hu',
     description:
-      'E-commerce strategy consulting for Amazon and DTC brands doing $100K–$2M. Marketplace growth roadmaps, catalog strategy, channel planning, and profitable scaling.',
+      'E-commerce strategy consulting for Amazon and DTC brands doing $500K-$5M. Marketplace growth roadmaps, catalog strategy, channel planning, and profitable scaling.',
     url: `${SITE_URL}/services/ecommerce-strategy`,
   },
 }
@@ -160,7 +160,7 @@ export default function EcommerceStrategyPage() {
           </div>
           <div className="text-[15px] text-gray-400 leading-relaxed pl-12 space-y-4">
             <p>
-              You&apos;re a brand owner doing $100K to $2M in revenue. You have product-market fit. You probably started on Amazon, and it&apos;s working well enough, but you know you need a real strategy to get to the next level. Maybe you&apos;re thinking about Walmart or DTC but aren&apos;t sure where to start.
+              You&apos;re a brand owner doing $500K to $5M in revenue. You have product-market fit. You probably started on Amazon, and it&apos;s working well enough, but you know you need a real strategy to get to the next level. Maybe you&apos;re thinking about Walmart or DTC but aren&apos;t sure where to start.
             </p>
             <p>
               You might have tried an agency that promised the world and delivered a monthly report you didn&apos;t understand. Or you have a VA who can handle day-to-day tasks but can&apos;t tell you whether your catalog strategy makes sense or if your pricing is leaving money on the table.

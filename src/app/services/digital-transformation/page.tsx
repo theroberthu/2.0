@@ -166,7 +166,7 @@ export default function DigitalTransformationPage() {
               Maybe you&apos;ve tried a few AI tools on your own and they didn&apos;t stick, or you signed up for software that seemed great in the demo but doesn&apos;t fit how your team actually works. You don&apos;t need another tool recommendation. You need someone who can look at your entire operation and tell you what to change, in what order, and how to make it stick.
             </p>
             <p>
-              You&apos;re doing $100K to $2M in revenue and your growth is starting to outpace your systems. The processes that got you here won&apos;t get you to the next level, and you can feel it in every bottleneck, every manual workaround, and every decision you make based on gut feeling instead of data.
+              You&apos;re doing $500K to $5M in revenue and your growth is starting to outpace your systems. The processes that got you here won&apos;t get you to the next level, and you can feel it in every bottleneck, every manual workaround, and every decision you make based on gut feeling instead of data.
             </p>
           </div>
         </div>

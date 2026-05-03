@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: '%s | Robert Hu - E-commerce Strategist',
   },
   description:
-    'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
+    'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'Robert Hu',
     title: 'Robert Hu - E-commerce Strategist',
     description:
-      'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
+      'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.',
     images: [
       {
         url: '/images/og-default.png',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Robert Hu - E-commerce Strategist',
     description:
-      'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies that actually work.',
+      'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.',
     images: ['/images/og-default.png'],
   },
   alternates: {
@@ -90,7 +90,7 @@ const siteSchema = {
   '@type': 'WebSite',
   name: 'Robert Hu',
   url: SITE_URL,
-  description: 'E-commerce strategist helping $100K-$2M brands implement AI and digital transformation strategies.',
+  description: 'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies.',
   publisher: { '@type': 'Person', name: 'Robert Hu', url: SITE_URL },
 }
 

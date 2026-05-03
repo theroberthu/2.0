@@ -10,12 +10,12 @@ import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'About Robert Hu — E-commerce Strategist',
   description:
-    'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $100K–$2M brands. No fluff.',
+    'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $500K-$5M brands. No fluff.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Robert Hu — E-commerce Strategist',
     description:
-      'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $100K–$2M brands. No fluff.',
+      'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $500K-$5M brands. No fluff.',
     url: `${SITE_URL}/about`,
   },
 }

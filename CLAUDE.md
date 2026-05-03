@@ -10,7 +10,7 @@
 ## Brand
 - Owner: Robert Hu — E-commerce Strategist, Digital Marketing & Digital Transformation consultant
 - Brand voice: "Quiet confidence" — premium consulting, not flashy agency
-- Target audience: $100K–$2M revenue brand owners (especially Amazon/Walmart sellers)
+- Target audience: $500K-$5M revenue brand owners (especially Amazon/Walmart sellers)
 - Logo: Owl with H+U in the eyes → `/public/images/theroberthulogo.png`
 - Logo usage: Nav bar, footer, favicon, OG image ONLY. Never as decoration or background texture.
 

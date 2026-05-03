@@ -86,7 +86,7 @@ const FAQS = [
     a: 'Different things, same acronym. Answer Engine Optimization focuses on featured snippets and voice search answers. Agentic Engine Optimization (what this page is about) focuses on AI agents that evaluate, compare, and purchase products on behalf of users. We\'re talking about agents that shop, not search engines that answer questions.',
   },
   {
-    q: 'When should a $100K\u20132M brand start thinking about AEO?',
+    q: 'When should a $500K\u20135M brand start thinking about AEO?',
     a: 'Now, but start with GEO. Agent-mediated shopping volume is small today, so you\'re not losing sales to AI agents yet. But everything AEO will demand (structured data, review quality, entity clarity, cross-platform consistency) is already what GEO demands. Building your GEO foundation now is the smartest AEO preparation you can do.',
   },
   {
@@ -554,7 +554,7 @@ export default function AEOPage() {
                 </span>
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-3">
-                Agent-mediated shopping volume is small today. No $100K&ndash;$2M brand
+                Agent-mediated shopping volume is small today. No $500K&ndash;$5M brand
                 is losing meaningful revenue to AI agents choosing competitors.
                 Not yet. But everything AEO demands (structured data completeness,
                 review quality, entity clarity, cross-platform consistency) is

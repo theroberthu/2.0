@@ -4,7 +4,7 @@
 Every blog post should do one or more of these:
 1. Demonstrate expertise (e-commerce strategy, GEO, digital transformation, marketplace optimization)
 2. Drive organic traffic via SEO and GEO (show up in Google AND AI-generated answers)
-3. Build trust with potential consulting clients ($100K–$2M brand owners)
+3. Build trust with potential consulting clients ($500K-$5M brand owners)
 4. Create content that can be repurposed across X, LinkedIn, YouTube, and the newsletter
 
 If a post doesn't serve at least one of these, don't publish it.
@@ -95,6 +95,15 @@ These rules ensure posts are optimized for AI-generated search results, not just
 - Use numbered lists or bullet points for processes, steps, and comparisons
 - These are highly extractable by AI engines
 - Keep list items concise and self-explanatory
+
+---
+
+## AI Overview Optimization
+- When the topic naturally supports it, use "best" in the title and H2s (e.g. "Best ways to...", "Best strategy for...")
+- Target "best X for Y" query patterns in meta titles and descriptions
+- These queries index well in Google AI Overviews and drive high-intent traffic
+- Don't force it. Only use when the post genuinely compares, ranks, or recommends.
+- Pair "best" with specificity: "Best Amazon listing strategy for brands doing $500K-$5M" beats "Best Amazon tips"
 
 ---
 

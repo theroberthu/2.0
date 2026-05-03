@@ -166,7 +166,7 @@ export default function DigitalMarketingStrategyPage() {
               Maybe an agency is managing your ads, but you don&apos;t really understand what they&apos;re doing or why. Or you&apos;re managing everything yourself because the last agency couldn&apos;t justify their fee with the results they delivered. Either way, you need someone who can look at the whole picture and tell you where the real opportunities are.
             </p>
             <p>
-              You might also be selling on Amazon but haven&apos;t started advertising on Walmart yet, or you&apos;re not driving any external traffic to your listings. Those are two of the biggest missed opportunities I see in brands at the $100K to $2M revenue level.
+              You might also be selling on Amazon but haven&apos;t started advertising on Walmart yet, or you&apos;re not driving any external traffic to your listings. Those are two of the biggest missed opportunities I see in brands at the $500K to $5M revenue level.
             </p>
           </div>
         </div>

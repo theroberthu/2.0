@@ -9,12 +9,12 @@ export const revalidate = 60
 export const metadata: Metadata = {
   title: 'E-commerce Strategy Blog',
   description:
-    "Amazon, Walmart, AI, and GEO insights for brand owners doing $100K\u2013$2M. Clear analysis on what's changing and what to do about it. No filler.",
+    "Amazon, Walmart, AI, and GEO insights for brand owners doing $500K\u2013$5M. Clear analysis on what's changing and what to do about it. No filler.",
   alternates: { canonical: '/blog' },
   openGraph: {
     title: 'E-commerce Strategy Blog | Robert Hu',
     description:
-      "Amazon, Walmart, AI, and GEO insights for brand owners doing $100K\u2013$2M. Clear analysis on what's changing and what to do about it. No filler.",
+      "Amazon, Walmart, AI, and GEO insights for brand owners doing $500K\u2013$5M. Clear analysis on what's changing and what to do about it. No filler.",
     url: `${SITE_URL}/blog`,
   },
 }

@@ -14,7 +14,7 @@ const PROJECTS = [
     title: 'GEO Audit — AI Visibility Scoring for Product Listings',
     description: [
       'Built a proprietary 6-dimension scoring framework (WHO, WHEN, WHERE, WHY, WHAT, AI) that evaluates how product listings perform in AI recommendation engines like ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
-      'Each dimension scores how well a listing communicates the right information for AI extraction and recommendation. Delivered as a $500 PDF report using Python and ReportLab with a dark navy (#0B0E17) and gold accent (#D4A843) visual design. Audits delivered to brands doing $100K to $2M revenue.',
+      'Each dimension scores how well a listing communicates the right information for AI extraction and recommendation. Delivered as a $500 PDF report using Python and ReportLab with a dark navy (#0B0E17) and gold accent (#D4A843) visual design. Audits delivered to brands doing $500K to $5M revenue.',
     ],
     link: null,
   },

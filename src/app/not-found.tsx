@@ -21,6 +21,7 @@ export default function NotFound() {
 
   return (
     <div
+      suppressHydrationWarning
       style={{
         backgroundColor: '#0B0E17',
         minHeight: '100vh',

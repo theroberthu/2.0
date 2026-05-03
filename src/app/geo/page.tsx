@@ -315,7 +315,7 @@ export default function GEOPage() {
             Generative Engine Optimization (GEO) is the discipline of structuring your product data, listings, and brand presence so that AI engines like Amazon Rufus, Walmart Sparky, ChatGPT, Claude, Gemini, and Perplexity recommend your products when buyers ask. It is not a renamed version of SEO. The reading engine changed, the buyer&apos;s prompt changed, and the optimization changed with it.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-8">
-            Most GEO content is written for content publishers and B2B SaaS. This page is written for the brand owner doing $100K to $2M on Amazon, Walmart, or both. The frameworks, examples, and live data are all built around how AI surfaces actually evaluate marketplace listings, not how they cite blog posts.
+            Most GEO content is written for content publishers and B2B SaaS. This page is written for the brand owner doing $500K to $5M on Amazon, Walmart, or both. The frameworks, examples, and live data are all built around how AI surfaces actually evaluate marketplace listings, not how they cite blog posts.
           </p>
 
           <Link
@@ -498,7 +498,7 @@ export default function GEOPage() {
             AEO is forward-looking. The volume of agent-completed purchases is small today but growing fast, and major retailers and payment infrastructure providers are publicly building the rails. Amazon, Meta, Microsoft, and Stripe just joined the Universal Commerce Protocol governance body. The infrastructure is being built in public.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-8">
-            For most brands at $100K to $2M, the right priority order is GEO first, then AEO. Without GEO foundations (clean structured data, persona-specific language, complete attributes), AEO has nothing to work with. The brands that nail GEO are positioned to add AEO incrementally as agent volume scales. The brands that skip GEO and try to optimize for agents directly find that the agents cannot find them in the first place.
+            For most brands at $500K to $5M, the right priority order is GEO first, then AEO. Without GEO foundations (clean structured data, persona-specific language, complete attributes), AEO has nothing to work with. The brands that nail GEO are positioned to add AEO incrementally as agent volume scales. The brands that skip GEO and try to optimize for agents directly find that the agents cannot find them in the first place.
           </p>
 
           <Link
