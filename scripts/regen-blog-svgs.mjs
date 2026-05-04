@@ -480,6 +480,12 @@ const posts = [
     lines: ['Walmart’s $715.9B', 'Annual Report:', 'AI Is the New Organic.'],
     stats: [{ n: '$150B', l: 'E-COMM REV' }, { n: '24%', l: 'YoY GROWTH' }],
   },
+  {
+    slug: 'geo-vs-seo-marketplace-sellers',
+    category: 'GEO & SEO',
+    lines: ['GEO vs SEO:', 'What Sellers Need', 'to Stop Doing in 2026.'],
+    stats: [{ n: '5', l: 'TACTICS TO STOP' }, { n: '6', l: 'AI SURFACES' }],
+  },
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
