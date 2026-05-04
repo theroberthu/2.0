@@ -476,8 +476,15 @@ export default function GEOPage() {
           <p className="text-base text-gray-300 leading-relaxed mb-5">
             The reading engines reward different things. SEO rewards pages that match how a crawler indexes the web. GEO rewards data that matches how a language model evaluates a buyer&apos;s stated need. Most marketplace listings were written for the SEO era, which is why most listings are invisible to AI surfaces today.
           </p>
-          <p className="text-base text-gray-400 leading-relaxed">
+          <p className="text-base text-gray-400 leading-relaxed mb-5">
             For a $500K Amazon brand, SEO is still real. Your Google traffic and your Amazon organic search position both still depend on traditional optimization. But GEO is where the marginal customer is now spending their search time. AI shopping referral volume is growing fast across every retailer with public data on it. Walmart reported ChatGPT alone now drives roughly 21% of its referral traffic. The brands that ignore GEO will keep their existing SEO performance and watch the AI-influenced share of buying shift to competitors with better-structured data.
+          </p>
+          <p className="text-base text-gray-400 leading-relaxed">
+            For a deeper breakdown of the five SEO tactics that actively hurt AI visibility, read{' '}
+            <Link href="/blog/geo-vs-seo-marketplace-sellers" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+              GEO vs SEO: What Marketplace Sellers Need to Stop Doing in 2026
+            </Link>
+            .
           </p>
         </div>
       </section>
