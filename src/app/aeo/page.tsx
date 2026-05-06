@@ -143,7 +143,7 @@ const breadcrumbSchema = {
   ],
 }
 
-const SIGNALS = [
+const SIGNALS: { name: string; description: string; status: string; href?: string }[] = [
   {
     name: 'Perplexity Shopping',
     description: 'AI-generated product recommendations with direct purchase capability. The user asks, the AI shops.',
@@ -173,6 +173,12 @@ const SIGNALS = [
     name: 'Apple Intelligence + Siri',
     description: 'Apple\'s AI layer is being built to act on behalf of users across their device ecosystem, including commerce.',
     status: 'Building',
+  },
+  {
+    name: 'Meta Hatch + Instagram Agent',
+    description: 'Meta is building Hatch (a consumer OpenClaw competitor) and a separate agentic shopping tool inside Instagram. Reported May 5, 2026.',
+    status: 'Building',
+    href: '/blog/meta-hatch-instagram-shopping-agent-marketplace-sellers',
   },
 ]
 
@@ -313,7 +319,13 @@ export default function AEOPage() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-[15px] font-semibold text-white group-hover:text-brand-accent transition-colors duration-300">
-                    {signal.name}
+                    {signal.href ? (
+                      <Link href={signal.href} className="hover:underline underline-offset-4">
+                        {signal.name}
+                      </Link>
+                    ) : (
+                      signal.name
+                    )}
                   </h3>
                   <span
                     className={`text-[10px] font-mono font-semibold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full shrink-0 ml-3 ${
@@ -329,6 +341,14 @@ export default function AEOPage() {
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed">
                   {signal.description}
+                  {signal.href && (
+                    <>
+                      {' '}
+                      <Link href={signal.href} className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                        Read the analysis &rarr;
+                      </Link>
+                    </>
+                  )}
                 </p>
               </div>
             ))}
