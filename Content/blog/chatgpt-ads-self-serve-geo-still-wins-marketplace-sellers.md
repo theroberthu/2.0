@@ -20,7 +20,7 @@ featured_image_alt: "ChatGPT self-serve ads launch with practitioner take on why
 author: Robert Hu
 read_time_minutes: 6
 published_at: 2026-05-06T12:00:00.000Z
-status: draft
+status: published
 tags: [ChatGPT ads for marketplace sellers, ChatGPT Ads Manager self-serve, ChatGPT ads vs GEO, AI search advertising for ecommerce, should I buy ChatGPT ads]
 related_services: [product-listing-optimization]
 related_posts: [geo-vs-seo-marketplace-sellers, walmart-sparky-chatgpt-gemini, meta-hatch-instagram-shopping-agent-marketplace-sellers]
@@ -224,7 +224,7 @@ Lands at the upper end of the 1,200-1,500 target.
 - No invented details
 
 ## Status
-- Frontmatter status: draft
+- Frontmatter status: published
 - Not in Supabase
 - Not pushed live
 - SVG: hand-authored pulled-quote layout, not added to regen-blog-svgs.mjs

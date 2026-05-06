@@ -489,6 +489,7 @@ const posts = [
   // Custom-layout posts (do NOT include in this array - their SVGs are
   // hand-authored to avoid the two-stat template):
   // - meta-hatch-instagram-shopping-agent-marketplace-sellers (pulled-quote layout)
+  // - chatgpt-ads-self-serve-geo-still-wins-marketplace-sellers (pulled-quote layout)
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
