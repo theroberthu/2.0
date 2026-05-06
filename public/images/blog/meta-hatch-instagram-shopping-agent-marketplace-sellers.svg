@@ -19,7 +19,7 @@
 
   <!-- Headline -->
   <text x="88" y="245" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">Meta&#8217;s Instagram</text>
-  <text x="88" y="308" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#2d7d9a" letter-spacing="-1">Shopping Agent.</text>
+  <text x="88" y="308" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="#42a5c8" letter-spacing="-1">Shopping Agent.</text>
 
   <!-- Divider -->
   <line x1="88" y1="383" x2="570" y2="383" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
