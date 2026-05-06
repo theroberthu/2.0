@@ -486,12 +486,9 @@ const posts = [
     lines: ['GEO vs SEO:', 'What Sellers Need', 'to Stop Doing in 2026.'],
     stats: [{ n: '5', l: 'TACTICS TO STOP' }, { n: '6', l: 'AI SURFACES' }],
   },
-  {
-    slug: 'meta-hatch-instagram-shopping-agent-marketplace-sellers',
-    category: 'Digital Transformation',
-    lines: ['Meta’s Instagram', 'Shopping Agent.', 'What Sellers Need.'],
-    stats: [{ n: '$125B+', l: 'META 2026 CAPEX' }, { n: '6-12mo', l: 'TIMELINE' }],
-  },
+  // Custom-layout posts (do NOT include in this array - their SVGs are
+  // hand-authored to avoid the two-stat template):
+  // - meta-hatch-instagram-shopping-agent-marketplace-sellers (pulled-quote layout)
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
