@@ -20,7 +20,7 @@ featured_image_alt: "Agentic commerce tipping point months away with the Forrest
 author: Robert Hu
 read_time_minutes: 6
 published_at: 2026-05-07T12:00:00.000Z
-status: draft
+status: published
 tags: [agentic commerce 2026, when will AI agents buy products, agentic commerce tipping point, AI shopping agent timeline, marketplace seller AI agent strategy]
 related_services: [product-listing-optimization]
 related_posts: [meta-hatch-instagram-shopping-agent-marketplace-sellers, amazon-joins-universal-commerce-protocol, walmart-sparky-chatgpt-gemini]
@@ -231,7 +231,7 @@ Recommend keeping it at ~1,735. Reads cleanly at this length and matches the dep
 - No invented quotes or statistics
 
 ## Status
-- Frontmatter status: draft
+- Frontmatter status: published
 - Not in Supabase
 - Not pushed live
 - SVG: hand-authored pulled-quote layout, not added to regen-blog-svgs.mjs
