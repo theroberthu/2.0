@@ -47,15 +47,21 @@ export function leadNotificationEmail(
     website_url: string | null
     revenue_range: string | null
     challenge: string | null
+    brand?: string | null
+    category?: string | null
+    source?: string | null
   },
   snapshot: BrandSnapshot | null = null
 ): string {
   const rows = [
     { label: 'Name', value: lead.name },
     { label: 'Email', value: lead.email },
+    ...(lead.brand ? [{ label: 'Brand / Company', value: lead.brand }] : []),
     { label: 'Website', value: lead.website_url || 'Not provided' },
+    ...(lead.category ? [{ label: 'Category', value: lead.category }] : []),
     { label: 'Revenue Range', value: lead.revenue_range || 'Not provided' },
     { label: 'Challenge', value: lead.challenge || 'Not provided' },
+    ...(lead.source ? [{ label: 'Source', value: lead.source }] : []),
   ]
 
   const tableRows = rows

@@ -97,6 +97,11 @@ export async function POST(request: NextRequest) {
     let { website_url } = body
     const revenue_range = body.revenue_range || null
     const challenge = body.challenge || null
+    // Optional fields. Pre-filled from URL params on RecoScope prospect/demo
+    // CTAs. brand/category surface in the email; source is attribution only.
+    const brand = (typeof body.brand === 'string' && body.brand.trim()) || null
+    const category = (typeof body.category === 'string' && body.category.trim()) || null
+    const source = (typeof body.source === 'string' && body.source.trim()) || null
 
     if (!name || !email) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -108,12 +113,15 @@ export async function POST(request: NextRequest) {
     }
     website_url = website_url?.trim() || null
 
-    const leadData = { name, email, website_url, revenue_range, challenge }
+    const leadData = { name, email, website_url, revenue_range, challenge, brand, category, source }
 
     // 1. Persist the lead (moved here so the form shows success immediately with zero blocking)
     try {
       const supabase = getSupabaseAdmin()
       if (supabase) {
+        // Only insert columns the table is guaranteed to have. brand/category/
+        // source ride along in the email even if the schema has not been
+        // extended yet.
         const { error } = await supabase
           .from('leads')
           .insert({ name, email, website_url, revenue_range, challenge })
