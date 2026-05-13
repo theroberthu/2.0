@@ -20,7 +20,7 @@ featured_image_alt: "Amazon Rufus brand retired and merged into Alexa for Shoppi
 author: Robert Hu
 read_time_minutes: 6
 published_at: 2026-05-14T12:00:00.000Z
-status: draft
+status: published
 tags: [Alexa for Shopping, Rufus rebrand Alexa, Amazon Alexa AI shopping agent, Alexa for Shopping optimization, Amazon agentic shopping 2026]
 related_services: [product-listing-optimization]
 related_posts: [rufus-sparky-ai-revenue-impact, agentic-commerce-tipping-point-marketplace-sellers-2026, amazon-joins-universal-commerce-protocol]
@@ -237,7 +237,7 @@ Recommend keeping at ~1,930. Reads cleanly. Matches the depth of the brief.
 - Daniel Rausch reference omitted because the brief said named but did not provide a direct quote to cite
 
 ## Status
-- Frontmatter status: draft
+- Frontmatter status: published
 - Not in Supabase
 - Not pushed live
 - SVG: hand-authored pulled-quote layout, saved at /public/images/blog/rufus-alexa-for-shopping-rebrand-marketplace-sellers.svg

@@ -491,6 +491,7 @@ const posts = [
   // - meta-hatch-instagram-shopping-agent-marketplace-sellers (pulled-quote layout)
   // - chatgpt-ads-self-serve-geo-still-wins-marketplace-sellers (pulled-quote layout)
   // - agentic-commerce-tipping-point-marketplace-sellers-2026 (pulled-quote layout)
+  // - rufus-alexa-for-shopping-rebrand-marketplace-sellers (pulled-quote layout)
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
