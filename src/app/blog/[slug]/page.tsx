@@ -83,6 +83,47 @@ const DEFAULT_CTA_COPY = {
 }
 
 /**
+ * Walk every <h2> in the HTML, slugify its text, inject an id attribute,
+ * and return both the rewritten HTML and a TOC items array. Idempotent:
+ * H2s that already carry an id are preserved as-is.
+ */
+function buildTableOfContents(html: string): {
+  html: string
+  items: { id: string; text: string }[]
+} {
+  const items: { id: string; text: string }[] = []
+  const slugCount: Record<string, number> = {}
+
+  const rewritten = html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (match, attrs: string, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+    if (!text) return match
+
+    // If the H2 already has an id, reuse it.
+    const existingId = attrs.match(/\sid=["']([^"']+)["']/i)?.[1]
+    if (existingId) {
+      items.push({ id: existingId, text })
+      return match
+    }
+
+    let slug = text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .slice(0, 80)
+    if (!slug) return match
+
+    slugCount[slug] = (slugCount[slug] || 0) + 1
+    if (slugCount[slug] > 1) slug = `${slug}-${slugCount[slug]}`
+
+    items.push({ id: slug, text })
+    return `<h2${attrs} id="${slug}">${inner}</h2>`
+  })
+
+  return { html: rewritten, items }
+}
+
+/**
  * Split HTML content at the Nth <h2> tag and inject an inline CTA card.
  * Uses category to generate contextual copy.
  */
@@ -233,6 +274,13 @@ export default async function BlogPostPage(props: Props) {
 
   const ctaProps = getCTAProps(post.slug, post.schema_json?.related_services)
 
+  // Auto-generate table of contents from H2 headings. Only surface it in the
+  // sidebar when the post has enough structure to benefit (3+ sections).
+  const { html: tocHtml, items: tocItems } = post.content
+    ? buildTableOfContents(post.content)
+    : { html: '', items: [] }
+  const sidebarToc = tocItems.length >= 3 ? tocItems : []
+
   return (
     <>
       <SchemaMarkup data={articleSchema} />
@@ -315,7 +363,7 @@ export default async function BlogPostPage(props: Props) {
               {post.content ? (
                 <div
                   className="prose-custom-dark"
-                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(post.content, post.category) }}
+                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(tocHtml, post.category) }}
                 />
               ) : (
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>
@@ -349,7 +397,7 @@ export default async function BlogPostPage(props: Props) {
             </div>
 
             {/* Sticky sidebar — desktop only */}
-            <BlogSidebar />
+            <BlogSidebar toc={sidebarToc} />
           </div>
         </div>
       </article>
