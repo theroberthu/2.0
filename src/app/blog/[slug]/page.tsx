@@ -7,6 +7,8 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import BlogCard from '@/components/BlogCard'
 import CTABanner from '@/components/CTABanner'
 import BlogSidebar from '@/components/BlogSidebar'
+import MobileTocCard from '@/components/MobileTocCard'
+import FloatingBookCta from '@/components/FloatingBookCta'
 import { SITE_URL } from '@/lib/constants'
 import {
   generateArticleSchema,
@@ -360,6 +362,9 @@ export default async function BlogPostPage(props: Props) {
           <div className="xl:grid xl:grid-cols-[720px_1fr] xl:gap-12 xl:items-start">
             {/* Main content */}
             <div>
+              {/* Mobile-only table of contents. Desktop sidebar handles xl:+ */}
+              <MobileTocCard toc={sidebarToc} />
+
               {post.content ? (
                 <div
                   className="prose-custom-dark"
@@ -417,6 +422,9 @@ export default async function BlogPostPage(props: Props) {
       )}
 
       <CTABanner {...ctaProps} />
+
+      {/* Mobile-only floating CTA. Appears after scrolling past the hero. */}
+      <FloatingBookCta />
     </>
   )
 }
