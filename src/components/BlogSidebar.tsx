@@ -46,7 +46,7 @@ export default function BlogSidebar({ toc = [] }: BlogSidebarProps) {
   }, [toc])
 
   return (
-    <aside className="hidden xl:block">
+    <aside className="hidden xl:block xl:self-stretch">
       <div
         className="sticky top-24 transition-opacity duration-500 space-y-4"
         style={{ opacity: visible ? 1 : 0 }}
