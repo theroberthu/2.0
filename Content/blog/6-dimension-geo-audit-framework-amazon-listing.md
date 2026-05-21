@@ -1,6 +1,6 @@
-# The 6-Dimension GEO Audit Framework: How to Score Your Amazon Listing for AI Visibility - Draft
+# The 6-Dimension GEO Audit Framework: How to Score Your Amazon Listing for AI Visibility
 
-**Status:** Draft. Not in Supabase. Not deployed.
+**Status:** Published.
 **Target length:** 2,000-2,400 words (10-12 min read)
 **Voice:** Practitioner. Direct. No em dashes. Hyphens only.
 
@@ -19,8 +19,8 @@ og_image: /images/blog/6-dimension-geo-audit-framework-amazon-listing.svg
 featured_image_alt: "The 6-dimension GEO audit framework for scoring Amazon listings against AI visibility on Rufus, Alexa for Shopping, Sparky, and ChatGPT"
 author: Robert Hu
 read_time_minutes: 11
-published_at: 2026-05-14T16:00:00.000Z
-status: draft
+published_at: 2026-05-21T12:00:00.000Z
+status: published
 tags: [GEO audit framework, how to audit Amazon listing for AI, Amazon listing AI visibility audit, 6-dimension GEO framework, score Amazon listing for Rufus]
 related_services: [product-listing-optimization]
 related_posts: [rufus-alexa-for-shopping-rebrand-marketplace-sellers, geo-vs-seo-marketplace-sellers, rufus-sparky-ai-revenue-impact]
