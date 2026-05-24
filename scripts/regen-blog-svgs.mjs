@@ -493,6 +493,7 @@ const posts = [
   // - agentic-commerce-tipping-point-marketplace-sellers-2026 (pulled-quote layout)
   // - rufus-alexa-for-shopping-rebrand-marketplace-sellers (pulled-quote layout)
   // - 6-dimension-geo-audit-framework-amazon-listing (pulled-quote layout)
+  // - google-gemini-writes-ads-product-data-marketplace-sellers (pulled-quote layout)
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
