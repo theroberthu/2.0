@@ -4,52 +4,58 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 
 const cards = [
   {
-    id: 'listing-audit',
+    id: 'geo-audit',
     tag: 'Starting Point',
-    title: 'Listing Audit',
+    title: 'GEO Audit',
     price: '$500',
     priceSuffix: '',
+    term: '',
     description:
-      'A deep-dive audit of your top 5 to 10 listings with a scored rubric, competitive analysis, and a prioritized action plan you can execute yourself or bring me in to implement.',
+      'A deep-dive audit of your top 5 to 10 listings scored against the 6-dimension GEO framework (WHO, WHEN, WHERE, WHY, WHAT, AI Retrievability). Includes competitive benchmark, side-by-side rewrites, backend keyword recommendations, and a prioritized action plan.',
     bestFor:
-      'Brands who want clarity on what\u2019s wrong before committing to a bigger engagement.',
+      'Brands who want a clear, scored baseline of how AI systems read their listings before committing to ongoing work.',
     deliveryLabel: 'Delivery',
-    deliveryValue: '5 to 7 business days.',
+    deliveryValue: '5 to 7 business days. Includes a 30-minute walkthrough call.',
+    note: 'The audit fee applies toward your first month of AI Visibility Advisory if you move forward.',
     highlighted: false,
   },
   {
-    id: 'growth-strategy',
-    tag: 'Full Strategy',
-    title: 'Growth Strategy',
-    price: '$2,000 \u2013 $3,500',
-    priceSuffix: '',
+    id: 'ai-visibility-advisory',
+    tag: 'Core Engagement',
+    title: 'AI Visibility Advisory',
+    price: '$1,000',
+    priceSuffix: '/month',
+    term: '6-month engagement',
     description:
-      'A full-channel strategy covering listings, ads, catalog optimization, and AI search readiness. Includes a 90-day roadmap with specific priorities, timelines, and expected outcomes.',
+      'Ongoing monitoring and strategic guidance on how AI systems recommend your brand. Recommendation tracking across ChatGPT, Claude, Gemini, and Perplexity. Monthly strategic review, competitor visibility analysis, positioning and action item development, and async advisory support between calls. Includes private RecoScope reporting access.',
     bestFor:
-      'Brands doing $500K to $5M who need a real plan, not just tactical fixes.',
-    deliveryLabel: 'Delivery',
+      'Brands who want a dedicated AI visibility strategist as recommendation ecosystems shift, without the cost of a full-time hire.',
+    deliveryLabel: 'Includes',
     deliveryValue:
-      '2 to 3 weeks. Includes a 60-minute strategy walkthrough.',
+      'Monthly strategy call, monthly recommendation intelligence report, async support, private RecoScope monitoring page.',
+    note: '',
     highlighted: true,
   },
   {
-    id: 'ongoing-advisory',
-    tag: 'Partnership',
-    title: 'Ongoing Advisory',
-    price: '$1,500 \u2013 $3,000',
-    priceSuffix: '/month',
+    id: 'ad-hoc-strategy',
+    tag: 'Flexible',
+    title: 'Ad Hoc Strategy',
+    price: '$200',
+    priceSuffix: '/hour',
+    term: '2-hour minimum',
     description:
-      'Monthly strategic partnership. I review your performance data, adjust the plan, identify new opportunities, and keep your listings and ads optimized as the marketplace evolves.',
+      'Hourly strategic advisory for brands who want focused help on a specific problem without a monthly commitment.',
     bestFor:
-      'Brands who want a dedicated strategist without the cost of a full-time hire.',
-    deliveryLabel: 'Includes',
+      'Brands between engagements or with a one-off strategic question.',
+    deliveryLabel: 'Format',
     deliveryValue:
-      'Bi-weekly calls, monthly performance review, priority Slack/email access.',
+      'Scheduled working sessions, scoped to the question you need answered.',
+    note: "Ad hoc engagement fees apply toward your first month of AI Visibility Advisory if you move forward, up to one month's value.",
     highlighted: false,
   },
 ]
 
-// Order for mobile: Listing Audit first, then Growth Strategy (Most Popular), then Ongoing Advisory
+// Order for mobile: GEO Audit first, then AI Visibility Advisory (Most Popular), then Ad Hoc Strategy
 const mobileOrder = [0, 1, 2]
 
 function Card({ card }: { card: (typeof cards)[number] }) {
@@ -70,7 +76,7 @@ function Card({ card }: { card: (typeof cards)[number] }) {
         </span>
       </div>
       <h3 className="text-lg font-semibold text-white mb-1">{card.title}</h3>
-      <p className="text-2xl font-bold text-brand-gold mb-4">
+      <p className="text-2xl font-bold text-brand-gold mb-1">
         {card.price}
         {card.priceSuffix && (
           <span className="text-sm font-normal text-gray-400">
@@ -78,6 +84,13 @@ function Card({ card }: { card: (typeof cards)[number] }) {
           </span>
         )}
       </p>
+      {card.term ? (
+        <p className="text-[12px] font-mono text-brand-gold/70 mb-4">
+          {card.term}
+        </p>
+      ) : (
+        <div className="mb-4" />
+      )}
       <p className="text-sm text-gray-400 leading-relaxed mb-4">
         {card.description}
       </p>
@@ -94,6 +107,11 @@ function Card({ card }: { card: (typeof cards)[number] }) {
           </p>
           <p className="text-sm text-gray-400">{card.deliveryValue}</p>
         </div>
+        {card.note && (
+          <p className="text-[12px] italic text-gray-500 leading-relaxed pt-2 border-t border-white/[0.04]">
+            {card.note}
+          </p>
+        )}
       </div>
     </div>
   )
