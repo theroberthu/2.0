@@ -495,6 +495,7 @@ const posts = [
   // - 6-dimension-geo-audit-framework-amazon-listing (pulled-quote layout)
   // - google-gemini-writes-ads-product-data-marketplace-sellers (pulled-quote layout)
   // - walmart-sparky-q1-earnings-replenishment-shift (pulled-quote layout)
+  // - agentic-commerce-consensus-research-forecasts-marketplace-sellers (pulled-quote layout)
 ]
 
 // ─── Generate all SVGs ────────────────────────────────────────────────────────
