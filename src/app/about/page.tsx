@@ -3,19 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import SchemaMarkup from '@/components/SchemaMarkup'
-import CTABanner from '@/components/CTABanner'
 import LazyYouTube from '@/components/LazyYouTube'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'About Robert Hu — E-commerce Strategist',
+  title: 'About Robert Hu - E-commerce Strategist',
   description:
-    'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $500K-$5M brands. No fluff.',
+    'E-commerce strategist with 20+ years inside Amazon and Walmart. Currently Merchandising Manager at Kent and writing on the AI commerce shift through GEO and AEO.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Robert Hu — E-commerce Strategist',
+    title: 'About Robert Hu - E-commerce Strategist',
     description:
-      'E-commerce strategist with 20+ years of experience helping Amazon and DTC brands grow. Strategy, GEO, and AI-powered operations for $500K-$5M brands. No fluff.',
+      'E-commerce strategist with 20+ years inside Amazon and Walmart. Currently Merchandising Manager at Kent and writing on the AI commerce shift through GEO and AEO.',
     url: `${SITE_URL}/about`,
   },
 }
@@ -97,20 +96,14 @@ const values = [
 
 const projects = [
   {
-    name: 'YourGEOReport',
-    desc: 'Free AI visibility reports for e-commerce brands. Tests real buyer-style prompts across ChatGPT and Claude, then generates a report showing which competitors AI recommends instead of your brand.',
-    status: 'Live',
-    statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/[0.08]',
-    dotColor: 'bg-emerald-400',
-    link: 'https://yourgeoreport.com',
-  },
-  {
     name: 'RecoScope',
-    desc: 'AI recommendation benchmarks for consumer brands. Tracks how ChatGPT, Claude, and Gemini recommend brands across categories over time. Surfaces the gap between marketplace popularity and AI visibility.',
-    status: 'Live',
-    statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/[0.08]',
-    dotColor: 'bg-emerald-400',
-    link: 'https://getrecoscope.com',
+    desc: 'AI recommendation benchmarks for consumer brands. Tracks how ChatGPT, Claude, Gemini, and Perplexity recommend brands across categories over time. The data behind the GEO and AEO writing.',
+    status: 'Ongoing',
+    statusColor: 'text-brand-accent border-brand-accent/30 bg-brand-accent/[0.08]',
+    dotColor: 'bg-brand-accent',
+    link: '/geo',
+    linkLabel: 'See the GEO writing',
+    internal: true,
   },
 ]
 
@@ -128,7 +121,7 @@ export default function AboutPage() {
             <div>
               <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">About</span>
               <h1 className="text-3xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-3">
-                E-commerce Strategist &amp; Digital Transformation Consultant
+                E-commerce Strategist. Writing on the AI Commerce Shift.
               </h1>
               <p className="text-lg text-gray-400 leading-relaxed max-w-2xl">
                 The winding path that taught me what clarity really means. From small-town Iowa to Southeast Asian markets, my journey has been anything but linear.
@@ -148,12 +141,6 @@ export default function AboutPage() {
                     priority
                   />
                 </div>
-                <div className="absolute -bottom-3 -right-3 bg-white/[0.08] backdrop-blur-md rounded-lg border border-white/[0.1] px-3 py-2">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-[11px] font-semibold text-white">Available for consulting</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -165,7 +152,7 @@ export default function AboutPage() {
         <div className="max-w-[720px] mx-auto px-5 sm:px-8">
           <LazyYouTube
             videoId="Wpj1pPcyao4"
-            title="Robert Hu — E-commerce Strategist Introduction"
+            title="Robert Hu - E-commerce Strategist Introduction"
           />
         </div>
       </section>
@@ -278,7 +265,11 @@ export default function AboutPage() {
                 <a href="https://kentww.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
                   KENT&reg; Worldwide
                 </a>
-                , leading e-commerce strategy across Amazon and marketplace channels &mdash; including evaluating and implementing the team&apos;s e-commerce tech stack. I also consult independently with brand owners on growth strategy, listing optimization, GEO (Generative Engine Optimization), and digital transformation. I consult with a select number of brands alongside my role at KENT, which keeps me in the platforms every day, testing, optimizing, and seeing what&apos;s actually working right now, not what worked six months ago.
+                , leading e-commerce strategy across Amazon and marketplace channels, including evaluating and implementing the team&apos;s e-commerce tech stack. Alongside that, I write publicly on the AI commerce shift, GEO (Generative Engine Optimization) and AEO (Agentic Engine Optimization), through the{' '}
+                <Link href="/blog" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
+                  blog
+                </Link>
+                {' '}and the two pillar resources. The independent consulting practice is paused while Kent and other commitments come first. The work keeps me in the platforms every day, testing, optimizing, and seeing what&apos;s actually working right now, not what worked six months ago.
               </p>
             </div>
 
@@ -316,19 +307,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What I'm Building */}
+      {/* The Data Behind the Writing */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Building</span>
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Research</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-3">
-              What I&apos;m Building
+              The Data Behind the Writing
             </h2>
-            <p className="text-sm text-gray-400 max-w-md mx-auto">
-              Side projects where I put my own strategy to the test.
-            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="max-w-md mx-auto">
             {projects.map((project) => (
               <div
                 key={project.name}
@@ -343,17 +331,15 @@ export default function AboutPage() {
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-1">{project.desc}</p>
                 {project.link && (
-                  <a
+                  <Link
                     href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200"
                   >
-                    Visit Site
+                    {project.linkLabel ?? 'Learn more'}
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
@@ -361,7 +347,82 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTABanner />
+      {/* The Writing */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Thought Leadership</span>
+            <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-4">
+              The Writing
+            </h2>
+            <p className="text-[15px] text-gray-400 leading-relaxed max-w-xl mx-auto">
+              I write on Generative Engine Optimization, Agentic Engine Optimization, and what the AI commerce shift means for marketplace brands. Two pillar resources anchor the work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+            <Link
+              href="/geo"
+              className="group block bg-white/[0.05] backdrop-blur-md border border-brand-accent/25 rounded-xl p-6 hover:-translate-y-1 hover:border-brand-accent/50 hover:shadow-[0_0_20px_rgba(45,125,154,0.15)] transition-all duration-300"
+            >
+              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-brand-accent bg-brand-accent/[0.12] px-2.5 py-1 rounded-full inline-block mb-4">GEO</span>
+              <h3 className="text-base font-semibold text-white mb-1 group-hover:text-brand-accent transition-colors duration-200">Generative Engine Optimization (GEO)</h3>
+              <span className="inline-flex items-center gap-1.5 mt-3 text-[13px] font-semibold text-brand-accent group-hover:gap-2.5 transition-all duration-200">
+                Read the pillar
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </span>
+            </Link>
+            <Link
+              href="/aeo"
+              className="group block bg-brand-gold/[0.06] backdrop-blur-md border border-brand-gold/25 rounded-xl p-6 hover:-translate-y-1 hover:border-brand-gold/50 hover:shadow-[0_0_20px_rgba(197,169,78,0.15)] transition-all duration-300"
+            >
+              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-brand-gold bg-brand-gold/[0.15] px-2.5 py-1 rounded-full inline-block mb-4">AEO</span>
+              <h3 className="text-base font-semibold text-white mb-1 group-hover:text-brand-gold transition-colors duration-200">Agentic Engine Optimization (AEO)</h3>
+              <span className="inline-flex items-center gap-1.5 mt-3 text-[13px] font-semibold text-brand-gold group-hover:gap-2.5 transition-all duration-200">
+                Read the pillar
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </span>
+            </Link>
+          </div>
+
+          <p className="text-center text-[14px] text-gray-400 leading-relaxed">
+            New essays publish regularly on the{' '}
+            <Link href="/blog" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">blog</Link>
+            {' '}and in{' '}
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">Hu&apos;s Weekly Hoot</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* Stay current */}
+      <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/60 via-brand-dark to-brand-dark" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
+            Stay current
+          </h2>
+          <p className="text-sm md:text-base text-gray-400 mb-10 max-w-lg mx-auto leading-relaxed">
+            I publish ongoing analysis of the AI commerce shift. Subscribe to follow along.
+          </p>
+          <a
+            href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          >
+            Subscribe to Hu&apos;s Weekly Hoot
+          </a>
+          <div className="mt-6">
+            <Link
+              href="/free-strategy-session"
+              className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
+            >
+              Or book a free 15-minute strategy session &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* A Little More About Me */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
