@@ -231,7 +231,7 @@ export default async function HomePage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
             <div>
               <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-gold/80 mb-2 block">Selected Work</span>
-              <h2 className="text-lg md:text-xl font-semibold text-white tracking-tight">Case studies from prior engagements</h2>
+              <h2 className="text-lg md:text-xl font-semibold text-white tracking-tight">Selected case studies</h2>
             </div>
             <Link href="/case-studies" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">
               View all case studies
@@ -259,6 +259,55 @@ export default async function HomePage() {
               </Link>
             ))}
           </MobileCarousel>
+        </div>
+      </section>
+
+      {/* ───────────────────── Section 5: About Robert (compressed) ───────────────────── */}
+      <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">About Robert</span>
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
+            Twenty years inside Amazon and Walmart. Currently writing on the AI commerce shift while serving as Merchandising Manager at Kent. The consulting practice is on pause while Kent and other commitments come first.
+          </p>
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200"
+          >
+            Read more on /about
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          </Link>
+        </div>
+      </section>
+
+      {/* ───────────────────── Section 8: Stay Current (final CTA) ───────────────────── */}
+      <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/60 via-brand-dark to-brand-dark" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-56 h-56 bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
+
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
+            Stay current
+          </h2>
+          <p className="text-sm md:text-base text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
+            Subscribe to Hu&apos;s Weekly Hoot for ongoing analysis of the AI commerce shift, the GEO/AEO playbooks, and what marketplace brands should actually do next.
+          </p>
+          <a
+            href={NEWSLETTER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          >
+            Subscribe on LinkedIn
+          </a>
+          <div className="mt-6">
+            <Link
+              href="/free-strategy-session"
+              className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
+            >
+              Or book a free 15-minute strategy session &rarr;
+            </Link>
+          </div>
         </div>
       </section>
     </>
