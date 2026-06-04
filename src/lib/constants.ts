@@ -10,7 +10,6 @@ export const SOCIAL_LINKS = {
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
   { label: 'AI Search (GEO)', href: '/geo' },
   { label: 'AI Agents (AEO)', href: '/aeo' },
   { label: 'Case Studies', href: '/case-studies' },
