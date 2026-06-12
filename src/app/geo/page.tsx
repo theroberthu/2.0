@@ -140,10 +140,11 @@ const faqSchema = {
   })),
 }
 
-const AI_SURFACES = [
+const AI_SURFACES: { name: string; body: string; href?: string }[] = [
   {
-    name: 'Amazon Rufus',
+    name: 'Alexa for Shopping (formerly Rufus)',
     body: "Rufus handles 13% or more of Amazon searches and growing. It reads your product listing, customer reviews, the Q&A section, and A+ content. It cross-references this against the COSMO knowledge graph, which is Amazon's proprietary commonsense reasoning engine for shopping. Rufus ignores image-locked text, vague marketing copy, and any data Amazon's structured attribute fields cannot parse. RecoScope's Rufus tracker shows category coverage that often differs from organic Amazon search rankings, especially in categories with strong review sentiment patterns.",
+    href: '/geo/alexa-for-shopping',
   },
   {
     name: 'Walmart Sparky',
@@ -371,8 +372,25 @@ export default function GEOPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {AI_SURFACES.map((surface) => (
               <div key={surface.name} className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 md:p-7 hover:border-brand-accent/30 transition-colors duration-300 flex flex-col">
-                <h3 className="text-lg font-semibold text-white mb-3">{surface.name}</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  {surface.href ? (
+                    <Link href={surface.href} className="hover:text-brand-accent transition-colors duration-200">
+                      {surface.name}
+                    </Link>
+                  ) : (
+                    surface.name
+                  )}
+                </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{surface.body}</p>
+                {surface.href && (
+                  <Link
+                    href={surface.href}
+                    className="inline-flex items-center gap-1.5 mt-4 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200"
+                  >
+                    Read the optimization guide
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </Link>
+                )}
               </div>
             ))}
           </div>

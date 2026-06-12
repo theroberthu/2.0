@@ -58,6 +58,10 @@ const post = {
 
 <p>For marketplace sellers selling on Amazon, this expands the optimization surface area. The good news is the underlying <a href="/geo">GEO foundation</a> still applies. The new news is what now sits on top of it.</p>
 
+<div class="callout-box">
+  <p>For the full optimization guide, see the <a href="/geo/alexa-for-shopping">Alexa for Shopping cluster page</a>.</p>
+</div>
+
 <h2>What did Amazon announce on May 13?</h2>
 
 <p>The customer-facing change is straightforward. Rufus is gone as a brand. The cursive "A" icon now opens Alexa for Shopping. The conversational search experience is embedded directly in the main Amazon search bar instead of living in a separate chatbot interface. Amazon is positioning Alexa for Shopping as the most personalized AI shopping assistant on the market, with an explicit pitch against ChatGPT, Gemini, and Perplexity shopping features.</p>

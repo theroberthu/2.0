@@ -126,6 +126,8 @@ Most coverage today is calling this a rebrand. It is not. A rebrand is when you 
 
 For marketplace sellers selling on Amazon, this expands the optimization surface area. The good news is the underlying [GEO foundation](/geo) still applies. The new news is what now sits on top of it.
 
+> For the full optimization guide, see the [Alexa for Shopping cluster page](/geo/alexa-for-shopping).
+
 ## What did Amazon announce on May 13?
 
 The customer-facing change is straightforward. Rufus is gone as a brand. The cursive "A" icon now opens Alexa for Shopping. The conversational search experience is embedded directly in the main Amazon search bar instead of living in a separate chatbot interface. Amazon is positioning Alexa for Shopping as the most personalized AI shopping assistant on the market, with an explicit pitch against ChatGPT, Gemini, and Perplexity shopping features.
