@@ -66,6 +66,9 @@ export const metadata: Metadata = {
       'application/rss+xml': `${SITE_URL}/feed.xml`,
     },
   },
+  verification: {
+    google: 'Eazm8oO1cDt7U38aXDzZ2US6VW55nzZU288LDUGM9A4',
+  },
 }
 
 export const viewport: Viewport = {
