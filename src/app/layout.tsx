@@ -98,7 +98,6 @@ const siteNavSchema = {
   '@context': 'https://schema.org',
   '@type': 'SiteNavigationElement',
   name: [
-    'Services',
     'AI Search (GEO)',
     'AI Agents (AEO)',
     'Blog',
@@ -106,7 +105,6 @@ const siteNavSchema = {
     'Free Strategy Session',
   ],
   url: [
-    `${SITE_URL}/services`,
     `${SITE_URL}/geo`,
     `${SITE_URL}/aeo`,
     `${SITE_URL}/blog`,
