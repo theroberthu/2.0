@@ -238,7 +238,6 @@ function getCTAProps(slug: string, relatedServices?: string[] | null) {
 
   const ctas = [
     { heading: "Let's Talk About Your E-commerce Growth", buttonText: 'Book a Free Strategy Session', buttonHref: '/free-strategy-session' },
-    { heading: 'See What This Looks Like in Practice', buttonText: 'View Case Studies', buttonHref: '/case-studies' },
     { heading: 'Need a Strategy That Actually Works?', buttonText: 'Explore Services', buttonHref: '/services' },
   ]
 

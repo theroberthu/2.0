@@ -55,7 +55,7 @@
 
 ### /about
 - Professional bio
-- Projects: FlightPrompts, ProductListingHelp, Scoparo
+- Projects: FlightPrompts, Scoparo
 - Should reinforce expertise + lead to booking
 
 ## Case Studies (4 total, all anonymized)

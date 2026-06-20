@@ -9,12 +9,12 @@ import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'About Robert Hu - E-commerce Strategist',
   description:
-    'E-commerce strategist with 20+ years inside Amazon and Walmart. Currently Merchandising Manager at Kent and writing on the AI commerce shift through GEO and AEO.',
+    'E-commerce strategist with 20+ years inside Amazon and Walmart. Currently writing on the AI commerce shift through GEO and AEO.',
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Robert Hu - E-commerce Strategist',
     description:
-      'E-commerce strategist with 20+ years inside Amazon and Walmart. Currently Merchandising Manager at Kent and writing on the AI commerce shift through GEO and AEO.',
+      'E-commerce strategist with 20+ years inside Amazon and Walmart. Currently writing on the AI commerce shift through GEO and AEO.',
     url: `${SITE_URL}/about`,
   },
 }
@@ -33,11 +33,6 @@ const personSchema = {
     SOCIAL_LINKS.x,
     SOCIAL_LINKS.youtube,
   ],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'KENT\u00AE Worldwide',
-    url: 'https://kentww.com',
-  },
   knowsAbout: [
     'E-commerce Strategy',
     'Amazon Marketplace',
@@ -261,15 +256,11 @@ export default function AboutPage() {
                 <h3 className="text-lg font-semibold text-white">Where I Am Now</h3>
               </div>
               <p className="text-[15px] text-gray-400 leading-relaxed">
-                COVID brought me back to the U.S., where I started an Amazon-focused agency and later joined as a Brand Manager. Today, I&apos;m a Merchandising Manager at{' '}
-                <a href="https://kentww.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
-                  KENT&reg; Worldwide
-                </a>
-                , leading e-commerce strategy across Amazon and marketplace channels, including evaluating and implementing the team&apos;s e-commerce tech stack. Alongside that, I write publicly on the AI commerce shift, GEO (Generative Engine Optimization) and AEO (Agentic Engine Optimization), through the{' '}
+                COVID brought me back to the U.S., where I started an Amazon-focused agency and later worked as a Brand Manager. Today, I lead e-commerce strategy across Amazon and marketplace channels, including evaluating and implementing e-commerce tech stacks. Alongside that, I write publicly on the AI commerce shift, GEO (Generative Engine Optimization) and AEO (Agentic Engine Optimization), through the{' '}
                 <Link href="/blog" className="text-brand-accent hover:text-brand-accent/80 transition-colors underline underline-offset-2">
                   blog
                 </Link>
-                {' '}and the two pillar resources. The independent consulting practice is paused while Kent and other commitments come first. The work keeps me in the platforms every day, testing, optimizing, and seeing what&apos;s actually working right now, not what worked six months ago.
+                {' '}and the two pillar resources. The independent consulting practice is currently paused. The work keeps me in the platforms every day, testing, optimizing, and seeing what&apos;s actually working right now, not what worked six months ago.
               </p>
             </div>
 

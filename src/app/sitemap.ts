@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase'
-import { CASE_STUDIES } from '@/lib/case-studies-data'
 
 const SITE_URL = process.env.SITE_URL || 'https://theroberthu.com'
 
@@ -12,12 +11,11 @@ const SERVICE_SLUGS = [
   'digital-transformation',
 ]
 
-// Last-reviewed dates for stable pages — update when content changes
+// Last-reviewed dates for stable pages - update when content changes
 const STATIC_LAST_MODIFIED = {
   home: new Date('2026-03-01'),
   about: new Date('2025-12-01'),
   services: new Date('2026-03-01'),
-  caseStudies: new Date('2025-11-01'),
   blog: new Date('2026-03-18'),
   freeStrategySession: new Date('2026-03-01'),
   geo: new Date('2026-05-24'),
@@ -25,7 +23,6 @@ const STATIC_LAST_MODIFIED = {
   aeo: new Date('2026-03-19'),
   geoAudit: new Date('2026-02-01'),
   servicePages: new Date('2026-03-01'),
-  caseStudyPages: new Date('2025-11-01'),
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -34,7 +31,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: SITE_URL, lastModified: STATIC_LAST_MODIFIED.home, changeFrequency: 'weekly' as const, priority: 1 },
     { url: `${SITE_URL}/about`, lastModified: STATIC_LAST_MODIFIED.about, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${SITE_URL}/services`, lastModified: STATIC_LAST_MODIFIED.services, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${SITE_URL}/case-studies`, lastModified: STATIC_LAST_MODIFIED.caseStudies, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${SITE_URL}/blog`, lastModified: STATIC_LAST_MODIFIED.blog, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${SITE_URL}/free-strategy-session`, lastModified: STATIC_LAST_MODIFIED.freeStrategySession, changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${SITE_URL}/geo`, lastModified: STATIC_LAST_MODIFIED.geo, changeFrequency: 'monthly' as const, priority: 0.8 },
@@ -42,14 +38,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/aeo`, lastModified: STATIC_LAST_MODIFIED.aeo, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${SITE_URL}/geo-audit`, lastModified: STATIC_LAST_MODIFIED.geoAudit, changeFrequency: 'monthly' as const, priority: 0.9 },
   ]
-
-  // Case study pages
-  const caseStudyPages = CASE_STUDIES.map((cs) => ({
-    url: `${SITE_URL}/case-studies/${cs.slug}`,
-    lastModified: STATIC_LAST_MODIFIED.caseStudyPages,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
 
   // Service pages (hardcoded)
   const servicePages = SERVICE_SLUGS.map((slug) => ({
@@ -73,5 +61,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If Supabase is unavailable, skip blog pages in sitemap
   }
 
-  return [...staticPages, ...caseStudyPages, ...servicePages, ...blogPages]
+  return [...staticPages, ...servicePages, ...blogPages]
 }

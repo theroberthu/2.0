@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
-import { CASE_STUDIES } from '@/lib/case-studies-data'
 import BlogCard from '@/components/BlogCard'
 import MobileCarousel from '@/components/MobileCarousel'
 import SchemaMarkup from '@/components/SchemaMarkup'
@@ -69,9 +68,6 @@ export default async function HomePage() {
     .eq('status', 'published')
     .order('published_at', { ascending: false })
     .limit(3)
-
-  const featuredSlugs = ['bsr-ranking-improvement', 'new-product-launch-top-release', 'ad-account-restructuring']
-  const featuredStudies = CASE_STUDIES.filter((cs) => featuredSlugs.includes(cs.slug))
 
   return (
     <>
@@ -225,49 +221,13 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ───────────────────── Section 4: Case Studies (reduced weight) ───────────────────── */}
-      <section className="py-14 md:py-20 bg-brand-dark border-t border-white/[0.06]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
-            <div>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-gold/80 mb-2 block">Selected Work</span>
-              <h2 className="text-lg md:text-xl font-semibold text-white tracking-tight">Selected case studies</h2>
-            </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">
-              View all case studies
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            </Link>
-          </div>
-          <MobileCarousel desktopGridCols="md:grid-cols-3">
-            {featuredStudies.map((cs) => (
-              <Link
-                key={cs.slug}
-                href={`/case-studies/${cs.slug}`}
-                className="group block bg-white/[0.04] backdrop-blur-md border border-white/[0.06] rounded-lg p-5 hover:border-brand-accent/30 hover:bg-white/[0.06] transition-all duration-300 h-full"
-              >
-                <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent/80 mb-3">
-                  {cs.category}
-                </span>
-                <h3 className="text-[14px] font-semibold text-white leading-snug mb-2">
-                  {cs.title}
-                </h3>
-                <p className="text-[13px] text-gray-500 leading-relaxed mb-3">{cs.resultTeaser}</p>
-                <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-brand-accent group-hover:gap-2 transition-all duration-200">
-                  Read
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                </span>
-              </Link>
-            ))}
-          </MobileCarousel>
-        </div>
-      </section>
 
       {/* ───────────────────── Section 5: About Robert (compressed) ───────────────────── */}
       <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">About Robert</span>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-            Twenty years inside Amazon and Walmart. Currently writing on the AI commerce shift while serving as Merchandising Manager at Kent. The consulting practice is on pause while Kent and other commitments come first.
+            Twenty years inside Amazon and Walmart, across e-commerce and merchandising. Currently writing on the AI commerce shift. The consulting practice is currently paused.
           </p>
           <Link
             href="/about"
