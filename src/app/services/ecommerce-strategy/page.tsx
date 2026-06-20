@@ -248,12 +248,14 @@ export default function EcommerceStrategyPage() {
           <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
             15 minutes. No pitch. Just honest strategy for your brand.
           </p>
-          <Link
-            href="/free-strategy-session"
+          <a
+            href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Book a Free Strategy Session
-          </Link>
+            Subscribe to Hu&apos;s Weekly Hoot
+          </a>
         </div>
       </section>
     </>

@@ -36,12 +36,14 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/free-strategy-session"
+          <a
+            href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[13px] font-semibold bg-brand-gold text-white px-5 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-sm hover:shadow-md"
           >
-            Free Strategy Session
-          </Link>
+            Subscribe
+          </a>
         </nav>
 
         {/* Mobile hamburger */}
@@ -80,13 +82,15 @@ export default function Header() {
               </Link>
             ))}
             <div className="mt-3 pt-3 border-t border-white/[0.06]">
-              <Link
-                href="/free-strategy-session"
+              <a
+                href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="block text-[15px] font-semibold bg-brand-gold text-white px-5 py-3 rounded-md text-center hover:bg-brand-gold/85 transition-all duration-200"
               >
-                Free Strategy Session
-              </Link>
+                Subscribe to the Newsletter
+              </a>
             </div>
           </div>
         </nav>

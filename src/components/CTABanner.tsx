@@ -2,15 +2,22 @@ import Link from 'next/link'
 
 interface CTABannerProps {
   heading?: string
+  subtext?: string
   buttonText?: string
   buttonHref?: string
+  external?: boolean
 }
 
 export default function CTABanner({
-  heading = "Let's Talk About Your E-commerce Growth",
-  buttonText = 'Book a Free Strategy Session',
-  buttonHref = '/free-strategy-session',
+  heading = 'Stay Ahead of the AI Commerce Shift',
+  subtext = 'Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.',
+  buttonText = "Subscribe to Hu's Weekly Hoot",
+  buttonHref = 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232',
+  external = true,
 }: CTABannerProps) {
+  const buttonClass =
+    'inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5'
+
   return (
     <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
       {/* Subtle gradient overlay */}
@@ -24,14 +31,17 @@ export default function CTABanner({
           {heading}
         </h2>
         <p className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
-          15 minutes. No pitch. Just honest strategy for your brand.
+          {subtext}
         </p>
-        <Link
-          href={buttonHref}
-          className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-        >
-          {buttonText}
-        </Link>
+        {external ? (
+          <a href={buttonHref} target="_blank" rel="noopener noreferrer" className={buttonClass}>
+            {buttonText}
+          </a>
+        ) : (
+          <Link href={buttonHref} className={buttonClass}>
+            {buttonText}
+          </Link>
+        )}
       </div>
     </section>
   )

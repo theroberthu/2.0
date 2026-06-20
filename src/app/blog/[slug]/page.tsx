@@ -153,14 +153,10 @@ function injectInlineCTA(html: string, category?: string | null, afterH2Index = 
 
   const callout = `<div class="blog-inline-cta-card">
   <div class="blog-inline-cta-card-accent"></div>
-  <p class="blog-inline-cta-card-label">Free Strategy Session</p>
+  <p class="blog-inline-cta-card-label">Newsletter</p>
   <p class="blog-inline-cta-card-headline">${copy.headline}</p>
-  <p class="blog-inline-cta-card-sub">In 15 minutes, you'll walk away with:</p>
-  <ul class="blog-inline-cta-card-bullets">
-    <li>${copy.bullets[0]}</li>
-    <li>${copy.bullets[1]}</li>
-  </ul>
-  <a href="/free-strategy-session" class="blog-inline-cta-card-btn">Book Your Free Session</a>
+  <p class="blog-inline-cta-card-sub">Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.</p>
+  <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232" class="blog-inline-cta-card-btn" target="_blank" rel="noopener noreferrer">Subscribe to Hu's Weekly Hoot</a>
 </div>`
 
   return html.slice(0, insertAt) + callout + html.slice(insertAt)
@@ -221,27 +217,15 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 // Rotating CTA based on slug hash
-function getCTAProps(slug: string, relatedServices?: string[] | null) {
-  if (relatedServices && relatedServices.length > 0) {
-    return {
-      heading: 'Want Help With This?',
-      buttonText: 'View Service',
-      buttonHref: `/services/${relatedServices[0]}`,
-    }
+function getCTAProps() {
+  // Newsletter-only during the consulting pause. No services promotion on blog posts.
+  return {
+    heading: 'Stay Ahead of the AI Commerce Shift',
+    subtext: 'Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.',
+    buttonText: "Subscribe to Hu's Weekly Hoot",
+    buttonHref: 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232',
+    external: true,
   }
-
-  let hash = 0
-  for (let i = 0; i < slug.length; i++) {
-    hash = (hash << 5) - hash + slug.charCodeAt(i)
-    hash |= 0
-  }
-
-  const ctas = [
-    { heading: "Let's Talk About Your E-commerce Growth", buttonText: 'Book a Free Strategy Session', buttonHref: '/free-strategy-session' },
-    { heading: 'Need a Strategy That Actually Works?', buttonText: 'Explore Services', buttonHref: '/services' },
-  ]
-
-  return ctas[Math.abs(hash) % ctas.length]
 }
 
 export default async function BlogPostPage(props: Props) {
@@ -273,7 +257,7 @@ export default async function BlogPostPage(props: Props) {
     relatedPosts = data || []
   }
 
-  const ctaProps = getCTAProps(post.slug, post.schema_json?.related_services)
+  const ctaProps = getCTAProps()
 
   // Auto-generate table of contents from H2 headings. Only surface it in the
   // sidebar when the post has enough structure to benefit (3+ sections).

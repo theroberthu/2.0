@@ -43,14 +43,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/free-strategy-session"
-                  className="text-[13px] text-gray-400 hover:text-white transition-colors duration-200"
-                >
-                  Free Strategy Session
-                </Link>
-              </li>
             </ul>
           </div>
 

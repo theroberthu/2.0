@@ -713,11 +713,11 @@ export default function GEOPage() {
           </div>
 
           <p className="text-base text-gray-300 leading-relaxed">
-            If you want a custom diagnostic of where your brand stands across all six AI surfaces,{' '}
-            <Link href="#geo-audit-form" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
-              book a free strategy session
-            </Link>
-            . The GEO audit covers your category, your top SKUs, and the prioritized fixes that will compound fastest.
+            For ongoing analysis of how AI engines recommend products across all six surfaces,{' '}
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+              subscribe to Hu&apos;s Weekly Hoot
+            </a>
+            . Each issue covers the GEO and AEO playbooks and the prioritized fixes that compound fastest.
           </p>
         </div>
       </section>

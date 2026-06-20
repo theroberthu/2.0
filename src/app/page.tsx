@@ -260,14 +260,6 @@ export default async function HomePage() {
           >
             Subscribe on LinkedIn
           </a>
-          <div className="mt-6">
-            <Link
-              href="/free-strategy-session"
-              className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
-            >
-              Or book a free 15-minute strategy session &rarr;
-            </Link>
-          </div>
         </div>
       </section>
     </>

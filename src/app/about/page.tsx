@@ -404,14 +404,6 @@ export default function AboutPage() {
           >
             Subscribe to Hu&apos;s Weekly Hoot
           </a>
-          <div className="mt-6">
-            <Link
-              href="/free-strategy-session"
-              className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
-            >
-              Or book a free 15-minute strategy session &rarr;
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -440,15 +432,6 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 bg-white/[0.05] backdrop-blur-md border border-white/[0.1] text-white font-semibold px-6 py-3 rounded-md hover:border-brand-accent/40 hover:bg-white/[0.08] transition-all duration-200 text-sm"
             >
               Read My Thoughts
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link
-              href="/free-strategy-session"
-              className="inline-flex items-center gap-2 bg-white/[0.05] backdrop-blur-md border border-white/[0.1] text-white font-semibold px-6 py-3 rounded-md hover:border-brand-accent/40 hover:bg-white/[0.08] transition-all duration-200 text-sm"
-            >
-              Get In Touch
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

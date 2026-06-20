@@ -475,14 +475,6 @@ export default function AlexaForShoppingPage() {
             >
               Subscribe to Hu&apos;s Weekly Hoot
             </a>
-            <div className="mt-5">
-              <Link
-                href="/free-strategy-session"
-                className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
-              >
-                Or book a free 15-minute strategy session &rarr;
-              </Link>
-            </div>
           </div>
         </div>
       </section>

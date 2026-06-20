@@ -787,16 +787,18 @@ export default function AEOPage() {
           <p className="text-sm text-gray-400 mb-10 max-w-lg mx-auto">
             Agentic commerce is operational now. The brands acting in Q2 2026
             compound a structural advantage that is hard to reverse. Start with
-            a GEO audit to build the foundation, or talk to me about where your
-            brand stands on the AEO readiness spectrum.
+            the GEO foundation, and follow the analysis on where your brand
+            likely stands on the AEO readiness spectrum.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/free-strategy-session"
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
-              Book a Free Strategy Session
-            </Link>
+              Subscribe to Hu&apos;s Weekly Hoot
+            </a>
             <Link
               href="/geo"
               className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
