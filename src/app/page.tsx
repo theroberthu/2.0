@@ -146,8 +146,8 @@ export default async function HomePage() {
           <div className="max-w-6xl mx-auto px-5 sm:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
               <div>
-                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Writing</span>
-                <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">Recent essays</h2>
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">The Blog</span>
+                <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">Latest analysis</h2>
               </div>
               <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">
                 View all
