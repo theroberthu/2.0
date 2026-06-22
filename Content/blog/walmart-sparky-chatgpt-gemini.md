@@ -19,6 +19,10 @@
   </ul>
 </div>
 
+<div class="callout-box">
+  <p>For the full optimization guide, see the <a href="/geo/walmart-sparky">Walmart Sparky cluster page</a>.</p>
+</div>
+
 <h2>What Happened: Walmart Fired OpenAI's Checkout</h2>
 
 <p>Walmart tested OpenAI's Instant Checkout feature inside ChatGPT for several months. The results were bad. Conversion rates came in at roughly one-third of what Walmart generates on its own platforms. Carts were being populated with wrong items. Accuracy was a consistent problem. There was no functioning sales tax system.</p>

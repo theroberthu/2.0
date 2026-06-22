@@ -149,6 +149,7 @@ const AI_SURFACES: { name: string; body: string; href?: string }[] = [
   {
     name: 'Walmart Sparky',
     body: "Sparky drives 35% higher average order values than non-Sparky shoppers on walmart.com and is now embedded inside ChatGPT and Gemini conversations. It reads Walmart's structured catalog data, including backend attributes, specifications, and product descriptions. It also reads reviews and Q&A but weights structured attribute completeness more heavily than Rufus does. Sparky ignores listings with empty backend attribute fields and inconsistent cross-platform data. RecoScope's Sparky tracker shows that the brands winning organic Sparky recommendations are not always the ones spending the most on Walmart Connect ads.",
+    href: '/geo/walmart-sparky',
   },
   {
     name: 'ChatGPT and Perplexity',

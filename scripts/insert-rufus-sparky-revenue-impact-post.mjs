@@ -70,6 +70,10 @@ const post = {
   </ul>
 </div>
 
+<div class="callout-box">
+  <p>For the full optimization guide, see the <a href="/geo/walmart-sparky">Walmart Sparky cluster page</a>.</p>
+</div>
+
 <h2>Why Do AI Recommendations Create a Winner-Take-Most Dynamic?</h2>
 
 <p>Traditional Amazon search shows you a page of 48 products. Sponsored results take the first row, organic results fill the rest. A shopper scans, compares, clicks through a few listings, and picks one. Every product on that page gets at least a chance at attention.</p>

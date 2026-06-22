@@ -126,6 +126,8 @@ That conclusion is correct but incomplete. The most important thing Walmart said
 
 Getting recommended once is discovery. Becoming the product the agent reorders without the customer re-deciding is something else entirely. This post is about the second one, because that is where the next phase of [AI visibility](/geo) is heading.
 
+> For the full optimization guide, see the [Walmart Sparky cluster page](/geo/walmart-sparky).
+
 ## What Walmart reported about Sparky in Q1
 
 The verified numbers from the May 21 call. Weekly active users on Sparky up over 100% quarter-over-quarter. AOV 35% higher for Sparky users. Units transacted through Sparky up more than 4x sequentially. Sparky intelligence and response quality up 40% year-to-date. Total Walmart revenue for Q1 FY27 came in at $177.75 billion. Membership and advertising now make up roughly a third of operating income, and Sparky engagement is part of what fuels that flywheel because higher-engagement shoppers convert more advertising inventory and renew memberships at higher rates. The [broader AI revenue picture across Rufus and Sparky](/blog/rufus-sparky-ai-revenue-impact) lines up with this read.
