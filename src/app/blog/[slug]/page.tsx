@@ -20,29 +20,6 @@ import {
 export const revalidate = 60
 export const dynamicParams = true
 
-// Category → service page mapping for the contextual service card
-const CATEGORY_SERVICE_MAP: Record<string, { href: string; label: string; description: string }> = {
-  'GEO & SEO': {
-    href: '/services/product-listing-optimization',
-    label: 'Product Listing Optimization',
-    description: 'Structured for AI-driven discovery — Rufus, ChatGPT, and every channel where your buyers search.',
-  },
-  'E-commerce Strategy': {
-    href: '/services/ecommerce-strategy',
-    label: 'E-commerce Strategy',
-    description: 'A clear growth plan built around your specific catalog, margins, and market position.',
-  },
-  'Digital Marketing': {
-    href: '/services/digital-marketing-strategy',
-    label: 'Digital Marketing Strategy',
-    description: 'Channel strategy, content, and paid media that drives measurable return.',
-  },
-  'Digital Transformation': {
-    href: '/services/digital-transformation',
-    label: 'Digital Transformation',
-    description: 'Systems, automation, and process design that scale your operations without scaling headcount.',
-  },
-}
 
 // Category-specific inline CTA copy
 const INLINE_CTA_COPY: Record<string, { headline: string; bullets: [string, string] }> = {
@@ -357,34 +334,9 @@ export default async function BlogPostPage(props: Props) {
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>
               )}
 
-              {/* Contextual service card — shown after content, before end CTA */}
-              {(() => {
-                const service = post.category ? CATEGORY_SERVICE_MAP[post.category] : null
-                if (!service) return null
-                return (
-                  <div className="mt-12 rounded-xl border border-brand-accent/20 bg-brand-accent/[0.05] p-6">
-                    <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent mb-3">
-                      Related Service
-                    </span>
-                    <h3 className="text-base font-bold text-white mb-2">{service.label}</h3>
-                    <p className="text-[0.875rem] text-gray-400 leading-relaxed mb-4">
-                      {service.description}
-                    </p>
-                    <Link
-                      href={service.href}
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent hover:text-white transition-colors duration-200"
-                    >
-                      Learn more
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                )
-              })()}
             </div>
 
-            {/* Sticky sidebar — desktop only */}
+            {/* Sticky sidebar - desktop only */}
             <BlogSidebar toc={sidebarToc} />
           </div>
         </div>
