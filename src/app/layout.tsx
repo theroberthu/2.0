@@ -24,11 +24,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Robert Hu - E-commerce Strategist',
-    template: '%s | Robert Hu - E-commerce Strategist',
+    default: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
+    template: '%s | Robert Hu',
   },
   description:
-    'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.',
+    'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },
@@ -42,23 +42,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: 'Robert Hu',
-    title: 'Robert Hu - E-commerce Strategist',
+    title: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
     description:
-      'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.',
+      'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
     images: [
       {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Robert Hu - E-commerce Strategist',
+        alt: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Robert Hu - E-commerce Strategist',
+    title: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
     description:
-      'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.',
+      'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
     images: ['/images/og-default.png'],
   },
   alternates: {
@@ -93,7 +93,7 @@ const siteSchema = {
   '@type': 'WebSite',
   name: 'Robert Hu',
   url: SITE_URL,
-  description: 'E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies.',
+  description: 'Writing on Generative Engine Optimization, Agentic Engine Optimization, and the AI commerce shift for marketplace brands.',
   publisher: { '@type': 'Person', name: 'Robert Hu', url: SITE_URL },
 }
 

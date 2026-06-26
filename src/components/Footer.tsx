@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              E-commerce strategist helping $500K-$5M brands implement AI and digital transformation strategies that actually work.
+              Writing on the AI commerce shift, Generative Engine Optimization, and Agentic Engine Optimization for marketplace brands.
             </p>
           </div>
 
