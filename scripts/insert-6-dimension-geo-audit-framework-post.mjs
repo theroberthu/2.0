@@ -28,7 +28,7 @@ const post = {
   category: 'GEO & SEO',
   tags: ['GEO audit framework', 'how to audit Amazon listing for AI', 'Amazon listing AI visibility audit', '6-dimension GEO framework', 'score Amazon listing for Rufus'],
   status: 'published',
-  featured: false,
+  featured: true,
   read_time_minutes: 11,
   schema_json: {
     author: 'Robert Hu',

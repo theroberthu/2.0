@@ -62,12 +62,31 @@ const organizationSchema = {
 }
 
 export default async function HomePage() {
-  const { data: posts } = await supabase
+  // Featured post: the most recent post manually flagged featured: true.
+  // Set featured = true on whichever post should hold the slot (Supabase
+  // blog_posts.featured, or the insert script's `featured` field).
+  const { data: flagged } = await supabase
+    .from('blog_posts')
+    .select('*')
+    .eq('status', 'published')
+    .eq('featured', true)
+    .order('published_at', { ascending: false })
+    .limit(1)
+
+  // Recent posts, fetched 4-deep so we always have 3 left after excluding
+  // whichever post is featured.
+  const { data: recent } = await supabase
     .from('blog_posts')
     .select('*')
     .eq('status', 'published')
     .order('published_at', { ascending: false })
-    .limit(3)
+    .limit(4)
+
+  // Fall back to the most recent post overall so the slot is never empty.
+  const featured = flagged?.[0] ?? recent?.[0] ?? null
+  const recentPosts = (recent ?? [])
+    .filter((p) => p.slug !== featured?.slug)
+    .slice(0, 3)
 
   return (
     <>
@@ -140,8 +159,84 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ───────────────────── Section 2: Recent Essays ───────────────────── */}
-      {posts && posts.length > 0 && (
+      {/* ───────────────────── Section 2: Featured post ───────────────────── */}
+      {featured && (
+        <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8">
+            <Link
+              href={`/blog/${featured.slug}`}
+              className="group block bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:shadow-elevated transition-all duration-300"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Image */}
+                <div className="relative aspect-[1200/630] lg:aspect-auto lg:min-h-[340px] bg-gradient-to-br from-brand-deep/60 to-brand-dark/80 lg:border-r border-white/[0.06]">
+                  {featured.og_image ? (
+                    <Image
+                      src={featured.og_image}
+                      alt={featured.schema_json?.featured_image_alt || featured.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-brand-accent/30 text-6xl font-bold tracking-tight">{featured.title.charAt(0)}</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Text */}
+                <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center">
+                  <span className="inline-flex items-center gap-2 text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+                    Featured
+                  </span>
+
+                  {featured.category && featured.category !== 'general' && (
+                    <span className="inline-block self-start text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full mb-4">
+                      {featured.category}
+                    </span>
+                  )}
+
+                  <h2 className="text-2xl md:text-3xl lg:text-[2.25rem] font-bold text-white leading-[1.15] tracking-tight mb-4 group-hover:text-brand-accent transition-colors duration-200">
+                    {featured.title}
+                  </h2>
+
+                  {featured.excerpt && (
+                    <p className="text-base text-gray-400 leading-relaxed mb-6 line-clamp-4">
+                      {featured.excerpt}
+                    </p>
+                  )}
+
+                  <div className="flex items-center justify-between pt-5 border-t border-white/[0.06]">
+                    <div className="flex items-center gap-3">
+                      {featured.published_at && (
+                        <time className="text-[11px] font-medium text-gray-500 uppercase tracking-wider">
+                          {new Date(featured.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                        </time>
+                      )}
+                      {featured.read_time_minutes && (
+                        <>
+                          <span className="text-gray-600">·</span>
+                          <span className="text-[11px] font-medium text-gray-500">{featured.read_time_minutes} min read</span>
+                        </>
+                      )}
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent group-hover:gap-2.5 transition-all duration-200">
+                      Read article
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* ───────────────────── Section 3: Recent Essays ───────────────────── */}
+      {recentPosts.length > 0 && (
         <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
           <div className="max-w-6xl mx-auto px-5 sm:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
@@ -155,7 +250,7 @@ export default async function HomePage() {
               </Link>
             </div>
             <MobileCarousel desktopGridCols="md:grid-cols-3">
-              {posts.map((post) => (
+              {recentPosts.map((post) => (
                 <BlogCard key={post.id} post={post} />
               ))}
             </MobileCarousel>
