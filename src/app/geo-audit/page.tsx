@@ -4,14 +4,14 @@ import LeadForm from '@/components/LeadForm'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Free GEO Audit for E-commerce Brands',
+  title: 'GEO Audit for Marketplace Brands',
   description:
-    'Find out how your brand shows up in AI-powered search. Get a free GEO audit covering ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus visibility.',
+    'How your brand shows up in AI-powered search across ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
   alternates: { canonical: '/geo-audit' },
   openGraph: {
-    title: 'Free GEO Audit for E-commerce Brands | Robert Hu - E-commerce Strategist',
+    title: 'GEO Audit for Marketplace Brands | Robert Hu',
     description:
-      'Find out how your brand shows up in AI-powered search. Get a free GEO audit covering ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus visibility.',
+      'How your brand shows up in AI-powered search across ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
     url: `${SITE_URL}/geo-audit`,
   },
 }

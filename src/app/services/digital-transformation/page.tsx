@@ -6,12 +6,12 @@ import { SITE_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Digital Transformation',
   description:
-    'E-commerce digital transformation consulting. AI tool evaluation, workflow automation, team enablement, SOPs, tech stack optimization, and data infrastructure for growing brands.',
+    'E-commerce digital transformation: AI tool evaluation, workflow automation, team enablement, SOPs, tech stack optimization, and data infrastructure for marketplace brands.',
   alternates: { canonical: '/services/digital-transformation' },
   openGraph: {
-    title: 'Digital Transformation | Robert Hu - E-commerce Strategist',
+    title: 'Digital Transformation | Robert Hu',
     description:
-      'E-commerce digital transformation consulting. AI tool evaluation, workflow automation, team enablement, SOPs, tech stack optimization, and data infrastructure for growing brands.',
+      'E-commerce digital transformation: AI tool evaluation, workflow automation, team enablement, SOPs, tech stack optimization, and data infrastructure for marketplace brands.',
     url: `${SITE_URL}/services/digital-transformation`,
   },
 }

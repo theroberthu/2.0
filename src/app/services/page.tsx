@@ -7,12 +7,12 @@ import { SITE_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'E-commerce consulting services: strategy, product listing optimization, GEO, digital marketing, and digital transformation for growing brands.',
+    'An overview of e-commerce strategy, product listing optimization, GEO, digital marketing, and digital transformation work for marketplace brands.',
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Services | Robert Hu - E-commerce Strategist',
+    title: 'Services | Robert Hu',
     description:
-      'E-commerce consulting services: strategy, product listing optimization, GEO, digital marketing, and digital transformation for growing brands.',
+      'An overview of e-commerce strategy, product listing optimization, GEO, digital marketing, and digital transformation work for marketplace brands.',
     url: `${SITE_URL}/services`,
   },
 }

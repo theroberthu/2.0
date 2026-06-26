@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Digital marketing strategy for e-commerce brands. Amazon PPC, Walmart Connect, campaign architecture, budget allocation, and performance analytics for profitable growth.',
   alternates: { canonical: '/services/digital-marketing-strategy' },
   openGraph: {
-    title: 'Digital Marketing Strategy | Robert Hu - E-commerce Strategist',
+    title: 'Digital Marketing Strategy | Robert Hu',
     description:
       'Digital marketing strategy for e-commerce brands. Amazon PPC, Walmart Connect, campaign architecture, budget allocation, and performance analytics for profitable growth.',
     url: `${SITE_URL}/services/digital-marketing-strategy`,
