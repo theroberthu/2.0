@@ -25,6 +25,15 @@ export const metadata: Metadata = {
       'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
     url: SITE_URL,
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@theroberthu',
+    creator: '@theroberthu',
+    title: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
+    description:
+      'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
+    images: ['/images/og-default.png'],
+  },
 }
 
 const websiteSchema = {
