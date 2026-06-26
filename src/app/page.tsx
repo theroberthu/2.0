@@ -169,13 +169,13 @@ export default async function HomePage() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Image */}
-                <div className="relative aspect-[1200/630] lg:aspect-auto lg:min-h-[340px] bg-gradient-to-br from-brand-deep/60 to-brand-dark/80 lg:border-r border-white/[0.06]">
+                <div className="relative aspect-[1200/630] lg:aspect-auto lg:min-h-[360px] bg-gradient-to-br from-brand-deep/60 to-brand-dark/80 lg:border-r border-white/[0.06]">
                   {featured.og_image ? (
                     <Image
                       src={featured.og_image}
                       alt={featured.schema_json?.featured_image_alt || featured.title}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       priority
                     />
