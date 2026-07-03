@@ -36,7 +36,7 @@ const articleSchema = {
     '@type': 'Person',
     name: 'Robert Hu',
     url: `${SITE_URL}/about`,
-    jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+    jobTitle: 'E-commerce Strategist',
     sameAs: [
       'https://www.linkedin.com/in/theroberthu',
       'https://x.com/theroberthu',
@@ -57,17 +57,6 @@ const articleSchema = {
   url: `${SITE_URL}/geo`,
 }
 
-const videoSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'VideoObject',
-  name: 'FOR. WHEN. WHERE. The GEO Framework in 90 Seconds',
-  description:
-    'Robert Hu walks through the first three dimensions of the GEO framework that determines whether AI engines like Rufus, Sparky, and ChatGPT recommend your product.',
-  thumbnailUrl: 'https://img.youtube.com/vi/onr9C2R9hio/maxresdefault.jpg',
-  uploadDate: '2026-04-30T12:00:00-07:00',
-  contentUrl: 'https://www.youtube.com/watch?v=onr9C2R9hio',
-  embedUrl: 'https://www.youtube.com/embed/onr9C2R9hio',
-}
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -290,7 +279,6 @@ export default function GEOPage() {
     <>
       <SchemaMarkup data={articleSchema} />
       <SchemaMarkup data={faqSchema} />
-      <SchemaMarkup data={videoSchema} />
       <SchemaMarkup data={breadcrumbSchema} />
       <SchemaMarkup data={howToSchema} />
 
@@ -410,23 +398,6 @@ export default function GEOPage() {
               Most listing audits score against generic best practices: keyword density, image count, bullet length. The GEO framework scores against the confirmed ICP. Every dimension answers a question the AI engine is silently asking when it evaluates whether to recommend your product.
             </p>
           </div>
-
-          {/* Embedded video - responsive 16:9, gold border */}
-          <div className="mb-6 rounded-xl overflow-hidden border border-brand-gold/30 shadow-xl">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://www.youtube.com/embed/onr9C2R9hio"
-                title="FOR. WHEN. WHERE. The GEO Framework in 90 Seconds"
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-
-          <p className="text-sm text-gray-400 italic text-center mb-12">
-            The video covers the first three dimensions. The full framework adds three more: WHY (the outcome), WHAT (the physical product), and AI Retrievability (how cleanly the data is structured).
-          </p>
 
           <div className="space-y-5">
             {DIMENSIONS.map((dim) => (

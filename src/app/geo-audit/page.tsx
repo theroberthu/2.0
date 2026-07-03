@@ -27,7 +27,7 @@ const serviceSchema = {
     '@type': 'Person',
     name: 'Robert Hu',
     url: `${SITE_URL}/about`,
-    jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+    jobTitle: 'E-commerce Strategist',
   },
   areaServed: 'US',
   url: `${SITE_URL}/geo-audit`,

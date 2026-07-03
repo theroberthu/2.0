@@ -22,7 +22,7 @@ const serviceSchema = {
   name: 'Digital Marketing Strategy',
   serviceType: 'Digital Marketing Strategy',
   description:
-    'Marketing strategy for e-commerce brands — Amazon PPC, Walmart Connect, campaign architecture, budget allocation, and performance analytics.',
+    'Marketing strategy for e-commerce brands, spanning Amazon PPC, Walmart Connect, campaign architecture, budget allocation, and performance analytics.',
   provider: {
     '@type': 'Person',
     name: 'Robert Hu',

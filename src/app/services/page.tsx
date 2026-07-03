@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 const servicesSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'E-commerce Consulting Services',
+  name: 'E-commerce Services',
   itemListElement: [
     {
       '@type': 'Service',
       position: 1,
       name: 'E-commerce Strategy',
-      description: 'Strategic consulting for brands selling on Amazon, Walmart, and DTC — from listing optimization to full-channel growth planning.',
+      description: 'Analysis and frameworks for brands selling on Amazon, Walmart, and DTC, from listing optimization to full-channel growth planning.',
       url: `${SITE_URL}/services/ecommerce-strategy`,
     },
     {
@@ -40,7 +40,7 @@ const servicesSchema = {
       '@type': 'Service',
       position: 3,
       name: 'Digital Marketing Strategy',
-      description: 'Marketing strategy built for the AI era — GEO readiness, paid advertising, content strategy, and cross-channel planning.',
+      description: 'Marketing strategy built for the AI era, spanning GEO readiness, paid advertising, content strategy, and cross-channel planning.',
       url: `${SITE_URL}/services/digital-marketing-strategy`,
     },
     {

@@ -51,7 +51,7 @@ export function categoryFromSlug(slug: string): string | undefined {
 export const AUTHOR_INFO = {
   name: 'Robert Hu',
   url: 'https://theroberthu.com/about',
-  jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+  jobTitle: 'E-commerce Strategist',
   sameAs: [
     'https://www.linkedin.com/in/theroberthu',
     'https://x.com/theroberthu',

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import SchemaMarkup from '@/components/SchemaMarkup'
-import LazyYouTube from '@/components/LazyYouTube'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ const personSchema = {
   name: 'Robert Hu',
   url: `${SITE_URL}/about`,
   image: `${SITE_URL}/images/robert-hu-headshot.png`,
-  jobTitle: 'E-commerce Strategist & Digital Transformation Consultant',
+  jobTitle: 'E-commerce Strategist',
   description:
     'E-commerce strategist with 20+ years of experience helping brands grow on Amazon, Walmart, and DTC channels. Specializing in GEO, listing optimization, and AI-powered digital transformation.',
   sameAs: [
@@ -139,16 +138,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Intro video */}
-      <section className="py-12 md:py-16 bg-brand-dark border-t border-white/[0.06]">
-        <div className="max-w-[720px] mx-auto px-5 sm:px-8">
-          <LazyYouTube
-            videoId="Wpj1pPcyao4"
-            title="Robert Hu - E-commerce Strategist Introduction"
-          />
         </div>
       </section>
 

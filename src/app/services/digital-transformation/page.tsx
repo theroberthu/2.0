@@ -20,9 +20,9 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Digital Transformation',
-  serviceType: 'Digital Transformation Consulting',
+  serviceType: 'Digital Transformation',
   description:
-    'E-commerce digital transformation — AI tool evaluation, workflow automation, team enablement, and tech stack optimization for growing brands.',
+    'E-commerce digital transformation, spanning AI tool evaluation, workflow automation, team enablement, and tech stack optimization for marketplace brands.',
   provider: {
     '@type': 'Person',
     name: 'Robert Hu',
