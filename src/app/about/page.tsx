@@ -49,6 +49,7 @@ const careerStages = [
   'Technology',
   'Marketplaces',
   'Amazon',
+  'Digital Marketing',
   'Merchandising',
   'Digital Commerce',
   'Digital Transformation',
