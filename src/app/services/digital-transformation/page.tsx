@@ -1,13 +1,17 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
+// TODO: Archived consulting page (Archive and Evolve transition). Content is
+// preserved and the route stays live, but this page is noindex and removed from
+// the sitemap. It will eventually be rebuilt as a research hub on how technology
+// changes commerce. Service and FAQ structured data intentionally removed.
 export const metadata: Metadata = {
   title: 'Digital Transformation',
   description:
     'E-commerce digital transformation: AI tool evaluation, workflow automation, team enablement, SOPs, tech stack optimization, and data infrastructure for marketplace brands.',
   alternates: { canonical: '/services/digital-transformation' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Digital Transformation | Robert Hu',
     description:
@@ -16,59 +20,12 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Digital Transformation',
-  serviceType: 'Digital Transformation',
-  description:
-    'E-commerce digital transformation, spanning AI tool evaluation, workflow automation, team enablement, and tech stack optimization for marketplace brands.',
-  provider: {
-    '@type': 'Person',
-    name: 'Robert Hu',
-    url: `${SITE_URL}/about`,
-  },
-  areaServed: 'US',
-  url: `${SITE_URL}/services/digital-transformation`,
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What AI tools should my e-commerce brand be using?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'It depends on your specific workflows and pain points, which is why I start with an assessment rather than a tool recommendation. The right AI tools for your brand depend on where you are spending the most time on repetitive tasks, where errors are costing you money, and what your team can realistically adopt. I help you cut through the noise and focus on the tools that will actually move the needle for your business.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is this different from hiring an IT consultant?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'I am not an IT consultant. I am an e-commerce strategist who understands technology. The difference is that my recommendations are grounded in 20+ years of e-commerce operations experience, not just technical capability. I evaluate tools and workflows based on how they impact your revenue, margins, and competitive position, not just whether they work technically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my team need technical skills to use the tools you recommend?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. I specifically evaluate tools based on what your team can realistically adopt. If a tool requires a developer to maintain, and you do not have a developer, it is not the right tool. Every recommendation includes a training plan and documentation so your team can use it confidently from day one.',
-      },
-    },
-  ],
-}
+// Service and FAQ structured data removed in the Archive and Evolve transition.
+// No structured data is emitted while this page is noindex and pending rebuild.
 
 export default function DigitalTransformationPage() {
   return (
     <>
-      <SchemaMarkup data={serviceSchema} />
-      <SchemaMarkup data={faqSchema} />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />

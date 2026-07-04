@@ -1,13 +1,17 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
+// TODO: Archived consulting page (Archive and Evolve transition). Content is
+// preserved and the route stays live, but this page is noindex and removed from
+// the sitemap. It will eventually be rebuilt as a research hub on how technology
+// changes commerce. Service and FAQ structured data intentionally removed.
 export const metadata: Metadata = {
   title: 'Amazon and DTC E-commerce Strategy',
   description:
     'E-commerce strategy for Amazon and DTC marketplace brands: growth roadmaps, catalog strategy, channel planning, and profitable scaling.',
   alternates: { canonical: '/services/ecommerce-strategy' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Amazon and DTC E-commerce Strategy | Robert Hu',
     description:
@@ -16,59 +20,12 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'E-commerce Strategy',
-  serviceType: 'E-commerce Strategy',
-  description:
-    'Analysis and frameworks for brands selling on Amazon, Walmart, and DTC, from listing optimization to full-channel growth planning.',
-  provider: {
-    '@type': 'Person',
-    name: 'Robert Hu',
-    url: `${SITE_URL}/about`,
-  },
-  areaServed: 'US',
-  url: `${SITE_URL}/services/ecommerce-strategy`,
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What does an e-commerce strategy engagement look like?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every engagement starts with discovery, where I learn your business, audit your current performance, and identify the biggest opportunities. From there, I build a custom growth plan with specific priorities, timelines, and expected outcomes. I can guide your team through implementation or work alongside you hands-on.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you work with brands selling on Walmart, or just Amazon?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'I work across Amazon, Walmart, and DTC channels. In fact, marketplace diversification is one of the most common strategic recommendations I make. Most brands are over-indexed on Amazon and under-invested in Walmart and DTC, which creates both a risk and a missed opportunity.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is this different from hiring an agency?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Agencies manage tasks. I build strategy. Most agencies are great at executing playbooks, but they are not incentivized to tell you to cut a product line, restructure your pricing, or rethink your channel mix. I give you the honest, strategic perspective that agencies typically do not, because my job is to help you grow, not to keep a retainer.',
-      },
-    },
-  ],
-}
+// Service and FAQ structured data removed in the Archive and Evolve transition.
+// No structured data is emitted while this page is noindex and pending rebuild.
 
 export default function EcommerceStrategyPage() {
   return (
     <>
-      <SchemaMarkup data={serviceSchema} />
-      <SchemaMarkup data={faqSchema} />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />

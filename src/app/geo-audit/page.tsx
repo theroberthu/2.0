@@ -1,13 +1,17 @@
 import { Metadata } from 'next'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import LeadForm from '@/components/LeadForm'
 import { SITE_URL } from '@/lib/constants'
 
+// TODO: Archived consulting page (Archive and Evolve transition). Content is
+// preserved and the route stays live, but this page is noindex and removed from
+// the sitemap. It will eventually be rebuilt as a research hub on how technology
+// changes commerce. Service and FAQ structured data intentionally removed.
 export const metadata: Metadata = {
   title: 'GEO Audit for Marketplace Brands',
   description:
     'How your brand shows up in AI-powered search across ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
   alternates: { canonical: '/geo-audit' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'GEO Audit for Marketplace Brands | Robert Hu',
     description:
@@ -16,59 +20,8 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'GEO Audit for E-commerce Brands',
-  serviceType: 'Generative Engine Optimization Audit',
-  description:
-    'A free audit that shows how your brand appears in AI-powered search results from ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
-  provider: {
-    '@type': 'Person',
-    name: 'Robert Hu',
-    url: `${SITE_URL}/about`,
-    jobTitle: 'E-commerce Strategist',
-  },
-  areaServed: 'US',
-  url: `${SITE_URL}/geo-audit`,
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'USD',
-    description: 'Free 15-minute GEO audit session',
-  },
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a GEO audit?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A GEO audit evaluates how your brand and products appear in AI-powered search results from tools like ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus. It identifies gaps in your AI visibility and provides a prioritized action plan.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a GEO audit cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The initial 15-minute GEO audit call is free. No pitch, no obligation. You walk away with actionable insights about your AI search visibility.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is a GEO audit for?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'GEO audits are for Amazon and Walmart sellers, DTC brands, and any e-commerce brand that wants to understand how AI-powered search is affecting their product discovery and visibility.',
-      },
-    },
-  ],
-}
+// Service and FAQ structured data removed in the Archive and Evolve transition.
+// No structured data is emitted while this page is noindex and pending rebuild.
 
 const WHO_FOR = [
   'Amazon or Walmart sellers whose products aren\'t surfacing in AI shopping tools',
@@ -101,9 +54,6 @@ const STEPS = [
 export default function GeoAuditPage() {
   return (
     <>
-      <SchemaMarkup data={serviceSchema} />
-      <SchemaMarkup data={faqSchema} />
-
       {/* Hero */}
       <section id="audit-form" className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #2d7d9a 1px, transparent 0)', backgroundSize: '32px 32px' }} />

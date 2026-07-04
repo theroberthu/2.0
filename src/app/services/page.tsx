@@ -1,56 +1,24 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import PricingCarousel from '@/components/PricingCarousel'
 import { SITE_URL } from '@/lib/constants'
 
+// TODO: Archived consulting page (Archive and Evolve transition). Content is
+// preserved and the route stays live, but the page is noindex and removed from
+// the sitemap. It will eventually be rebuilt as a research hub on how
+// technology changes commerce. Service structured data intentionally removed.
 export const metadata: Metadata = {
   title: 'Services',
   description:
     'An overview of e-commerce strategy, product listing optimization, GEO, digital marketing, and digital transformation work for marketplace brands.',
   alternates: { canonical: '/services' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Services | Robert Hu',
     description:
       'An overview of e-commerce strategy, product listing optimization, GEO, digital marketing, and digital transformation work for marketplace brands.',
     url: `${SITE_URL}/services`,
   },
-}
-
-const servicesSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'E-commerce Services',
-  itemListElement: [
-    {
-      '@type': 'Service',
-      position: 1,
-      name: 'E-commerce Strategy',
-      description: 'Analysis and frameworks for brands selling on Amazon, Walmart, and DTC, from listing optimization to full-channel growth planning.',
-      url: `${SITE_URL}/services/ecommerce-strategy`,
-    },
-    {
-      '@type': 'Service',
-      position: 2,
-      name: 'Product Listing Optimization & GEO',
-      description: 'Optimize product detail pages for traditional SEO and Generative Engine Optimization (GEO) for AI-powered search.',
-      url: `${SITE_URL}/services/product-listing-optimization`,
-    },
-    {
-      '@type': 'Service',
-      position: 3,
-      name: 'Digital Marketing Strategy',
-      description: 'Marketing strategy built for the AI era, spanning GEO readiness, paid advertising, content strategy, and cross-channel planning.',
-      url: `${SITE_URL}/services/digital-marketing-strategy`,
-    },
-    {
-      '@type': 'Service',
-      position: 4,
-      name: 'Digital Transformation',
-      description: 'Modernize your e-commerce operations with AI-powered workflows, better tooling, and smarter processes.',
-      url: `${SITE_URL}/services/digital-transformation`,
-    },
-  ],
 }
 
 const services = [
@@ -87,8 +55,6 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <SchemaMarkup data={servicesSchema} />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />

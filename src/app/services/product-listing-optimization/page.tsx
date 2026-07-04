@@ -1,13 +1,17 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
+// TODO: Archived consulting page (Archive and Evolve transition). Content is
+// preserved and the route stays live, but this page is noindex and removed from
+// the sitemap. It will eventually be rebuilt as a research hub on how technology
+// changes commerce. Service and FAQ structured data intentionally removed.
 export const metadata: Metadata = {
   title: 'Product Listing Optimization & GEO',
   description:
     'Product listing optimization for Amazon and Walmart sellers - SEO, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered search.',
   alternates: { canonical: '/services/product-listing-optimization' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Product Listing Optimization & GEO | Robert Hu',
     description:
@@ -16,59 +20,12 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Product Listing Optimization & GEO',
-  serviceType: 'Product Listing Optimization',
-  description:
-    'Full listing audits covering keyword strategy, A+ Content, image stacks, and Generative Engine Optimization (GEO) for AI-powered product discovery.',
-  provider: {
-    '@type': 'Person',
-    name: 'Robert Hu',
-    url: `${SITE_URL}/about`,
-  },
-  areaServed: 'US',
-  url: `${SITE_URL}/services/product-listing-optimization`,
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is Generative Engine Optimization (GEO)?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Generative Engine Optimization (GEO) is the practice of optimizing your product content so it gets recommended by AI-powered search and shopping tools like ChatGPT, Perplexity, Google AI Overviews, Amazon Rufus, and Walmart Sparky. Traditional SEO focuses on keyword matching for search algorithms. GEO focuses on making your content the kind that AI engines cite, reference, and recommend when shoppers ask questions.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is listing optimization different from what my agency already does?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most agencies optimize listings in isolation, treating each one as a standalone project. I approach listing optimization as part of your broader catalog and channel strategy. That means I consider how your listings work together, how they perform across different platforms, and how they need to evolve as AI-powered discovery changes how shoppers find products.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you optimize listings for Walmart, or just Amazon?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'I optimize for both Amazon and Walmart, and the distinction matters. What works on Amazon does not copy and paste to Walmart. The search algorithms, content requirements, and customer expectations are different on each platform. I build platform-specific listing strategies that account for these differences.',
-      },
-    },
-  ],
-}
+// Service and FAQ structured data removed in the Archive and Evolve transition.
+// No structured data is emitted while this page is noindex and pending rebuild.
 
 export default function ProductListingOptimizationPage() {
   return (
     <>
-      <SchemaMarkup data={serviceSchema} />
-      <SchemaMarkup data={faqSchema} />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />

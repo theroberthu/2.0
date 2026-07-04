@@ -1,13 +1,17 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL } from '@/lib/constants'
 
+// TODO: Archived consulting page (Archive and Evolve transition). Content is
+// preserved and the route stays live, but this page is noindex and removed from
+// the sitemap. It will eventually be rebuilt as a research hub on how technology
+// changes commerce. Service and FAQ structured data intentionally removed.
 export const metadata: Metadata = {
   title: 'Digital Marketing Strategy',
   description:
     'Digital marketing strategy for e-commerce brands. Amazon PPC, Walmart Connect, campaign architecture, budget allocation, and performance analytics for profitable growth.',
   alternates: { canonical: '/services/digital-marketing-strategy' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Digital Marketing Strategy | Robert Hu',
     description:
@@ -16,59 +20,12 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Digital Marketing Strategy',
-  serviceType: 'Digital Marketing Strategy',
-  description:
-    'Marketing strategy for e-commerce brands, spanning Amazon PPC, Walmart Connect, campaign architecture, budget allocation, and performance analytics.',
-  provider: {
-    '@type': 'Person',
-    name: 'Robert Hu',
-    url: `${SITE_URL}/about`,
-  },
-  areaServed: 'US',
-  url: `${SITE_URL}/services/digital-marketing-strategy`,
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much should I be spending on Amazon PPC?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'There is no universal answer because the right budget depends on your margins, competitive landscape, and growth goals. What I can tell you is that most brands I work with are either spending too much on the wrong campaigns or not enough on the right ones. I help you build a budget framework tied to your actual unit economics so every dollar has a clear purpose.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you manage ad accounts, or just build the strategy?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Both. I offer one-time strategy engagements for brands that want a plan they can run themselves, and ongoing Amazon Ads management for brands that want someone in the account every week. Ongoing management starts at $1,000/month with no long-term contracts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Walmart Connect worth investing in right now?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, and the window for early-mover advantage is still open. Walmart Connect is maturing fast, but the auction competition is still a fraction of what you face on Amazon. Brands that build their advertising presence on Walmart now are getting better returns and establishing visibility that will be much more expensive to buy later.',
-      },
-    },
-  ],
-}
+// Service and FAQ structured data removed in the Archive and Evolve transition.
+// No structured data is emitted while this page is noindex and pending rebuild.
 
 export default function DigitalMarketingStrategyPage() {
   return (
     <>
-      <SchemaMarkup data={serviceSchema} />
-      <SchemaMarkup data={faqSchema} />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />
