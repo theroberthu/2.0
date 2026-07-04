@@ -3,8 +3,8 @@ import Link from 'next/link'
 import HideGlobalChrome from '@/components/HideGlobalChrome'
 
 export const metadata: Metadata = {
-  title: 'Work — Robert Hu',
-  description: 'Selected work in GEO, AI product discovery, systems automation, and e-commerce strategy.',
+  title: 'Work',
+  description: 'Selected research and experiments in AI product discovery, systems automation, and how technology changes commerce.',
   robots: { index: false, follow: false },
 }
 

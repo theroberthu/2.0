@@ -4,15 +4,16 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import LeadForm from '@/components/LeadForm'
 import { SITE_URL } from '@/lib/constants'
 
+const GEO_DESCRIPTION =
+  'Research on how AI engines like Rufus, Sparky, ChatGPT, Claude, Gemini, and Perplexity recommend products, with the 6-dimension framework and live RecoScope data behind the shift in product discovery.'
+
 export const metadata: Metadata = {
-  title: 'Generative Engine Optimization (GEO) for Ecommerce',
-  description:
-    'GEO is how Amazon and Walmart sellers get recommended by Rufus, Sparky, ChatGPT, Claude, Gemini, and Perplexity. The 6-dimension framework, live data, and a free audit.',
+  title: 'Generative Engine Optimization (GEO) and AI Product Discovery',
+  description: GEO_DESCRIPTION,
   alternates: { canonical: '/geo' },
   openGraph: {
-    title: 'Generative Engine Optimization (GEO) for Ecommerce | Robert Hu',
-    description:
-      'GEO is how Amazon and Walmart sellers get recommended by Rufus, Sparky, ChatGPT, Claude, Gemini, and Perplexity. The 6-dimension framework, live data, and a free audit.',
+    title: 'Generative Engine Optimization (GEO) and AI Product Discovery | Robert Hu',
+    description: GEO_DESCRIPTION,
     url: `${SITE_URL}/geo`,
     type: 'website',
   },
@@ -20,23 +21,23 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@theroberthu',
     creator: '@theroberthu',
-    title: 'Generative Engine Optimization (GEO) for Ecommerce | Robert Hu',
+    title: 'Generative Engine Optimization (GEO) and AI Product Discovery | Robert Hu',
     description:
-      'GEO is how Amazon and Walmart sellers get recommended by Rufus, Sparky, ChatGPT, Claude, Gemini, and Perplexity.',
+      'Research on how AI engines like Rufus, Sparky, ChatGPT, Gemini, and Perplexity recommend products.',
   },
 }
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Generative Engine Optimization (GEO) for Ecommerce',
+  headline: 'Generative Engine Optimization (GEO) and AI Product Discovery',
   description:
-    'The definitive GEO resource for Amazon and Walmart sellers. The 6-dimension framework, live RecoScope data, and a free audit.',
+    'Research on how AI engines recommend products, with the 6-dimension framework and live RecoScope data behind the shift in product discovery.',
   author: {
     '@type': 'Person',
     name: 'Robert Hu',
     url: `${SITE_URL}/about`,
-    jobTitle: 'E-commerce Strategist',
+    jobTitle: 'Commerce and Technology Researcher',
     sameAs: [
       'https://www.linkedin.com/in/theroberthu',
       'https://x.com/theroberthu',

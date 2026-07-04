@@ -4,15 +4,16 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import AEOTimeline from '@/components/AEOTimeline'
 import { SITE_URL } from '@/lib/constants'
 
+const AEO_DESCRIPTION =
+  'Research on Agentic Engine Optimization (AEO): how AI shopping agents evaluate and buy products on behalf of customers as Alexa for Shopping goes live and Sparky drives reorder behavior. SEO makes products found, GEO makes them recommended, AEO makes them chosen.'
+
 export const metadata: Metadata = {
-  title: 'Agentic Engine Optimization (AEO): Operational Across Amazon, Walmart, and the AI Surfaces',
-  description:
-    'AI agents are buying on behalf of your customers right now. Alexa for Shopping is live. Sparky drove 35% higher AOV in Q1 FY27. Agentic Engine Optimization (AEO) ensures your products get chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+  title: 'Agentic Engine Optimization (AEO): How AI Agents Buy',
+  description: AEO_DESCRIPTION,
   alternates: { canonical: '/aeo' },
   openGraph: {
-    title: 'Agentic Engine Optimization (AEO): Operational Across Amazon, Walmart, and the AI Surfaces | Robert Hu',
-    description:
-      'AI agents are buying on behalf of your customers right now. Alexa for Shopping is live. Sparky is driving reorder behavior. Is your brand ready to be chosen? SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+    title: 'Agentic Engine Optimization (AEO): How AI Agents Buy | Robert Hu',
+    description: AEO_DESCRIPTION,
     url: `${SITE_URL}/aeo`,
     type: 'website',
     siteName: 'Robert Hu',
@@ -21,18 +22,17 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@theroberthu',
     creator: '@theroberthu',
-    title: 'Agentic Engine Optimization (AEO): Operational Across Amazon, Walmart, and the AI Surfaces | Robert Hu',
-    description:
-      'AI agents are buying on behalf of your customers right now. Alexa for Shopping is live. Sparky is driving reorder behavior. Is your brand ready to be chosen? SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+    title: 'Agentic Engine Optimization (AEO): How AI Agents Buy | Robert Hu',
+    description: AEO_DESCRIPTION,
   },
 }
 
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Agentic Engine Optimization (AEO) for Amazon & DTC Brands',
+  name: 'Agentic Engine Optimization (AEO) and AI Commerce',
   description:
-    'AI shopping agents are buying on behalf of your customers right now. Alexa for Shopping is live with auto-restock. Sparky drove 35% higher AOV in Q1 FY27. Agentic Engine Optimization (AEO) ensures your products get chosen. SEO gets you found. GEO gets you recommended. AEO gets you purchased.',
+    'Research on Agentic Engine Optimization (AEO): how AI shopping agents evaluate and buy products on behalf of customers. SEO makes products found, GEO makes them recommended, AEO makes them chosen.',
   url: `${SITE_URL}/aeo`,
   datePublished: '2026-03-19',
   dateModified: '2026-05-23',
@@ -51,7 +51,7 @@ const pageSchema = {
     '@type': 'Person',
     name: 'Robert Hu',
     url: `${SITE_URL}/about`,
-    jobTitle: 'E-commerce Strategist',
+    jobTitle: 'Commerce and Technology Researcher',
     sameAs: [
       'https://www.linkedin.com/in/theroberthu',
       'https://x.com/theroberthu',

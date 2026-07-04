@@ -21,14 +21,16 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
+const SITE_DESCRIPTION =
+  'Robert Hu researches how technology changes commerce, from AI and digital transformation to product discovery and the systems shaping how products are discovered, evaluated, and bought. A public research notebook.'
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
+    default: 'Robert Hu - How Technology Changes Commerce',
     template: '%s | Robert Hu',
   },
-  description:
-    'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
+  description: SITE_DESCRIPTION,
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },
@@ -42,23 +44,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: 'Robert Hu',
-    title: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
-    description:
-      'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
+    title: 'Robert Hu - How Technology Changes Commerce',
+    description: SITE_DESCRIPTION,
     images: [
       {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
+        alt: 'Robert Hu - How Technology Changes Commerce',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Robert Hu - Writing on AI Commerce, GEO, and AEO',
-    description:
-      'Writing on Generative Engine Optimization, Agentic Engine Optimization, and what marketplace brands actually need to do as Rufus, Sparky, ChatGPT, and the agentic surfaces redefine product discovery.',
+    title: 'Robert Hu - How Technology Changes Commerce',
+    description: SITE_DESCRIPTION,
     images: ['/images/og-default.png'],
   },
   alternates: {
@@ -80,7 +80,9 @@ const personSchema = {
   '@type': 'Person',
   name: 'Robert Hu',
   url: SITE_URL,
-  jobTitle: 'E-commerce Strategist',
+  jobTitle: 'Commerce and Technology Researcher',
+  description:
+    'Robert Hu researches how technology changes commerce, from AI and digital transformation to product discovery.',
   sameAs: [
     SOCIAL_LINKS.linkedin,
     SOCIAL_LINKS.x,
@@ -93,7 +95,7 @@ const siteSchema = {
   '@type': 'WebSite',
   name: 'Robert Hu',
   url: SITE_URL,
-  description: 'Writing on Generative Engine Optimization, Agentic Engine Optimization, and the AI commerce shift for marketplace brands.',
+  description: 'A public research notebook on how technology changes commerce, covering AI, digital transformation, and product discovery.',
   publisher: { '@type': 'Person', name: 'Robert Hu', url: SITE_URL },
 }
 

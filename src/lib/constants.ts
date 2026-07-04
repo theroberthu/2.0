@@ -1,6 +1,6 @@
 export const SITE_URL = process.env.SITE_URL || 'https://theroberthu.com'
 export const SITE_NAME = 'Robert Hu'
-export const SITE_TAGLINE = 'E-commerce Strategist'
+export const SITE_TAGLINE = 'Researching how technology changes commerce'
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/theroberthu',
@@ -51,7 +51,7 @@ export function categoryFromSlug(slug: string): string | undefined {
 export const AUTHOR_INFO = {
   name: 'Robert Hu',
   url: 'https://theroberthu.com/about',
-  jobTitle: 'E-commerce Strategist',
+  jobTitle: 'Commerce and Technology Researcher',
   sameAs: [
     'https://www.linkedin.com/in/theroberthu',
     'https://x.com/theroberthu',

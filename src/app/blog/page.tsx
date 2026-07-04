@@ -6,15 +6,16 @@ import { SITE_URL } from '@/lib/constants'
 
 export const revalidate = 60
 
+const BLOG_DESCRIPTION =
+  'A public research notebook on how technology changes commerce. Analysis of AI, digital transformation, product discovery, and the systems shaping how products are discovered, evaluated, and bought.'
+
 export const metadata: Metadata = {
-  title: 'E-commerce Strategy Blog',
-  description:
-    "Amazon, Walmart, AI, and GEO insights for brand owners doing $500K\u2013$5M. Clear analysis on what's changing and what to do about it. No filler.",
+  title: 'Research Notebook',
+  description: BLOG_DESCRIPTION,
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'E-commerce Strategy Blog | Robert Hu',
-    description:
-      "Amazon, Walmart, AI, and GEO insights for brand owners doing $500K\u2013$5M. Clear analysis on what's changing and what to do about it. No filler.",
+    title: 'Research Notebook | Robert Hu',
+    description: BLOG_DESCRIPTION,
     url: `${SITE_URL}/blog`,
   },
 }
@@ -22,9 +23,9 @@ export const metadata: Metadata = {
 const blogCollectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Blog - Robert Hu',
+  name: 'Research Notebook - Robert Hu',
   description:
-    'Actionable insights on e-commerce strategy, AI integration, and digital transformation for growing brands.',
+    'A public research notebook on how technology changes commerce, covering AI, digital transformation, and product discovery.',
   url: `${SITE_URL}/blog`,
   isPartOf: {
     '@type': 'WebSite',
