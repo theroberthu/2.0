@@ -221,17 +221,60 @@ export default async function BlogPostPage(props: Props) {
   const faqSchema = generateFAQSchema(post)
   const videoSchema = generateVideoSchema(post)
 
-  // Fetch related posts
-  let relatedPosts: typeof post[] = []
-  const relatedPostSlugs = post.schema_json?.related_posts
-  if (relatedPostSlugs && relatedPostSlugs.length > 0) {
+  // Build the "Related Research" cluster. Priority order:
+  //   1. Curated slugs in schema_json.related_posts (author override)
+  //   2. Auto-fill from the same category (the topical cluster)
+  //   3. Recency fallback so the section is always populated
+  // Same-category linking is what signals topical clusters to both readers
+  // and AI systems, so the automatic step is the important one.
+  const RELATED_LIMIT = 3
+  const relatedPosts: typeof post[] = []
+  const seenSlugs = new Set<string>([post.slug])
+
+  const addPosts = (rows: typeof post[] | null) => {
+    for (const p of rows ?? []) {
+      if (relatedPosts.length >= RELATED_LIMIT) break
+      if (!seenSlugs.has(p.slug)) {
+        relatedPosts.push(p)
+        seenSlugs.add(p.slug)
+      }
+    }
+  }
+
+  // 1. Curated related posts
+  const curatedSlugs: string[] = post.schema_json?.related_posts ?? []
+  if (curatedSlugs.length > 0) {
     const { data } = await supabase
       .from('blog_posts')
       .select('*')
-      .in('slug', relatedPostSlugs)
+      .in('slug', curatedSlugs)
       .eq('status', 'published')
-      .limit(3)
-    relatedPosts = data || []
+    addPosts(data)
+  }
+
+  // 2. Same category (topical cluster)
+  if (relatedPosts.length < RELATED_LIMIT && post.category) {
+    const { data } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('status', 'published')
+      .eq('category', post.category)
+      .neq('slug', post.slug)
+      .order('published_at', { ascending: false })
+      .limit(RELATED_LIMIT + seenSlugs.size)
+    addPosts(data)
+  }
+
+  // 3. Recency fallback
+  if (relatedPosts.length < RELATED_LIMIT) {
+    const { data } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('status', 'published')
+      .neq('slug', post.slug)
+      .order('published_at', { ascending: false })
+      .limit(RELATED_LIMIT + seenSlugs.size)
+    addPosts(data)
   }
 
   const ctaProps = getCTAProps()
@@ -346,7 +389,10 @@ export default async function BlogPostPage(props: Props) {
       {relatedPosts.length > 0 && (
         <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
           <div className="max-w-6xl mx-auto px-5 sm:px-8">
-            <h2 className="text-xl font-bold text-white mb-8 tracking-tight">Related Posts</h2>
+            <div className="mb-8">
+              <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">Keep Exploring</span>
+              <h2 className="text-xl font-bold text-white tracking-tight">Related Research</h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((rp) => (
                 <BlogCard key={rp.id} post={rp} />
