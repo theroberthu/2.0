@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              Writing on the AI commerce shift, Generative Engine Optimization, and Agentic Engine Optimization for marketplace brands.
+              Researching how technology changes commerce through AI, digital transformation, product discovery, and operator-led experimentation.
             </p>
           </div>
 
@@ -88,22 +88,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Research */}
           <div className="md:col-span-4">
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-muted/70 mb-5">
-              Newsletter
+              Research
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">
-              Weekly e-commerce insights on LinkedIn.
+              A public research notebook on how technology changes commerce. New writing published regularly.
             </p>
-            <a
-              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/blog"
               className="inline-block border border-brand-gold text-brand-gold text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold hover:text-white transition-all duration-200"
             >
-              Subscribe to Hu&apos;s Weekly Hoot
-            </a>
+              Read the research
+            </Link>
           </div>
         </div>
       </div>
