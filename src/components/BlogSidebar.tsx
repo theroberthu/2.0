@@ -57,10 +57,10 @@ export default function BlogSidebar({ toc = [] }: BlogSidebarProps) {
           </span>
 
           <h3 className="text-[0.9375rem] font-bold text-white leading-snug mb-2">
-            Stay ahead of the AI commerce shift
+            Follow the research
           </h3>
           <p className="text-[0.8125rem] text-gray-400 leading-relaxed mb-4">
-            Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.
+            Research notes and analysis on how AI, digital transformation, and product discovery are changing commerce.
           </p>
 
           <a
@@ -74,7 +74,7 @@ export default function BlogSidebar({ toc = [] }: BlogSidebarProps) {
 
           <div className="mt-4 pt-4 border-t border-white/[0.06]">
             <p className="text-[0.75rem] text-gray-500 leading-relaxed">
-              E-commerce strategy, Amazon, GEO &amp; marketplace growth.
+              AI, digital transformation, product discovery, and customer behavior.
             </p>
           </div>
         </div>

@@ -9,8 +9,8 @@ interface CTABannerProps {
 }
 
 export default function CTABanner({
-  heading = 'Stay Ahead of the AI Commerce Shift',
-  subtext = 'Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.',
+  heading = 'Follow the research',
+  subtext = 'I publish research notes and analysis on how AI, digital transformation, product discovery, and customer behavior are changing commerce.',
   buttonText = "Subscribe to Hu's Weekly Hoot",
   buttonHref = 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232',
   external = true,

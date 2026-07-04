@@ -22,45 +22,6 @@ export const dynamicParams = true
 
 
 // Category-specific inline CTA copy
-const INLINE_CTA_COPY: Record<string, { headline: string; bullets: [string, string] }> = {
-  'GEO & SEO': {
-    headline: 'Is Your Product Data AI-Ready?',
-    bullets: [
-      'Audit of your top listings for AI readability across Rufus, ChatGPT, and Perplexity',
-      'Specific gaps in your WHO, WHEN, WHERE, and WHY content that cost you recommendations',
-    ],
-  },
-  'E-commerce Strategy': {
-    headline: 'What Would a Strategist Change First?',
-    bullets: [
-      'Honest assessment of your biggest growth lever right now (not a generic checklist)',
-      'A prioritized action plan based on your catalog, margins, and current channel mix',
-    ],
-  },
-  'Digital Marketing': {
-    headline: 'Is Your Ad Spend Working Hard Enough?',
-    bullets: [
-      'Quick read on where your marketing dollars are leaking versus compounding',
-      'Channel-specific recommendations based on your current performance data',
-    ],
-  },
-  'Digital Transformation': {
-    headline: 'Where Is Manual Work Slowing You Down?',
-    bullets: [
-      'Identification of the 1-2 processes costing you the most time and margin',
-      'A realistic automation roadmap that matches your current tech stack and budget',
-    ],
-  },
-}
-
-const DEFAULT_CTA_COPY = {
-  headline: 'Want a Second Opinion on Your Strategy?',
-  bullets: [
-    'Honest assessment of your biggest growth opportunity right now',
-    'A clear next step tailored to your brand, not a generic playbook',
-  ] as [string, string],
-}
-
 /**
  * Walk every <h2> in the HTML, slugify its text, inject an id attribute,
  * and return both the rewritten HTML and a TOC items array. Idempotent:
@@ -106,7 +67,7 @@ function buildTableOfContents(html: string): {
  * Split HTML content at the Nth <h2> tag and inject an inline CTA card.
  * Uses category to generate contextual copy.
  */
-function injectInlineCTA(html: string, category?: string | null, afterH2Index = 1): string {
+function injectInlineCTA(html: string, afterH2Index = 1): string {
   const h2Regex = /<h2[\s>]/gi
   let match
   let count = 0
@@ -126,13 +87,11 @@ function injectInlineCTA(html: string, category?: string | null, afterH2Index = 
 
   if (insertAt === -1) return html
 
-  const copy = (category && INLINE_CTA_COPY[category]) || DEFAULT_CTA_COPY
-
   const callout = `<div class="blog-inline-cta-card">
   <div class="blog-inline-cta-card-accent"></div>
   <p class="blog-inline-cta-card-label">Newsletter</p>
-  <p class="blog-inline-cta-card-headline">${copy.headline}</p>
-  <p class="blog-inline-cta-card-sub">Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.</p>
+  <p class="blog-inline-cta-card-headline">Follow the research</p>
+  <p class="blog-inline-cta-card-sub">Research notes and analysis on how AI, digital transformation, product discovery, and customer behavior are changing commerce.</p>
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232" class="blog-inline-cta-card-btn" target="_blank" rel="noopener noreferrer">Subscribe to Hu's Weekly Hoot</a>
 </div>`
 
@@ -193,12 +152,12 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
-// Rotating CTA based on slug hash
+// Invitation to follow Robert's research. Newsletter functionality unchanged.
 function getCTAProps() {
-  // Newsletter-only during the consulting pause. No services promotion on blog posts.
   return {
-    heading: 'Stay Ahead of the AI Commerce Shift',
-    subtext: 'Ongoing GEO and AEO analysis for marketplace sellers, straight to your inbox.',
+    heading: 'Follow the research',
+    subtext:
+      'I publish research notes and analysis on how AI, digital transformation, product discovery, and customer behavior are changing commerce.',
     buttonText: "Subscribe to Hu's Weekly Hoot",
     buttonHref: 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232',
     external: true,
@@ -371,7 +330,7 @@ export default async function BlogPostPage(props: Props) {
               {post.content ? (
                 <div
                   className="prose-custom-dark"
-                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(tocHtml, post.category) }}
+                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(tocHtml) }}
                 />
               ) : (
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>
