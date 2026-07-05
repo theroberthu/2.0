@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import LeadForm from '@/components/LeadForm'
 import { SITE_URL } from '@/lib/constants'
 
 const GEO_DESCRIPTION =
@@ -53,7 +52,7 @@ const articleSchema = {
     },
   },
   datePublished: '2026-04-30T12:00:00-07:00',
-  dateModified: '2026-04-30T12:00:00-07:00',
+  dateModified: '2026-07-05T12:00:00-07:00',
   mainEntityOfPage: `${SITE_URL}/geo`,
   url: `${SITE_URL}/geo`,
 }
@@ -79,7 +78,7 @@ const FAQS: { q: string; a: string; link?: string }[] = [
   },
   {
     q: 'How do I know if my products are showing up in AI search?',
-    a: 'Run prompts in ChatGPT, Claude, Gemini, and Perplexity that match how your buyers describe their need. Ask Rufus on the Amazon app for category recommendations. Track which brands get cited and where you appear. RecoScope automates this across 10 categories on a weekly cadence and is the fastest way to build a baseline. For a custom audit, the GEO audit covers your specific category and your top SKUs.',
+    a: 'Run prompts in ChatGPT, Claude, Gemini, and Perplexity that match how your buyers describe their need. Ask Rufus on the Amazon app for category recommendations. Track which brands get cited and where you appear. RecoScope automates this across 10 categories on a weekly cadence and is the fastest way to build a baseline.',
   },
   {
     q: 'How long does GEO take to show results?',
@@ -92,7 +91,7 @@ const FAQS: { q: string; a: string; link?: string }[] = [
   },
   {
     q: 'Can I do GEO myself?',
-    a: 'The basics, yes. You can run prompt-based diagnostics in ChatGPT, Claude, Gemini, and Perplexity, audit your own listings against the 6-dimension framework, and add schema markup to your DTC site. The strategic layer (cross-platform data consistency, category-specific positioning, longitudinal tracker analysis) is where most brands hit a wall and bring in outside help.',
+    a: 'The basics, yes. You can run prompt-based diagnostics in ChatGPT, Claude, Gemini, and Perplexity, audit your own listings against the 6-dimension framework, and add schema markup to your DTC site. The strategic layer (cross-platform data consistency, category-specific positioning, longitudinal tracker analysis) is where most brands hit a wall.',
   },
   {
     q: 'Does GEO work for Walmart sellers the same way it works for Amazon?',
@@ -275,6 +274,40 @@ const RECOSCOPE_TRACKERS = [
   { category: 'Protein Powder', type: 'Monthly Tracker', href: 'https://getrecoscope.com/tracker/evergreen/protein-powder' },
 ]
 
+const KEY_TAKEAWAYS = [
+  'GEO is the discipline of structuring your product data so AI engines like Amazon Rufus, Walmart Sparky, ChatGPT, Gemini, and Perplexity recommend your products when buyers ask. It is a layer on top of SEO, not a replacement for it.',
+  'Ecommerce GEO (getting products recommended inside AI shopping flows) is a different discipline from publisher GEO (getting content cited in AI answers). Marketplace brands should prioritize the ecommerce track.',
+  'Four surfaces drive most AI-influenced product discovery today: Amazon Rufus, Walmart Sparky, ChatGPT and Perplexity, and Google AI Overviews. Each reads different signals and shows different category coverage.',
+  'The 6-dimension framework (WHO, WHEN, WHERE, WHY, WHAT, and AI Retrievability) scores whether an AI engine can match a listing to a buyer’s stated need. Vague data gets skipped.',
+  'Live RecoScope tracking shows the AI top 5 rotates run to run, category concentration varies widely, and the brands with the cleanest structured data compound visibility over time.',
+  'GEO is the foundation for AEO, where AI agents complete the purchase. Get the GEO data structure right first, then layer AEO as agent-driven buying grows.',
+]
+
+// Internal articles and topic pages that already exist. Pages that do not exist
+// yet are left as TODO comments in the Related Reading section rather than linked.
+const RELATED_READING: { title: string; desc: string; href: string }[] = [
+  {
+    title: 'Amazon Rufus and Alexa for Shopping',
+    desc: 'How to structure Amazon listings for Amazon’s AI shopping assistant.',
+    href: '/geo/alexa-for-shopping',
+  },
+  {
+    title: 'Walmart Sparky',
+    desc: 'The GEO playbook for Walmart’s AI assistant across walmart.com, ChatGPT, and Gemini.',
+    href: '/geo/walmart-sparky',
+  },
+  {
+    title: 'Agentic Engine Optimization (AEO)',
+    desc: 'What changes when AI shopping agents complete the purchase, not just the recommendation.',
+    href: '/aeo',
+  },
+  {
+    title: 'GEO vs SEO for marketplace sellers',
+    desc: 'The five SEO tactics that actively hurt AI visibility in 2026.',
+    href: '/blog/geo-vs-seo-marketplace-sellers',
+  },
+]
+
 export default function GEOPage() {
   return (
     <>
@@ -308,13 +341,6 @@ export default function GEOPage() {
           <p className="text-base text-gray-400 leading-relaxed mb-8">
             Most GEO content is written for content publishers and B2B SaaS. This page is written for the brand owner doing $500K to $5M on Amazon, Walmart, or both. The frameworks, examples, and live data are all built around how AI surfaces actually evaluate marketplace listings, not how they cite blog posts.
           </p>
-
-          <Link
-            href="#geo-audit-form"
-            className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Find My GEO Gaps - Free
-          </Link>
         </div>
       </section>
 
@@ -598,7 +624,7 @@ export default function GEOPage() {
           </div>
 
           <p className="text-sm text-brand-accent/80 font-medium border-l-2 border-brand-accent pl-4 max-w-3xl">
-            RecoScope is the only platform tracking AI recommendations across four general engines plus Rufus and Sparky on a weekly cadence. That is the foundation behind every audit and strategy engagement.
+            RecoScope tracks AI recommendations across four general engines plus Rufus and Sparky on a weekly cadence. That is the dataset behind the analysis on this page.
           </p>
         </div>
       </section>
@@ -684,67 +710,59 @@ export default function GEOPage() {
               </div>
             ))}
           </div>
-
-          <p className="text-base text-gray-300 leading-relaxed">
-            For ongoing analysis of how AI engines recommend products across all six surfaces,{' '}
-            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
-              subscribe to Hu&apos;s Weekly Hoot
-            </a>
-            . Each issue covers the GEO and AEO playbooks and the prioritized fixes that compound fastest.
-          </p>
         </div>
       </section>
 
-      {/* SECTION 11: Embedded Audit Form (UNCHANGED) */}
-      <section id="geo-audit-form" className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/80 via-brand-dark to-brand-dark" />
-        <div className="absolute top-0 right-0 w-72 h-72 bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-56 h-56 bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
+      {/* SECTION 11: Editorial ending - Key Takeaways, Related Reading, update note */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          {/* Key Takeaways */}
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-8">
+            Key takeaways
+          </h2>
+          <ul className="space-y-4 mb-16">
+            {KEY_TAKEAWAYS.map((point) => (
+              <li key={point} className="flex gap-3 items-start">
+                <svg className="w-4 h-4 text-brand-accent mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <p className="text-[15px] text-gray-300 leading-relaxed">{point}</p>
+              </li>
+            ))}
+          </ul>
 
-        <div className="relative max-w-5xl mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
-            {/* Left: value pitch */}
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4 block">Free Audit</span>
-              <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
-                Get a Free GEO Audit for Your Brand
-              </h2>
-              <p className="text-sm text-gray-400 leading-relaxed mb-8">
-                Find out how your products show up in AI-powered search and what to fix first.
-              </p>
-
-              <div className="space-y-5">
-                {[
-                  'I search for your products in ChatGPT, Perplexity & Google AI',
-                  '15 minutes. No pitch. No obligation.',
-                  'Walk away with a prioritized action plan',
-                ].map((text) => (
-                  <div key={text} className="flex gap-3 items-start">
-                    <svg className="w-5 h-5 text-brand-gold mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    <span className="text-sm text-gray-300">{text}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-10">
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
-                >
-                  Read my latest GEO insights
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Related Reading */}
+          <h2 className="text-xl font-bold text-white tracking-tight mb-5">
+            Related reading
+          </h2>
+          <ul className="border-t border-white/[0.06] mb-10">
+            {/* TODO: Add a dedicated "AI Commerce" topic/hub page and link it here once it exists. */}
+            {/* TODO: Add a "Google AI Mode" article or topic page and link it here once it exists. */}
+            {RELATED_READING.map((item) => (
+              <li key={item.href} className="border-b border-white/[0.06]">
+                <Link href={item.href} className="group flex items-start justify-between gap-4 py-4">
+                  <span className="min-w-0">
+                    <span className="block text-[15px] font-medium text-gray-200 group-hover:text-brand-accent transition-colors duration-200">
+                      {item.title}
+                    </span>
+                    <span className="block text-[13px] text-gray-500 mt-0.5 leading-relaxed">
+                      {item.desc}
+                    </span>
+                  </span>
+                  <svg className="w-4 h-4 text-gray-600 mt-1 shrink-0 group-hover:text-brand-accent transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-              </div>
-            </div>
+              </li>
+            ))}
+          </ul>
 
-            {/* Right: embedded form */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-2xl p-6 md:p-10">
-              <LeadForm />
-            </div>
+          {/* Update note */}
+          <div className="pt-2">
+            <p className="text-[13px] text-gray-500">Last updated: July 2026</p>
+            <p className="text-[13px] text-gray-500 mt-1">
+              This guide is updated as AI commerce platforms continue to evolve.
+            </p>
           </div>
         </div>
       </section>
