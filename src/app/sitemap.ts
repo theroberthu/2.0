@@ -3,9 +3,10 @@ import { supabase } from '@/lib/supabase'
 
 const SITE_URL = process.env.SITE_URL || 'https://theroberthu.com'
 
-// NOTE: The /services, /services/* and /geo-audit consulting pages were removed
-// from the sitemap in the Archive and Evolve transition. Their routes stay live
-// but are noindex, pending a rebuild as research hubs.
+// NOTE: The /services and /services/* consulting pages were removed from the
+// sitemap in the Archive and Evolve transition. Their routes stay live but are
+// noindex, pending a rebuild as research hubs. The /geo-audit page was retired
+// entirely: the route is deleted and 301-redirected to /geo (see next.config.mjs).
 
 // Last-reviewed dates for stable pages - update when content changes
 const STATIC_LAST_MODIFIED = {

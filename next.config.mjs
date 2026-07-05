@@ -54,6 +54,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Retired consulting lead-gen page; authority consolidated into /geo
+        source: '/geo-audit',
+        destination: '/geo',
+        permanent: true,
+      },
+      {
         source: '/contact',
         destination: '/free-strategy-session',
         permanent: true,
