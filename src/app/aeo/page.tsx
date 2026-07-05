@@ -35,7 +35,7 @@ const pageSchema = {
     'Research on Agentic Engine Optimization (AEO): how AI shopping agents evaluate and buy products on behalf of customers. SEO makes products found, GEO makes them recommended, AEO makes them chosen.',
   url: `${SITE_URL}/aeo`,
   datePublished: '2026-03-19',
-  dateModified: '2026-05-23',
+  dateModified: '2026-07-05',
   mainEntityOfPage: `${SITE_URL}/aeo`,
   isPartOf: {
     '@type': 'WebSite',
@@ -86,12 +86,12 @@ const FAQS = [
     a: 'Different things, same acronym. Answer Engine Optimization focuses on featured snippets and voice search answers. Agentic Engine Optimization (what this page is about) focuses on AI agents that evaluate, compare, and purchase products on behalf of users. We\'re talking about agents that shop, not search engines that answer questions.',
   },
   {
-    q: 'When should a $500K\u20135M brand start thinking about AEO?',
-    a: 'Now. The window for treating this as theoretical is closed. Alexa for Shopping is live with auto-restock. Sparky shifted from discovery to reorder in Q1 FY27. Five major research firms (Morgan Stanley, McKinsey, Gartner, IDC, Juniper) agree agentic commerce reaches 10 to 20 percent of US e-commerce by 2030. The foundation work is the same as GEO, so it has zero downside risk. Start now.',
+    q: 'When should a $500K-5M brand start thinking about AEO?',
+    a: 'Sooner than most brands assume. The window for treating this as theoretical has closed: Alexa for Shopping is live with auto-restock, and Sparky shifted from discovery to reorder in Q1 FY27. Five major research firms (Morgan Stanley, McKinsey, Gartner, IDC, Juniper) agree agentic commerce reaches 10 to 20 percent of US e-commerce by 2030. Because the foundation work is the same data discipline GEO already requires, preparing for AEO does not compete with the rest of the roadmap.',
   },
   {
     q: 'Can I do AEO myself?',
-    a: 'You can start by auditing your structured data completeness: check whether your listings have every attribute an agent would need to make a confident purchase decision. But a strategic AEO readiness assessment looks at the full picture across data, trust signals, pricing, fulfillment, and cross-platform consistency, which is where working with a specialist helps.',
+    a: 'The foundational work, yes. Start by checking your structured data completeness: does every listing carry the attributes an agent needs to make a confident purchase decision? From there the fuller picture spans trust signals, pricing context, fulfillment clarity, review quality, and cross-platform consistency. The same data discipline that improves GEO is what prepares a catalog for agents, so most of the work compounds across both.',
   },
   {
     q: 'What if I only sell on Amazon?',
@@ -213,6 +213,50 @@ const EVALUATION_FACTORS = [
   },
 ]
 
+const KEY_TAKEAWAYS = [
+  'Agentic Engine Optimization (AEO) is the practice of structuring your products and data so AI shopping agents can evaluate, compare, and buy them on behalf of customers.',
+  'It is operational now, not a 2030 forecast. Amazon Alexa for Shopping is live with auto-restock and scheduled purchases, and Walmart Sparky users show 35% higher average order values with usage shifting toward reorder.',
+  'Agents ignore hero images, ad placements, and clever copy. They evaluate structured data, pricing context, fulfillment signals, review sentiment, and cross-platform consistency.',
+  'AEO sits on top of GEO, which sits on top of SEO. SEO makes products found, GEO makes them recommended, AEO makes them chosen. Skip a layer and the ones above it weaken.',
+  'Five major research firms converge on agentic commerce reaching 10 to 20 percent of US ecommerce by 2030, so the forecast risk has collapsed.',
+  'The work that wins agentic visibility is the same data discipline that wins organic AI recommendation, so a strong GEO foundation is already AEO preparation.',
+]
+
+// Internal pages that already exist. Every href below was verified to resolve.
+// "Amazon Alexa for Shopping" is used as the primary name (not Rufus).
+const CONTINUE_EXPLORING: { title: string; desc: string; href: string }[] = [
+  {
+    title: 'Generative Engine Optimization (GEO)',
+    desc: 'The discovery layer beneath AEO: how AI engines recommend products.',
+    href: '/geo',
+  },
+  {
+    title: 'Amazon Alexa for Shopping',
+    desc: 'How Amazon’s AI shopping agent evaluates, recommends, and reorders products.',
+    href: '/geo/alexa-for-shopping',
+  },
+  {
+    title: 'Walmart Sparky',
+    desc: 'Walmart’s AI assistant across walmart.com, ChatGPT, and Gemini.',
+    href: '/geo/walmart-sparky',
+  },
+  {
+    title: 'GEO vs SEO for marketplace sellers',
+    desc: 'The five SEO tactics that actively hurt AI visibility in 2026.',
+    href: '/blog/geo-vs-seo-marketplace-sellers',
+  },
+  {
+    title: 'Google AI Mode',
+    desc: 'How Google’s AI Mode cites and surfaces products in AI answers.',
+    href: '/blog/google-ai-overview-ai-mode-citation-teardown-geo',
+  },
+  {
+    title: 'The Agentic Commerce Consensus',
+    desc: 'What five major research firms forecast for AI shopping agents.',
+    href: '/blog/agentic-commerce-consensus-research-forecasts-marketplace-sellers',
+  },
+]
+
 export default function AEOPage() {
   return (
     <>
@@ -245,19 +289,33 @@ export default function AEOPage() {
             advantage. The ones waiting will not know what happened.
           </p>
 
-          {/* Tagline progression */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-0">
-            <span className="text-sm sm:text-base font-semibold text-gray-500 sm:pr-3">
-              SEO gets you found.
-            </span>
-            <span className="hidden sm:block w-px h-5 bg-white/20" />
-            <span className="text-sm sm:text-base font-semibold text-brand-accent sm:px-3">
-              GEO gets you recommended.
-            </span>
-            <span className="hidden sm:block w-px h-5 bg-white/20" />
-            <span className="text-sm sm:text-base font-bold text-brand-gold sm:pl-3">
-              AEO gets you purchased.
-            </span>
+          {/* Tagline progression. Each sentence is its own line with real
+              whitespace so the text reads correctly to crawlers and screen
+              readers, not just visually. */}
+          <p className="text-sm sm:text-base font-semibold leading-relaxed">
+            <span className="text-gray-400">SEO gets you found.</span>{' '}
+            <span className="text-brand-accent">GEO gets you recommended.</span>{' '}
+            <span className="text-brand-gold">AEO gets you purchased.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* ───────────────────── In Short (primer) ───────────────────── */}
+      <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">
+            In Short
+          </span>
+          <div className="space-y-4 text-base text-gray-300 leading-relaxed">
+            <p>
+              <strong className="text-white font-semibold">Agentic Engine Optimization (AEO)</strong> is the practice of structuring your products, listings, and data so AI shopping agents can evaluate, compare, and buy them on behalf of customers.
+            </p>
+            <p>
+              It matters because those agents are already live and transacting. Amazon Alexa for Shopping is buying with auto-restock and scheduled deliveries, and Walmart Sparky users show 35% higher average order values. When the shopper is an algorithm, your product data, not your ad budget, decides whether you win the sale.
+            </p>
+            <p>
+              Where <Link href="/geo" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">GEO</Link> gets your product recommended inside an AI answer, AEO gets it chosen and purchased by the agent. GEO is discovery. AEO is the transaction.
+            </p>
           </div>
         </div>
       </section>
@@ -611,14 +669,14 @@ export default function AEOPage() {
         </div>
       </section>
 
-      {/* ───────────────────── When Should You Act? ───────────────────── */}
+      {/* ───────────────────── How the Shift Unfolds ───────────────────── */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">
-            Readiness
+            Timeline
           </span>
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-10">
-            When Should You Act?
+            How the Shift Unfolds
           </h2>
 
           <div className="space-y-6">
@@ -651,7 +709,7 @@ export default function AEOPage() {
             <div className="bg-white/[0.05] backdrop-blur-md border border-brand-gold/20 rounded-xl p-6 md:p-7">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-brand-gold/80 bg-brand-gold/[0.1] px-2.5 py-1 rounded-full">
-                  Next 6&ndash;12 Months
+                  Next 6-12 Months
                 </span>
                 <span className="text-[13px] font-semibold text-white">
                   Default-Reorder Positions Lock In
@@ -701,8 +759,9 @@ export default function AEOPage() {
           {/* Key message */}
           <div className="mt-8 py-5 border-l-2 border-brand-gold pl-4">
             <p className="text-sm text-brand-gold/90 font-medium leading-relaxed">
-              The window for treating this as theoretical is closed. Start now.
-              Starting means GEO.
+              The window for treating this as theoretical has closed. The
+              foundation work is the same data discipline that GEO already
+              requires, so the two compound together.
             </p>
           </div>
         </div>
@@ -774,69 +833,55 @@ export default function AEOPage() {
         </div>
       </section>
 
-      {/* ───────────────────── CTA ───────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/80 via-brand-dark to-brand-dark" />
-        <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-56 h-56 bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
-
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
-          <h2 className="text-2xl md:text-[2rem] font-bold text-white leading-snug mb-4 tracking-tight">
-            This Shift Isn&apos;t Waiting for You to Be Ready
+      {/* ───────────────────── Editorial ending: Key Takeaways, Continue Exploring, update note ───────────────────── */}
+      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          {/* Key Takeaways */}
+          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-8">
+            Key takeaways
           </h2>
-          <p className="text-sm text-gray-400 mb-10 max-w-lg mx-auto">
-            Agentic commerce is operational now. The brands acting in Q2 2026
-            compound a structural advantage that is hard to reverse. Start with
-            the GEO foundation, and follow the analysis on where your brand
-            likely stands on the AEO readiness spectrum.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-brand-gold text-white font-semibold px-8 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-            >
-              Subscribe to Hu&apos;s Weekly Hoot
-            </a>
-            <Link
-              href="/geo"
-              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
-            >
-              Start with GEO
-              <svg
-                className="w-3.5 h-3.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
-          </div>
-          <div className="mt-5">
-            <Link
-              href="/blog"
-              className="text-[12px] text-gray-500 hover:text-gray-300 transition-colors duration-200"
-            >
-              Read my latest thinking &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
+          <ul className="space-y-4 mb-16">
+            {KEY_TAKEAWAYS.map((point) => (
+              <li key={point} className="flex gap-3 items-start">
+                <svg className="w-4 h-4 text-brand-accent mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <p className="text-[15px] text-gray-300 leading-relaxed">{point}</p>
+              </li>
+            ))}
+          </ul>
 
-      {/* ───────────────────── Closing Line ───────────────────── */}
-      <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-          <p className="text-base md:text-lg font-medium text-gray-500 italic">
-            Your next customer might not be a person. Make sure your product is
-            ready anyway.
-          </p>
+          {/* Continue Exploring AI Commerce */}
+          <h2 className="text-xl font-bold text-white tracking-tight mb-5">
+            Continue exploring AI Commerce
+          </h2>
+          <ul className="border-t border-white/[0.06] mb-10">
+            {CONTINUE_EXPLORING.map((item) => (
+              <li key={item.href} className="border-b border-white/[0.06]">
+                <Link href={item.href} className="group flex items-start justify-between gap-4 py-4">
+                  <span className="min-w-0">
+                    <span className="block text-[15px] font-medium text-gray-200 group-hover:text-brand-accent transition-colors duration-200">
+                      {item.title}
+                    </span>
+                    <span className="block text-[13px] text-gray-500 mt-0.5 leading-relaxed">
+                      {item.desc}
+                    </span>
+                  </span>
+                  <svg className="w-4 h-4 text-gray-600 mt-1 shrink-0 group-hover:text-brand-accent transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Update note */}
+          <div className="pt-2">
+            <p className="text-[13px] text-gray-500">Last updated: July 2026</p>
+            <p className="text-[13px] text-gray-500 mt-1">
+              This guide is updated as AI commerce platforms continue to evolve.
+            </p>
+          </div>
         </div>
       </section>
     </>
