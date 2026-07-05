@@ -29,8 +29,12 @@ export function generateArticleSchema(post: BlogPost) {
       '@type': 'WebPage',
       '@id': `${SITE_URL}/blog/${post.slug}`,
     },
+    // Social scrapers and Google prefer raster images. SVG cards are served as
+    // pre-rendered PNG via the /api/og route, matching the page's OG/Twitter meta.
     image: post.og_image
-      ? `${SITE_URL}${post.og_image}`
+      ? post.og_image.endsWith('.svg')
+        ? `${SITE_URL}/api/og/${post.slug}`
+        : `${SITE_URL}${post.og_image}`
       : `${SITE_URL}/images/theroberthulogo.png`,
     articleSection: post.category || 'E-commerce Strategy',
     keywords: post.tags || [],

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/geo/alexa-for-shopping`,
     type: 'article',
     siteName: 'Robert Hu',
-    images: [`${SITE_URL}/images/geo/alexa-for-shopping.svg`],
+    images: [`${SITE_URL}/images/geo/alexa-for-shopping.png`],
   },
   twitter: {
     card: 'summary_large_image',
@@ -57,7 +57,7 @@ const articleSchema = {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/geo/alexa-for-shopping`,
   },
-  image: `${SITE_URL}/images/geo/alexa-for-shopping.svg`,
+  image: `${SITE_URL}/images/geo/alexa-for-shopping.png`,
 }
 
 const breadcrumbSchema = {

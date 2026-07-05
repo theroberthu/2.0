@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/geo/walmart-sparky`,
     type: 'article',
     siteName: 'Robert Hu',
-    images: [`${SITE_URL}/images/geo/walmart-sparky.svg`],
+    images: [`${SITE_URL}/images/geo/walmart-sparky.png`],
   },
   twitter: {
     card: 'summary_large_image',
@@ -57,7 +57,7 @@ const articleSchema = {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/geo/walmart-sparky`,
   },
-  image: `${SITE_URL}/images/geo/walmart-sparky.svg`,
+  image: `${SITE_URL}/images/geo/walmart-sparky.png`,
 }
 
 const breadcrumbSchema = {
