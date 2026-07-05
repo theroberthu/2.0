@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     description: GEO_DESCRIPTION,
     url: `${SITE_URL}/geo`,
     type: 'website',
+    images: [
+      {
+        url: '/images/geo/geo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Generative Engine Optimization for Ecommerce - Robert Hu',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,15 +31,17 @@ export const metadata: Metadata = {
     title: 'Generative Engine Optimization (GEO) and AI Product Discovery | Robert Hu',
     description:
       'Research on how AI engines like Rufus, Sparky, ChatGPT, Gemini, and Perplexity recommend products.',
+    images: ['/images/geo/geo.svg'],
   },
 }
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Generative Engine Optimization (GEO) and AI Product Discovery',
+  headline: 'Generative Engine Optimization for Ecommerce',
   description:
     'Research on how AI engines recommend products, with the 6-dimension framework and live RecoScope data behind the shift in product discovery.',
+  image: `${SITE_URL}/images/geo/geo.svg`,
   author: {
     '@type': 'Person',
     name: 'Robert Hu',

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a2a32"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="#2d7d9a" opacity="0.6"/>
+
+  <!-- Panel divider -->
+  <line x1="610" y1="60" x2="610" y2="570" stroke="#2d7d9a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="72" y="60" width="4" height="510" rx="2" fill="#2d7d9a" opacity="0.3"/>
+
+  <!-- LEFT PANEL ============================================== -->
+
+  <!-- Category badge -->
+  <rect x="88" y="72" width="248" height="28" rx="4" fill="#2d7d9a" opacity="0.2"/>
+  <text x="212" y="91" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#2d7d9a" text-anchor="middle" letter-spacing="2">PILLAR RESOURCE &#183; GEO</text>
+
+  <!-- Headline (2 lines) -->
+  <text x="88" y="235" font-family="'Helvetica Neue', Arial, sans-serif" font-size="50" font-weight="700" fill="#ffffff" letter-spacing="-1">Generative Engine</text>
+  <text x="88" y="296" font-family="'Helvetica Neue', Arial, sans-serif" font-size="50" font-weight="700" fill="#42a5c8" letter-spacing="-1">Optimization.</text>
+
+  <!-- Divider -->
+  <line x1="88" y1="397" x2="570" y2="397" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Author -->
+  <text x="88" y="437" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#2d7d9a" font-weight="600" letter-spacing="1">ROBERT HU</text>
+  <text x="88" y="457" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
+
+  <!-- RIGHT PANEL: pulled quote ================================ -->
+
+  <!-- Oversized decorative opening quote mark -->
+  <text x="640" y="200" font-family="Georgia, 'Times New Roman', serif" font-size="220" font-weight="700" fill="#c5a94e" opacity="0.18">&#8220;</text>
+
+  <!-- Pull quote in gold italic, 3 lines at 34px -->
+  <text x="660" y="240" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="500" fill="#c5a94e" letter-spacing="-0.5">AI engines do</text>
+  <text x="660" y="284" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="500" fill="#c5a94e" letter-spacing="-0.5">not guess.</text>
+  <text x="660" y="328" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="500" fill="#c5a94e" letter-spacing="-0.5">They skip.</text>
+
+  <!-- Closing quote mark trailing the final line -->
+  <text x="808" y="328" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="500" fill="#c5a94e" opacity="0.5" letter-spacing="-0.5">&#8221;</text>
+
+  <!-- Divider under quote -->
+  <line x1="660" y1="372" x2="950" y2="372" stroke="#c5a94e" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- Attribution -->
+  <text x="660" y="407" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#8a9aa2" letter-spacing="2.5">ROBERT HU &#183; AI PRODUCT DISCOVERY</text>
+
+  <!-- HU mark bottom right -->
+  <text x="1150" y="605" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#8a9aa2" opacity="0.5">HU</text>
+</svg>
