@@ -59,34 +59,43 @@ const nextConfig = {
         destination: '/geo',
         permanent: true,
       },
+      // Retired consulting contact/booking paths. /free-strategy-session is
+      // archived and non-live, so these now point to /about, the editorial
+      // hub for connecting with Robert. The retired /services index also
+      // redirects home.
       {
         source: '/contact',
-        destination: '/free-strategy-session',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/contact-me',
-        destination: '/free-strategy-session',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/book',
-        destination: '/free-strategy-session',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/book-a-call',
-        destination: '/free-strategy-session',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/consultation',
-        destination: '/free-strategy-session',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/work-with-me',
-        destination: '/free-strategy-session',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/services',
+        destination: '/',
         permanent: true,
       },
 

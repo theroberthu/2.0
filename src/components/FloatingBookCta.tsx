@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 const DISMISS_KEY = 'floating-cta-dismissed'
 
 /**
- * Mobile-only floating "Book a Free Session" pill. Appears once the reader
+ * Mobile-only floating newsletter Subscribe pill. Appears once the reader
  * scrolls past the hero so it does not crowd the initial view. Dismissible
  * with the X button. Dismissal persists for the browser session only.
  * Hidden on xl: and up because the sticky sidebar serves that role.

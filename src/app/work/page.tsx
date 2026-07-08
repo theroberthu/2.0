@@ -10,17 +10,8 @@ export const metadata: Metadata = {
 
 const PROJECTS = [
   {
-    label: 'GEO Framework',
-    title: 'GEO Audit — AI Visibility Scoring for Product Listings',
-    description: [
-      'Built a proprietary 6-dimension scoring framework (WHO, WHEN, WHERE, WHY, WHAT, AI) that evaluates how product listings perform in AI recommendation engines like ChatGPT, Perplexity, Google AI Overviews, and Amazon Rufus.',
-      'Each dimension scores how well a listing communicates the right information for AI extraction and recommendation. Delivered as a $500 PDF report using Python and ReportLab with a dark navy (#0B0E17) and gold accent (#D4A843) visual design. Audits delivered to brands doing $500K to $5M revenue.',
-    ],
-    link: null,
-  },
-  {
     label: 'Product',
-    title: 'YourGEOReport — Free AI Visibility Reports for E-commerce Brands',
+    title: 'YourGEOReport: Free AI Visibility Reports for E-commerce Brands',
     description: [
       'Productized the GEO audit concept into a free self-service tool. Tests real buyer-style prompts across ChatGPT and Claude, then generates a report showing which competitors AI recommends instead of the user\'s brand.',
       'Covers 2 AI engines, 10+ buyer prompts, and 5+ competitors per report. Built with Next.js. Reports delivered within 24 hours. I didn\'t just consult on GEO. I built a product around it.',
@@ -29,7 +20,7 @@ const PROJECTS = [
   },
   {
     label: 'Benchmarking',
-    title: 'RecoScope — AI Recommendation Benchmarks for Consumer Brands',
+    title: 'RecoScope: AI Recommendation Benchmarks for Consumer Brands',
     description: [
       'Built an ongoing benchmark tracking system that monitors how AI models (ChatGPT, Claude, Gemini) recommend brands across consumer categories. Classifies AI engines by commercial interest: independent vs. search-grounded vs. commerce-influenced.',
       'Runs standardized prompts monthly to build comparable datasets over time. Surfaces the gap between marketplace popularity and AI visibility. Proof of technical depth and conviction that AI-driven product discovery is a durable shift.',
