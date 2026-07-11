@@ -1,83 +1,64 @@
-# theroberthu.com — Project Context
+# theroberthu.com - Project Context
+
+## Read this first
+
+theroberthu.com is an **editorial AI Commerce publication and personal
+knowledge hub**, authored by Robert Hu. It is **not** a consulting, agency, or
+lead-generation site. Consulting has been fully retired.
+
+Before doing any work, read the documentation in `/docs` (do not duplicate it
+here - reference it):
+
+1. **[docs/00_WEBSITE_OPERATING_SYSTEM.md](docs/00_WEBSITE_OPERATING_SYSTEM.md)** -
+   the source of truth: mission, architecture, flagship standard, release
+   workflow, and what we do NOT do. Read this first.
+2. **[docs/01_EDITORIAL_STYLE_GUIDE.md](docs/01_EDITORIAL_STYLE_GUIDE.md)** -
+   voice, tone, formatting, official terminology, page templates. Follow it for
+   any copy or content work.
+3. **[docs/02_ROADMAP.md](docs/02_ROADMAP.md)** - strategic direction.
+4. **[docs/03_WEBSITE_BACKLOG.md](docs/03_WEBSITE_BACKLOG.md)** - prioritized
+   work. Pick up tasks here and keep it groomed.
+5. **[docs/04_CHANGELOG.md](docs/04_CHANGELOG.md)** - record every shipped change
+   here (what/why/impact/commits/follow-ups).
+
+**Maintain the docs as you work:** log shipped work in the CHANGELOG and update
+the BACKLOG. If the repo and docs disagree, reconcile and note why.
+
+## Hard rules (from the Operating System)
+
+- No lead forms, service/pricing pages, or "book a call" / consultation CTAs.
+- No consulting or agency positioning in copy, metadata, or structured data.
+- No em dashes (hyphens only). No fake internal links (use a TODO comment).
+- The newsletter (Hu's Weekly Hoot, LinkedIn) is the only follow mechanism, and
+  it is an invitation to follow the research, never a sales CTA.
 
 ## Stack
-- Next.js 14 (App Router)
+
+- Next.js 14 (App Router, TypeScript)
 - Tailwind CSS
-- Supabase (database + auth)
-- Deployed on Vercel
-- Domain on GoDaddy
+- Supabase (`blog_posts`)
+- Deployed on Vercel (push to `main` deploys). Blog uses ISR (`revalidate = 60`).
 
-## Brand
-- Owner: Robert Hu — E-commerce Strategist, Digital Marketing & Digital Transformation consultant
-- Brand voice: "Quiet confidence" — premium consulting, not flashy agency
-- Target audience: $500K-$5M revenue brand owners (especially Amazon/Walmart sellers)
-- Logo: Owl with H+U in the eyes → `/public/images/theroberthulogo.png`
-- Logo usage: Nav bar, footer, favicon, OG image ONLY. Never as decoration or background texture.
+## Design system
 
-## Design System
+- Dark mode default; glassmorphism cards (`backdrop-blur-md`, `bg-white/[0.05]`,
+  `border border-white/[0.08]`).
+- Colors: dark bg `#1a2a32`, deep teal `#1a3a4a`, accent blue `#2d7d9a`, light
+  text `#f7f9fb`, muted gray `#8a9aa2`, gold `#c5a94e` (sparingly).
+- Type: DM Sans (headings/body), JetBrains Mono (labels/eyebrows/code). Clean
+  hierarchy H1 -> H2 -> H3, no skipping.
+- Logo (owl with H+U): nav, footer, favicon, OG only. Never decoration.
 
-### Mode
-- Dark mode default (dark bg, light text)
-- Glassmorphism cards (backdrop-blur-md, bg-white/5 or bg-white/10, border border-white/10)
+## Key locations
 
-### Colors
-- Dark background: `#1a2a32`
-- Deep teal: `#1a3a4a`
-- Accent blue: `#2d7d9a`
-- Light text: `#f7f9fb`
-- Muted gray: `#8a9aa2`
-- Gold accent (from logo, use sparingly): `#c5a94e`
+- Routes: `src/app/**`. Flagship pages: `src/app/geo`, `src/app/aeo`.
+- Shared constants (nav, categories): `src/lib/constants.ts`.
+- Structured data: `SchemaMarkup` component; site-wide schema in the root layout.
+- Blog authoring template: `Content/blog/_TEMPLATE-research-article.md`.
+- OG image generation: `scripts/gen-og-png.mjs`, `scripts/regen-blog-svgs.mjs`.
 
-### Typography
-- Headings: DM Sans (font-semibold or font-bold)
-- Body: DM Sans (font-normal)
-- Accents / labels / tags / code: JetBrains Mono
-- Keep hierarchy clean: H1 → H2 → H3, no skipping
+## Validate before shipping
 
-### Components
-- Cards: Glassmorphism style, subtle hover (translateY -4px + border glow with accent blue)
-- Buttons: Solid accent blue bg (#2d7d9a), white text, slight brighten on hover
-- Pull quotes: Left border in gold or accent blue
-- Stat cards: Large number in gold (#c5a94e), label in muted gray JetBrains Mono
-- CTAs: Every major section should have a clear path to booking a consultation
-
-## Pages
-
-### Homepage
-- Hero section (split layout, floating stat cards, trust bar)
-- "Selected Case Studies" section (3 featured cards)
-- CTA section driving to consultation booking
-
-### /case-studies
-- Index: 2x2 grid of glassmorphism cards (1 col mobile)
-- Individual: `/case-studies/[slug]` with dynamic routing
-- Sections: The Challenge → The Approach → The Results (stat cards) → Key Takeaway (pull quote) → CTA
-
-### /about
-- Professional bio
-- Projects: FlightPrompts, Scoparo
-- Should reinforce expertise + lead to booking
-
-## Case Studies (4 total, all anonymized)
-1. `bsr-ranking-improvement` — Amazon Ranking — BSR #11 → #5
-2. `pdp-excellence-finalist` — Content Strategy — Amazon PDP Excellence finalist
-3. `new-product-launch-top-release` — Product Launch — Top New Release in 14 days
-4. `ad-account-restructuring` — Advertising Strategy — ROAS-obsessed to growth-focused
-
-## Critical Rules
-- NEVER reference "Kent" or any specific brand/company name in case studies
-- All client work is anonymized for NDA compliance
-- Mobile-first responsive design always
-- SEO on every page: proper meta titles, descriptions, OG tags, structured data
-- Keep page load fast — no heavy animations or unnecessary JS
-- Writing tone: confident, not arrogant. Show results, don't brag.
-
-## SEO Conventions
-- Meta title format: `[Page Title] | Robert Hu — E-commerce Strategist`
-- Meta descriptions: Include key value prop + CTA
-- Canonical URLs on all pages
-- Structured data where applicable (Article/CaseStudy schema)
-
-## File Structure Notes
-- Public assets: `/public/images/`
-- Case study data: Check Supabase `case_studies` table first. If not available, hardcode and structure for easy Supabase migration later.
+Run `npx tsc --noEmit`, `npx next lint`, and `npx next build`. Verify observable
+behavior (redirects, renders, links resolve 200, JSON-LD validates from the
+rendered HTML).
