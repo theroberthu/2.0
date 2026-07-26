@@ -1,8 +1,13 @@
 # UTM Tagging Guide — theroberthu.com
 
 **Site:** theroberthu.com
-**Primary CTA:** Free 15-minute strategy call — `https://theroberthu.com/free-strategy-session`
-**Last updated:** 2026-03-11
+**Primary CTA:** Follow the research — Hu's Weekly Hoot on LinkedIn
+**Last updated:** 2026-07-26
+
+> Note: this guide predates the editorial repositioning. The former
+> `/free-strategy-session` consulting CTA is retired and now redirects to
+> `/about`. The newsletter is the site's only follow mechanism. Campaign
+> conventions below still apply; the consulting destinations do not.
 
 ---
 

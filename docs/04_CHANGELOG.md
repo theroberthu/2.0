@@ -6,6 +6,49 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.5 - Dead URL and Redirect Cleanup
+
+**Release date:** 2026-07-26. Commit `7098408`.
+
+**What changed.** GA4 landing-page data surfaced 42 sessions (about 6.5% of all
+sessions) arriving on 404s at roughly 0% engagement, plus redirects that chained
+or resolved into dead ends. Most of that traffic was Direct, meaning stale
+external links rather than search results.
+
+- `/free-strategy-session` -> `/about`. The retired consulting page was still
+  drawing 12 sessions from external links such as the email signature and
+  LinkedIn.
+- `/blog/amazon-lens-live-ai-visual-search` -> `/geo/alexa-for-shopping`,
+  `/blog/journey-ecom-ai` -> `/blog/ai-compresses-messy-middle-ecommerce`, and
+  `/blog/how-to-start-online-business` -> `/blog`. All three predate the 2.0
+  rebuild and exist in neither Supabase nor the repository.
+- `/case-studies`, `/case-studies/` and `/case-studies/:slug*` -> `/about`. The
+  route was archived and returned 404, and the trailing-slash rule redirected
+  into that 404.
+- Removed two redirect chains: `/geo-audit/results` and `/services/` now point
+  straight at their destinations.
+- Legacy service slugs repointed from the noindex `/services/*` sub-pages to
+  live editorial destinations, so inbound links no longer dead-end for search or
+  land readers on consulting copy.
+- Corrected the stale `utm-tagging-guide.md` header, which still named the
+  retired strategy-session page as the primary CTA.
+
+**Analytical note.** Site-wide engagement of 24.73% and 14s average is not a
+usable editorial baseline, because it blends 404 traffic, `(not set)` sessions,
+and low-quality Direct. Segmented, Organic Search landing on live article pages
+runs roughly 57% engagement and 45 seconds. That is the baseline for judging
+article changes. Identical pages also behave very differently by channel (the
+homepage at 71.4% Organic versus 17.5% Direct), which points to traffic quality
+rather than content quality.
+
+**Still open.** No key events are configured, so related-content clicks,
+newsletter clicks, and scroll depth are unmeasurable. GA4's automatic `scroll`
+event fires at 90% depth and may already provide a retroactive completion
+baseline. The remaining dead URLs beyond the visible top 15 of 145 landing-page
+rows have not yet been enumerated.
+
+---
+
 ## Release 1.4 - Mobile Article Recirculation and Progress
 
 **Release date:** 2026-07-26. Commit `68e8a2a`.
