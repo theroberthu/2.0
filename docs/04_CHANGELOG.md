@@ -6,6 +6,69 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.4 - Mobile Article Recirculation and Progress
+
+**Release date:** 2026-07-26. Commit `68e8a2a`.
+
+**Affected template:** `/blog/[slug]`, applying to all 68 published articles.
+
+**What changed.** Mobile-only changes to the article template. Desktop layout
+unchanged.
+
+- Compact Related Research list below `md`. Three stacked image cards become a
+  divider-separated list (category, title, read time), so all three next-reads
+  fit in roughly one viewport instead of two screens of images. Desktop keeps
+  the card grid via `hidden md:grid`.
+- New `ReadingProgress` component: a mobile-only progress bar measured against
+  the `<article>` element, so it completes at the end of the reading rather than
+  after the related posts and footer. Hidden at `xl:`, matching the existing
+  `MobileTocCard` and `FloatingBookCta` convention.
+- "All Posts" back link raised from a 20px to a 44px tap target
+  (`py-3 md:py-0`).
+
+**Mobile breakpoint behavior.** Compact list below 768px; card grid at 768px and
+above; progress bar below 1280px.
+
+**Why.** A 390x844 audit found the article page running 11.4 screens with the
+Related Research block sitting 69% down the page as 1,719px of stacked image
+cards, and no scroll progress feedback. Measuring Quanta Magazine at the same
+width showed near-identical body type (16px, 350px column, 39 chars/line), which
+disproved the initial hypothesis that mobile type was too small. The real
+difference was recirculation: Quanta surfaces 22 of 47 internal links above the
+50% depth mark. Revised diagnosis: the article asks readers to make their
+next-content decision too late and presents that decision inefficiently on
+mobile.
+
+**Expected behavioral impact.** Improved end-of-article choice surface and
+scroll orientation on mobile. Estimated ~1,350px (roughly 1.6 screens) removed
+from the recirculation block.
+
+**Deliberately excluded.** A mobile line-height change from 1.8 to 1.85 was
+implemented and then reverted: typography was not the issue, and extra leading
+lengthens an already-long page against the primary goal. Mid-article
+recirculation was deferred pending behavioral evidence on where readers abandon,
+since the article already carries one newsletter interruption. A mobile footer
+trim (939px, 1.1 screens) was logged but not touched.
+
+**Known measurement limitations.** No custom pre-change baseline exists for
+related-content click-through or scroll depth. GA4 may supply directional
+historical scroll and exit context only. Metrics to track from here:
+related-content click-through, article completion and deepest-scroll, newsletter
+interaction, mobile versus desktop recirculation, and article-page exits.
+
+**Follow-ups.** Device review on a real phone and tablet, since this shipped
+straight to production rather than through a preview. Specifically inspect
+whether `ReadingProgress` should be structurally anchored beneath the header
+instead of relying on `fixed top-[71px]` against a 72px header, which is brittle
+if the header height changes. Then instrument article analytics and use
+post-launch data as a directional baseline.
+
+**Framing note.** Missing progress feedback is treated as a plausible usability
+improvement, not a proven abandonment cause. The evidence supports the former
+only.
+
+---
+
 ## Release 1.3 - Documentation and Operating System
 
 **What changed.** Established `/docs` as the project's source of truth: an
