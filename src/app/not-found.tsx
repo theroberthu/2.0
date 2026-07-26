@@ -24,7 +24,7 @@ export default function NotFound() {
       suppressHydrationWarning
       style={{
         backgroundColor: '#0B0E17',
-        minHeight: '100vh',
+        minHeight: '78vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -98,13 +98,13 @@ export default function NotFound() {
             ...fade(320),
           }}
         >
-          This page doesn&apos;t exist. Let&apos;s get you back on track.
+          This page doesn&apos;t exist, or it moved when the site was rebuilt.
         </p>
 
         {/* Button */}
         <div style={fade(480)}>
           <Link
-            href="/"
+            href="/blog"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{
@@ -122,9 +122,48 @@ export default function NotFound() {
               cursor: 'pointer',
             }}
           >
-            Back to Home
+            Read the research
           </Link>
         </div>
+
+        {/* Recirculation. A dead URL is the highest-intent moment to offer a
+            real destination, and this site keeps receiving traffic to retired
+            and hallucinated URLs from old external links and AI assistants.
+            Deliberately static: 404s are probed heavily by crawlers, so this
+            must not run a database query. */}
+        <nav
+          aria-label="Where to go instead"
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '0.5rem 1.5rem',
+            maxWidth: '30rem',
+            ...fade(620),
+          }}
+        >
+          {[
+            { href: '/geo', label: 'AI Search (GEO)' },
+            { href: '/aeo', label: 'AI Agents (AEO)' },
+            { href: '/about', label: 'About Robert' },
+            { href: '/', label: 'Home' },
+          ].map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              style={{
+                color: '#7a9aaa',
+                fontSize: '0.875rem',
+                textDecoration: 'none',
+                borderBottom: '1px solid rgba(122,154,170,0.3)',
+                paddingBottom: '2px',
+              }}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+
       </div>
     </div>
   )

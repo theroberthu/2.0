@@ -89,6 +89,14 @@ const nextConfig = {
         destination: '/blog',
         permanent: true,
       },
+      {
+        // Another pre-2.0 slug with no equivalent. /blog/aistartupblog is
+        // deliberately NOT redirected: it never existed here, shows a uniform
+        // crawler signature, and a 404 is the correct signal for a probe.
+        source: '/blog/ai-slop-quiet-drift',
+        destination: '/blog',
+        permanent: true,
+      },
       // Retired consulting contact/booking paths. /free-strategy-session is
       // archived and non-live, so these now point to /about, the editorial
       // hub for connecting with Robert. The retired /services index also
