@@ -9,6 +9,7 @@ import CTABanner from '@/components/CTABanner'
 import BlogSidebar from '@/components/BlogSidebar'
 import MobileTocCard from '@/components/MobileTocCard'
 import FloatingBookCta from '@/components/FloatingBookCta'
+import ReadingProgress from '@/components/ReadingProgress'
 import { SITE_URL } from '@/lib/constants'
 import {
   generateArticleSchema,
@@ -259,7 +260,7 @@ export default async function BlogPostPage(props: Props) {
 
         <div className="relative max-w-[720px] mx-auto px-5 sm:px-8">
           <div className="mb-6">
-            <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-400 hover:text-brand-accent transition-colors duration-200">
+            <Link href="/blog" className="inline-flex items-center gap-1.5 py-3 md:py-0 text-[13px] font-medium text-gray-400 hover:text-brand-accent transition-colors duration-200">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -352,7 +353,39 @@ export default async function BlogPostPage(props: Props) {
               <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">Keep Exploring</span>
               <h2 className="text-xl font-bold text-white tracking-tight">Related Research</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Mobile: compact list. Three image cards stack to roughly 1,700px
+                on a phone, which buries the recirculation surface below the fold
+                at the one moment the reader is deciding what to do next. The list
+                keeps all three next-reads visible in about a quarter of that
+                height. Desktop keeps the card grid unchanged. */}
+            <ul className="md:hidden border-t border-white/[0.06]">
+              {relatedPosts.map((rp) => (
+                <li key={rp.id} className="border-b border-white/[0.06]">
+                  <Link href={`/blog/${rp.slug}`} className="group flex items-start justify-between gap-4 py-4">
+                    <span className="min-w-0">
+                      {rp.category && rp.category !== 'general' && (
+                        <span className="block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent mb-1.5">
+                          {rp.category}
+                        </span>
+                      )}
+                      <span className="block text-[15px] font-medium text-gray-200 group-hover:text-brand-accent transition-colors duration-200 leading-snug">
+                        {rp.title}
+                      </span>
+                      {rp.read_time_minutes && (
+                        <span className="block text-[12px] text-gray-500 mt-1">
+                          {rp.read_time_minutes} min read
+                        </span>
+                      )}
+                    </span>
+                    <svg className="w-4 h-4 text-gray-600 mt-1 shrink-0 group-hover:text-brand-accent transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((rp) => (
                 <BlogCard key={rp.id} post={rp} />
               ))}
@@ -363,7 +396,9 @@ export default async function BlogPostPage(props: Props) {
 
       <CTABanner {...ctaProps} />
 
-      {/* Mobile-only floating CTA. Appears after scrolling past the hero. */}
+      {/* Mobile-only chrome. Progress bar gives a completion signal on a long
+          phone scroll; the floating pill is the newsletter follow. */}
+      <ReadingProgress />
       <FloatingBookCta />
     </>
   )
