@@ -59,6 +59,36 @@ const nextConfig = {
         destination: '/geo',
         permanent: true,
       },
+
+      // ── Dead URLs found in GA4 landing-page data (July 2026) ─────────────
+      // These were pulling real inbound sessions to 404s at ~0% engagement.
+      // /free-strategy-session is the retired consulting page; external links
+      // (email signature, LinkedIn, old outreach) still point at it. The three
+      // blog slugs predate the 2.0 rebuild and exist in neither Supabase nor
+      // this repo, so each maps to its closest live equivalent, or to the blog
+      // index where no equivalent exists.
+      {
+        source: '/free-strategy-session',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/blog/amazon-lens-live-ai-visual-search',
+        destination: '/geo/alexa-for-shopping',
+        permanent: true,
+      },
+      {
+        source: '/blog/journey-ecom-ai',
+        destination: '/blog/ai-compresses-messy-middle-ecommerce',
+        permanent: true,
+      },
+      {
+        // Generic pre-2.0 beginner content with no editorial equivalent.
+        // Sending to the section index rather than an unrelated article.
+        source: '/blog/how-to-start-online-business',
+        destination: '/blog',
+        permanent: true,
+      },
       // Retired consulting contact/booking paths. /free-strategy-session is
       // archived and non-live, so these now point to /about, the editorial
       // hub for connecting with Robert. The retired /services index also
@@ -100,29 +130,33 @@ const nextConfig = {
       },
 
       // ── Legacy service page slugs ────────────────────────────────────────
-      {
-        source: '/services/amazon-ppc',
-        destination: '/services/digital-marketing-strategy',
-        permanent: true,
-      },
-      {
-        source: '/services/amazon-advertising',
-        destination: '/services/digital-marketing-strategy',
-        permanent: true,
-      },
+      // Previously these pointed at the /services/* sub-pages, which are
+      // noindex consulting content. That made every legacy inbound link a
+      // dead end for search and landed readers on service copy. Each now
+      // resolves to the closest live editorial destination.
       {
         source: '/services/geo',
-        destination: '/services/product-listing-optimization',
+        destination: '/geo',
         permanent: true,
       },
       {
         source: '/services/listing-optimization',
-        destination: '/services/product-listing-optimization',
+        destination: '/geo',
+        permanent: true,
+      },
+      {
+        source: '/services/amazon-ppc',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/services/amazon-advertising',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/services/ai-strategy',
-        destination: '/services/digital-transformation',
+        destination: '/blog',
         permanent: true,
       },
 
@@ -187,9 +221,11 @@ const nextConfig = {
       },
 
       // ── Catch-all for /geo-audit legacy paths ────────────────────────────
+      // Points straight at /geo. Routing via /geo-audit would create a
+      // two-hop chain now that /geo-audit is itself redirected.
       {
         source: '/geo-audit/results',
-        destination: '/geo-audit',
+        destination: '/geo',
         permanent: true,
       },
 
@@ -200,13 +236,30 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Direct to / rather than via /services, which now redirects home.
         source: '/services/',
-        destination: '/services',
+        destination: '/',
+        permanent: true,
+      },
+
+      // ── Retired case studies ─────────────────────────────────────────────
+      // /case-studies was archived in the 2.0 rebuild and returns 404, and the
+      // trailing-slash rule redirected into that 404. Anonymized client case
+      // studies have no editorial equivalent, so these resolve to /about, the
+      // page that now carries the career and credibility story.
+      {
+        source: '/case-studies',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/case-studies/',
-        destination: '/case-studies',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/case-studies/:slug*',
+        destination: '/about',
         permanent: true,
       },
     ]
