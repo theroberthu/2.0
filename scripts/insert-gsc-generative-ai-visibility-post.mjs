@@ -63,6 +63,12 @@ const post = {
 
 <p>For the 28-day window ending August 8, my property shows approximately 1.37K impressions in generative AI features. Search Console displays it rounded, so I am not going to invent a precise figure.</p>
 
+<figure>
+  <img src="/images/blog/gsc-generative-ai-report-28-days.png" alt="Google Search Console Generative AI features report for theroberthu.com showing approximately 1.37K impressions over 28 days, a single Total impressions metric card, and tabs for Pages, Countries, Devices, and Days with no queries or clicks." width="1600" height="1000" loading="lazy" />
+</figure>
+
+<p>That screenshot is most of the argument in one frame. One metric card where the standard Performance report gives me four, and four tabs with no Queries among them.</p>
+
 <p>The top pages visible in my report:</p>
 
 <div class="callout-box">

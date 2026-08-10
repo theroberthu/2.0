@@ -38,17 +38,17 @@ has_faq_schema: false
 **Right panel:** Pull quote `"That is a reporting change, not a measurement change."` gold italic Georgia, attribution `ROBERT HU - ON MEASURING AI VISIBILITY`
 **Background:** `#1a2a32` - **Quote color:** `#c5a94e`
 
-## Outstanding: in-article screenshot
+## In-article screenshot (shipped)
 
-The Search Console screenshot is the article's first-party evidence and is NOT yet
-in the post. To add it:
-
-1. Save the screenshot to `public/images/blog/gsc-generative-ai-report-28-days.png`
-2. Insert after the "My first 28 days" opening paragraph, before the top-pages callout.
-3. Keep the four tabs (Pages / Countries / Devices / Days) and the single Total
-   impressions card in frame. Those absences are the article's visual evidence.
-4. No redaction required: the image contains only the property name, public URLs,
-   and aggregate impressions.
+**Path:** `/images/blog/gsc-generative-ai-report-28-days.png` (1600x1000, 84KB,
+downscaled from a 3376x2110 / 496KB capture)
+**Placement:** after the "My first 28 days" opening paragraph, above the
+top-pages callout, in a `<figure>` matching the citation-teardown convention.
+**Why this crop:** the four tabs (Pages / Countries / Devices / Days) and the
+single Total impressions card are both in frame. Those absences are the
+article's visual evidence and must survive any future re-crop.
+**Privacy:** contains only the property name, public URLs, and aggregate
+impressions. The Google account avatar is visible in the top-right corner.
 
 ---
 
@@ -71,6 +71,10 @@ One detail reframes the whole thing. Google says this data "is included in the o
 ## My first 28 days
 
 For the 28-day window ending August 8, my property shows approximately 1.37K impressions in generative AI features. Search Console displays it rounded, so I am not going to invent a precise figure.
+
+![Google Search Console Generative AI features report for theroberthu.com showing approximately 1.37K impressions over 28 days, a single Total impressions metric card, and tabs for Pages, Countries, Devices, and Days with no queries or clicks.](/images/blog/gsc-generative-ai-report-28-days.png)
+
+That screenshot is most of the argument in one frame. One metric card where the standard Performance report gives me four, and four tabs with no Queries among them.
 
 The top pages visible in my report:
 
