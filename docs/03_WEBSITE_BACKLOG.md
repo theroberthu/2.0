@@ -7,20 +7,6 @@ risk), High (clear near-term value), Medium, Low.
 
 ## Critical
 
-- **Retire consulting CTAs from published article bodies (content-cleanup
-  project).** 46 of 72 published posts still close with a consulting call to
-  action stored in Supabase `blog_posts.content`: "book a free 15-minute strategy
-  session", "an e-commerce strategy consultation can help you", "let's talk about
-  a catalog audit", "book a strategy session". This violates the Operating
-  System's first hard rule (no lead forms or "book a call" / consultation CTAs)
-  and it is live on roughly two thirds of the site. The Archive and Evolve pass
-  covered routes, metadata, and structured data but never touched article bodies.
-  Scope this as a controlled project, not a find-and-replace: each closing is
-  individually written, so the CTA paragraph must be either removed or replaced
-  with the newsletter invitation (the only sanctioned follow mechanism). Produce
-  a per-post plan and get it approved before writing to Supabase. Detected
-  2026-08-17 during the Kroger operating-model research pass.
-
 - **Resolve dormant lead infrastructure.** `/api/lead-notifications` and
   `src/lib/email-templates.ts` still contain consulting copy ("Book a Free
   Strategy Session") and link to `/free-strategy-session`, which is archived and

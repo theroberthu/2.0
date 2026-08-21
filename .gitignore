@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# One-off cleanup working files (backup is kept, diff is regenerable)
+cta-report.json
+cta-cleanup-diff.json
+affected-slugs.json

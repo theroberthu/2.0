@@ -6,6 +6,47 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.6 - Consulting CTA removal from article bodies (2026-08-21)
+
+**What changed.** Removed retired consulting calls to action, client
+testimonials, service pricing, and links to retired service pages from **63 of
+74 published article bodies** in Supabase (`scripts/cleanup-consulting-ctas.mjs`).
+
+Operations applied:
+- 46 whole CTA paragraphs deleted ("book a free 15-minute strategy session",
+  "an e-commerce strategy consultation can help you").
+- 17 paragraphs trimmed at sentence level, preserving the "For more on X, see
+  <blog link>" sentences that shared those paragraphs.
+- 11 client-testimonial blocks removed (two markup variants: an outer
+  `div.blog-testimonial-cta` and a nested `div.blog-testimonial-block`).
+- 58 `/services/*` links unwrapped, keeping the anchor text as plain prose.
+- 2 service-pricing mentions ($499 audit) removed.
+
+**Why.** The Operating System's first hard rule bans lead forms and
+"book a call" / consultation CTAs. The Archive and Evolve pass covered routes,
+metadata, and structured data but never touched article bodies, so the CTAs were
+live on roughly 85% of published posts. 48 of them linked to
+`/free-strategy-session`, which is archived and returns 404.
+
+**Impact.** Site-wide scan now reports **0 hits** for
+`/free-strategy-session` links, `/services/*` links, "consultation", "strategy
+session", "strategy call", testimonial markup, `$499` pricing, and "book a free".
+All 74 published posts have balanced `<p>`, `<div>`, and `<a>` tags with no empty
+paragraphs or orphaned headings. No replacement CTA was inserted: every article
+already renders the "Follow the research" newsletter banner plus an inline
+newsletter card, so the consulting CTAs were pure duplication.
+
+**Deliberately kept.** Three RecoScope product mentions (own product, not a
+consultation) had only their trailing "Or book a strategy session" sentence
+removed.
+
+**Rollback.** Full pre-change snapshot of all 74 rows:
+`backups/blog_posts-backup-2026-08-21.json`.
+
+**Follow-ups.** `amazon-advertising-strategy-2026` retains third-person
+credential framing ("Robert Hu has spent over 20 years watching brands make this
+mistake"). It is not a CTA, so it was left alone; review for tone separately.
+
 ## Release 1.5 - Dead URL and Redirect Cleanup
 
 **Release date:** 2026-07-26. Commit `7098408`.
