@@ -36,6 +36,60 @@ Do not write like a consultant, a salesperson, or an SEO content farm.
 - On flagship and blog pages, `H2` headings feed the auto table of contents,
   so keep them scannable and descriptive.
 
+## Titles: editorial H1 and search title
+
+Every article carries **two** titles, and they answer different questions. Set
+both deliberately. The template already routes them without any code change:
+`src/app/blog/[slug]/page.tsx` uses `post.meta_title || post.title` for the
+`<title>` tag, Open Graph, and Twitter, and renders `post.title` as the `H1`.
+`src/lib/blog-schema.ts` uses `post.title` as the `Article` JSON-LD `headline`.
+
+| Field | Surfaces it drives | Question it answers |
+| --- | --- | --- |
+| `title` | on-page `H1`, `Article` JSON-LD `headline` | "What is Robert's argument?" |
+| `meta_title` | `<title>`, `og:title`, `twitter:title` | "What is the searcher trying to understand?" |
+
+**`title` is editorial.** Thesis-led framing, a distinctive point of view, a
+strong human-readable headline. This is the sentence a reader repeats, and the
+one an AI system reads as the claim of the piece.
+
+**`meta_title` is search discovery.** Name the entity, product, or platform
+explicitly. Use the vocabulary a person actually types. Describe directly what
+the article answers. Query alignment beats cleverness on this surface.
+
+Worked example, `/blog/anthropic-claude-commerce-intelligence-layer`:
+
+- **Editorial H1:** "Anthropic Is Building the Intelligence Layer for
+  Merchant-Owned Commerce" - states the argument, which is what the reader and
+  the JSON-LD headline should carry.
+- **Search title:** "Claude for Commerce: How Anthropic's Shopping and Merchant
+  Agents Work" - names the product a person would search for and says what the
+  article explains.
+
+Rules:
+
+- Do not duplicate the H1 into `meta_title` by default. Duplicate it only when
+  the H1 genuinely does both jobs well, and say why.
+- Do not rewrite a good editorial H1 to make it search-friendly. That is
+  `meta_title`'s job. The H1 does not have to carry search vocabulary.
+- Do not keyword-stuff `meta_title`, and do not fall back to a generic SEO
+  headline. It is still a sentence a person reads in a result.
+- Aim for about 60 characters before the automatic " | Robert Hu" suffix, and
+  front-load the entity so a truncated result still reads correctly. The
+  Anthropic example runs 70 characters; that is acceptable because "Claude for
+  Commerce" survives the cut. Length is a guideline, front-loading is the rule.
+- Every draft returned for Editorial Board review states **both** titles
+  explicitly, with one line on why each fits its surface.
+
+Known side effect: because `og:title` and `twitter:title` follow `meta_title`,
+social shares carry the **search** title, not the editorial H1. Decide that per
+article rather than discovering it after publishing.
+
+Measurement: split-title articles are tracked in Search Console and compared
+against identical-title articles at similar average positions. See "Split-title
+measurement" in
+[00_WEBSITE_OPERATING_SYSTEM.md](00_WEBSITE_OPERATING_SYSTEM.md).
+
 ## Paragraph style
 
 - One idea per paragraph.

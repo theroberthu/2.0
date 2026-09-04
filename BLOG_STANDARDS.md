@@ -27,10 +27,12 @@ Every post must have a `category` field matching one of these exactly.
 ## SEO Requirements
 
 ### Meta Title
-- Format: `[Post Title] | Robert Hu`
-- Keep under 60 characters
-- Front-load the primary keyword
-- Example: "GEO for Amazon Sellers: Why Your Listings Need to Rank in AI Search | Robert Hu"
+**Superseded.** The meta title is no longer a copy of the post title. Follow
+"Titles: editorial H1 and search title" in `docs/01_EDITORIAL_STYLE_GUIDE.md`:
+`title` is the editorial H1 and JSON-LD headline, `meta_title` is the separate
+search title driving `<title>`, `og:title`, and `twitter:title`. Keep
+`meta_title` near 60 characters before the automatic " | Robert Hu" suffix, with
+the entity front-loaded so a truncated result still reads correctly.
 
 ### Meta Description
 - 150–160 characters max
@@ -327,7 +329,8 @@ Every post must have:
 - [ ] Key numbers and dollar figures are bolded throughout
 - [ ] No H2 section exceeds 4 paragraphs
 - [ ] Every H2 opens with the most important sentence (no warm-up paragraphs)
-- [ ] Title under 60 characters with primary keyword
+- [ ] Editorial H1 (`title`) and search `meta_title` set separately, with the
+      entity front-loaded in `meta_title`
 - [ ] Meta description 150-160 characters with keyword and CTA
 - [ ] URL slug is short and clean
 - [ ] H1 → H2 → H3 hierarchy is correct

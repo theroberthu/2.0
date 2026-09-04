@@ -52,7 +52,10 @@ Every post follows this structure:
 ## SEO/GEO Rules (from BLOG_STANDARDS.md)
 - At least 2 question-based H2s
 - First 2-3 sentences directly answer the post's core topic
-- Meta title under 60 chars, front-load keyword
+- Editorial H1 (`title`) and search `meta_title` are separate and deliberately
+  different. See "Titles: editorial H1 and search title" in
+  `docs/01_EDITORIAL_STYLE_GUIDE.md`. `meta_title` names the entity, front-loads
+  it, and uses search vocabulary
 - Meta description 150-160 chars
 - Internal links to service pages and other blog posts
 - All schema markup (Article, FAQ, BreadcrumbList)

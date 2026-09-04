@@ -3,6 +3,7 @@
 **Status:** Template. Copy this file to `Content/blog/<slug>.md` for each new article, then fill in every section.
 **Target length:** 1,500-2,200 words (7-10 min read)
 **Voice:** Practitioner. Direct. A research notebook, not a consulting pitch. No em dashes. Hyphens only.
+**Titles:** Every draft returns BOTH an editorial `H1` (`title`) and a search `meta_title`, plus one line on why each fits its surface. See `docs/01_EDITORIAL_STYLE_GUIDE.md`.
 
 > Every research article on theroberthu.com follows the same structure. Keep the
 > seven body section headings (`## Question` through `## Open Questions`) exactly
@@ -24,7 +25,12 @@ title: "[ARTICLE TITLE]"
 # category drives the automatic Related Research cluster. Pick one existing pillar:
 # E-commerce Strategy | GEO & SEO | Digital Marketing | Digital Transformation | The Messy Middle
 category: "[pillar]"
-meta_title: "[ARTICLE TITLE]"
+# meta_title is the SEARCH title and is deliberately NOT a copy of `title`.
+# `title` -> H1 + JSON-LD headline (editorial: "What is Robert's argument?")
+# meta_title -> <title> + og:title + twitter:title ("What is the searcher trying to understand?")
+# Name the entity/product/platform, use search vocabulary, say what the article answers.
+# See "Titles: editorial H1 and search title" in docs/01_EDITORIAL_STYLE_GUIDE.md.
+meta_title: "[SEARCH TITLE - entity front-loaded, around 60 chars before the automatic ' | Robert Hu' suffix]"
 meta_description: "[150-160 chars. Frame it as research on how technology changes commerce, not a service pitch.]"
 canonical: /blog/<url-slug>
 og_image: /images/blog/<url-slug>.svg
@@ -49,7 +55,7 @@ has_faq_schema: <true|false>
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[ARTICLE TITLE]",
+  "headline": "[ARTICLE TITLE - the editorial H1, i.e. `title`, never meta_title]",
   "description": "[Same as meta_description]",
   "author": {
     "@type": "Person",

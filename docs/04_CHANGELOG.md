@@ -6,6 +6,65 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.7 - Split editorial and search titles become the default (2026-09-04)
+
+**What changed.** Documentation only. No live article, route, or database row
+was modified.
+
+- [01_EDITORIAL_STYLE_GUIDE.md](01_EDITORIAL_STYLE_GUIDE.md): new section
+  "Titles: editorial H1 and search title". `title` is editorial (H1 +
+  `Article` JSON-LD headline, answering "What is Robert's argument?");
+  `meta_title` is search discovery (`<title>`, `og:title`, `twitter:title`,
+  answering "What is the searcher trying to understand?"). Do not duplicate the
+  H1 into `meta_title` by default, do not rewrite a good H1 to make it
+  search-friendly, do not keyword-stuff. Every draft returns both titles with a
+  line on why each fits its surface.
+- [00_WEBSITE_OPERATING_SYSTEM.md](00_WEBSITE_OPERATING_SYSTEM.md): new
+  "Split-title measurement (open experiment)" under Success metrics. Track
+  split-title articles in Search Console and compare CTR against
+  identical-title articles **at similar average positions**.
+- [Content/blog/_TEMPLATE-research-article.md](../Content/blog/_TEMPLATE-research-article.md):
+  `meta_title` is now a distinct search-title field with inline guidance, the
+  header states the two-title requirement, and the JSON-LD `headline` is
+  explicitly the editorial H1.
+- `BLOG_STANDARDS.md` and `NEWS_TO_BLOG.md` (legacy, consulting-era): the
+  conflicting "meta title = post title" rule was marked superseded and pointed
+  at the style guide. The rest of both documents still contradicts current
+  practice; backlogged.
+
+**Why.** The first article published with deliberately separate titles,
+`/blog/anthropic-claude-commerce-intelligence-layer`, showed 720 impressions,
+15 clicks, 2.1% CTR at average position 7.6, against a site-wide 1.44K
+impressions, 19 clicks, 1.3% CTR at average position 10.4 in the same window.
+
+**Read that as an early signal, not as proven causality.** Nothing here
+establishes that the title split caused the CTR difference, and no future
+session should cite this entry as evidence that it did. See the Impact note
+below for what is actually unresolved.
+
+**Impact, stated carefully.** This is an early signal, **not causal proof**.
+Freshness, query mix, topic demand, and the article's better average position
+all plausibly contribute, and one article in one window cannot separate them.
+The practice is adopted because it is cheap, reversible, and structurally
+sound: the two surfaces genuinely serve different readers, and the template
+already routes them correctly with no code change
+(`post.meta_title || post.title` for metadata, `post.title` for the H1 and
+schema headline).
+
+**Known side effect.** `og:title` and `twitter:title` follow `meta_title`, so
+social shares carry the search title rather than the editorial H1. Documented,
+not fixed, and deliberately deferred to its own implementation pass. Pointing
+`openGraph.title` at `post.title` in `src/app/blog/[slug]/page.tsx` is a small
+change, but it alters live rendered behavior on every article, so it gets an
+explicit change and its own verification rather than riding along with a
+documentation update.
+
+**Follow-ups.** New High backlog item to review high-impression / low-click
+articles for `meta_title`-only optimization (Helium 10 MCP, ChatGPT Ads, Costco
+ecommerce strategy, Trade Desk Kokai Zuma, Walmart Sparky AOV, Adobe AI
+traffic), gated on query-level Search Console data. New Medium item to
+reconcile or retire the legacy authoring docs.
+
 ## Release 1.6 - Consulting CTA removal from article bodies (2026-08-21)
 
 **What changed.** Removed retired consulting calls to action, client

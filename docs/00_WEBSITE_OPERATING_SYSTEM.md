@@ -144,6 +144,33 @@ We measure authority, not funnels:
 
 We explicitly do **not** measure leads, consultation requests, or booked calls.
 
+### Split-title measurement (open experiment)
+
+Articles are published with a deliberately separate editorial `title` (the `H1`
+and JSON-LD headline) and search `meta_title` (the `<title>`, OG, and Twitter
+title). See "Titles: editorial H1 and search title" in
+[01_EDITORIAL_STYLE_GUIDE.md](01_EDITORIAL_STYLE_GUIDE.md) for how to write each.
+
+Track split-title articles in Search Console so their CTR can be compared with
+articles where the `H1` and `meta_title` are identical. **Compare at similar
+average positions.** Position is the control: CTR read across different ranking
+positions measures ranking, not titling.
+
+First observation, `/blog/anthropic-claude-commerce-intelligence-layer`, early
+window:
+
+| | Impressions | Clicks | CTR | Avg. position |
+| --- | --- | --- | --- | --- |
+| The article | 720 | 15 | 2.1% | 7.6 |
+| Site overall | 1.44K | 19 | 1.3% | 10.4 |
+
+**This is an early signal, not causal proof.** Freshness, query mix, topic
+demand, and the article's better average position all plausibly contribute, and
+a single article in a single window cannot separate them. The split is the
+default practice because it is cheap, reversible, and structurally sound, not
+because this result established cause. Revisit once several split-title
+articles have enough data to compare at matched positions.
+
 ## Decision framework
 
 For any proposed change, ask:

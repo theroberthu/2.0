@@ -16,6 +16,15 @@ risk), High (clear near-term value), Medium, Low.
 
 ## High
 
+- **Review high-impression / low-click articles for `meta_title` optimization.**
+  Change `meta_title` only. Do **not** rewrite the editorial `H1`, the article
+  body, or the slug. Pull query-level Search Console data per article first and
+  let the queries the article actually surfaces for determine the replacement
+  title; do not guess at vocabulary. Priority candidates: Helium 10 MCP,
+  ChatGPT Ads, Costco ecommerce strategy, Trade Desk Kokai Zuma, Walmart Sparky
+  AOV, Adobe AI traffic. Record before/after CTR at comparable average position
+  and feed the result back into the split-title experiment in
+  [00_WEBSITE_OPERATING_SYSTEM.md](00_WEBSITE_OPERATING_SYSTEM.md).
 - **AI Commerce hub page.** Build a `/ai-commerce` flagship that anchors the
   domain and routes into GEO, AEO, and platform clusters. AI Commerce is
   currently a theme with no home.
@@ -32,6 +41,14 @@ risk), High (clear near-term value), Medium, Low.
 
 ## Medium
 
+- **Reconcile or retire the legacy authoring docs.** `BLOG_STANDARDS.md` and
+  `NEWS_TO_BLOG.md` at the repo root are consulting-era and are not referenced
+  by `CLAUDE.md`. They still instruct linking to service pages, ending posts
+  with a CTA, and writing for "potential consulting clients", all of which the
+  Operating System bans. The conflicting meta-title rule has been pointed at
+  the style guide; the rest of both documents still contradicts current
+  practice. Decide: fold the parts worth keeping into
+  [01_EDITORIAL_STYLE_GUIDE.md](01_EDITORIAL_STYLE_GUIDE.md), or delete them.
 - **Structured-data / entity improvements.** Add an entity graph (Organization
   linkage, `sameAs`, `about`/`mentions`) so AI systems resolve the site as an
   AI Commerce authority.
