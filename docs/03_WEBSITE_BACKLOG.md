@@ -7,6 +7,22 @@ risk), High (clear near-term value), Medium, Low.
 
 ## Critical
 
+- **Fix the `www` hostname dead-end.** `www.theroberthu.com` has a DNS A record
+  pointing at Vercel (216.198.79.1, the same IP as the apex), and
+  `http://www.theroberthu.com/*` returns a 308 to `https://www.theroberthu.com/*`,
+  but the TLS certificate does not cover `www`:
+  `SSL: no alternative certificate subject name matches target host name`. The
+  redirect chain therefore dead-ends, and any crawler or reader following it
+  fails. The likely cause is a DNS record created for `www` without `www` ever
+  being added as a domain in the Vercel project, so no certificate was issued.
+  Fix: add `www.theroberthu.com` in the Vercel project domain settings and set
+  it to redirect to the apex; Vercel provisions the certificate and serves a
+  clean 308. Deleting the `www` DNS record also closes the error, but leaves
+  `www` unresolvable for anyone who types or links it. This is dashboard and DNS
+  work, not a repo change. Verify with
+  `curl -sSIL https://www.theroberthu.com/`. The rest of the property is
+  consistently non-www (canonical, sitemap, app config), so nothing in the repo
+  needs to change.
 - **Resolve dormant lead infrastructure.** `/api/lead-notifications` and
   `src/lib/email-templates.ts` still contain consulting copy ("Book a Free
   Strategy Session") and link to `/free-strategy-session`, which is archived and

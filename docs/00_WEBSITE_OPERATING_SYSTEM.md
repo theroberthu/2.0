@@ -171,6 +171,28 @@ default practice because it is cheap, reversible, and structurally sound, not
 because this result established cause. Revisit once several split-title
 articles have enough data to compare at matched positions.
 
+## Known benign Search Console states
+
+Some Page indexing rows will never validate, by design. Re-running validation on
+them fails every time. Do not chase them, and do not "fix" them.
+
+- **`http://` URLs under "Page with redirect".** This is correct behavior. The
+  apex redirects HTTP to HTTPS in a single 308 to a 200. An `http://` URL is
+  permanently a redirect, so validation can never pass. The only way it would
+  pass is by dropping the HTTPS redirect, which would be wrong.
+- **`/api/og/*` under "Crawled - currently not indexed".** These endpoints
+  return `image/png`, not HTML. Google crawls them because every article
+  references them as `og:image` and in JSON-LD, then declines to index an image
+  endpoint as a web page. They are excluded from the sitemap, and `robots.txt`
+  deliberately allows `/api/og/` while disallowing the rest of `/api/`, because
+  blocking them would break social card rendering. **Do not add `noindex` to
+  them**; that risks suppressing the cards in the surfaces that fetch them.
+
+A **"Redirect error"** row is different and is worth investigating. It means
+Googlebot could not complete the redirect (a chain, a loop, or an unreachable
+destination), not merely that a redirect exists. See the `www` hostname item in
+[03_WEBSITE_BACKLOG.md](03_WEBSITE_BACKLOG.md) for a live example.
+
 ## Decision framework
 
 For any proposed change, ask:
