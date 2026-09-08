@@ -96,6 +96,38 @@ measurement" in
 - Open each section by answering the question a reader actually has.
 - End substantive sections with the "so what", not a sales pitch.
 
+## Sourcing platform rules
+
+Platforms ship near-identical features on separate surfaces and govern them
+differently. Google AI Overviews and Google AI Mode are the standing example: as
+of September 2026, Google published detailed ad eligibility, opt-out, placement
+and reporting rules for AI Overviews, and no equivalent public documentation for
+AI Mode could be found.
+
+Rules for these are the load-bearing claims. Treat them accordingly.
+
+- **Name the surface every time.** Never write "AI surfaces" where a rule applies
+  to one of them. A rule documented for one surface is evidence about that
+  surface only.
+- **Never carry a rule across surfaces by assumption**, and never "tidy" an
+  article by generalizing one. Where two surfaces are governed differently, the
+  asymmetry is often the story.
+- **Do not let a secondary source establish a platform rule.** A summary,
+  aggregator, trade post, or search-engine answer may only be cited for a rule if
+  it points to a platform statement explicitly about that surface. Otherwise open
+  the primary documentation and read it.
+- **Verify absence by searching, and report it as your search, not as fact.**
+  Write "I could not find equivalent published documentation for X", never
+  "X is undocumented".
+- **Practitioner testimony is evidence of observed behavior, not of policy.**
+  Credit the practitioner for what they saw. Do not use their account of a rule
+  to fill a gap in the platform's own documentation.
+
+A known failure mode: a search summarizer answered a question about one surface
+using the other surface's documentation, presented as though it applied. It was
+caught only by opening the source. Assume that conflation exists in secondary
+coverage and check.
+
 ## Internal linking
 
 - Link generously to real internal pages to build topic clusters. This helps

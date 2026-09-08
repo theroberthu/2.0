@@ -61,6 +61,59 @@ post but does NOT hide it. This post went live at insert time.
 
 ---
 
+## NON-NEGOTIABLE SOURCE GUARDRAIL
+
+**The article's spine is a negative finding. Preserve it exactly.**
+
+Google's "About ads and AI Overviews" documentation mentions **AI Mode zero times**
+and **AI Overviews 47 times**, verified by counting occurrences directly on the
+page rather than by reading impression.
+
+Every documented rule in the article must remain explicitly labelled as applying
+to **AI Overviews**. Do not "clean up", generalize, or extend any of those rules
+to AI Mode.
+
+**The finding is the gap itself:** Google publishes detailed ad eligibility and
+reporting guidance for AI Overviews, while equivalent published Google Ads
+eligibility documentation for AI Mode was not found during this research.
+
+If a later edit carries AI Overviews rules onto AI Mode, the article's central
+finding collapses.
+
+### Research hazard
+
+A search summarizer answered a direct AI Mode eligibility question using AI
+Overviews documentation as though it applied to AI Mode. That conflation was
+caught only by reading Google's source directly.
+
+Treat secondary summaries of AI Mode ad eligibility with extra caution. **Do not
+rely on a secondary source to establish:**
+
+- AI Mode eligibility rules
+- AI Mode opt-out rules
+- AI Mode reporting treatment
+- AI Mode placement controls
+- AI Mode match-type requirements
+
+unless that source points to a Google statement explicitly about AI Mode.
+
+### Practitioner claim
+
+Anthony Higman's statement that the prior path into these AI surfaces was "AI Max,
+PMax or broad and smart bidding" is plausible and aligns with Google's published
+AI Overviews documentation. However, **Google has not published that rule for AI
+Mode.**
+
+Therefore:
+
+- Credit Higman with spotting and documenting the change.
+- Do **not** adopt his description of the prior AI Mode rule as verified Google fact.
+- Do **not** use his statement to fill the documentation gap.
+
+That gap is part of the story.
+
+---
+
 ## EVIDENCE NOTES
 
 **The surface distinction is the spine. Do not let anyone blur it.** Google's
