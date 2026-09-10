@@ -6,6 +6,52 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.8 - About page professional narrative (2026-09-10)
+
+**What changed.** Targeted editorial revision of `/about`. No rebuild, no
+component or styling changes beyond one card-width adjustment the new content
+required.
+
+- **Career section restructured.** Ten flat stage pills (Marketing, Startup,
+  Technology, Marketplaces, Amazon, ...) became three connected chapters:
+  Build, Adapt, Scale. Each carries its stages plus what that period taught.
+  All ten original stages survive inside the chapters; Agency was added to
+  chapter two. Timeline component, connector lines, glass treatment and gold
+  emphasis on the final chapter all preserved.
+- **Hero identity.** Accent line moved from "I study how technology changes
+  commerce" to "I turn messy business problems into systems that work," with
+  "Operator and builder" opening the body. The study line was kept, relocated
+  into the body where it explains why he studies rather than serving as the
+  whole identity.
+- **Principles rewritten from observations to operating principles.** Five
+  cards became four: start with the business problem, stay close to the work,
+  prove the workflow before automating it, and the preserved "Understanding
+  systems matters more than mastering tools." Four also fixes the orphaned
+  fifth card in the two-column grid.
+- **Research areas** gained "AI-Enabled Workflows" and "Agent Governance".
+- **Meta description** now leads with operator and builder, keeping the domains.
+
+**Why.** The page defined Robert primarily as a researcher, and the career
+section read as a list of unrelated ecommerce roles rather than a progression.
+The durable identity sits above any single domain or technology: an operator
+and builder who turns ambiguity into systems.
+
+**Impact.** Mobile verified at 375px: zero horizontal overflow, chapter cards
+at 335px, longest stage string wraps to two lines without clipping. `tsc`,
+`next lint` and `next build` all clean. Zero em dashes.
+
+**Deliberately not changed.** `jobTitle` ("Commerce and Technology Researcher")
+appears in eight places site-wide including the root layout, all four flagship
+pages and `blog-schema.ts`. Changing it on `/about` alone would split the entity
+across the site. If the operator identity should reach structured data, that is
+a separate coordinated change.
+
+**Removed, preserved here in case they are wanted back.** Two principles cut
+when tightening to four: "Technology changes relationships more than
+departments" and "AI is changing commerce because it changes customer decision
+making". The third cut, about connecting ideas across disciplines, survives in
+the closing section.
+
 ## Release 1.7 - Split editorial and search titles become the default (2026-09-04)
 
 **What changed.** Documentation only. No live article, route, or database row

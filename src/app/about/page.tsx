@@ -6,7 +6,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 const ABOUT_DESCRIPTION =
-  'Robert Hu studies how technology changes commerce. Every stage of his career, from ecommerce and marketplaces to Amazon, digital transformation, and AI, has been driven by the same question.'
+  'Robert Hu is an operator and builder who studies how technology changes commerce, across ecommerce, marketplaces, Amazon, digital transformation, and AI.'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -43,39 +43,43 @@ const personSchema = {
   ],
 }
 
-const careerStages = [
-  'Marketing',
-  'Startup',
-  'Technology',
-  'Marketplaces',
-  'Amazon',
-  'Digital Marketing',
-  'Merchandising',
-  'Digital Commerce',
-  'Digital Transformation',
-  'AI Commerce',
+const careerChapters = [
+  {
+    phase: 'Build',
+    stages: 'Marketing · Startup · Technology',
+    lesson:
+      'Entrepreneurship taught me ownership. When something needed to exist, you built it without a finished playbook and lived with whatever you got wrong.',
+  },
+  {
+    phase: 'Adapt',
+    stages: 'Agency · Marketplaces · Amazon · Digital Marketing',
+    lesson:
+      'Agency work taught me translation. Different businesses, different technical teams, different partners, and the job was to get them understanding each other well enough to move.',
+  },
+  {
+    phase: 'Scale',
+    stages: 'Merchandising · Digital Commerce · Digital Transformation · AI Commerce',
+    lesson:
+      'Enterprise work taught me what governance and alignment actually cost, and why capabilities have to change before anything scales.',
+  },
 ]
 
 const principles = [
   {
-    title: 'Technology changes relationships more than departments',
-    desc: 'A new system rarely stops at the org chart. It quietly reshapes how buyers and sellers find, trust, and depend on each other.',
+    title: 'Start with the business problem, not the technology',
+    desc: 'The tool is the last decision, not the first. Most of the failed projects I have watched were solving for a capability nobody had attached a business question to.',
   },
   {
-    title: 'AI is changing commerce because it changes customer decision making',
-    desc: 'The interesting shift is not the tooling. It is that people are deciding what to buy in an entirely new way.',
+    title: 'Stay close enough to the work to see what is actually happening',
+    desc: 'Not to keep doing all of it forever. Getting close is how you find the workarounds people invented and why they needed them, and that is what tells you which system to build next.',
   },
   {
-    title: 'The best insights come from connecting ideas across disciplines',
-    desc: 'Merchandising, marketing, technology, operations, and customer behavior are usually studied apart. The signal lives where they meet.',
+    title: 'Prove the workflow first. Automate it second.',
+    desc: 'Automating something that does not work yet produces the wrong answer faster, and makes it harder to see where it went wrong.',
   },
   {
     title: 'Understanding systems matters more than mastering tools',
     desc: 'Tools are replaced constantly. The person who understands how the pieces fit together adapts to whatever comes next.',
-  },
-  {
-    title: 'The best operators learn continuously',
-    desc: 'Technology never stops changing, so the work of understanding it is never finished. That is the point, not the burden.',
   },
 ]
 
@@ -88,6 +92,8 @@ const researchAreas = [
   'Retail Technology',
   'Digital Transformation',
   'Structured Product Information',
+  'AI-Enabled Workflows',
+  'Agent Governance',
   'GEO',
 ]
 
@@ -108,10 +114,10 @@ export default function AboutPage() {
                 About Robert Hu
               </h1>
               <p className="text-xl md:text-2xl text-brand-accent font-medium leading-snug mb-7">
-                I study how technology changes commerce.
+                I turn messy business problems into systems that work.
               </p>
               <p className="text-[15px] md:text-base text-gray-400 leading-relaxed max-w-xl mb-6">
-                For more than two decades I have worked at the intersection of ecommerce, merchandising, marketplaces, Amazon, digital commerce, digital transformation, and now AI. Every stage of my career has been driven by the same question.
+                Operator and builder. For more than two decades I have worked across ecommerce, merchandising, marketplaces, Amazon, digital commerce, and digital transformation, and lately most of my attention has gone to AI. I study how technology changes commerce because the same shape of problem keeps turning up: work out what is actually happening, then turn it into something a business can act on.
               </p>
               <p className="text-lg md:text-xl text-white font-medium leading-snug max-w-xl">
                 How does technology change the way businesses sell, compete, and grow?
@@ -182,23 +188,31 @@ export default function AboutPage() {
           <div className="text-center mb-14">
             <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4 block">The Through Line</span>
             <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight leading-tight">
-              One question has guided my career.
+              Three chapters. One question.
             </h2>
           </div>
 
           {/* Timeline */}
           <div className="flex flex-col items-center">
-            {careerStages.map((stage, i) => (
-              <div key={stage} className="flex flex-col items-center w-full">
-                <div className={`w-full max-w-xs text-center rounded-full border px-6 py-3 backdrop-blur-md transition-colors ${
-                  i === careerStages.length - 1
-                    ? 'border-brand-gold/40 bg-brand-gold/[0.08] text-white font-semibold'
-                    : 'border-white/[0.08] bg-white/[0.04] text-gray-300'
+            {careerChapters.map((chapter, i) => (
+              <div key={chapter.phase} className="flex flex-col items-center w-full">
+                <div className={`w-full max-w-lg text-center rounded-2xl border px-6 py-6 md:px-8 backdrop-blur-md transition-colors ${
+                  i === careerChapters.length - 1
+                    ? 'border-brand-gold/40 bg-brand-gold/[0.08]'
+                    : 'border-white/[0.08] bg-white/[0.04]'
                 }`}>
-                  {stage}
+                  <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-3">
+                    {chapter.phase}
+                  </span>
+                  <p className="text-[15px] md:text-base text-white font-semibold leading-snug mb-3">
+                    {chapter.stages}
+                  </p>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    {chapter.lesson}
+                  </p>
                 </div>
-                {i < careerStages.length - 1 && (
-                  <div className="h-6 w-px bg-gradient-to-b from-white/20 to-white/5 my-1" aria-hidden="true" />
+                {i < careerChapters.length - 1 && (
+                  <div className="h-8 w-px bg-gradient-to-b from-white/20 to-white/5 my-2" aria-hidden="true" />
                 )}
               </div>
             ))}
@@ -206,7 +220,7 @@ export default function AboutPage() {
 
           <div className="mt-14 text-center space-y-3">
             <p className="text-[16px] text-gray-400 leading-relaxed">
-              The roles changed. The question stayed the same.
+              Build, then adapt, then scale. The roles changed. The question did not.
             </p>
             <p className="text-lg md:text-xl text-brand-accent font-medium leading-snug">
               How is technology changing commerce?
