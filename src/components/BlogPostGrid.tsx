@@ -1,44 +1,30 @@
-'use client'
-
-import { Suspense, useState, useEffect, useMemo } from 'react'
-import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 import { BlogPost } from '@/lib/types'
-import { BLOG_CATEGORIES, POSTS_PER_PAGE, categoryFromSlug, slugifyCategory } from '@/lib/constants'
+import { BLOG_CATEGORIES, slugifyCategory } from '@/lib/constants'
 import BlogCard from './BlogCard'
 
-function BlogPostGridInner({ posts }: { posts: BlogPost[] }) {
-  const [activeCategory, setActiveCategory] = useState<string>('All')
-  const [currentPage, setCurrentPage] = useState(1)
-  const searchParams = useSearchParams()
-
-  // Sync category filter from ?category= URL param on mount / param change
-  useEffect(() => {
-    const slug = searchParams.get('category')
-    if (slug) {
-      const match = categoryFromSlug(slug)
-      if (match) setActiveCategory(match)
-    }
-  }, [searchParams])
-
-  const filteredPosts = useMemo(() => {
-    if (activeCategory === 'All') return posts
-    return posts.filter((post) => post.category === activeCategory)
-  }, [posts, activeCategory])
-
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  )
-
-  const handleCategoryChange = (category: string) => {
-    setActiveCategory(category)
-    setCurrentPage(1)
-    // Update URL without full navigation so breadcrumb links work
-    const url = category === 'All'
-      ? '/blog'
-      : `/blog?category=${slugifyCategory(category)}`
-    window.history.replaceState(null, '', url)
+/**
+ * Server component. Filtering and pagination are resolved in the page from
+ * searchParams, so every category and page combination is a real crawlable URL
+ * and the full grid ships in the server HTML.
+ */
+export default function BlogPostGrid({
+  posts,
+  activeCategory,
+  currentPage,
+  totalPages,
+}: {
+  posts: BlogPost[]
+  activeCategory: string
+  currentPage: number
+  totalPages: number
+}) {
+  const hrefFor = (category: string, page = 1) => {
+    const params = new URLSearchParams()
+    if (category !== 'All') params.set('category', slugifyCategory(category))
+    if (page > 1) params.set('page', String(page))
+    const query = params.toString()
+    return query ? `/blog?${query}` : '/blog'
   }
 
   return (
@@ -46,9 +32,11 @@ function BlogPostGridInner({ posts }: { posts: BlogPost[] }) {
       {/* Category filters */}
       <div className="flex flex-wrap gap-2 mb-10 justify-center">
         {['All', ...BLOG_CATEGORIES].map((category) => (
-          <button
+          <Link
             key={category}
-            onClick={() => handleCategoryChange(category)}
+            href={hrefFor(category)}
+            scroll={false}
+            aria-current={activeCategory === category ? 'page' : undefined}
             className={`text-[11px] font-mono font-semibold uppercase tracking-[0.15em] px-4 py-2 rounded-full transition-all duration-200 ${
               activeCategory === category
                 ? 'bg-brand-accent text-white'
@@ -56,14 +44,14 @@ function BlogPostGridInner({ posts }: { posts: BlogPost[] }) {
             }`}
           >
             {category}
-          </button>
+          </Link>
         ))}
       </div>
 
       {/* Posts grid */}
-      {paginatedPosts.length > 0 ? (
+      {posts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {paginatedPosts.map((post) => (
+          {posts.map((post) => (
             <BlogCard key={post.id} post={post} />
           ))}
         </div>
@@ -75,42 +63,54 @@ function BlogPostGridInner({ posts }: { posts: BlogPost[] }) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-4 mt-12">
-          <button
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-            disabled={currentPage === 1}
-            className="text-[13px] font-semibold text-brand-accent disabled:text-gray-600 disabled:cursor-not-allowed hover:text-white transition-colors duration-200 flex items-center gap-1.5"
-          >
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Previous
-          </button>
+        <nav className="flex items-center justify-center gap-4 mt-12" aria-label="Pagination">
+          {currentPage > 1 ? (
+            <Link
+              href={hrefFor(activeCategory, currentPage - 1)}
+              scroll={false}
+              rel="prev"
+              className="text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200 flex items-center gap-1.5"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Previous
+            </Link>
+          ) : (
+            <span className="text-[13px] font-semibold text-gray-600 cursor-not-allowed flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Previous
+            </span>
+          )}
 
           <span className="text-[12px] font-mono text-gray-500">
             {currentPage} / {totalPages}
           </span>
 
-          <button
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-            disabled={currentPage === totalPages}
-            className="text-[13px] font-semibold text-brand-accent disabled:text-gray-600 disabled:cursor-not-allowed hover:text-white transition-colors duration-200 flex items-center gap-1.5"
-          >
-            Next
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+          {currentPage < totalPages ? (
+            <Link
+              href={hrefFor(activeCategory, currentPage + 1)}
+              scroll={false}
+              rel="next"
+              className="text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200 flex items-center gap-1.5"
+            >
+              Next
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          ) : (
+            <span className="text-[13px] font-semibold text-gray-600 cursor-not-allowed flex items-center gap-1.5">
+              Next
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          )}
+        </nav>
       )}
     </div>
-  )
-}
-
-export default function BlogPostGrid({ posts }: { posts: BlogPost[] }) {
-  return (
-    <Suspense>
-      <BlogPostGridInner posts={posts} />
-    </Suspense>
   )
 }

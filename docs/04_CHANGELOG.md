@@ -6,6 +6,51 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.9 - Server-rendered blog index (2026-09-13)
+
+**What changed.** `/blog` filtering and pagination moved from client state to
+`searchParams`, and `BlogPostGrid` became a server component.
+
+- **Root cause.** `BlogPostGrid` called `useSearchParams()` inside a `<Suspense>`
+  boundary with no fallback. That forces the subtree out of server rendering, so
+  the server emitted nothing: no category filters, no cards, no pagination. The
+  entire grid was client-only.
+- **Second, larger problem found while fixing it.** Pagination was `useState`
+  with no URL representation. There was no address for page 2, so `/blog`
+  exposed 12 of 86 posts to anyone, crawler or human, with no path to the other
+  74. Category state reached the URL via `replaceState`; pagination did not.
+- **Fix.** `src/app/blog/page.tsx` reads `?category=` and `?page=`, filters and
+  slices server-side, and passes a ready list down. Category chips and
+  pagination are now `<Link>` elements. `BlogPostGrid` dropped `'use client'`,
+  `useState`, `useEffect`, `useSearchParams` and `Suspense`.
+- **Metadata.** `generateMetadata` gives every view a self-canonical, a distinct
+  title ("GEO & SEO", "Research Notebook - Page 2") and a category-specific
+  description. Pagination carries `rel="prev"` / `rel="next"`.
+- **Out-of-range guard.** `?page=999` rendered the last page while
+  self-canonicalising to `?page=999`, which would have minted unbounded
+  indexable URLs. `generateMetadata` now runs a head-only count query and clamps
+  the canonical to the real last page. An unknown `?category=` falls back to All
+  and canonicalises to `/blog`.
+
+**Why.** The index page contributed almost no internal linking, and any crawler
+that does not execute JavaScript saw an empty archive. Posts were never
+orphaned, since the sitemap carries all 86 and every article surfaces Related
+Research, but the shape of the archive was invisible.
+
+**Impact.** Every category and page combination is now a real, crawlable,
+shareable URL, and the full grid ships in server HTML. `/blog` changes from
+static to server-rendered on demand (`revalidate = 60` still caches the data);
+article pages remain statically generated. Verified across `/blog`, `?page=2`,
+`?page=8`, `?page=999`, two categories, an invalid category, and an
+out-of-range category page.
+
+**Also shipped.** `POSTS_PER_PAGE` 10 -> 12, so the three-column grid has no
+empty slots in the last row (commit `4517c82`).
+
+**Follow-ups.** Category URLs are still absent from the sitemap. Route-based
+categories (`/blog/category/geo-seo`) remain the cleaner long-term structure but
+are deliberately deferred while the taxonomy review is open in the backlog.
+
 ## Release 1.8 - About page professional narrative (2026-09-10)
 
 **What changed.** Targeted editorial revision of `/about`. No rebuild, no
