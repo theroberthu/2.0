@@ -47,6 +47,21 @@ out-of-range category page.
 **Also shipped.** `POSTS_PER_PAGE` 10 -> 12, so the three-column grid has no
 empty slots in the last row (commit `4517c82`).
 
+**Blog hero spacing and copy (2026-09-13).** The hero and the grid section
+stacked two full `md:py-28` paddings, 224px of empty space between the subtitle
+and the category chips on desktop, with no divider to justify it. Hero is now
+`pt-20 md:pt-28 pb-10 md:pb-14` and the grid section drops its top padding:
+56px desktop, 40px mobile. The stale consulting-era copy was replaced: H1
+"Insights & Strategy" became "Research Notebook" (matching the page's own
+metadata title), and "Thoughts on e-commerce, AI, and building systems that
+scale. No fluff, just what works." became "How technology is changing commerce,
+and what operators need to understand before the shift becomes obvious." The
+accent glow was redrawn as a radial gradient instead of a `blur-3xl` circle,
+because the tighter padding would otherwise clip the blur mid-fade at the
+section edge; the gradient is transparent before the edge and visually
+near-identical. Verified at 375px and 1024px: zero horizontal overflow, chips
+wrap cleanly, no clipping.
+
 **Follow-ups.** Category URLs are still absent from the sitemap. Route-based
 categories (`/blog/category/geo-seo`) remain the cleaner long-term structure but
 are deliberately deferred while the taxonomy review is open in the backlog.
