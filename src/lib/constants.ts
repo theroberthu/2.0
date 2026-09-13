@@ -32,7 +32,9 @@ export const BLOG_CATEGORIES = [
   'The Messy Middle',
 ] as const
 
-export const POSTS_PER_PAGE = 10
+/** Keep this divisible by 3: the blog grid is 1/2/3 columns, so a page size
+ *  that is not a multiple of 3 leaves empty slots in the last row on desktop. */
+export const POSTS_PER_PAGE = 12
 
 /** Turn a category name into a URL-safe slug: "GEO & SEO" → "geo-seo" */
 export function slugifyCategory(name: string): string {
