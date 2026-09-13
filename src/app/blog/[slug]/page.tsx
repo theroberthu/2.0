@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -111,13 +112,34 @@ export async function generateStaticParams() {
   return (posts || []).map((p) => ({ slug: p.slug }))
 }
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params
-  const { data: post } = await supabase
+/**
+ * Load one post by slug, distinguishing "no such post" from "the request failed".
+ *
+ * `.maybeSingle()` returns `{ data: null, error: null }` when no row matches, and sets
+ * `error` when the request itself fails. The previous `.single()` returned `data: null`
+ * in both cases, and the page treated both as not found, so a transient Supabase error
+ * during ISR regeneration was cached as a 404 for a real, published article.
+ *
+ * Throwing on error is deliberate: when a regeneration throws, Next keeps serving the
+ * last successful render rather than caching a 404. `cache` dedupes the lookup shared by
+ * generateMetadata and the page, halving the requests that could fail.
+ */
+const getPost = cache(async (slug: string) => {
+  const { data, error } = await supabase
     .from('blog_posts')
     .select('*')
-    .eq('slug', params.slug)
-    .single()
+    .eq('slug', slug)
+    .maybeSingle()
+
+  if (error) {
+    throw new Error(`Failed to load blog post "${slug}": ${error.message}`)
+  }
+  return data
+})
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params
+  const post = await getPost(params.slug)
 
   if (!post) return {}
 
@@ -167,11 +189,7 @@ function getCTAProps() {
 
 export default async function BlogPostPage(props: Props) {
   const params = await props.params
-  const { data: post } = await supabase
-    .from('blog_posts')
-    .select('*')
-    .eq('slug', params.slug)
-    .single()
+  const post = await getPost(params.slug)
 
   if (!post) notFound()
 

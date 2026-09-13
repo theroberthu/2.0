@@ -6,6 +6,37 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.10 - Stop caching transient failures as article 404s (2026-09-13)
+
+**What changed.** The article page's post lookup moved into a shared `getPost`
+helper in `src/app/blog/[slug]/page.tsx` that uses `.maybeSingle()` and throws
+on a request error, wrapped in React `cache` so `generateMetadata` and the page
+share one request.
+
+**Why.** A published article,
+`6-dimension-geo-audit-framework-amazon-listing`, was observed returning 404
+live, served from Vercel's cache (`x-vercel-cache: HIT`, then `STALE`), and
+recovered to 200 about 40 seconds later. The article and template were fine; it
+rendered locally. The lookup used `.single()`, which returns `data: null` both
+when no row matches (`PGRST116`) and when the request itself fails (`fetch
+failed`). The page checked only `data`, so it called `notFound()` in both cases,
+and a transient Supabase failure during ISR regeneration was cached as a 404 for
+a real article. Any article could hit this at random.
+
+**Fix.** `.maybeSingle()` returns `{ data: null, error: null }` for a missing
+row and sets `error` only when the request fails, so the two cases are now
+distinct. A genuine miss still calls `notFound()`. A failed request throws,
+which makes Next keep serving the last successful render instead of caching a
+404.
+
+**Verified.** Client behavior probed directly for real, missing and
+unreachable-host queries under both `.single()` and `.maybeSingle()`. Locally:
+the previously affected article, the newest article and the oldest-style article
+all render 200 with correct titles, and a nonexistent slug still returns 404,
+not 500. tsc, lint and build clean. Not verified: an induced live Supabase
+outage, which is not practical to trigger safely; the stale-on-throw behavior
+relied on is Next's documented ISR behavior.
+
 ## Release 1.9 - Server-rendered blog index (2026-09-13)
 
 **What changed.** `/blog` filtering and pagination moved from client state to
