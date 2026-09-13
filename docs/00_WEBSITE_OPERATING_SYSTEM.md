@@ -190,8 +190,9 @@ them fails every time. Do not chase them, and do not "fix" them.
 
 A **"Redirect error"** row is different and is worth investigating. It means
 Googlebot could not complete the redirect (a chain, a loop, or an unreachable
-destination), not merely that a redirect exists. See the `www` hostname item in
-[03_WEBSITE_BACKLOG.md](03_WEBSITE_BACKLOG.md) for a live example.
+destination), not merely that a redirect exists. The `www` hostname dead-end, fixed
+in Release 1.11 of [04_CHANGELOG.md](04_CHANGELOG.md), was a live example: a redirect
+to an HTTPS host with no certificate.
 
 ## Decision framework
 

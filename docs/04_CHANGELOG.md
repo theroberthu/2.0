@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.11 - www hostname redirects to the apex (2026-09-13)
+
+**What changed.** Configuration only, in the Vercel dashboard. No code or DNS
+change. `www.theroberthu.com` was added to the project as a **308 Permanent
+Redirect** to `theroberthu.com`. `theroberthu.com` remains connected to
+Production and is unchanged.
+
+**Why.** `www` had a DNS A record pointing at Vercel (216.198.79.1, same as the
+apex), but the hostname had never been added to the Vercel project, so no
+certificate was issued. `http://www` redirected to `https://www`, which then
+failed TLS with "no alternative certificate subject name matches target host
+name". Anyone typing `www` hit a certificate error, and Search Console reported
+it as a Redirect error.
+
+**How it was configured.** Two defaults in Vercel's Add Domains dialog would
+have been harmful and were deliberately unchecked: "Redirect apex domains to
+www" (would have flipped the canonical host to `www`, contradicting every
+canonical tag, sitemap entry and internal link) and "Include apex and www
+variants" (would have applied the redirect to the live apex as well, pointing it
+at itself). The redirect was also changed from the default 307 Temporary to 308
+Permanent so search engines consolidate `www` onto the apex. The existing DNS
+record already satisfied Vercel's validation, so no DNS edit was needed.
+
+**Verified.** `https://www.theroberthu.com/` returns 308 to
+`https://theroberthu.com/` then 200. Deep paths are preserved
+(`/blog/npci-upi-ai-agent-authorization` redirects to the same path on the
+apex). `http://www` resolves in two hops, HTTPS upgrade then the apex redirect.
+The apex still returns 200 directly. Certificate issued for
+`CN=www.theroberthu.com`, valid 2026-09-13 to 2026-12-12; Vercel renews it
+automatically.
+
+**Follow-ups.** Search Console's "Redirect error" validation for the `http://`
+URLs may now pass on a new validation run. The "Page with redirect" rows remain
+expected and should not be re-validated.
+
 ## Release 1.10 - Stop caching transient failures as article 404s (2026-09-13)
 
 **What changed.** The article page's post lookup moved into a shared `getPost`
