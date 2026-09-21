@@ -6,6 +6,42 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.12 - AI Commerce 2027 flagship research page (2026-09-21)
+
+**What changed.** New route `/ai-commerce-2027`, the first TRH living research
+page. Content lives in a typed module (`src/lib/ai-commerce-2027.ts`) and the
+route is a thin renderer, so routine updates are data edits. The page carries an
+executive thesis, an AI assisted ecommerce versus AI commerce distinction, an
+HTML and CSS stack diagram, eight evidence-backed shifts, a disconfirming
+section, an operator watchlist, and the 2027 AI Commerce Evidence Tracker seeded
+with ten verified 2026 developments. Also added: a flagship OG card at
+`/images/research/ai-commerce-2027.png`, a sitemap entry, and a homepage
+discovery link under Research Areas.
+
+**Why.** The corpus had 86 articles on individual developments and no synthesis
+layer. This page is the hub that future AI commerce articles link back to, and
+that links forward to them through the tracker.
+
+**Editorial position.** 2026 built the infrastructure and produced almost no
+evidence of use. No platform, network or retailer publishes agent initiated
+transaction volume. The page states that gap plainly rather than implying
+adoption is further along than it is.
+
+**Standards applied.** Primary sources only for load-bearing claims (Google,
+OpenAI, Tapestry, Cloudflare, Ant International, Sabre, W3C, Google Search
+Central, five arXiv benchmark papers). Unverified payment claims from Visa,
+Mastercard and PayPal were excluded rather than included to make the stack look
+complete. Benchmark findings are labelled as simulations throughout. 3,973 prose
+words, 16 internal links, zero em dashes, one closing question.
+
+**Accessibility note.** This page uses `#42a5c8` for accent text rather than
+`brand-accent` (`#2d7d9a`), which measures 3.17:1 and fails AA for body text.
+Borders and fills still use `brand-accent`. This is a deliberate local variance
+pending the site-wide contrast fix in the backlog.
+
+**Follow-ups.** Apply the same accent fix site wide. Keep the tracker current per
+the living research gate in the operating system doc.
+
 ## Release 1.11 - www hostname redirects to the apex (2026-09-13)
 
 **What changed.** Configuration only, in the Vercel dashboard. No code or DNS

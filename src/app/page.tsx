@@ -204,6 +204,25 @@ export default async function HomePage() {
               </p>
             </div>
           </div>
+
+          <Link
+            href="/ai-commerce-2027"
+            className="group mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/[0.03] border border-brand-gold/25 rounded-xl p-7 md:p-8 hover:border-brand-gold/50 transition-colors duration-200"
+          >
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
+                Flagship research
+              </span>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-[#42a5c8] transition-colors duration-200">
+                AI Commerce 2027: From Experiment to Operating Model
+              </h3>
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl">
+                A living outlook on what 2026 actually built, what it enables next, and what remains unproven.
+                Updated through 2027 as evidence arrives.
+              </p>
+            </div>
+            <span className="text-[13px] font-semibold text-[#42a5c8] whitespace-nowrap">Read the outlook</span>
+          </Link>
         </div>
       </section>
 

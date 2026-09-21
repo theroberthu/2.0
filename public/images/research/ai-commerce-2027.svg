@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1a2a32"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#c5a94e" opacity="0.7"/>
+
+  <text x="100" y="132" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c5a94e" letter-spacing="3.5">TRH RESEARCH</text>
+
+  <text x="100" y="252" font-family="'Helvetica Neue', Arial, sans-serif" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="-2">AI Commerce 2027</text>
+
+  <text x="100" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="400" fill="#8a9aa2" letter-spacing="-0.5">From Experiment to Operating Model</text>
+
+  <line x1="100" y1="402" x2="1100" y2="402" stroke="#c5a94e" stroke-opacity="0.25" stroke-width="1"/>
+
+  <text x="100" y="462" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="600" fill="#c5a94e" letter-spacing="-0.5">Infrastructure exists. Adoption evidence does not.</text>
+
+  <text x="100" y="562" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#2d7d9a" letter-spacing="1">ROBERT HU</text>
+  <text x="100" y="586" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#4a6a7a">theroberthu.com</text>
+
+  <text x="1100" y="586" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#8a9aa2" opacity="0.5">HU</text>
+</svg>

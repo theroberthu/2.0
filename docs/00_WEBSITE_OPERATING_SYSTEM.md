@@ -105,7 +105,16 @@ rather than through promotion or lead capture.
 5. Verify observable behavior (redirects, renders, links resolve 200, JSON-LD
    validates from the rendered HTML).
 6. Commit with a clear message; push to `main` (Vercel deploys).
-7. Record the change in [04_CHANGELOG.md](04_CHANGELOG.md) and update the backlog.
+7. **Living research gate.** If the change is a new AI commerce article, check
+   whether it materially updates one of the eight shifts on
+   [/ai-commerce-2027](../src/app/ai-commerce-2027/page.tsx). If it does, update
+   that page **in the same production cycle**: add an `EVIDENCE_TRACKER` row in
+   `src/lib/ai-commerce-2027.ts` with date, company, development, affected
+   shift, evidence type, what changed, and an `href` forward link to the new
+   article. Revise the relevant shift text if the evidence changes the argument.
+   Then bump `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` in
+   `src/app/sitemap.ts`. A flagship that goes stale stops being living research.
+8. Record the change in [04_CHANGELOG.md](04_CHANGELOG.md) and update the backlog.
 
 Releases are grouped thematically (e.g. "Editorial Foundation", "Consulting
 Cleanup"), not by rigid versioning.
@@ -131,6 +140,29 @@ shape:
 Known variance to reconcile (see backlog): `/geo` currently labels its ending
 "Related reading" and uses `Article` + `HowTo`; `/aeo` uses "Continue exploring
 AI Commerce" and `WebPage`. The target is the standard above for both.
+
+## Living research pages
+
+A living research page is a dated, evidence-first outlook that is expected to
+change during its subject year. `/ai-commerce-2027` is the first one.
+
+**Date discipline.** `datePublished` is fixed at first publication and never
+changes. `dateModified`, the `LAST_UPDATED` constant and the visible "Updated"
+field move together whenever evidence materially changes. Do not refresh the
+updated date for typo fixes, and never let today's date stand in for the
+original publication date. The living-report promise is only real if those two
+dates can diverge.
+
+**Editorial guardrail.** The distinction between available infrastructure and
+evidence of adoption is the spine of `/ai-commerce-2027`. The sentence
+"Infrastructure exists. Adoption evidence does not." is protected: it stays in
+the opening, above the fold of the thesis, until published adoption data makes
+it false. If that day comes, the page changes because the evidence changed, not
+because the tone drifted.
+
+**Structure.** Living research pages keep content in a typed module
+(`src/lib/<page>.ts`) so the route stays a thin renderer and a routine update is
+a data edit, not a layout change.
 
 ## Success metrics
 

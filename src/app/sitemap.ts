@@ -18,6 +18,9 @@ const STATIC_LAST_MODIFIED = {
   geoAlexaForShopping: new Date('2026-05-24'),
   geoWalmartSparky: new Date('2026-06-22'),
   aeo: new Date('2026-03-19'),
+  // Living research page: bump this whenever LAST_UPDATED in
+  // src/lib/ai-commerce-2027.ts changes.
+  aiCommerce2027: new Date('2026-09-21'),
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -30,6 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/geo/alexa-for-shopping`, lastModified: STATIC_LAST_MODIFIED.geoAlexaForShopping, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${SITE_URL}/geo/walmart-sparky`, lastModified: STATIC_LAST_MODIFIED.geoWalmartSparky, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${SITE_URL}/aeo`, lastModified: STATIC_LAST_MODIFIED.aeo, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${SITE_URL}/ai-commerce-2027`, lastModified: STATIC_LAST_MODIFIED.aiCommerce2027, changeFrequency: 'monthly' as const, priority: 0.9 },
   ]
 
   // Dynamic blog pages (still from Supabase)
