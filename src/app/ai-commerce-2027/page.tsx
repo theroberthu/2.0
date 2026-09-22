@@ -5,9 +5,11 @@ import { SITE_URL } from '@/lib/constants'
 import {
   COMPARISON,
   DISCONFIRMING,
+  EVIDENCE_NUMBERS,
   EVIDENCE_TRACKER,
   FLOW,
   FOUNDATIONS,
+  INTERFACES,
   LAST_UPDATED,
   PUBLISHED,
   READING_MINUTES,
@@ -151,8 +153,7 @@ export default function AiCommerce2027Page() {
               2026 was the year a lot of AI commerce infrastructure stopped being a demo. An open protocol for
               agent to merchant transactions shipped and gained capabilities. A luxury brand made its products
               buyable inside a chat interface. Payment networks began agreeing on how to identify an agent.
-              A content network split crawler permission into four separate decisions. Merchant side agents
-              arrived with approval gates built in.
+              Merchant side agents arrived with approval gates built in.
             </p>
             <p>
               What did not arrive was evidence of use. I could not find a single platform, network or retailer
@@ -179,6 +180,30 @@ export default function AiCommerce2027Page() {
               most clearly of all.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Evidence numbers */}
+      <section className="py-14 md:py-16 bg-[#1a2d37] border-y border-white/[0.08]">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8">
+          <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-brand-gold mb-8">
+            What the 2026 record actually shows
+          </p>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-9">
+            {EVIDENCE_NUMBERS.map((n) => (
+              <div key={n.label}>
+                <dt className="text-3xl md:text-[2.5rem] font-bold text-white leading-none tracking-tight mb-3">
+                  {n.value}
+                </dt>
+                <dd className="text-[14px] text-gray-300 leading-relaxed">
+                  {n.label}
+                  <span className="block text-[11px] font-mono uppercase tracking-[0.12em] text-gray-400 mt-2">
+                    {n.source}
+                  </span>
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -226,8 +251,7 @@ export default function AiCommerce2027Page() {
           </h2>
           <p className="text-base text-gray-300 leading-relaxed mb-10 max-w-3xl">
             AI commerce is not one technology. It is a sequence of steps, each owned by different systems and
-            often by different companies, sitting on shared infrastructure. Most current failures are not model
-            failures. They happen where one layer hands off to the next.
+            often different companies, on shared infrastructure. Most failures here are not model failures. They happen where one layer hands off to the next.
           </p>
 
           <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl p-5 md:p-8">
@@ -265,10 +289,40 @@ export default function AiCommerce2027Page() {
           </div>
 
           <p className="text-sm text-[#42a5c8]/80 font-medium border-l-2 border-brand-accent pl-4 mt-8 max-w-3xl">
-            An operator reading this diagram should notice how much of it they already own. Product data,
-            merchant systems and measurement are not new responsibilities. What is new is how many other systems
-            now read them.
+            Most of this diagram is already yours. Product data, merchant systems and measurement are not new
+            responsibilities. What is new is how many other systems read them.
           </p>
+
+          <div className="mt-14">
+            <h3 className="text-lg md:text-xl font-bold text-white tracking-tight mb-3">
+              One storefront, two front doors
+            </h3>
+            <p className="text-base text-gray-300 leading-relaxed mb-7 max-w-3xl">
+              Not a website replaced by an agent. One product record serving two interfaces, maintained by the
+              same team.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {INTERFACES.map((pane) => (
+                <div key={pane.title} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-6">
+                  <span className="block text-[11px] font-mono uppercase tracking-[0.15em] text-[#42a5c8] mb-1.5">
+                    {pane.audience}
+                  </span>
+                  <h4 className="text-[17px] font-bold text-white mb-4">{pane.title}</h4>
+                  <ul className="space-y-2">
+                    {pane.reads.map((r) => (
+                      <li key={r} className="flex gap-2.5 text-[14px] text-gray-300 leading-relaxed">
+                        <span className="block w-1 h-1 rounded-full bg-[#42a5c8]/70 mt-2 shrink-0" aria-hidden="true" />
+                        <span>{r}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="text-[13px] font-mono uppercase tracking-[0.12em] text-gray-400 text-center mt-5">
+              Both read the same product data
+            </p>
+          </div>
         </div>
       </section>
 
@@ -373,8 +427,8 @@ export default function AiCommerce2027Page() {
             The two models side by side
           </h2>
           <p className="text-base text-gray-300 leading-relaxed mb-8 max-w-3xl">
-            This is a contrast, not a migration path. Most businesses are likely to operate in both columns at once,
-            and a workflow can sit in the left column while the one next to it sits in the right.
+            This is a contrast, not a migration path. Most businesses are likely to operate in both columns at
+            once, and one workflow can sit left while the next sits right.
           </p>
           <div className="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[640px] text-left border-collapse">
@@ -418,7 +472,7 @@ export default function AiCommerce2027Page() {
           </h2>
           <p className="text-base text-gray-300 leading-relaxed mb-8 max-w-3xl">
             No score and no probability. These are the developments that would tell an operator whether the
-            operating model is arriving, and roughly in the order they would matter.
+            operating model is arriving.
           </p>
           <ol className="space-y-3">
             {WATCHLIST.map((item, i) => (
@@ -446,9 +500,8 @@ export default function AiCommerce2027Page() {
             2027 AI Commerce Evidence Tracker
           </h2>
           <p className="text-base text-gray-300 leading-relaxed mb-8 max-w-3xl">
-            Seeded with the strongest verified 2026 developments and updated through 2027 as evidence arrives.
-            Entries record what actually changed, not what was promised, and link forward to the full analysis
-            where one exists.
+            Seeded with the strongest verified 2026 developments and updated through 2027. Entries record what
+            changed, not what was promised, and link forward to the full analysis where one exists.
           </p>
           <div className="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[880px] text-left border-collapse">
@@ -505,8 +558,8 @@ export default function AiCommerce2027Page() {
           </h2>
           <div className="space-y-5 text-base text-gray-300 leading-relaxed">
             <p>
-              This report synthesizes work published across 2026 rather than repeating it. The two pillar pages
-              hold the underlying frameworks:{' '}
+              This report synthesizes 2026 research rather than repeating it. The pillar pages hold the
+              frameworks:{' '}
               <Link href="/geo" className="text-[#42a5c8] hover:text-white transition-colors duration-200">
                 generative engine optimization
               </Link>{' '}

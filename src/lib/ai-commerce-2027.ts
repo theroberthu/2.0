@@ -373,3 +373,43 @@ export const WATCHLIST: { signal: string; why: string }[] = [
   { signal: 'Servicing capability, not just purchasing', why: 'Returns, amendments and refunds decide whether agents are operationally useful' },
   { signal: 'Comparative basket and return data for agent completed orders', why: 'Tells operators what the lost session actually costs' },
 ]
+
+export type EvidenceNumber = {
+  value: string
+  label: string
+  source: string
+}
+
+/**
+ * Verified figures used as an early visual anchor. Every one is drawn from a
+ * primary source or a published paper. The first entry is deliberately zero:
+ * it is the spine of the report.
+ */
+export const EVIDENCE_NUMBERS: EvidenceNumber[] = [
+  { value: '0', label: 'Platforms publishing agent initiated transaction volume', source: 'My search, September 2026' },
+  { value: 'Under 1%', label: 'Of Cloudflare sites that block search crawlers', source: 'Cloudflare' },
+  { value: '17%', label: 'Use some mechanism to block AI training', source: 'Cloudflare' },
+  { value: '~80', label: 'Travel customers piloting or running Sabre agent infrastructure', source: 'Sabre' },
+  { value: '18.48%', label: 'Of spend sent to fraudulent suppliers by the top earning model', source: 'E-Commerce Bench, simulation' },
+  { value: '27%', label: 'Of human performance reached by the best model over a simulated year', source: 'MerchantBench, simulation' },
+]
+
+export type InterfacePane = {
+  title: string
+  audience: string
+  reads: string[]
+}
+
+/** "One storefront, two front doors" diagram. */
+export const INTERFACES: InterfacePane[] = [
+  {
+    title: 'Human interface',
+    audience: 'Built for people',
+    reads: ['Rendered pages and images', 'Navigation and search', 'Merchandising and layout', 'Session behavior'],
+  },
+  {
+    title: 'Agent interface',
+    audience: 'Built for software',
+    reads: ['Declared tools and capabilities', 'Structured catalog and inventory', 'Transaction and checkout calls', 'Permissions and identity'],
+  },
+]
