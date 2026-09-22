@@ -339,7 +339,7 @@ export default function AiCommerce2027Page() {
       </section>
 
       {/* What would prove this wrong */}
-      <section id="wrong" className="py-16 md:py-24 bg-brand-deep/20 border-y border-brand-gold/20 scroll-mt-[128px]">
+      <section id="wrong" className="py-16 md:py-24 bg-[#1a2d37] border-y border-brand-gold/25 scroll-mt-[128px]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">
             The disconfirming case
