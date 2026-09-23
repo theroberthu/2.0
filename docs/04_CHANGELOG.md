@@ -6,6 +6,42 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.13 - Instacart, Gopuff and retail media as layers (2026-09-22)
+
+**What changed.** New article at
+`/blog/instacart-gopuff-carrot-ads-retail-media-infrastructure`, on Gopuff
+adopting Instacart Carrot Ads for its own storefront while continuing to run
+Gopuff Ads. Ships with a hand-authored OG card and a generated insert script
+built directly from the approved draft in `Content/blog/`.
+
+**Why.** The corpus covered retail media as placement, as AI surface and as
+campaign automation, and never covered who builds and operates the
+infrastructure underneath a retailer's media business.
+
+**Editorial position.** This is unbundling, not outsourcing. Gopuff kept the
+commercial layer and rented the plumbing, and the operator question is shifting
+from whether to build a retail media network to which layers are differentiating
+enough to justify owning. The piece separates ownership of a layer from control
+of a business.
+
+**Standards applied.** Two primary sources: the September 22, 2026 Instacart and
+Gopuff release, and Instacart's own November 6, 2025 Carrot Ads newsroom post.
+The brief's proposed 220 partner / 7,000 advertiser baseline could not be
+verified from a primary source and was replaced with the verified 240+ / 7,500+
+pair. MRC accreditation is described as validating measurement process for named
+metrics, explicitly not as evidence of incremental sales or partner
+profitability. The network effect is labelled a hypothesis. 1,118 body words,
+one internal link, zero em dashes, one closing question.
+
+**Living research gate.** Checked against the eight shifts on
+`/ai-commerce-2027` and no tracker row added. The development is retail media
+infrastructure on human storefronts and makes no agent or AI surface claim, so
+it does not materially update a shift. `LAST_UPDATED` is unchanged.
+
+**Follow-ups.** None specific to this article.
+
+---
+
 ## Release 1.12 - AI Commerce 2027 flagship research page (2026-09-21)
 
 **What changed.** New route `/ai-commerce-2027`, the first TRH living research
