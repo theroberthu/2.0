@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1860" viewBox="0 0 750 1860" role="img" aria-label="Agentic Commerce: From Integration to Governance. Old model, integration: merchant decides, prioritizes the project, engineering builds the integration, testing and approval, AI channel launches. Emerging model, governance: commerce platform adds an AI channel, eligible merchant inherits the capability, discovery and checkout settings determine participation, merchant reviews, configures or opts out.">
+  <rect width="750" height="1860" fill="#1a2a32"/>
+  <rect x="0" y="0" width="750" height="3" fill="#c5a94e" opacity="0.55"/>
+
+  <!-- Headline -->
+  <text x="48" y="94" font-family="'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff" letter-spacing="-0.8">Agentic Commerce:</text>
+  <text x="48" y="150" font-family="'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff" letter-spacing="-0.8">From Integration</text>
+  <text x="48" y="206" font-family="'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff" letter-spacing="-0.8">to Governance</text>
+  <line x1="48" y1="244" x2="702" y2="244" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- ============ OLD MODEL ============ -->
+  <text x="48" y="306" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#8a9aa2" letter-spacing="3">OLD MODEL: INTEGRATION</text>
+
+  <line x1="88" y1="370" x2="88" y2="754" stroke="#2d7d9a" stroke-opacity="0.35" stroke-width="1.5"/>
+  <g fill="none" stroke="#2d7d9a" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M79,412 L88,422 L97,412"/>
+    <path d="M79,508 L88,518 L97,508"/>
+    <path d="M79,604 L88,614 L97,604"/>
+    <path d="M79,700 L88,710 L97,700"/>
+  </g>
+
+  <circle cx="88" cy="370" r="26" fill="#1a2a32" stroke="#2d7d9a" stroke-opacity="0.6" stroke-width="1.5"/>
+  <g transform="translate(76,358) scale(1.5)" fill="none" stroke="#2d7d9a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0,5 H16 M2,5 V14 H14 V5 M0,5 L2.5,1 H13.5 L16,5"/>
+  </g>
+  <text x="144" y="381" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Merchant decides</text>
+
+  <circle cx="88" cy="466" r="26" fill="#1a2a32" stroke="#2d7d9a" stroke-opacity="0.6" stroke-width="1.5"/>
+  <g transform="translate(76,454) scale(1.5)" fill="none" stroke="#2d7d9a" stroke-width="1.3" stroke-linecap="round">
+    <path d="M1,3 H15 M1,8 H11 M1,13 H7"/>
+  </g>
+  <text x="144" y="477" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Prioritizes the project</text>
+
+  <circle cx="88" cy="562" r="26" fill="#1a2a32" stroke="#2d7d9a" stroke-opacity="0.6" stroke-width="1.5"/>
+  <g transform="translate(76,550) scale(1.5)" fill="none" stroke="#2d7d9a" stroke-width="1.3" stroke-linecap="round">
+    <circle cx="8" cy="8" r="4"/>
+    <path d="M8,0 V3 M8,13 V16 M0,8 H3 M13,8 H16"/>
+  </g>
+  <text x="144" y="573" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Engineering builds the integration</text>
+
+  <circle cx="88" cy="658" r="26" fill="#1a2a32" stroke="#2d7d9a" stroke-opacity="0.6" stroke-width="1.5"/>
+  <g transform="translate(76,646) scale(1.5)" fill="none" stroke="#2d7d9a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1,8 L6,13 L15,3"/>
+  </g>
+  <text x="144" y="669" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Testing and approval</text>
+
+  <circle cx="88" cy="754" r="26" fill="#1a2a32" stroke="#2d7d9a" stroke-opacity="0.6" stroke-width="1.5"/>
+  <g transform="translate(76,742) scale(1.5)" fill="none" stroke="#2d7d9a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1,2 H15 V11 H7 L3.5,15 V11 H1 Z"/>
+  </g>
+  <text x="144" y="765" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">AI channel launches</text>
+
+  <text x="48" y="840" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#8a9aa2">Technical friction forced the decision.</text>
+
+  <!-- ============ TRANSITION ============ -->
+  <line x1="375" y1="882" x2="375" y2="906" stroke="#c5a94e" stroke-opacity="0.45" stroke-width="1.5"/>
+  <rect x="237" y="920" width="276" height="56" rx="28" fill="none" stroke="#c5a94e" stroke-opacity="0.55" stroke-width="1.5"/>
+  <text x="375" y="956" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#c5a94e" letter-spacing="3">BUILD &#8594; GOVERN</text>
+  <line x1="375" y1="990" x2="375" y2="1014" stroke="#c5a94e" stroke-opacity="0.45" stroke-width="1.5"/>
+
+  <!-- ============ EMERGING MODEL ============ -->
+  <text x="48" y="1076" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#c5a94e" letter-spacing="3">EMERGING MODEL: GOVERNANCE</text>
+
+  <line x1="88" y1="1140" x2="88" y2="1500" stroke="#c5a94e" stroke-opacity="0.4" stroke-width="1.5"/>
+  <g fill="none" stroke="#c5a94e" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M79,1196 L88,1206 L97,1196"/>
+    <path d="M79,1316 L88,1326 L97,1316"/>
+    <path d="M79,1436 L88,1446 L97,1436"/>
+  </g>
+
+  <circle cx="88" cy="1140" r="26" fill="#1a2a32" stroke="#c5a94e" stroke-opacity="0.65" stroke-width="1.5"/>
+  <g transform="translate(76,1128) scale(1.5)" fill="none" stroke="#c5a94e" stroke-width="1.3" stroke-linecap="round">
+    <path d="M1,3 H15 M1,8 H15 M1,13 H15"/>
+  </g>
+  <text x="144" y="1136" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Commerce platform adds</text>
+  <text x="144" y="1172" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">an AI channel</text>
+
+  <circle cx="88" cy="1260" r="26" fill="#1a2a32" stroke="#c5a94e" stroke-opacity="0.65" stroke-width="1.5"/>
+  <g transform="translate(76,1248) scale(1.5)" fill="none" stroke="#c5a94e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8,1 V9 M4,6 L8,10.5 L12,6 M1,14 H15"/>
+  </g>
+  <text x="144" y="1256" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Eligible merchant inherits</text>
+  <text x="144" y="1292" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">the capability</text>
+
+  <circle cx="88" cy="1380" r="26" fill="#1a2a32" stroke="#c5a94e" stroke-opacity="0.65" stroke-width="1.5"/>
+  <g transform="translate(76,1368) scale(1.5)" fill="none" stroke="#c5a94e" stroke-width="1.3" stroke-linecap="round">
+    <path d="M1,5 H15 M1,11 H15"/>
+    <circle cx="5" cy="5" r="2.2" fill="#1a2a32"/>
+    <circle cx="11" cy="11" r="2.2" fill="#1a2a32"/>
+  </g>
+  <text x="144" y="1376" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Discovery and checkout</text>
+  <text x="144" y="1412" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">settings determine participation</text>
+
+  <circle cx="88" cy="1500" r="26" fill="#1a2a32" stroke="#c5a94e" stroke-opacity="0.65" stroke-width="1.5"/>
+  <g transform="translate(76,1488) scale(1.5)" fill="none" stroke="#c5a94e" stroke-width="1.3">
+    <rect x="1" y="4" width="14" height="8" rx="4"/>
+    <circle cx="11" cy="8" r="2.4" fill="#c5a94e" stroke="none"/>
+  </g>
+  <text x="144" y="1496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">Merchant reviews, configures</text>
+  <text x="144" y="1532" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#ffffff">or opts out</text>
+
+  <text x="48" y="1608" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#c5a94e" opacity="0.85">Activation becomes easier.</text>
+  <text x="48" y="1644" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#c5a94e" opacity="0.85">Governance becomes more important.</text>
+
+  <!-- ============ TAKEAWAY ============ -->
+  <line x1="48" y1="1692" x2="702" y2="1692" stroke="#c5a94e" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="48" y="1756" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="500" fill="#c5a94e" letter-spacing="-0.3">Activation used to require a</text>
+  <text x="48" y="1798" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="500" fill="#c5a94e" letter-spacing="-0.3">decision. Now review does.</text>
+
+  <text x="702" y="1838" text-anchor="end" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#8a9aa2" letter-spacing="2">RH &#124; ROBERT HU</text>
+</svg>

@@ -6,6 +6,33 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.15 - Editorial diagram, responsive (2026-09-24)
+
+**What changed.** Added a two-model editorial diagram to
+`/blog/agentic-commerce-platform-default-shopify-google`, placed between "The
+default is the distribution mechanism" and "Discoverable, transactable,
+measurable". Two hand-authored SVGs: a 16:9 desktop version and a stacked
+mobile version redrawn for narrow screens rather than scaled down. Delivered
+through `<picture>`, with the mobile SVG under 640px and a PNG fallback for
+surfaces that cannot render SVG.
+
+**Why.** The article's central contrast, integration versus governance, is
+structural and reads faster as a diagram than as prose.
+
+**Accessibility.** Explicit page-level `alt` on the `img` element, in addition
+to the `aria-label` inside each SVG. The alt states the concept rather than
+repeating the graphic's text.
+
+**Standards applied.** Brand palette only, no logos, no imagery, no gradients.
+Article copy, H1, metadata and the AI Commerce 2027 page were not touched, and
+the update script aborts if the prose changes by a single byte.
+
+**Follow-ups.** The mobile breakpoint is 640px, chosen to match the point where
+the desktop diagram's 27px type drops below comfortable reading size. Revisit if
+the blog's content column width changes.
+
+---
+
 ## Release 1.14 - Agentic commerce as a platform default (2026-09-24)
 
 **What changed.** New article at
