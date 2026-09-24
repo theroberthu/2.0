@@ -27,9 +27,14 @@ repeating the graphic's text.
 Article copy, H1, metadata and the AI Commerce 2027 page were not touched, and
 the update script aborts if the prose changes by a single byte.
 
-**Follow-ups.** The mobile breakpoint is 640px, chosen to match the point where
-the desktop diagram's 27px type drops below comfortable reading size. Revisit if
-the blog's content column width changes.
+**Type sizing.** The article's content column measures 720px, so the first cut of
+the 16:9 asset rendered at roughly 12px effective type. Step text was raised to
+32px in the 1600 viewBox, about 14px effective, and the transition marker was
+rotated into the gutter because the horizontal chip collided with the governance
+rail at the larger size.
+
+**Follow-ups.** The mobile breakpoint is 640px. Revisit if the blog's content
+column width changes.
 
 ---
 
