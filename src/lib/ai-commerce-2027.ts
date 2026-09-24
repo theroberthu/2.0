@@ -8,7 +8,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-09-21'
+export const LAST_UPDATED = '2026-09-24'
 export const READING_MINUTES = 16
 
 /** Inline link used inside body copy. Rendered as a Next.js Link. */
@@ -56,6 +56,7 @@ export const SHIFTS: Shift[] = [
       'Google\'s Universal Cart, announced in May, works across retailers and across Search and Gemini. Shoppers can check out with Google Pay or transfer items to the merchant site, and Google states the retailer always remains the merchant of record.',
       'OpenAI\'s Agentic Commerce Protocol, open sourced with Stripe in September 2025, takes the same position from the other side: orders, payments and fulfillment are handled by the merchant using existing systems, and the merchant stays merchant of record.',
       'Tapestry\'s implementation removes the redirect for single item purchases while keeping Tapestry as the seller.',
+      'Shopify\'s documentation in September describes direct checkout in Google AI Mode and Gemini as active by default for eligible stores, with its managed setting also enrolling those stores in agentic storefront channels that do not exist yet. That changes how the capability reaches merchants, from an integration each retailer builds to a default each retailer reviews, and it adds no volume evidence at all.',
     ],
     enables2027: [
       'This separates two things operators have treated as one. Interface ownership is who renders the moment of purchase. Transaction ownership is who holds the order, the money, the customer record and the obligation. 2026 architecture consistently gives the interface away and keeps the transaction.',
@@ -236,6 +237,15 @@ export type TrackerEntry = {
  * appending to this array. Newest first.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-09-22',
+    org: 'Shopify and Google',
+    development: 'Direct checkout in Google AI Mode and Gemini is active by default for eligible Shopify stores, while Shopify\'s managed setting automatically enrolls eligible stores in new agentic storefront channels as they become available',
+    affects: 'Website handoff',
+    evidenceType: 'Vendor documentation',
+    changed: 'Agent checkout arrived as a platform default with an opt out, moving the evidence from named retailer implementations to platform level distribution',
+    href: '/blog/agentic-commerce-platform-default-shopify-google',
+  },
   {
     date: '2026-09-18',
     org: 'Ant International',

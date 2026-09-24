@@ -6,6 +6,50 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.14 - Agentic commerce as a platform default (2026-09-24)
+
+**What changed.** New article at
+`/blog/agentic-commerce-platform-default-shopify-google`, on Shopify making
+direct checkout in Google AI Mode and Gemini active by default for eligible
+stores. The living research page was updated in the same cycle: a dated
+`EVIDENCE_TRACKER` row, a fourth `changed2026` line on shift two, `LAST_UPDATED`
+and `STATIC_LAST_MODIFIED.aiCommerce2027` moved to 2026-09-24. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft.
+
+**Why.** The corpus owned agentic checkout as an architecture question and as a
+discovery question. It had never covered the moment agent distribution became a
+platform-managed setting with an opt-out.
+
+**Editorial position.** The Google channel is the evidence; the story is channel
+governance. Shopify's managed default keeps channels active, keeps direct
+checkout on where supported, and enrolls stores in agentic storefront channels
+that do not exist yet. What moved is the burden: activation used to require a
+decision, and now review does. The durable formulation to carry forward is that
+when technical integration stops forcing a channel decision, governance has to
+replace the friction that used to create one.
+
+**Standards applied.** Primary sources only: Shopify's Help Center pages for the
+Google channel and for managing agentic storefronts, Google's Merchant Center
+UCP and UCP onboarding articles, and Shopify's January 11, 2026 post. Every
+tradeoff was verified on the Google channel page itself rather than inferred
+from the near-identical Microsoft Copilot page. Search Engine Roundtable is
+cited for rollout timing only. PPC Land's "without asking" framing was not used,
+since the documentation shows supplemental terms, an admin control and a
+documented opt-out. The measurement claim is qualified to "some of the
+instrumentation" because server-to-server events and Shopify channel reporting
+survive. No adoption, volume or conversion claim appears. 1,120 body words, four
+internal links, zero em dashes, one closing question.
+
+**Living research gate.** Satisfied in this cycle. Shift one was left untouched
+by editorial decision. The new shift two line ends with "and it adds no volume
+evidence at all", which keeps the update inside the page's central discipline
+that infrastructure exists and adoption evidence does not.
+
+**Follow-ups.** None specific to this article.
+
+---
+
 ## Release 1.13 - Instacart, Gopuff and retail media as layers (2026-09-22)
 
 **What changed.** New article at
