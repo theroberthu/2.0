@@ -6,6 +6,46 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.16 - Agentic commerce adoption definition problem (2026-09-26)
+
+**What changed.** New article at
+`/blog/agentic-commerce-adoption-definition-problem`, comparing the Global
+Payments Agentic Commerce Report (published September 23, fielded May 2026) with
+the ACI Worldwide and YouGov research (published September 16, fielded June
+2026). Ships with a hand-authored OG card and a generated insert script built
+from the approved draft.
+
+**Why.** The corpus owned forecasts, journey measurement and agent authorization
+on payment rails. It had never asked whether consumer adoption statistics
+measure the same behavior.
+
+**Editorial position.** Assist, recommend, prepare, approve, bounded delegation
+and autonomous purchasing are different grants of authority. Two of the six are
+barely measured, including prepare, which is closest to what platforms actually
+ship. The lead finding is that ACI describes one 7% figure three different ways
+inside a single release, so the definition problem appears inside a source
+before any two studies are compared.
+
+**Standards applied.** Primary releases only for every figure. Population scope
+was checked rather than inferred: only two Global Payments numbers are
+explicitly attributed to Americans, and the article says so. The brief's 5% and
+2% autonomous split could not be verified from any public source and was
+dropped in favor of the published 7%. Both full reports sit behind lead-capture
+forms and were not obtained, which the piece discloses. Both sponsors are named
+as payments companies with a commercial interest. Willingness is never presented
+as behavior. 1,115 body words, three internal links, zero em dashes, one closing
+question.
+
+**Living research gate.** Checked and deliberately skipped. The AI Commerce 2027
+tracker records infrastructure and deployed capability, not stated-preference
+surveys, so no row was added and `LAST_UPDATED` is unchanged. The Editorial
+Board agreed. If this belongs anywhere on the flagship later, it is the
+disconfirming and adoption-evidence discussion.
+
+**Follow-ups.** None specific to this article.
+
+---
+
 ## Release 1.15 - Editorial diagram, responsive (2026-09-24)
 
 **What changed.** Added a two-model editorial diagram to
