@@ -6,6 +6,55 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.17 - McDonald's Media Network and the missing loop (2026-09-27)
+
+**What changed.** New article at
+`/blog/mcdonalds-media-network-commerce-media-without-marketplace`, on
+McDonald's September 23 Investor Day disclosure of McDonald's Media Network.
+Ships with a hand-authored OG card and a generated insert script built from the
+approved draft.
+
+**Why.** The corpus covered retail media as placement, as AI surface, as
+campaign automation, and as infrastructure a retailer builds or rents. It had
+never asked what makes a company eligible to own commerce media at all.
+
+**Editorial position.** Authenticated demand may be enough to enter commerce
+media, but not enough to inherit retail media economics. McDonald's has
+identity, purchase history, frequency and owned surfaces. It has not
+demonstrated closed-loop measurement, and the structural reason is that a
+third-party advertiser converts somewhere McDonald's cannot observe. Closer to
+addressable media with a first-party audience than to Walmart or Amazon retail
+media.
+
+**H1 decision.** The brief preferred "Retail Media Just Outgrew Retail",
+conditional on the architecture surviving research. It did not survive
+intact, so the piece ships as "McDonald's Is Building a Media Network Without a
+Marketplace". The Editorial Board confirmed the deviation.
+
+**Standards applied.** McDonald's Form 8-K exhibit and the Investor Day
+transcript for every company claim; trade reporting labelled and linked for
+placement detail only. The billion-dollar figure is presented as the company's
+own word, aspiration, and the article states it is not guidance and appears in
+none of the seven published 2030 financial targets. Measurement is never
+presented as established: the word attribution does not appear in the transcript
+at all. The franchise-mix target, from about 95% franchised today to about 98%
+by the end of 2028, is kept prominent because the pilot sits in the estate the
+company is deliberately shrinking. The Investor Day slide deck refused automated
+retrieval, and the article discloses that limit. 1,150 body words, two internal
+links, zero em dashes, one closing question.
+
+**Living research gate.** Checked and skipped. Advertising infrastructure on
+human surfaces with no agent or AI claim, the same reasoning applied to the
+Instacart and Gopuff article. No tracker row, `LAST_UPDATED` unchanged.
+
+**Follow-ups.** `scripts/gen-og-png.mjs` scans `public/images/blog/*.svg` and
+writes a PNG for every SVG it finds, so the two editorial diagram SVGs now
+produce duplicate PNGs in `public/images/blog-og/` on every run. Removed twice
+by hand. Either move diagram assets to their own directory or give the generator
+an ignore list.
+
+---
+
 ## Release 1.16 - Agentic commerce adoption definition problem (2026-09-26)
 
 **What changed.** New article at
