@@ -6,6 +6,53 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.18 - Basket data versus spend data (2026-09-28)
+
+**What changed.** New article at
+`/blog/commerce-media-basket-data-spend-data-citi`, on Citi Commerce Media and
+the two data structures now competing in commerce media. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft.
+
+**Why.** The corpus had just asked who qualifies to own commerce media. This
+asks what kind of commerce data actually differentiates once they qualify.
+
+**Editorial position.** Retailers know more about the basket. Payment networks
+know more about the spend. Neither has the whole picture. Citi is the inverse of
+McDonald's: it can observe a qualifying card transaction after exposure, which
+McDonald's could not, but it sees merchant, amount, category and timing rather
+than the product, and only spending that runs on its own cards.
+
+**Standards applied.** Citi's two releases, its advertiser site, PayPal's
+advertiser pages, Mastercard's October 2025 release and Citibank's consumer
+privacy notice. The 70 million figure carries its footnote scope in the body,
+since it counts cardmembers rather than bank customers. The 5x is presented as a
+Citi-reported result from a Citi-run test using a method Citi names but does not
+document. Kard is stated as pending. Neither data structure is called superior,
+and the objective-level claims are labelled hypotheses. 1,149 body words, one
+internal link, zero em dashes, one closing question.
+
+**Board safeguards applied before publish.** The instrument-level limitation now
+sits in the same paragraph as the protected line about seeing the outcome, not
+only in the counterarguments. The Mastercard and Citi observation is stated
+observationally, with no implied causation between the 2025 relationship and the
+2026 launch.
+
+**Privacy finding.** The commerce media materials are far more specific about
+measurement capability than about the consumer-data mechanics behind it. Consent
+posture, personalization level, customer controls and whether advertisers
+receive underlying records are all undisclosed, and which privacy-notice
+category this activity occupies is not stated anywhere I could find.
+
+**Living research gate.** Checked and skipped. Advertising data architecture
+with no agent or AI claim, consistent with the Instacart and McDonald's
+decisions. No tracker row, `LAST_UPDATED` unchanged.
+
+**Follow-ups.** The `gen-og-png.mjs` duplicate-PNG issue logged in release 1.17
+recurred again on this run and was cleaned by hand a third time.
+
+---
+
 ## Release 1.17 - McDonald's Media Network and the missing loop (2026-09-27)
 
 **What changed.** New article at
