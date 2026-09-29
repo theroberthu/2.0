@@ -6,6 +6,54 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.20 - The shared buying interface (2026-09-30)
+
+**What changed.** New article at
+`/blog/retail-media-programmatic-buying-openrtb-koddi-teads`, on the Teads and
+Koddi partnership opening participating onsite retail inventory through OpenRTB
+in the U.S. and Europe. Ships with a hand-authored OG card and a generated
+insert script built from the approved draft.
+
+**Why.** The corpus owned retail media as placement, AI surface, rentable
+infrastructure, eligibility and data moat. It had never covered the buying
+interface or what standardization does to differentiation.
+
+**Editorial position.** The buying pipe can standardize without the commerce
+signal standardizing with it. The IAB Tech Lab's Product Listing Ad extension,
+final since January 24, 2025, standardizes how a buyer asks for a product
+placement and which products are allowed or blocked. It explicitly does not
+specify product feed structure, and nothing in it standardizes ranking, auction
+logic, pricing, reporting or measurement. Koddi and Wolt both state that
+inventory, pricing, quality and monetization control stay with the retailer.
+
+**The measurement absence is load-bearing**, not incidental. The announcement
+describes access, not attribution, and discloses no data-sharing or reporting
+terms. That absence is the evidence for the article's argument that the most
+valuable layers are the ones the protocol does not normalize. It is recorded in
+the source draft as protected emphasis.
+
+**Corpus progression.** Chapter one, September 22: a retailer can rent the
+infrastructure beneath its media network. Chapter two, this article: advertisers
+can increasingly reach that inventory without entering the retailer's
+proprietary interface. Gopuff appears in both, in two markets on two rented
+stacks, which makes the progression concrete rather than rhetorical.
+
+**Standards applied.** The Teads release and the IAB Tech Lab post read in full.
+Only the three networks the release names in context are named; Koddi's
+boilerplate customers are not presented as participants. Deal structures are
+reported as undisclosed. Commoditization is framed as risk, never as a finding,
+and the draft states that nothing here makes two networks interchangeable. 1,106
+body words, two internal links, zero em dashes, one closing question.
+
+**Living research gate.** Checked and skipped. Advertising plumbing with no
+agent or AI claim. No tracker row, `LAST_UPDATED` unchanged.
+
+**Follow-ups.** The `gen-og-png.mjs` duplicate-PNG issue recurred for a fifth
+time and was cleaned by hand again. The fix is queued and should land before the
+next article.
+
+---
+
 ## Release 1.19 - Negative permissions and the customer promise (2026-09-29)
 
 **What changed.** New article at
