@@ -6,6 +6,51 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.19 - Negative permissions and the customer promise (2026-09-29)
+
+**What changed.** New article at
+`/blog/walmart-sparky-ai-personalization-pricing-governance`, on John Furner's
+September 25 customer letter and the governance model it implies. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft.
+
+**Why.** The corpus covered Sparky commercially, Rufus memory as a capability,
+and agent authority as operational scope. It had never covered pricing
+governance or the question of which held data may influence which decision.
+
+**Editorial position.** Action permission asks what an agent may do. Data-use
+permission asks which signals may influence a given decision. Walmart's
+commitments constrain no action Sparky takes; they remove the eligibility of
+income, shopping history, urgency and estimated ability to pay to shape price,
+and the eligibility of shared information to suppress cheaper options. The
+lineage is purpose limitation from privacy law; what is new is that the
+constraint attaches to a model's decision rather than to a pipeline.
+
+**Protected lines.** "The most important AI permissions may eventually be the
+negative ones." "The data that makes an agent better at serving a customer can
+also make it better at extracting from that customer." "Price parity is not
+economic neutrality." All three are recorded in the source draft as protected,
+along with two protected framings: Walmart's asymmetry, and the FTC contrast.
+
+**Standards applied.** Walmart's letter and the FTC proposed policy statement
+read in full as primary sources. The FTC statement is described as proposed, not
+law, including its own text that it does not bind the FTC or the public. Five
+pricing terms are kept separate. Walmart's position is never flattened into
+rejecting personalization: the commitment forbids raising a price and hiding
+cheaper options, not personalized discounts. No allegation is made against any
+company, and the Sparky rule is framed as foresight. Same-day timing with the
+FTC comment deadline is stated as coincidence. 1,149 body words, three internal
+links, zero em dashes, one closing question.
+
+**Living research gate.** Checked and skipped. A company policy commitment is
+not infrastructure or deployed capability. No tracker row, `LAST_UPDATED`
+unchanged.
+
+**Follow-ups.** The `gen-og-png.mjs` duplicate-PNG issue recurred and was
+cleaned by hand a fourth time. Worth fixing before the next publish.
+
+---
+
 ## Release 1.18 - Basket data versus spend data (2026-09-28)
 
 **What changed.** New article at
