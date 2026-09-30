@@ -6,6 +6,53 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.21 - Payment choice as policy (2026-09-30)
+
+**What changed.** New article at
+`/blog/agentic-commerce-payment-choice-policy-idemia`, on IDEMIA Secure
+Transactions' agentic commerce solution and what happens to payment-method
+choice when the checkout selector disappears. Synchrony and Oxford Economics
+supply supporting consumer evidence. Ships with a hand-authored OG card and a
+generated insert script built from the approved draft.
+
+**Why.** The corpus owned agent identity, deterministic authorization,
+liability, fraud protection and the disappearance of the checkout page. It had
+never asked how a payment method gets chosen when no human is looking at the
+options.
+
+**Editorial position.** The industry is shipping payment-policy enforcement
+before it has published payment-policy selection. IDEMIA names the challenge as
+making cards "available, trusted and selectable" to an agent, then publishes
+tokens restricted by merchant, amount, category and time, consent-gated release,
+FIDO2 authentication and dispute evidence. No selection mechanism is documented
+anywhere: no credential discovery interface, no eligibility signal, no
+preference channel, no ranking. That missing half is the article.
+
+**Protected lines.** "The next payment shelf may be a policy object rather than
+a row of logos." "A payment method can be accepted by the merchant and still be
+invisible to the agent." Both recorded in the source draft, along with the
+enforcement-before-selection framing, the IDEMIA selectable and Synchrony
+recognizable pairing, and the constraint that verified implementations still
+leave payment choice with the person.
+
+**Standards applied.** Both releases read in full. The IDEMIA announcement is
+reported as capability, with availability, deployments, volume, geography,
+pricing and integration requirements all stated as undisclosed. The agent is
+never described as authorizing. Every Synchrony figure is presented as stated
+comfort rather than behavior, per the adoption-definition standard. No
+private-label decline claim, no pay-to-play allegation, and restricted tokens
+are noted as predating agentic commerce. 1,148 body words, three internal links,
+zero em dashes, one closing question.
+
+**Living research gate.** No change, and the reasoning is recorded: a vendor
+capability announcement with no named deployment, no published selection
+interface and no transaction volume is a product launch, not tracker evidence.
+`LAST_UPDATED` unchanged.
+
+**Follow-ups.** The `gen-og-png.mjs` duplicate-PNG cleanup ran by hand again.
+
+---
+
 ## Release 1.20 - The shared buying interface (2026-09-30)
 
 **What changed.** New article at
