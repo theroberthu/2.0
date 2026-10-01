@@ -6,6 +6,52 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.23 - Where the exploration went (2026-10-02)
+
+**What changed.** New article at `/blog/doordash-ai-shopping-messy-middle-discovery`,
+on DoorDash's September 30 Ask DoorDash data and Text DoorDash beta, and what
+they suggest about where product discovery actually happens. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft.
+
+**Why.** The corpus owned compression of the exploration loop, cart assembly and
+mediation. It had never examined what happens to the supply universe before a
+shortlist forms.
+
+**Editorial position, and a narrow belief revision.** The March 2026 article
+argued AI compresses the exploration loop. That was right about the human
+experience and incomplete about the work. DoorDash describes Ask as connecting a
+customer to a restaurant that "might not have caught their eye in their usual
+scroll," and reports that nearly half of assistant restaurant orders went to
+local spots the customer had not tried. The visible consideration set shrinks
+while the searched set plausibly grows. The messy middle did not disappear, the
+shopper outsourced it.
+
+**Protected lines.** "The messy middle did not disappear. The shopper outsourced
+it." and "The messy middle moving into software does not remove gatekeeping. It
+makes more of the gatekeeping invisible." Both recorded in the source draft. The
+second one is what keeps the piece from becoming an optimistic long tail story.
+
+**Standards applied.** Four primary sources read in full, footnotes included.
+Four caveats are load-bearing and recorded as protected: the revision stays
+narrow, "discovered" is undefined by DoorDash so the 40,000 figure never carries
+the thesis, the three grocery statistics come from different measurement windows
+and are never presented as one experiment, and local is not independent while
+never tried can only mean never ordered from on DoorDash. Sponsored presence
+inside Ask is undocumented in DoorDash's own advertising materials and is
+reported as an absence. No causal language anywhere. 1,073 body words, two
+internal links, zero em dashes, one closing question.
+
+**Living research gate.** No change. First-party marketplace data with no sample
+sizes, no controls and a self-selected user base, in one category.
+`LAST_UPDATED` unchanged.
+
+**Follow-ups.** None specific to this article. The index-refresh prototype route
+was removed from `src/app/lab` before this release; a stale generated type in
+`.next` from that route briefly failed typecheck and was cleared.
+
+---
+
 ## Release 1.22 - What a theme is for (2026-10-01)
 
 **What changed.** New article at `/blog/shopify-canvas-ai-themes-design-contract`,
