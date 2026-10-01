@@ -6,6 +6,50 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.22 - What a theme is for (2026-10-01)
+
+**What changed.** New article at `/blog/shopify-canvas-ai-themes-design-contract`,
+on Shopify's October 1 launch of Canvas and what AI generation does to the role
+of the ecommerce theme. Ships with a hand-authored OG card and a generated
+insert script built from the approved draft.
+
+**Why.** The corpus covered conversational store building in October 2025
+through the Lovable article, and closed-loop measurement through Noibu. It had
+never asked what happens to the theme itself when an agent writes the code.
+
+**Editorial position, and a belief revision.** The 2025 article framed AI
+generation as an alternative to templates. The Canvas evidence supports a
+different reading: the theme becomes the design contract underneath the agent.
+Shopify's design director says generating code was easy and guiding design
+decisions was hard, and Shopify simplified theme architecture specifically to
+make store structure legible to Sidekick. Generating the code is becoming easier
+than deciding what the code should produce.
+
+**Protected line.** "Generating the code is becoming easier than deciding what
+the code should produce." Recorded in the source draft, with an instruction not
+to restore the stronger "productizing judgment" phrasing, which outruns the
+evidence.
+
+**Standards applied.** Four primary sources read in full: the newsroom post, the
+Help Center requirements page, and both developer community posts. Every
+limitation is reported from documentation: early access, certain stores only,
+desktop only, Shopify-developed and custom themes only, no third-party themes,
+no app blocks or embeds, no Markets, Translations or Rollouts, no theme updates
+for Canvas-edited themes, and no theme file download. The 25 million theme edits
+figure carries its missing unit and missing denominator and is never converted
+into stores or merchants. Design contract is used as Shopify's term, with the
+design system reading flagged as interpretation. Canvas feedback is described as
+artifact validation, explicitly not outcome measurement, preserving the Noibu
+distinction. 1,101 body words, two internal links, zero em dashes, one closing
+question.
+
+**Living research gate.** No change. Merchant-side tooling in early access with
+no outcome evidence advances none of the eight shifts. `LAST_UPDATED` unchanged.
+
+**Follow-ups.** None specific to this article.
+
+---
+
 ## Release 1.21 - Payment choice as policy (2026-09-30)
 
 **What changed.** New article at
