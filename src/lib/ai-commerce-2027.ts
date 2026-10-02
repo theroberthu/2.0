@@ -8,7 +8,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-09-24'
+export const LAST_UPDATED = '2026-10-02'
 export const READING_MINUTES = 16
 
 /** Inline link used inside body copy. Rendered as a Next.js Link. */
@@ -108,7 +108,7 @@ export const SHIFTS: Shift[] = [
     number: '05',
     title: 'Commerce stacks grow a second interface for software',
     changed2026: [
-      'WebMCP, drafted at the W3C in February 2026 and implemented behind a flag in Chrome Canary, proposes a browser API through which a page declares callable tools to an agent instead of being clicked at.',
+      'WebMCP went from draft standard to shipped platform capability. Shopify made WebMCP tools live on August 5, 2026 across every Liquid storefront and the Hydrogen developer preview, with nothing to install or configure, covering catalog search, product display, cart updates and the handoff to checkout. On September 28 it extended the same pattern into checkout itself, so a browser agent can read and update the buyer\'s active checkout and submit the order after buyer confirmation. The standard was drafted at the W3C in February 2026 and browser support remains early, but a page declaring callable tools to an agent is no longer a proposal.',
       'Model Context Protocol servers moved into production commerce operations. Sabre reports nearly 80 travel customers on its MCP server, and software vendors including Helium 10 and Klaviyo exposed their capabilities to agents as tools.',
       'UCP addresses a different layer again: not how an agent operates a page or a vendor tool, but how a purchase is structured between an agent platform and a merchant.',
     ],
@@ -119,7 +119,7 @@ export const SHIFTS: Shift[] = [
     unproven:
       'Whether any of these achieve broad adoption is open, and browser support for WebMCP is early. A second interface also doubles the surface that has to be kept accurate, and nobody has published what that costs to run.',
     signal:
-      'A major commerce platform shipping an agent interface as a default capability rather than an app, and the first published incident where the two interfaces disagreed about price or availability.',
+      'Partly satisfied. A major commerce platform shipping an agent interface as a default capability rather than an app happened on August 5, 2026, and reached checkout on September 28. What remains to watch: the first published incident where the human and agent interfaces disagreed about price or availability, and the first published WebMCP order volume or error rate from a major platform.',
   },
   {
     id: 'advertising-conversational',

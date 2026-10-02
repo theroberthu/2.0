@@ -6,6 +6,45 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.26 - Flagship correction: WebMCP is shipped, not proposed (2026-10-02)
+
+**What changed.** AI Commerce 2027, Shift 05 ("Commerce stacks grow a second
+interface for software"). Three edits, approved by the Editorial Board after the
+WebMCP checkout article cleared production.
+
+1. The WebMCP line in `changed2026` described the standard as a W3C draft
+   implemented behind a flag in Chrome Canary. It now records what actually
+   shipped: Shopify made WebMCP tools live on August 5, 2026 across every Liquid
+   storefront and the Hydrogen developer preview with nothing to install or
+   configure, and extended the pattern into checkout on September 28. The W3C
+   drafting date and early browser support are retained, because both remain
+   true.
+2. The signal is marked partly satisfied. A major commerce platform shipping an
+   agent interface as a default capability rather than an app is no longer a
+   prediction.
+3. The remaining watch item is now the first published incident where the human
+   and agent interfaces disagreed about price or availability, and the first
+   published WebMCP order volume or error rate from a major platform.
+
+**Why.** The page was published on September 21, six weeks after Shopify shipped
+WebMCP. Describing a live platform capability as a proposal is the kind of error
+that makes a living research page worse than no page. The self-correction is
+also stated in the article body as my error, not an industry oversight.
+
+**What did not change.** No new tracker row. The `unproven` paragraph stands:
+broad adoption is still open, browser support is still early, and nobody has
+published what maintaining a second interface costs to run. MCP and UCP lines
+untouched, so the protocol distinction between page surface, tool surface and
+transaction surface is preserved.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` both moved
+from 2026-09-24 to 2026-10-02.
+
+**Follow-up.** None open on this shift. The watch item is now falsifiable by a
+published number rather than by a shipment.
+
+---
+
 ## Release 1.25 - A second front door (2026-10-02)
 
 **What changed.** New article at
@@ -21,7 +60,7 @@ live session, and the cart tools call the same storefront actions apps use, so a
 theme that opens a cart drawer on update opens it for the agent's call too. One
 commerce session, two interfaces into it.
 
-**What the article does not claim.** No autonomous purchasing: `submit_checkout`
+**What the article does not claim.** No autonomous purchasing: `complete_checkout`
 requires buyer confirmation, `update_checkout` does not touch line items, and
 there is no cancel tool. No transaction volume, error rate, or merchant adoption
 figure is published, and the article says so rather than estimating.
