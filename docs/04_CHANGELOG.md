@@ -6,6 +6,55 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.24 - The recommendation gap (2026-10-02)
+
+**What changed.** New article at
+`/blog/ai-shopping-retailer-recommendation-gap-lightspeed-vaer`, on the Vaer AI
+study conducted for Lightspeed Commerce analyzing roughly 460,000 AI shopping
+responses. Ships with a hand-authored OG card and a generated insert script
+built from the approved draft.
+
+**Why, and the correction it makes.** The August citation teardown article
+asserted that "citation and recommendation are the same discipline." This
+evidence shows that was too compressed. The corpus position is now that the two
+share a foundation and separate once the model has enough evidence to choose
+among merchants. Large and small retailers hold roughly 38% of citations each,
+and by the lead recommendation a large chain wins about two and a half times as
+often.
+
+**Protected lines.** "Citation is evidence of retrieval. Recommendation is
+evidence of selection." used as a section heading, and "A citation dashboard can
+tell you the AI saw you. It cannot tell you the AI chose you." Both recorded in
+the source draft with the corrected formulation.
+
+**Standards applied.** Both primary sources read in full. Sponsorship is
+disclosed early in the body, since Lightspeed sells to the retailers the study
+found disadvantaged and Vaer sells AI search advisory. The full technical report
+is available on request rather than published, so the article states the work
+cannot be independently reproduced, and the claimed 95% confidence intervals
+appear in neither public document. The 90 to 94% head-to-head figure is bounded
+on first use as model priors rather than live behavior. Retailer never becomes
+brand. No citation-to-traffic or recommendation-to-purchase claim appears. The
+rational-fulfillment counterargument has its own section, because the pattern
+may be a response to fulfillment probability rather than a defect. 1,077 body
+words, three internal links, zero em dashes, one closing question.
+
+**Deliberate exclusions.** The Censuswide consumer survey, whose field dates,
+weighting and margin of error are undisclosed. The prompt-modifier experiment,
+to avoid a prompt-tips article. Links to the DoorDash piece and to The Assistant
+Builds the Cart, to avoid a series effect and a retailer-versus-product
+conflation.
+
+**Living research gate.** No change. Recommendation-visibility research from a
+sponsored study with unpublished methodology advances none of the eight shifts.
+`LAST_UPDATED` unchanged.
+
+**Follow-ups.** The August citation teardown article now contains a claim this
+release corrects. Consider adding a short pointer from that article to this one
+so the corpus does not hold both positions silently.
+
+---
+
 ## Release 1.23 - Where the exploration went (2026-10-02)
 
 **What changed.** New article at `/blog/doordash-ai-shopping-messy-middle-discovery`,
