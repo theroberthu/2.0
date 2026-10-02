@@ -6,6 +6,45 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.25 - A second front door (2026-10-02)
+
+**What changed.** New article at
+`/blog/shopify-webmcp-checkout-ai-agent-storefront`, on Shopify's September 28,
+2026 extension of WebMCP support to checkout. Ships with a hand-authored OG card
+and a generated insert script built from the approved draft.
+
+**Why it matters.** Shopify shipped WebMCP cart and product tools live on August
+5, 2026 and extended the same pattern to checkout seven weeks later. The
+architectural point is that this is not a parallel storefront for machines.
+Shopify's August changelog states that agent actions happen on the shopper's
+live session, and the cart tools call the same storefront actions apps use, so a
+theme that opens a cart drawer on update opens it for the agent's call too. One
+commerce session, two interfaces into it.
+
+**What the article does not claim.** No autonomous purchasing: `submit_checkout`
+requires buyer confirmation, `update_checkout` does not touch line items, and
+there is no cancel tool. No transaction volume, error rate, or merchant adoption
+figure is published, and the article says so rather than estimating.
+
+**Protected lines.** The shared-state evidence, the four buyer-authority
+distinctions, the documented limitations, and the self-correction sentence, all
+recorded in the source draft's PROTECTED SECTIONS block.
+
+**Standards applied.** Three Shopify primary sources read directly (the
+September 28 changelog, the Checkout WebMCP developer docs, the August 5
+changelog). Protocol discipline held: WebMCP is the page-level tool surface, not
+MCP generally and not UCP. 1,075 body words, two internal links, one closing
+question, zero em dashes.
+
+**Key commit.** See the commit adding
+`Content/blog/shopify-webmcp-checkout-ai-agent-storefront.md`.
+
+**Follow-up.** AI Commerce 2027 Shift 05 still describes WebMCP as a W3C draft
+behind a Chrome Canary flag. Correction approved and executed separately in
+Release 1.26.
+
+---
+
 ## Release 1.24 - The recommendation gap (2026-10-02)
 
 **What changed.** New article at
