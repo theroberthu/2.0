@@ -6,6 +6,72 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.27 - The strategy line moves upstream (2026-10-03)
+
+**What changed.** New article at
+`/blog/amazon-full-funnel-campaigns-ai-channel-mix`, on Amazon Ads' September
+29, 2026 Full-Funnel Campaigns release. Ships with a hand-authored OG card and
+a generated insert script built from the approved draft.
+
+**Why it matters, and the belief it revises.** The March 2026 Marty article
+advised: "Keep the strategic layer (budget allocation, target ROAS, channel
+mix, product prioritization) with a human. Let the AI handle execution within
+those constraints." Amazon's own documentation now executes two of those four.
+The product FAQ states Full-Funnel Campaigns "uses a daily budget, which
+Amazon's AI then allocates across sponsored ads, display, video, and streaming
+TV in real time," and the unBoxed recap states "AI handles the channel mix,
+creative, audiences, and optimization." Target ROAS stays human and optional.
+Product prioritization is split and partly undisclosed.
+
+**The strongest evidence is the delegation-level contrast.** DVA+ publishes a
+capability table in which the default mode sets budget once and lets AI
+optimize delivery, while advanced settings return "format-level allocation,
+budget flighting, budget and frequency caps" and "granular per-format
+configuration." Format-level allocation exists at Amazon as a control in one
+campaign type and is absent from the other, so delegation level has become a
+product choice.
+
+**Protected lines.** The concession that channel mix has not stopped being
+strategy but has stopped requiring a human to make every allocation decision;
+"The strategic layer did not disappear. It moved upstream."; the four-item
+audit split; the surviving half of the March principle; the Long-Term ROAS
+proof boundary; and the three-step March to August to October progression. All
+recorded in the source draft's PROTECTED SECTIONS block.
+
+**Primary-source corrections made during the audit.** Four premises in the
+assignment brief did not survive: the unBoxed recap is "The 11 biggest
+takeaways," not 9; "open beta" is DVA+ status language, not Full-Funnel's,
+which Amazon describes as "now available to all advertisers in the United
+States" against a narrower FAQ eligibility list; the footnote reads "Amazon
+internal. June - August 2026. Based on early beta results" with the denominator
+"independently configured campaigns," not a blended beta average; and the
+advertiser sets a daily budget with a stated minimum, not a total budget.
+
+**Novelty constrained deliberately.** Performance Max and Advantage+ are named
+in the body as prior art, and Full-Funnel Campaigns was announced at unBoxed
+2025 with continuous adjustment of "budgets, audiences, and tactics" already in
+the description. The event is maturation plus published evidence, not
+invention.
+
+**Corpus discipline.** The August Trade Desk article already argued that the
+buyer's work moves up a level, so that conclusion is cited rather than
+re-claimed. The Editorial Board confirmed that internal link as editorially
+necessary.
+
+**Standards applied.** Six Amazon primary sources read directly, including the
+2024 Long-Term Sales definition page that establishes the metric contains
+modeled 12-month future value. 1,079 source body words, three internal links,
+one closing question, zero em dashes.
+
+**Key commit.** See the commit adding
+`Content/blog/amazon-full-funnel-campaigns-ai-channel-mix.md`.
+
+**Follow-up.** None. AI Commerce 2027 explicitly NO CHANGE: Shift 08 carries
+merchant-agent control-surface material, but its spine is reliability evidence
+and Amazon published no error or intervention rate here.
+
+---
+
 ## Release 1.26 - Flagship correction: WebMCP is shipped, not proposed (2026-10-02)
 
 **What changed.** AI Commerce 2027, Shift 05 ("Commerce stacks grow a second
