@@ -8,7 +8,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-02'
+export const LAST_UPDATED = '2026-10-03'
 export const READING_MINUTES = 16
 
 /** Inline link used inside body copy. Rendered as a Next.js Link. */
@@ -147,9 +147,10 @@ export const SHIFTS: Shift[] = [
       'Ant International, Mastercard and Visa began work on a Know Your Agent interoperability framework in September, covering operator traceability, shared certification and continuous monitoring, while explicitly preserving each network\'s own verification and decisioning.',
       'Ant International announced an Account for Agent for businesses on September 18, built on KYA enabled smart contracts with monitoring and intervention, pointing the same identity machinery at the merchant\'s own operations.',
       'Cloudflare separated crawler permissions into search, training and agent behaviors on September 15, and reported that fewer than 1% of sites block search while 17% use some mechanism to block training.',
+      'Anthropic\'s Project Swap, a controlled 201 person agent market published September 24, found the binding constraint was representation rather than negotiation: imperfect preference modeling accounted for 85% of the shortfall from the best feasible outcome, and the largest model quality upgrade available moved the human result by 0.01. Participants who judged the agent\'s summary of them complete would delegate 34% of a budget without veto rights, against 23% for those who judged it incomplete.'
     ],
     enables2027: [
-      'A workable sequence is becoming visible: identify the agent, verify its authority, establish merchant permission, constrain what it may do, execute, and preserve evidence afterward.',
+      'A workable sequence is becoming visible: identify the agent, verify its authority, establish merchant permission, constrain what it may do, execute, and preserve evidence afterward. Every step in that sequence concerns authority rather than understanding. None of it establishes that the agent has accurately modeled the person it acts for, which the Project Swap evidence suggests is a separate precondition and is where the error actually concentrated.',
       'Consumer authorization and merchant authorization are different problems. A shopper delegating a purchase is one grant. A merchant permitting an agent to transact against its catalog, inventory and payment systems is another. AI commerce appears to need both, and they are being built by different parties on different timelines.',
     ],
     unproven:

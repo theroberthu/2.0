@@ -6,6 +6,51 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.29 - Naming the second half (2026-10-03)
+
+**What changed.** Two bounded evidence updates, both approved by the Editorial
+Board alongside the Project Swap article and shipped after it cleared
+production.
+
+**1. AEO pillar (`/aeo`).** Added one bordered passage to the definition
+section distinguishing **product readiness** from **shopper representation**,
+with a link to the Project Swap article. The formal definition is unchanged and
+all six evaluation factors are unchanged, deliberately: the Board's instruction
+was to keep the formal framework supply-side and then name the boundary
+explicitly rather than redefine AEO from one experiment. `dateModified` moved
+from 2026-07-05 to 2026-10-03 and the footer line now reads October 2026.
+
+**2. AI Commerce 2027, Shift 07 ("Trust becomes infrastructure, on two sides at
+once").** Two edits, no new shift and no new tracker row:
+
+- One `changed2026` line recording Project Swap's finding that representation
+  rather than negotiation was the binding constraint, the 85% shortfall
+  attribution, the 0.01 human-scored movement from the largest available model
+  upgrade, and the 34% versus 23% delegation split.
+- The `enables2027` sequence line, which read "identify the agent, verify its
+  authority, establish merchant permission, constrain what it may do, execute,
+  and preserve evidence afterward," now continues: every step in that sequence
+  concerns authority rather than understanding, none of it establishes that the
+  agent has accurately modeled the person it acts for, and that is where the
+  error actually concentrated.
+
+**Why this was worth doing.** A concept sweep of `src/lib/ai-commerce-2027.ts`
+returned zero hits for preference, personalization, memory, representation,
+shopper model, user intent and understand. The flagship's trust sequence was
+complete on authority and silent on understanding. That is a gap in the
+argument rather than a missing topic, which is why it earned an evidence update
+instead of a new shift.
+
+**What did not change.** Shift count stays at 8. Tracker rows stay at 12. No
+other shift touched. The AEO definition and evaluation factors stay as written.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` both moved
+from 2026-10-02 to 2026-10-03.
+
+**Follow-up.** None open on either page.
+
+---
+
 ## Release 1.28 - The second representation problem (2026-10-03)
 
 **What changed.** New article at

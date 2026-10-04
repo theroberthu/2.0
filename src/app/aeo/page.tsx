@@ -35,7 +35,7 @@ const pageSchema = {
     'Research on Agentic Engine Optimization (AEO): how AI shopping agents evaluate and buy products on behalf of customers. SEO makes products found, GEO makes them recommended, AEO makes them chosen.',
   url: `${SITE_URL}/aeo`,
   datePublished: '2026-03-19',
-  dateModified: '2026-07-05',
+  dateModified: '2026-10-03',
   mainEntityOfPage: `${SITE_URL}/aeo`,
   isPartOf: {
     '@type': 'WebSite',
@@ -536,6 +536,34 @@ export default function AEOPage() {
             e-commerce by 2030. The forecast risk has collapsed.
           </p>
 
+          {/* Product readiness vs shopper representation. Added 2026-10-03 */}
+          <div className="border-l-2 border-brand-gold/50 pl-5 mb-8">
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold/80 mb-3">
+              One boundary worth naming
+            </span>
+            <p className="text-base text-gray-300 leading-relaxed">
+              Everything above, and every evaluation factor below, is{' '}
+              <span className="text-white font-medium">product readiness</span>:
+              the work of making what you sell legible to software. That is the
+              half of the problem a merchant controls, and it is what AEO as
+              defined here covers. There is a second half, which is{' '}
+              <span className="text-white font-medium">
+                shopper representation
+              </span>
+              : whether the agent has accurately understood the person it is
+              buying for. Anthropic&apos;s{' '}
+              <Link href="/blog/anthropic-project-swap-agentic-commerce-shopper-preferences" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                Project Swap experiment
+              </Link>{' '}
+              found that imperfect preference representation, not bargaining,
+              accounted for 85% of the gap from the best possible outcome in its
+              controlled market, and that the largest model-quality upgrade
+              available moved the human result by 0.01. Product readiness is
+              necessary. On that evidence it is not sufficient, and the second
+              half is one merchants do not control and cannot observe.
+            </p>
+          </div>
+
           {/* SEO / GEO / AEO visual progression */}
           <div className="relative mb-10">
             {/* Connecting line */}
@@ -877,7 +905,7 @@ export default function AEOPage() {
 
           {/* Update note */}
           <div className="pt-2">
-            <p className="text-[13px] text-gray-500">Last updated: July 2026</p>
+            <p className="text-[13px] text-gray-500">Last updated: October 2026</p>
             <p className="text-[13px] text-gray-500 mt-1">
               This guide is updated as AI commerce platforms continue to evolve.
             </p>
