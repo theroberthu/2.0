@@ -6,6 +6,67 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.28 - The second representation problem (2026-10-03)
+
+**What changed.** New article at
+`/blog/anthropic-project-swap-agentic-commerce-shopper-preferences`, on
+Anthropic's September 24, 2026 Project Swap research. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft.
+
+**Why it matters.** The corpus has covered one half of agentic commerce's
+representation problem thoroughly: whether the agent can understand the
+product. Structured attributes, catalog accuracy, machine-readable storefronts,
+checkout protocols, the whole AEO discipline. A sweep of all 107 live posts
+returned zero hits for "representation" and zero for "shopper model" as a
+load-bearing idea. Project Swap supplies evidence for the other half, whether
+the agent can understand the person.
+
+**The centerpiece is Anthropic's footnote 15, not the 85% headline.** The
+largest model-quality gain in the study, a 0.12 gap between Haiku and Opus
+floors scored on Claude's inferred rankings, collapses to 0.01 when scored
+against people's actual preferences. A full model upgrade moved the human
+outcome by one hundredth. The 85/15 decomposition plays a supporting role
+because its arithmetic is explicit: of the 0.34 shortfall between the best
+feasible assignment (0.89) and the decentralized market (0.55), 0.29 is
+representation error and 0.05 is market design.
+
+**The editorial hinge.** The April Rufus memory article treated the shopper
+profile as the trustworthy side of the system and the listing as the variable.
+Project Swap inverts the burden of proof on that assumption, since Claude's
+ranking predicted the participant's own only weakly, at a slope of 0.3.
+
+**The governance extension.** The September Know Your Agent article framed four
+questions a merchant's checkout must answer. This adds a fifth, upstream of all
+of them: whether the agent understood this particular person well enough to
+deserve authority. Anthropic proposes a representation test, and participants
+who said its summary of them missed nothing would delegate 34% of their book
+budget against 23% for those who said it missed something, a nine-point gap
+after controlling for what each would give a well-read friend (p < 0.05,
+n = 112).
+
+**Restraint recorded.** Anthropic's headline 30% delegation average is
+deliberately omitted from the body, consistent with the September
+adoption-definition standard that a delegation percentage is meaningless
+without its level. Only the within-study comparison is used. The 61% is stated
+as pairwise agreement with its three baselines (53% popularity, 55%
+collaborative filtering, 61% algorithm and 57% friends in the reference study),
+never as "understands people 61%."
+
+**Standards applied.** Both Anthropic primary sources read in full, including
+the 26-page PDF and all 27 footnotes. Anthropic's position as the developer of
+the system being studied is disclosed in the body as not independent. 1,101
+source body words, three internal links, one closing question, zero em dashes.
+
+**Key commit.** See the commit adding
+`Content/blog/anthropic-project-swap-agentic-commerce-shopper-preferences.md`.
+
+**Follow-ups, both Board-approved and shipped in Release 1.29.** A bounded AEO
+evidence update distinguishing product readiness from shopper representation,
+and a precise Shift 07 evidence update in AI Commerce 2027.
+
+---
+
 ## Release 1.27 - The strategy line moves upstream (2026-10-03)
 
 **What changed.** New article at
