@@ -6,6 +6,68 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.30 - Branded search gets a description (2026-10-04)
+
+**What changed.** New article at
+`/blog/google-ai-overviews-branded-search-brand-representation`, on the late
+September 2026 expansion of Google AI Overviews into branded searches. Ships
+with a hand-authored OG card and a generated insert script built from the
+approved draft.
+
+**Why it matters.** Branded search was historically the most navigational and
+defensible moment in the search journey. In Ahrefs' exact-name panel of 100
+Interbrand Best Global Brands, AI Overviews went from 5 of 98 usable results on
+July 1 to 63 of 100 on September 30. Google now frequently writes a description
+of a brand, mostly from third-party sources, on a query where the shopper
+already named the brand.
+
+**Three corrections to the assignment brief, all made in the body.**
+- Branded search did not overtake anything. Ahrefs' monthly averages had
+  branded AIO prevalence below non-branded in every month (61.3% vs 73.5% in
+  July, 73.3% vs 78.3% in September). The gap closed from 12.2 points to 5.
+  Convergence, not takeover. The 82.91% headline is a single-day peak.
+- Placement is contested. Ahrefs found 48 of 63 exact-name AIOs in position
+  one; Barry Schwartz reported most examples he checked mid-page, below the
+  brand's own result. Ahrefs does not define how it ranks an AIO against
+  Knowledge Panels, sitelinks or ads. The article treats placement as the
+  unresolved crux: above is interception, below is annotation. The H1 avoids
+  "introduce" for this reason.
+- The "representation layer" framing is substantially the vendors' own. The
+  article's original contributions are the convergence correction, the
+  volatility in DemandSphere's own published daily series (swings of 25 to 30
+  points in a day through September, with no Google announcement), the
+  placement conflict, the Search Console blind spot from TRH's August
+  reporting, and the brand-side mirror of the Project Swap shopper
+  representation problem.
+
+**Editorial Board edits applied.** Clever-line density cut to two
+crystallizing lines. The commercial consequence now leads the close: a brand
+pays to create demand elsewhere, then the first account of the brand the
+shopper reads on a name search may be Google's. Monitoring follows as three
+concrete jobs.
+
+**Restraint recorded.** No traffic claim: no branded-query CTR evidence
+exists. No competitor-hijacking claim: only 2 of 58 answers discussed a
+competitor and 1 of 57 source lists included a competitor-owned site.
+DemandSphere used only as directional corroboration because its sample size is
+undisclosed, and not averaged with Ahrefs. No Google intent attributed: Google
+has not announced the change.
+
+**Standards applied.** Ahrefs and DemandSphere primary sources read in full,
+plus Search Engine Roundtable and Search Engine Land for the original
+observation and the announcement audit. Source-table denominator derived
+arithmetically as 57 where Ahrefs did not state it. 1,097 source body words,
+three internal links, one closing question, zero em dashes.
+
+**AI Commerce 2027.** Explicitly NO CHANGE. An unannounced, one-month-old,
+visibly volatile SERP change is what the flagship should not ingest yet.
+Revisit if branded prevalence holds through Q4 2026.
+
+**Key commit.** See the commit adding
+`Content/blog/google-ai-overviews-branded-search-brand-representation.md`.
+
+---
+
 ## Release 1.29 - Naming the second half (2026-10-03)
 
 **What changed.** Two bounded evidence updates, both approved by the Editorial
