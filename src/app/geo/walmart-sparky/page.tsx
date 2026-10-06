@@ -40,7 +40,7 @@ const articleSchema = {
     '@type': 'Person',
     name: 'Robert Hu',
     url: `${SITE_URL}/about`,
-    jobTitle: 'Commerce and Technology Researcher',
+    jobTitle: 'AI Commerce Researcher',
   },
   publisher: {
     '@type': 'Organization',

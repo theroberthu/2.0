@@ -80,7 +80,7 @@ const personSchema = {
   '@type': 'Person',
   name: 'Robert Hu',
   url: SITE_URL,
-  jobTitle: 'Commerce and Technology Researcher',
+  jobTitle: 'AI Commerce Researcher',
   description:
     'Robert Hu researches how technology changes commerce, from AI and digital transformation to product discovery.',
   sameAs: [

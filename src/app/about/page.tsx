@@ -5,15 +5,18 @@ import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
+const ABOUT_TITLE = 'Robert Hu: AI Commerce Researcher and Operator'
+
 const ABOUT_DESCRIPTION =
-  'Robert Hu is an operator and builder who studies how technology changes commerce, across ecommerce, marketplaces, Amazon, digital transformation, and AI.'
+  'Robert Hu has spent 20+ years in ecommerce, marketplaces and Amazon. He now researches how AI is changing commerce and publishes that work here.'
 
 export const metadata: Metadata = {
-  title: 'About',
+  // Absolute title: skip the site-wide '%s | Robert Hu' template so the name is not repeated.
+  title: { absolute: ABOUT_TITLE },
   description: ABOUT_DESCRIPTION,
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Robert Hu',
+    title: ABOUT_TITLE,
     description: ABOUT_DESCRIPTION,
     url: `${SITE_URL}/about`,
   },
@@ -25,9 +28,8 @@ const personSchema = {
   name: 'Robert Hu',
   url: `${SITE_URL}/about`,
   image: `${SITE_URL}/images/robert-hu-headshot.png`,
-  jobTitle: 'Commerce and Technology Researcher',
-  description:
-    'Robert Hu studies how technology changes commerce, from ecommerce and marketplaces to Amazon, digital transformation, and AI.',
+  jobTitle: 'AI Commerce Researcher',
+  description: ABOUT_DESCRIPTION,
   sameAs: [
     SOCIAL_LINKS.linkedin,
     SOCIAL_LINKS.x,

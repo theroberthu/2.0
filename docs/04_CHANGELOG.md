@@ -6,6 +6,33 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.31 - About page search snippet and one job title (2026-10-06)
+
+**What changed.** The About page's search title was "About | Robert Hu," which
+spent half the visible title on the word "About" and gave a branded search no
+way to tell which Robert Hu this is. It is now "Robert Hu: AI Commerce
+Researcher and Operator," set as an absolute title so the site-wide
+"%s | Robert Hu" template does not repeat the name. The meta description now
+states the 20+ years in ecommerce, marketplaces and Amazon (already stated in
+the page body as "more than two decades") and that the research is published
+here. Open Graph title and the Person schema description match.
+
+**One label everywhere.** The page copy said "operator and builder" while the
+Person schema on every page said "Commerce and Technology Researcher." The
+`jobTitle` is now "AI Commerce Researcher" in all eight places (root layout,
+constants, About, GEO, two GEO sub-pages, AEO, AI Commerce 2027), so search
+engines and AI assistants read one consistent self-description.
+
+**Why.** Google was showing exactly the title and description we set, so the
+snippet was fully in our control. The branded-search article (Release 1.30)
+argued that brands should make the sources describing them consistent; the
+About page is the most authoritative source about Robert.
+
+**Follow-up.** Google picks this up on the next crawl. Confirm the snippet in a
+week.
+
+---
+
 ## Release 1.30 - Branded search gets a description (2026-10-04)
 
 **What changed.** New article at

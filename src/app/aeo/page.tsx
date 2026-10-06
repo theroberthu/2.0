@@ -51,7 +51,7 @@ const pageSchema = {
     '@type': 'Person',
     name: 'Robert Hu',
     url: `${SITE_URL}/about`,
-    jobTitle: 'Commerce and Technology Researcher',
+    jobTitle: 'AI Commerce Researcher',
     sameAs: [
       'https://www.linkedin.com/in/theroberthu',
       'https://x.com/theroberthu',
