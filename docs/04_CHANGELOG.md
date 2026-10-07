@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.32 - Amazon Review Requests ads explainer (2026-10-07)
+
+**What changed.** New reference article at `/blog/amazon-review-requests-ads`
+on Amazon Ads' Review Requests, announced September 29, 2026. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft. First article published under the recalibrated standard: a durable,
+accurate merchant resource can pass without a groundbreaking original thesis.
+
+**What it covers.** What the ad is (an invitation shown to recent purchasers on
+Amazon's highest-traffic pages, including the homepage, with a one-tap rating
+and optional written review); eligibility (advertisers in good standing,
+products under 1,000 ratings and reviews, automatic pause at 1,000, US only);
+how it differs from the free Request a Review button and from Amazon Vine; and
+a billing-agnostic method for cost per incremental review.
+
+**Disclosed rather than resolved.** Amazon's two primary pages conflict on
+timing (open beta "late October 2026" on the launch page, "November 2026" on the
+unBoxed news post), and neither documents the billing unit, minimum bids or
+reporting. One agency claims pay-per-submitted-review without a source; the
+article names that claim as unsourced. Both pages were rechecked immediately
+before publication and were unchanged. The 3x result is stated as Amazon's
+before-and-after closed beta (June 3 to 21, 2026), not causal evidence.
+
+**Phrasing rule.** The article never says or implies paying for reviews. The
+product is paid review invitations shown to recent purchasers. The H1 says
+"Paid Review Invitations" for that reason.
+
+**Standards applied.** 1,197 source body words, four internal links, four
+external primary-source links, one closing question, zero em dashes.
+
+**Follow-up.** Update the billing and timing paragraphs once Amazon documents
+them.
+
+---
+
 ## Release 1.31 - About page search snippet and one job title (2026-10-06)
 
 **What changed.** The About page's search title was "About | Robert Hu," which
