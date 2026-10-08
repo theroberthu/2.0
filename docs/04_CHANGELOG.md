@@ -6,6 +6,40 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.34 - The RealReal Ask TRR and one-of-one search (2026-10-08)
+
+**What changed.** New article at `/blog/the-realreal-ask-trr-ai-shopping-agent`
+on The RealReal's October 8, 2026 expansion of Ask TRR, its AI shopping agent
+built with Google Cloud's Gemini Enterprise, to all 45 million members. Ships
+with a hand-authored OG card and a generated insert script built from the
+approved draft.
+
+**Why it matters.** It adds a model the corpus did not have: the value of
+conversational search rises when inventory changes constantly and shoppers
+know their intent better than the terminology. The RealReal is high on both;
+specification-driven catalogs such as auto parts, B2B and the same-day Newegg
+announcement are not, and exact search still matters there.
+
+**The economics, from the Q2 call.** An analyst noted The RealReal already has
+high sell-through. Management's answer was that faster matching could mean
+less discounting, and the CFO described AI pricing that manages price from the
+moment an item launches. The article presents this as a coherent hypothesis
+with no reported result. It also covers the dependency underneath the agent:
+AI-generated occasion, collection and trend attributes on every listing.
+
+**Restraint recorded.** No conversion, engagement or sales result from the
+pilot has been published, and the article says so. 45 million is the member
+count, not Ask TRR usage. Product-page recommendations are planned, not live.
+
+**Editorial Board edits applied.** The one-of-one section no longer says
+keyword search breaks; the heading and two sentences were softened. The
+1M/1.5M inventory discrepancy stays out of the narrative.
+
+**Standards applied.** 1,056 source body words, three internal links, three
+external primary links, one closing question, zero em dashes.
+
+---
+
 ## Release 1.33 - Personal Agent Protocol reference (2026-10-07)
 
 **What changed.** New article at `/blog/personal-agent-protocol-ai-commerce` on
