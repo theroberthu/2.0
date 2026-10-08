@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.33 - Personal Agent Protocol reference (2026-10-07)
+
+**What changed.** New article at `/blog/personal-agent-protocol-ai-commerce` on
+Personal Agent Protocol, announced by Sierra and Meta on October 6, 2026.
+Ships with a hand-authored OG card and a generated insert script built from the
+approved draft. Published on the authority/thesis path with search-reference
+value.
+
+**Why it matters.** It takes the corpus one step further on permissions.
+Permission Stack (Sep 21) covered category-level crawler and agent rules. Know
+Your Agent (Sep 10) covered agent verification across payment networks. AI
+Commerce 2027 Shift 07 records that consumer and merchant authorization "are
+being built by different parties on different timelines." PAP is the first
+proposal to put both grants in one session: the customer decides whether the
+agent gets read-only or write access, and the business sets what it will
+accept.
+
+**Status discipline.** PAP is announced, not published. The article says so up
+front, because some search results already describe it as live. Payments and
+finer-grained permissions are stated as future extensions. PAP is distinguished
+from UCP, MCP and Know Your Agent, and Sierra's partner list (Genesys, Instinct,
+Rocket, Shopify, Stripe, Walmart, with Meta) is treated as authoritative.
+
+**Editorial Board edits applied.** The Muse/Amazon passage now states a shared
+problem rather than product causality, and its heading was softened to match.
+The NiCE/Decagon partner-list discrepancy stays out of the body.
+
+**Standards applied.** 1,035 source body words, three internal links, two
+external primary links, one closing question, zero em dashes.
+
+**Follow-up.** When v0.1 publishes: update the status paragraph in this article
+and add one evidence line to AI Commerce 2027 Shift 07. Not before.
+
+---
+
 ## Release 1.32 - Amazon Review Requests ads explainer (2026-10-07)
 
 **What changed.** New reference article at `/blog/amazon-review-requests-ads`
