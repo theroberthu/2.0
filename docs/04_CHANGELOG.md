@@ -6,6 +6,30 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.36 - Shift 06: retail media absorbs the retailer assistant (2026-10-09)
+
+**What changed.** One evidence line added to AI Commerce 2027 Shift 06
+("Advertising becomes conversational, and moves closer to the transaction"),
+approved by the Editorial Board alongside Release 1.35. No new shift, no new
+tracker row.
+
+**The line.** Retailer-owned AI shopping assistants began absorbing existing
+retail media infrastructure rather than requiring a separate ad-buying system:
+Criteo defines a retailer's AI assistant as a Sponsored Products page type,
+existing campaigns become eligible by default with standard CPC, keyword
+targeting, bid multipliers and reporting where a retailer enables it, and
+Albertsons has run it since June.
+
+**Why now rather than after a second retailer.** The shift's 2026 evidence
+covered platform-built ad formats (OpenAI, ChatGPT Ads, Google UCP in ads) but
+not the retailer side. Criteo's documented page type, default eligibility and
+a live deployment since June are enough to record the development.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` moved from
+2026-10-03 to 2026-10-09. Shift count stays at 8; tracker rows stay at 12.
+
+---
+
 ## Release 1.35 - AI shopping assistants as a retail media page type (2026-10-09)
 
 **What changed.** New article at

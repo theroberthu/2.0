@@ -8,7 +8,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-03'
+export const LAST_UPDATED = '2026-10-09'
 export const READING_MINUTES = 16
 
 /** Inline link used inside body copy. Rendered as a Next.js Link. */
@@ -129,6 +129,7 @@ export const SHIFTS: Shift[] = [
       'OpenAI began testing Sponsored Agents on September 16: after seeing a relevant ad, a user can enter a clearly labeled conversation with a business sponsored agent, which OpenAI states is distinct from ChatGPT\'s independent answers and separate from the original conversation.',
       'OpenAI opened ChatGPT Ads to Shopify merchants the same day, syncing catalog and commerce events from the store into the ad platform.',
       'Google began bringing UCP into ad formats, including Direct Offers and Shopping ads on YouTube, so a person can buy from the ad unit itself.',
+      'Retailer-owned AI shopping assistants began absorbing existing retail media infrastructure rather than requiring a separate ad-buying system: Criteo defines a retailer\'s AI assistant as a Sponsored Products page type, existing campaigns become eligible by default with standard CPC, keyword targeting, bid multipliers and reporting where a retailer enables it, and Albertsons has run it since June.',
     ],
     enables2027: [
       'The click is no longer necessarily the end of the ad. A plausible 2027 sequence runs from an independent answer, to a labeled paid placement, to a sponsored conversation, to a merchant transaction.',
