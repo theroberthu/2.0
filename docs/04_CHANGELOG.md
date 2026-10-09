@@ -6,6 +6,43 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.35 - AI shopping assistants as a retail media page type (2026-10-09)
+
+**What changed.** New article at
+`/blog/ai-shopping-assistant-retail-media-sponsored-products` on Criteo
+Sponsored Products inside retailer-owned AI shopping assistants. Ships with a
+hand-authored OG card and a generated insert script built from the approved
+draft. Published on the authority path.
+
+**Why it matters.** Earlier TRH coverage established that ads are entering AI
+shopping surfaces. This piece explains the machinery underneath. Criteo lists
+a retailer's AI assistant as a Sponsored Products page type; the retailer's
+system or LLM partner extracts keywords and filters from the conversation and
+sends a standard ad request (the developer docs use the search-results event
+type), and the existing auction, CPC bids, bid multipliers and reporting do the
+rest. "The keyword did not disappear in conversational commerce. It moved
+behind the conversation." Live at Albertsons since June 23, 2026.
+
+**Unsettled, and said so.** Whoever extracts the keywords now shapes which
+brands compete, most of all on open-ended prompts. Criteo does not prescribe a
+visual treatment for sponsored recommendations. No performance data has been
+published for these placements.
+
+**Excluded.** A reported THG Commerce implementation and its 5x CTR / 2x
+conversion figures could not be located or verified, so they are not in the
+article. THG Ingenuity's Criteo partnership (March 2025) and its separate
+Gemini assistant (June 2026) are documented but not linked publicly.
+
+**Editorial Board edits applied.** Default eligibility is stated as
+conditional on the retailer enabling the page type. The disclosure paragraph
+says Criteo does not prescribe a treatment and retailers control integration
+and disclosure, without implying legal requirements are absent.
+
+**Standards applied.** About 1,120 source body words, four internal links,
+four external primary links, one closing question, zero em dashes.
+
+---
+
 ## Release 1.34 - The RealReal Ask TRR and one-of-one search (2026-10-08)
 
 **What changed.** New article at `/blog/the-realreal-ask-trr-ai-shopping-agent`
