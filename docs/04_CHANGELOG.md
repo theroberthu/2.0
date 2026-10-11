@@ -6,6 +6,28 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.38 - Shift 04: transaction-funnel measurement for UCP checkout (2026-10-11)
+
+**What changed.** One evidence line added to AI Commerce 2027 Shift 04 ("GEO
+starts to become an operating discipline rather than a theory"), approved by
+the Editorial Board with Release 1.37. No new shift, no new tracker row.
+
+**The line.** Google added transaction-funnel reporting for UCP checkout,
+including Buy clicks, purchases, purchase rate, AOV and cancellations, through
+a UCP Analytics dashboard in Merchant Center and an alpha API covering AI Mode
+and Gemini. It starts at the Buy click and does not measure AI impressions or
+which products were considered.
+
+**Framed narrowly, as instructed.** The line does not say "first" and does not
+claim to meet the shift's signal for a measurement product that reports a
+denominator for AI visibility. Purchase Rate has a transaction denominator
+(Clicks to Buy), not an AI-impression denominator.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` moved from
+2026-10-09 to 2026-10-11. Shift count stays at 8; tracker rows stay at 12.
+
+---
+
 ## Release 1.37 - Google Merchant Center UCP Analytics (2026-10-11)
 
 **What changed.** New reference article at

@@ -8,7 +8,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-09'
+export const LAST_UPDATED = '2026-10-11'
 export const READING_MINUTES = 16
 
 /** Inline link used inside body copy. Rendered as a Next.js Link. */
@@ -93,6 +93,7 @@ export const SHIFTS: Shift[] = [
       'Google Search Console shipped a Generative AI performance report showing impressions and pages inside AI Overviews and AI Mode, expanding worldwide on August 31.',
       'Google announced AI performance insights in Merchant Center in May, comparing a brand\'s share of voice on AI surfaces against similar brands, rolling out in five markets.',
       'Bluefish and Bazaarvoice published a citation analysis in September covering 237,804 citation instances across three AI surfaces, which is the kind of dataset the discipline did not have a year ago.',
+      'Google added transaction-funnel reporting for UCP checkout, including Buy clicks, purchases, purchase rate, AOV and cancellations, through a UCP Analytics dashboard in Merchant Center and an alpha API covering AI Mode and Gemini. It starts at the Buy click and does not measure AI impressions or which products were considered.',
     ],
     enables2027: [
       'Enough instrumentation now exists to run a loop: observe where you appear, form a hypothesis about why, change something, and look again. That is meaningfully better than optimizing blind.',
