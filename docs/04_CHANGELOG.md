@@ -6,6 +6,40 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.37 - Google Merchant Center UCP Analytics (2026-10-11)
+
+**What changed.** New reference article at
+`/blog/google-ucp-analytics-merchant-center-ai-checkout` on the UCP Analytics
+dashboard in Google Merchant Center and its alpha Merchant API reporting.
+Ships with a hand-authored OG card and a generated insert script built from the
+approved draft.
+
+**What it covers.** The seven dashboard metrics (Clicks to Buy, Purchases,
+Purchase Rate, AOV, Cancellations, Account Linking, Top Selling UCP Products);
+access for UCP-enabled merchants with the Performance role, with the open
+question of platform-managed integrations such as Shopify; the alpha API's
+limits (AI Mode and Gemini not separable, date and country segments only,
+product view reports Buy clicks not purchases, leaf accounts only); and cart
+transfers counted but not followed to completion.
+
+**Why it matters.** It progresses the September measurement article by
+splitting the problem in two. Google now measures the transaction half of
+agentic commerce, starting at the Buy click. The consideration half, which
+products the AI compared and rejected, remains invisible. Search Console's
+generative AI report and UCP Analytics are two partial Google views of the same
+journey with nothing documented connecting them.
+
+**Editorial Board edits applied.** H1 makes Merchant Center explicit. The first
+150 words state that the funnel starts at Clicks to Buy, not at impression or
+recommendation. The OG pull quote was also reworded before commit so it does
+not imply the AI made the purchase decision.
+
+**Standards applied.** 1,087 source body words, four internal links, three
+external primary links, one closing question, zero em dashes. Google's sample
+API figures are not cited.
+
+---
+
 ## Release 1.36 - Shift 06: retail media absorbs the retailer assistant (2026-10-09)
 
 **What changed.** One evidence line added to AI Commerce 2027 Shift 06
