@@ -6,7 +6,8 @@
 
   <text x="100" y="252" font-family="'Helvetica Neue', Arial, sans-serif" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="-2">AI Commerce 2027</text>
 
-  <text x="100" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" font-weight="400" fill="#8a9aa2" letter-spacing="-0.5">From Experiment to Operating Model</text>
+  <text x="100" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-style="italic" font-weight="400" fill="#8a9aa2" letter-spacing="-0.5">How the commerce operating model changes</text>
+  <text x="100" y="354" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-style="italic" font-weight="400" fill="#8a9aa2" letter-spacing="-0.5">when software can act.</text>
 
   <line x1="100" y1="402" x2="1100" y2="402" stroke="#c5a94e" stroke-opacity="0.25" stroke-width="1"/>
 

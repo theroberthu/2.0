@@ -6,6 +6,62 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.39 - AI Commerce 2027 rebuilt around authority (2026-10-12)
+
+**What changed.** Full refresh of `/ai-commerce-2027`, approved by the
+Editorial Board (production GO, 2026-10-12). H1 is now "AI Commerce 2027" with
+the dek "How the commerce operating model changes when software can act." The
+eight shifts become nine, organized by where authority moves: discovery, the
+website handoff, the software interface, measurement, trust, advertising,
+merchant operations, the operating layer and governance. New sections: a
+five-line short version, a definition of AI commerce with authority as the
+boundary, "What changed in this update", an authority column on the stack,
+verdicted counterarguments, and a three-column 2027 signal tracker. Each shift
+now renders What changed / Evidence / Why it matters / Operator consequence /
+What is still unproven / Updated view (where a prior view changed), followed by
+compact Evidence notes (TRH) and Primary sources lines. The evidence tracker
+grows from 12 to 26 rows and the evidence numbers band is refreshed. The
+comparison table, disconfirming cards and watchlist are retired, replaced by
+the definitions, counterarguments and signal tracker.
+
+**Why.** The September edition left out the strongest counter-evidence of
+2026: WIRED reported that Walmart's native checkout test inside ChatGPT
+converted at roughly a third of the rate of click-through to Walmart.com, and
+OpenAI shifted its emphasis toward product discovery and merchant-controlled
+checkout. Meanwhile the newest evidence moved authority to the merchant side
+(Amazon Seller Assistant workflows, Full-Funnel Campaigns) faster than to the
+shopper side. Central revision: software is gaining authority inside the
+merchant's business faster than it is gaining unrestricted authority over the
+shopper's wallet.
+
+**Board edits applied before production.** Shift 02 does not claim OpenAI
+ended native checkout (OpenAI's developer documentation recommends external
+checkout and keeps the ChatGPT payment sheet in private beta for select
+partners); it is reframed as "The merchant website stops being the mandatory
+handoff, not the inevitable loser." Every shift carries direct primary-source
+links (42 in total) rendered visually subordinate to the prose. Walmart's
+conversion figure is attributed to WIRED's reporting, not to a Walmart
+disclosure.
+
+**Implementation.** Copy was generated from the approved draft
+(`Content/pages/ai-commerce-2027-refresh.md`) into `src/lib/ai-commerce-2027.ts`
+so the live text matches it exactly. The `Shift` type and the renderer changed
+(Board-approved layout change). The protected sentence "Infrastructure exists.
+Adoption evidence does not." stays in the opening, now in the hero and in
+"What changed in this update". OG card regenerated with the new dek. The
+homepage flagship card uses the new title and description.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` moved
+together from 2026-10-11 to 2026-10-12. `datePublished` stays 2026-09-21.
+
+**Follow-ups.** Update Shift 05 and the tracker when Personal Agent Protocol
+v0.1 publishes. Shift 08 is labelled least proven: revisit when Amazon's
+announced multichannel editing and profitability features ship. Correction to
+the record: Release 1.12 and the September copy described native AI checkout
+as the direction of travel without the Walmart and OpenAI evidence.
+
+---
+
 ## Release 1.38 - Shift 04: transaction-funnel measurement for UCP checkout (2026-10-11)
 
 **What changed.** One evidence line added to AI Commerce 2027 Shift 04 ("GEO

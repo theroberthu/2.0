@@ -214,11 +214,11 @@ export default async function HomePage() {
                 Flagship research
               </span>
               <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-[#42a5c8] transition-colors duration-200">
-                AI Commerce 2027: From Experiment to Operating Model
+                AI Commerce 2027
               </h3>
               <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl">
-                A living outlook on what 2026 actually built, what it enables next, and what remains unproven.
-                Updated through 2027 as evidence arrives.
+                How the commerce operating model changes when software can act: nine shifts, the evidence behind
+                them, and what remains unproven. Updated through 2027 as evidence arrives.
               </p>
             </div>
             <span className="text-[13px] font-semibold text-[#42a5c8] whitespace-nowrap">Read the outlook</span>
