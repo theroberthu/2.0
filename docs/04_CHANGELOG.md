@@ -6,6 +6,42 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.40 - Shopify AI connectors reference (2026-10-13)
+
+**What changed.** New search/reference article,
+`/blog/shopify-ai-connectors-chatgpt-claude-gemini`: what a Shopify merchant can
+actually do from each of the seven general-purpose assistants Shopify officially
+documents (ChatGPT, Claude, Gemini, Grok, Meta Muse, Perplexity and Microsoft
+Copilot), where they differ, what Shopify blocks for every connected tool, and
+how access is authorized, raised, switched and revoked. H1 "Shopify AI
+Connectors: How to Manage Your Store From ChatGPT, Claude, Gemini, and More";
+search title "Shopify AI Connectors Compared: ChatGPT, Claude, Gemini and More".
+Category Digital Transformation. 1,494 source-body words plus a seven-row
+comparison table.
+
+**Why.** A merchant searching "Shopify ChatGPT" or "manage Shopify with Claude"
+had to assemble several Shopify Help Center pages, and third-party results
+already carry errors (no official Muse connector; Copilot only through Copilot
+Studio). No TRH page covered the merchant-facing connectors.
+
+**Board edits applied.** The second paragraph states "These are merchant-side
+connectors, not Shopify Agentic Storefronts." The table keeps "Not documented"
+exactly where a connector page does not list a capability. The table was not
+trimmed for length.
+
+**Sourcing.** Every capability claim comes from Shopify's Help Center: the hub,
+the authorization page, the shared considerations page and the seven connector
+pages (ten external links). Kept out of the body: ChatGPT Work and Codex (not on
+the connector page), the free-trial length for AI-created stores (secondary
+only), and Gemini's domain-purchase handoff.
+
+**Site change.** Article bodies had no table styling. Added scoped
+`.prose-custom-dark .table-wrapper` rules in `globals.css` so wide reference
+tables scroll horizontally on phones instead of overflowing. Unwrapped tables in
+older posts are unaffected.
+
+---
+
 ## Release 1.39 - AI Commerce 2027 rebuilt around authority (2026-10-12)
 
 **What changed.** Full refresh of `/ai-commerce-2027`, approved by the

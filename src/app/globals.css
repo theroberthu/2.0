@@ -185,6 +185,44 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   color: inherit;
 }
 
+/* Reference tables in article bodies. Wrap in .table-wrapper so wide tables
+   scroll horizontally on phones instead of overflowing the page. */
+.prose-custom-dark .table-wrapper {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+}
+.prose-custom-dark .table-wrapper table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.prose-custom-dark .table-wrapper th {
+  text-align: left;
+  font-weight: 600;
+  color: #f7f9fb;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  vertical-align: bottom;
+}
+.prose-custom-dark .table-wrapper td {
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+}
+.prose-custom-dark .table-wrapper tbody tr:last-child td {
+  border-bottom: 0;
+}
+.prose-custom-dark .table-wrapper td:first-child {
+  font-weight: 600;
+  color: #e8edf0;
+  white-space: nowrap;
+}
+
 /* Responsive video embeds in prose content */
 .prose-custom .video-wrapper,
 .prose-custom-dark .video-wrapper {
