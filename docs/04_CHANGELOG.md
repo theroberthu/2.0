@@ -6,6 +6,30 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.41 - Shift 07: catalog work delegated, money movement blocked (2026-10-13)
+
+**What changed.** One evidence sentence added to AI Commerce 2027 Shift 07 ("AI
+moves from buyer to operator") and one evidence tracker row, approved by the
+Editorial Board with Release 1.40. Nothing else on the page changed.
+
+**The sentence.** Shopify documented official connectors for seven
+general-purpose assistants that can edit products, collections, inventory and
+percentage discounts with write access, while blocking refunds, order
+cancellation and capture, returns, gift cards and changes to payments, taxes and
+domains for every connected tool.
+
+**Why.** It is documented capability with documented permission boundaries
+across multiple assistants, and it is the cleanest example yet of the report's
+central line: catalog work is being delegated, money movement is not.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` moved
+together from 2026-10-12 to 2026-10-13. Tracker rows 26 to 27, dated October
+2026 and linked to the connectors article. The approved draft
+(`Content/pages/ai-commerce-2027-refresh.md`) carries the same sentence so the
+copy source and the live module stay in sync.
+
+---
+
 ## Release 1.40 - Shopify AI connectors reference (2026-10-13)
 
 **What changed.** New search/reference article,
