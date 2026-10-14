@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase'
 import BlogCard from '@/components/BlogCard'
 import MobileCarousel from '@/components/MobileCarousel'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import FeaturedVideo from '@/components/FeaturedVideo'
 import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const revalidate = 60
@@ -165,6 +166,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ───────────────────── Featured Video (swap via FEATURED_VIDEO_SLUG) ───────────────────── */}
+      <FeaturedVideo />
 
       {/* ───────────────────── Section 2: What I'm Exploring ───────────────────── */}
       <section className="relative py-20 md:py-28 bg-brand-dark border-t border-white/[0.06] overflow-hidden">

@@ -6,6 +6,60 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.42 - Video companion pages: Walmart and Jet.com (2026-10-14)
+
+**What changed.** New permanent home for long-form YouTube documentaries.
+`/videos/walmart-jet-acquisition` is the companion page for "Walmart Bought Jet
+for $3.3B. Why Shut It Down?" (https://youtu.be/t4Hf1WLag48): H1 "Why Walmart
+Bought Jet.com for $3.3 Billion, Then Shut It Down", a large lazy-loaded player
+near the top, 796 words of written context, key takeaways, twelve chapters
+linked to YouTube timestamps, seven sources, related research, and Watch on
+YouTube CTAs. A lightweight `/videos` index lists all videos. The homepage gets
+a Featured Video card directly under the hero, linking to the companion page
+(no autoplay). Not added to the main navigation yet (Board: not yet).
+
+**Why.** Give the video a searchable, citable home on theroberthu.com that
+answers the business question (did Walmart's Jet acquisition fail?) and sends
+qualified visitors to YouTube, while strengthening the Walmart and ecommerce
+transformation cluster.
+
+**Editorial position.** Shutting down the Jet brand is not proof the
+acquisition failed. Walmart called it "critical to accelerating our omni
+strategy." The page credits Jet as an accelerator, not as the source of later
+capabilities such as parcel stations, lower last-mile cost and ecommerce
+profitability, which arrived years later.
+
+**Sources.** All six Walmart sources from the YouTube description were
+downloaded and checked against the claims they support (2016 acquisition, Q1
+FY2021 release, November 2023 parcel stations, Q4 FY2024 and Q1 FY2026 call
+transcripts, FY2026 Form 10-K), plus Kroger's Nate Faust release, labelled as
+cited on the page only.
+
+**Structured data.** VideoObject from verified YouTube values (uploadDate
+2026-10-12T15:20:17-07:00, duration PT11M40S, real thumbnail, embedUrl, author,
+publisher) with twelve `Clip` chapters; `contentUrl` omitted because it should
+point to a media file. BreadcrumbList on the companion page, ItemList on
+`/videos`.
+
+**Analytics.** GA4 through the existing gtag only: `video_companion_view`,
+`watch_on_youtube_click` (location: below_player, chapter, end_of_page) and
+`featured_video_click`. No new vendor, no personal data. Register `video_slug`
+and `location` as custom dimensions in GA to report on them.
+
+**Implementation.** Data-driven: `src/lib/videos.ts` holds each video; a new
+video is a data entry rendered by `src/app/videos/[slug]/page.tsx`. The
+homepage card reads `FEATURED_VIDEO_SLUG` (swap or set to null; no hard-coded
+expiry, per Board). The previously unused `LazyYouTube` now accepts a local
+poster, uses youtube-nocookie.com and a real button element. Thumbnail stored
+locally at `public/images/videos/`. Sitemap adds `/videos` and each video page.
+
+**Backlinks (Supabase, after deploy).** Two contextual links to the companion
+page: `kroger-ecommerce-operating-model` ("After Walmart acquired Jet.com") and
+`walmart-grocery-ecommerce-growth` ("using existing stores as fulfillment
+hubs"). The optional third link was skipped.
+
+---
+
 ## Release 1.41 - Shift 07: catalog work delegated, money movement blocked (2026-10-13)
 
 **What changed.** One evidence sentence added to AI Commerce 2027 Shift 07 ("AI
