@@ -42,6 +42,8 @@ export type VideoEntry = {
   takeaways: string[]
   chapters: VideoChapter[]
   sources: VideoSource[]
+  /** One-line intro above the source list. */
+  sourcesNote: string
   related: RelatedLink[]
   /** Production and disclosure notes, carried over from the YouTube description. */
   credits: string
@@ -63,6 +65,153 @@ export function youtubeThumbnailUrl(id: string): string {
 }
 
 export const VIDEOS: VideoEntry[] = [
+  {
+    slug: 'dominos-turnaround',
+    youtubeId: 'tiScF1e9708',
+    youtubeTitle: 'Domino’s Fixed Its Pizza. Why Wasn’t That Enough?',
+    h1: 'Domino’s Turnaround: Why Fixing the Pizza Wasn’t Enough',
+    seoTitle: 'Domino’s Turnaround: Why Fixing the Pizza Wasn’t Enough',
+    metaDescription:
+      'Domino’s changed its pizza recipe in 2009, but the recipe was only part of the turnaround. What online ordering, the Tracker, closer stores and carryout added.',
+    dek: 'The new recipe earned the first order. The ordering system, the stores and the operation behind them decided whether customers came back.',
+    uploadDate: '2026-10-13T17:10:01-07:00',
+    duration: 'PT9M12S',
+    durationLabel: '9 min 12 sec',
+    thumbnail: '/images/videos/dominos-turnaround.jpg',
+    thumbnailAlt: 'Pizza Wasn’t Enough: documentary thumbnail showing a Domino’s storefront at night with the Domino’s logo',
+    sections: [
+      {
+        paragraphs: [
+          'In December 2009, Domino’s announced it was replacing its core pizza recipe: new crust, new sauce, new cheese. Its advertising leaned into the criticism, built around what the company called the challenge of changing negative perceptions of its pizza. The version of the story that stuck is simple. Domino’s admitted the pizza was bad, fixed it, and won.',
+          'The recipe mattered. But a better pizza gets someone to order once. Whether they order again depends on everything around the pizza: how easy it is to order, how long it takes, and whether it arrives as promised. That is the less visible part of the turnaround, and it is what this documentary is about.',
+        ],
+      },
+      {
+        heading: 'The pizza change worked, by Domino’s own account',
+        paragraphs: [
+          'Domino’s said its U.S. same store sales grew 9.9% in 2010, which it attributed to "increased store traffic and sustained positive consumer response to its improved pizza and the effectiveness of its advertising." Its CEO, Patrick Doyle, said the decision to improve the pizza "allowed us to build a new base of customers."',
+          'So this is not a story where the recipe was a distraction. It is a story where the recipe was not working alone.',
+        ],
+      },
+      {
+        heading: 'The timeline changes the story',
+        paragraphs: [
+          'Domino’s own history puts the technology first. It introduced online and mobile ordering in 2007 and launched the Domino’s Tracker in 2008, letting customers follow an order from the moment it was placed to when it was out of the oven or on its way. The new recipe arrived at the end of 2009.',
+          'The ordering system was already in place when the new pizza brought people back to try it. The recipe earned the first order. The ordering experience was waiting for the second.',
+          'Domino’s kept building in that direction: saved ordering profiles in 2013, ordering across more devices in 2015, contactless Carside Delivery in 2020. By 2025, it said more than 85% of its U.S. retail sales came through digital channels.',
+        ],
+      },
+      {
+        heading: 'The business behind the screen',
+        paragraphs: [
+          'The app is only the front door. Domino’s says independent franchise owners operated 99% of its stores at the end of 2025. Each order lands in a store someone else owns, with its own staff, ovens and drivers. The Tracker can show the minutes. It cannot create them.',
+          'The company’s answer to time and distance has been physical. It calls it fortressing: condensing delivery areas for better delivery service and adding locations closer to its carryout customers. Its own annual report is candid that adding stores nearby may take sales from existing ones. A closer store can make dinner faster, and carryout removes the drive entirely. Both are operating decisions, not interface ones.',
+        ],
+      },
+      {
+        heading: 'When the app cannot solve the problem',
+        paragraphs: [
+          'The year 2022 showed the limit. Domino’s said U.S. same store sales declined 0.8%, which it attributed to lower order counts due in part to labor shortages affecting store hours and staffing, and to stimulus spending in 2021 that did not recur. In the same year, it said about two-thirds of its global retail sales came through digital channels.',
+          'A store that is short-staffed or closes early cannot be fixed by a better screen. The ordering system can take the order. It cannot make the pizza or drive it to the door.',
+        ],
+      },
+      {
+        heading: 'The next improvement',
+        paragraphs: [
+          'Domino’s keeps working both sides. It now takes orders through third-party delivery marketplaces, which it describes as part of its growth strategy, opening another doorway into the same kitchens. And in August 2026 it gave customers $5 off a future order for trying its redesigned website and app, with a chance to leave feedback at the end of each online order.',
+          'In the documentary I share my own experience as a customer. The technology impressed me. But standing out once is not the same as earning the next order.',
+        ],
+      },
+      {
+        heading: 'The lesson: the product earns the trial, the operation earns the repeat',
+        paragraphs: [
+          'Fixing the product earns a trial. The operation earns the repeat. Walmart learned a version of the same thing after it [bought Jet.com and retired the brand](/videos/walmart-jet-acquisition): the durable value sat in capability, not in the visible asset. For Domino’s, the visible fix was the pizza. The durable advantage was the system that got it to a customer, again and on time.',
+          'I have argued that [checkout was never the page](/blog/ai-checkout-interface-commerce-infrastructure). In the same way, ordering was never the app. The screen is where a customer meets the operation, and it can only promise what the operation can keep.',
+          'Would a better ordering experience make you choose Domino’s again, or does the pizza decide?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Domino’s replaced its core pizza recipe in December 2009 and credited the improved pizza and its advertising for 9.9% U.S. same store sales growth in 2010.',
+      'Online and mobile ordering (2007) and the Domino’s Tracker (2008) came before the recipe change, not after it.',
+      'More than 85% of Domino’s U.S. retail sales came through digital channels in 2025, and franchise owners run 99% of its stores.',
+      'Labor shortages cut order counts in 2022, a problem a better app could not solve.',
+      'The product earns the first order. The operation behind the app earns the next one.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The public admission' },
+      { time: '0:27', label: 'The second order is the real test' },
+      { time: '1:29', label: 'The timeline changes the story' },
+      { time: '2:21', label: 'The minutes you cannot see' },
+      { time: '3:07', label: 'The business behind the screen' },
+      { time: '3:53', label: 'Why another store can change dinner' },
+      { time: '4:38', label: 'Carryout changes the equation' },
+      { time: '5:10', label: 'When the app cannot solve the problem' },
+      { time: '6:04', label: 'A new doorway into the same operation' },
+      { time: '6:54', label: 'The operation and the next improvement' },
+      { time: '7:46', label: 'What would make me choose it again' },
+      { time: '8:52', label: 'Credits' },
+    ],
+    sources: [
+      {
+        label: 'Domino’s company history and ordering timeline',
+        date: 'Company history page',
+        href: 'https://biz.dominos.com/about-us/history/',
+      },
+      {
+        label: 'Celebrating 50th Year, Domino’s Pizza Gives Itself a Makeover',
+        date: 'December 2009',
+        href: 'https://ir.dominos.com/news-releases/news-release-details/celebrating-50th-year-dominos-pizza-gives-itself-makeover',
+      },
+      {
+        label: 'Domino’s Pizza Announces 2010 Financial Results',
+        date: 'March 2011',
+        href: 'https://ir.dominos.com/news-releases/news-release-details/dominos-pizza-announces-2010-financial-results',
+      },
+      {
+        label: 'Domino’s 2022 annual report (carryout, fortressing and staffing)',
+        date: 'Fiscal 2022 (PDF)',
+        href: 'https://ir.dominos.com/static-files/077efb6a-962c-49f3-bd58-0be4a2bec18a',
+      },
+      {
+        label: 'Domino’s Fourth Quarter and Fiscal 2025 Financial Results',
+        date: 'February 2026',
+        href: 'https://ir.dominos.com/node/24181',
+      },
+      {
+        label: 'Domino’s Is Paying Customers to Beta Test Its New Website and App',
+        date: 'August 2026',
+        href: 'https://ir.dominos.com/news-releases/news-release-details/dominosr-paying-customers-beta-test-its-new-website-and-app',
+      },
+    ],
+    sourcesNote: 'The Domino\u2019s primary sources cited in the documentary.',
+    related: [
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Why proximity, store density and execution matter more than any single digital project.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'A better tool on top of a broken workflow makes the workflow faster, not better.',
+      },
+      {
+        href: '/blog/retailers-ai-traffic-customer-ownership',
+        title: 'Retailers Want AI Shopping Traffic. They Do Not Want to Lose the Customer.',
+        note: 'The trade-off when a third-party platform becomes the doorway to your operation.',
+      },
+    ],
+    credits:
+      'Written and narrated by Robert Hu; narration uses his authorized ElevenLabs voice. Independent documentary commentary; no affiliation with or endorsement by Domino’s. Stock footage is illustrative and does not depict actual Domino’s operations. Thumbnail photograph: “Domino’s by night” by Mr. Blue MauMau, CC BY 2.0. Music, photograph and footage credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Domino’s Fixed Its Pizza. Why Wasn’t That Enough?',
+      description:
+        'Domino’s fixed its pizza in 2009. The harder part was everything that had to happen after the order.',
+      cta: 'Watch the documentary',
+    },
+  },
   {
     slug: 'walmart-jet-acquisition',
     youtubeId: 't4Hf1WLag48',
@@ -182,6 +331,7 @@ export const VIDEOS: VideoEntry[] = [
         note: 'Cited on this page only, for Faust’s Walmart role.',
       },
     ],
+    sourcesNote: 'Walmart primary sources cited in the documentary, plus one additional source used on this page.',
     related: [
       {
         href: '/blog/walmart-people-led-tech-powered-operating-model',
@@ -212,7 +362,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'walmart-jet-acquisition'
+export const FEATURED_VIDEO_SLUG: string | null = 'dominos-turnaround'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)

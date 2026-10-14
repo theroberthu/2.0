@@ -106,12 +106,14 @@ const siteNavSchema = {
     'AI Search (GEO)',
     'AI Agents (AEO)',
     'Blog',
+    'Videos',
     'About',
   ],
   url: [
     `${SITE_URL}/geo`,
     `${SITE_URL}/aeo`,
     `${SITE_URL}/blog`,
+    `${SITE_URL}/videos`,
     `${SITE_URL}/about`,
   ],
 }

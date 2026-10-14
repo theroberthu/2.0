@@ -6,6 +6,39 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.43 - Domino's documentary companion page and Videos in the nav (2026-10-14)
+
+**What changed.** Second documentary companion page,
+`/videos/dominos-turnaround`, for "Domino's Fixed Its Pizza. Why Wasn't That
+Enough?" (https://youtu.be/tiScF1e9708): H1 "Domino's Turnaround: Why Fixing the
+Pizza Wasn't Enough", 760 words of context, five takeaways, twelve timestamped
+chapters, six Domino's primary sources, related research. VideoObject from
+verified YouTube values (uploadDate 2026-10-13T17:10:01-07:00, duration
+PT9M12S) with twelve `Clip` chapters. The homepage Featured Video now points at
+this documentary (`FEATURED_VIDEO_SLUG`), per the Board rule that the next
+long-form video replaces the previous one. Videos added to the main navigation
+between Blog and About (header, footer and `SiteNavigationElement`). With seven
+items the desktop nav wrapped at tablet width (768px), so the header now uses
+the hamburger menu below 1024px (`lg`) instead of `md`; nav labels no longer wrap.
+
+**Editorial position.** The 2009 recipe change worked by Domino's own account
+(9.9% U.S. same store sales growth in 2010), but online ordering (2007) and the
+Tracker (2008) came first, and the operation behind the app (franchise stores,
+fortressing, carryout, staffing) decided repeat orders. The 2022 labor shortage
+is the example of a problem the app could not solve.
+
+**Sources.** All six from the YouTube description checked against the claims
+they support. Domino's investor pages block scripted access and were read in a
+browser; the 2022 annual report facts were checked against the FY2022 Form 10-K
+on SEC EDGAR.
+
+**Template changes.** Each companion page now shows a "More documentaries"
+strip linking the other videos. The Sources intro is now a per-video field
+(`sourcesNote`); it had been hard-coded to Walmart wording. The Domino's
+thumbnail's CC BY 2.0 photograph is credited on the page.
+
+---
+
 ## Release 1.42 - Video companion pages: Walmart and Jet.com (2026-10-14)
 
 **What changed.** New permanent home for long-form YouTube documentaries.

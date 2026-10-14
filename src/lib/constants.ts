@@ -13,6 +13,7 @@ export const NAV_LINKS = [
   { label: 'AI Search (GEO)', href: '/geo' },
   { label: 'AI Agents (AEO)', href: '/aeo' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Videos', href: '/videos' },
   { label: 'About', href: '/about' },
 ]
 

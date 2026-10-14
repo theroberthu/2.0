@@ -55,9 +55,11 @@ rather than through promotion or lead capture.
   (`revalidate = 60`).
 - **Live routes:** `/` (home), `/about`, `/geo` (flagship), `/geo/alexa-for-shopping`,
   `/geo/walmart-sparky`, `/aeo` (flagship), `/blog`, `/blog/[slug]`,
+  `/videos`, `/videos/[slug]` (documentary companion pages),
   `/work` (noindex portfolio).
 - **Navigation:** Home, AI Search (GEO) → `/geo`, AI Agents (AEO) → `/aeo`,
-  Blog, About. (`NAV_LINKS` in `src/lib/constants.ts`.)
+  Blog, Videos, About. (`NAV_LINKS` in `src/lib/constants.ts`; keep the
+  `SiteNavigationElement` list in `src/app/layout.tsx` in sync.)
 - **Topic clusters:**
   - **GEO cluster:** `/geo` hub + `/geo/alexa-for-shopping` + `/geo/walmart-sparky`
     + GEO blog posts.

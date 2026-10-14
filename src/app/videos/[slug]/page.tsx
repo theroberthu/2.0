@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { ReactNode } from 'react'
@@ -291,9 +292,7 @@ export default function VideoCompanionPage({ params }: Props) {
             <h2 id="sources-heading" className="text-[1.375rem] font-bold text-white tracking-tight mb-2">
               Sources
             </h2>
-            <p className="text-[14px] text-gray-400 mb-5">
-              Walmart primary sources cited in the documentary, plus one additional source used on this page.
-            </p>
+            <p className="text-[14px] text-gray-400 mb-5">{video.sourcesNote}</p>
             <ol className="space-y-4">
               {video.sources.map((s) => (
                 <li key={s.href} className="text-[14px] leading-relaxed">
@@ -335,6 +334,38 @@ export default function VideoCompanionPage({ params }: Props) {
           <p className="mt-8 text-[13px] text-gray-500 leading-relaxed">{video.credits}</p>
         </div>
       </article>
+
+      {/* More documentaries: every other video, newest first */}
+      {VIDEOS.length > 1 && (
+        <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]">
+          <div className="max-w-[720px] mx-auto px-5 sm:px-8">
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
+              Watch next
+            </span>
+            <h2 className="text-xl font-bold text-white tracking-tight mb-6">More documentaries</h2>
+            <ul className="space-y-4">
+              {VIDEOS.filter((v) => v.slug !== video.slug).map((v) => (
+                <li key={v.slug}>
+                  <Link
+                    href={`/videos/${v.slug}`}
+                    className="group grid grid-cols-[120px_1fr] sm:grid-cols-[176px_1fr] gap-4 items-center bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 hover:border-brand-accent/40 transition-colors duration-200"
+                  >
+                    <span className="relative block aspect-video rounded-lg overflow-hidden">
+                      <Image src={v.thumbnail} alt="" fill className="object-cover" sizes="176px" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-[15px] font-medium text-gray-200 group-hover:text-brand-accent transition-colors duration-200 leading-snug">
+                        {v.h1}
+                      </span>
+                      <span className="block text-[12px] font-mono text-gray-500 mt-1">{v.durationLabel}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Related research */}
       <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]">

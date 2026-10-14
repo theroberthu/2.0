@@ -26,12 +26,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium text-gray-400 hover:text-brand-gold transition-colors duration-200"
+              className="text-[13px] font-medium text-gray-400 hover:text-brand-gold transition-colors duration-200 whitespace-nowrap"
             >
               {link.label}
             </Link>
@@ -48,7 +48,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 -mr-2 text-gray-400 hover:text-white transition-colors"
+          className="lg:hidden p-2 -mr-2 text-gray-400 hover:text-white transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -69,7 +69,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="md:hidden border-t border-white/[0.06] bg-brand-dark">
+        <nav className="lg:hidden border-t border-white/[0.06] bg-brand-dark">
           <div className="max-w-6xl mx-auto px-5 py-6 flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <Link
