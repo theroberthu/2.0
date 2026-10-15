@@ -6,6 +6,44 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.44 - Google Local Coupons reference (2026-10-15)
+
+**What changed.** New search/reference article,
+`/blog/google-local-coupons-pay-per-redemption-ads`: how Google Local Coupons
+works, who can use it, what the retailer pays for and what the point-of-sale
+integration measures. H1 "Google Local Coupons: How Pay-on-Redemption Search
+Ads Work"; search title "Google Local Coupons: How Retailers Pay Per
+Redemption". Category Digital Marketing. 1,206 source-body words, three
+internal links, five external sources.
+
+**Why.** Search results for the product were trade news plus a partner help
+page, and coverage was already blurring the billing event. The article keeps
+the distinction prominent: pay per redemption, not pay per click and not
+necessarily pay per sale.
+
+**Board edits applied.** Availability ("closed beta, select U.S. accounts, as of
+October 2026") stated at word 48; the two-cost economics kept (the retailer
+funds the discount and pays Google per redemption); the measurement line
+softened to "a directly observed commercial event tied to the ad, which is much
+cleaner than modeled store-visit measurement, but it still does not prove the
+ad caused the purchase."
+
+**Sourcing and pre-publish check.** The detailed source is Lightspeed's setup
+guide (read in a browser; direct fetch is blocked). Google's own public
+statements are one phrase in its May 20 Direct Offers post and an October 8
+LinkedIn post reported by MediaPost. Re-checked on publication day: Lightspeed's
+page unchanged, no Google first-party help page, and Lightspeed's "monthly
+spending cap" versus "campaign total budget" wording still unreconciled, so the
+article reports both. Not repeated from trade coverage: "pay per sale"
+framing, a UCP link that refers to Direct Offers, and per-click Direct Offers
+billing.
+
+**Follow-ups.** Re-check when Google publishes a Local Coupons help page, adds
+markets, documents return and void treatment, or names more POS partners.
+AI Commerce 2027: no change.
+
+---
+
 ## Release 1.43 - Domino's documentary companion page and Videos in the nav (2026-10-14)
 
 **What changed.** Second documentary companion page,
