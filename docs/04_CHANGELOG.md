@@ -6,6 +6,39 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.45 - Bosch documentary companion page (2026-10-15)
+
+**What changed.** Third documentary companion page,
+`/videos/bosch-semiconductors-dresden`, for "Bosch Makes Chips? Inside Its $1.2
+Billion Bet" (https://youtu.be/9EhVNMydmM4): H1 and search title "Bosch Makes
+Chips: Inside Its $1.2 Billion Dresden Wafer Fab", 748 words of context, five
+takeaways, eleven timestamped chapters, five Bosch primary sources, related
+research. VideoObject from verified YouTube values (uploadDate
+2026-10-14T16:00:29-07:00, duration PT7M23S) with eleven `Clip` chapters. The
+homepage Featured Video now points at this documentary
+(`FEATURED_VIDEO_SLUG`), per the rule that the newest long-form video replaces
+the previous one.
+
+**Why.** The page frames Dresden as scale added to a capability Bosch has had
+since 1958, then asks how an operator would know the investment paid off. Bosch
+does not publish the fab's returns, and group figures cannot isolate one plant;
+the page names supply security, cost against buying chips and ramp speed as the
+tests, and notes only the early production start has a public answer.
+
+**Sourcing.** Every figure checked against Bosch's own releases and annual
+results. Bosch reports in euros: "roughly one billion euros, or about $1.2
+billion at the exchange rate of the time", with the sources note marking the
+dollar figure as an approximate June 2021 equivalent. "Biggest single
+investment" is attributed to Bosch and dated ("then", "at the time"). Factory
+capabilities (AI wafer signatures, digital twin, remote maintenance) are
+attributed to Bosch, with a note that yield, uptime and cost figures are not
+published.
+
+**Follow-ups.** No backlinks: TRH has no Bosch or manufacturing articles yet.
+Run a Rich Results Test on the new page.
+
+---
+
 ## Release 1.44 - Google Local Coupons reference (2026-10-15)
 
 **What changed.** New search/reference article,

@@ -66,6 +66,142 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'bosch-semiconductors-dresden',
+    youtubeId: '9EhVNMydmM4',
+    youtubeTitle: 'Bosch Makes Chips? Inside Its $1.2 Billion Bet',
+    h1: 'Bosch Makes Chips: Inside Its $1.2 Billion Dresden Wafer Fab',
+    seoTitle: 'Bosch Makes Chips: Inside Its $1.2 Billion Dresden Wafer Fab',
+    metaDescription:
+      'Bosch has made its own semiconductors since 1958. Inside its Dresden wafer fab, then its biggest single investment, and how you would know if it paid off.',
+    dek: 'Bosch built one of Europe’s most advanced chip factories to supply its own power tools and cars. The harder question is how anyone would know it paid off.',
+    uploadDate: '2026-10-14T16:00:29-07:00',
+    duration: 'PT7M23S',
+    durationLabel: '7 min 23 sec',
+    thumbnail: '/images/videos/bosch-semiconductors-dresden.jpg',
+    thumbnailAlt: 'Documentary thumbnail: a cordless drill beside a silicon wafer inside a chip factory',
+    sections: [
+      {
+        paragraphs: [
+          'Most people know Bosch for drills, dishwashers and car parts. Fewer know it makes the chips inside many of them. In June 2021, Bosch opened a 300-millimeter wafer fab in Dresden that it called the biggest single investment in its more than 130-year history: roughly one billion euros, or about $1.2 billion at the exchange rate of the time.',
+          'The factory is impressive. The more useful question is the one every operator faces after a large technology bet: how to know whether it is paying off.',
+        ],
+      },
+      {
+        heading: 'Bosch has made chips for decades',
+        paragraphs: [
+          'Dresden was not a sudden move into a new industry. Bosch says it started producing power diodes in 1958, and its Reutlingen plant has made application-specific chips since 1970, components that Bosch says were not commercially available. Reutlingen moved to 150-millimeter wafers in 1995 and 200-millimeter wafers in 2010, and today makes automotive chips, MEMS sensors and silicon carbide power semiconductors.',
+          'At the 2021 opening, Bosch said it had invested more than 2.5 billion euros in its Reutlingen and Dresden wafer fabs since 2010. Dresden added scale and a newer wafer size to a capability Bosch already had, rather than creating one from nothing.',
+        ],
+      },
+      {
+        heading: 'What Bosch built in Dresden',
+        paragraphs: [
+          'Bosch opened the Dresden fab on June 7, 2021, with 72,000 square meters of floor space and 250 people already working there, a number it planned to grow to roughly 700. It said automotive chips would be the plant’s primary focus.',
+          'The first customer was Bosch itself. Bosch said chips from Dresden would go into its power tools from July 2021, six months earlier than planned, with production for automotive customers starting in September, three months early. Those were the dates Bosch announced at the opening.',
+        ],
+      },
+      {
+        heading: 'Data, AI and the digital twin',
+        paragraphs: [
+          'Bosch calls Dresden its first AIoT factory, combining artificial intelligence with connected machines. It said the plant would generate production data equivalent to 500 text pages every second. Bosch says AI looks for tiny error patterns on the wafer surface, called signatures, so their causes can be corrected before they affect the product, and predicts when equipment needs maintenance rather than following a fixed schedule.',
+          'The division of labor is spelled out. In Bosch’s words: "The AI algorithm determines when intervention is necessary; humans decide what needs adjusting."',
+          'The plant also exists twice. During construction, Bosch recorded the building in a digital twin of roughly half a million 3D objects, from ventilation and cable ducts to production lines, so it can simulate process changes and renovation work without interrupting production. And with camera-equipped data glasses, an equipment specialist in Japan can guide a technician in Dresden through a repair in real time.',
+          'All of these are Bosch’s descriptions of how the factory works. Bosch has not published yield, uptime or cost figures that show what each capability delivers.',
+        ],
+      },
+      {
+        heading: 'Was it worth the money?',
+        paragraphs: [
+          'Bosch does not publish the Dresden fab’s returns, so the honest answer is that nobody outside Bosch can say. Group results do not settle it either. In 2025 the Bosch Group reported sales of 91.0 billion euros and an EBIT margin from operations of 2.0 percent, and spent 7.9 billion euros on research and development. Bosch said it continued to make substantial investments in areas including semiconductors. None of that isolates one factory.',
+          'If I were evaluating a bet like this from the inside, I would not start with the group margin. I would ask what the factory was supposed to solve: whether it secured chips for Bosch’s own products when supply was tight, what its chips cost compared with buying them, and how quickly it can bring a new product into full production. Bosch has published an early answer to the last of those, the ramp that started ahead of schedule, and very little on the others.',
+        ],
+      },
+      {
+        heading: 'The lesson: judge the capability against the problem',
+        paragraphs: [
+          'Large technology investments are easy to admire and hard to evaluate. A cleanroom, a digital twin and AI-assisted monitoring are visible. The return is not, especially when the factory supplies its owner’s own products and no market price shows up anywhere.',
+          'It is the same question I asked about [Walmart buying Jet.com](/videos/walmart-jet-acquisition): the asset is what you can see, but the value sits in the capability it gives you. The way to judge that capability is against the specific problem it was meant to solve, measured from outside the system that produced it.',
+          'How would you know if your own biggest technology investment was paying off?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Bosch has made its own semiconductors since 1958, and its Reutlingen plant has made application-specific chips since 1970.',
+      'The Dresden wafer fab opened in June 2021 at roughly one billion euros, about $1.2 billion then, Bosch’s biggest single investment at the time.',
+      'Bosch said Dresden chips would reach its power tools six months ahead of plan and automotive customers three months ahead.',
+      'Bosch describes AI that spots wafer defects and predicts maintenance, a digital twin of the plant, and remote repairs guided from Japan.',
+      'Bosch does not publish the factory’s returns, and group-wide margins cannot show whether a single factory paid off.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Bosch’s $1.2 billion question' },
+      { time: '0:19', label: 'The component inside the product' },
+      { time: '0:58', label: 'A semiconductor head start' },
+      { time: '1:47', label: 'Building the Dresden factory' },
+      { time: '2:41', label: 'The price of precision' },
+      { time: '3:33', label: 'Data, AI and the digital twin' },
+      { time: '4:20', label: 'Expertise at a distance' },
+      { time: '5:05', label: 'Back to power tools and cars' },
+      { time: '5:44', label: 'Was it worth the money?' },
+      { time: '6:36', label: 'The next production run' },
+      { time: '7:05', label: 'Credits' },
+    ],
+    sources: [
+      {
+        label: 'Bosch opens wafer fab of the future in Dresden',
+        date: 'June 2021',
+        href: 'https://www.bosch-presse.de/pressportal/de/en/bosch-opens-wafer-fab-of-the-future-in-dresden-230080.html',
+      },
+      {
+        label: 'Bosch opens chip factory of the future in Dresden (Bosch story)',
+        date: 'June 2021',
+        href: 'https://www.bosch.com/stories/bosch-chip-factory-dresden/',
+      },
+      {
+        label: 'Bosch semiconductor manufacturing history',
+        date: 'Bosch story',
+        href: 'https://www.bosch.com/stories/semiconductor-manufacturing/',
+      },
+      {
+        label: 'The Bosch wafer fab in Reutlingen',
+        date: 'Bosch Semiconductors',
+        href: 'https://www.bosch-semiconductors.com/about-us/where-we-produce/reutlingen/',
+      },
+      {
+        label: 'Bosch Group 2025 business year results',
+        date: '2026',
+        href: 'https://www.bosch-presse.de/pressportal/us/en/press-release-30336.html',
+      },
+    ],
+    sourcesNote:
+      'The Bosch sources cited in the documentary. The dollar figure is an approximate June 2021 equivalent of the euro amount Bosch reported.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'Why measuring the outcome, not the activity, is the harder half of any technology investment.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Technology amplifies the process underneath it, which is why the process has to be right first.',
+      },
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'Another large operator dividing the work between systems that flag and people who decide.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI-assisted version of his voice. Footage and tool photograph: Bosch, used under Bosch’s press-purpose grants with attribution. The thumbnail is an illustrative editorial composite. Independent commentary; no Bosch affiliation or endorsement. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Bosch Makes Chips? Inside Its $1.2 Billion Bet',
+      description:
+        'Bosch built a chip factory to supply its own power tools and cars. The harder question is how anyone would know it paid off.',
+      cta: 'Watch the documentary',
+    },
+  },
+  {
     slug: 'dominos-turnaround',
     youtubeId: 'tiScF1e9708',
     youtubeTitle: 'Domino’s Fixed Its Pizza. Why Wasn’t That Enough?',
@@ -362,7 +498,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'dominos-turnaround'
+export const FEATURED_VIDEO_SLUG: string | null = 'bosch-semiconductors-dresden'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
