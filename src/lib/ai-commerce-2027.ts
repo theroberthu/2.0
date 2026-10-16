@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-13'
+export const LAST_UPDATED = '2026-10-16'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-15',
+    org: 'Google',
+    development: 'Universal Cart live in U.S. Search and Gemini, with checkout on Google or a one-way transfer to the merchant\'s cart',
+    affects: 'Website handoff',
+    evidenceType: 'Company announcement and documentation',
+    changed: 'The May announcement became a live product. The shopping state now sits with Google until checkout, and no usage has been disclosed',
+    href: '/blog/google-universal-cart-retailers-ucp-checkout',
+  },
   {
     date: '2026-10',
     org: 'Shopify',

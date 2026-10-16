@@ -6,6 +6,49 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.47 - Google Universal Cart reference (2026-10-16)
+
+**What changed.** New search/reference article,
+`/blog/google-universal-cart-retailers-ucp-checkout`: what Google Universal
+Cart is, where it is available, how its two checkout paths work, how it
+differs from UCP, and what the merchant still owns. H1 "Google Universal Cart:
+How It Works and What Retailers Still Own"; search title "Google Universal
+Cart: How Checkout and Cart Transfer Work". Category E-commerce Strategy.
+1,259 source-body words, four internal links, nine Google primary sources.
+AI Commerce 2027 gains one tracker row (2026-10-15, Website handoff) linking
+to the article; no shift text changed. `LAST_UPDATED` and the sitemap date
+move together to 2026-10-16.
+
+**Why.** Search results were dominated by May I/O coverage that still lists
+YouTube and Gmail, and launch coverage blurred the cart with the checkout. The
+article's thesis: Universal Cart separates ownership of the shopping state
+from ownership of the transaction. The cart is cross-retailer; checkout is
+documented one merchant at a time.
+
+**Board edits applied.** The consideration line softened to "A meaningful
+part of late-stage consideration used to become visible only after the
+shopper reached the retailer's own cart or wish list"; the cart's features
+tied to documented behavior ("tracks price changes, surfaces relevant promo
+codes, and can suggest which saved card to use"). Meta title "How Checkout and
+Cart Transfer Work" chosen over "Cross-Retailer Checkout" because Google
+documents no single payment spanning merchants.
+
+**Sourcing.** Google's Oct 15 launch post and May 19 I/O post, the Gemini
+Apps Help page on managing the cart, and the UCP developer FAQ, Cart API,
+native checkout, order lifecycle, Merchant Center requirements and
+integration hub pages. Confirmed: U.S. only in Search and Gemini; YouTube and
+Gmail not live; cart transfer is one-way with no update, delete or sync;
+merchant remains Merchant of Record; native checkout passes buyer details to
+the merchant, is guest checkout by default, and has no marketing opt-in yet;
+My Orders data is required for native checkout and retained by Google until
+the user deletes it. No fee, commission or revenue model is disclosed.
+
+**Follow-ups.** Update when YouTube or Gmail launch, when cart sync ships,
+when Google discloses fees, when the integration hub reaches Australia and
+Canada, or when the marketing opt-in arrives.
+
+---
+
 ## Release 1.46 - Port handoffs documentary companion page (2026-10-16)
 
 **What changed.** Fourth documentary companion page,
