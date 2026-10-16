@@ -6,6 +6,37 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.46 - Port handoffs documentary companion page (2026-10-16)
+
+**What changed.** Fourth documentary companion page,
+`/videos/why-containers-wait-at-port`, for "The Ship Arrived. Why Is Your Order
+Still Waiting?" (https://youtu.be/INAvc-RRBak): H1 and search title "Why
+Containers Wait at Port After the Ship Arrives", about 820 words of context
+written against the video's narration, five takeaways, ten timestamped
+chapters, six reporting sources and four DVIDS footage sources, related
+research. VideoObject from verified YouTube values (uploadDate
+2026-10-15T16:00:14-07:00, duration PT6M55S) with ten `Clip` chapters. The
+homepage Featured Video now points at this documentary
+(`FEATURED_VIDEO_SLUG`).
+
+**Why.** The page follows a container from crane to gate and makes the
+distinctions the video depends on: arrived versus available, a faster crane
+versus a faster exit, and safety inspection versus customs screening versus
+physical location. It ties port reliability back to replenishment and the
+delivery date a customer sees.
+
+**Sourcing.** Port of Los Angeles figures (dwell-time buckets, booked versus
+fulfilled truck appointments, The Signal's three-week view, on-dock rail) and
+CBP's 2005 C-TPAT exam-rate statement are attributed and dated. Not repeated:
+Yusen's "world's first" framing, and the rail page's two inconsistent rail
+shares (about 35% of intermodal containers versus about 26% of all cargo).
+Footage is public-domain U.S. government video via DVIDS; the page states it
+illustrates port operations, not one traced shipment or current congestion.
+
+**Follow-ups.** No backlinks proposed. Run a Rich Results Test on the new page.
+
+---
+
 ## Release 1.45 - Bosch documentary companion page (2026-10-15)
 
 **What changed.** Third documentary companion page,

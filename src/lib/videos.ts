@@ -66,6 +66,176 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'why-containers-wait-at-port',
+    youtubeId: 'INAvc-RRBak',
+    youtubeTitle: 'The Ship Arrived. Why Is Your Order Still Waiting?',
+    h1: 'Why Containers Wait at Port After the Ship Arrives',
+    seoTitle: 'Why Containers Wait at Port After the Ship Arrives',
+    metaDescription:
+      'A container can be off the ship and still not ready to leave. What happens between the crane and the gate, and why it shapes the delivery date you see.',
+    dek: 'Getting a box across the ocean and getting it out of a port are different jobs. The handoffs in between decide whether a delivery date holds.',
+    uploadDate: '2026-10-15T16:00:14-07:00',
+    duration: 'PT6M55S',
+    durationLabel: '6 min 55 sec',
+    thumbnail: '/images/videos/why-containers-wait-at-port.jpg',
+    thumbnailAlt: 'Documentary thumbnail: a loaded container ship at port under the words Arrived. Still waiting.',
+    sections: [
+      {
+        paragraphs: [
+          'A container ship reaching port feels like the end of the journey. For the goods inside, it is the start of a different one. The box still has to come off the ship, find a place in the yard, meet a truck or a train, and leave through the gate, and most of those steps depend on something other than the crane.',
+          'This documentary follows those handoffs using U.S. government footage from Long Beach and Houston. It illustrates stages of port operations, not the journey of one traced shipment or today’s congestion.',
+        ],
+      },
+      {
+        heading: 'Arrived does not mean available',
+        paragraphs: [
+          'A shipping container lets cargo change vehicles without unloading every item at every handoff: ship to terminal, then onward by truck or rail. Inside the port, the useful question shifts from where the ship is to where one particular container is, and what has to happen before someone can collect it.',
+          'An airport is a helpful comparison. Landing gets your suitcase to the right airport; it does not put the bag in your hand. Ports work differently, since containers follow different routes and can sit in storage, but the distinction holds.',
+        ],
+      },
+      {
+        heading: 'The yard is where waiting takes shape',
+        paragraphs: [
+          'The ship-to-shore crane is the dramatic part. Behind it, yard equipment stacks containers and retrieves them for the next move, and the terminal has to balance space, access and the order in which cargo will be needed. A box at the bottom of a stack turns every box above it into extra work. A 2014 Port of Los Angeles report on terminal automation made the same point about stacking: taller stacks delay the retrieval of local imports.',
+          'That is why a faster crane does not automatically mean faster delivery. If the ship side speeds up while pickups slow down, more boxes arrive than leave, and the yard has to hold the difference. The constraint could be equipment, space, road access or coordination with the businesses collecting cargo. None of it shows up by watching one crane.',
+        ],
+      },
+      {
+        heading: 'A truck needs more than a box',
+        paragraphs: [
+          'At the gate, several things have to line up: the right container, a chassis to carry it, a workable pickup appointment, and somewhere for the cargo to go at the other end. The Port of Los Angeles publishes data on container, rail and chassis dwell time, sorts waiting import containers into zero to four days, five to eight, and nine or more, and reports booked against fulfilled truck appointments. Those are different views of the same coordination problem.',
+          'Rail is the other way out. The port says its five on-dock rail yards serve its seven container terminals, and that an average train of 30 double-stack cars replaces about 400 truck trips.',
+        ],
+      },
+      {
+        heading: 'Inspection, screening and release are separate questions',
+        paragraphs: [
+          'The Houston footage shows Coast Guard teams inspecting containers for safety compliance. That is not evidence that every container is opened, and it is not a customs release. U.S. Customs and Border Protection has a separate role: it screens and targets imports with a risk-management approach and does not disclose its targeting rules. In its importer guidance for the 2005 C-TPAT security criteria, CBP said member importers were six times less likely to face a security-related cargo exam, which it described as leading to a more predictable supply chain.',
+          'Physical location and permission to move are different things. A container can sit in the yard and still not be free to leave.',
+        ],
+      },
+      {
+        heading: 'The less visible technology',
+        paragraphs: [
+          'The obvious upgrade is a bigger or better machine, and sometimes that is exactly what is needed. Yusen Terminals in Los Angeles, for example, announced a four-year test of a hydrogen fuel cell yard crane in 2024.',
+          'Another kind of improvement is knowing what is coming before it arrives. In September 2020, the Port of Los Angeles began publishing The Signal, a weekly view of the cargo due over the next three weeks, broken down by container type and by whether it would leave by rail or truck. It is built on data from Wabtec’s Port Optimizer.',
+          'The Signal cannot create a truck, clear a shipment or empty a full warehouse. What it gives railroads, truckers, equipment providers and warehouses is a chance to find the constraint early enough to act. At a port, software matters when it changes a physical decision. It is the same gap I described in [Kroger’s ecommerce reset](/blog/kroger-ecommerce-operating-model): owning the pieces and operating them as one connected system are different achievements.',
+        ],
+      },
+      {
+        heading: 'The promise you actually notice',
+        paragraphs: [
+          'A retailer may already have your item in a warehouse when you order, so that delivery is not necessarily waiting on a ship. Replenishment is. The next shipment decides whether the product stays in stock and whether the same delivery promise keeps working.',
+          'What matters to me as a customer is consistency. Once a service works, I plan around it, and a two-day promise becomes normal. Repeated misses change how much I trust the next date. When every handoff connects, nobody thinks about the port at all. They see an item in stock and a delivery date they believe.',
+          'Which matters more to you: faster delivery, or a date you can actually trust?',
+        ],
+      },
+    ],
+    takeaways: [
+      'A container that has arrived is not yet available: it still needs a place in the yard, a truck or train, and permission to leave.',
+      'A faster crane only helps if the next stage can take more cargo. Otherwise the yard holds the difference.',
+      'The Port of Los Angeles publishes dwell-time and truck-appointment data because pickup coordination is part of the bottleneck.',
+      'A safety inspection, a customs decision and a container’s physical location are three separate questions.',
+      'Forward-looking tools such as the port’s The Signal help partners find a constraint early enough to act on it.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The arrival' },
+      { time: '0:38', label: 'A box built for handoffs' },
+      { time: '1:26', label: 'The crane is only the beginning' },
+      { time: '2:08', label: 'The waiting has a shape' },
+      { time: '2:55', label: 'A truck needs more than a box' },
+      { time: '3:44', label: 'Safety is part of the journey' },
+      { time: '4:31', label: 'The less visible technology' },
+      { time: '5:21', label: 'The promise you actually notice' },
+      { time: '6:05', label: 'Beyond the gate' },
+      { time: '6:39', label: 'Credits' },
+    ],
+    sources: [
+      {
+        label: 'Port of Los Angeles introduces new data tool, The Signal',
+        date: 'September 2020',
+        href: 'https://portoflosangeles.org/references/news_090320_signal',
+      },
+      {
+        label: 'Port of Los Angeles cargo operations dashboard',
+        date: 'Port of Los Angeles',
+        href: 'https://portoflosangeles.org/business/operations',
+      },
+      {
+        label: 'On-dock and near-dock rail at the Port of Los Angeles',
+        date: 'Port of Los Angeles',
+        href: 'https://portoflosangeles.org/business/supply-chain/rail',
+      },
+      {
+        label: 'Container Terminal Automation (Los Angeles Harbor Department report)',
+        date: 'March 2014',
+        href: 'https://kentico.portoflosangeles.org/getmedia/146d2a00-d871-4886-9c79-6f43e5ba3388/042014_item5_transmittal_3',
+      },
+      {
+        label: 'C-TPAT importer frequently asked questions',
+        date: 'U.S. Customs and Border Protection, 2005',
+        href: 'https://www.cbp.gov/sites/default/files/documents/importer_faqs_3.pdf',
+      },
+      {
+        label: 'Yusen Terminals hydrogen fuel cell RTG program',
+        date: 'May 2024',
+        href: 'https://yti.com/2024/05/yusen-terminals-launches-worlds-first-hydrogen-fuel-cell-rtg-program/',
+      },
+      {
+        label: 'B-Roll: Long Beach Sea Port (U.S. Customs and Border Protection)',
+        date: 'Filmed August 4, 2021',
+        href: 'https://www.dvidshub.net/video/822461/b-roll-long-beach-sea-port',
+        note: 'Footage',
+      },
+      {
+        label: 'B-Roll: Long Beach Sea Port, ships and cranes (U.S. Customs and Border Protection)',
+        date: 'Filmed August 4, 2021',
+        href: 'https://www.dvidshub.net/video/822441',
+        note: 'Footage',
+      },
+      {
+        label: 'Coast Guard container inspections B-roll (U.S. Coast Guard)',
+        date: 'Filmed September 4, 2025',
+        href: 'https://www.dvidshub.net/video/997035/coast-guard-container-inspections-b-roll',
+        note: 'Footage',
+      },
+      {
+        label: 'Coast Guard Port of Houston container inspections B-roll (U.S. Coast Guard)',
+        date: 'Filmed October 16, 2025',
+        href: 'https://www.dvidshub.net/video/1025719/coast-guard-port-houston-container-inspections-b-roll',
+        note: 'Footage',
+      },
+    ],
+    sourcesNote:
+      'The reporting and footage cited in the documentary. Footage is public-domain U.S. government video from DVIDS and illustrates port operations; it does not trace one shipment or show current conditions.',
+    related: [
+      {
+        href: '/blog/walmart-sparky-q1-earnings-replenishment-shift',
+        title: 'Walmart’s Q1 Earnings Revealed the Real Sparky Shift: From Discovery to Reorder',
+        note: 'Walmart’s AI assistant is shifting toward reorders, which makes replenishment reliability matter more.',
+      },
+      {
+        href: '/blog/walmart-grocery-ecommerce-growth',
+        title: 'Walmart Grocery E-Commerce: 7 Consecutive Quarters Above 20% Growth',
+        note: 'How using stores as fulfillment hubs put inventory closer to customers and made faster delivery windows possible.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Software only helps when the operation underneath it works, the same lesson as port visibility tools.',
+      },
+    ],
+    credits:
+      'Written and narrated by Robert Hu. Footage: U.S. Customs and Border Protection (Mani Albrecht) and U.S. Coast Guard (PA3 Luke Baker), public domain via DVIDS; no agency sponsorship or endorsement is implied. Flow and stacking diagrams are original explanatory illustrations, not measured data or real software interfaces. The thumbnail is AI-generated illustrative cover art. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'The Ship Arrived. Why Is Your Order Still Waiting?',
+      description:
+        'A container can be off the ship and still not ready to leave. Follow the handoffs between the crane and the gate that decide whether a delivery date holds.',
+      cta: 'Watch the documentary',
+    },
+  },
+  {
     slug: 'bosch-semiconductors-dresden',
     youtubeId: '9EhVNMydmM4',
     youtubeTitle: 'Bosch Makes Chips? Inside Its $1.2 Billion Bet',
@@ -498,7 +668,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'bosch-semiconductors-dresden'
+export const FEATURED_VIDEO_SLUG: string | null = 'why-containers-wait-at-port'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
