@@ -6,6 +6,47 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.49 - Shopify UCP buyer consent authority article (2026-10-17)
+
+**What changed.** New authority/reference article,
+`/blog/shopify-ucp-buyer-consent-agentic-checkout`: how Shopify's Checkout MCP
+and Cart MCP carry UCP buyer consent (2026-08-25), what happens when an agent
+sends nothing, how the specification works, what it does not govern, and why
+agent authorization, permission to place the order and buyer consent are
+three separate controls. H1 "Shopify Agent Checkout Can Now Carry Customer
+Consent"; search title "Shopify UCP Buyer Consent: Marketing Opt-Ins in AI
+Checkout". Category E-commerce Strategy. 1,134 source-body words, four
+internal links, six external sources. AI Commerce 2027 gains one tracker row
+(2026-10-16, Trust) linking to the article; Shift 05 unchanged. `LAST_UPDATED`
+and the sitemap date move together to 2026-10-17.
+
+**Why.** TRH already separated agent authorization (Personal Agent Protocol)
+from permission to place the order (Shopify WebMCP checkout). Buyer consent is
+the third control: what the merchant may do with the shopper's data and
+communications once checkout happens through an agent.
+
+**Board edits applied.** Revision 1: H1 narrowed from "Now Carries" to "Can
+Now Carry"; "Until now it had no standard way" replaced, because UCP had a
+consent extension before Shopify's support; the legal-boundary sentence
+narrowed to "does not by itself establish that a merchant may lawfully market
+to the buyer in every jurisdiction"; the commercial sentence narrowed to
+"cannot assume it may market to." Final: meta description changed to "can now
+carry ... can reach the merchant" to separate Shopify capability from agent
+adoption.
+
+**Sourcing.** Shopify's October 16 changelog, the UCP buyer consent
+specification (2026-08-25 and 2026-04-08), the v2026-08-25 release notes,
+Shopify's Checkout MCP reference and Google's UCP FAQ (marketing opt-in still
+planned, rechecked October 17). No AI platform has publicly said it
+negotiates the extension; the article says so.
+
+**Follow-ups.** Revisit when an AI platform announces support, when Google
+ships its marketing opt-in, or when Shopify's Cart and Checkout MCP reference
+pages document consent. Consider a Shift 05 evidence sentence once agent-side
+adoption is public.
+
+---
+
 ## Release 1.48 - FedEx overnight documentary companion page (2026-10-17)
 
 **What changed.** Fifth documentary companion page,

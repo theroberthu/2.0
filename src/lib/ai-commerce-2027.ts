@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-16'
+export const LAST_UPDATED = '2026-10-17'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-16',
+    org: 'Shopify',
+    development: 'Checkout MCP and Cart MCP support UCP buyer consent (2026-08-25): analytics, preferences, sale or sharing, and marketing with email and SMS',
+    affects: 'Trust',
+    evidenceType: 'Platform documentation',
+    changed: 'Consent state can travel with agentic checkout, but no AI platform has said it sends it',
+    href: '/blog/shopify-ucp-buyer-consent-agentic-checkout',
+  },
   {
     date: '2026-10-15',
     org: 'Google',
