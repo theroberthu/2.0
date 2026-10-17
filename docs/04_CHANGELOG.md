@@ -6,6 +6,37 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.48 - FedEx overnight documentary companion page (2026-10-17)
+
+**What changed.** Fifth documentary companion page,
+`/videos/fedex-overnight-delivery-promise`, for "Why Fast Sorting Isn't Enough
+for FedEx" (https://youtu.be/03QxRmdbn_Y): H1 and search title "How FedEx
+Overnight Works: Why Fast Sorting Isn't Enough", about 860 words of context
+written against the video's narration, five takeaways, nine timestamped
+chapters, seven reporting sources, related research. VideoObject from verified
+YouTube values (uploadDate 2026-10-16T16:00:25-07:00, duration PT6M22S) with
+nine `Clip` chapters. The homepage Featured Video now points at this
+documentary (`FEATURED_VIDEO_SLUG`).
+
+**Why.** The page follows an overnight package through its deadlines (the
+drop-off cutoff, the hub sort, the flight connection, the weather) and back to
+the seller's inventory, arguing that the delivery promise starts at checkout.
+
+**Sourcing.** FedEx overnight service definitions and cutoffs, the October 30,
+2024 Secondary 25 release (56,000 packages an hour, six-sided scanning, 1,000
+cameras, a command center three times the original), and the fiscal 2026 Form
+10-K (multiple hub-and-spoke network centered on Memphis; severe winter
+weather and airport disruptions among factors that could cancel or delay a
+significant portion of flights). The FAA on winter operations, Microsoft on
+available-to-promise and backorder dates, and Shopify on selling out-of-stock
+items. Capacity is labeled as stated design capacity, not measured throughput
+or reliability; "spent heavily" was replaced with the 10-K's multi-year
+modernization language because no investment figure is sourced.
+
+**Follow-ups.** No backlinks proposed. Run a Rich Results Test on the new page.
+
+---
+
 ## Release 1.47 - Google Universal Cart reference (2026-10-16)
 
 **What changed.** New search/reference article,

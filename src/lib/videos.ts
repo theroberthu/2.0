@@ -66,6 +66,160 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'fedex-overnight-delivery-promise',
+    youtubeId: '03QxRmdbn_Y',
+    youtubeTitle: 'Why Fast Sorting Isn’t Enough for FedEx',
+    h1: 'How FedEx Overnight Works: Why Fast Sorting Isn’t Enough',
+    seoTitle: 'How FedEx Overnight Works: Why Fast Sorting Isn’t Enough',
+    metaDescription:
+      'FedEx can sort 56,000 packages an hour in one Memphis building. Overnight delivery still depends on cutoffs, connections, weather and the seller’s stock.',
+    dek: 'A fast sorting building is one link in an overnight promise. The cutoff, the connection, the weather and the seller’s inventory decide whether the promise holds.',
+    uploadDate: '2026-10-16T16:00:25-07:00',
+    duration: 'PT6M22S',
+    durationLabel: '6 min 22 sec',
+    thumbnail: '/images/videos/fedex-overnight-delivery-promise.jpg',
+    thumbnailAlt: 'Documentary thumbnail: illustrative artwork of a FedEx cargo jet on a night ramp beside a large clock and a package',
+    sections: [
+      {
+        paragraphs: [
+          'An overnight delivery looks like one fast trip. It is really a chain of deadlines: a cutoff to make, a sort to finish, a flight to catch and a final delivery to complete, each one waiting on the last.',
+          'FedEx says it is investing over multiple years to modernize its Memphis hub, the most visible part of that chain. The more useful question is what else has to go right for a package to arrive when the customer was told it would.',
+        ],
+      },
+      {
+        heading: 'Overnight has a cutoff and a definition',
+        paragraphs: [
+          'The first deadline arrives before any plane is involved. FedEx says a shipment has to reach it before the overnight cutoff, and that the latest drop-off time varies by location. In general, overnight means the next business day, and the exact time depends on the service: FedEx lists First Overnight by 8 a.m. to most areas, Priority Overnight by 10:30 a.m. to most businesses and by noon to most residences, and Standard Overnight by 5 p.m. to businesses and 8 p.m. to residences.',
+          'Overnight does not mean every package reaches every address first thing tomorrow. The date a shopper sees at checkout and the time the carrier can actually meet have to describe the same promise.',
+        ],
+      },
+      {
+        heading: 'Why packages meet at a hub',
+        paragraphs: [
+          'Bringing many shipments together seems slower than sending each one directly. It works the way a connecting airport does: travelers from different cities share one stop, then leave on different onward flights. In its fiscal 2026 annual report, FedEx describes its largest sorting facility, in Memphis, as the center of a multiple hub-and-spoke system, with a second national air hub in Indianapolis and regional air hubs in Fort Worth, Newark and Oakland. A given package does not necessarily pass through Memphis.',
+          'The airport analogy has a limit. A traveler can read a departure board and walk to the gate. A cardboard box needs its information read and its movement directed, again and again, while the next departure gets closer.',
+        ],
+      },
+      {
+        heading: 'What a faster sort building adds',
+        paragraphs: [
+          'In October 2024, FedEx unveiled Secondary 25, an automated sorting building at its Memphis World Hub that it said can sort 56,000 packages an hour, roughly 15 a second at that stated capacity. FedEx said six-sided scanning captures each package’s size and barcode for accurate sorting, 1,000 cameras monitor the flow, and a new hub operations command center is three times the size of the original. It also said the building lets packages be sorted in one building during weather events.',
+          'The scanning matters more than the speed. A box can move quickly down the wrong path, and the information is what gives the movement a destination. A capacity figure describes what a building is designed to handle, not measured throughput or what happens to any individual package.',
+        ],
+      },
+      {
+        heading: 'The connection is the test',
+        paragraphs: [
+          'Imagine two packages on the same route. One reaches its planned connection in time; the other arrives after that connection has left. They may have spent almost the same time on a conveyor, yet their onward journeys now differ. This is an illustration, not a reconstruction of a FedEx shipment, but the point holds: time saved in one stage has to survive the next handoff, through the people who load aircraft, coordinate movements and deliver the parcel.',
+        ],
+      },
+      {
+        heading: 'The weather gets a vote',
+        paragraphs: [
+          'The belts inside a building can keep running while snow, ice or disruption at an airport changes what can happen outside. In its annual report, FedEx lists severe winter weather and disruptions at airport facilities among factors that could cause the cancellation or delay of a significant portion of its flights. The FAA describes clearing snow from runways and deicing aircraft as part of operating safely in winter. Those steps take time for a reason, and a delivery deadline does not remove the need for them.',
+          'That is a harder test for technology than speeding up the normal sequence: how useful the information is once the original plan stops working.',
+        ],
+      },
+      {
+        heading: 'The promise starts at checkout',
+        paragraphs: [
+          'One limit on the shipping promise comes much earlier than any airport. I recently ordered a product that cost a few hundred dollars and only learned afterward that it was backordered. The seller could not ship until stock returned about three weeks later, and the whole delay ran past four weeks. That was not a FedEx experience. It was a reminder that a carrier cannot move a box the seller does not have.',
+          'Some of the fix is ordinary inventory control. Microsoft’s order management tools calculate an available-to-promise quantity from expected stock changes, and can put an estimated shipment date on a backordered line. Shopify stops customers from buying an out-of-stock item by default, unless the merchant chooses to keep selling. A clearly explained backorder gives the customer a choice. Discovering the wait after paying is a different experience.',
+        ],
+      },
+      {
+        heading: 'The lesson: connect the promise to the operation',
+        paragraphs: [
+          'What matters to me as a customer is consistency. Once a service works, I make plans around it, and every miss asks me to rethink them. That makes the business test bigger than conveyor speed or the number of cameras. It is the same lesson as [the handoffs inside a port](/videos/why-containers-wait-at-port): the promise at checkout has to match what every later stage can deliver.',
+          'When an order matters, what earns your trust: the fastest advertised date, or one you can plan around?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Overnight means the next business day for shipments that beat a cutoff, which FedEx says varies by location, and delivery times differ by service.',
+      'FedEx runs a multiple hub-and-spoke network centered on Memphis, and a given package does not necessarily pass through Memphis.',
+      'Secondary 25’s 56,000 packages an hour is a stated design capacity, not a measure of throughput or delivery reliability.',
+      'FedEx lists severe winter weather and airport disruptions among factors that could delay or cancel a significant portion of its flights.',
+      'The delivery promise starts at checkout: no carrier can recover a date the seller’s inventory cannot support.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'One time everyone has to meet' },
+      { time: '0:29', label: 'The first deadline' },
+      { time: '1:13', label: 'Why bring the boxes together?' },
+      { time: '1:59', label: 'The box becomes a routing decision' },
+      { time: '2:57', label: 'The connection is the test' },
+      { time: '3:36', label: 'The weather gets a vote' },
+      { time: '4:23', label: 'My order had an earlier problem' },
+      { time: '5:23', label: 'The promise has to hold together' },
+      { time: '6:06', label: 'Credits' },
+    ],
+    sources: [
+      {
+        label: 'FedEx overnight shipping services',
+        date: 'FedEx',
+        href: 'https://www.fedex.com/en-us/shipping/overnight.html',
+      },
+      {
+        label: 'FedEx unveils new automated sorting facility at Memphis World Hub',
+        date: 'October 30, 2024',
+        href: 'https://newsroom.fedex.com/newsroom/global-english/fedex-unveils-new-automated-sorting-facility-at-memphis-world-hub',
+      },
+      {
+        label: 'FedEx Corporation annual report on Form 10-K, fiscal 2026',
+        date: 'Fiscal year ended May 31, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/1048911/000104891126000105/fdx-20260531.htm',
+      },
+      {
+        label: 'From Frost to Flight (FAA winter operations)',
+        date: 'Federal Aviation Administration',
+        href: 'https://www.faa.gov/blog/clearedfortakeoff/frost-flight',
+      },
+      {
+        label: 'Inventory Visibility on-hand change schedules and available to promise',
+        date: 'Microsoft Learn',
+        href: 'https://learn.microsoft.com/en-us/dynamics365/supply-chain/inventory/inventory-visibility-available-to-promise',
+      },
+      {
+        label: 'Set up backorder and preorder functionality',
+        date: 'Microsoft Learn',
+        href: 'https://learn.microsoft.com/en-us/dynamics365/intelligent-order-management/backorder-preorder',
+      },
+      {
+        label: 'Selling out of stock products',
+        date: 'Shopify Help Center',
+        href: 'https://help.shopify.com/en/manual/inventory-and-locations/setup/selling-when-out-of-stock',
+      },
+    ],
+    sourcesNote:
+      'The reporting sources cited in the documentary. Capacity figures are FedEx’s stated design capacity, not measured throughput or delivery reliability, and diagrams and relative timing in the film are conceptual.',
+    related: [
+      {
+        href: '/blog/ai-checkout-interface-commerce-infrastructure',
+        title: 'If Checkout Disappears, What Does the Retailer Still Own?',
+        note: 'Checkout is a sequence of decisions, starting with whether the item is actually in stock right now.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Why knowing where inventory actually is, and routing on the promised service level, is the real ecommerce work.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'AI can help anticipate shortages, but only on top of inventory information that is dependable.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration produced with his authorized ElevenLabs voice clone. Illustrative stock footage from Mixkit under its Stock Video Free License; no FedEx company-supplied footage is used, and stock scenes do not show FedEx facilities, employees or specific shipments. Original diagrams by theroberthu. The thumbnail is illustrative cover artwork, not a photograph of a FedEx event or location. The backorder story is Robert’s own and unrelated to FedEx. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Fast Sorting Isn’t Enough for FedEx',
+      description:
+        'A fast conveyor is one link in an overnight promise. Follow the cutoffs, connections and weather, and the inventory decision that comes before all of them.',
+      cta: 'Watch the documentary',
+    },
+  },
+  {
     slug: 'why-containers-wait-at-port',
     youtubeId: 'INAvc-RRBak',
     youtubeTitle: 'The Ship Arrived. Why Is Your Order Still Waiting?',
@@ -668,7 +822,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'why-containers-wait-at-port'
+export const FEATURED_VIDEO_SLUG: string | null = 'fedex-overnight-delivery-promise'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
