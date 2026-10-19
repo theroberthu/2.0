@@ -66,6 +66,431 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'intel-chip-manufacturing',
+    youtubeId: 'P2sOPHDMZsU',
+    youtubeTitle: 'Why Intel Needs More Than a Better Chip',
+    h1: 'How Intel Makes Chips: Why a Better Design Isn’t Enough',
+    seoTitle: 'How Intel Makes Chips: Why a Better Design Isn’t Enough',
+    metaDescription:
+      'Inside Intel’s fabs: wafers, overhead transport, measurement and advanced packaging, and why factory execution is part of what Intel sells to customers.',
+    dek: 'A chip design is only the beginning. Turning it into a dependable product takes wafers, clean rooms, overhead transport, measurement and packaging working as one system.',
+    uploadDate: '2026-10-19T16:00:36-07:00',
+    duration: 'PT5M38S',
+    durationLabel: '5 min 38 sec',
+    thumbnail: '/images/videos/intel-chip-manufacturing.jpg',
+    thumbnailAlt: 'Documentary thumbnail: the words Beyond the Chip over an illustrative chip factory and a silicon wafer',
+    sections: [
+      {
+        paragraphs: [
+          'A processor fits in your hand. The system that makes it fills buildings. This documentary uses Intel’s own footage from Arizona, Oregon and New Mexico to follow that system and ask how Intel turns equipment, precision and coordination into products customers can depend on.',
+          'The footage comes from separate operations filmed at different times. It shows stages of manufacturing, not the journey of one traceable chip.',
+        ],
+      },
+      {
+        heading: 'A wafer becomes a product',
+        paragraphs: [
+          'Chips start as wafers, thin discs of silicon. ASML, which makes lithography machines, describes chipmaking as a sequence of repeated steps: layers are added, patterns are exposed with light through a mask, also called a reticle, and material is removed where the design requires it. A chip does not come out of one machine in one pass. It comes out of a long run of operations that have to agree with each other.',
+          'The clean room suits, gloves and covered faces exist because tiny contamination can damage the structures being made. Wafers travel between tools in closed pods, which keeps that protection in place while they move.',
+        ],
+      },
+      {
+        heading: 'The overhead network',
+        paragraphs: [
+          'Look up inside an Intel fab and you see its automated material handling system. Intel’s manufacturing press kit describes the one at its D1 factory in Oregon as more than 27 miles of multilevel track, with 1,700 autonomous vehicles carrying pods of up to 25 wafers through a fabrication journey that lasts weeks.',
+          'Speed alone does not solve the problem. If the next tool is not ready, an early arrival just waits. Different processing times make scheduling and temporary storage matter, which is why material handling suppliers such as Daifuku build storage into the system alongside transport. The goal is a useful arrival: the right material at the tool when production needs it.',
+        ],
+      },
+      {
+        heading: 'Making good chips',
+        paragraphs: [
+          'Keeping equipment busy is not the goal either. The chips have to work. ASML describes how chipmakers measure printed patterns and inspect for defects, then use that information to improve accuracy and yield. Yield is the share of chips that work, and it connects the precision of the factory to the amount of useful output.',
+        ],
+      },
+      {
+        heading: 'The packaging stage',
+        paragraphs: [
+          'Making the silicon is not the whole job. Chips also need packaging and connections to become part of a working system. In January 2024, Intel opened Fab 9 in Rio Rancho, New Mexico, for advanced packaging, including Foveros, its technology for stacking chips in three dimensions. Intel described Fab 9 as part of a previously announced $3.5 billion investment in its New Mexico operations. That figure covers the site investment, not the price of one machine.',
+        ],
+      },
+      {
+        heading: 'What the factory sells',
+        paragraphs: [
+          'Each capability solves a different constraint. Transport feeds the tools, measurement stabilizes the process and packaging makes different product designs possible. Their value depends on how the whole operation performs, not on how impressive one machine looks on camera.',
+          'That is the logic behind Intel’s foundry ambition. A foundry manufactures chips for other companies, and a customer choosing one depends on far more than a promising design: process, packaging, capacity and support. At its Foundry Direct Connect event in April 2025, Intel’s chief executive, Lip-Bu Tan, said the company’s first job was to listen to customers and earn their trust. That trust is won through execution, which makes the factory part of what Intel sells.',
+          'It is the same lesson as [Bosch’s Dresden wafer fab](/videos/bosch-semiconductors-dresden): the equipment is what you can see, but the value is in what the whole system delivers.',
+          'Which part of chip manufacturing surprised you most?',
+        ],
+      },
+    ],
+    takeaways: [
+      'A chip is built through a long sequence of repeated processing steps, not by one machine in one pass.',
+      'Intel describes its Oregon D1 factory as running more than 27 miles of overhead track, with 1,700 autonomous vehicles moving wafer pods between tools.',
+      'Measurement and inspection feed back into the process, because yield, the share of chips that work, matters more than motion.',
+      'Intel’s Fab 9 in New Mexico, opened in January 2024, is part of a $3.5 billion site investment in advanced packaging.',
+      'For Intel’s foundry business, factory execution is part of what it sells to customers.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The hidden factory' },
+      { time: '0:29', label: 'A wafer becomes a product' },
+      { time: '1:02', label: 'Protecting the work' },
+      { time: '1:34', label: 'The overhead network' },
+      { time: '2:14', label: 'Making good chips' },
+      { time: '2:55', label: 'The packaging stage' },
+      { time: '3:30', label: 'The investment behind the tools' },
+      { time: '4:12', label: 'Why this matters to Intel' },
+      { time: '4:50', label: 'What the factory sells' },
+      { time: '5:25', label: 'Credits' },
+    ],
+    sources: [
+      {
+        label: 'Global manufacturing at Intel (press kit)',
+        date: 'August 2024',
+        href: 'https://www.intel.com/content/www/us/en/newsroom/resources/global-manufacturing.html',
+      },
+      {
+        label: 'How microchips are made',
+        date: 'ASML',
+        href: 'https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made',
+      },
+      {
+        label: 'Measuring accuracy: metrology and inspection',
+        date: 'ASML',
+        href: 'https://www.asml.com/en/technology/lithography-principles/measuring-accuracy',
+      },
+      {
+        label: 'Daifuku’s semiconductor production line systems',
+        date: 'January 2024',
+        href: 'https://www.daifuku.com/daifuku-square/article/000999/',
+      },
+      {
+        label: 'Intel opens Fab 9 in New Mexico',
+        date: 'January 24, 2024',
+        href: 'https://www.intel.com/content/www/us/en/newsroom/news/intel-opens-fab-9-new-mexico.html',
+      },
+      {
+        label: 'Intel Foundry gathers customers and partners, outlines priorities',
+        date: 'April 29, 2025',
+        href: 'https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-foundry-gathers-customers-partners-outlines-priorities.html',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the documentary. Footage is official Intel material from separate operations in Arizona (September 2025), Oregon (archival reel released February 2024) and New Mexico (January 2024), not one traceable chip journey. No measured return, yield improvement or customer win is claimed.',
+    related: [
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Owning capabilities and running them as one connected system are different achievements.',
+      },
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'How a large operator connects platforms and people into one operating model.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Why the workflow around a tool matters more than the tool itself.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized ElevenLabs voice. Official footage © Intel Corporation, used for independent editorial commentary, edited with source audio removed. The thumbnail is original AI-generated illustrative cover art, not a photograph of an Intel facility. Independent commentary; no Intel sponsorship or endorsement. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Intel Needs More Than a Better Chip',
+      description:
+        'A better chip design is only the beginning. Inside Intel’s factories, the harder challenge is turning precision and enormous investment into dependable production.',
+      cta: 'Watch the documentary',
+    },
+  },
+  {
+    slug: 'john-deere-see-spray-roi',
+    youtubeId: 'cn4JBH8tKEM',
+    youtubeTitle: 'John Deere’s AI Saves Chemicals. But Does It Pay?',
+    h1: 'John Deere See & Spray: Does AI Spraying Pay for Itself?',
+    seoTitle: 'John Deere See & Spray: Does AI Spraying Pay for Itself?',
+    metaDescription:
+      'John Deere’s See & Spray cuts herbicide use, but farmers pay for the upgrade and a per-acre fee. One farmer’s results and a transparent payback example.',
+    dek: 'A camera can decide where to spray. The farmer still has to decide whether the investment is worth it, after the equipment, the fees and the field results.',
+    uploadDate: '2026-10-18T16:00:19-07:00',
+    duration: 'PT6M47S',
+    durationLabel: '6 min 47 sec',
+    thumbnail: '/images/videos/john-deere-see-spray-roi.jpg',
+    thumbnailAlt: 'Documentary thumbnail: illustrative artwork of a green sprayer in a field beside a large gold coin',
+    sections: [
+      {
+        paragraphs: [
+          'In 2024, Wisconsin farmer Tyler Troiola tried John Deere’s See & Spray, which uses cameras and onboard AI to spray weeds rather than whole fields. The proposition is simple: spend on equipment to spend less on chemicals. Whether that investment pays for itself is harder, and his experience shows why the headline percentage is only the start of the answer.',
+          'This page follows the public reporting on Tyler’s first season, then works through a hypothetical calculation. The hypothetical uses documented 2025 U.S. usage terms and is not Tyler’s accounts.',
+        ],
+      },
+      {
+        heading: 'The purchase comes before the proof',
+        paragraphs: [
+          'Tyler farms about 2,800 acres of corn, soybeans and wheat near Eagle, Wisconsin. Precision Farming Dealer reported in May 2024 that he chose See & Spray Premium, which it described as a $25,000 system, as a retrofit for a used 2018 Deere sprayer, after trading in his previous sprayer to get a compatible machine. A new machine with the two-tank Ultimate system was beyond his budget. The reporting does not give his complete transaction cost.',
+          'That is where any investment like this starts: money committed before the results arrive. The comparison that matters is against the alternative the farmer would actually choose, whether that is keeping an old sprayer, buying another used one or replacing equipment that needed replacing anyway.',
+        ],
+      },
+      {
+        heading: 'How targeted spraying changes the economics',
+        paragraphs: [
+          'A conventional broadcast application treats the whole width of the boom. See & Spray uses cameras and onboard AI to identify weeds and switch individual nozzles as the machine moves, so chemical that would have covered bare ground stays in the tank. Premium uses one tank and can either broadcast or target spray. Ultimate has two tanks, so it can do both in the same pass.',
+          'Less spraying only helps if the field still gets what it needs. Some herbicides work by stopping weeds from emerging later, so a farmer still needs a program for that job.',
+        ],
+      },
+      {
+        heading: 'One farmer, different field results',
+        paragraphs: [
+          'Tyler’s July 2024 follow-up showed both the attraction and the complication. On 10-inch corn, the system sprayed about 13 to 18 percent of the field, which he said meant more than 80 percent herbicide savings. On 18-inch corn, savings fell to about 65 percent. In some soybean fields, they were only about 15 percent.',
+          'He suspected heavy residue made weeds harder to tell from soybeans, and he had chosen a setting that sprays when the cameras are unsure, trading savings for caution. These are selected results he reported, not an audited profit statement. Still, the contrast matters: one purchase can face very different conditions on the same farm.',
+        ],
+      },
+      {
+        heading: 'Deere’s usage-fee strategy',
+        paragraphs: [
+          'Tyler’s first season ran under earlier pricing; he mentioned paying a $4 per acre subscription fee. For 2025, Deere introduced what it calls the Application Savings Guarantee. A Deere dealer panel explained that farmers pay $5 for each in-crop acre the system leaves unsprayed while it is turned on, and Deere lists $1 per fallow acre. Deere’s own fine print says “savings” here means reduced application volume, not other costs. For 2026, it added an unlimited annual license for heavy users.',
+          'Cover 100 acres and leave 60 unsprayed, and the fee applies to 60 acres: $300. The farmer keeps the chemical that would have gone on that area, and Deere collects a payment tied to it. For Deere, usage creates revenue beyond the hardware sale. For the farmer, it is another cost to subtract.',
+        ],
+      },
+      {
+        heading: 'A hypothetical payback calculation',
+        paragraphs: [
+          'Take a hypothetical farm, not Tyler’s. Assume one targeted pass over 2,000 acres a year, a targetable herbicide mix costing $20 an acre, and 60 percent of the area left unsprayed. That avoids $24,000 of chemical. The usage fee takes $6,000, leaving $18,000 a year before other costs. At that rate, a $25,000 upgrade would recover its price in about 1.4 years.',
+          'The University of Arkansas Extension puts a Premium retrofit at $25,000 to $100,000, depending on the existing sprayer. At $100,000, the same example takes about 5.6 years. Neither figure includes financing, installation, machine costs or changes in labor, and both assume the savings repeat every year. If the targetable mix cost $5 an acre, the $5 fee would absorb the entire chemical saving, leaving nothing to recover the upgrade.',
+        ],
+      },
+      {
+        heading: 'What changes the answer',
+        paragraphs: [
+          'Cheaper chemicals make each avoided spray worth less. Heavier weed pressure leaves less spraying to avoid. Fewer applications spread the investment more thinly. A 2026 peer-reviewed study in Agrosystems, Geosciences & Environment estimated that, on average, a single application had to involve more than $27 of herbicide per hectare, about $11 an acre, before Premium beat a broadcast sprayer. Its model assumed about 10,000 acres of applications a year, which can include repeated passes over the same land, so its results should not be lifted into a smaller operation unchanged. The authors thank Deere and Blue River for supporting the research and providing the commercial data.',
+        ],
+      },
+      {
+        heading: 'What the farmer actually keeps',
+        paragraphs: [
+          'The public reporting shows strong savings in some conditions and weaker results in others. It does not give the complete costs and annual net savings needed to establish Tyler’s payback, so I cannot say his investment paid for itself.',
+          'Charging for usage is the same shift I described in [Google’s pay-per-redemption ads](/blog/google-local-coupons-pay-per-redemption-ads): the vendor gets paid when the outcome happens. That aligns incentives, and it also means the buyer has to keep asking what value comes back after the fee. The most important number is what the farmer keeps after the bills are paid.',
+          'What would convince you that an AI upgrade is worth paying for: the demonstration, the savings percentage or the results after every cost?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Tyler Troiola’s See & Spray Premium retrofit was reported as a $25,000 system; his full transaction cost was not reported.',
+      'His 2024 herbicide savings ranged from more than 80 percent in short corn to about 15 percent in some soybean fields.',
+      'Since 2025, Deere charges $5 for each in-crop acre the system leaves unsprayed, so part of every saving goes to Deere.',
+      'In a hypothetical 2,000-acre example, payback ranges from about 1.4 to 5.6 years depending on the retrofit price, before financing and other costs.',
+      'Public reporting does not establish whether Tyler’s investment paid for itself.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Can the investment pay for itself?' },
+      { time: '0:23', label: 'The purchase comes before the proof' },
+      { time: '1:10', label: 'How targeted spraying changes the economics' },
+      { time: '2:00', label: 'One farmer, different field results' },
+      { time: '2:47', label: 'Deere’s usage-fee strategy' },
+      { time: '3:41', label: 'The hypothetical payback calculation' },
+      { time: '4:44', label: 'What changes the answer' },
+      { time: '5:52', label: 'What the farmer actually keeps' },
+    ],
+    sources: [
+      {
+        label: 'Farmer aims to slash herbicide costs with smart spray retrofit kit (Precision Farming Dealer)',
+        date: 'May 15, 2024',
+        href: 'https://www.precisionfarmingdealer.com/articles/5957-farmer-aims-to-slash-herbicide-costs-with-smart-spray-retrofit-kit',
+      },
+      {
+        label: 'Maiden See & Spray voyage delivers 87% savings on some fields (Precision Farming Dealer)',
+        date: 'July 3, 2024',
+        href: 'https://www.precisionfarmingdealer.com/articles/6027-maiden-see-and-spray-voyage-delivers-87-savings-on-some-fields',
+      },
+      {
+        label: 'John Deere See & Spray technology: insights from industry experts (RDO Equipment)',
+        date: 'March 17, 2025',
+        href: 'https://www.rdoequipment.com/resources/podcasts/john-deere-see---spray-technology--insights-from-industry-experts',
+      },
+      {
+        label: 'Opportunity costs to consider when adopting See & Spray technology (FSA2225)',
+        date: 'University of Arkansas Extension',
+        href: 'https://www.uaex.uada.edu/publications/pdf/FSA2225.pdf',
+      },
+      {
+        label: 'Targeted herbicide cost requirements for adoption of See & Spray technology',
+        date: 'February 28, 2026',
+        href: 'https://acsess.onlinelibrary.wiley.com/doi/10.1002/agg2.70324',
+      },
+      {
+        label: 'See & Spray Premium getting started and Application Savings Guarantee definition',
+        date: 'John Deere Canada',
+        href: 'https://www.deere.ca/en/technology-products/precision-ag-technology/precision-upgrades/sprayer-upgrades/getting-started-premium/',
+      },
+      {
+        label: 'John Deere customers use See & Spray technology across five million acres in 2025',
+        date: 'November 4, 2025',
+        href: 'https://www.deere.ca/en/news/all-news/see-spray-technology-across-5-million-acres/',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the documentary. The payback example is hypothetical, uses USD and documented 2025 U.S. usage terms, and is not Tyler’s accounts. Deere’s Canadian pages are used for definitions only; their CAD prices are not used.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'Measuring the result after the change, not the activity, is the harder half of any technology investment.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Technology savings depend on the operation around them, the same reason one sprayer produced different results on different fields.',
+      },
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'Another operator dividing the work between systems that act and people who decide whether it pays.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice. Licensed stock fields, people and financial scenes are illustrative and do not represent Tyler, his farm or his accounts. Deere exhibition clips are CES event coverage, not See & Spray field demonstrations. The thumbnail is AI-generated illustrative cover art, not a photograph of Tyler’s machine or proof of performance. Independent commentary; no Deere or farmer sponsorship or endorsement. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'John Deere’s AI Saves Chemicals. But Does It Pay?',
+      description:
+        'A camera can decide where to spray. One farmer’s results and a transparent payback example show why the savings percentage is only the start of the answer.',
+      cta: 'Watch the documentary',
+    },
+  },
+  {
+    slug: 'chatgpt-workout-plan-trust',
+    youtubeId: 'ipCBJ6wJf7o',
+    youtubeTitle: 'ChatGPT Built My Workout Plan. Could I Trust It?',
+    h1: 'Can You Trust a ChatGPT Workout Plan? What to Check',
+    seoTitle: 'Can You Trust a ChatGPT Workout Plan? What to Check',
+    metaDescription:
+      'ChatGPT asked about my schedule and my gym, and the plan felt personal. Why a tailored answer still needs checking, and which questions actually matter.',
+    dek: 'A plan can fit your calendar and still contain a bad assumption. Personal is not the same as verified.',
+    uploadDate: '2026-10-17T16:00:25-07:00',
+    duration: 'PT6M16S',
+    durationLabel: '6 min 16 sec',
+    thumbnail: '/images/videos/chatgpt-workout-plan-trust.jpg',
+    thumbnailAlt: 'Video thumbnail: an illustrated portrait of Robert Hu thinking beside the ChatGPT logo',
+    sections: [
+      {
+        paragraphs: [
+          'I asked ChatGPT to help me build a workout plan. It asked about my schedule, the gym I use and what would actually work for me, and it looked into the equipment available there. The result felt surprisingly personal. But a plan can fit your calendar and still contain a bad assumption.',
+          'This is one person’s experience, and the video makes no fitness claims. It uses that experience to look at a broader question: what an AI needs to know, which parts you should check, and what happens after it hands you the plan.',
+        ],
+      },
+      {
+        heading: 'Why context changes the answer',
+        paragraphs: [
+          'Think of planning a week with movable tiles on a table. The appointments you already have take up space, and a new commitment has to fit in a gap. Leave the appointments off the table and you can arrange a beautiful week that never existed.',
+          'That is a useful way to think about context. Your goal points ChatGPT toward an outcome, and your constraints tell it what an acceptable answer has to accommodate. OpenAI’s prompting guide suggests including the goal, the context, the output you want and the boundaries the answer must respect. ChatGPT can still misunderstand constraints or fail to apply them, so the analogy only goes so far.',
+        ],
+      },
+      {
+        heading: 'Which questions actually matter',
+        paragraphs: [
+          'ChatGPT’s questions prompted me to supply details about my schedule and my gym. Two people with the same goal can need very different plans: one has a long block of free time, the other has short windows scattered through the week. A good question exposes that difference early. The practical test is whether a different answer would change the plan.',
+          'Questions also cost attention. If you are trying to plan one evening and the assistant asks you to map your whole month, some of that may be relevant, but it is a lot of work before one decision. A useful assistant has to choose which unknowns matter now.',
+        ],
+      },
+      {
+        heading: 'Finding information is not verifying it',
+        paragraphs: [
+          'The part that made the plan feel most tailored was the equipment list for my gym. I have not checked that list against the gym itself. ChatGPT can search the web and show its sources, but finding a page and confirming the real world are separate jobs. If a gym’s page lists equipment that has since been replaced, a plan can fit the page and still fail when you walk in. Check the details your next action depends on.',
+        ],
+      },
+      {
+        heading: 'Check-ins and accountability',
+        paragraphs: [
+          'We also set up scheduled check-ins, which helped me stay accountable. ChatGPT supports scheduled tasks where they are enabled, and setup varies by account and app. A reminder does not tell you whether the plan worked, though. A check-in that asks what you completed and what got in the way gives the next revision something real to work with.',
+        ],
+      },
+      {
+        heading: 'Personal does not mean verified',
+        paragraphs: [
+          'Personalization is where it gets tricky. An answer that uses your schedule and names your gym sounds credible before you have checked the advice itself. OpenAI’s own guidance says a polished response can still be incomplete or wrong, and knowing my preferences does not make an AI a clinician. Keep two checks separate: whether the plan fits my circumstances, and whether the advice is sound. Both have to hold.',
+        ],
+      },
+      {
+        heading: 'A better standard for useful AI',
+        paragraphs: [
+          'You do not need an elaborate prompt. Name the result you want, give the limits that will change the answer, and ask for the questions that would make the plan more realistic. When the plan arrives, ask how it used your constraints, then check it yourself. If it puts a task in an hour you said was unavailable, point to the conflict and ask for a correction.',
+          'That is the standard I would hold AI products to, and it is the same one emerging in commerce, where [an agent’s model of the person matters more than how well it trades](/blog/anthropic-project-swap-agentic-commerce-shopper-preferences). The first plan is easy to admire. The better test is whether the product still helps when your week changes.',
+          'What is one question an AI asked you that led to a better answer?',
+        ],
+      },
+    ],
+    takeaways: [
+      'A plan can fit your calendar and still contain a bad assumption.',
+      'The questions worth answering are the ones that would change the plan.',
+      'Finding information about the real world, such as a gym’s equipment list, is not the same as confirming it.',
+      'Scheduled check-ins can support accountability, but a reminder does not show whether a plan worked.',
+      'Check two things separately: whether the answer fits your circumstances, and whether the advice itself is sound.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The questions that surprised me' },
+      { time: '0:18', label: 'When a plan meets real life' },
+      { time: '0:49', label: 'Why context changes the answer' },
+      { time: '1:24', label: 'Which questions actually matter?' },
+      { time: '1:57', label: 'Finding information versus verifying it' },
+      { time: '2:26', label: 'Check-ins and accountability' },
+      { time: '3:00', label: 'Personal does not mean verified' },
+      { time: '3:36', label: 'Questions cost attention' },
+      { time: '4:07', label: 'Start with your constraints' },
+      { time: '4:37', label: 'Check, correct and revisit' },
+      { time: '5:09', label: 'A better standard for useful AI' },
+      { time: '5:40', label: 'Make the next step fit your life' },
+    ],
+    sources: [
+      {
+        label: 'Prompting (ChatGPT Learn)',
+        date: 'OpenAI',
+        href: 'https://learn.chatgpt.com/docs/prompting',
+      },
+      {
+        label: 'Web search (ChatGPT Learn)',
+        date: 'OpenAI',
+        href: 'https://learn.chatgpt.com/docs/web-search',
+      },
+      {
+        label: 'Scheduled tasks (ChatGPT Learn)',
+        date: 'OpenAI',
+        href: 'https://learn.chatgpt.com/docs/automations',
+      },
+      {
+        label: 'Use ChatGPT: reviewing results (ChatGPT Learn)',
+        date: 'OpenAI',
+        href: 'https://learn.chatgpt.com/docs/use-chatgpt',
+      },
+    ],
+    sourcesNote:
+      'The OpenAI documentation cited in the video. Product features and availability can vary by account and app. The experience described is Robert Hu’s own, and no fitness outcomes are claimed.',
+    related: [
+      {
+        href: '/blog/amazon-rufus-account-memory',
+        title: 'Amazon Rufus Now Remembers Every Shopper. Your Listing Data Just Became the Filter.',
+        note: 'Shopping assistants are starting to remember preferences too, which raises the same question about what an answer is built on.',
+      },
+      {
+        href: '/blog/walmart-sparky-ai-personalization-pricing-governance',
+        title: 'AI Commerce Governance Is Becoming a Customer Promise',
+        note: 'Which personal data an AI may use to make a decision is becoming a promise companies make to customers.',
+      },
+      {
+        href: '/blog/amazon-alexa-shopping-search-anticipation',
+        title: 'Amazon Is Extending the Shopping Journey Beyond the Search',
+        note: 'Assistants are moving from answering once to checking back, the commerce version of a scheduled check-in.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice, and personal scenes and the thumbnail are illustrative animation based on his authorized likeness. Other people, devices and gyms are licensed illustrative stock footage from Mixkit. Independent editorial video; no OpenAI sponsorship or endorsement. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'ChatGPT Built My Workout Plan. Could I Trust It?',
+      description:
+        'ChatGPT asked about my schedule and my gym, and the plan felt personal. Why a tailored answer still needs checking.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'fedex-overnight-delivery-promise',
     youtubeId: '03QxRmdbn_Y',
     youtubeTitle: 'Why Fast Sorting Isn’t Enough for FedEx',
@@ -822,7 +1247,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'fedex-overnight-delivery-promise'
+export const FEATURED_VIDEO_SLUG: string | null = 'intel-chip-manufacturing'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)

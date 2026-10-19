@@ -92,6 +92,18 @@ function isoDurationSeconds(iso: string): number {
   return m ? Number(m[1] ?? 0) * 3600 + Number(m[2] ?? 0) * 60 + Number(m[3] ?? 0) : 0
 }
 
+/** YouTube-style clock label for a duration badge: "PT6M55S" becomes "6:55". */
+function clockDuration(iso: string): string {
+  const total = isoDurationSeconds(iso)
+  const h = Math.floor(total / 3600)
+  const m = Math.floor((total % 3600) / 60)
+  const s = String(total % 60).padStart(2, '0')
+  return h ? `${h}:${String(m).padStart(2, '0')}:${s}` : `${m}:${s}`
+}
+
+/** Cards in the Watch next strip; the rest are one click away on /videos. */
+const WATCH_NEXT_LIMIT = 3
+
 function videoSchema(video: VideoEntry) {
   const seconds = video.chapters.map((c) => chapterSeconds(c.time))
   const durationSeconds = isoDurationSeconds(video.duration)
@@ -152,6 +164,9 @@ export default function VideoCompanionPage({ params }: Props) {
 
   const watchUrl = youtubeWatchUrl(video.youtubeId)
   const trackParams = { video_slug: video.slug, youtube_id: video.youtubeId }
+  const others = VIDEOS.filter((v) => v.slug !== video.slug)
+  const watchNext = others.slice(0, WATCH_NEXT_LIMIT)
+  const moreCount = others.length - watchNext.length
 
   return (
     <>
@@ -335,34 +350,88 @@ export default function VideoCompanionPage({ params }: Props) {
         </div>
       </article>
 
-      {/* More documentaries: every other video, newest first */}
-      {VIDEOS.length > 1 && (
-        <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]">
-          <div className="max-w-[720px] mx-auto px-5 sm:px-8">
-            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
-              Watch next
-            </span>
-            <h2 className="text-xl font-bold text-white tracking-tight mb-6">More documentaries</h2>
-            <ul className="space-y-4">
-              {VIDEOS.filter((v) => v.slug !== video.slug).map((v) => (
+      {/* Watch next: up to three other videos, newest first, then the full index */}
+      {watchNext.length > 0 && (
+        <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]" aria-labelledby="watch-next-heading">
+          <div className="max-w-[960px] mx-auto px-5 sm:px-8">
+            <div className="flex items-end justify-between gap-4 mb-6">
+              <div>
+                <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
+                  Watch next
+                </span>
+                <h2 id="watch-next-heading" className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                  More documentaries
+                </h2>
+              </div>
+              {moreCount > 0 && (
+                <Link
+                  href="/videos"
+                  className="hidden sm:inline-flex items-center gap-1.5 text-[13px] font-medium text-gray-400 hover:text-brand-accent transition-colors duration-200 whitespace-nowrap"
+                >
+                  All {VIDEOS.length} documentaries
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              )}
+            </div>
+
+            <ul className="grid gap-3 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {watchNext.map((v) => (
                 <li key={v.slug}>
-                  <Link
+                  <TrackedLink
                     href={`/videos/${v.slug}`}
-                    className="group grid grid-cols-[120px_1fr] sm:grid-cols-[176px_1fr] gap-4 items-center bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 hover:border-brand-accent/40 transition-colors duration-200"
+                    event="watch_next_click"
+                    params={{ video_slug: video.slug, target_slug: v.slug }}
+                    className="group flex sm:flex-col gap-4 sm:gap-0 h-full bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 sm:p-0 sm:overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.05] transition-colors duration-200"
                   >
-                    <span className="relative block aspect-video rounded-lg overflow-hidden">
-                      <Image src={v.thumbnail} alt="" fill className="object-cover" sizes="176px" />
+                    <span className="relative block w-[132px] sm:w-full shrink-0 aspect-video rounded-lg sm:rounded-none overflow-hidden bg-black">
+                      <Image
+                        src={v.thumbnail}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        sizes="(max-width: 640px) 132px, (max-width: 1024px) 50vw, 300px"
+                      />
+                      <span className="absolute inset-0 hidden sm:flex items-center justify-center bg-black/0 group-hover:bg-black/25 transition-colors duration-300">
+                        <span className="w-12 h-12 rounded-full bg-brand-gold/90 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200">
+                          <svg className="w-5 h-5 text-white translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </span>
+                      </span>
+                      <span className="absolute bottom-1.5 right-1.5 rounded bg-black/80 px-1.5 py-0.5 text-[11px] font-mono font-medium text-white">
+                        <span className="sr-only">Length </span>
+                        {clockDuration(v.duration)}
+                      </span>
                     </span>
-                    <span className="min-w-0">
-                      <span className="block text-[15px] font-medium text-gray-200 group-hover:text-brand-accent transition-colors duration-200 leading-snug">
+                    <span className="min-w-0 flex flex-col sm:p-4 sm:pt-3.5">
+                      <span className="text-[15px] font-semibold text-gray-100 group-hover:text-brand-accent transition-colors duration-200 leading-snug line-clamp-3 sm:line-clamp-2">
                         {v.h1}
                       </span>
-                      <span className="block text-[12px] font-mono text-gray-500 mt-1">{v.durationLabel}</span>
+                      <span className="hidden sm:block mt-1.5">
+                        <span className="text-[13px] text-gray-400 leading-relaxed line-clamp-2">{v.dek}</span>
+                      </span>
+                      <span className="block text-[12px] font-mono text-gray-500 mt-1.5 sm:mt-auto sm:pt-3">
+                        <time dateTime={v.uploadDate}>{formatDate(v.uploadDate)}</time>
+                      </span>
                     </span>
-                  </Link>
+                  </TrackedLink>
                 </li>
               ))}
             </ul>
+
+            {moreCount > 0 && (
+              <Link
+                href="/videos"
+                className="sm:hidden mt-4 flex items-center justify-center gap-1.5 min-h-[48px] border border-white/[0.12] rounded-lg text-[14px] font-medium text-gray-300 hover:text-white hover:bg-white/[0.05] transition-colors duration-200"
+              >
+                All {VIDEOS.length} documentaries
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            )}
           </div>
         </section>
       )}

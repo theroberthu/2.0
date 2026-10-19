@@ -6,6 +6,55 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.50 - Three video companion pages and a redesigned Watch next strip (2026-10-19)
+
+**What changed.** Three new companion pages, each written against the video's
+narration with verified YouTube values (upload date, duration) and `Clip`
+chapters:
+
+- `/videos/intel-chip-manufacturing`, "Why Intel Needs More Than a Better
+  Chip" (https://youtu.be/P2sOPHDMZsU): H1 and search title "How Intel Makes
+  Chips: Why a Better Design Isn't Enough". Six sources: Intel's manufacturing
+  press kit, Fab 9 opening (January 2024) and Foundry Direct Connect (April
+  2025), ASML on chipmaking and measurement, Daifuku on material handling.
+- `/videos/john-deere-see-spray-roi`, "John Deere's AI Saves Chemicals. But
+  Does It Pay?" (https://youtu.be/cn4JBH8tKEM): H1 and search title "John
+  Deere See & Spray: Does AI Spraying Pay for Itself?". Seven sources:
+  Precision Farming Dealer (May and July 2024), an RDO dealer panel (March
+  2025), University of Arkansas Extension FSA2225, the 2026 Agrosystems,
+  Geosciences & Environment study, and two Deere pages.
+- `/videos/chatgpt-workout-plan-trust`, "ChatGPT Built My Workout Plan. Could
+  I Trust It?" (https://youtu.be/ipCBJ6wJf7o): H1 and search title "Can You
+  Trust a ChatGPT Workout Plan? What to Check". Four OpenAI ChatGPT Learn
+  sources.
+
+The homepage Featured Video now points at the Intel documentary. The "More
+documentaries" strip on every video page is redesigned as "Watch next": the
+three newest other videos instead of all of them, a 3-column card grid at
+960px on desktop with a YouTube-style duration badge, title, two-line dek and
+publish date, compact rows on mobile, and an "All N documentaries" link to
+`/videos`. Clicks fire a new GA4 event, `watch_next_click` (`video_slug`,
+`target_slug`).
+
+**Why.** With eight videos the old strip listed seven full-width cards on
+every page. Capping it at three keeps the strip a recommendation rather than
+an index, and the index is one click away.
+
+**Sourcing and boundaries.** Deere: the payback example is hypothetical, uses
+documented 2025 U.S. usage terms ($5 per unsprayed in-crop acre) and the
+Extension's $25,000 to $100,000 retrofit range; the page states that public
+reporting does not establish Tyler Troiola's payback, and Deere's Canadian
+pages are used for definitions only. Intel: footage comes from separate
+operations, $3.5 billion is the announced New Mexico site investment, and no
+return, yield improvement or customer win is claimed. ChatGPT: one person's
+experience, no fitness outcomes claimed, gym equipment not independently
+verified.
+
+**Follow-ups.** Register `target_slug` as a GA4 custom dimension alongside
+`video_slug`. Run Rich Results Tests on the three new pages.
+
+---
+
 ## Release 1.49 - Shopify UCP buyer consent authority article (2026-10-17)
 
 **What changed.** New authority/reference article,
