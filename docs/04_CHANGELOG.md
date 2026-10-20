@@ -6,6 +6,47 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.51 - Visa, BILL and Billtrust agent payment pilot authority article (2026-10-20)
+
+**What changed.** New authority/thesis article,
+`/blog/visa-bill-billtrust-ai-agent-b2b-payments`: how the live Visa, BILL and
+Billtrust pilot lets BILL's Payment Agent complete already-approved supplier
+invoice payments through Billtrust portals, recognized with Visa's Trusted
+Agent Protocol and using tokenized credentials, and why agentic commerce may
+work first where the judgment has already happened. H1 "Visa's B2B AI Agent
+Pilot Shows Where Agentic Commerce May Work First"; search title "Visa, BILL
+and Billtrust Pilot AI Agent Invoice Payments". Category E-commerce Strategy.
+1,111 source-body words, three internal links, three external sources. AI
+Commerce 2027 gains one tracker row (2026-10-20, Buyer to operator) and one
+Shift 07 evidence sentence (also in the refresh source). `LAST_UPDATED` and
+the sitemap date move together to 2026-10-20.
+
+**Why.** TRH had covered agent recognition (Know Your Agent), the
+decision/execution boundary (NPCI) and AI operators (Ant International), but
+had no live example of an agent executing an already-approved business
+decision. This is the first in the corpus, and the contrast with the July
+Visa and Lianlian transaction, where the agent made sourcing and purchasing
+choices, is the core evidence.
+
+**Board edits applied.** Revision 1: H1 and metadata; buyer-side instruction
+wording that does not imply a disclosed invoice-by-invoice approval;
+credential and controls "aligned with" the instruction rather than locked;
+Lianlian comparison narrowed to the agent's disclosed role; Visa's first-pilot
+claim quoted and attributed. Final: the control-mechanics gap disclosed
+alongside approval steps and timing; the commercial-motive sentence tightened
+to "moving supplier payments from ACH or check to card would expand card
+volume for Visa."
+
+**Sourcing.** The "agent is not making payment decisions" answer is in the
+FAQ on Visa's investor-site release, not in the Business Wire body. BILL
+posted the joint release; Billtrust's newsroom had not listed it on October
+20. No buyers, suppliers, volumes, error rates or savings are disclosed.
+
+**Follow-ups.** Revisit when participants, volumes or control mechanics are
+published, or when the pilot expands.
+
+---
+
 ## Release 1.50 - Three video companion pages and a redesigned Watch next strip (2026-10-19)
 
 **What changed.** Three new companion pages, each written against the video's

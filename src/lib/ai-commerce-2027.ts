@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-17'
+export const LAST_UPDATED = '2026-10-20'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -438,7 +438,7 @@ export const SHIFTS: Shift[] = [
     "number": "07",
     "title": "AI moves from buyer to operator",
     "changed": "Software gained the ability to write, not just read, inside merchant systems, and the broadest write access so far arrived on the merchant side rather than the shopper side.",
-    "evidence": "On September 23, Amazon said Seller Assistant workflows can \"continuously monitor and execute routine tasks like restocking and pricing adjustments,\" with seller-defined guardrails and \"a complete audit trail,\" and with sellers \"reviewing and approving them before they're carried out.\" Sellers choose whether a workflow only recommends or acts. Amazon's Full-Funnel Campaigns, documented September 29, take a daily budget that Amazon's AI \"allocates across sponsored ads, display, video, and streaming TV in real time.\" Klaviyo's tools let an agent send a campaign to its audience. Anthropic's open-source merchant agent stages every write until a person approves it. Shopify documented official connectors for seven general-purpose assistants that can edit products, collections, inventory and percentage discounts with write access, while blocking refunds, order cancellation and capture, returns, gift cards and changes to payments, taxes and domains for every connected tool. Long-horizon simulations remain sobering: in E-Commerce Bench, the model that finished with the most assets sent 18.48% of its spend to fraudulent suppliers.",
+    "evidence": "On September 23, Amazon said Seller Assistant workflows can \"continuously monitor and execute routine tasks like restocking and pricing adjustments,\" with seller-defined guardrails and \"a complete audit trail,\" and with sellers \"reviewing and approving them before they're carried out.\" Sellers choose whether a workflow only recommends or acts. Amazon's Full-Funnel Campaigns, documented September 29, take a daily budget that Amazon's AI \"allocates across sponsored ads, display, video, and streaming TV in real time.\" Klaviyo's tools let an agent send a campaign to its audience. Anthropic's open-source merchant agent stages every write until a person approves it. Shopify documented official connectors for seven general-purpose assistants that can edit products, collections, inventory and percentage discounts with write access, while blocking refunds, order cancellation and capture, returns, gift cards and changes to payments, taxes and domains for every connected tool. On October 20, Visa, BILL and Billtrust put an agent into live supplier payments with a deliberately narrow mandate: it completes card payments the buyer has already approved, through supplier portals that recognize it with Visa's Trusted Agent Protocol, and Visa says it makes no payment decisions. Long-horizon simulations remain sobering: in E-Commerce Bench, the model that finished with the most assets sent 18.48% of its spend to fraudulent suppliers.",
     "why": [
       "Reading is usually reversible. Writing is not. A bad analysis can be caught before anyone acts on it. A price change, a reallocated budget or a sent campaign has already reached the market. The products shipping now treat delegation level as a setting: Amazon's DVA+ offers a default where AI allocates budget and an advanced mode with format-level control. Choosing the level is itself the strategic decision."
     ],
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-20',
+    org: 'Visa, BILL and Billtrust',
+    development: 'Live pilot in which BILL\'s Payment Agent completes buyer-approved supplier invoice payments through Billtrust portals using Visa\'s Trusted Agent Protocol and tokenized credentials',
+    affects: 'Buyer to operator',
+    evidenceType: 'Company announcement',
+    changed: 'An agent moved real business payments, but only by executing instructions already approved on the buyer side; no volume disclosed',
+    href: '/blog/visa-bill-billtrust-ai-agent-b2b-payments',
+  },
   {
     date: '2026-10-16',
     org: 'Shopify',
