@@ -12,6 +12,7 @@ import MobileTocCard from '@/components/MobileTocCard'
 import FloatingBookCta from '@/components/FloatingBookCta'
 import ReadingProgress from '@/components/ReadingProgress'
 import { SITE_URL } from '@/lib/constants'
+import { showDek } from '@/lib/blog-dek'
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -98,6 +99,44 @@ function injectInlineCTA(html: string, afterH2Index = 1): string {
 </div>`
 
   return html.slice(0, insertAt) + callout + html.slice(insertAt)
+}
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+/**
+ * Insert the post's Key findings box after the opening section, just before
+ * the first <h2>, so the article's own opening still leads. Findings are plain
+ * text written and reviewed with the article body (schema_json.key_findings);
+ * posts without them are unchanged.
+ */
+function injectKeyFindings(html: string, findings: string[] | undefined): string {
+  const items = (findings ?? []).map((f) => f.trim()).filter(Boolean)
+  if (items.length === 0) return html
+
+  const box = `<div class="tldr-box key-findings" role="note" aria-label="Key findings">
+  <p class="tldr-label">Key findings</p>
+  <ul>
+${items.map((f) => `    <li>${escapeHtml(f)}</li>`).join('\n')}
+  </ul>
+</div>`
+
+  const firstH2 = html.search(/<h2[\s>]/i)
+  if (firstH2 > 0) return html.slice(0, firstH2) + box + html.slice(firstH2)
+
+  // No headings: place it after the second paragraph, or at the top.
+  let idx = -1
+  for (let i = 0; i < 2; i++) {
+    const next = html.indexOf('</p>', idx + 1)
+    if (next === -1) break
+    idx = next
+  }
+  return idx === -1 ? box + html : html.slice(0, idx + 4) + box + html.slice(idx + 4)
 }
 
 interface Props {
@@ -297,6 +336,13 @@ export default async function BlogPostPage(props: Props) {
             {post.title}
           </h1>
 
+          {/* Dek: the post's excerpt, the same summary shown on blog cards and
+              in search snippets, so readers and AI systems get the answer
+              directly under the title. Gated by showDek(). */}
+          {showDek(post) && (
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-5">{post.excerpt}</p>
+          )}
+
           {/* Author / Date / Reading time */}
           <div className="flex flex-wrap items-center gap-3 text-[13px] text-gray-400">
             <span className="font-medium text-gray-300">{post.schema_json?.author || 'Robert Hu'}</span>
@@ -349,7 +395,7 @@ export default async function BlogPostPage(props: Props) {
               {post.content ? (
                 <div
                   className="prose-custom-dark"
-                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(tocHtml) }}
+                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(injectKeyFindings(tocHtml, post.schema_json?.key_findings)) }}
                 />
               ) : (
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>

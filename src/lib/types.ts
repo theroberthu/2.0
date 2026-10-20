@@ -26,6 +26,10 @@ export interface BlogPostSchemaJson {
   faq_data?: { q: string; a: string }[]
   has_faq_schema?: boolean
   related_posts?: string[]
+  /** 3 to 5 plain-text findings shown after the opening on reference articles. */
+  key_findings?: string[]
+  /** Overrides the dek date gate; set true on a legacy post after review. */
+  show_dek?: boolean
   related_services?: string[]
   featured_image_alt?: string
   author?: string

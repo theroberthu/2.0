@@ -409,6 +409,11 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   margin-bottom: 0;
 }
 
+/* Key findings box injected after a reference article's opening */
+.tldr-box.key-findings {
+  margin: 1.75rem 0 2rem 0;
+}
+
 /* Callout box — before/after examples, math breakdowns, key quotes */
 .callout-box {
   background: rgba(255, 255, 255, 0.03);

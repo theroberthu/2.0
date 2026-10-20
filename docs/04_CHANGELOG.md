@@ -6,6 +6,38 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.52 - Blog deks and Key findings for GEO (2026-10-20)
+
+**What changed.** Blog posts published from July 1, 2026 now show their
+excerpt as a dek under the H1, and the same text is added to the Article
+JSON-LD as `abstract`. Search/reference articles can carry a Key findings box
+(3 to 5 plain-text findings in `schema_json.key_findings`), injected after the
+opening section, just before the first H2; posts without findings are
+unchanged. Five reference articles received Board-approved findings: Google
+Universal Cart, Google Local Coupons, Shopify AI connectors, UCP Analytics and
+UCP buyer consent. The dek rule lives in `src/lib/blog-dek.ts`
+(`DEK_STANDARD_FROM`), with a per-post `schema_json.show_dek` override.
+
+**Why.** Generative search systems lift self-contained statements. A dek puts
+the reviewed summary directly under the title, and Key findings put a
+reference article's answers in quotable form without displacing its opening.
+Thesis and authority pieces are excluded on purpose: the argument is the
+point.
+
+**Why the July 2026 cutoff.** The 65 earlier posts follow an older standard:
+marketplace-seller and "Here's what to do" framing, and some claims the Board
+has since corrected (for example that OpenAI ended Instant Checkout). Their
+excerpts are not promoted under the title or into `abstract` until each post
+is reviewed.
+
+**Follow-ups.** Review the 65 pre-July posts, starting with those whose
+claims conflict with AI Commerce 2027, and set `show_dek` as each passes.
+Measure: compare AI Overview impressions (Search Console generative AI report)
+and AI referrals for the five findings articles against comparable articles
+over four to six weeks.
+
+---
+
 ## Release 1.51 - Visa, BILL and Billtrust agent payment pilot authority article (2026-10-20)
 
 **What changed.** New authority/thesis article,

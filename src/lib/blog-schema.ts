@@ -1,5 +1,6 @@
 import { BlogPost } from './types'
 import { SITE_URL, AUTHOR_INFO, slugifyCategory } from './constants'
+import { showDek } from './blog-dek'
 
 export function generateArticleSchema(post: BlogPost) {
   return {
@@ -7,6 +8,7 @@ export function generateArticleSchema(post: BlogPost) {
     '@type': 'Article',
     headline: post.title,
     description: post.meta_description || post.excerpt || '',
+    ...(showDek(post) && { abstract: post.excerpt }),
     author: {
       '@type': 'Person',
       name: AUTHOR_INFO.name,
