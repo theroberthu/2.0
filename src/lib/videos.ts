@@ -66,6 +66,154 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'walmart-wing-drone-delivery-economics',
+    youtubeId: 'i1BGeCRMuqE',
+    youtubeTitle: 'Walmart’s $0 Drone Delivery: Who Pays for the Flight?',
+    h1: 'Walmart Drone Delivery: Who Pays for the $0 Flight?',
+    seoTitle: 'Walmart Drone Delivery: Who Pays for the $0 Flight?',
+    metaDescription:
+      'Walmart+ members pay $0 for drone delivery in select markets. What Wing’s AutoLoader, shared pilots and small urgent orders mean for who covers the cost.',
+    dek: 'A $0 delivery fee does not make a flight free. Someone packs the order, buys the aircraft and supervises the system, and the economics depend on which trips drones can win.',
+    uploadDate: '2026-10-20T16:00:32-07:00',
+    duration: 'PT4M46S',
+    durationLabel: '4 min 46 sec',
+    thumbnail: '/images/videos/walmart-wing-drone-delivery-economics.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of a delivery drone at sunset under the words $0 Delivery, Who Pays?',
+    sections: [
+      {
+        paragraphs: [
+          'Walmart+ members currently pay no fee for drone delivery in select markets, for a limited time. The flight still costs money. Someone has to pack the order, the aircraft have to be bought and maintained, and pilots supervise the system. That makes the real question how a delivery with no added fee becomes a business worth expanding.',
+          'The $0 is the delivery fee for eligible Walmart+ members. Membership and the goods still cost money, and Walmart says availability depends on the address, the basket, the weather and each drone vendor’s rules.',
+        ],
+      },
+      {
+        heading: 'One missing ingredient',
+        paragraphs: [
+          'Picture dinner half cooked and one ingredient missing. Driving to the store puts everything on hold, and a delivery fee on a small purchase can feel harder to justify than the item itself. That is the trip drone delivery is built for. Walmart’s own announcement leads with the same kind of moment: a forgotten pizza topping, printer ink before a school project, cold medicine needed fast.',
+          'Walmart’s help page says drone orders can weigh 2 to 8 pounds depending on the vendor, and that deliveries take up to 30 minutes.',
+        ],
+      },
+      {
+        heading: 'Removing the wait',
+        paragraphs: [
+          'The aircraft may fly itself, but the order does not pack itself. Wing designed its AutoLoader, which it described in June 2023, to separate two things that usually have to happen together. A store worker loads the package whenever it is ready and walks away, and the drone arrives shortly after to collect it on its own. The useful innovation is less the flight than the waiting it removes from the worker’s day.',
+          'Wing also says its pilots oversee multiple flights from a central location rather than controlling each one, which spreads supervision across more than one trip.',
+        ],
+      },
+      {
+        heading: 'Waiting for customers',
+        paragraphs: [
+          'None of that helps much if the fleet spends the afternoon waiting for orders. One successful demonstration flight is easy to film. A full day of customers is not. Equipment and supporting operations have to be paid for either way. More completed orders spread those shared costs, but each additional flight also adds work and wear.',
+        ],
+      },
+      {
+        heading: 'What $1.40 actually means',
+        paragraphs: [
+          'The other number often attached to drone delivery is about $1.40 per transaction. It comes from a February 2021 report that Accenture prepared for Wing on the Dallas-Fort Worth area, with amounts in 2020 dollars. The report estimated that drone delivery could bring delivery costs down to around that level, and its method looked at the marginal cost of a delivery.',
+          'That makes it a historical model, not Wing’s verified cost per order today. Subtracting it from a $0 fee does not produce a profit calculation.',
+        ],
+      },
+      {
+        heading: 'Which trips drones can win',
+        paragraphs: [
+          'A van carries many packages along one route, and those deliveries share the trip. Sending an aircraft for each small order is a different proposition. The drone’s case is the small, urgent, nearby order that does not need a full grocery run. Wing says its aircraft carry up to five pounds and cruise at up to 60 miles per hour.',
+          'Walmart brings stores with inventory already near customers, and people are using the service. On May 29, 2026, Walmart said it had passed one million drone deliveries across its providers, including Wing and Zipline, from 66 stores in four states, with an average delivery time of 23 minutes. On October 5, Wing said the partners would add Denver and Seattle in 2027, part of a plan to reach more than 270 Walmart locations. Planned locations are not completed deployments.',
+        ],
+      },
+      {
+        heading: 'Volume is not profit',
+        paragraphs: [
+          'The financial question is specific: whether a faster option wins an order Walmart would otherwise lose, brings a customer back, or simply adds fulfillment cost to a purchase that would have happened anyway. The shopper sees one order. The business has two jobs, selling the goods and getting them there, and more sales help only if enough value remains after the product and the fulfillment. Neither company’s sources reviewed here publish the service’s cost per delivery or its profitability.',
+        ],
+      },
+      {
+        heading: 'What would make it last',
+        paragraphs: [
+          'What matters to me as a customer is consistency. Once delivery works, I plan around it, and a remarkable first flight has to become an ordinary, dependable next order. It is the same test I applied to [FedEx’s overnight promise](/videos/fedex-overnight-delivery-promise).',
+          'Drones have a plausible opportunity in small, urgent trips, where automation and shared operations reduce the work per order. That opportunity still has to survive real demand and real operating costs. The $0 fee makes the service attractive to try. Keeping the whole operation affordable is what would make it last.',
+          'Would you use drone delivery for a missing dinner ingredient?',
+        ],
+      },
+    ],
+    takeaways: [
+      'The $0 is the drone delivery fee for eligible Walmart+ members, for a limited time in select markets. Membership and the goods still cost money.',
+      'Wing’s AutoLoader lets a store worker load an order and walk away, removing the wait for the aircraft.',
+      'The often-quoted $1.40 per delivery is a 2021 modeled estimate in 2020 dollars from a report Accenture prepared for Wing, not a verified current cost.',
+      'Walmart reported more than one million drone deliveries across its providers by May 2026, with a 23-minute average delivery time.',
+      'Delivery volume is not profit. The question is whether faster delivery wins orders Walmart would otherwise lose.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The $0 delivery question' },
+      { time: '0:21', label: 'One missing ingredient' },
+      { time: '0:38', label: 'Removing the wait' },
+      { time: '1:18', label: 'Waiting for customers' },
+      { time: '1:51', label: 'What $1.40 actually means' },
+      { time: '2:17', label: 'Which trips can drones win?' },
+      { time: '3:29', label: 'Volume is not profit' },
+      { time: '4:14', label: 'Can the economics work?' },
+    ],
+    sources: [
+      {
+        label: 'Drone delivery (Walmart Help Center)',
+        date: 'Checked October 19, 2026',
+        href: 'https://www.walmart.com/help/article/drone-delivery/4870314a62634f368fe23cdf94ea28e2',
+      },
+      {
+        label: 'Faster, Safer and Greener: The Potential Impact of Delivery Drones in the Dallas-Fort Worth Metroplex (Accenture for Wing)',
+        date: 'February 2021',
+        href: 'https://static.wing.com/Content/DallasImpactReport.pdf',
+      },
+      {
+        label: 'A Wing delivery drone could do your curbside pickup',
+        date: 'June 8, 2023',
+        href: 'https://wing.com/news/a-wing-delivery-drone-could-do-your',
+      },
+      {
+        label: 'Wing technology',
+        date: 'Wing',
+        href: 'https://wing.com/technology',
+      },
+      {
+        label: 'Walmart celebrates 1 million drone deliveries',
+        date: 'May 29, 2026',
+        href: 'https://corporate.walmart.com/news/2026/05/29/walmart-celebrates-1-million-drone-deliveries-marking-a-major-milestone-in-customer-convenience',
+      },
+      {
+        label: 'Wing and Walmart name new metros to expand the nation’s largest drone delivery network',
+        date: 'October 5, 2026',
+        href: 'https://wing.com/news/wing-walmart-new-metros-nations-largest-drone-delivery-network',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The $0 offer was checked on October 19, 2026. The $1.40 figure is a historical modeled marginal delivery cost, not Wing’s verified current cost, total operating cost or profit. Walmart’s delivery total includes multiple providers, and planned locations are not completed deployments.',
+    related: [
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Routing on cost to serve and promised service level is the real work behind any delivery option.',
+      },
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'How Walmart pairs shared platforms with operators who decide what is worth doing.',
+      },
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'Volume shows activity. Proving the change paid off is the harder half.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized ElevenLabs voice. Wing press-kit flight footage and photographs © Wing, CC BY-SA 4.0, edited and combined with editorial graphics; additional official Wing demonstrations are quoted for criticism and commentary. Stock scenes and the Walmart exterior are illustrative, and the edit does not follow one actual order. The cover is AI-generated illustrative artwork using a Wing aircraft reference; Wing-derived cover visuals are shared under CC BY-SA 4.0. Independent commentary; no Wing or Walmart sponsorship or endorsement. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Walmart’s $0 Drone Delivery: Who Pays for the Flight?',
+      description:
+        'A $0 drone delivery fee does not mean a cost-free flight. Follow the work behind Walmart and Wing’s drone delivery, and the economics of small, urgent trips.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'intel-chip-manufacturing',
     youtubeId: 'P2sOPHDMZsU',
     youtubeTitle: 'Why Intel Needs More Than a Better Chip',
@@ -1247,7 +1395,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'intel-chip-manufacturing'
+export const FEATURED_VIDEO_SLUG: string | null = 'walmart-wing-drone-delivery-economics'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)

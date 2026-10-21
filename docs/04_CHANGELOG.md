@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.53 - Walmart drone delivery video companion page (2026-10-21)
+
+**What changed.** New companion page,
+`/videos/walmart-wing-drone-delivery-economics`, for "Walmart's $0 Drone
+Delivery: Who Pays for the Flight?" (https://youtu.be/i1BGeCRMuqE): H1 and
+search title "Walmart Drone Delivery: Who Pays for the $0 Flight?", about 770
+words written against the narration, five takeaways, eight timestamped
+chapters, six sources, related research from current-standard articles only.
+VideoObject from verified YouTube values (uploadDate
+2026-10-20T16:00:32-07:00, duration PT4M46S) with eight `Clip` chapters. The
+homepage Featured Video now points at this video.
+
+**Sourcing and boundaries.** The $0 is the drone delivery fee for eligible
+Walmart+ members, limited time, select markets (Walmart Help Center, checked
+October 19, 2026). The about $1.40 figure is from a February 2021 report
+Accenture prepared for Wing, in 2020 dollars, on marginal delivery cost; the
+page says it is not a current cost or profit figure. AutoLoader (Wing, June
+2023), pilots overseeing multiple flights (Wing technology page), one million
+deliveries across providers with a 23-minute average (Walmart, May 29, 2026)
+and Denver and Seattle in 2027 toward 270+ locations (Wing, October 5, 2026),
+labeled as plans. Credits keep the CC BY-SA 4.0 notice for Wing-derived
+footage and cover visuals.
+
+**Follow-ups.** None. Recent uploads under one minute (Shorts) do not get
+companion pages.
+
+---
+
 ## Release 1.52 - Blog deks and Key findings for GEO (2026-10-20)
 
 **What changed.** Blog posts published from July 1, 2026 now show their
