@@ -6,6 +6,18 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.56 - /videos desktop layout (2026-10-21)
+
+**What changed.** From 1024px up, the intro and the "In short" box sit side by
+side instead of stacking narrow on the left, and the documentary grid moves
+from two columns to three (two on tablets, one on phones). Cards are tighter:
+smaller title, dek clamped to three lines, smaller duration badge.
+
+**Why.** On wide screens the 1.55 layout left a large empty area beside the
+intro and stretched two oversized cards across the full width.
+
+---
+
 ## Release 1.55 - GEO pass on /videos (2026-10-21)
 
 **What changed.**

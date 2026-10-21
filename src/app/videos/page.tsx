@@ -115,20 +115,22 @@ export default function VideosIndexPage() {
           className="absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #2d7d9a 1px, transparent 0)', backgroundSize: '32px 32px' }}
         />
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Videos</span>
-          <h1 className="text-2xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-4">
-            Documentaries on how commerce changes
-          </h1>
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
-            Short documentaries on how commerce actually works, from the decisions behind a retail turnaround to the
-            handoffs behind an overnight delivery. Each one has a companion page with written context, key takeaways,
-            chapters and the primary sources behind it, so the argument holds up even if you never press play.
-          </p>
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 lg:grid lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-12 lg:items-end">
+          <div>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">Videos</span>
+            <h1 className="text-2xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-4">
+              Documentaries on how commerce changes
+            </h1>
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
+              Short documentaries on how commerce actually works, from the decisions behind a retail turnaround to the
+              handoffs behind an overnight delivery. Each one has a companion page with written context, key takeaways,
+              chapters and the primary sources behind it, so the argument holds up even if you never press play.
+            </p>
+          </div>
 
           {/* In short: derived from the video data so it never goes stale */}
           {LATEST && (
-            <div className="mt-8 max-w-3xl bg-white/[0.04] border border-white/[0.08] rounded-xl p-5 md:p-6">
+            <div className="mt-8 lg:mt-0 max-w-3xl bg-white/[0.04] border border-white/[0.08] rounded-xl p-5 md:p-6">
               <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3">In short</p>
               <p className="text-[15px] text-gray-300 leading-relaxed mb-3">
                 {VIDEOS.length} documentaries by Robert Hu, the most recent published on{' '}
@@ -150,7 +152,7 @@ export default function VideosIndexPage() {
 
       <section className="pb-14 md:pb-16 bg-brand-dark" aria-label="Documentaries">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {VIDEOS.map((v) => (
               <li key={v.slug}>
                 <Link
@@ -163,13 +165,13 @@ export default function VideosIndexPage() {
                       alt={v.thumbnailAlt}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 560px"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                     />
-                    <span className="absolute bottom-3 right-3 bg-black/75 text-white text-[12px] font-mono px-2 py-0.5 rounded">
+                    <span className="absolute bottom-2.5 right-2.5 bg-black/80 text-white text-[11px] font-mono px-1.5 py-0.5 rounded">
                       {v.durationLabel}
                     </span>
                   </div>
-                  <div className="p-6">
+                  <div className="p-5">
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2.5">
                       <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full">
                         {v.topic}
@@ -178,10 +180,10 @@ export default function VideosIndexPage() {
                         {formatDate(v.uploadDate)}
                       </time>
                     </div>
-                    <h2 className="text-lg md:text-xl font-bold text-white leading-snug mb-2 group-hover:text-brand-accent transition-colors duration-200">
+                    <h2 className="text-[17px] font-bold text-white leading-snug mb-2 group-hover:text-brand-accent transition-colors duration-200">
                       {v.h1}
                     </h2>
-                    <p className="text-[15px] text-gray-400 leading-relaxed">{v.dek}</p>
+                    <p className="text-[14px] text-gray-400 leading-relaxed line-clamp-3">{v.dek}</p>
                   </div>
                 </Link>
               </li>
