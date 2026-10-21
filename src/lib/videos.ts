@@ -1400,3 +1400,43 @@ export const FEATURED_VIDEO_SLUG: string | null = 'walmart-wing-drone-delivery-e
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
 }
+
+/**
+ * YouTube Shorts from the channel. Shorts do not get companion pages: a
+ * one-minute clip makes a thin page. They appear as a row on /videos and,
+ * where a Short genuinely relates to a documentary, on that companion page.
+ * Values are from each watch page; add new Shorts at the top.
+ */
+export type ShortEntry = {
+  youtubeId: string
+  /** Title exactly as published on YouTube. */
+  title: string
+  /** ISO 8601, from the YouTube watch page. */
+  uploadDate: string
+  durationLabel: string
+  /** Local copy of YouTube's vertical frame (oar2), 540x960. */
+  thumbnail: string
+  /** Companion page slugs this Short relates to. */
+  related?: string[]
+}
+
+export const SHORTS: ShortEntry[] = [
+  { youtubeId: '3TBqjdqBIBQ', title: 'Why Volkswagen Is Bringing Buttons Back', uploadDate: '2026-10-20T19:00:27-07:00', durationLabel: '1:00', thumbnail: '/images/shorts/3TBqjdqBIBQ.jpg' },
+  { youtubeId: 'M3y9fIBZ2aI', title: "NASA's Solar Panels Unroll Like a Yoga Mat", uploadDate: '2026-10-20T16:00:10-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/M3y9fIBZ2aI.jpg' },
+  { youtubeId: 'c9HLl82rdl0', title: 'Why This AI Robot Enters the Mine First', uploadDate: '2026-10-19T18:00:23-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/c9HLl82rdl0.jpg' },
+  { youtubeId: '7Bv-vXvdrj8', title: 'Meta Put AI on Two Macs. Here’s the Catch.', uploadDate: '2026-10-19T14:00:26-07:00', durationLabel: '0:47', thumbnail: '/images/shorts/7Bv-vXvdrj8.jpg' },
+  { youtubeId: 'aNTB_FTwPVw', title: 'Why ASML Has to Remove the Air to Make Chips', uploadDate: '2026-10-18T17:00:29-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/aNTB_FTwPVw.jpg', related: ['intel-chip-manufacturing', 'bosch-semiconductors-dresden'] },
+  { youtubeId: 'h-4vke5KslA', title: 'Porsche Made Its Gauges Move. Physically.', uploadDate: '2026-10-18T15:00:02-07:00', durationLabel: '0:59', thumbnail: '/images/shorts/h-4vke5KslA.jpg' },
+  { youtubeId: 'vSdFRLG8Dxw', title: "A GPU Made Him Cry at His Wedding. Here's Why.", uploadDate: '2026-10-17T17:00:09-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/vSdFRLG8Dxw.jpg' },
+  { youtubeId: '2TZ2qiR5sno', title: 'AI Needs Chips. Now NVIDIA’s Tools Help Make Them.', uploadDate: '2026-10-17T09:00:32-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/2TZ2qiR5sno.jpg', related: ['intel-chip-manufacturing', 'bosch-semiconductors-dresden'] },
+  { youtubeId: 'WH6BRwtGNyQ', title: 'Mercedes + NVIDIA: Why AI Driving Needs a Backup', uploadDate: '2026-10-16T17:00:29-07:00', durationLabel: '0:59', thumbnail: '/images/shorts/WH6BRwtGNyQ.jpg' },
+  { youtubeId: 'NZ71qviBcX8', title: "Tesla's Roadster Has a Trick That Works at 0 MPH", uploadDate: '2026-10-16T14:00:06-07:00', durationLabel: '1:01', thumbnail: '/images/shorts/NZ71qviBcX8.jpg' },
+]
+
+export function youtubeShortUrl(id: string): string {
+  return `https://www.youtube.com/shorts/${id}`
+}
+
+export function getShortsFor(slug: string): ShortEntry[] {
+  return SHORTS.filter((s) => s.related?.includes(slug))
+}

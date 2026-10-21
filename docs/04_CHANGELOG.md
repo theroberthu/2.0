@@ -6,6 +6,32 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.54 - YouTube Shorts on the site (2026-10-21)
+
+**What changed.** The ten Shorts published since October 16 now appear on
+theroberthu.com. `/videos` gains a "One-minute clips" row of vertical cards
+(YouTube's portrait frame, stored locally at 540x960) that open each Short on
+YouTube. Companion pages show "Related one-minute clips" only where a Short
+genuinely relates to the documentary: the ASML and NVIDIA chip-tools Shorts on
+the Intel and Bosch pages. Clicks fire a GA4 event, `short_click` (`short_id`,
+`location`, and `video_slug` on companion pages). Data lives in `SHORTS` in
+`src/lib/videos.ts`, with titles, upload dates and durations from each watch
+page; the row is `src/components/ShortsRow.tsx`.
+
+**Why.** Every video from the current series is now represented on the site.
+Shorts do not get companion pages of their own: a one-minute clip makes a
+thin page, which the Operating System rules out.
+
+**Scope decision.** The 32 long-form videos from February to May 2026 stay
+off the site for now. They share the legacy framing and unsourced claims
+flagged in `docs/legacy-content-triage-2026-10.md` and will be revisited after
+that review.
+
+**Follow-ups.** Add each new Short to the top of `SHORTS`, with `related` set
+only when the link is genuine. Register `short_id` as a GA4 custom dimension.
+
+---
+
 ## Release 1.53 - Walmart drone delivery video companion page (2026-10-21)
 
 **What changed.** New companion page,

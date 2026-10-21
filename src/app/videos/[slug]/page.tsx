@@ -7,10 +7,12 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import LazyYouTube from '@/components/LazyYouTube'
 import TrackedLink from '@/components/TrackedLink'
 import TrackOnView from '@/components/TrackOnView'
+import ShortsRow from '@/components/ShortsRow'
 import { AUTHOR_INFO, SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 import {
   VIDEOS,
   chapterSeconds,
+  getShortsFor,
   getVideo,
   youtubeThumbnailUrl,
   youtubeWatchUrl,
@@ -167,6 +169,7 @@ export default function VideoCompanionPage({ params }: Props) {
   const others = VIDEOS.filter((v) => v.slug !== video.slug)
   const watchNext = others.slice(0, WATCH_NEXT_LIMIT)
   const moreCount = others.length - watchNext.length
+  const relatedShorts = getShortsFor(video.slug)
 
   return (
     <>
@@ -349,6 +352,21 @@ export default function VideoCompanionPage({ params }: Props) {
           <p className="mt-8 text-[13px] text-gray-500 leading-relaxed">{video.credits}</p>
         </div>
       </article>
+
+      {/* Related Shorts: only where a Short genuinely relates to this video */}
+      {relatedShorts.length > 0 && (
+        <section className="py-14 md:py-16 bg-brand-dark border-t border-white/[0.06]" aria-labelledby="related-shorts-heading">
+          <div className="max-w-[960px] mx-auto px-5 sm:px-8">
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
+              Shorts
+            </span>
+            <h2 id="related-shorts-heading" className="text-xl md:text-2xl font-bold text-white tracking-tight mb-6">
+              Related one-minute clips
+            </h2>
+            <ShortsRow shorts={relatedShorts} location="companion_page" videoSlug={video.slug} />
+          </div>
+        </section>
+      )}
 
       {/* Watch next: up to three other videos, newest first, then the full index */}
       {watchNext.length > 0 && (

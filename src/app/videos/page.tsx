@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import ShortsRow from '@/components/ShortsRow'
 import { SITE_URL } from '@/lib/constants'
-import { VIDEOS } from '@/lib/videos'
+import { SHORTS, VIDEOS } from '@/lib/videos'
 
 const DESCRIPTION =
   'Long-form video research from Robert Hu on how commerce changes: documentaries with written context, chapters and primary sources.'
@@ -52,7 +53,7 @@ export default function VideosIndexPage() {
         </div>
       </section>
 
-      <section className="pb-20 md:pb-28 bg-brand-dark">
+      <section className="pb-14 md:pb-16 bg-brand-dark">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {VIDEOS.map((v) => (
@@ -85,6 +86,23 @@ export default function VideosIndexPage() {
           </ul>
         </div>
       </section>
+
+      {SHORTS.length > 0 && (
+        <section className="pb-20 md:pb-28 bg-brand-dark" aria-labelledby="shorts-heading">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8">
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
+              Shorts
+            </span>
+            <h2 id="shorts-heading" className="text-xl md:text-2xl font-bold text-white tracking-tight mb-2">
+              One-minute clips
+            </h2>
+            <p className="text-[15px] text-gray-400 leading-relaxed max-w-2xl mb-6">
+              Short takes from the channel. They open on YouTube.
+            </p>
+            <ShortsRow shorts={SHORTS} location="videos_index" />
+          </div>
+        </section>
+      )}
     </>
   )
 }
