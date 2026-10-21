@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase'
-import { VIDEOS } from '@/lib/videos'
+import { SHORTS, VIDEOS } from '@/lib/videos'
 
 const SITE_URL = process.env.SITE_URL || 'https://theroberthu.com'
 
@@ -22,7 +22,11 @@ const STATIC_LAST_MODIFIED = {
   // Living research page: bump this whenever LAST_UPDATED in
   // src/lib/ai-commerce-2027.ts changes.
   aiCommerce2027: new Date('2026-10-20'),
-  videos: new Date('2026-10-14'),
+}
+
+function latestVideoDate(): Date {
+  const dates = [...VIDEOS, ...SHORTS].map((v) => new Date(v.uploadDate).getTime())
+  return new Date(Math.max(...dates))
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -36,8 +40,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/geo/walmart-sparky`, lastModified: STATIC_LAST_MODIFIED.geoWalmartSparky, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${SITE_URL}/aeo`, lastModified: STATIC_LAST_MODIFIED.aeo, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${SITE_URL}/ai-commerce-2027`, lastModified: STATIC_LAST_MODIFIED.aiCommerce2027, changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${SITE_URL}/videos`, lastModified: STATIC_LAST_MODIFIED.videos, changeFrequency: 'monthly' as const, priority: 0.6 },
-    ...VIDEOS.map((v) => ({ url: `${SITE_URL}/videos/${v.slug}`, lastModified: STATIC_LAST_MODIFIED.videos, changeFrequency: 'monthly' as const, priority: 0.7 })),
+    // The index changes whenever a video or Short is added, so it takes the
+    // newest upload date. Each companion page is dated by its own video.
+    { url: `${SITE_URL}/videos`, lastModified: latestVideoDate(), changeFrequency: 'weekly' as const, priority: 0.7 },
+    ...VIDEOS.map((v) => ({ url: `${SITE_URL}/videos/${v.slug}`, lastModified: new Date(v.uploadDate), changeFrequency: 'monthly' as const, priority: 0.7 })),
   ]
 
   // Dynamic blog pages (still from Supabase)

@@ -19,6 +19,10 @@ export type RelatedLink = { href: string; title: string; note: string }
 
 export type VideoSection = { heading?: string; paragraphs: string[] }
 
+export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice'] as const
+
+export type VideoTopic = (typeof VIDEO_TOPICS)[number]
+
 export type VideoEntry = {
   slug: string
   youtubeId: string
@@ -35,6 +39,10 @@ export type VideoEntry = {
   /** ISO 8601 duration, from the YouTube watch page. */
   duration: string
   durationLabel: string
+  /** Topic label for the /videos index (cards and the topics summary). */
+  topic: VideoTopic
+  /** Short subject name used in the /videos topics summary. */
+  subject: string
   /** Local copy of the YouTube thumbnail, used for the page, cards and OG. */
   thumbnail: string
   thumbnailAlt: string
@@ -77,6 +85,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-20T16:00:32-07:00',
     duration: 'PT4M46S',
     durationLabel: '4 min 46 sec',
+    topic: 'Delivery and logistics',
+    subject: 'Walmart drone delivery',
     thumbnail: '/images/videos/walmart-wing-drone-delivery-economics.jpg',
     thumbnailAlt: 'Video thumbnail: illustrative artwork of a delivery drone at sunset under the words $0 Delivery, Who Pays?',
     sections: [
@@ -225,6 +235,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-19T16:00:36-07:00',
     duration: 'PT5M38S',
     durationLabel: '5 min 38 sec',
+    topic: 'Manufacturing',
+    subject: 'Intel',
     thumbnail: '/images/videos/intel-chip-manufacturing.jpg',
     thumbnailAlt: 'Documentary thumbnail: the words Beyond the Chip over an illustrative chip factory and a silicon wafer',
     sections: [
@@ -362,6 +374,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-18T16:00:19-07:00',
     duration: 'PT6M47S',
     durationLabel: '6 min 47 sec',
+    topic: 'AI in practice',
+    subject: 'John Deere See & Spray',
     thumbnail: '/images/videos/john-deere-see-spray-roi.jpg',
     thumbnailAlt: 'Documentary thumbnail: illustrative artwork of a green sprayer in a field beside a large gold coin',
     sections: [
@@ -516,6 +530,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-17T16:00:25-07:00',
     duration: 'PT6M16S',
     durationLabel: '6 min 16 sec',
+    topic: 'AI in practice',
+    subject: 'ChatGPT',
     thumbnail: '/images/videos/chatgpt-workout-plan-trust.jpg',
     thumbnailAlt: 'Video thumbnail: an illustrated portrait of Robert Hu thinking beside the ChatGPT logo',
     sections: [
@@ -650,6 +666,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-16T16:00:25-07:00',
     duration: 'PT6M22S',
     durationLabel: '6 min 22 sec',
+    topic: 'Delivery and logistics',
+    subject: 'FedEx',
     thumbnail: '/images/videos/fedex-overnight-delivery-promise.jpg',
     thumbnailAlt: 'Documentary thumbnail: illustrative artwork of a FedEx cargo jet on a night ramp beside a large clock and a package',
     sections: [
@@ -804,6 +822,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-15T16:00:14-07:00',
     duration: 'PT6M55S',
     durationLabel: '6 min 55 sec',
+    topic: 'Delivery and logistics',
+    subject: 'container ports',
     thumbnail: '/images/videos/why-containers-wait-at-port.jpg',
     thumbnailAlt: 'Documentary thumbnail: a loaded container ship at port under the words Arrived. Still waiting.',
     sections: [
@@ -974,6 +994,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-14T16:00:29-07:00',
     duration: 'PT7M23S',
     durationLabel: '7 min 23 sec',
+    topic: 'Manufacturing',
+    subject: 'Bosch',
     thumbnail: '/images/videos/bosch-semiconductors-dresden.jpg',
     thumbnailAlt: 'Documentary thumbnail: a cordless drill beside a silicon wafer inside a chip factory',
     sections: [
@@ -1110,6 +1132,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-13T17:10:01-07:00',
     duration: 'PT9M12S',
     durationLabel: '9 min 12 sec',
+    topic: 'Retail strategy',
+    subject: 'Domino’s',
     thumbnail: '/images/videos/dominos-turnaround.jpg',
     thumbnailAlt: 'Pizza Wasn’t Enough: documentary thumbnail showing a Domino’s storefront at night with the Domino’s logo',
     sections: [
@@ -1257,6 +1281,8 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: '2026-10-12T15:20:17-07:00',
     duration: 'PT11M40S',
     durationLabel: '11 min 40 sec',
+    topic: 'Retail strategy',
+    subject: 'Walmart’s Jet.com acquisition',
     thumbnail: '/images/videos/walmart-jet-acquisition.jpg',
     thumbnailAlt: 'The Real Prize: documentary thumbnail showing a Walmart storefront at dusk with delivery routes radiating from the store',
     sections: [

@@ -6,6 +6,35 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.55 - GEO pass on /videos (2026-10-21)
+
+**What changed.**
+- **Answer-first content.** `/videos` opens with an "In short" box generated
+  from the video data: how many documentaries, the latest publish date, the
+  Shorts count, and the topics covered with the subjects under each. Every
+  documentary card now shows a topic label and its publish date. Each
+  `VideoEntry` gains `topic` (one of `VIDEO_TOPICS`) and `subject`.
+- **Structured data.** The bare `ItemList` is replaced by a `CollectionPage`
+  (author, `dateModified` from the newest video) whose `ItemList` items carry
+  name, description and image for each companion page; a second `ItemList`
+  covers the Shorts; a `BreadcrumbList` is added. VideoObjects stay on the
+  companion pages only, since the index is not a watch page.
+- **Social metadata.** Open Graph and Twitter tags now use the page's own
+  title and description and the newest video's thumbnail, instead of falling
+  back to the site default.
+- **Sitemap dates.** `/videos` takes the newest video or Short upload date
+  (weekly change frequency); each companion page takes its own video's upload
+  date. The fixed `STATIC_LAST_MODIFIED.videos` date (2026-10-14) is removed.
+
+**Why.** The index had no self-contained summary for AI systems to quote,
+thin item data, generic social cards, and a frozen sitemap date that made six
+newer videos look older than they are.
+
+**Follow-ups.** New videos need `topic` and `subject`; the summary, cards,
+structured data and sitemap update from there.
+
+---
+
 ## Release 1.54 - YouTube Shorts on the site (2026-10-21)
 
 **What changed.** The ten Shorts published since October 16 now appear on
