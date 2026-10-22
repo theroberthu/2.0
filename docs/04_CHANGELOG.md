@@ -6,6 +6,38 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.58 - Microsoft and Three Mile Island video companion page (2026-10-22)
+
+**What changed.** New companion page,
+`/videos/microsoft-three-mile-island-nuclear-restart`, for "Why Microsoft Is
+Betting 20 Years on Nuclear Power" (https://youtu.be/mekMrwjYSlg): H1 and
+search title "Microsoft and Three Mile Island: Why a 20-Year Buyer Matters",
+about 710 words written against the narration, five takeaways, eight
+timestamped chapters, seven sources, related research from current-standard
+articles only. VideoObject from verified YouTube values (uploadDate
+2026-10-21T16:00:14-07:00, duration PT5M22S) with eight `Clip` chapters. New
+`VIDEO_TOPICS` entry, "Energy and infrastructure", since none of the four
+existing topics fit. The homepage Featured Video now points at this video.
+The site image is a frame from the video (archival Three Mile Island photo
+labeled customer Microsoft, owner Constellation) instead of the YouTube
+thumbnail, whose Microsoft logo above "$1.6B" could read as Microsoft's price.
+
+**Sourcing and boundaries.** $1.6 billion is Constellation's 2024 restart
+estimate (Q3 2024 results), not Microsoft's price. The $1 billion DOE loan
+(closed November 2025) is financing, not an added cost. "20-year fixed-price
+off-take agreement for plant's full output" is from Constellation's September
+20, 2024 investor presentation (SEC 8-K exhibit); neither that nor the $1.6
+billion figure appears in the announcement the video description cites, so
+both documents are added as sources. Microsoft's price is undisclosed. The
+2027 restart is a company target (August 2026 update; 2028 in 2024), and the
+NRC record still lists the restart license changes under review. The Google
+and Constellation 890 MW agreement (October 6, 2026) is described as a
+separate project.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.57 - Walmart Agent Gateway authority article and March correction (2026-10-22)
 
 **What changed.** New authority/thesis article,

@@ -19,7 +19,7 @@ export type RelatedLink = { href: string; title: string; note: string }
 
 export type VideoSection = { heading?: string; paragraphs: string[] }
 
-export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice'] as const
+export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice', 'Energy and infrastructure'] as const
 
 export type VideoTopic = (typeof VIDEO_TOPICS)[number]
 
@@ -73,6 +73,159 @@ export function youtubeThumbnailUrl(id: string): string {
 }
 
 export const VIDEOS: VideoEntry[] = [
+  {
+    slug: 'microsoft-three-mile-island-nuclear-restart',
+    youtubeId: 'mekMrwjYSlg',
+    youtubeTitle: 'Why Microsoft Is Betting 20 Years on Nuclear Power',
+    h1: 'Microsoft and Three Mile Island: Why a 20-Year Buyer Matters',
+    seoTitle: 'Microsoft and Three Mile Island: Why a 20-Year Buyer Matters',
+    metaDescription:
+      'Microsoft agreed to buy 20 years of output from the restarted Three Mile Island Unit 1. What the $1.6 billion, the $1 billion loan and the 2027 target mean.',
+    dek: 'A reactor that closed for economic reasons found a second business case: a customer committed to buying its output for 20 years. The deal still has to become electricity.',
+    uploadDate: '2026-10-21T16:00:14-07:00',
+    duration: 'PT5M22S',
+    durationLabel: '5 min 22 sec',
+    topic: 'Energy and infrastructure',
+    subject: 'Microsoft and nuclear power',
+    thumbnail: '/images/videos/microsoft-three-mile-island-nuclear-restart.jpg',
+    thumbnailAlt: 'Frame from the video: archival aerial photograph of Three Mile Island labeled The electricity customer, Microsoft, and The plant owner, Constellation',
+    sections: [
+      {
+        paragraphs: [
+          'In 2024, Constellation estimated it would spend about $1.6 billion to restart Three Mile Island Unit 1 in Pennsylvania, a reactor it had retired in 2019 for economic reasons. What changed was a buyer. In September 2024, Constellation announced a 20-year power purchase agreement under which Microsoft will purchase the output of the renewed plant.',
+          'The plant is now called the Crane Clean Energy Center. The 1979 accident happened at the separate Unit 2, and Constellation says Unit 1’s long-term operation was not affected by it. The business question is what makes a restart worth attempting, and what could still get in the way.',
+        ],
+      },
+      {
+        heading: 'Why a working plant can lose money',
+        paragraphs: [
+          'A power plant can work technically and still fail commercially. Staff, maintenance and fuel have to be paid for, and electricity sales have to cover the bills. A restart means committing money before the plant earns anything from renewed operations.',
+          'Constellation’s investor presentation describes the Microsoft deal as a 20-year fixed-price agreement for the plant’s full output. That makes future revenue easier to plan around. The restart has a committed buyer instead of relying entirely on future market prices.',
+        ],
+      },
+      {
+        heading: 'Keep the two numbers separate',
+        paragraphs: [
+          'In November 2025, the Department of Energy closed a $1 billion loan to Constellation to help finance the restart. The two figures answer different questions. $1.6 billion was Constellation’s announced restart estimate. $1 billion is loan financing for the project, and it has to be repaid. Adding them together would double count part of the funding story.',
+          'Neither figure is what Microsoft pays for the electricity, and that price has not been disclosed. The size of the investment is visible. Its profit or payback cannot be calculated from these figures alone.',
+        ],
+      },
+      {
+        heading: 'What Microsoft is buying',
+        paragraphs: [
+          'For Microsoft, the attraction is a large supply of carbon-free electricity over a long period. Constellation says the purchases are part of Microsoft’s goal to match the power its data centers in PJM, the regional grid, use with carbon-free energy. Those data centers run cloud services as well as AI, so the agreement concerns electricity for a broad computing business. Crane’s planned capacity is about 835 megawatts.',
+          'That power enters a shared grid through transformers, substations and transmission connections. Microsoft is the customer and Constellation owns the plant. The arrangement is regional, not a private line into one AI service.',
+        ],
+      },
+      {
+        heading: 'A contract is not yet electricity',
+        paragraphs: [
+          'Buying future power and having power available are different milestones. A contract can be signed while the physical work is years from finished, and a data center expansion has to be planned around when the electricity can actually reach the grid.',
+          'Constellation says the restart includes restoring the turbine, generator, main power transformer, and cooling and control systems. Returning the plant to operation also requires Nuclear Regulatory Commission approval, including inspections and licensing work.',
+        ],
+      },
+      {
+        heading: 'Approvals and the 2027 target',
+        paragraphs: [
+          'In August 2026, Constellation reported that the NRC had approved a fuel license amendment and that federal regulators had approved moving grid interconnection rights from another Constellation plant to Crane. It was targeting a restart in 2027, earlier than the 2028 date it gave in 2024.',
+          'Those are milestones, not final permission to operate. As of October 2026, the NRC’s record still lists the restart license changes as under review, and 2027 remains a company target. A delay would postpone the power the agreement is meant to bring back.',
+        ],
+      },
+      {
+        heading: 'A wider strategy',
+        paragraphs: [
+          'On October 6, 2026, Google and Constellation announced a separate 20-year power purchase agreement supporting upgrades intended to add 890 megawatts across 11 existing Constellation nuclear units, with the first upgrade expected by 2028. It is a different project from Crane.',
+          'The shared idea is a large technology customer committing to purchases that help support investment in generating capacity. It suggests that access to electricity can become a competitive advantage in the AI build-out. A company planning more computing needs a credible plan for the power behind it.',
+        ],
+      },
+      {
+        heading: 'What still has to go right',
+        paragraphs: [
+          'Unit 1 is not a new kind of reactor. A long-term buyer helped change the business case for bringing an existing one back. The test is whether Constellation can deliver safely, on schedule and at a cost that makes the deal work. It is the same execution test that decides whether [Intel’s factories](/videos/intel-chip-manufacturing) turn a design into a product.',
+          'When the next AI expansion is announced, look for the power agreement, the grid connection and the delivery date. Does reliable power become a competitive advantage in the AI race?',
+        ],
+      },
+    ],
+    takeaways: [
+      '$1.6 billion is Constellation’s 2024 restart estimate, not Microsoft’s purchase price.',
+      'The $1 billion Department of Energy loan, closed in November 2025, is financing that has to be repaid, not an additional restart cost.',
+      'Constellation describes the Microsoft deal as a 20-year fixed-price agreement for the plant’s full output. The price has not been disclosed.',
+      'Microsoft buys the electricity and Constellation owns the plant. The power goes into the regional PJM grid, not a private line to one data center.',
+      'Constellation is targeting a 2027 restart, subject to NRC approvals. A signed agreement is not yet electricity.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A $1.6 billion restart' },
+      { time: '0:41', label: 'Why a working plant can lose money' },
+      { time: '1:19', label: 'Investment, financing and the undisclosed price' },
+      { time: '1:58', label: 'What Microsoft is buying' },
+      { time: '2:42', label: 'The deal still has to become electricity' },
+      { time: '3:26', label: 'Approvals and the 2027 target' },
+      { time: '3:56', label: 'A wider nuclear power strategy' },
+      { time: '4:30', label: 'The business takeaway' },
+    ],
+    sources: [
+      {
+        label: 'Constellation to Launch Crane Clean Energy Center, Restoring Jobs and Carbon-Free Power to The Grid',
+        date: 'September 20, 2024',
+        href: 'https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html',
+      },
+      {
+        label: 'Crane Clean Energy Center investor presentation (Constellation, SEC Form 8-K exhibit)',
+        date: 'September 20, 2024',
+        href: 'https://www.sec.gov/Archives/edgar/data/1868275/000186827524000058/ceg-202409208kexh992.htm',
+        note: 'Source of the 20-year fixed-price, full-output description.',
+      },
+      {
+        label: 'Constellation Reports Third Quarter 2024 Results',
+        date: 'November 2024',
+        href: 'https://www.constellationenergy.com/news/2024/Constellation-Reports-Third-Quarter-2024-Results.html',
+        note: 'Source of the approximately $1.6 billion restart estimate.',
+      },
+      {
+        label: 'Crane Restart (U.S. Department of Energy)',
+        date: 'Loan closed November 2025',
+        href: 'https://www.energy.gov/edf/crane-restart',
+      },
+      {
+        label: 'Crane Clean Energy Center facility record (U.S. Nuclear Regulatory Commission)',
+        date: 'Checked October 22, 2026',
+        href: 'https://www.nrc.gov/facilities-safety/facility-finder/reactors/ccec',
+      },
+      {
+        label: 'Constellation Reports Second Quarter 2026 Results',
+        date: 'August 6, 2026',
+        href: 'https://www.constellationenergy.com/news/2026/08/constellation-reports-second-quarter-2026-results.html',
+      },
+      {
+        label: 'Google and Constellation announce agreement to bring 890 MW of new nuclear capacity to the PJM grid',
+        date: 'October 6, 2026',
+        href: 'https://www.constellationenergy.com/news/2026/10/google-and-constellation-announce-landmark-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid.html',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus two Constellation documents that state the $1.6 billion estimate and the fixed-price term. $1.6 billion is a restart estimate, the $1 billion loan is financing, Microsoft’s price is undisclosed, and 2027 is a company target subject to approvals.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A signed deal is the start. Proving the result is the harder half.',
+      },
+      {
+        href: '/blog/chatgpt-ads-billion-revenue-run-rate-distribution',
+        title: 'ChatGPT Ads Hit a $1 Billion Run Rate in 200 Days. The Audience Came First.',
+        note: 'Reading a headline figure for what it actually measures, the same discipline as separating an estimate from a loan.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Plant-specific images are archival: a U.S. Nuclear Regulatory Commission file photo of Three Mile Island (CC BY 2.0) and CDC PHIL #1194 (public domain), cropped, darkened and animated. Computing and grid stock footage is illustrative, not current Crane restoration or verified Microsoft data center footage. The image on this page is a frame from the video built on the archival NRC photograph; the YouTube thumbnail is AI-assisted editorial cover artwork based on a CDC archive image, not a current photograph. Microsoft logo used with permission from Microsoft. Independent commentary; no endorsement is implied. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Microsoft Is Betting 20 Years on Nuclear Power',
+      description:
+        'A reactor retired for economic reasons got a 20-year buyer. Follow the money behind Microsoft, Constellation and the Three Mile Island Unit 1 restart, and what still has to go right.',
+      cta: 'Watch the video',
+    },
+  },
   {
     slug: 'walmart-wing-drone-delivery-economics',
     youtubeId: 'i1BGeCRMuqE',
@@ -1421,7 +1574,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'walmart-wing-drone-delivery-economics'
+export const FEATURED_VIDEO_SLUG: string | null = 'microsoft-three-mile-island-nuclear-restart'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
