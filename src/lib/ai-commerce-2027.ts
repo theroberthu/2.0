@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-20'
+export const LAST_UPDATED = '2026-10-22'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-21',
+    org: 'Walmart',
+    development: 'Announced Agent Profiles (launching within a month) and an invitation-only Agent Gateway beta that connects outside agents through Sparky over MCP, with customer approval or spending limits and no card access for agents',
+    affects: 'Trust',
+    evidenceType: 'Company announcement',
+    changed: 'A retailer defined outside agents as separate, revocable users of a customer\'s account instead of blocking them or requiring its own agent; no participants or usage disclosed',
+    href: '/blog/walmart-agent-gateway-agent-profiles',
+  },
   {
     date: '2026-10-20',
     org: 'Visa, BILL and Billtrust',

@@ -6,6 +6,44 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.57 - Walmart Agent Gateway authority article and March correction (2026-10-22)
+
+**What changed.** New authority/thesis article,
+`/blog/walmart-agent-gateway-agent-profiles`: Walmart's October 21
+announcement of Agent Profiles, an invitation-only Agent Gateway beta and
+terms for AI agents, read as a delegated-account model in which an outside
+agent becomes a separate, limited, revocable user of the customer's account.
+H1 "Walmart's Agent Profiles Show How Retailers Can Admit AI Shoppers Without
+Giving Up Control"; search title "Walmart Agent Gateway and Agent Profiles
+Explained". 1,211 words excluding the H1 (1,171 prose only), four internal
+links, five external sources linked once each. No Key findings box: thesis
+pieces are excluded by the 1.52 rule.
+
+**Correction.** `/blog/walmart-sparky-chatgpt-gemini` (March 18) receives the
+minimum correction the senior editor required before publication: a dated
+editor's note at the top linking to the new article, and Statement A ("Amazon
+won't let anyone else's AI sell on Amazon. Walmart won't let anyone else's AI
+sell Walmart products...") replaced with a time-bounded version that does not
+swap one absolute for another. Script:
+`scripts/correct-walmart-sparky-chatgpt-gemini.mjs` (dry run by default).
+
+**AI Commerce 2027.** One tracker row (2026-10-21, Walmart, Trust). No shift
+text change while the products are announced or in beta. `LAST_UPDATED` and
+the sitemap date move to 2026-10-22. The Personal Agent Protocol article is
+unchanged: Walmart is a named PAP partner but has not tied the gateway to it.
+
+**Boundaries.** Walmart names no beta participants and discloses no usage;
+Agent Profiles are "launching in the next month." The article uses the
+correct MCP expansion (Model Context Protocol, confirmed by the protocol's
+documentation and The Verge). "All account holders, no Walmart+ needed" is
+Reuters and TechCrunch reporting, not Walmart's, and is not stated.
+
+**Follow-ups.** The rest of the March post's correction plan (statements B to
+H, title, meta, excerpt, RecoScope CTA) ships with the legacy triage, each
+with its own sourcing. Revisit Shift 05 when Agent Profiles are live.
+
+---
+
 ## Release 1.56 - /videos desktop layout (2026-10-21)
 
 **What changed.** From 1024px up, the intro and the "In short" box sit side by
