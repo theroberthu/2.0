@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-22'
+export const LAST_UPDATED = '2026-10-23'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -595,7 +595,7 @@ export const COUNTERARGUMENTS: Counterargument[] = [
   {
     "claim": "Major retailers may prefer selective integrations over open access.",
     "verdict": "Accepted, and already happening",
-    "detail": "Amazon blocks outside agents while opening its seller tools to Claude. Walmart brings Sparky into other surfaces rather than letting them operate Walmart.com. Openness is being granted per relationship, not per protocol."
+    "detail": "Amazon blocks outside agents while opening its seller tools to Claude. Walmart first brought Sparky into other AI surfaces, then announced an Agent Gateway that admits outside agents under Walmart-controlled identity, permissions and transaction rules. Openness is being granted per relationship, not per protocol."
   },
   {
     "claim": "Consumers may not delegate high-value purchases.",
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-21',
+    org: 'Meta',
+    development: 'Reported more than 10 million Muse setups in the US and Canada in about six weeks, about 25% of setups using it on a given day, shopping as the top use case (over 25% of weekly actives) and an average purchase over $200 including travel',
+    affects: 'Measurement',
+    evidenceType: 'Earnings call',
+    changed: 'A consumer agent published usage and purchase-size figures, but no purchase count, transaction volume or weekly active base; transaction fees remain planned, not charged',
+    href: '/blog/meta-muse-shopping-agent-commerce-adoption',
+  },
   {
     date: '2026-10-21',
     org: 'Walmart',

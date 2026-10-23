@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.59 - Meta Muse shopping demand authority article (2026-10-23)
+
+**What changed.** New authority/thesis article,
+`/blog/meta-muse-shopping-agent-commerce-adoption`: what Meta's first Muse
+shopping metrics (Q3 2026 earnings call, October 21) prove about consumer
+demand for agentic commerce, and why merchant acceptance is now the
+constraint. H1 "Meta Muse Has Shopping Demand. Retailer Permission Is Now the
+Constraint"; search title "Meta Muse Shopping Data Shows Demand for AI
+Agents". 1,165 words excluding the H1 (1,133 prose only), four internal links,
+seven external sources linked once each. No Key findings box (thesis piece).
+
+**Boundaries.** Every figure is company-reported. 10 million is setups, not
+active users; the shopping share is over 25% of weekly actives, a base Meta
+did not disclose; the over-$200 average includes travel. No purchase count,
+transaction volume or GMV. Transaction fees are planned: Meta's CFO said Muse
+is monetized only through subscriptions today. Stripe's 38x has no baseline.
+Plaid supplies account data, not purchase processing. Every purchase described
+by Meta and Stripe requires the person to approve the total.
+
+**AI Commerce 2027.** One tracker row (2026-10-21, Meta, Measurement). The
+protected sentence is unchanged: no platform publishes agent-initiated
+transaction volume. Correction: the counterargument on selective integrations
+said Walmart keeps outside agents off Walmart.com, which the Agent Gateway
+announcement (Release 1.57) made outdated; it now reflects the gateway.
+`LAST_UPDATED` and the sitemap date move to 2026-10-23.
+
+---
+
 ## Release 1.58 - Microsoft and Three Mile Island video companion page (2026-10-22)
 
 **What changed.** New companion page,
