@@ -74,6 +74,159 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'royal-caribbean-sandals-vacation-strategy',
+    youtubeId: 'RA8mlCB8VbE',
+    youtubeTitle: 'Royal Caribbean’s $3 Billion Bet Beyond the Cruise',
+    h1: 'Royal Caribbean’s Sandals Deal: Selling More of the Vacation',
+    seoTitle: 'Royal Caribbean’s Sandals Deal: Selling More of the Vacation',
+    metaDescription:
+      'Royal Caribbean Group agreed to pay about $3 billion for half of Sandals. How onboard spending, digital pre-cruise sales and private islands explain the bet.',
+    dek: 'A cruise ticket is one purchase. The bigger opportunity is the rest of the vacation, and the experience still has to earn it.',
+    uploadDate: '2026-10-23T16:00:00-07:00',
+    duration: 'PT5M8S',
+    durationLabel: '5 min 8 sec',
+    topic: 'Retail strategy',
+    subject: 'Royal Caribbean',
+    thumbnail: '/images/videos/royal-caribbean-sandals-vacation-strategy.jpg',
+    thumbnailAlt: 'Video thumbnail: AI-assisted illustration of the cruise ship Icon of the Seas at sunset under the words Royal Caribbean $3B Beyond the Ship',
+    sections: [
+      {
+        paragraphs: [
+          'On September 23, 2026, Royal Caribbean Group agreed to invest about $3 billion for a 50% stake in Sandals and Beaches Resorts. A cruise company is buying into vacations where nobody needs a ship. The reason starts with a second business the company already runs on board.',
+          'The transaction is expected to close in early 2027, subject to approvals and other conditions. It is a proposed partnership, not a completed takeover.',
+        ],
+      },
+      {
+        heading: 'A second revenue stream',
+        paragraphs: [
+          'In 2025, Royal Caribbean Group brought in about $12.5 billion from passenger tickets and another $5.4 billion from what it calls onboard and other revenue, roughly 30% of its $17.9 billion total. These figures cover the whole group, including Celebrity and Silversea, and they are revenue, not profit.',
+          'Onboard and other revenue covers goods and services not included in the fare, such as drinks, internet and specialty dining, along with casino operations, pre- and post-cruise tours and other services, some of which happen off the ship.',
+        ],
+      },
+      {
+        heading: 'The vacation starts on a screen',
+        paragraphs: [
+          'The timing is the interesting part. Royal Caribbean Group said nearly 50% of its 2025 onboard revenue was booked before the cruise started, and that 90% of those pre-cruise purchases were made through digital channels. A guest still at home, imagining the trip, is already being offered part of it. The company’s annual report describes its mobile app as the place guests book WiFi, beverages, shore excursions and specialty dining.',
+          'For a guest, pre-booking can make planning easier. For the business, digital channels link the first booking to the next purchase. Every added experience also has a cost: someone has to build it, operate it or buy into the business that provides it.',
+        ],
+      },
+      {
+        heading: 'The business on board',
+        paragraphs: [
+          'That changes how to look at the ship. The pools, restaurants and bars help persuade people to book. Some are included, and some are upgrades. A real vacation is possible on the base fare, and the company’s job is to make the extra experiences feel worth choosing. A ship full of places to spend is only attractive if people actually want to be there.',
+        ],
+      },
+      {
+        heading: 'The strategy goes ashore',
+        paragraphs: [
+          'Perfect Day at CocoCay, Royal Caribbean’s private destination in the Bahamas, shows the same balance on land. Oasis Lagoon, several beaches and casual dining are included. Thrill Waterpark, the adults-only Hideaway Beach and Coco Beach Club are paid day passes. The island is an included day with optional upgrades, not one giant extra-charge entrance.',
+          'Royal Beach Club Paradise Island, in Nassau, takes a different approach. Guests buy one of two day passes, each covering dining and drinks. Different destination, different pricing, same idea: offer more of what a traveler might want during the trip.',
+        ],
+      },
+      {
+        heading: 'What Sandals would change',
+        paragraphs: [
+          'Sandals adds a vacation category with no ship at all. Royal Caribbean Group says the partnership grows its participation in what it describes as an approximately $2 trillion global vacation market, and CEO Jason Liberty framed the goal as turning the vacation of a lifetime into a lifetime of vacations. A couple who cruises this year might want a resort next year.',
+          'My reading is that the group wants to compete for more of a traveler’s future vacations, not just more of one trip. Whether that justifies the price depends on what happens next. A stake in another company is judged by what it adds over time, the same question behind [Walmart’s Jet.com acquisition](/videos/walmart-jet-acquisition).',
+        ],
+      },
+      {
+        heading: 'The cost behind the view',
+        paragraphs: [
+          'Ships need crews, fuel, food and maintenance, and land destinations need investment and upkeep. In its July 2026 update, the group expected about $4.7 billion of capital spending in 2026, predominantly for new ships and land-based destinations. That figure predates the Sandals announcement and does not include it.',
+          'More sales do not automatically mean more profit. In the second quarter of 2026, total revenue rose 6% from a year earlier to $4.8 billion, while net income fell from $1.2 billion to $1.1 billion. A bigger vacation business still has to manage what it costs to deliver the vacation.',
+        ],
+      },
+      {
+        heading: 'The customer’s decision',
+        paragraphs: [
+          'For travelers, a connected experience can save planning effort, but the advertised fare and the final vacation budget are different numbers. The useful question is what you actually want included.',
+          'For a business, the lesson goes beyond cruising. Technology can make the next purchase easier, and owning or partnering in more of the experience creates more chances to sell. The experience still has to earn the next purchase. Royal Caribbean can build the ship, run the destination and invest in the resort, and it still has to make people want to come back.',
+          'Would you rather have more included in the fare, or choose your own upgrades?',
+        ],
+      },
+    ],
+    takeaways: [
+      'On September 23, 2026, Royal Caribbean Group agreed to invest about $3 billion for a 50% stake in Sandals and Beaches Resorts. Closing is expected in early 2027, subject to approvals.',
+      'In 2025, onboard and other revenue was $5.4 billion, about 30% of the group’s total revenue. That is revenue, not profit.',
+      'Nearly half of 2025 onboard revenue was booked before the cruise, and 90% of those pre-cruise purchases were made through digital channels.',
+      'At CocoCay, Oasis Lagoon, several beaches and casual dining are included. The waterpark and beach clubs are paid upgrades.',
+      'The group expected about $4.7 billion of 2026 capital spending before the Sandals deal, and second-quarter net income fell even as revenue grew.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The $3 billion question' },
+      { time: '0:23', label: 'A second revenue stream' },
+      { time: '0:52', label: 'The vacation starts on a screen' },
+      { time: '1:29', label: 'The business on board' },
+      { time: '2:07', label: 'The strategy goes ashore' },
+      { time: '2:51', label: 'What the Sandals partnership would change' },
+      { time: '3:37', label: 'The cost behind the view' },
+      { time: '4:22', label: 'The customer’s decision' },
+      { time: '4:35', label: 'The business takeaway' },
+    ],
+    sources: [
+      {
+        label: 'Royal Caribbean Group and Sandals Resorts Announce Landmark Partnership to Accelerate Their Leading Vacation Experiences',
+        date: 'September 23, 2026',
+        href: 'https://www.rclinvestor.com/content/uploads/2026/09/09232026-Royal-Caribbean-Group-and-Sandals-Resorts-Announce-Landmark-Partnership-to-Accelerate-Their-Leading-Vacation-Experiences.pdf',
+      },
+      {
+        label: 'Royal Caribbean Group Reports 2025 Results, Issues 2026 Guidance',
+        date: 'January 29, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/884887/000088488726000003/a10k2025earningsrelease8-k.htm',
+      },
+      {
+        label: 'Royal Caribbean Cruises Ltd. 2025 Annual Report (Form 10-K)',
+        date: 'Fiscal year 2025',
+        href: 'https://www.sec.gov/Archives/edgar/data/884887/000088488726000007/rcl-20251231.htm',
+      },
+      {
+        label: 'Royal Caribbean Group Reports Second Quarter Results Above Expectations and Raises Full Year Guidance',
+        date: 'July 28, 2026',
+        href: 'https://www.rclinvestor.com/press-releases/release/?id=1845',
+      },
+      {
+        label: 'Perfect Day at CocoCay: what’s included and upgrades (Royal Caribbean)',
+        date: 'Checked October 24, 2026',
+        href: 'https://www.royalcaribbean.com/cococay-cruises?country=USA',
+      },
+      {
+        label: 'Royal Beach Club Paradise Island Day Pass Guide (Royal Caribbean)',
+        date: 'Updated February 13, 2026',
+        href: 'https://www.royalcaribbean.com/guides/nassau-paradise-island-beach-club-day-pass',
+        note: 'Added for the Paradise Island day pass, which the video description does not cite.',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus Royal Caribbean’s day pass guide for Paradise Island. Revenue figures cover the whole group and are not profit. The $4.7 billion is 2026 capital spending guidance from July, separate from the Sandals transaction, which is proposed and not yet closed.',
+    related: [
+      {
+        href: '/blog/retailers-ai-traffic-customer-ownership',
+        title: 'Retailers Want AI Shopping Traffic. They Do Not Want to Lose the Customer.',
+        note: 'Owning more of the customer relationship is the strategic question, whether the next step is an AI assistant or a resort.',
+      },
+      {
+        href: '/blog/amazon-ai-shopping-business-model',
+        title: 'Amazon Is Revealing the Business Model Behind AI Shopping',
+        note: 'Attaching a product to order value and membership, the same logic as linking the first booking to the next purchase.',
+      },
+      {
+        href: '/blog/mcdonalds-media-network-commerce-media-without-marketplace',
+        title: 'McDonald’s Is Building a Media Network Without a Marketplace',
+        note: 'A company with identity, purchase data and repeat visits looking for a second revenue line.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Footage is official Royal Caribbean press-center material (Icon of the Seas, Oasis Lagoon at CocoCay, fleetwide cocktails and Royal Beach Club Paradise Island), © Royal Caribbean Group, used for independent editorial reporting; dates are source publication labels, not verified filming dates. Paradise Island and CocoCay are different destinations, and no Royal Caribbean property is presented as Sandals. The thumbnail is AI-assisted illustrative artwork based on official ship footage. Independent commentary; no sponsorship or endorsement. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Royal Caribbean’s $3 Billion Bet Beyond the Cruise',
+      description:
+        'Royal Caribbean Group agreed to pay about $3 billion for half of Sandals. Follow the money from onboard spending and private islands to a resort deal, and what the experience still has to earn.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'microsoft-three-mile-island-nuclear-restart',
     youtubeId: 'mekMrwjYSlg',
     youtubeTitle: 'Why Microsoft Is Betting 20 Years on Nuclear Power',
@@ -1574,7 +1727,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'microsoft-three-mile-island-nuclear-restart'
+export const FEATURED_VIDEO_SLUG: string | null = 'royal-caribbean-sandals-vacation-strategy'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)

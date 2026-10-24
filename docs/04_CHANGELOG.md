@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.60 - Royal Caribbean and Sandals video companion page (2026-10-24)
+
+**What changed.** New companion page,
+`/videos/royal-caribbean-sandals-vacation-strategy`, for "Royal Caribbean's $3
+Billion Bet Beyond the Cruise" (https://youtu.be/RA8mlCB8VbE): H1 and search
+title "Royal Caribbean's Sandals Deal: Selling More of the Vacation", about 750
+words written against the narration, five takeaways, nine timestamped
+chapters, six sources, related research from current-standard articles only.
+VideoObject from verified YouTube values (uploadDate
+2026-10-23T16:00:00-07:00, duration PT5M8S) with nine `Clip` chapters. Topic
+"Retail strategy". The homepage Featured Video now points at this video.
+
+**Sourcing and boundaries.** About $3 billion for a 50% equity interest in
+Sandals and Beaches Resorts (September 23, 2026), closing expected early 2027
+subject to approvals; described as proposed, not completed. 2025 passenger
+ticket revenue $12.5 billion and onboard and other $5.4 billion of $17.9
+billion total, group-wide and not profit. Nearly 50% of 2025 onboard revenue
+booked pre-cruise, 90% of that through digital channels (January 29, 2026
+results). About $4.7 billion of 2026 capital expenditures (July 28, 2026),
+separate from the Sandals deal; Q2 revenue up 6% while net income fell. CocoCay
+inclusions and upgrades checked on Royal Caribbean's page; the Paradise Island
+day pass is sourced to Royal Caribbean's own guide, added because the video
+description does not cite it.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.59 - Meta Muse shopping demand authority article (2026-10-23)
 
 **What changed.** New authority/thesis article,
