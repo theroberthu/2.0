@@ -6,6 +6,30 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.61 - Uber ChatGPT Work enterprise AI adoption article (2026-10-24)
+
+**What changed.** New authority/operator-lessons article,
+`/blog/uber-chatgpt-work-enterprise-ai-adoption`, in Digital Transformation:
+Uber's October 22 company-wide rollout of ChatGPT Work read through five
+stages (access, adoption, workflow, governance, outcome). H1 "Uber Is Giving
+30,000 Employees ChatGPT. Access Is Not Adoption."; search title "Uber ChatGPT
+Work Rollout: Access Is Not Adoption". 1,230 words excluding the H1 (1,193
+prose only), four internal links, six external sources linked once each.
+
+**Boundaries.** ChatGPT Work is available to more than 30,000 employees, not
+used by them; no adoption, productivity, quality, cost or ROI figures were
+disclosed, and Uber and OpenAI say outcomes will be reported later. Pilot
+details (80% non-engineers, use cases, 30-engineer AI pods) are TechCrunch's
+reporting from Uber's VP of engineering. Uber's MCP Gateway, agent identity
+architecture and Legal Redlining Agent are presented as separate systems; no
+source says ChatGPT Work uses them. The legal agent's 91% accuracy figure is
+noted as undefined in Uber's post. Uber's September job cuts are not
+mentioned; no source links them to the rollout.
+
+**AI Commerce 2027.** No change: workforce knowledge work, not commerce.
+
+---
+
 ## Release 1.60 - Royal Caribbean and Sandals video companion page (2026-10-24)
 
 **What changed.** New companion page,
