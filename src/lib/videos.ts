@@ -74,6 +74,146 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'ai-business-roi-payback',
+    youtubeId: 'YcuKF1APDBU',
+    youtubeTitle: 'AI Works. So Why Doesn’t the Business Make More Money?',
+    h1: 'Why AI That Works Doesn’t Always Make a Business More Money',
+    seoTitle: 'Why AI That Works Doesn’t Always Make a Business More Money',
+    metaDescription:
+      'A robot can pick the package and a chatbot can answer, while the business still loses money. Follow a fictional $60,000 AI investment from demo to payback.',
+    dek: 'An impressive AI result is the start of the case, not the end of it. The business still has to count the comparison, the running costs and each dollar once.',
+    uploadDate: '2026-10-24T16:00:01-07:00',
+    duration: 'PT13M26S',
+    durationLabel: '13 min 26 sec',
+    topic: 'AI in practice',
+    subject: 'AI return on investment',
+    thumbnail: '/images/videos/ai-business-roi-payback.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of a robotic gripper lifting a cardboard box in a warehouse under the words AI Works. Does It Pay?',
+    sections: [
+      {
+        paragraphs: [
+          'I paid a few hundred dollars for a product, then learned it was backordered. The delay ran past four weeks. The checkout worked perfectly. The product was not there. I do not know what went wrong inside that company, and I cannot say a better AI system would have prevented it. But every retailer faces a version of that gamble. Buy too little and customers wait. Buy too much and the money sits on a shelf.',
+          'This documentary follows what has to happen between an impressive AI demonstration and a business that actually works better, then follows the money through a fictional $60,000 investment. The store and its numbers are illustrative planning assumptions, not a supplier quote or a company’s measured return.',
+        ],
+      },
+      {
+        heading: 'What the sales report misses',
+        paragraphs: [
+          'In a 2022 paper, Amazon-affiliated researchers reported a live test of an AI buying system across 10,000 products over 26 weeks. It reduced inventory by about 12%, measured in units, and the revenue comparison showed no statistically significant change. That is a promising result. It is not a profit or cash-savings figure, and it does not show the full cost of running the system.',
+          'The sales record has its own blind spot. If a store sells out after 50 orders, its record says 50 sold, even if demand was 100. A planner who reads every stockout as weak demand will order too little again. Part of the researchers’ work was estimating demand that could not be observed directly. Better data, here, means understanding what the sales record leaves out.',
+          'Timing matters too. A shipment arriving next Tuesday cannot rescue a promise due on Friday. A second supplier with a higher unit price may be the better decision when delivery risk changes, and that takes a cost comparison rather than a default to the cheapest option.',
+        ],
+      },
+      {
+        heading: 'The awkward plastic bag',
+        paragraphs: [
+          'Once the right item arrives, someone or something still has to pick it up. A bagged shirt can fold, reflect light and sit differently on a conveyor, and each change affects where to grip and how to move. In October 2026, ABB added AI Robot Trainer to its Fashion Inductor module and said it reduces engineering and commissioning effort by up to 75%, with retraining as products and conditions change. That is a claim about deploying and adjusting the application, not about a warehouse’s total labor bill, and a demonstration reel cannot show a customer’s return.',
+          'The useful questions are what the system does with an unfamiliar package, whether it handles it, flags uncertainty or sends it to a person, and how long the correction takes. A faster stage can also just build a longer queue in front of the next one. The measure that matters is correct orders reaching dispatch across a whole shift, with damaged items and exceptions counted.',
+        ],
+      },
+      {
+        heading: 'The reply is not the result',
+        paragraphs: [
+          'A fast answer helps only if it answers the real question. A customer asking whether an item will arrive by Friday needs a reliable order status, a realistic estimate and a next step, not a fluent sentence about excellent service.',
+          'A retail field-experiment preprint, updated in 2026, reported a 16.3% sales increase from a pre-sale chatbot, in experiments run in 2023 and 2024. The comparison was a message saying live support was unavailable. Against human replies, the chatbot showed no statistically significant sales difference, and AI with human escalation produced a larger lift against unavailable support. The investment story depends on the comparison.',
+          'A reply is also not a completed change. If a person authorizes a cancellation, the order record still has to change, the change has to be checked and the customer has to receive confirmation. A conversation marked closed can look efficient while the customer opens a second one about the same problem.',
+        ],
+      },
+      {
+        heading: 'Follow the bill',
+        paragraphs: [
+          'Klarna reported that its AI customer-service assistant delivered approximately $59 million in cost savings in 2025. The same annual report shows customer service and operations expenses of $207 million, up from $203 million, with volumes up substantially. Those are a management savings estimate and an expense line. A cost category can rise while a company avoids spending it would otherwise have added, and neither figure isolates the profit from AI.',
+          'The fictional proposal counts two kinds of value separately: $48,000 a year of external spending that actually stops, and 3,000 genuinely additional orders. An item costs $20 and sells for $50. After $18 of fulfillment, payment fees and expected returns, each extra order contributes $12, or $36,000 a year. Counting the full $50 sale would overstate the benefit.',
+          'That makes $84,000 of annual benefit. Running costs of $36,000 a year for software, support and paid monitoring hours bring the net benefit to $48,000. Against $60,000 up front, the project is still $12,000 behind after a first full year. At $4,000 a month, simple payback is 15 months, if the benefit starts immediately and holds. Halve the benefits while running costs stay the same, and the net benefit falls to $6,000 a year, or 120 months to recover the setup cost. That is a stress calculation, not a forecast.',
+          'Two more rules. Freed employee time is capacity, not cash, unless the wage bill actually changes, and it cannot be counted again if the avoided overtime already includes it. Cutting inventory from $100,000 to $80,000 releases $20,000 once. It does not become $20,000 of profit every year. Each dollar gets counted once, the same discipline as asking who pays for [Walmart’s $0 drone delivery](/videos/walmart-wing-drone-delivery-economics).',
+        ],
+      },
+      {
+        heading: 'The Tuesday after the launch',
+        paragraphs: [
+          'Suppose a supplier pushes a shipment back several days. A purchasing assistant, an availability page and a support assistant can each work as designed while sharing the same outdated arrival date, and the customer gets a confident wrong answer. The business has to decide which status is authoritative, how quickly it updates and what happens when information is missing.',
+          'Testing needs the same discipline. A launch during a sale, with discounts and advertising changing at the same time, cannot be credited to the assistant from a week-over-week comparison. A better test gives similar customers different versions of the service in the same period and tracks what else changed. Then inspect the failures. An average can hide customers who repeatedly get poor answers, a fast first response can hide a slow escalation queue, and lower stock can look good until the missing items are the urgent ones.',
+        ],
+      },
+      {
+        heading: 'The promise earns its technology',
+        paragraphs: [
+          'The buying system, the robot and the assistant do different jobs, and their evidence cannot be rolled into one claim that AI works. Start with the job causing the damage: a buying decision, accurate availability or a delivery answer.',
+          'What I wanted from that retailer was simple: an accurate picture before I committed, a clear explanation when things changed and a realistic next step. Technology has value when it makes that experience more dependable at a cost the business can sustain. Sometimes that takes an advanced model. Sometimes a simpler change should come first.',
+          'What would convince you that an AI investment is working: faster tasks, lower costs or a better customer experience?',
+        ],
+      },
+    ],
+    takeaways: [
+      'An Amazon-affiliated live test cut inventory by about 12% in units across 10,000 products over 26 weeks, with no statistically significant revenue change. That is not a profit figure.',
+      'A pre-sale chatbot’s 16.3% sales lift was measured against a support-unavailable message. Against human replies, the difference was not statistically significant.',
+      'ABB’s “up to 75%” refers to engineering and commissioning effort, not a warehouse’s labor bill.',
+      'Klarna’s reported $59 million in AI savings and its $207 million customer service and operations expense are different measures, not an isolated AI profit.',
+      'In the fictional $60,000 case, $48,000 of yearly net benefit means a 15-month payback. Halving the benefits stretches it to 120 months.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The customer promise and the $60,000 decision' },
+      { time: '0:58', label: 'What the sales report misses' },
+      { time: '2:24', label: 'The awkward plastic bag' },
+      { time: '4:34', label: 'The reply is not the result' },
+      { time: '6:46', label: 'Follow the bill' },
+      { time: '10:12', label: 'The Tuesday after the launch' },
+      { time: '11:58', label: 'The promise earns its technology' },
+    ],
+    sources: [
+      {
+        label: 'Deep Inventory Management (arXiv 2210.03137, section 9.4)',
+        date: '2022',
+        href: 'https://arxiv.org/html/2210.03137v3',
+        note: 'The inventory reduction is measured in units, not profit or cash savings.',
+      },
+      {
+        label: 'Generative AI and Sales Productivity: Field Experiments in Online Retail (arXiv 2510.12049, version 6)',
+        date: 'June 2026',
+        href: 'https://arxiv.org/html/2510.12049v6',
+        note: 'The 16.3% comparison is against unavailable live support, not human support.',
+      },
+      {
+        label: 'ABB Robotics brings industrial-grade physical AI to fashion logistics',
+        date: 'October 15, 2026',
+        href: 'https://www.abb.com/global/en/news/139480/prsrl-abb-robotics-brings-industrial-grade-physical-ai-to-fashion-logistics',
+      },
+      {
+        label: 'Klarna Group plc Annual Report (Form 20-F) 2025',
+        date: 'Fiscal year 2025',
+        href: 'https://s205.q4cdn.com/644747736/files/doc_financials/2025/q4/Klarna-Group-plc-20-F-2025.pdf',
+      },
+    ],
+    sourcesNote:
+      'The research and filings cited in the video. Manufacturer and company claims are attributed. The store, its numbers and the operational demonstrations are fictional planning illustrations, not supplier quotes, forecasts or verified returns, and my delayed-order account does not establish what caused that retailer’s delay.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'Measuring whether the change worked is the harder half of any AI investment.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'A faster step does little if the work around it still waits.',
+      },
+      {
+        href: '/blog/uber-chatgpt-work-enterprise-ai-adoption',
+        title: 'Uber Is Giving 30,000 Employees ChatGPT. Access Is Not Adoption.',
+        note: 'Access, adoption and a proven outcome are different stages.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized ElevenLabs voice clone. ABB Robotics footage and press photos © ABB or its licensors, used for independent editorial discussion. Licensed Pexels stock and original fictional illustrations are identified on screen and do not depict the research trial sites, the retailer or measured business results. Some explanatory visuals and the cover artwork were created with AI; the thumbnail is illustrative, not a photograph of an actual deployment. Independent commentary; no company endorsement implied. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'AI Works. So Why Doesn’t the Business Make More Money?',
+      description:
+        'A robot can pick the package and a chatbot can answer the question while the business still loses money. Follow a fictional $60,000 AI investment from demo to payback.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'royal-caribbean-sandals-vacation-strategy',
     youtubeId: 'RA8mlCB8VbE',
     youtubeTitle: 'Royal Caribbean’s $3 Billion Bet Beyond the Cruise',
@@ -1727,7 +1867,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'royal-caribbean-sandals-vacation-strategy'
+export const FEATURED_VIDEO_SLUG: string | null = 'ai-business-roi-payback'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)

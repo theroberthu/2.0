@@ -6,6 +6,33 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.62 - AI return on investment video companion page (2026-10-25)
+
+**What changed.** New companion page, `/videos/ai-business-roi-payback`, for
+"AI Works. So Why Doesn't the Business Make More Money?"
+(https://youtu.be/YcuKF1APDBU): H1 and search title "Why AI That Works
+Doesn't Always Make a Business More Money", about 1,150 words written against
+the 13-minute narration, five takeaways, seven timestamped chapters, four
+sources, related research from current-standard articles only (including the
+Uber adoption article). VideoObject from verified YouTube values (uploadDate
+2026-10-24T16:00:01-07:00, duration PT13M26S) with seven `Clip` chapters.
+Topic "AI in practice". The homepage Featured Video now points at this video.
+
+**Sourcing and boundaries.** Deep Inventory Management (2022, section 9.4):
+10,000 products, 26 weeks, about 12% inventory reduction in units, revenue
+change not statistically significant; Amazon-affiliated authors. Retail field
+experiments (arXiv v6, June 2026): 16.3% sales lift against a
+support-unavailable message, no significant difference against human replies
+(Table C1), larger lift for AI with human escalation. ABB (October 15, 2026):
+"up to 75%" less engineering and commissioning effort. Klarna 2025 20-F:
+about $59 million in AI cost savings; customer service and operations expense
+$207 million versus $203 million. The $60,000 store case is fictional and
+labeled as such; its arithmetic was checked.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.61 - Uber ChatGPT Work enterprise AI adoption article (2026-10-24)
 
 **What changed.** New authority/operator-lessons article,
