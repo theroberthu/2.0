@@ -204,7 +204,7 @@ export default function VideosIndexPage() {
             <p className="text-[15px] text-gray-400 leading-relaxed max-w-2xl mb-6">
               Short takes from the channel. They open on YouTube.
             </p>
-            <ShortsRow shorts={SHORTS} location="videos_index" />
+            <ShortsRow shorts={SHORTS} location="videos_index" initialCount={10} />
           </div>
         </section>
       )}

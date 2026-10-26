@@ -6,6 +6,28 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.64 - Eleven new Shorts and a show-all toggle on /videos (2026-10-26)
+
+**What changed.** The eleven Shorts published October 21 to 25 join the top of
+`SHORTS` (21 in total), with titles, upload dates and durations from each
+watch page and local 540x960 vertical thumbnails. Two carry `related` links
+where the match is genuine: "Why Intel Asked Washington for a Robot
+Exception" on the Intel page (fab transport robots), and "Why Picking Up
+Clothes Is So Hard for Robots" on the AI return on investment page (ABB
+Fashion Inductor). `ShortsRow` gains an optional `initialCount`; `/videos`
+shows the ten newest and puts the rest behind a native `<details>` "Show all
+21 clips" toggle, so every card stays in the HTML. Companion pages are
+unchanged.
+
+**Why.** Every current-series video should be on the site, and 21 cards in a
+grid made the Shorts section about 2,100px tall at laptop width, roughly 40%
+of the page. Collapsed, it is about 1,050px.
+
+**Scope.** Older Shorts from the seller and motivational period stay off, as
+decided in Release 1.54.
+
+---
+
 ## Release 1.63 - IKEA Billie and reskilling video companion page (2026-10-26)
 
 **What changed.** New companion page, `/videos/ikea-billie-ai-reskilling`, for

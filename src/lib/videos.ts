@@ -2058,6 +2058,17 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'RbEGpMcUQag', title: 'Why Intel Asked Washington for a Robot Exception', uploadDate: '2026-10-25T17:00:26-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/RbEGpMcUQag.jpg', related: ['intel-chip-manufacturing'] },
+  { youtubeId: 'CCZVT8yf0mE', title: 'This Tiny Robot Has Muscles Grown From Mouse Cells', uploadDate: '2026-10-25T09:00:05-07:00', durationLabel: '0:54', thumbnail: '/images/shorts/CCZVT8yf0mE.jpg' },
+  { youtubeId: 'BqoMSfQ5laY', title: 'This Robot Gets Hired for One Thing: Your Attention', uploadDate: '2026-10-24T17:00:28-07:00', durationLabel: '0:54', thumbnail: '/images/shorts/BqoMSfQ5laY.jpg' },
+  { youtubeId: 'lSq4QLsbP0w', title: "Alabama's AI Play: Shorter Lines, More Football", uploadDate: '2026-10-24T10:59:06-07:00', durationLabel: '0:50', thumbnail: '/images/shorts/lSq4QLsbP0w.jpg' },
+  { youtubeId: 'm_RQj5lvi0Y', title: 'Before AI Can Work, Someone Has to Deliver This', uploadDate: '2026-10-24T09:00:18-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/m_RQj5lvi0Y.jpg' },
+  { youtubeId: 'Z8-efcDaMXc', title: "This Robot Has Laptop DNA. Here's Why.", uploadDate: '2026-10-23T16:00:00-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/Z8-efcDaMXc.jpg' },
+  { youtubeId: 'q4zsspHfZLQ', title: 'Muse vs Dot vs Grok Bot: Which AI Saves You Work?', uploadDate: '2026-10-23T14:00:23-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/q4zsspHfZLQ.jpg' },
+  { youtubeId: 'Xu7qe2-ulyM', title: 'Why Picking Up Clothes Is So Hard for Robots', uploadDate: '2026-10-22T18:00:15-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/Xu7qe2-ulyM.jpg', related: ['ai-business-roi-payback'] },
+  { youtubeId: '0wYNm3GRmTA', title: 'Mercedes Put a V8 Soundtrack in an Electric SUV', uploadDate: '2026-10-22T16:45:16-07:00', durationLabel: '0:56', thumbnail: '/images/shorts/0wYNm3GRmTA.jpg' },
+  { youtubeId: 'ESdyr9S3yYI', title: "Why NASA's X-59 Has Such a Long Nose", uploadDate: '2026-10-21T18:00:04-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/ESdyr9S3yYI.jpg' },
+  { youtubeId: '4mSBvhhUpGM', title: "Why Volkswagen Covered This EV's Rear Wheels", uploadDate: '2026-10-21T15:00:14-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/4mSBvhhUpGM.jpg' },
   { youtubeId: '3TBqjdqBIBQ', title: 'Why Volkswagen Is Bringing Buttons Back', uploadDate: '2026-10-20T19:00:27-07:00', durationLabel: '1:00', thumbnail: '/images/shorts/3TBqjdqBIBQ.jpg' },
   { youtubeId: 'M3y9fIBZ2aI', title: "NASA's Solar Panels Unroll Like a Yoga Mat", uploadDate: '2026-10-20T16:00:10-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/M3y9fIBZ2aI.jpg' },
   { youtubeId: 'c9HLl82rdl0', title: 'Why This AI Robot Enters the Mine First', uploadDate: '2026-10-19T18:00:23-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/c9HLl82rdl0.jpg' },
