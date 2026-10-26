@@ -74,6 +74,171 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'ikea-billie-ai-reskilling',
+    youtubeId: 'I0YKeY9Of2M',
+    youtubeTitle: 'IKEA’s AI Saved $14 Million. What Happened to Its People?',
+    h1: 'IKEA’s Billie Chatbot: AI Savings and 8,500 Reskilled Workers',
+    seoTitle: 'IKEA’s Billie Chatbot: AI Savings and 8,500 Reskilled Workers',
+    metaDescription:
+      'IKEA’s largest retailer says its Billie chatbot saved about $14 million while 8,500 call center workers learned new skills. What the numbers do and don’t show.',
+    dek: 'A chatbot took the routine questions. The more interesting decision was what IKEA’s people would do next, and whether customers needed help with the room, not just the furniture.',
+    uploadDate: '2026-10-25T16:00:33-07:00',
+    duration: 'PT4M55S',
+    durationLabel: '4 min 55 sec',
+    topic: 'AI in practice',
+    subject: 'IKEA',
+    thumbnail: '/images/videos/ikea-billie-ai-reskilling.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of hands sketching a room floor plan beside fabric swatches, under the IKEA logo and the words $14M Saved, Then What?',
+    sections: [
+      {
+        paragraphs: [
+          'Ingka Group, the largest IKEA retailer, says its AI chatbot Billie saved nearly €13 million by June 2023, roughly $14 million at the exchange rate on the day it announced the figure. The more interesting part is what Ingka did with its people. While Billie handled simpler enquiries, the company said it had reskilled 8,500 call center co-workers, including in remote interior design.',
+          'That makes a good corporate headline. The useful question is what the work actually involves.',
+        ],
+      },
+      {
+        heading: 'Watch the table move',
+        paragraphs: [
+          'In IKEA’s own room film, furniture on wheels makes the same space more flexible. It is a simple idea until that room has to be an office, a dining room and a spare bedroom. A sofa’s dimensions tell you whether it fits against the wall. They don’t tell you whether you can live around it, with someone working from the living room, someone else watching television, a guest who needs a bed and a door that still has to open. For a furniture retailer, helping with that decision could be valuable.',
+        ],
+      },
+      {
+        heading: 'What Billie handled',
+        paragraphs: [
+          'Ingka, which says it operates 411 IKEA stores and accounts for around 87% of IKEA sales, rolled Billie out in its 2021 financial year. By June 2023, it said Billie had resolved about 47% of the customer enquiries it received between 2021 and 2023.',
+          'The savings figure is cumulative and historical, not $14 million of new profit every year. It is also company-reported, not an independently verified return on the investment.',
+        ],
+      },
+      {
+        heading: 'New skills, several roles',
+        paragraphs: [
+          'Ingka said the 8,500 co-workers built skills in remote interior design, digital sales, relationship building and handling complex customer problems. That does not mean every one of them became a designer. It means the company was building skills for work beyond the routine answer.',
+          'Two questions show the difference. Whether a cabinet is available needs a dependable answer. Which cabinet fits an awkward corner may need someone who asks a better question.',
+        ],
+      },
+      {
+        heading: 'A plan and a person',
+        paragraphs: [
+          'IKEA US launched its Interior Design Service in April 2023, at $99 for consumers. It starts with a questionnaire about the customer’s wish list, followed by three virtual one-on-one sessions with a designer, and produces a mood board, floor plan, 3D renderings and a curated product list. A wish list becomes a plan someone can actually shop from.',
+          'The practical choices are where that help earns its place. The dining table also has to be a desk, the sofa has to become a spare bed, and storage can’t swallow the space it is meant to save. The expensive mistake is buying all the right-looking things and discovering they don’t work together.',
+        ],
+      },
+      {
+        heading: 'What a visual planner can do',
+        paragraphs: [
+          'IKEA Kreativ lets customers place furniture in scale-accurate rooms, including a scan of their own space, and moving a table on screen makes a layout easier to test. It doesn’t show whether that layout suits a household’s everyday life.',
+          'It is also a different tool from Billie. The chatbot handles enquiries, Kreativ visualizes the space, and an advisor helps someone work through the decision. The opportunity for IKEA is the combination: moving a customer from browsing furniture to choosing what to buy.',
+        ],
+      },
+      {
+        heading: 'The $100 million distinction',
+        paragraphs: [
+          'IKEA US reported that its remote channel, covering phone, chat, social media and specialized services, passed $100 million in sales for the first time in its 2025 financial year, and that more than 73,000 customers connected with its planning experts.',
+          'Those figures show scale. They don’t show that Billie generated those sales, or that every planning conversation became an order. Sales are not profit either, and the published figures don’t give a full return after software, training and service costs. It is the same distinction behind [why AI that works doesn’t always make a business more money](/videos/ai-business-roi-payback).',
+        ],
+      },
+      {
+        heading: 'The limits of the success story',
+        paragraphs: [
+          'This is not a promise that nobody loses a job. In March 2026, Ingka said 800 roles may become redundant within its group functions as part of a simpler organizational structure. It did not identify Billie or AI as the cause.',
+          'What makes the case interesting is the choice to develop people’s skills alongside the automation. A company can answer a question faster and still leave the customer stuck at the next decision. The bigger opportunity may be helping them make it.',
+        ],
+      },
+      {
+        heading: 'The next customer decision',
+        paragraphs: [
+          'The floor in that crowded room hasn’t grown, but a better plan can make it much more useful. For any business buying AI, the worthwhile question is what its people can help customers do next.',
+          'What would you want a real person to help with before buying a room full of furniture?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Ingka says Billie resolved about 47% of the enquiries it received from 2021 to 2023 and saved nearly €13 million, roughly $14 million, cumulatively. That is not annual profit.',
+      'Ingka reskilled 8,500 call center co-workers in remote interior design, digital sales and complex customer problems. Not all of them became designers.',
+      'IKEA US’s design service pairs a questionnaire and three virtual sessions with a floor plan, 3D renderings and a product list.',
+      'IKEA US passed $100 million in remote sales in FY25, with more than 73,000 customers meeting planning experts. That is channel revenue, not profit attributable to Billie.',
+      'Ingka’s March 2026 restructuring put 800 group-function roles at risk. The company did not identify Billie as the cause.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The $14 million question' },
+      { time: '0:21', label: 'Watch the table move' },
+      { time: '1:09', label: 'What Billie handled' },
+      { time: '1:37', label: 'New skills, several roles' },
+      { time: '2:09', label: 'A plan and a person' },
+      { time: '3:03', label: 'What a visual planner can do' },
+      { time: '3:32', label: 'The $100 million distinction' },
+      { time: '4:03', label: 'The limits of the success story' },
+      { time: '4:29', label: 'The next customer decision' },
+    ],
+    sources: [
+      {
+        label: 'AI and remote selling bring IKEA design expertise to the many (Ingka Group)',
+        date: 'June 29, 2023',
+        href: 'https://www.ingka.com/newsroom/ai-and-remote-selling-bring-ikea-design-expertise-to-the-many/',
+      },
+      {
+        label: 'Euro foreign exchange reference rate, US dollar (European Central Bank)',
+        date: 'June 29, 2023: 1.0938',
+        href: 'https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A',
+        note: 'Used to convert nearly €13 million to roughly $14 million.',
+      },
+      {
+        label: 'Ingka Group FAQ',
+        date: 'As of August 31, 2025',
+        href: 'https://www.ingka.com/newsroom/faq/',
+        note: 'Store count and share of IKEA sales.',
+      },
+      {
+        label: 'IKEA U.S. launches IKEA Interior Design Service',
+        date: 'April 11, 2023',
+        href: 'https://www.ikea.com/us/en/newsroom/range-news/outdoor-news-2023-pubc6cb7340/',
+      },
+      {
+        label: 'IKEA planners and IKEA Kreativ (IKEA US)',
+        date: 'Checked October 26, 2026',
+        href: 'https://www.ikea.com/us/en/planners/',
+      },
+      {
+        label: 'IKEA US FY25 Annual Summary (remote sales and planning sections)',
+        date: 'Fiscal year 2025',
+        href: 'https://www.ikea.com/us/en/files/pdf/57/19/5719f2e1/us_annual_summary_fy25.pdf',
+      },
+      {
+        label: 'Creating a simpler, more resilient IKEA for the future (Ingka Group)',
+        date: 'March 19, 2026',
+        href: 'https://www.ingka.com/newsroom/creating-a-simpler-more-resilient-ikea-for-the-future/',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus Ingka’s FAQ for its store count and the ECB rate behind the dollar conversion. Savings are company-reported and cumulative. Remote sales are channel revenue, not profit or revenue attributable to Billie, and Ingka did not link its 2026 restructuring to Billie.',
+    related: [
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'Another retailer pairing shared technology with people who make the customer decisions.',
+      },
+      {
+        href: '/blog/albertsons-ai-planning-task-depth',
+        title: 'Albertsons’ AI Results Suggest the Real Value Is in Planning, Not Search',
+        note: 'Helping a customer plan creates more value than answering where an item is.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Faster routine answers matter less than redesigning the harder work around them.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Limited IKEA USA room-film and IKEA Kreativ demonstration excerpts, plus an IKEA US promotional photograph, are analyzed as independent commentary, not under a licence or with company endorsement. Supporting Pexels footage is illustrative, and the people shown are not represented as IKEA employees or customers. The thumbnail is illustrative cover artwork, not a photograph of an actual IKEA employee, consultation or event. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'IKEA’s AI Saved $14 Million. What Happened to Its People?',
+      description:
+        'IKEA’s largest retailer says its Billie chatbot saved about $14 million while 8,500 call center workers learned new skills. Follow the people, the planning tools and the money.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'ai-business-roi-payback',
     youtubeId: 'YcuKF1APDBU',
     youtubeTitle: 'AI Works. So Why Doesn’t the Business Make More Money?',
@@ -1867,7 +2032,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'ai-business-roi-payback'
+export const FEATURED_VIDEO_SLUG: string | null = 'ikea-billie-ai-reskilling'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)

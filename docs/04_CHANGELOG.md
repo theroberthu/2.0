@@ -6,6 +6,33 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.63 - IKEA Billie and reskilling video companion page (2026-10-26)
+
+**What changed.** New companion page, `/videos/ikea-billie-ai-reskilling`, for
+"IKEA's AI Saved $14 Million. What Happened to Its People?"
+(https://youtu.be/I0YKeY9Of2M): H1 and search title "IKEA's Billie Chatbot:
+AI Savings and 8,500 Reskilled Workers", about 740 words written against the
+narration, five takeaways, nine timestamped chapters, seven sources, related
+research from current-standard articles only. VideoObject from verified
+YouTube values (uploadDate 2026-10-25T16:00:33-07:00, duration PT4M55S) with
+nine `Clip` chapters. Topic "AI in practice". The homepage Featured Video now
+points at this video.
+
+**Sourcing and boundaries.** Ingka (June 29, 2023): Billie rolled out in FY21,
+resolved about 47% of enquiries it received 2021 to 2023, nearly EUR 13
+million in savings so far, 8,500 call center co-workers reskilled. About $14
+million uses the ECB reference rate of 1.0938 on June 29, 2023. Ingka's FAQ:
+411 IKEA stores, around 87% of IKEA sales (added for "largest retailer"). IKEA
+US Interior Design Service (April 11, 2023): $99, questionnaire, three virtual
+sessions, floor plan, 3D renderings, product list. IKEA US FY25: remote sales
+passed $100 million, more than 73,000 customers met planning experts; channel
+revenue, not profit attributable to Billie. Ingka (March 19, 2026): 800 Group
+Functions roles may become redundant, with no link to Billie or AI.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.62 - AI return on investment video companion page (2026-10-25)
 
 **What changed.** New companion page, `/videos/ai-business-roi-payback`, for
