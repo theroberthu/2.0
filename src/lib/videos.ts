@@ -74,6 +74,139 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'tomra-bottle-recycling-business',
+    youtubeId: 'ZdP0T80z2Cw',
+    youtubeTitle: 'Why Your Empty Bottle Is Big Business for TOMRA',
+    h1: 'Why Your Empty Bottle Is Big Business for TOMRA',
+    seoTitle: 'Why Your Empty Bottle Is Big Business for TOMRA',
+    metaDescription:
+      'TOMRA turns bottle returns and AI sorting into a business. What its machines can decide, what they cannot, and why sorted material still needs a buyer.',
+    dek: 'Collecting a bottle and making money from it are different jobs. Machines can identify and separate material. Someone still has to want to buy what comes out.',
+    uploadDate: '2026-10-26T16:00:37-07:00',
+    duration: 'PT5M44S',
+    durationLabel: '5 min 44 sec',
+    topic: 'Energy and infrastructure',
+    subject: 'TOMRA recycling',
+    thumbnail: '/images/videos/tomra-bottle-recycling-business.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of a plastic bottle inside a lit sorting machine under the words Your Trash. Their Business.',
+    sections: [
+      {
+        paragraphs: [
+          'You paid for the bottle and finished the drink. Inside a return machine, it now has to earn a second life: identified, separated and kept useful enough for another buyer.',
+          'The Norwegian company behind many of those machines is TOMRA. In the third quarter of 2026 it reported revenue of EUR 366 million, roughly $410 million, across its Collection, Recycling and Food divisions. That is group revenue, not revenue from bottles or from AI alone. And there is a big difference between collecting something and making money from it.',
+        ],
+      },
+      {
+        heading: 'Who gets paid',
+        paragraphs: [
+          'At a supermarket, you feed an eligible container into a reverse vending machine and get your deposit back. That refund is your own money returning to you, not TOMRA’s profit on the bottle. TOMRA’s Collection business develops, sells, leases and services the machines and the data systems behind them, and its Material Recovery operation collects and processes empty containers for beverage producers on the US East Coast and in Canada.',
+          'The idea predates the AI boom. In 1972, brothers Petter and Tore Planke built a machine in a shed in Asker, Norway, for a grocer who wanted an easier way to take back empty bottles. A supermarket headache became an international equipment business.',
+          'The next opportunity is in the UK. England and Northern Ireland’s deposit scheme comes into force on October 1, 2027. On October 21, 2026, TOMRA said it had signed a letter of intent to become preferred supplier to an unnamed UK retail chain, covering a potential 2,000 machine installations, with deliveries planned from 2027. That is a potential deployment, not a completed rollout, and the machines have to keep working long after opening day.',
+        ],
+      },
+      {
+        heading: 'Inside the sorting decision',
+        paragraphs: [
+          'The second route starts with mixed waste, where there is no tidy queue of eligible bottles. The operator has to turn a mixture into separate streams someone can process.',
+          'Near Oslo, a facility called ROAF gives a real example. TOMRA’s 2022 customer account described 16 AUTOSORT optical sorters processing 40 tonnes of waste an hour, with separated plastics and paper sold to European processors. It was a whole plant built with other partners, including the plant builder STADLER, not 16 machines doing everything alone. It was also an older installation, not evidence of the newest AI. The commercial question was the same: whether the mixture could become something a buyer wanted.',
+        ],
+      },
+      {
+        heading: 'What newer AI adds',
+        paragraphs: [
+          'An operator wants to recover useful material without letting unwanted material spoil the output. Reject too much, and value leaves with the waste. And plastic is not one material with one destination.',
+          'TOMRA’s optical systems use sensors, including near-infrared and visible light, to tell materials apart. Its newer GAINnext system adds deep-learning visual classification for harder tasks, such as separating food-contact PET bottles from non-food containers like detergent bottles. The question becomes more specific than whether something is plastic. It becomes whether this is the packaging a particular output needs.',
+          'TOMRA says the technology improves recovery and purity, without giving a universal figure, and results depend on the material and the job. Sorting also does not produce finished food-safe recycled plastic; further processing still matters. AI can make a finer distinction, and its value still has to show up in what the plant can sell.',
+        ],
+      },
+      {
+        heading: 'The costs behind the machine',
+        paragraphs: [
+          'There is no honest universal dollar value for a better-sorted pile. It depends on the buyer’s specification, the volume recovered, the selling price and the cost of getting there, including equipment, energy, maintenance and the rest of the plant. Recovering more material helps only if the extra value survives those costs, the same arithmetic behind [why AI that works doesn’t always make a business more money](/videos/ai-business-roi-payback).',
+          'TOMRA’s own latest results contain that tension. Group revenue grew 20%, while the company still described the waste recovery and plastics recycling markets as soft. Its Horizon segment reported adjusted EBITA of minus EUR 1.5 million, about $1.7 million, mainly because of higher disposal costs in its Feedstock business. That is one newer segment, not a loss for the whole group, but it is a useful reality check from inside the company: waste does not become profitable because someone calls it a resource.',
+        ],
+      },
+      {
+        heading: 'Who will buy the output',
+        paragraphs: [
+          'Selling a machine and operating a material business expose a company to different problems. For the equipment customer, the test is actual output and operating cost. For TOMRA, repeat business depends on whether customers can justify the next investment.',
+          'Back at the bottle, the industry sees a series of decisions: collect it, identify it, separate it, process it and find a buyer. Technology can improve those decisions. It cannot skip them.',
+          'Would you use a bottle-return machine if one were nearby?',
+        ],
+      },
+    ],
+    takeaways: [
+      'TOMRA reported Q3 2026 revenue of EUR 366 million, about $410 million, up 20%, across Collection, Recycling and Food. It is not revenue from bottles or AI alone.',
+      'A deposit refund is the customer’s own money returning, not TOMRA’s profit. TOMRA sells, leases and services the machines.',
+      'TOMRA’s UK deal is a letter of intent for a potential 2,000 installations, with deliveries planned from 2027 as England and Northern Ireland’s deposit scheme begins.',
+      'GAINnext adds deep-learning classification, such as separating food-contact PET from detergent bottles, but sorting still needs further processing and a buyer.',
+      'TOMRA described waste recovery and plastics recycling markets as soft, and its Horizon segment lost about $1.7 million in the quarter on higher disposal costs.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The business after the bottle' },
+      { time: '0:43', label: 'Who gets paid?' },
+      { time: '1:54', label: 'Inside the sorting decision' },
+      { time: '2:41', label: 'What newer AI adds' },
+      { time: '3:42', label: 'The costs behind the machine' },
+      { time: '4:49', label: 'Who will buy the output?' },
+    ],
+    sources: [
+      {
+        label: 'TOMRA Systems ASA third quarter 2026 report',
+        date: 'October 23, 2026',
+        href: 'https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/quarterly-results-files/2026/3q/tomra-2026-q3-report.pdf',
+      },
+      {
+        label: 'TOMRA appointed preferred supplier to leading retail chain in UK',
+        date: 'October 21, 2026',
+        href: 'https://news.cision.com/tomra-systems-asa/r/tomra--appointed-preferred-supplier-to-leading-retail-chain-in-uk,c4413419',
+      },
+      {
+        label: 'ROAF customer story (TOMRA)',
+        date: 'August 2022',
+        href: 'https://www.tomra.com/waste-metal-recycling/media-center/customer-stories/roaf',
+      },
+      {
+        label: 'GAINnext product information (TOMRA)',
+        date: 'Checked October 27, 2026',
+        href: 'https://www.tomra.com/waste-metal-recycling/products/machines/gainnext',
+      },
+      {
+        label: 'TOMRA history',
+        date: 'TOMRA',
+        href: 'https://www.tomra.com/about-tomra/our-history',
+      },
+      {
+        label: 'The Deposit Scheme for Drinks Containers (England and Northern Ireland) Regulations 2025',
+        date: 'In force October 1, 2027',
+        href: 'https://www.legislation.gov.uk/uksi/2025/67/made',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. Dollar figures are approximate conversions at EUR 1 = USD 1.1193. The Horizon loss is adjusted EBITA for one segment, not TOMRA Group’s net result. ROAF’s 40 tonnes an hour is reported plant capacity, not a measured AI result or a verified customer payback.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A finer decision matters only if the result it produces is measurably better.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Technology can improve each step of a process. It cannot skip the steps.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Archival footage and press images from the TOMRA newsroom are used in independent editorial reporting; process footage is not presented as a current GAINnext demonstration or footage of the ROAF site. Packaging illustrations are explanatory, not live tests, and country maps use public-domain Natural Earth data. The thumbnail is edited illustrative artwork derived from TOMRA process imagery. Independent commentary; no endorsement implied. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Your Empty Bottle Is Big Business for TOMRA',
+      description:
+        'You paid for the drink. Why does someone else want the empty bottle? Follow TOMRA from supermarket return machines to AI sorting lines, and the buyer the output still needs.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'ikea-billie-ai-reskilling',
     youtubeId: 'I0YKeY9Of2M',
     youtubeTitle: 'IKEA’s AI Saved $14 Million. What Happened to Its People?',
@@ -2032,7 +2165,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'ikea-billie-ai-reskilling'
+export const FEATURED_VIDEO_SLUG: string | null = 'tomra-bottle-recycling-business'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -2058,6 +2191,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'gGjWbdE90fU', title: 'IBM Wants AI to Spot Fraud Before Your Money Leaves', uploadDate: '2026-10-26T17:00:22-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/gGjWbdE90fU.jpg' },
+  { youtubeId: 'O-eEMtETYxQ', title: 'This Flying Robot Weighs Less Than a Gram. Battery Included.', uploadDate: '2026-10-26T09:00:20-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/O-eEMtETYxQ.jpg' },
   { youtubeId: 'RbEGpMcUQag', title: 'Why Intel Asked Washington for a Robot Exception', uploadDate: '2026-10-25T17:00:26-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/RbEGpMcUQag.jpg', related: ['intel-chip-manufacturing'] },
   { youtubeId: 'CCZVT8yf0mE', title: 'This Tiny Robot Has Muscles Grown From Mouse Cells', uploadDate: '2026-10-25T09:00:05-07:00', durationLabel: '0:54', thumbnail: '/images/shorts/CCZVT8yf0mE.jpg' },
   { youtubeId: 'BqoMSfQ5laY', title: 'This Robot Gets Hired for One Thing: Your Attention', uploadDate: '2026-10-24T17:00:28-07:00', durationLabel: '0:54', thumbnail: '/images/shorts/BqoMSfQ5laY.jpg' },

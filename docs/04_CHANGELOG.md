@@ -6,6 +6,35 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.65 - TOMRA video companion page and two new Shorts (2026-10-27)
+
+**What changed.** New companion page, `/videos/tomra-bottle-recycling-business`,
+for "Why Your Empty Bottle Is Big Business for TOMRA"
+(https://youtu.be/ZdP0T80z2Cw): H1 and search title match the YouTube title,
+about 760 words written against the narration, five takeaways, six
+timestamped chapters, six sources, related research from current-standard
+articles only. VideoObject from verified YouTube values (uploadDate
+2026-10-26T16:00:37-07:00, duration PT5M44S) with six `Clip` chapters. Topic
+"Energy and infrastructure". The homepage Featured Video now points at this
+video. Two Shorts from October 26 join the top of `SHORTS` (23 in total), with
+no related documentary.
+
+**Sourcing and boundaries.** TOMRA Q3 2026 report (October 23): revenue 366
+MEUR, about $410 million at 1.1193, up 20%; waste recovery and plastics
+recycling markets "soft"; Horizon EBITA -1.5 MEUR (about $1.7 million) on
+higher Feedstock disposal costs, one segment, not the group result.
+Collection sells, leases and services machines; Material Recovery operates on
+the US East Coast and in Canada. UK letter of intent (October 21, 2026): about
+2,000 potential installations for an unnamed retailer, deliveries from 2027.
+England and Northern Ireland deposit scheme in force October 1, 2027. ROAF
+(2022): 16 AUTOSORT units, 40 tonnes an hour, built by STADLER. GAINnext:
+deep-learning classification, no numeric purity figures. Founding: Petter and
+Tore Planke, Asker, 1972.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.64 - Eleven new Shorts and a show-all toggle on /videos (2026-10-26)
 
 **What changed.** The eleven Shorts published October 21 to 25 join the top of
