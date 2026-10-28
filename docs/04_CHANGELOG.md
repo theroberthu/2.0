@@ -6,6 +6,65 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.68 - Related documentary card on blog posts (2026-10-28)
+
+**What changed.** Ten blog posts now end with a "Related documentary" card,
+after the closing question and before Related Research. It shows the video
+thumbnail, the companion page H1 and dek, the duration and a "Watch the
+documentary" link to `/videos/[slug]`. Pairings are hand-picked in
+`POST_VIDEOS` (src/lib/videos.ts), at most one video per post; every other
+post renders nothing. New component `RelatedVideoCard`. Clicks fire
+`related_video_click` (`video_slug`, `location: blog_post`).
+
+| Post | Documentary |
+|---|---|
+| kroger-ecommerce-operating-model | walmart-jet-acquisition |
+| walmart-people-led-tech-powered-operating-model | walmart-jet-acquisition |
+| albertsons-ai-planning-task-depth | ikea-billie-ai-reskilling |
+| ai-wont-fix-broken-work | dominos-turnaround |
+| noibu-ai-agents-closed-loop-ecommerce | ai-business-roi-payback |
+| uber-chatgpt-work-enterprise-ai-adoption | ai-business-roi-payback |
+| ai-checkout-interface-commerce-infrastructure | fedex-overnight-delivery-promise |
+| retailers-ai-traffic-customer-ownership | royal-caribbean-sandals-vacation-strategy |
+| walmart-sparky-ai-personalization-pricing-governance | chatgpt-workout-plan-trust |
+| anthropic-project-swap-agentic-commerce-shopper-preferences | chatgpt-workout-plan-trust |
+
+**Why.** Readers who finish a post on one idea get the documentary that shows
+it in a real operation, and each companion page gains a link from the post
+most relevant to it. The card links rather than embeds: no player weight on
+posts, and the companion page stays the single page Google treats as the
+video's home. Pairings are not derived automatically from the videos'
+`related` lists, because that reverse mapping is noisy (one post would get
+nine videos). Pre-July 2026 posts are excluded until the legacy content
+review. No article text or Supabase rows changed.
+
+**Follow-ups.** Add a pairing when a new documentary genuinely extends a
+current post. Compare `related_video_click` by post after a few weeks.
+
+---
+
+## Release 1.67 - "Read the summary" jump link on video pages (2026-10-27)
+
+**What changed.** Every `/videos/[slug]` page gains a "Read the summary" link
+in the byline row under the dek, next to the publish date and duration. It
+jumps to the Key takeaways box (now `id="summary"`, with `scroll-mt-24` so the
+sticky header does not cover it). Clicks fire a GA4 event,
+`summary_jump_click` (`video_slug`, `youtube_id`, `location: hero`). On
+phones the link has a 36px tap target without changing the row's layout.
+
+**Why.** Readers who prefer text can reach the summary in one tap, while the
+player stays the first large element on the page. Moving the takeaways above
+the player was considered and rejected: Google indexes a page for video
+results only when the video is prominent and the main content, and five
+bullets would push the player down by roughly 400px, below the first screen
+on phones.
+
+**Follow-ups.** Register `location` and `video_slug` as GA4 custom dimensions
+if not already done, and compare `summary_jump_click` against
+`watch_on_youtube_click` after a few weeks.
+
+---
+
 ## Release 1.66 - The RealReal and Meta Muse inventory-holds authority article (2026-10-27)
 
 **What changed.** New authority/thesis article,

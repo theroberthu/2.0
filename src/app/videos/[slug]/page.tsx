@@ -217,6 +217,18 @@ export default function VideoCompanionPage({ params }: Props) {
             <span>
               <time dateTime={video.duration}>{video.durationLabel}</time> watch
             </span>
+            <span className="hidden sm:inline text-gray-600" aria-hidden="true">·</span>
+            <TrackedLink
+              href="#summary"
+              event="summary_jump_click"
+              params={{ ...trackParams, location: 'hero' }}
+              className="inline-flex items-center gap-1 py-2 -my-2 md:py-0 md:my-0 font-medium text-brand-accent hover:text-white transition-colors duration-200"
+            >
+              Read the summary
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -256,7 +268,7 @@ export default function VideoCompanionPage({ params }: Props) {
       <article className="pb-14 md:pb-16 bg-brand-dark">
         <div className="max-w-[720px] mx-auto px-5 sm:px-8">
           {/* Key takeaways */}
-          <aside className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-6 md:p-7 mb-10" aria-labelledby="key-takeaways">
+          <aside id="summary" className="scroll-mt-24 bg-white/[0.04] border border-white/[0.08] rounded-xl p-6 md:p-7 mb-10" aria-labelledby="key-takeaways">
             <h2 id="key-takeaways" className="text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-brand-gold mb-4">
               Key takeaways
             </h2>

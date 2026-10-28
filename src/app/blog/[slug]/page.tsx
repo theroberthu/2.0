@@ -11,8 +11,10 @@ import BlogSidebar from '@/components/BlogSidebar'
 import MobileTocCard from '@/components/MobileTocCard'
 import FloatingBookCta from '@/components/FloatingBookCta'
 import ReadingProgress from '@/components/ReadingProgress'
+import RelatedVideoCard from '@/components/RelatedVideoCard'
 import { SITE_URL } from '@/lib/constants'
 import { showDek } from '@/lib/blog-dek'
+import { videoForPost } from '@/lib/videos'
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -237,6 +239,7 @@ export default async function BlogPostPage(props: Props) {
   const breadcrumbSchema = generateBreadcrumbSchema(post)
   const faqSchema = generateFAQSchema(post)
   const videoSchema = generateVideoSchema(post)
+  const relatedVideo = videoForPost(post.slug)
 
   // Build the "Related Research" cluster. Priority order:
   //   1. Curated slugs in schema_json.related_posts (author override)
@@ -400,6 +403,8 @@ export default async function BlogPostPage(props: Props) {
               ) : (
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>
               )}
+
+              {relatedVideo && <RelatedVideoCard video={relatedVideo} />}
 
             </div>
 
