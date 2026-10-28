@@ -12,9 +12,10 @@ import MobileTocCard from '@/components/MobileTocCard'
 import FloatingBookCta from '@/components/FloatingBookCta'
 import ReadingProgress from '@/components/ReadingProgress'
 import RelatedVideoCard from '@/components/RelatedVideoCard'
+import TrackedLink from '@/components/TrackedLink'
 import { SITE_URL } from '@/lib/constants'
 import { showDek } from '@/lib/blog-dek'
-import { videoForPost } from '@/lib/videos'
+import { videosForPost } from '@/lib/videos'
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -239,7 +240,7 @@ export default async function BlogPostPage(props: Props) {
   const breadcrumbSchema = generateBreadcrumbSchema(post)
   const faqSchema = generateFAQSchema(post)
   const videoSchema = generateVideoSchema(post)
-  const relatedVideo = videoForPost(post.slug)
+  const relatedVideos = videosForPost(post.slug)
 
   // Build the "Related Research" cluster. Priority order:
   //   1. Curated slugs in schema_json.related_posts (author override)
@@ -367,6 +368,25 @@ export default async function BlogPostPage(props: Props) {
                 <span>{post.read_time_minutes} min read</span>
               </>
             )}
+            {/* Top entry to the related documentary, for readers who prefer
+                video. The full card sits after the article. */}
+            {relatedVideos[0] && (
+              <>
+                <span className="hidden sm:inline text-gray-600" aria-hidden="true">·</span>
+                <TrackedLink
+                  href={`/videos/${relatedVideos[0].slug}`}
+                  event="related_video_click"
+                  params={{ video_slug: relatedVideos[0].slug, location: 'blog_post_byline' }}
+                  ariaLabel={`Related documentary: ${relatedVideos[0].h1} (${relatedVideos[0].durationLabel})`}
+                  className="inline-flex items-center gap-1.5 py-2 -my-2 md:py-0 md:my-0 font-medium text-brand-accent hover:text-white transition-colors duration-200"
+                >
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  Related documentary, {relatedVideos[0].durationLabel.replace(/ \d+ sec$/, '')}
+                </TrackedLink>
+              </>
+            )}
           </div>
 
           {/* Featured image */}
@@ -404,7 +424,7 @@ export default async function BlogPostPage(props: Props) {
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>
               )}
 
-              {relatedVideo && <RelatedVideoCard video={relatedVideo} />}
+              {relatedVideos.length > 0 && <RelatedVideoCard videos={relatedVideos} />}
 
             </div>
 

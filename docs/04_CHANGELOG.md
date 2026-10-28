@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.70 - Top documentary link on blog posts; On added to "AI Won't Fix Broken Work" (2026-10-28)
+
+**What changed.** `/blog/ai-wont-fix-broken-work` now ends with two
+documentary cards: Domino's turnaround (unchanged) and the new On LightSpray
+page. `POST_VIDEOS` values are now arrays of companion page slugs, so a post
+can carry more than one documentary; `videoForPost` became `videosForPost`,
+and `RelatedVideoCard` takes `videos` and renders a list under "Related
+documentaries" when there is more than one. Every other post is unchanged.
+
+Every paired post also gains a "Related documentary, N min" link in the
+byline row (after the reading time), pointing at its first documentary's
+companion page. On phones it wraps to its own line with a 36px tap target,
+and the separator dot before it is hidden below the sm breakpoint. Clicks
+from the two placements are now told apart: `related_video_click` carries
+`location: blog_post_byline` (top) or `blog_post_end` (card; was
+`blog_post` in Release 1.68).
+
+**Why.** Requested by Robert. On redesigned the shoe upper around a new
+production method instead of automating the old sequence, which is the
+post's argument. The end card reaches only readers who finish the post, and
+phones have no sidebar, so the byline link gives every reader one way to the
+video without moving the article down or adding a box to the body.
+
+**Follow-ups.** After a few weeks, compare `related_video_click` by
+`location` (byline versus end) and check GA4 scroll depth on paired posts.
+
+---
+
 ## Release 1.69 - On LightSpray video companion page and two new Shorts (2026-10-28)
 
 **What changed.** New companion page,

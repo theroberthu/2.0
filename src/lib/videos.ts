@@ -2303,26 +2303,25 @@ export function getVideo(slug: string): VideoEntry | undefined {
 }
 
 /**
- * Blog post slug -> companion page slug, shown as a "Related documentary" card
- * after the article. Hand-picked, at most one per post, and only where the
+ * Blog post slug -> companion page slugs, shown as "Related documentary" cards
+ * after the article. Hand-picked, usually one per post, and only where the
  * documentary genuinely extends the article's argument. Most posts get none.
  */
-export const POST_VIDEOS: Record<string, string> = {
-  'kroger-ecommerce-operating-model': 'walmart-jet-acquisition',
-  'walmart-people-led-tech-powered-operating-model': 'walmart-jet-acquisition',
-  'albertsons-ai-planning-task-depth': 'ikea-billie-ai-reskilling',
-  'ai-wont-fix-broken-work': 'dominos-turnaround',
-  'noibu-ai-agents-closed-loop-ecommerce': 'ai-business-roi-payback',
-  'uber-chatgpt-work-enterprise-ai-adoption': 'ai-business-roi-payback',
-  'ai-checkout-interface-commerce-infrastructure': 'fedex-overnight-delivery-promise',
-  'retailers-ai-traffic-customer-ownership': 'royal-caribbean-sandals-vacation-strategy',
-  'walmart-sparky-ai-personalization-pricing-governance': 'chatgpt-workout-plan-trust',
-  'anthropic-project-swap-agentic-commerce-shopper-preferences': 'chatgpt-workout-plan-trust',
+export const POST_VIDEOS: Record<string, string[]> = {
+  'kroger-ecommerce-operating-model': ['walmart-jet-acquisition'],
+  'walmart-people-led-tech-powered-operating-model': ['walmart-jet-acquisition'],
+  'albertsons-ai-planning-task-depth': ['ikea-billie-ai-reskilling'],
+  'ai-wont-fix-broken-work': ['dominos-turnaround', 'on-lightspray-running-shoe-manufacturing'],
+  'noibu-ai-agents-closed-loop-ecommerce': ['ai-business-roi-payback'],
+  'uber-chatgpt-work-enterprise-ai-adoption': ['ai-business-roi-payback'],
+  'ai-checkout-interface-commerce-infrastructure': ['fedex-overnight-delivery-promise'],
+  'retailers-ai-traffic-customer-ownership': ['royal-caribbean-sandals-vacation-strategy'],
+  'walmart-sparky-ai-personalization-pricing-governance': ['chatgpt-workout-plan-trust'],
+  'anthropic-project-swap-agentic-commerce-shopper-preferences': ['chatgpt-workout-plan-trust'],
 }
 
-export function videoForPost(postSlug: string): VideoEntry | undefined {
-  const slug = POST_VIDEOS[postSlug]
-  return slug ? getVideo(slug) : undefined
+export function videosForPost(postSlug: string): VideoEntry[] {
+  return (POST_VIDEOS[postSlug] ?? []).flatMap((slug) => getVideo(slug) ?? [])
 }
 
 /**
