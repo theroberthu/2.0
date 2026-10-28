@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.66 - The RealReal and Meta Muse inventory-holds authority article (2026-10-27)
+
+**What changed.** New authority/thesis article,
+`/blog/realreal-meta-muse-ai-agent-inventory-holds`: a reported Meta Muse test
+that repeatedly renewed The RealReal's 20-minute cart holds on one-of-one
+listings without a purchase, and The RealReal's response, read as evidence
+that agent permissions must cover discovery, account access, cart actions,
+reservations and purchase separately. H1 "The RealReal Shows Why AI Shopping
+Permissions Must Begin Before Checkout"; search title "AI Shopping Agents and
+Cart Holds: Lessons From The RealReal". 1,122 words excluding the H1 (1,089
+prose only), four internal links, six external sources linked once each. No
+Key findings box (thesis convention).
+
+**Boundaries.** The reporter instructed Muse to re-add the items; nothing was
+bought. The pattern is described as resembling OWASP's Denial of Inventory,
+not classified as an attack. The RealReal's 2023 terms bar robots and
+interference with other users, but the company did not say Muse broke them.
+The RealReal made login, cart and checkout harder for all agents while
+keeping discovery open; it did not announce a five-part permission model.
+Meta's conclusions are limited to what it has published. Operator controls
+are labeled as implications, not announced features.
+
+**AI Commerce 2027.** One tracker row (2026-10-26, The RealReal, Trust,
+"Company statement reported by The Verge"). No text change. `LAST_UPDATED`
+and the sitemap date move to 2026-10-27.
+
+---
+
 ## Release 1.65 - TOMRA video companion page and two new Shorts (2026-10-27)
 
 **What changed.** New companion page, `/videos/tomra-bottle-recycling-business`,

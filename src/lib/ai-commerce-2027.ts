@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-23'
+export const LAST_UPDATED = '2026-10-27'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-26',
+    org: 'The RealReal',
+    development: 'Tightened bot defenses so outside agents find it much harder to log in, add to cart and check out, while they can still surface listings, after a reported Muse test repeatedly renewed 20-minute cart holds on one-of-one items without a purchase',
+    affects: 'Trust',
+    evidenceType: 'Company statement reported by The Verge',
+    changed: 'A retailer separated discovery from cart and checkout permissions for outside agents, and the trigger was a reservation, not a purchase',
+    href: '/blog/realreal-meta-muse-ai-agent-inventory-holds',
+  },
   {
     date: '2026-10-21',
     org: 'Meta',
