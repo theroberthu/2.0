@@ -74,6 +74,137 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'on-lightspray-running-shoe-manufacturing',
+    youtubeId: 'aoYU4ZRP1CE',
+    youtubeTitle: 'Why On Is Spraying Its Running Shoes',
+    h1: 'Why On Is Spraying Its Running Shoes',
+    seoTitle: 'On LightSpray: Why On Is Spraying Its Running Shoes',
+    metaDescription:
+      'On’s LightSpray robots spray a one-piece shoe upper in about three minutes. How a glue-gun experiment became factories, and what On has not disclosed.',
+    dek: 'A robot can spray a shoe upper in about three minutes. The harder job is turning a Halloween-inspired experiment into factories that repeat it, and a product people choose to buy.',
+    uploadDate: '2026-10-27T16:00:10-07:00',
+    duration: 'PT4M44S',
+    durationLabel: '4 min 44 sec',
+    topic: 'Manufacturing',
+    subject: 'On LightSpray',
+    thumbnail: '/images/videos/on-lightspray-running-shoe-manufacturing.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of a robot arm holding an On running shoe under the words Sprayed. Not Sewn.',
+    sections: [
+      {
+        paragraphs: [
+          'This robot is spraying a running shoe, and the idea started with a Halloween decoration. A continuous filament wraps around a foot-shaped mold and becomes a one-piece upper, the part that holds your foot. On says that takes around three minutes.',
+          'I bought Cloud 6 shoes last year, and recently the waterproof version for a trip to Japan. Those are not LightSpray models, but they made me curious about what On is actually changing in the way shoes get made. The robot is the eye-catching part. The bigger story is whether a strange experiment can become a repeatable business.',
+          'In September 2026, On set a company-wide ambition of at least CHF 5.6 billion in annual net sales by 2029, which it described as approaching $7 billion at current exchange rates. That is a future target for the whole company, not money already earned by these robots.',
+        ],
+      },
+      {
+        heading: 'The Halloween experiment',
+        paragraphs: [
+          'According to On, a member of its innovation team saw a video of a hot glue gun making fake spiderwebs. Most of us would have seen a Halloween decoration. The team saw a fast way to form fabric around a complicated shape. They started with a modified handheld glue gun and a simple prototype upper, then developed a unit that produces a continuous filament and the robot programming to place it where it was needed.',
+          'The important move was changing the product and the process together. On says traditional upper production involves roughly 200 steps, from making the yarn to sewing and assembly, often across several factories. Instead of asking a robot to imitate every cut and stitch, On developed an upper a robot could spray, with its structure engineered through programmed movement.',
+          'On says the technology took four years and a team of about 20 people to reach product maturity. The three minutes on the machine came after years of work behind it.',
+        ],
+      },
+      {
+        heading: 'The factory is the next invention',
+        paragraphs: [
+          'On introduced LightSpray publicly in July 2024, in the Cloudboom Strike LS racing shoe. In July 2025 it opened a dedicated LightSpray factory in Zurich with four robots. Look at what happens around the robot: shoes waiting, a controlled work area, automated ink-jet branding and people handling the finished product. The spray is one operation inside a production system, the same lesson as [how Intel makes chips](/videos/intel-chip-manufacturing).',
+          'In February 2026, On announced a second facility near Busan, South Korea, adding 32 robots, and said global LightSpray production capacity would rise 30-fold in 2026. That is a capacity claim, not a statement that sales grew 30-fold. On also said there was no existing blueprint for scaling robot-sprayed uppers, so it had to build systems to coordinate many robots at once and quality protocols for automated production.',
+          'That is where the challenge changes. The motion has to work consistently across sizes, materials and production runs, and quality has to hold from one demonstration to the next customer order. Busan also brought LightSpray to the Cloudmonster 3 Hyper, a training shoe, moving the technology beyond its original racing launch. On is trying to turn a headline into a product platform.',
+        ],
+      },
+      {
+        heading: 'Faster does not automatically mean cheaper',
+        paragraphs: [
+          'A faster process is not the same as a cheaper shoe. The robot still needs equipment, material, programming, maintenance and a factory around it. The sole does not appear when the spray starts, and an efficient upper does not tell us what the whole shoe costs to make. On has not published the LightSpray factory economics needed to judge a payback period, so I do not claim the factories have paid for themselves. Whether a working technology makes money is [a separate question](/videos/ai-business-roi-payback).',
+          'What On has shown is a premium strategy. In its second quarter 2026 results, it reported a group gross profit margin of 65.4%, while emphasizing full-price selling and growth in its own direct channels. That is a company-wide figure, not a LightSpray margin, and gross profit still has to cover research, stores, marketing and other operating costs. This is not a robot replacing a sewing machine to sell the same thing for less. On is trying to make a distinctive product and give customers a reason to pay for it.',
+        ],
+      },
+      {
+        heading: 'Back to the customer',
+        paragraphs: [
+          'I bought Cloud 6 shoes, then chose the waterproof version for my Japan trip. That is a far more ordinary decision than watching a robot spray a shoe, but it is the decision the business eventually has to win. LightSpray has to earn its place through what someone actually wants to wear, and a manufacturing video cannot answer that for every foot or every run.',
+          'What I find most interesting is how On approached the problem. It did not just automate the old sequence. It designed a different upper around a different production method, then started building the system to repeat it. The robot makes a great opening shot. The real story is what happens when that shot has to become thousands of reliable products.',
+          'Would the way a shoe is made influence your next purchase?',
+        ],
+      },
+    ],
+    takeaways: [
+      'On says LightSpray sprays a one-piece upper from a continuous filament in around three minutes. That covers the upper, not the whole shoe made from raw materials.',
+      'The idea came from a video of a hot glue gun making Halloween spiderwebs. On says it took four years and about 20 people to reach product maturity.',
+      'On opened a four-robot LightSpray factory in Zurich in July 2025 and announced a 32-robot facility near Busan in February 2026, targeting a 30-fold capacity increase in 2026. That is capacity, not sales.',
+      'On reported a 65.4% group gross margin in Q2 2026. It is a company-wide figure, not a LightSpray margin, and On has not disclosed LightSpray factory economics.',
+      'On’s 2029 ambition of at least CHF 5.6 billion in net sales, approaching $7 billion, is a company-wide target, not LightSpray revenue.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A shoe sprayed into existence' },
+      { time: '0:56', label: 'The Halloween experiment' },
+      { time: '1:42', label: 'The factory is the next invention' },
+      { time: '2:49', label: 'Faster does not automatically mean cheaper' },
+      { time: '3:48', label: 'Back to the customer' },
+    ],
+    sources: [
+      {
+        label: 'On unveils LightSpray upper technology (On press release)',
+        date: 'July 15, 2024',
+        href: 'https://press.on-running.com/swiss-sportswear-brand-on-unveils-lightspray-a-new-high-performance-upper-technology-crafted-by-a-revolutionary-single-step-manufacturing-process-rvo865',
+      },
+      {
+        label: 'On opens LightSpray production facility in Zurich (On press release)',
+        date: 'July 3, 2025',
+        href: 'https://press.on-running.com/on-opens-the-worlds-first-lightspray-production-facility-in-zurich',
+      },
+      {
+        label: 'On scales LightSpray with new South Korea factory (On press release)',
+        date: 'February 25, 2026',
+        href: 'https://press.on-running.com/-1wgx4h',
+      },
+      {
+        label: 'On unveils strategy and 2029 financial targets (On press release)',
+        date: 'September 22, 2026',
+        href: 'https://press.on-running.com/on-enters-next-chapter-unveils-strategy-to-redefine-what-a-sportswear-brand-can-be-alongside-2029-financial-targets',
+      },
+      {
+        label: 'On reports results for the second quarter 2026',
+        date: 'August 11, 2026',
+        href: 'https://s21.q4cdn.com/241001792/files/doc_financials/2026/q2/2026-08-11_On-Reports-Results-for-the-Second-Quarter-1.pdf',
+      },
+      {
+        label: 'The On Cloud evolution continues with the Cloud 6 (On press release)',
+        date: 'March 12, 2025',
+        href: 'https://press.on-running.com/the-on-cloud-evolution-continues-with-the-cloud-6',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The approaching $7 billion figure is On’s own USD estimate of its CHF 5.6 billion 2029 net sales ambition at September 2026 exchange rates. The 30-fold figure is stated capacity, not realized sales. The 65.4% figure is On Group’s Q2 2026 gross margin, not a LightSpray product margin or net profit.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'On redesigned the product around the process instead of automating the old sequence.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Owning capabilities and running them as one repeatable system are different achievements.',
+      },
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A faster process matters only if the result shows up in the business.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Official footage and product photography courtesy of On, and Busan factory footage by SeongYoun Vhae / On, used for independent editorial reporting from On’s press resources. The Cloud 6 image is illustrative of the model, not a photograph of Robert’s own pair, and historical prototype details are attributed to On. The thumbnail is edited illustrative artwork derived from an official On robot photograph. Added sound design is not a recording of On’s machinery. Independent commentary; no endorsement implied. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why On Is Spraying Its Running Shoes',
+      description:
+        'A Halloween decoration helped inspire a new way to make a running shoe. Follow On’s LightSpray from a glue-gun experiment to robot factories, and the economics still undisclosed.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'tomra-bottle-recycling-business',
     youtubeId: 'ZdP0T80z2Cw',
     youtubeTitle: 'Why Your Empty Bottle Is Big Business for TOMRA',
@@ -2165,7 +2296,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'tomra-bottle-recycling-business'
+export const FEATURED_VIDEO_SLUG: string | null = 'on-lightspray-running-shoe-manufacturing'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -2214,6 +2345,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'GpnmmEujiUk', title: 'Why McDonald’s Is Showing You Car Insurance', uploadDate: '2026-10-27T17:00:37-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/GpnmmEujiUk.jpg' },
+  { youtubeId: 'Lh1MZx7F9o8', title: 'This Running Shoe Started With a Glue Gun', uploadDate: '2026-10-27T09:00:02-07:00', durationLabel: '0:52', thumbnail: '/images/shorts/Lh1MZx7F9o8.jpg', related: ['on-lightspray-running-shoe-manufacturing'] },
   { youtubeId: 'gGjWbdE90fU', title: 'IBM Wants AI to Spot Fraud Before Your Money Leaves', uploadDate: '2026-10-26T17:00:22-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/gGjWbdE90fU.jpg' },
   { youtubeId: 'O-eEMtETYxQ', title: 'This Flying Robot Weighs Less Than a Gram. Battery Included.', uploadDate: '2026-10-26T09:00:20-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/O-eEMtETYxQ.jpg' },
   { youtubeId: 'RbEGpMcUQag', title: 'Why Intel Asked Washington for a Robot Exception', uploadDate: '2026-10-25T17:00:26-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/RbEGpMcUQag.jpg', related: ['intel-chip-manufacturing'] },

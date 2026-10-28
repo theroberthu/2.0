@@ -6,6 +6,38 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.69 - On LightSpray video companion page and two new Shorts (2026-10-28)
+
+**What changed.** New companion page,
+`/videos/on-lightspray-running-shoe-manufacturing`, for "Why On Is Spraying
+Its Running Shoes" (https://youtu.be/aoYU4ZRP1CE): H1 matches the YouTube
+title, search title "On LightSpray: Why On Is Spraying Its Running Shoes",
+about 820 words written against the narration, five takeaways, five
+timestamped chapters, six sources, related research from current-standard
+articles only, inline links to the Intel and AI payback documentaries.
+VideoObject from verified YouTube values (uploadDate
+2026-10-27T16:00:10-07:00, duration PT4M44S). Topic "Manufacturing". The
+homepage Featured Video now points at this video. Two Shorts from October 27
+join the top of `SHORTS` (25 in total): "This Running Shoe Started With a
+Glue Gun" (related to the new page) and "Why McDonald's Is Showing You Car
+Insurance" (no related documentary).
+
+**Sourcing and boundaries.** On press releases: LightSpray launch (July 15,
+2024; glue-gun origin, about three minutes, automated ink-jet branding, about
+200 steps in traditional upper production); Zurich facility (July 3, 2025;
+four robots; four years and about 20 people to product maturity); Busan
+(February 25, 2026; 32 robots; 30-fold capacity increase in 2026; Cloudmonster
+3 Hyper); Investor Day (September 22, 2026; at least CHF 5.6 billion net
+sales in 2029, approaching USD 7 billion at current FX). Q2 2026 results
+(August 11, 2026): group gross profit margin 65.4%, full-price discipline and
+DTC growth. The page states that capacity is not sales, the margin is not a
+LightSpray margin, the 2029 figure is a company-wide target, and On has not
+disclosed LightSpray factory economics. No `POST_VIDEOS` pairing added.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.68 - Related documentary card on blog posts (2026-10-28)
 
 **What changed.** Ten blog posts now end with a "Related documentary" card,
