@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.72 - DoorDash, Instacart and the physical layer of AI commerce (2026-10-29)
+
+**What changed.** New authority/thesis article,
+`/blog/doordash-instacart-physical-layer-ai-commerce` (E-commerce Strategy),
+"DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce", meta
+title "DoorDash, Instacart and the Physical Layer of AI Commerce". 1,112
+source-body words, four internal links (DoorDash discovery, Instacart Cart
+Assistant, AI Commerce 2027, Carrot Ads as infrastructure), five primary-source
+external links (DoorDash release, DoorDash Q3 letter, Instacart 10-K, Instacart
+Q3 release, merger 8-K), no Key findings box. OG pull quote, verbatim: "An
+assistant can work out what someone wants. It cannot pick the avocado." AI
+Commerce 2027 gains an Operating layer tracker row dated 2026-10-29 (a
+definitive agreement, not a completed acquisition) and two Shift 08 sentences:
+one in evidence, one in unproven. `LAST_UPDATED` and the sitemap date were
+already 2026-10-29 from Release 1.71.
+
+**Sourcing and boundaries.** Merger 8-K (agreement signed October 28): $65.00
+per share, at least 75% cash, Instacart stockholder approval, HSR, Canada and
+Israel; outside date 12 months with up to four three-month antitrust
+extensions; $1.25 billion antitrust reverse termination fee; $650 million
+Instacart termination fee; about 19% of Instacart voting power committed.
+Joint release: close expected at the end of 2027 or the first half of 2028,
+separate and independent until then, brand, app and enterprise technology
+retained, single-membership and 50,000-store benefits proposed, open
+platform with no grocery exclusivity. DoorDash Q3 letter: "Atoms vs Bits",
+DashMart 99%+ accuracy and 10+ minutes faster (company figures), multi-year
+path to $500 million+ net synergies with more than 100% reinvested in year
+one. MCP connector described as announced with a beta waitlist from
+September 30, no usage published. No combined AI product announced.
+
+**Follow-ups.** Update the tracker when the S-4 and proxy are filed, at the
+Instacart vote, at HSR clearance and at closing or termination.
+
+---
+
 ## Release 1.71 - Shopify AI Knowledge Base and ecommerce GEO article (2026-10-29)
 
 **What changed.** New authority/thesis article,

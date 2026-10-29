@@ -483,12 +483,12 @@ export const SHIFTS: Shift[] = [
     "number": "08",
     "title": "Platform power shifts to the operating layer",
     "changed": "Commerce platforms began competing to be the system a merchant operates from, across channels they do not own.",
-    "evidence": "Amazon now lets sellers connect eBay, Shopify, TikTok and Walmart accounts to Seller Central, import and link those listings, view orders and fulfill across channels, rolling out to United States sellers at no added cost. Editing a listing once for every channel and a cross-channel profitability view are announced as coming. The same Seller Assistant carries persistent memory of each seller's pricing patterns and inventory cycles, and travels into Claude and Amazon Quick. Instacart's Carrot Ads runs advertising for more than 310 retail partners, and in September Gopuff, which owns its own storefront, fulfillment and ad sales, chose to run its storefront advertising on it. Shopify's managed setting enrolls eligible stores in new AI channels as they appear. Anthropic describes Claude as \"your intelligence layer, not a storefront or checkout.\"",
+    "evidence": "Amazon now lets sellers connect eBay, Shopify, TikTok and Walmart accounts to Seller Central, import and link those listings, view orders and fulfill across channels, rolling out to United States sellers at no added cost. Editing a listing once for every channel and a cross-channel profitability view are announced as coming. The same Seller Assistant carries persistent memory of each seller's pricing patterns and inventory cycles, and travels into Claude and Amazon Quick. Instacart's Carrot Ads runs advertising for more than 310 retail partners, and in September Gopuff, which owns its own storefront, fulfillment and ad sales, chose to run its storefront advertising on it. Shopify's managed setting enrolls eligible stores in new AI channels as they appear. Anthropic describes Claude as \"your intelligence layer, not a storefront or checkout.\" On October 29, DoorDash agreed to acquire Instacart, pending shareholder and regulatory approval, which would put Instacart's enterprise technology, Carrot Ads and marketplace under the same owner as DoorDash's delivery network.",
     "why": [
       "Channel ownership is not operating-layer ownership. A merchant can diversify where revenue comes from while consolidating how the business is run. Whoever holds the operating layer holds the memory, the workflows, the cross-channel data and, increasingly, the agent that acts on all three. That position compounds in a way a single sales channel does not."
     ],
     "consequence": "Before consolidating operations into any one platform's tools, establish three things: where the memory of your business lives and whether you can export it, which actions that platform's agent can take on channels it does not own, and what it would cost to leave.",
-    "unproven": "This is the newest shift in the report and the least proven. Amazon's multichannel tools are rolling out, its editing and profitability features are announced rather than live, and no uptake has been published. Amazon says off-Amazon data will not inform its retail decisions. That is a policy commitment, not an audited one.",
+    "unproven": "This is the newest shift in the report and the least proven. Amazon's multichannel tools are rolling out, its editing and profitability features are announced rather than live, and no uptake has been published. Amazon says off-Amazon data will not inform its retail decisions. That is a policy commitment, not an audited one. The DoorDash and Instacart agreement is not expected to close before the end of 2027.",
     "notes": [
       {
         "label": "retail media becoming infrastructure",
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-29',
+    org: 'DoorDash and Instacart',
+    development: 'Definitive agreement for DoorDash to acquire Instacart (about $17 billion equity value), subject to Instacart shareholder approval and U.S., Canadian and Israeli regulatory clearance; expected to close at the end of 2027 or in the first half of 2028; DoorDash expects to keep Instacart\'s brand, app and enterprise technology products',
+    affects: 'Operating layer',
+    evidenceType: 'Merger agreement (SEC filing) and company announcement',
+    changed: 'A delivery network agreed to buy the grocery technology, fulfillment and retail media stack many retailers rent, framing its AI strategy as winning physical fulfillment rather than the assistant; pending, with no combined AI product announced',
+    href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+  },
   {
     date: '2026-10-26',
     org: 'Shopify',
