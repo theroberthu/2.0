@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.71 - Shopify AI Knowledge Base and ecommerce GEO article (2026-10-29)
+
+**What changed.** New authority/thesis article,
+`/blog/shopify-ai-knowledge-base-ecommerce-geo` (GEO & SEO), "Shopify's AI
+Knowledge Base Shows What Ecommerce GEO Actually Requires", meta title
+"Shopify AI Knowledge Base: What Ecommerce GEO Requires". 1,190 source-body
+words, four internal links (product data as shared infrastructure, Shopify
+WebMCP, /geo, agentic storefronts as a platform default), ten external
+primary-source links, no Key findings box. OG image pulls the verbatim line
+"What the merchant controls is the fact, not the sentence." AI Commerce 2027
+gains a Software interface tracker row dated 2026-10-26; `LAST_UPDATED` and
+`STATIC_LAST_MODIFIED.aiCommerce2027` move to 2026-10-29. No shift text
+changed.
+
+**Sourcing and boundaries.** Shopify changelog (October 26, 2026): knowledge
+base built into Sales channels > Agentic, replacing the Knowledge Base app
+(launched May 16, 2025; unavailable after January 15, 2027). Help Center:
+source of truth for non-product information, scanned facts unpublished until
+published, admin-linked facts published on creation, approval-only suggested
+updates, field-level publishing, one source and multiple references per
+field, rescan up to 48 hours. Catalog mapping (title and description sources,
+compare-at as `list_price` in UCP only when higher, custom variant grouping)
+and Catalog's own "doesn't guarantee" language. Developer docs: Storefront MCP
+catalog and cart tools removed; policy and FAQ questions use Ask MCP
+`ask_business` on `/api/ucp/mcp`, a declared draft UCP capability. The
+article states no fixed fact cap or migration boundary (Help Center and
+changelog conflict) and names no third-party channel as querying the
+knowledge base.
+
+**Follow-ups.** Watch whether Ask leaves draft status and whether any AI
+channel says it queries the knowledge base. No existing article needed a
+correction.
+
+---
+
 ## Release 1.70 - Top documentary link on blog posts; On added to "AI Won't Fix Broken Work" (2026-10-28)
 
 **What changed.** `/blog/ai-wont-fix-broken-work` now ends with two

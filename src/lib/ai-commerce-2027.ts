@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-27'
+export const LAST_UPDATED = '2026-10-29'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-10-26',
+    org: 'Shopify',
+    development: 'Knowledge base built into the admin under Agentic: storefront-drafted facts stay unpublished until approved, admin-linked facts publish when Shopify creates them, replacing the Knowledge Base app (retired January 15, 2027)',
+    affects: 'Software interface',
+    evidenceType: 'Platform changelog and documentation',
+    changed: 'Non-product facts for AI agents became a merchant-approved, field-level record inside the platform; no AI channel is named as querying it and no outcome data is published',
+    href: '/blog/shopify-ai-knowledge-base-ecommerce-geo',
+  },
   {
     date: '2026-10-26',
     org: 'The RealReal',
