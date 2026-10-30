@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.73 - DoorDash and Instacart video companion page and seven new Shorts (2026-10-30)
+
+**What changed.** New companion page, `/videos/doordash-instacart-acquisition`,
+for "DoorDash's $17B Instacart Deal Is Really About AI's Hardest Job"
+(https://youtu.be/r9WhkOkaFd4): H1 matches the YouTube title, search title
+"DoorDash Instacart Deal: Why AI Still Needs Fulfillment", about 730 words
+written against the narration, five takeaways, eight timestamped chapters,
+four sources, an inline link to the DoorDash and Instacart article, and
+related research from current-standard articles only. VideoObject from
+verified YouTube values (uploadDate 2026-10-29T16:00:29-07:00, duration
+PT4M7S). Topic "Delivery and logistics". The homepage Featured Video now
+points at this video. Seven Shorts from October 28 and 29 join the top of
+`SHORTS` (32 in total); the two DoorDash Shorts relate to the new page.
+
+**Sourcing and boundaries.** Same primary sources as Release 1.72: joint
+release (Instacart newsroom copy, as cited in the video), DoorDash Q3 letter,
+merger 8-K and Instacart 10-K. The page calls the deal proposed and pending
+throughout, labels the $500 million figure a multi-year target net of
+investments, and attributes the 99% DashMart accuracy figure to DoorDash.
+
+`POST_VIDEOS` pairs `doordash-instacart-physical-layer-ai-commerce` with this
+video (approved by Robert), so the article shows the byline link and the
+end-of-article documentary card.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.72 - DoorDash, Instacart and the physical layer of AI commerce (2026-10-29)
 
 **What changed.** New authority/thesis article,

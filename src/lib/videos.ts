@@ -74,6 +74,148 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'doordash-instacart-acquisition',
+    youtubeId: 'r9WhkOkaFd4',
+    youtubeTitle: 'DoorDash’s $17B Instacart Deal Is Really About AI’s Hardest Job',
+    h1: 'DoorDash’s $17B Instacart Deal Is Really About AI’s Hardest Job',
+    seoTitle: 'DoorDash Instacart Deal: Why AI Still Needs Fulfillment',
+    metaDescription:
+      'DoorDash’s proposed $17B Instacart deal bets on the physical work behind AI shopping: picking, substitutions and delivery, and what still has to happen.',
+    dek: 'An AI can plan dinner. Someone still has to pick the avocado. DoorDash’s proposed Instacart acquisition is a bet on the physical work that turns a recommendation into groceries at the door.',
+    uploadDate: '2026-10-29T16:00:29-07:00',
+    duration: 'PT4M7S',
+    durationLabel: '4 min 7 sec',
+    topic: 'Delivery and logistics',
+    subject: 'DoorDash and Instacart',
+    thumbnail: '/images/videos/doordash-instacart-acquisition.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of a hand holding an avocado in a grocery aisle under the words DoorDash plus Instacart, $17B, AI Still Needs This, Proposed Deal.',
+    sections: [
+      {
+        paragraphs: [
+          'An AI assistant can plan your dinner. It still needs someone to pick the avocado.',
+          'On October 29, 2026, DoorDash and Instacart announced a definitive agreement for DoorDash to acquire Instacart at $65.00 a share, an equity value of about $17 billion. It is a proposed deal, not a completed one. It needs Instacart shareholder approval and regulatory approvals in the United States, Canada and Israel, and the companies expect to close at the end of 2027 or in the first half of 2028. Until then, they operate as separate and independent companies.',
+          'DoorDash has already explained the bet. While other companies compete to build your personal AI assistant, its shareholder letter says it wants to be the physical network that gets tasks done in the real world.',
+        ],
+      },
+      {
+        heading: 'Follow one grocery order',
+        paragraphs: [
+          'Imagine asking an assistant for dinner ingredients. It builds a list, and a few taps later the order is on its way. On the screen, that looks almost finished. In the store, the work is just beginning.',
+          'A shopper has to find the right products, judge whether an avocado is ready for tonight and decide what to do about the item missing from the shelf. A convincing answer in a chat window cannot tell you whether the replacement that reaches your kitchen will work for dinner. The promise only becomes real when the bag reaches your door.',
+        ],
+      },
+      {
+        heading: 'More than a shopping app',
+        paragraphs: [
+          'DoorDash’s third quarter shareholder letter calls this the battle for atoms. The company still builds AI ordering tools, including Ask DoorDash, Text DoorDash and a Model Context Protocol interface for external AI agents, including workplace tools for corporate ordering. Its stated strategic priority is the physical network those tools can reach.',
+          'Instacart would bring more than a second shopping app. Its Enterprise technology runs more than 380 grocers’ ecommerce sites and adds fulfillment, in-store tools and Carrot Ads for retailers’ own sites. DoorDash brings its delivery network and DashMart Fulfillment Services. DoorDash says it expects to keep Instacart’s brand, app and enterprise technology products after closing.',
+          'So imagine the same dinner order starts somewhere different tomorrow: in a grocery app, on a supermarket’s website or with an assistant. The front door changes. The physical jobs behind it do not. I make the longer case in [DoorDash, Instacart and the physical layer of AI commerce](/blog/doordash-instacart-physical-layer-ai-commerce).',
+        ],
+      },
+      {
+        heading: 'Why the money might work',
+        paragraphs: [
+          'A warehouse needs space and people before the next order arrives. Running more orders through the same operation spreads those fixed costs across more baskets, and delivery routes become denser. DoorDash’s letter names that scale as one reason Instacart appeals, and says that when it manages a grocer’s inventory itself through DashMart, fulfillment accuracy exceeds 99%.',
+          'Scale is an attraction and a challenge. Combining two companies does not automatically make a difficult grocery order easier to fill.',
+        ],
+      },
+      {
+        heading: 'The synergy target and reinvestment',
+        paragraphs: [
+          'DoorDash says it sees a multi-year path to at least $500 million in annual synergies, net of investments. That is a target, not savings already delivered. It also expects to reinvest more than 100% of the synergies in the first year after closing, with positive net synergies from the second year. The early plan is to spend on improving the business rather than treat every projected efficiency as immediate profit.',
+        ],
+      },
+      {
+        heading: 'The local grocer’s choice',
+        paragraphs: [
+          'For a local grocer, renting online ordering, delivery and advertising can be the practical way to compete with retailers that build their own. But when more of the software, advertising and fulfillment comes from one provider, switching becomes a bigger business decision.',
+          'DoorDash has committed that grocers will remain free to work with any delivery platform, with no grocery exclusivity. That commitment matters. So will the terms and performance retailers actually experience.',
+        ],
+      },
+      {
+        heading: 'What still has to happen',
+        paragraphs: [
+          'Shareholders and regulators have decisions ahead. The merger agreement allows extra time if antitrust reviews run long, and DoorDash would owe Instacart $1.25 billion if antitrust obstacles end the deal. Until it closes, a proposed combination is a plan.',
+          'My test is whether orders arrive more reliably, whether retailers get useful tools at economics that work for them, and whether outside AI assistants send meaningful business through the network. Those results will say more than a launch presentation.',
+        ],
+      },
+      {
+        heading: 'The business behind the screen',
+        paragraphs: [
+          'Come back to the avocado. The assistant may help you decide what to buy. The valuable business could be the one that makes sure the right thing arrives. The shopping screen can keep changing while the physical work becomes more important.',
+          'Would you let an AI assistant choose your grocery substitutions?',
+        ],
+      },
+    ],
+    takeaways: [
+      'DoorDash and Instacart announced a definitive agreement on October 29, 2026 for DoorDash to acquire Instacart at about a $17 billion equity value. It is pending, with closing expected at the end of 2027 or in the first half of 2028.',
+      'DoorDash describes its AI strategy as winning the physical network, the “battle for atoms,” while it still builds AI ordering tools.',
+      'Instacart would bring Enterprise technology behind more than 380 grocers’ websites, plus fulfillment, in-store tools and retail media. DoorDash expects to keep Instacart’s brand, app and enterprise products.',
+      'The $500 million-plus annual synergy figure is a multi-year target, net of investments, with more than 100% reinvested in the first year after closing.',
+      'DoorDash commits to no grocery exclusivity. Approvals, retailer terms and post-close performance will decide whether the bet works.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Who picks the avocado?' },
+      { time: '0:30', label: 'Follow one grocery order' },
+      { time: '1:23', label: 'More than a shopping app' },
+      { time: '1:54', label: 'Why the money might work' },
+      { time: '2:15', label: 'The synergy target and reinvestment' },
+      { time: '2:38', label: 'The local grocer’s choice' },
+      { time: '3:10', label: 'What still has to happen' },
+      { time: '3:44', label: 'The business behind the screen' },
+    ],
+    sources: [
+      {
+        label: 'DoorDash to Acquire Instacart to Help Local Stores Win (Instacart)',
+        date: 'October 29, 2026',
+        href: 'https://company.instacart.com/pressreleases/doordash-to-acquire-instacart-to-help-local-stores-win',
+      },
+      {
+        label: 'DoorDash third quarter 2026 financial results and shareholder letter',
+        date: 'October 29, 2026',
+        href: 'https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Third-Quarter-2026-Financial-Results/default.aspx',
+      },
+      {
+        label: 'DoorDash Form 8-K, Agreement and Plan of Merger',
+        date: 'October 29, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/1792789/000114036126041111/ef20084547_8k.htm',
+      },
+      {
+        label: 'Instacart Annual Report on Form 10-K for 2025',
+        date: 'February 26, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus the merger filing and Instacart’s annual report for details on this page. The $17 billion is equity value at $65.00 a share. The $500 million figure is DoorDash’s multi-year synergy target, net of investments, not realized savings. The 99% accuracy figure is DoorDash’s own, for inventory it manages through DashMart.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'The full business analysis: what each company would bring and what would prove the thesis.',
+      },
+      {
+        href: '/blog/doordash-ai-shopping-messy-middle-discovery',
+        title: 'AI Did Not Kill the Messy Middle. It Moved It Into the Machine.',
+        note: 'What DoorDash’s own assistant data shows about discovery moving into software.',
+      },
+      {
+        href: '/blog/instacart-gopuff-carrot-ads-retail-media-infrastructure',
+        title: 'Retail Media Is Becoming Infrastructure, Not a Network Every Retailer Builds',
+        note: 'Why retailers increasingly rent the stack, and what renting it costs.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Grocery and delivery scenes are licensed illustrative stock from Pexels and do not depict DoorDash or Instacart employees, facilities or an actual customer order. Original diagrams illustrate the business logic. The thumbnail is an AI-created conceptual illustration. Independent commentary; no endorsement implied. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'DoorDash’s $17B Instacart Deal Is Really About AI’s Hardest Job',
+      description:
+        'An AI can plan your dinner. Someone still has to pick the avocado. Why DoorDash’s proposed Instacart deal is a bet on the physical work behind every grocery order.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'on-lightspray-running-shoe-manufacturing',
     youtubeId: 'aoYU4ZRP1CE',
     youtubeTitle: 'Why On Is Spraying Its Running Shoes',
@@ -2296,7 +2438,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'on-lightspray-running-shoe-manufacturing'
+export const FEATURED_VIDEO_SLUG: string | null = 'doordash-instacart-acquisition'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -2318,6 +2460,7 @@ export const POST_VIDEOS: Record<string, string[]> = {
   'retailers-ai-traffic-customer-ownership': ['royal-caribbean-sandals-vacation-strategy'],
   'walmart-sparky-ai-personalization-pricing-governance': ['chatgpt-workout-plan-trust'],
   'anthropic-project-swap-agentic-commerce-shopper-preferences': ['chatgpt-workout-plan-trust'],
+  'doordash-instacart-physical-layer-ai-commerce': ['doordash-instacart-acquisition'],
 }
 
 export function videosForPost(postSlug: string): VideoEntry[] {
@@ -2344,6 +2487,13 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: '7sQ3OuD--jM', title: 'DoorDash’s $500M Promise Has a Catch', uploadDate: '2026-10-29T17:00:28-07:00', durationLabel: '0:56', thumbnail: '/images/shorts/7sQ3OuD--jM.jpg', related: ['doordash-instacart-acquisition'] },
+  { youtubeId: 'yuemBuR_8_o', title: 'AI Can Plan Dinner. Who Picks the Avocado?', uploadDate: '2026-10-29T15:00:29-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/yuemBuR_8_o.jpg', related: ['doordash-instacart-acquisition'] },
+  { youtubeId: 'MyHSRv9C6eM', title: 'Walmart Wants AI to Shop. I Still Want the Final Say.', uploadDate: '2026-10-29T09:00:10-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/MyHSRv9C6eM.jpg' },
+  { youtubeId: 'oXfBcLFbtuA', title: 'Two Brands Appeared in Every AI Answer. Only One Ranked First.', uploadDate: '2026-10-29T06:09:59-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/oXfBcLFbtuA.jpg' },
+  { youtubeId: 'PQ9fwkLRdEI', title: 'CERN Wants AI to Learn From Billions of Particle Collisions', uploadDate: '2026-10-28T17:00:14-07:00', durationLabel: '0:59', thumbnail: '/images/shorts/PQ9fwkLRdEI.jpg' },
+  { youtubeId: 'VFlJNXBNcL4', title: 'AI Mentioned This Brand Most. Was It the First Choice?', uploadDate: '2026-10-28T16:00:41-07:00', durationLabel: '0:56', thumbnail: '/images/shorts/VFlJNXBNcL4.jpg' },
+  { youtubeId: '5SHmdIxl9OM', title: 'An AI Lost a Ring. Then It Built a Memorial.', uploadDate: '2026-10-28T09:00:05-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/5SHmdIxl9OM.jpg' },
   { youtubeId: 'GpnmmEujiUk', title: 'Why McDonald’s Is Showing You Car Insurance', uploadDate: '2026-10-27T17:00:37-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/GpnmmEujiUk.jpg' },
   { youtubeId: 'Lh1MZx7F9o8', title: 'This Running Shoe Started With a Glue Gun', uploadDate: '2026-10-27T09:00:02-07:00', durationLabel: '0:52', thumbnail: '/images/shorts/Lh1MZx7F9o8.jpg', related: ['on-lightspray-running-shoe-manufacturing'] },
   { youtubeId: 'gGjWbdE90fU', title: 'IBM Wants AI to Spot Fraud Before Your Money Leaves', uploadDate: '2026-10-26T17:00:22-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/gGjWbdE90fU.jpg' },
