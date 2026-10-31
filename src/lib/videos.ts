@@ -74,6 +74,153 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'spirit-halloween-seasonal-stores',
+    youtubeId: 'wvDNgTh9QFk',
+    youtubeTitle: 'Why Spirit Halloween Keeps Taking Over Dead Stores',
+    h1: 'Why Spirit Halloween Keeps Taking Over Dead Stores',
+    seoTitle: 'How Spirit Halloween’s Pop-Up Store Business Works',
+    metaDescription:
+      'Spirit Halloween leases empty stores for a few months, opens against a fixed deadline and closes again. How the seasonal model works, and its Christmas test.',
+    dek: 'An empty shop looks like an ending. Spirit Halloween sees a temporary opening, with a deadline that cannot move and a store that has to close again.',
+    uploadDate: '2026-10-30T16:00:12-07:00',
+    duration: 'PT7M0S',
+    durationLabel: '7 min',
+    topic: 'Retail strategy',
+    subject: 'Spirit Halloween',
+    thumbnail: '/images/videos/spirit-halloween-seasonal-stores.jpg',
+    thumbnailAlt: 'Video thumbnail: illustrative artwork of a large empty store at dusk with a Spirit Halloween banner, under the words Dead Stores. Live Business.',
+    sections: [
+      {
+        paragraphs: [
+          'An empty store looks like an ending. Spirit Halloween sees a possible opening.',
+          'Most retailers open a store hoping it will stay open for years. Spirit opens seasonal stores knowing they will close after Halloween. The deadline is part of the design. Behind the orange banner is a harder problem than it looks: finding the right space, filling it, staffing it and selling enough before the holiday passes. Halloween cannot move back a week.',
+        ],
+      },
+      {
+        heading: 'The $13.5 billion opportunity',
+        paragraphs: [
+          'The National Retail Federation expects Americans to spend $13.5 billion on Halloween in 2026, close to last year’s record $13.1 billion. That is spending across the entire holiday, not Spirit’s revenue. Spirit has to compete for its share while paying for every step of opening and closing.',
+        ],
+      },
+      {
+        heading: 'Somebody else’s empty box',
+        paragraphs: [
+          'The answer starts with something another retailer no longer wants. One photograph in the video shows Spirit in a former Babies "R" Us in Reynoldsburg, Ohio, in September 2023. The building was designed for a different business. Spirit only needs a usable place where customers can find it, park, walk in and shop.',
+          'For a landlord, a vacant shop produces no rent. A temporary tenant brings income while the search for a long-term occupant continues. Spirit’s leasing page asks for temporary leases of about three months, ideally from mid-July to mid-November, with a kick-out clause if the landlord secures a permanent deal by June. Stores open around September 1 and stay open through November 1.',
+          'The page is specific about what makes a space useful: power centers, strip centers, free-standing stores and malls, roughly 35,000 people within three to five miles, at least 25,000 cars a day and, ideally, 5,000 to 50,000 square feet of sales floor with strong visibility. A cheap building is no bargain if customers never see the sign. Spirit turns a space with no tenant into a location with a deadline.',
+        ],
+      },
+      {
+        heading: 'Opening against the clock',
+        paragraphs: [
+          'In June, Spirit announced plans to hire more than 52,000 seasonal associates for 2026, for more than 1,500 locations across the United States and Canada. The roles include managers who lead store setup, merchandising, operations and teardown. A store that looks ready but cannot trade is still burning time.',
+          'One store manager quoted in the announcement, in Silverdale, Washington, was returning for her sixth season. Temporary stores still benefit from people who have done the work before. The building changes. The experience can come back.',
+        ],
+      },
+      {
+        heading: 'The attraction and the sales floor',
+        paragraphs: [
+          'Spirit’s 2023 press footage shows a large themed display among aisles of merchandise. My read of the layout is that the display gives people a reason to explore, and the racks around it give them things to buy. That does not prove how much extra revenue a display produces. It shows a shop that combines an attraction with a sales floor.',
+          'Footage of a 2023 flagship grand opening shows a crowd. That is evidence of interest in that event, not proof that every store gets the same reception.',
+        ],
+      },
+      {
+        heading: 'The inventory problem',
+        paragraphs: [
+          'No retailer can stock every costume in every size everywhere at exactly the right moment. Too little stock means missed sales. Too much ties up cash in things that did not sell, and a holiday deadline makes either mistake harder to recover from.',
+          'Sales alone do not settle the business case. Merchandise, people, space, setup, freight and teardown all have to be paid for. I have not verified Spirit’s revenue or store-level profit, so I do not estimate either here. A busy checkout and a profitable season are different things.',
+        ],
+      },
+      {
+        heading: 'Halloween arrives',
+        paragraphs: [
+          'Then Halloween arrives, the moment the store has been racing toward. Spirit’s own shopping advice points to store sales on November 1 and 2, and says stores close a few days after Halloween, while spirithalloween.com stays open all year. Individual closing dates vary. The work includes getting out of the building, not just getting in.',
+        ],
+      },
+      {
+        heading: 'The Christmas twist',
+        paragraphs: [
+          'On October 8, Spirit announced that Spirit Christmas is returning for a third season at 44 locations across 15 states, turning familiar spaces from spooky to merry. It is a logical test for a retailer that knows how to create a temporary destination. Forty-four locations do not prove the concept will match Halloween’s scale or economics.',
+        ],
+      },
+      {
+        heading: 'What repeats next season',
+        paragraphs: [
+          'The valuable capability is finding a space, bringing it to life, serving a surge of customers and finishing the job. The costumes are what shoppers see. The repeatable operation is what makes the next season possible, the same reason [the physical layer matters in DoorDash’s Instacart deal](/blog/doordash-instacart-physical-layer-ai-commerce).',
+          'Which empty building in your town has become a Spirit store?',
+        ],
+      },
+    ],
+    takeaways: [
+      'NRF expects $13.5 billion in U.S. Halloween spending in 2026. That is the whole holiday market, not Spirit’s revenue.',
+      'Spirit seeks temporary leases of about three months with a kick-out clause, in sites with roughly 35,000 nearby residents, 25,000 cars a day and 5,000 to 50,000 square feet of sales floor.',
+      'Spirit planned to hire more than 52,000 seasonal associates for 2026 across more than 1,500 locations, including teams for setup and teardown.',
+      'Stores close a few days after Halloween, after sales on November 1 and 2, while the website sells year-round.',
+      'Spirit Christmas returns for a third season at 44 locations in 15 states, a test of reusing the same temporary-store capability.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A store built to disappear' },
+      { time: '0:36', label: 'The $13.5 billion opportunity' },
+      { time: '1:06', label: 'Somebody else’s empty box' },
+      { time: '2:29', label: 'Opening against the clock' },
+      { time: '3:33', label: 'The attraction and the sales floor' },
+      { time: '4:23', label: 'The inventory problem' },
+      { time: '5:01', label: 'Halloween arrives' },
+      { time: '5:37', label: 'The Christmas twist' },
+      { time: '6:11', label: 'What repeats next season' },
+    ],
+    sources: [
+      {
+        label: 'NRF Halloween survey: consumer spending expected to reach $13.5 billion',
+        date: 'September 22, 2026',
+        href: 'https://nrf.com/media-center/press-releases/nrf-halloween-survey-shows-consumer-spending-expected-to-reach-13-5-billion',
+      },
+      {
+        label: 'Spirit Halloween, Store Opportunities: Real Estate Leasing',
+        date: 'Checked October 31, 2026',
+        href: 'https://www.spirithalloween.com/content.jsp?pageName=RealEst',
+      },
+      {
+        label: 'Spirit Summons 52,000 Seasonal Associates (Spirit Halloween)',
+        date: 'June 11, 2026',
+        href: 'https://www.spirithalloween.com/content.jsp?pageName=PressRelSpiritSummons52k',
+      },
+      {
+        label: '10 Mistakes to Avoid While Shopping at Spirit Halloween (Spirit Halloween blog)',
+        date: 'Checked October 31, 2026',
+        href: 'https://www.spirithalloween.com/blog/10-mistakes-to-avoid-while-shopping-at-spirit-halloween/',
+      },
+      {
+        label: 'Spirit Christmas Returns for Its Third Season (PR Newswire)',
+        date: 'October 8, 2026',
+        href: 'https://www.prnewswire.com/news-releases/spirit-christmas-returns-for-its-third-season-bringing-holiday-magic-and-festive-discoveries-to-44-locations-302902653.html',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The $13.5 billion is NRF’s forecast for total U.S. Halloween spending, not Spirit revenue or profit. The 52,000-plus figure is Spirit’s announced hiring target. The 44 Christmas locations are a 2026 company announcement, not evidence of financial results.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'Another case where the repeatable physical operation, not the storefront, is the asset.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Owning capabilities and running them as one repeatable system are different achievements.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses an authorized AI clone of his voice. Store-tour footage from That Nate Guy On YouTube (Creative Commons Attribution), photographs by Dan Keck (CC0), JJBers (CC BY 2.0) and Aidman16 (CC BY 4.0), and limited 2023 Spirit Halloween press-room excerpts used for analysis, with no license or endorsement claimed. Atmosphere and warehouse footage is illustrative Pexels stock, not Spirit employees or facilities. The thumbnail is AI-assisted illustrative artwork. Independent commentary. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Spirit Halloween Keeps Taking Over Dead Stores',
+      description:
+        'An empty shop looks like an ending. Follow Spirit Halloween from a vacant building to a store with a deadline it cannot move, and the Christmas test that comes next.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'doordash-instacart-acquisition',
     youtubeId: 'r9WhkOkaFd4',
     youtubeTitle: 'DoorDash’s $17B Instacart Deal Is Really About AI’s Hardest Job',
@@ -2438,7 +2585,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'doordash-instacart-acquisition'
+export const FEATURED_VIDEO_SLUG: string | null = 'spirit-halloween-seasonal-stores'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -2487,6 +2634,10 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'tk2OiRW6wBM', title: "Cocoa Got Cheaper. Why Didn't Your Chocolate?", uploadDate: '2026-10-31T09:00:24-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/tk2OiRW6wBM.jpg' },
+  { youtubeId: 'bOJmCrpOqTY', title: 'Why Spirit Halloween Closes Its Stores on Purpose', uploadDate: '2026-10-30T17:00:12-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/bOJmCrpOqTY.jpg', related: ['spirit-halloween-seasonal-stores'] },
+  { youtubeId: 'fziqEXtW4uk', title: 'Why Spirit Halloween Loves Dead Stores', uploadDate: '2026-10-30T09:00:14-07:00', durationLabel: '0:53', thumbnail: '/images/shorts/fziqEXtW4uk.jpg', related: ['spirit-halloween-seasonal-stores'] },
+  { youtubeId: 'adN5PGp_IQw', title: 'AI Mentioned CeraVe Most. First Place Still Split.', uploadDate: '2026-10-30T07:15:47-07:00', durationLabel: '0:50', thumbnail: '/images/shorts/adN5PGp_IQw.jpg' },
   { youtubeId: '7sQ3OuD--jM', title: 'DoorDash’s $500M Promise Has a Catch', uploadDate: '2026-10-29T17:00:28-07:00', durationLabel: '0:56', thumbnail: '/images/shorts/7sQ3OuD--jM.jpg', related: ['doordash-instacart-acquisition'] },
   { youtubeId: 'yuemBuR_8_o', title: 'AI Can Plan Dinner. Who Picks the Avocado?', uploadDate: '2026-10-29T15:00:29-07:00', durationLabel: '0:51', thumbnail: '/images/shorts/yuemBuR_8_o.jpg', related: ['doordash-instacart-acquisition'] },
   { youtubeId: 'MyHSRv9C6eM', title: 'Walmart Wants AI to Shop. I Still Want the Final Say.', uploadDate: '2026-10-29T09:00:10-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/MyHSRv9C6eM.jpg' },

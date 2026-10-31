@@ -6,6 +6,39 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.74 - Spirit Halloween video companion page and four new Shorts (2026-10-31)
+
+**What changed.** New companion page, `/videos/spirit-halloween-seasonal-stores`,
+for "Why Spirit Halloween Keeps Taking Over Dead Stores"
+(https://youtu.be/wvDNgTh9QFk): H1 matches the YouTube title, search title
+"How Spirit Halloween's Pop-Up Store Business Works", about 740 words written
+against the narration, five takeaways, nine timestamped chapters, five
+sources, an inline link to the DoorDash and Instacart article, and related
+research from current-standard articles only. VideoObject from verified
+YouTube values (uploadDate 2026-10-30T16:00:12-07:00, duration PT7M0S).
+Topic "Retail strategy". The homepage Featured Video now points at this
+video. Four Shorts from October 30 and 31 join the top of `SHORTS` (36 in
+total); the two Spirit Shorts relate to the new page.
+
+**Sourcing and boundaries.** NRF (September 22, 2026): $13.5 billion forecast
+for total U.S. Halloween spending, up from a record $13.1 billion; not Spirit
+revenue. Spirit leasing page: about three-month leases, ideally mid-July to
+mid-November, kick-out clause if a permanent deal is secured by June, about
+35,000 people within 3 to 5 miles, 25,000 cars a day, 5,000 to 50,000 square
+feet. Spirit hiring release (June 11, 2026): more than 52,000 associates,
+more than 1,500 locations. Spirit blog: store sales November 1 and 2, stores
+close a few days after Halloween, website open all year. PR Newswire
+(October 8, 2026): Spirit Christmas third season, 44 locations, 15 states.
+Two narration details are not repeated on the page: the photo source
+(Wikimedia, Dan Keck, September 27, 2023) identifies the Reynoldsburg, Ohio
+building as a former Babies "R" Us, not a Toys "R" Us, and the opening claim
+that the toured building "used to sell furniture" could not be verified (the
+footage is titled as an abandoned event center).
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.73 - DoorDash and Instacart video companion page and seven new Shorts (2026-10-30)
 
 **What changed.** New companion page, `/videos/doordash-instacart-acquisition`,
