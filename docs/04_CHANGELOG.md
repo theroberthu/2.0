@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.75 - BCG's GEO revenue claim as an evidence audit (2026-11-01)
+
+**What changed.** New evidence-audit article,
+`/blog/bcg-geo-revenue-growth-evidence` (GEO & SEO), "BCG Gives GEO a
+Revenue Number. It Is Not Yet a Benchmark", meta title "BCG Says GEO Lifts
+Revenue 1% to 5%. What Is Missing?". 1,194 source-body words, four internal
+links (Search Console generative AI report, NIQ and Similarweb measurement,
+Google UCP Analytics, /geo), three external BCG links, an eight-step pilot
+design, no Key findings box. OG image pulls the verbatim line "GEO
+credibility will not come from increasingly precise-looking percentages."
+AI Commerce 2027 unchanged; no sitemap code change (blog posts come from
+Supabase).
+
+**Sourcing and boundaries.** BCG, "Are CPG Companies Ready for Agentic
+Commerce?" (October 30, 2026): 1% to 5% incremental revenue for companies
+piloting GEO ("an average of 1%-5%" in the key takeaways), 3% to 10% revenue
+growth for owned agents and ecosystem integration combined, and an estimated
+media ROI uplift of up to 50%. No sample, baseline, control, period,
+definition of incremental or cost is disclosed; the three exhibits contain no
+revenue data. The luxury case reports citations and traffic only. BCG and The
+Consumer Goods Forum board brief (June 24, 2026; n=39 CPG and retail
+executives, April 2026): 53% do not formally measure consumer AI ROI, pilots
+lack baselines or scale thresholds, GEO and agentic commerce value "Too early
+to tell"; it contains neither the 59% readiness figure nor the GEO revenue
+ranges. The article does not treat the ranges as independently verified or
+causal, and says BCG may hold client results it cannot publish.
+
+**Follow-ups.** Watch for a BCG methodology note or a controlled GEO revenue
+study. Unresolved and kept out of the article: the October article's 80%
+consumer figure cites a "December 2025 GenAI Consumer Survey" that the linked
+January methodology does not describe. No existing article needed a
+correction.
+
+---
+
 ## Release 1.74 - Spirit Halloween video companion page and four new Shorts (2026-10-31)
 
 **What changed.** New companion page, `/videos/spirit-halloween-seasonal-stores`,
