@@ -6,6 +6,96 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.77 - Homepage "More documentaries" row (2026-11-02)
+
+**What changed.** The homepage Featured Video section now carries a "More
+documentaries" row under the featured card: the next three documentaries in
+`VIDEOS` (newest first, excluding the featured one), each with thumbnail,
+duration, topic and H1, linking to its companion page. A link beside the row
+heading reads "All 21 documentaries and 41 Shorts" and goes to `/videos`;
+both counts come from `VIDEOS.length` and `SHORTS.length`, so they update
+with every new page or Short. The section's aria-label changes from
+"Featured video" to "Documentaries". Clicks reuse the existing
+`featured_video_click` and `videos_index_click` events with
+`location: 'homepage_more'`.
+
+**Why.** With a new documentary most days, the featured slot moves on within
+24 hours, and the previous pages dropped off the homepage entirely. The row
+keeps the last few uploads one click away.
+
+**Impact.** More internal links from the homepage to recent companion pages
+and to `/videos`. No new routes, no data changes.
+
+**Follow-ups.** None.
+
+---
+
+## Release 1.76 - Four missing documentary companion pages and five new Shorts (2026-11-02)
+
+**What changed.** A channel audit against the uploads list found four
+documentaries from the daily series without companion pages; all four now
+have one, bringing `/videos` to 21 documentaries:
+
+- `/videos/costco-membership-fee-hot-dog`, "Why Costco Wants You to Remember
+  $1.50" (https://youtu.be/ZM6s0gP7Rm0, uploaded 2026-11-01T16:00:35-08:00,
+  PT5M9S), Retail strategy, about 740 words.
+- `/videos/hershey-cocoa-halloween-candy-prices`, "Why Cheaper Cocoa Hasn't
+  Made Halloween Candy Cheaper" (https://youtu.be/aDa_hBaS7NM,
+  2026-10-31T16:00:17-07:00, PT5M35S), Retail strategy, about 700 words.
+- `/videos/schaeffler-humanoid-robot-actuators`, "Robots Are Building Robot
+  Parts. Who Gets Paid?" (https://youtu.be/sc0bkdImVrg,
+  2026-10-28T16:00:36-07:00, PT4M7S), Manufacturing, about 640 words.
+- `/videos/softbank-abb-robotics-acquisition`, "SoftBank's $5.4 Billion Robot
+  Bet: Why Is ABB Selling?" (https://youtu.be/yRjoUPE7f3E,
+  2026-10-22T16:00:23-07:00, PT5M7S), AI in practice, about 750 words.
+
+Each page is written against the narration, with H1 matching the YouTube
+title, takeaways, chapters from the description, the description's sources
+and current-standard related research. The homepage Featured Video now
+points at the Costco video. Five Shorts from October 31 and November 1 join
+the top of `SHORTS` (41 in total); the two Costco Shorts and the Hershey
+Short relate to their documentaries, and two existing Shorts gain a related
+page ("Cocoa Got Cheaper" to Hershey, "Why Picking Up Clothes Is So Hard for
+Robots" to SoftBank and ABB). No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.**
+- Costco: FY2026 10-K ($5,907 million membership fees, up 11%; 92.3% U.S.
+  and Canada renewal, 89.8% worldwide, trailing measure; fewer than 4,000
+  active items per warehouse; pallet displays reduce labor). The video says
+  "around 4,000 items" from Costco's membership hacks page; the page uses
+  the 10-K wording. Fee change $60 to $65 effective September 1, 2024; hot
+  dog price since 1985 per Historical Highlights. YouTube serves the title
+  "Why Costco Wants You to Remember $1.50" (watch page, oEmbed, RSS); some
+  browser sessions show "Costco's $1.50 Hot Dog Is Selling More Than Lunch",
+  which looks like a title test. The page uses the served title.
+- Hershey: World Bank monthly cocoa, Q3 2026 average $5.83/kg vs Q3 2025
+  $7.33/kg (down 20.5%); BLS CUUR0000SEFR02 September 2026 229.543 vs
+  213.101 (up 7.7%); Q2 10-Q (NA Confectionery $2,173.6 million, up 4.2%,
+  price about 14%, volume about 10% lower, "driven primarily by price
+  elasticity"; 3- to 24-month hedging). Survey 67% of parents bought in
+  summer; more than 20 innovations. Added Hershey's October 29, 2026 Q3
+  release (NA Confectionery up 1.6%, price 13 points, volume down 11), marked
+  as not cited in the video.
+- Schaeffler: October 13 update (approximately EUR400 million humanoid
+  robotics orders, two new Greater China customers in Q3); October 20
+  Taicang release (six humanoids, five stations, joint modules including
+  linear and rotary actuators); Hexagon August 19 (at least 1,000 AEON
+  planned "in the coming years"; Schaeffler supplies actuators) and
+  October 15 (Humanoid Gym, Erlangen). ECB rate 1.1193 on October 23, 2026
+  gives $447.7 million, shown as about $450 million.
+- ABB: divestment release ($5.375 billion enterprise value, 2024 revenue
+  $2.3 billion, about 7,000 people, spin-off plan dropped, "limited business
+  and technology synergies"); Q3 2026 report (closing expected Q4 2026,
+  triple-digit data center order growth). The Shanghai factory link in the
+  YouTube description no longer loads on new.abb.com; the page cites the
+  same release on abb.com. Auburn Hills is described only as headquarters
+  and manufacturing; the narration's demonstrations and training detail was
+  not in the release text checked.
+
+**Follow-ups.** Update the SoftBank and ABB page when the deal closes.
+
+---
+
 ## Release 1.75 - BCG's GEO revenue claim as an evidence audit (2026-11-01)
 
 **What changed.** New evidence-audit article,

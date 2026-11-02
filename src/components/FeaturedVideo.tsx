@@ -1,19 +1,24 @@
 import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
-import { FEATURED_VIDEO_SLUG, getVideo } from '@/lib/videos'
+import { FEATURED_VIDEO_SLUG, SHORTS, VIDEOS, getVideo } from '@/lib/videos'
+
+const MORE_COUNT = 3
 
 /**
  * Homepage Featured Video slot. Driven entirely by FEATURED_VIDEO_SLUG in
  * src/lib/videos.ts: point it at another entry to swap the video, or set it to
  * null to remove the section. Links to the companion page, which then drives
- * the YouTube view. No autoplay and no embed here.
+ * the YouTube view. No autoplay and no embed here. Below the card, the next
+ * MORE_COUNT documentaries (newest first) keep recent uploads reachable after
+ * the featured slot moves on.
  */
 export default function FeaturedVideo() {
   const video = FEATURED_VIDEO_SLUG ? getVideo(FEATURED_VIDEO_SLUG) : undefined
   if (!video) return null
+  const more = VIDEOS.filter((v) => v.slug !== video.slug).slice(0, MORE_COUNT)
 
   return (
-    <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]" aria-label="Featured video">
+    <section className="py-16 md:py-20 bg-brand-dark border-t border-white/[0.06]" aria-label="Documentaries">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <TrackedLink
           href={`/videos/${video.slug}`}
@@ -60,6 +65,58 @@ export default function FeaturedVideo() {
             </div>
           </div>
         </TrackedLink>
+
+        {more.length > 0 && (
+          <div className="mt-10 md:mt-12">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-5">
+              <h2 className="text-lg md:text-xl font-bold text-white tracking-tight">More documentaries</h2>
+              <TrackedLink
+                href="/videos"
+                event="videos_index_click"
+                params={{ location: 'homepage_more' }}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent hover:text-white transition-colors duration-200"
+              >
+                All {VIDEOS.length} documentaries and {SHORTS.length} Shorts
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </TrackedLink>
+            </div>
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+              {more.map((v) => (
+                <li key={v.slug}>
+                  <TrackedLink
+                    href={`/videos/${v.slug}`}
+                    event="featured_video_click"
+                    params={{ video_slug: v.slug, location: 'homepage_more' }}
+                    className="group grid grid-cols-[8.5rem_1fr] sm:block h-full bg-white/[0.05] border border-white/[0.08] rounded-xl overflow-hidden hover:border-brand-accent/40 transition-colors duration-200"
+                  >
+                    <div className="relative aspect-video">
+                      <Image
+                        src={v.thumbnail}
+                        alt={v.thumbnailAlt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 136px, 380px"
+                      />
+                      <span className="absolute bottom-1.5 right-1.5 sm:bottom-2.5 sm:right-2.5 bg-black/80 text-white text-[10px] sm:text-[11px] font-mono px-1.5 py-0.5 rounded">
+                        {v.durationLabel.replace(/ \d+ sec$/, '')}
+                      </span>
+                    </div>
+                    <div className="p-3.5 sm:p-5">
+                      <span className="hidden sm:block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent mb-2">
+                        {v.topic}
+                      </span>
+                      <h3 className="text-[14px] sm:text-[16px] font-bold text-white leading-snug group-hover:text-brand-accent transition-colors duration-200">
+                        {v.h1}
+                      </h3>
+                    </div>
+                  </TrackedLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   )

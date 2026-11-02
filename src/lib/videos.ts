@@ -74,6 +74,285 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'costco-membership-fee-hot-dog',
+    youtubeId: 'ZM6s0gP7Rm0',
+    youtubeTitle: 'Why Costco Wants You to Remember $1.50',
+    h1: 'Why Costco Wants You to Remember $1.50',
+    seoTitle: 'Costco’s Membership Model: What the $1.50 Hot Dog Is Selling',
+    metaDescription:
+      'Costco charges $65 a year before you shop and has kept its hot dog at $1.50. How the membership fee, limited selection and pallets fit the business model.',
+    dek: 'A $1.50 hot dog is easy to remember. A $65 membership asks you to believe in a whole year of value, and Costco has to keep earning that belief.',
+    uploadDate: '2026-11-01T16:00:35-08:00',
+    duration: 'PT5M9S',
+    durationLabel: '5 min 9 sec',
+    topic: 'Retail strategy',
+    subject: 'Costco membership',
+    thumbnail: '/images/videos/costco-membership-fee-hot-dog.jpg',
+    thumbnailAlt: 'Video thumbnail: a hot dog in front of a Costco food court menu board, under the words Costco $1.50 The Real Business.',
+    sections: [
+      {
+        paragraphs: [
+          'At a Costco food court, $1.50 buys a hot dog and a soda. The same company charges $65 a year for a basic U.S. membership before you can shop the warehouse. Pay first, then come shopping.',
+          'That proposition brought Costco $5.907 billion in worldwide membership fee revenue in fiscal 2026, up 11%, according to its annual report. That is revenue, not profit, and behind it sits a real business to run: warehouses, employees and every other cost of keeping the promise. Follow the shopping trip from the food court to the decision that matters most: whether you pay for another year.',
+        ],
+      },
+      {
+        heading: 'A year to prove the value',
+        paragraphs: [
+          'Costco says the fee helps offset operating costs so it can price merchandise lower. The member pays today for value expected over the coming year. That is the deal Costco has to keep proving, and it creates a vulnerability: if prices stop feeling special, the member can start questioning the fee itself.',
+          'The warehouse in the video, a store in The Villages, Florida, filmed in 2025, makes the pitch easy to feel. The shelves are huge, the packages are huge, and a grocery run can turn into a conversation about a new sofa.',
+        ],
+      },
+      {
+        heading: 'The enormous store with fewer choices',
+        paragraphs: [
+          'It feels like Costco sells everything. Its annual report says a core warehouse carries fewer than 4,000 active items, significantly less than other broadline retailers, while the website averages 9,000 to 11,000. Costco seeks to limit most items to fast-selling models, sizes and colors. The choice has been edited before you arrive.',
+          'Fewer versions of a product let Costco concentrate its orders into larger quantities, which supports its buying power. Members accept some of those selection decisions in exchange for the value they expect. The catch: if your preferred version is missing, a bigger package of something else may be no bargain to you. The size of the building and the number of choices are different things.',
+        ],
+      },
+      {
+        heading: 'The cardboard is doing a job',
+        paragraphs: [
+          'The boxes are still on the floor, products sit on pallets and more inventory is stacked overhead. Costco’s annual report says merchandise is generally stored on racks above the sales floor and displayed on pallets containing large quantities, reducing the labor required. A low price has to be supported by the way the store works, and the plain displays are part of that operation.',
+        ],
+      },
+      {
+        heading: 'Does the bargain work for you?',
+        paragraphs: [
+          'The savings inside Costco’s business and the savings inside your household are different calculations. A huge pack helps only if you use it. If half ends up in the trash, the bargain changes, and an unplanned purchase still costs money even when it is a good deal.',
+          'An illustration, not Costco’s average saving: if you genuinely save $5 per visit compared with what you would otherwise buy, 13 visits cover a $65 fee. Your result depends on what you buy, what you use and the alternatives near you. The price tag cannot answer those questions for you.',
+        ],
+      },
+      {
+        heading: 'The price that changed',
+        paragraphs: [
+          'The hot dog and soda price goes back to 1985, according to Costco’s historical highlights. The membership price has moved. On September 1, 2024, Costco raised the basic U.S. Gold Star fee from $60 to $65, and the Executive fee from $120 to $130.',
+          'A company can protect one famous price while asking more for the annual relationship. That makes renewal more demanding, because the member needs enough reasons across the whole trip to keep saying yes. A $1.50 lunch is easy to remember. A year’s worth of value is a much bigger promise.',
+        ],
+      },
+      {
+        heading: 'The renewal decision',
+        paragraphs: [
+          'At the end of fiscal 2026, Costco reported a renewal rate of 92.3% in the U.S. and Canada and 89.8% worldwide. It is a trailing calculation covering renewals seven to eighteen months before the reporting date. It shows how many members stayed. It does not say why, and it does not show that the hot dog had anything to do with it.',
+          'Costco credits the 11% rise in membership fee revenue to new sign-ups, the fee increase and upgrades to Executive membership. The fee makes next year’s experience part of the product. Costco is selling a reason to return, the same repeat relationship retailers worry about losing when [AI assistants become the doorway to the store](/blog/retailers-ai-traffic-customer-ownership).',
+        ],
+      },
+      {
+        heading: 'Back to the hot dog',
+        paragraphs: [
+          'A hot dog and a soda for $1.50 is a promise you can remember without doing any math. For the business, the interesting part is everything required to keep a promise like that believable, year after year. For a shopper, the question is whether the rest of the cart deserves the same confidence.',
+          'Does your membership pay for itself?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Costco reported $5.907 billion in worldwide membership fee revenue for fiscal 2026, up 11%. That is revenue, not profit.',
+      'A core warehouse carries fewer than 4,000 active items, which lets Costco concentrate orders into larger quantities.',
+      'Pallet displays, with more stock on racks overhead, reduce the labor needed to handle merchandise, according to Costco.',
+      'The $1.50 hot dog and soda price dates to 1985, while the basic U.S. membership fee rose from $60 to $65 on September 1, 2024.',
+      'The 92.3% U.S. and Canada renewal rate is a company-reported trailing measure. It shows that members stayed, not why.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The $1.50 promise' },
+      { time: '0:33', label: 'A year to prove the value' },
+      { time: '1:13', label: 'The enormous store with fewer choices' },
+      { time: '2:03', label: 'The cardboard is doing a job' },
+      { time: '2:39', label: 'Does the bargain work for you?' },
+      { time: '3:22', label: 'The price that changed' },
+      { time: '3:55', label: 'The renewal decision' },
+      { time: '4:34', label: 'Back to the hot dog' },
+    ],
+    sources: [
+      {
+        label: 'Costco Wholesale Corporation Form 10-K, fiscal year ended August 30, 2026 (SEC)',
+        date: 'Fiscal year 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm',
+      },
+      {
+        label: 'Membership Fee Increase (Costco Customer Service)',
+        date: 'Effective September 1, 2024',
+        href: 'https://customerservice.costco.com/app/answers/answer_view/a_id/1013504/~/membership-fee-increase',
+      },
+      {
+        label: 'Why does Costco charge an annual membership fee? (Costco Customer Service)',
+        date: 'Checked November 2, 2026',
+        href: 'https://customerservice.costco.com/app/answers/answer_view/a_id/845/loc/en_US',
+      },
+      {
+        label: 'Costco membership hacks: warehouse selection and food court (Costco)',
+        date: 'Checked November 2, 2026',
+        href: 'https://www.costco.com/f/-/my-life-membership-hacks',
+      },
+      {
+        label: 'Costco Historical Highlights (PDF)',
+        date: 'Costco investor relations',
+        href: 'https://media.corporate-ir.net/media_files/irol/83/83830/reports/HistoricalHighlights.pdf',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. Membership fee revenue is revenue, not profit. The $5 per visit example is an illustration, not Costco’s average saving. The renewal rate is Costco’s own trailing measure and does not explain why members renew. The item count uses the annual report’s figure of fewer than 4,000 active items per warehouse.',
+    related: [
+      {
+        href: '/blog/retailers-ai-traffic-customer-ownership',
+        title: 'Retailers Want AI Shopping Traffic. They Do Not Want to Lose the Customer.',
+        note: 'A membership is one way to own the repeat relationship. AI shopping traffic tests the same question.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Another retailer whose promise to customers depends on how the operation behind it runs.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Warehouse footage is edited from “Full Tour of a NEW Costco Store!” by the altem life (Creative Commons Attribution), with source audio removed; the creator identifies the store as The Villages, Florida, and the footage is from 2025, not a new 2026 visit. Hot dog photograph by Matt Johnson (cornstalker), CC BY 2.0, cropped and edited. The thumbnail is an AI-assisted editorial composite using the credited photo and footage. Independent commentary; no Costco endorsement. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Costco Wants You to Remember $1.50',
+      description:
+        'A $1.50 hot dog is easy to remember. Follow a Costco shopping trip from the food court to the decision that pays for the whole model: renewing the membership.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'hershey-cocoa-halloween-candy-prices',
+    youtubeId: 'aDa_hBaS7NM',
+    youtubeTitle: "Why Cheaper Cocoa Hasn't Made Halloween Candy Cheaper",
+    h1: 'Why Cheaper Cocoa Hasn’t Made Halloween Candy Cheaper',
+    seoTitle: 'Why Halloween Candy Costs More When Cocoa Got Cheaper',
+    metaDescription:
+      'Cocoa prices fell about 20% while U.S. candy prices rose 7.7%. How hedging, pricing and shopper pushback at Hershey explain the gap between bean and bag.',
+    dek: 'A key chocolate ingredient got cheaper. The candy aisle did not follow it down. The gap is made of timing, pricing decisions and shoppers who quietly buy less.',
+    uploadDate: '2026-10-31T16:00:17-07:00',
+    duration: 'PT5M35S',
+    durationLabel: '5 min 35 sec',
+    topic: 'Retail strategy',
+    subject: 'Hershey and cocoa prices',
+    thumbnail: '/images/videos/hershey-cocoa-halloween-candy-prices.jpg',
+    thumbnailAlt: 'Video thumbnail: a broken peanut butter cup beside cocoa beans and a glowing jack-o’-lantern, under the words The Hershey Story. Cheaper Cocoa. Costlier Candy.',
+    sections: [
+      {
+        paragraphs: [
+          'The candy bowl is supposed to be the easy part of Halloween. This year it hides a puzzle. The World Bank’s cocoa benchmark averaged about 20% less in the third quarter of 2026 than a year earlier. Meanwhile, U.S. candy and chewing gum prices in September were about 7.7% higher than the previous September, according to the Bureau of Labor Statistics.',
+          'Those are different measures covering different things, and neither reveals what any manufacturer actually paid for cocoa. Together they raise a reasonable shopper’s question: where did the saving go?',
+        ],
+      },
+      {
+        heading: 'Hershey’s sales-volume split',
+        paragraphs: [
+          'Hershey offers a way inside the problem. Its North America Confectionery segment recorded $2.17 billion in net sales in the second quarter of 2026, up 4.2%. That is one segment, not Halloween revenue and not profit. The twist is underneath: price realization rose about 14% while volume fell about 10%. Sales went up while less product went out.',
+        ],
+      },
+      {
+        heading: 'The price has a memory',
+        paragraphs: [
+          'A cocoa bean travels through growing, processing, manufacturing and distribution before it becomes a chocolate cup. A market quotation measures one part of that journey. It does not measure the finished bag, its packaging, the energy used to make it or the work of getting it onto a shelf.',
+          'Then there is timing. Hershey says it generally hedges commodity price risks for 3- to 24-month periods, and that as a result, average market prices are not necessarily indicative of its average costs. Think of booking a flight and watching the fare drop afterward. The cheaper seat is real, but it does not rewrite the ticket you already bought.',
+          'Buying ahead gives a manufacturer more certainty when prices rise and limits how quickly it benefits when they fall. That is a trade-off, not proof that every bag contains expensive old cocoa. A falling commodity chart cannot, by itself, tell us what a manufacturer paid, what a supermarket paid or what a shopper should be charged tomorrow.',
+        ],
+      },
+      {
+        heading: 'The customer gets a vote',
+        paragraphs: [
+          'A cost explanation is not a complete explanation of price. Competitors, retailers and shoppers all have a say. Hershey attributed its second-quarter volume decline in North America Confectionery primarily to price elasticity: people reacting to higher prices by buying less.',
+          'Shoppers do not need a spreadsheet to respond. They pick a smaller bag, a different brand, something fruity instead of chocolate, or simply less candy. Higher sales help the financial result. Fewer purchases make the next sale harder to win.',
+          'The pattern held after the video’s main figures. In its third-quarter results on October 29, Hershey reported North America Confectionery net sales up 1.6%, with about 13 points of price realization and volume down about 11 points, which it attributed to price elasticity and normal quarter-to-quarter shipment variability.',
+        ],
+      },
+      {
+        heading: 'Halloween before October',
+        paragraphs: [
+          'Hershey’s answer is to make Halloween bigger than October 31. In a company-commissioned survey with Morning Consult, released in July, 67% of parents said they had already bought Halloween candy that summer. That is self-reported behavior, not a count of Hershey sales, but it explains why a candy company wants the Halloween conversation to start while people are still on summer vacation.',
+          'For 2026, Hershey announced more than 20 seasonal product innovations across chocolate, sweets and salty snacks. Reese’s Pumpkins returned, and fruity and sour options joined assorted bags. The idea is to serve different tastes and occasions, from an early treat to a party, a shared bowl and trick-or-treat night, instead of asking one chocolate product to do every job. Product announcements are not sales results.',
+        ],
+      },
+      {
+        heading: 'More occasions, not just more customers',
+        paragraphs: [
+          'The household wants enough candy for the people who actually show up. The company wants enough reasons for households to buy before that night arrives. One bowl, two planning problems. Buy too late and the favorite may be gone. Buy early and someone at home may help the inventory disappear.',
+        ],
+      },
+      {
+        heading: 'Who has to say yes?',
+        paragraphs: [
+          'Cheaper cocoa can help a manufacturer. It does not act like a refund button at checkout. Past purchasing decisions, other costs, retail decisions and what customers will accept all sit between the bean and the bag, and Hershey’s own volume decline shows shoppers are part of that calculation. The price contains timing, and the next sale depends on giving someone a reason to choose it again. The same holiday runs on a different deadline for [Spirit Halloween’s temporary stores](/videos/spirit-halloween-seasonal-stores).',
+          'What changed in your candy bowl this year?',
+        ],
+      },
+    ],
+    takeaways: [
+      'The World Bank cocoa benchmark averaged about 20.5% less in Q3 2026 than in Q3 2025, while U.S. candy and gum prices were about 7.7% higher in September 2026 than a year earlier. Different measures, different periods.',
+      'Hershey hedges commodity risk for 3 to 24 months, so its average costs do not track market prices directly.',
+      'In Q2 2026, Hershey’s North America Confectionery sales rose 4.2% on about 14% price realization, while volume fell about 10%, mainly from price elasticity.',
+      'Q3 2026 continued the pattern: segment sales up 1.6%, price about 13 points higher, volume about 11 points lower.',
+      'Hershey is stretching Halloween into a season: 67% of surveyed parents said they bought candy in summer, and the 2026 lineup has more than 20 seasonal innovations.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The candy bowl puzzle' },
+      { time: '0:39', label: 'Hershey’s sales-volume split' },
+      { time: '1:21', label: 'The price has a memory' },
+      { time: '2:25', label: 'The customer gets a vote' },
+      { time: '3:27', label: 'Halloween before October' },
+      { time: '4:30', label: 'More occasions, not just more customers' },
+      { time: '5:12', label: 'Who has to say yes?' },
+    ],
+    sources: [
+      {
+        label: 'Commodity Markets: monthly prices (World Bank Pink Sheet)',
+        date: 'Q3 2025 and Q3 2026 cocoa averages',
+        href: 'https://www.worldbank.org/en/research/commodity-markets',
+      },
+      {
+        label: 'Consumer Price Index: candy and chewing gum, U.S. city average (BLS series CUUR0000SEFR02)',
+        date: 'September 2025 and September 2026',
+        href: 'https://data.bls.gov/timeseries/CUUR0000SEFR02',
+      },
+      {
+        label: 'The Hershey Company Form 10-Q, quarter ended June 28, 2026 (SEC)',
+        date: 'Q2 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/47111/000162828026050900/hsy-20260628.htm',
+      },
+      {
+        label: 'The Hershey Company 2025 Form 10-K, in the 2026 annual report (PDF)',
+        date: 'Fiscal year 2025',
+        href: 'https://hershey.gcs-web.com/static-files/fee21938-3a8e-4d4e-8310-650b9ad85e56',
+      },
+      {
+        label: 'Anticipation Is Reshaping America’s Halloween Season (Hershey)',
+        date: 'July 29, 2026',
+        href: 'https://www.thehersheycompany.com/en_us/home/newsroom/press-release/2026-07-29-Anticipation-Is-Reshaping-Americas-Halloween-Season.html',
+      },
+      {
+        label: 'The Hershey Company Unwraps Its 2026 Halloween Portfolio (Hershey)',
+        date: 'August 13, 2026',
+        href: 'https://www.thehersheycompany.com/en_us/home/newsroom/press-release/2026-08-13-The-Hershey-Company-Unwraps-Its-2026-Halloween-Portfolio.html',
+      },
+      {
+        label: 'Hershey Reports Third-Quarter 2026 Financial Results (SEC, exhibit 99.1)',
+        date: 'October 29, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/47111/000162828026068046/exhibit991_2026xq3.htm',
+        note: 'Added on this page; not cited in the video.',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus Hershey’s third-quarter release. The cocoa and candy comparisons use different measures and periods, and neither reveals Hershey’s actual ingredient costs. Segment figures are net sales, not profit or Halloween revenue. Price realization and volume are company segment measures, not changes to every store ticket. The July survey is self-reported and company-commissioned.',
+    related: [
+      {
+        href: '/blog/instacart-clementine-ask-shipt-ai-basket',
+        title: 'The Assistant Builds the Cart. Brands Now Compete to Be in It.',
+        note: 'When shoppers trade down or buy less, brands compete harder for the places left in the basket.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Chocolate and shopping scenes are illustrative Pexels stock, not identified Hershey facilities or customers. Product photographs by Evan-Amos (Wikimedia Commons, public domain) are archive images from 2010 and 2011, not 2026 campaign footage. Cocoa-drying photograph by Chuck Moravec (CC BY 2.0), cropped and animated. The cover artwork is illustrative, not a photograph of an actual event. Independent editorial production; no brand endorsement. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Cheaper Cocoa Hasn’t Made Halloween Candy Cheaper',
+      description:
+        'Cocoa got cheaper. Halloween candy did not. Follow Hershey’s buying decisions, a quarter where sales rose while volume fell, and the push to start Halloween in summer.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'spirit-halloween-seasonal-stores',
     youtubeId: 'wvDNgTh9QFk',
     youtubeTitle: 'Why Spirit Halloween Keeps Taking Over Dead Stores',
@@ -359,6 +638,132 @@ export const VIDEOS: VideoEntry[] = [
       title: 'DoorDash’s $17B Instacart Deal Is Really About AI’s Hardest Job',
       description:
         'An AI can plan your dinner. Someone still has to pick the avocado. Why DoorDash’s proposed Instacart deal is a bet on the physical work behind every grocery order.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'schaeffler-humanoid-robot-actuators',
+    youtubeId: 'sc0bkdImVrg',
+    youtubeTitle: 'Robots Are Building Robot Parts. Who Gets Paid?',
+    h1: 'Robots Are Building Robot Parts. Who Gets Paid?',
+    seoTitle: 'Schaeffler’s Humanoid Robot Bet: Why the Joints Matter',
+    metaDescription:
+      'Schaeffler has humanoids assembling actuators for other humanoids and about EUR400 million in robotics orders. Why the joint may be the real business.',
+    dek: 'A robot helping make the joints for the next robot is a wonderfully strange pitch. The people standing beside it, and the orders behind it, tell the real story.',
+    uploadDate: '2026-10-28T16:00:36-07:00',
+    duration: 'PT4M7S',
+    durationLabel: '4 min 7 sec',
+    topic: 'Manufacturing',
+    subject: 'Schaeffler humanoid robots',
+    thumbnail: '/images/videos/schaeffler-humanoid-robot-actuators.jpg',
+    thumbnailAlt: 'Video thumbnail: a humanoid robot working at a factory bench with a person behind it, under the words Who Gets Paid? and approximately $450M in robot orders.',
+    sections: [
+      {
+        paragraphs: [
+          'This robot is helping make parts for other robots: the joints that let the next robot move. Build the parts, put them inside robots, then put robots to work building more parts. It is a wonderfully strange sales pitch.',
+          'But watch the people standing beside the machines. This is not a factory that has learned to reproduce itself. It is a company trying to turn a very difficult piece of engineering into a business.',
+        ],
+      },
+      {
+        heading: 'The $450 million question',
+        paragraphs: [
+          'The company is Schaeffler. On October 13, 2026, it said orders in its humanoid robotics business had grown to approximately EUR400 million, helped by two new customers in the Greater China region in the third quarter. At the European Central Bank reference rate of October 23, 2026, that is about $450 million.',
+          'Orders are not revenue already earned, not profit and not the price of a factory. The question is whether the least glamorous part of the robot could become one of the most valuable places to be.',
+        ],
+      },
+      {
+        heading: 'Follow the joint',
+        paragraphs: [
+          'Forget the face and follow the arm. Software can decide where a hand should go. A physical mechanism still has to move it there, control the force and repeat the job without damaging what it holds. That is an actuator’s job: turning energy into controlled movement, some in a straight line and some by rotating. In a humanoid, actuators turn an instruction into a useful action.',
+          'Schaeffler already makes motion technology for demanding industrial applications. Its wager is that the humanoid boom will need that expertise, whichever robot gets the attention. On October 20, it announced a facility in Taicang, China, where six humanoids work across five stations assembling key joint modules, including linear and rotary actuators. Schaeffler describes it as the start of mass production of these components.',
+          'A short factory film cannot tell us how often the line stops, how many parts pass inspection or what each finished module costs. Those questions separate a compelling announcement from a proven business.',
+        ],
+      },
+      {
+        heading: 'The people training the machines',
+        paragraphs: [
+          'The next obstacle is in Erlangen, Germany. At its Humanoid Gym, Schaeffler is working with Hexagon Robotics to prepare a different robot, AEON, for manufacturing work. This is a training environment, not the Taicang production line.',
+          'In the footage, a person wearing a headset guides the task while the robot reaches for parts. Teams practice representative production scenarios and validate new capabilities before they reach the factory floor. People are learning how to integrate the robot while the robot is being trained, which is a more useful picture of industrial AI than one impressive move on a stage.',
+          'In August, the partners described a planned rollout of at least 1,000 AEON humanoids across Schaeffler’s manufacturing operations in the coming years. A planned deployment is not 1,000 robots already working.',
+        ],
+      },
+      {
+        heading: 'Supplier, customer and the business test',
+        paragraphs: [
+          'Schaeffler will also supply actuator technology to AEON. It wants to help build the machine, use the machine and learn from what happens when the machine meets a real job. That puts it on both sides, as component supplier and as user, which could give it valuable feedback: where a motion fails, what has to be redesigned and what the next application demands.',
+          'Buying robots and selling parts do not prove that the economics work. The public materials do not include the operating data needed to calculate a verified factory payback, and orders still have to become deliveries and profitable business. The same gap between an impressive capability and a business result runs through [ABB’s decision to sell its robotics division to SoftBank](/videos/softbank-abb-robotics-acquisition).',
+        ],
+      },
+      {
+        heading: 'Look past the face',
+        paragraphs: [
+          'The real test comes after the announcement: consistent quality, useful output and customers ordering again. The next time you watch a humanoid demonstration, look past the face at the joint doing the work. There may be a much bigger business hiding in that ordinary-looking movement.',
+          'Who has the stronger position in the robot business: the company building the machine or the company supplying the components?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Schaeffler reported approximately EUR400 million (about $450 million) in humanoid robotics orders in October 2026. Orders, not revenue or profit.',
+      'In Taicang, China, six humanoids work across five stations assembling joint modules, including linear and rotary actuators.',
+      'At its Humanoid Gym in Erlangen, Germany, Schaeffler and Hexagon Robotics train AEON on representative tasks before factory deployment.',
+      'The rollout of at least 1,000 AEON robots is a plan for the coming years, not a deployed count.',
+      'Schaeffler is both an actuator supplier to AEON and a user of it. The public materials do not support a verified factory payback.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The $450 million question' },
+      { time: '0:48', label: 'Follow the joint' },
+      { time: '1:55', label: 'The people training the machines' },
+      { time: '2:59', label: 'Supplier, customer and the business test' },
+      { time: '3:45', label: 'Look past the face' },
+    ],
+    sources: [
+      {
+        label: 'Schaeffler press release: humanoid robots assembling joint modules in Taicang (Schaeffler)',
+        date: 'October 20, 2026',
+        href: 'https://www.schaeffler.com/en/media/press-releases/press-releases-detail.jsp?id=88222851',
+      },
+      {
+        label: 'Schaeffler preliminary financial update, including humanoid robotics orders (Schaeffler)',
+        date: 'October 13, 2026',
+        href: 'https://www.schaeffler.de/en/news_media/press_releases/press_releases_detail.jsp?id=88222017',
+      },
+      {
+        label: 'Towards factory deployment: How AEON is trained to perform (Hexagon)',
+        date: 'August 19, 2026',
+        href: 'https://hexagon.com/company/newsroom/press-releases/2026/towards-factory-deployment-how-aeon-is-trained-to-perform',
+      },
+      {
+        label: 'Schaeffler: Building the capabilities to deploy humanoid robotics at scale (Hexagon Robotics)',
+        date: 'October 15, 2026',
+        href: 'https://robotics.hexagon.com/schaeffler-humanoid-robotics-at-scale/',
+      },
+      {
+        label: 'Euro foreign exchange reference rates (European Central Bank)',
+        date: 'October 23, 2026: EUR1 = USD1.1193',
+        href: 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The EUR400 million is humanoid robotics orders, converted at the ECB reference rate and rounded; it is not revenue, factory investment, profit or a verified payback. Taicang and Erlangen are different sites, robots and stages of deployment. The 1,000-robot figure is a planned rollout.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'A capable machine still depends on the work and the people around it.',
+      },
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'Proving the result, not showing the capability, is the test after an announcement.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Selected company-published excerpts and frame grabs from Schaeffler and Hexagon Robotics films are used for commentary on the actions and claims shown; footage copyright remains with Schaeffler Group, Hexagon Robotics and their respective owners. Some frames are reframed and annotated, and the conceptual motion illustrations are not Schaeffler product drawings. The thumbnail is an AI-assisted editorial treatment of an actual factory frame. Independent editorial analysis, not sponsored or endorsed. Music and sound credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Robots Are Building Robot Parts. Who Gets Paid?',
+      description:
+        'Schaeffler has humanoids assembling the joints for other humanoids. Follow the actuator from a factory in China to a training gym in Germany, and the orders behind it.',
       cta: 'Watch the video',
     },
   },
@@ -1081,6 +1486,163 @@ export const VIDEOS: VideoEntry[] = [
       title: 'Royal Caribbean’s $3 Billion Bet Beyond the Cruise',
       description:
         'Royal Caribbean Group agreed to pay about $3 billion for half of Sandals. Follow the money from onboard spending and private islands to a resort deal, and what the experience still has to earn.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'softbank-abb-robotics-acquisition',
+    youtubeId: 'yRjoUPE7f3E',
+    youtubeTitle: "SoftBank's $5.4 Billion Robot Bet: Why Is ABB Selling?",
+    h1: 'SoftBank’s $5.4 Billion Robot Bet: Why Is ABB Selling?',
+    seoTitle: 'Why ABB Is Selling Its Robotics Division to SoftBank',
+    metaDescription:
+      'SoftBank agreed to pay $5.375 billion for ABB Robotics. What the money buys, why AI setup costs matter, and why ABB is betting on data center power instead.',
+    dek: 'If AI is about to make robots more valuable, why would ABB sell its robotics business? The answer is in what it costs to get a robot working, and where ABB wants its next dollar.',
+    uploadDate: '2026-10-22T16:00:23-07:00',
+    duration: 'PT5M7S',
+    durationLabel: '5 min 7 sec',
+    topic: 'AI in practice',
+    subject: 'SoftBank and ABB Robotics',
+    thumbnail: '/images/videos/softbank-abb-robotics-acquisition.jpg',
+    thumbnailAlt: 'Video thumbnail: an ABB robot arm lifting a bagged garment above a conveyor, under the words ABB Robotics $5.4B Why Sell?',
+    sections: [
+      {
+        paragraphs: [
+          'A robot lifts a bag of clothes. A small movement, and a very big business bet. SoftBank agreed to pay $5.375 billion for ABB’s robotics division. If AI is about to make robots more valuable, why would ABB sell?',
+          'SoftBank wants a foothold in the physical world. ABB already has one and is choosing where to put its next dollar. The agreement was announced in October 2025. In its third-quarter report on October 20, 2026, ABB still expected completion in the fourth quarter of 2026, so the deal remains pending.',
+        ],
+      },
+      {
+        heading: 'What the money buys',
+        paragraphs: [
+          'The division generated $2.3 billion in revenue in 2024, about 7% of ABB Group revenues, with a workforce of approximately 7,000. It comes with factories, engineering expertise and existing customers. One is a Shanghai factory that opened in 2022 after a $150 million investment, where mobile robots move materials and robotic systems handle tasks such as screwdriving and assembly. Another is Auburn Hills, Michigan, ABB Robotics’ refitted U.S. headquarters and manufacturing facility.',
+          'Those details matter. An AI company entering industry has to get its technology into a customer’s operation. Someone has to install the equipment, train the people and keep the system useful. SoftBank is buying a business that already does that work.',
+        ],
+      },
+      {
+        heading: 'The cost of adapting robots',
+        paragraphs: [
+          'A rigid part sitting in the same position is one problem. Apparel in changing bags, orientations and packaging is another. The machine has to work out what it sees and how to handle it, and then the products change again. The business case turns on two questions: how much work does it take to get a robot ready, and how much more will the next change require?',
+        ],
+      },
+      {
+        heading: 'ABB’s AI Robot Trainer',
+        paragraphs: [
+          'In October 2026, ABB added AI Robot Trainer to its Fashion Inductor application. Operators work with training images, monitor performance and retrain the system as requirements change. ABB says the approach can reduce engineering and commissioning effort, the work of getting a system ready to run, by up to 75% in that fashion logistics application.',
+          'That is a manufacturer’s claim about one application. It is not a 75% cut in a customer’s total costs, and it does not say when the investment pays back. For a buyer, the questions are practical: how much setup time is actually saved, how often a person intervenes and what happens when new packaging arrives. The same claim comes up in the documentary on [why AI that works does not always make a business more money](/videos/ai-business-roi-payback).',
+        ],
+      },
+      {
+        heading: 'NVIDIA and simulation',
+        paragraphs: [
+          'ABB is also integrating NVIDIA simulation technology into RobotStudio HyperReality, announced in March 2026. Engineers can build virtual workcells and generate training data before deploying to physical equipment, testing more situations before asking a real machine to do the job.',
+          'Lighting, surfaces, materials and movement all have to translate into the actual workspace, and a virtual success still needs validation on the floor. For a manufacturer, the useful result would be less disruption while bringing a process online.',
+        ],
+      },
+      {
+        heading: 'Why ABB would sell',
+        paragraphs: [
+          'ABB says there are limited business and technology synergies between robotics and the rest of the company, which have different demand and market characteristics. It had already planned to spin the division off as a separately listed company before SoftBank’s offer replaced that plan. Selling a promising division can still make sense if the money and management attention have better uses elsewhere.',
+          'ABB’s AI exposure continues through the infrastructure that powers data centers. In September 2026, it introduced Infinitus, a direct current power portfolio for AI data centers, with some of the equipment still to come to market. In its October 20 results, ABB reported a triple-digit increase in data center orders. ABB can pursue AI spending through power infrastructure while SoftBank pursues machines that perform work.',
+        ],
+      },
+      {
+        heading: 'What SoftBank needs to prove',
+        paragraphs: [
+          'For SoftBank, the attraction is the combination of AI investment, industrial equipment and a route into customers’ operations. The hard part is making that combination earn more than the pieces would separately. A better model has to survive real product changes, a useful robot has to be supportable, and an easier installation has to produce enough value for the customer to order the next one.',
+          'If AI cuts the work needed to deploy and adapt these machines, the opportunity could extend across more applications. If that work stays expensive, the ambition runs into the same operational limits.',
+        ],
+      },
+      {
+        heading: 'Beyond the demo',
+        paragraphs: [
+          'So watch what happens after the demonstration: repeat orders, reliable operation and the cost of adapting to change. That is where a $5 billion bet becomes a business.',
+          'Would you rather own the robots doing the work or the power infrastructure behind AI?',
+        ],
+      },
+    ],
+    takeaways: [
+      'SoftBank agreed to buy ABB Robotics for an enterprise value of $5.375 billion. As of October 20, 2026, ABB expected closing in the fourth quarter of 2026.',
+      'The division had $2.3 billion in 2024 revenue and about 7,000 employees, with factories including a $150 million Shanghai site and Auburn Hills, Michigan.',
+      'ABB says AI Robot Trainer can cut engineering and commissioning effort by up to 75% in its fashion logistics application. That is not a total-cost reduction or a proven payback.',
+      'ABB cites limited synergies between robotics and its other businesses, and had planned a spin-off before SoftBank’s offer.',
+      'ABB keeps AI exposure through data center power: Infinitus launched in September 2026, and data center orders grew at a triple-digit rate in the third quarter.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A small movement, a $5.375 billion bet' },
+      { time: '0:36', label: 'What the money buys' },
+      { time: '1:01', label: 'Auburn Hills: robotics manufacturing in the U.S.' },
+      { time: '1:21', label: 'The cost of adapting robots' },
+      { time: '1:44', label: 'ABB’s AI Robot Trainer' },
+      { time: '2:36', label: 'NVIDIA and simulation' },
+      { time: '3:19', label: 'Why ABB would sell' },
+      { time: '4:07', label: 'What SoftBank needs to prove' },
+      { time: '4:54', label: 'Beyond the demo' },
+    ],
+    sources: [
+      {
+        label: 'ABB to divest Robotics division to SoftBank Group (ABB)',
+        date: 'October 8, 2025',
+        href: 'https://new.abb.com/news/detail/129776/abb-to-divest-robotics-division-to-softbank-group',
+      },
+      {
+        label: 'Acquisition of ABB Ltd’s Robotics Business (SoftBank Group)',
+        date: 'October 8, 2025',
+        href: 'https://group.softbank/en/news/press/20251008',
+      },
+      {
+        label: 'ABB Q3 2026 results (ABB, PDF)',
+        date: 'October 20, 2026',
+        href: 'https://search.abb.com/library/Download.aspx?DocumentID=9AKK108473A4462&LanguageCode=en&DocumentPartId=&Action=Launch',
+      },
+      {
+        label: 'ABB opens state-of-the-art robotics mega factory in Shanghai (ABB)',
+        date: 'December 2, 2022',
+        href: 'https://www.abb.com/global/en/news/97670/abb-opens-state-of-the-art-robotics-mega-factory-in-shanghai',
+        note: 'The link in the YouTube description no longer loads; this is the same release on ABB’s current site.',
+      },
+      {
+        label: 'ABB opens refitted, state-of-the-art US robotics facility (ABB)',
+        date: 'March 13, 2024',
+        href: 'https://new.abb.com/news/detail/113579/abb-opens-refitted-state-of-the-art-us-robotics-facility-reaffirming-commitment-to-us-customers',
+      },
+      {
+        label: 'ABB Robotics brings industrial-grade physical AI to fashion logistics',
+        date: 'October 15, 2026',
+        href: 'https://www.abb.com/global/en/news/139480/prsrl-abb-robotics-brings-industrial-grade-physical-ai-to-fashion-logistics',
+      },
+      {
+        label: 'ABB Robotics partners with NVIDIA to deliver industrial-grade physical AI at scale',
+        date: 'March 9, 2026',
+        href: 'https://www.abb.com/global/en/news/134030/prsrl-abb-robotics-partners-with-nvidia-to-deliver-industrial-grade-physical-ai-at-scale',
+      },
+      {
+        label: 'ABB’s new direct current portfolio aims to rewire AI data center energy infrastructure',
+        date: 'September 21, 2026',
+        href: 'https://www.abb.com/global/en/news/138900/abbs-new-direct-current-portfolio-aims-to-rewire-ai-data-center-energy-infrastructure',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The $5.375 billion is the agreed enterprise value, rounded to $5.4 billion in the title, and the deal had not closed as of ABB’s October 20, 2026 report. The up to 75% figure is ABB’s claim for one application, not a verified reduction in customer costs or a proven payback.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'Proving the change worked, not the demo, decides the next order.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Automation pays only when the work around it changes too.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. ABB Robotics footage © ABB or its licensors, used in independent editorial reporting under ABB’s published editorial exception; archive, manufacturer demonstrations, simulation and the Infinitus concept illustration are labeled on screen. Mechanical sound effects are added sound design, not recordings of the machines shown. The map uses public-domain Natural Earth boundaries. The thumbnail is an AI-assisted illustrative cover based on the opening apparel-handling demonstration, not a photograph of an acquisition event. Company logos identify the subjects of this independent report; no sponsorship or endorsement implied. Music credits are listed in the YouTube description.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'SoftBank’s $5.4 Billion Robot Bet: Why Is ABB Selling?',
+      description:
+        'SoftBank agreed to pay $5.375 billion for ABB Robotics. Follow what the money buys, what it costs to get a robot working, and why ABB is putting its next dollar into power.',
       cta: 'Watch the video',
     },
   },
@@ -2585,7 +3147,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'spirit-halloween-seasonal-stores'
+export const FEATURED_VIDEO_SLUG: string | null = 'costco-membership-fee-hot-dog'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -2634,7 +3196,12 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
-  { youtubeId: 'tk2OiRW6wBM', title: "Cocoa Got Cheaper. Why Didn't Your Chocolate?", uploadDate: '2026-10-31T09:00:24-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/tk2OiRW6wBM.jpg' },
+  { youtubeId: 'vtWtIyGPZtg', title: "Why Costco's Giant Stores Sell So Few Choices", uploadDate: '2026-11-01T17:00:39-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/vtWtIyGPZtg.jpg', related: ['costco-membership-fee-hot-dog'] },
+  { youtubeId: 'Sfvu4OZ6_8c', title: 'Costco Kept $1.50. The Other Price Changed.', uploadDate: '2026-11-01T09:00:28-08:00', durationLabel: '0:59', thumbnail: '/images/shorts/Sfvu4OZ6_8c.jpg', related: ['costco-membership-fee-hot-dog'] },
+  { youtubeId: 'bYDzy0dzT3s', title: 'AI Ranked EltaMD First. Then the Budget Answers Left It Out.', uploadDate: '2026-11-01T06:49:58-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/bYDzy0dzT3s.jpg' },
+  { youtubeId: 'rTDa7c-5e8c', title: 'Why Hershey Wants Halloween to Start in July', uploadDate: '2026-10-31T17:00:08-07:00', durationLabel: '0:53', thumbnail: '/images/shorts/rTDa7c-5e8c.jpg', related: ['hershey-cocoa-halloween-candy-prices'] },
+  { youtubeId: 's3KHQuZXSvI', title: 'AI Mentioned Levoit Every Time. Coway Ranked First More Often.', uploadDate: '2026-10-31T12:59:30-07:00', durationLabel: '0:50', thumbnail: '/images/shorts/s3KHQuZXSvI.jpg' },
+  { youtubeId: 'tk2OiRW6wBM', title: "Cocoa Got Cheaper. Why Didn't Your Chocolate?", uploadDate: '2026-10-31T09:00:24-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/tk2OiRW6wBM.jpg', related: ['hershey-cocoa-halloween-candy-prices'] },
   { youtubeId: 'bOJmCrpOqTY', title: 'Why Spirit Halloween Closes Its Stores on Purpose', uploadDate: '2026-10-30T17:00:12-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/bOJmCrpOqTY.jpg', related: ['spirit-halloween-seasonal-stores'] },
   { youtubeId: 'fziqEXtW4uk', title: 'Why Spirit Halloween Loves Dead Stores', uploadDate: '2026-10-30T09:00:14-07:00', durationLabel: '0:53', thumbnail: '/images/shorts/fziqEXtW4uk.jpg', related: ['spirit-halloween-seasonal-stores'] },
   { youtubeId: 'adN5PGp_IQw', title: 'AI Mentioned CeraVe Most. First Place Still Split.', uploadDate: '2026-10-30T07:15:47-07:00', durationLabel: '0:50', thumbnail: '/images/shorts/adN5PGp_IQw.jpg' },
@@ -2656,7 +3223,7 @@ export const SHORTS: ShortEntry[] = [
   { youtubeId: 'm_RQj5lvi0Y', title: 'Before AI Can Work, Someone Has to Deliver This', uploadDate: '2026-10-24T09:00:18-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/m_RQj5lvi0Y.jpg' },
   { youtubeId: 'Z8-efcDaMXc', title: "This Robot Has Laptop DNA. Here's Why.", uploadDate: '2026-10-23T16:00:00-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/Z8-efcDaMXc.jpg' },
   { youtubeId: 'q4zsspHfZLQ', title: 'Muse vs Dot vs Grok Bot: Which AI Saves You Work?', uploadDate: '2026-10-23T14:00:23-07:00', durationLabel: '0:58', thumbnail: '/images/shorts/q4zsspHfZLQ.jpg' },
-  { youtubeId: 'Xu7qe2-ulyM', title: 'Why Picking Up Clothes Is So Hard for Robots', uploadDate: '2026-10-22T18:00:15-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/Xu7qe2-ulyM.jpg', related: ['ai-business-roi-payback'] },
+  { youtubeId: 'Xu7qe2-ulyM', title: 'Why Picking Up Clothes Is So Hard for Robots', uploadDate: '2026-10-22T18:00:15-07:00', durationLabel: '0:49', thumbnail: '/images/shorts/Xu7qe2-ulyM.jpg', related: ['ai-business-roi-payback', 'softbank-abb-robotics-acquisition'] },
   { youtubeId: '0wYNm3GRmTA', title: 'Mercedes Put a V8 Soundtrack in an Electric SUV', uploadDate: '2026-10-22T16:45:16-07:00', durationLabel: '0:56', thumbnail: '/images/shorts/0wYNm3GRmTA.jpg' },
   { youtubeId: 'ESdyr9S3yYI', title: "Why NASA's X-59 Has Such a Long Nose", uploadDate: '2026-10-21T18:00:04-07:00', durationLabel: '0:57', thumbnail: '/images/shorts/ESdyr9S3yYI.jpg' },
   { youtubeId: '4mSBvhhUpGM', title: "Why Volkswagen Covered This EV's Rear Wheels", uploadDate: '2026-10-21T15:00:14-07:00', durationLabel: '0:55', thumbnail: '/images/shorts/4mSBvhhUpGM.jpg' },
