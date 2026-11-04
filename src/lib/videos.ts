@@ -74,6 +74,319 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'amazon-robots-deepfleet-warehouse-traffic',
+    youtubeId: 'tws-eRJddIE',
+    youtubeTitle: 'Amazon Has 1,000,000 Robots. Who Directs the Traffic?',
+    h1: 'Amazon Has 1,000,000 Robots. Who Directs the Traffic?',
+    seoTitle: 'Amazon DeepFleet: Why a Million Robots Need Traffic Control',
+    metaDescription:
+      'Amazon has deployed more than a million warehouse robots. Why the harder problem is traffic: Kiva, congestion, the DeepFleet 10% claim and every handoff.',
+    dek: 'A robot that finishes its task quickly is only half the story. At a million machines, the hard part is the intersection, and whether the next station is ready.',
+    uploadDate: '2026-11-03T16:00:15-08:00',
+    duration: 'PT5M7S',
+    durationLabel: '5 min 7 sec',
+    topic: 'Delivery and logistics',
+    subject: 'Amazon robot traffic',
+    thumbnail: '/images/videos/amazon-robots-deepfleet-warehouse-traffic.jpg',
+    thumbnailAlt: 'Video thumbnail: a yellow robotic arm moving a parcel on a warehouse conveyor, under the words Amazon Robot Rush Hour, 1,000,000 Robots.',
+    sections: [
+      {
+        paragraphs: [
+          'A robotic arm lifts a parcel, turns and feeds the next part of the line. One task, done. But what if the next step is not ready?',
+          'Amazon says it has deployed more than a million robots across more than 300 facilities. At that scale, even waiting becomes a business problem, and the answer is not always another robot.',
+        ],
+      },
+      {
+        heading: 'The $775 million Kiva agreement',
+        paragraphs: [
+          'In March 2012, Amazon agreed to acquire Kiva Systems for approximately $775 million in cash. Amazon described Kiva’s technology as a way to bring products directly to employees to pick, pack and stow. Instead of sending a person walking through the warehouse to find a product, the shelf comes to the person.',
+          'That changes the shape of the problem. The worker stays at a station and the inventory travels. A job that used to be about walking becomes a problem of movement, timing and software.',
+        ],
+      },
+      {
+        heading: 'Warehouse rush hour',
+        paragraphs: [
+          'Then scale it up. Hundreds of robots want to arrive at stations while others need to leave, all sharing the same space, intersections and destinations. Automating the walking does not abolish rush hour.',
+          'In 2022, Amazon’s robotics researchers described the catch. At first, adding robots increases throughput. At a certain point, their numbers start to cause congestion: the robots interfere with each other and reduce the efficiency of the whole system. The shortest route for one machine can be a terrible route for everybody else.',
+        ],
+      },
+      {
+        heading: 'DeepFleet and the traffic problem',
+        paragraphs: [
+          'That is the business problem behind DeepFleet, the generative AI foundation model Amazon introduced in June 2025 alongside the news that its millionth robot had reached a fulfillment center in Japan. DeepFleet learns from robot movement data to predict how traffic is likely to unfold, and Amazon’s scientists say those predictions can help assign tasks to robots and route them around potential congestion.',
+          'Picture two routes to the same station. One is shorter, but everybody wants it. The other takes a little longer but keeps moving. The clever decision can be choosing the second route before the first one backs up. What matters is what gets through the building, not which machine wins the race to the intersection.',
+        ],
+      },
+      {
+        heading: 'What the 10% claim actually means',
+        paragraphs: [
+          'Amazon put a number on the opportunity: a 10% improvement in robot fleet travel efficiency. That is Amazon’s claim, and it describes how the robots travel. It is not a 10% saving on everything Amazon spends delivering an order. Still, less wasted travel means more useful movement from equipment and floor space the company has already invested in.',
+        ],
+      },
+      {
+        heading: 'Follow the real handoffs',
+        paragraphs: [
+          'The footage in the video was filmed at Amazon’s BRS2 fulfillment center in Swindon, UK, in March 2025. It shows different stations, not one customer’s order followed from start to finish: a robotic arm placing a package onto the line, a measuring gate where parcels pass through sensors, and a station that applies shipping labels to moving boxes.',
+          'Each successful handoff raises a new question: is the next stage ready for what is arriving? If the robot can feed boxes faster than the next station can process them, speeding up the robot again just builds a longer queue. An impressive demonstration is the beginning of the business case, not the end of it. The same lesson runs through [FedEx’s overnight network](/videos/fedex-overnight-delivery-promise), where fast sorting only matters if the rest of the chain keeps up.',
+        ],
+      },
+      {
+        heading: 'The cost around the machine',
+        paragraphs: [
+          'The $775 million Kiva figure was an acquisition price, not the total cost of Amazon’s robotics program. Machines, maintenance, software, training and the rest of the operation around them all have to be paid for. A faster piece of equipment does not automatically lower the cost of a completed order. The gain has to survive the next handoff, and the one after that.',
+        ],
+      },
+      {
+        heading: 'People and the ordinary shift',
+        paragraphs: [
+          'There are people in this system. Bringing a shelf to a worker can reduce walking, but on its own it does not answer questions about pace, repetitive work or safety. In December 2024, the U.S. Department of Labor announced a corporate-wide settlement with Amazon requiring ergonomic measures at covered facilities, including fulfillment centers, sortation centers and delivery stations. Amazon, for its part, reports that its recordable incident rate improved 34% over five years.',
+          'A robot count is not a safety score. For anyone evaluating automation, the useful question is what happens across an ordinary shift, including the interruptions.',
+        ],
+      },
+      {
+        heading: 'The real test is consistency',
+        paragraphs: [
+          'Once a delivery experience works well, it becomes the expectation. Customers never see the warehouse choreography. They see whether the promise was kept. The million-robot milestone gets the headline. The less visible challenge is getting the machines, the software and the people to work as one system, again and again.',
+          'Next time you see an impressive robot demo, look just beyond it. What is waiting on the other side?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Amazon agreed to acquire Kiva Systems in 2012 for approximately $775 million in cash. That is an acquisition price, not Amazon’s total robotics spend.',
+      'Amazon’s own researchers wrote in 2022 that adding robots raises throughput at first, then creates congestion that reduces the efficiency of the whole system.',
+      'DeepFleet, announced with Amazon’s millionth robot in June 2025, predicts robot traffic to help assign tasks and route around congestion.',
+      'The 10% figure is Amazon’s claim for robot fleet travel efficiency, not a saving on total delivery costs.',
+      'A faster machine only helps if the next station can absorb what it sends. Otherwise it builds a longer queue.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'One task done. What comes next?' },
+      { time: '0:19', label: 'The $775,000,000 Kiva agreement' },
+      { time: '0:45', label: 'Warehouse rush hour' },
+      { time: '1:16', label: 'DeepFleet and the traffic problem' },
+      { time: '1:58', label: 'What the 10% claim actually means' },
+      { time: '2:24', label: 'Follow the real handoffs' },
+      { time: '3:17', label: 'The cost around the machine' },
+      { time: '3:42', label: 'People and the ordinary shift' },
+      { time: '4:15', label: 'The real test is consistency' },
+    ],
+    sources: [
+      {
+        label: 'Amazon.com to Acquire Kiva Systems, Inc. (Amazon press release)',
+        date: 'March 19, 2012',
+        href: 'https://press.aboutamazon.com/news-releases/news-release-details/amazoncom-acquire-kiva-systems-inc/',
+      },
+      {
+        label: 'Amazon launches a new AI foundation model to power its robotic fleet and deploys its 1 millionth robot (About Amazon)',
+        date: 'June 30, 2025',
+        href: 'https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model',
+      },
+      {
+        label: 'How Amazon robots navigate congestion (Amazon Science)',
+        date: 'May 24, 2022',
+        href: 'https://www.amazon.science/latest-news/how-amazon-robots-navigate-congestion',
+      },
+      {
+        label: 'Amazon builds first foundation model for multirobot coordination (Amazon Science)',
+        date: 'August 11, 2025',
+        href: 'https://www.amazon.science/blog/amazon-builds-first-foundation-model-for-multirobot-coordination',
+      },
+      {
+        label: 'US Department of Labor announces settlement with Amazon requiring corporate-wide ergonomic measures (U.S. Department of Labor)',
+        date: 'December 19, 2024',
+        href: 'https://www.dol.gov/newsroom/releases/osha/osha20241219',
+      },
+      {
+        label: 'Amazon’s 2024 workplace safety performance shows annual improvement (About Amazon)',
+        date: 'March 13, 2025',
+        href: 'https://www.aboutamazon.com/news/workplace/amazon-workplace-safety-performance-2024',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The $775 million Kiva figure is the 2012 acquisition agreement, not Amazon’s total robotics spend. The 10% figure is Amazon’s claim for robot fleet travel efficiency, not a saving on total delivery costs. Injury rate improvements are Amazon’s own reported figures.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Speeding up one step rarely helps when the constraint sits in the handoffs around it.',
+      },
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A claimed efficiency gain is a starting point. The test is whether the result shows up in the operation.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Warehouse footage and photographs are by Marc Auledas Noguera (Auledas) on Wikimedia Commons, CC BY 4.0, filmed at Amazon’s BRS2 fulfillment center in Swindon, UK, in March 2025, then edited and reframed with source audio removed. Different stations are shown, not one order tracked end to end. Traffic, shelf and queue animations are original illustrations, not Amazon operational data. The thumbnail is an AI-assisted editorial illustration based on the credited warehouse photograph. Music: “Machina” and “Filaments” by Scott Buckley, CC BY 4.0. Independent commentary; no Amazon endorsement.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Amazon Has 1,000,000 Robots. Who Directs the Traffic?',
+      description:
+        'Amazon has deployed more than a million robots. Follow a parcel through real warehouse handoffs to the harder problem: keeping the whole fleet moving.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'aldi-quarter-cart-business-model',
+    youtubeId: 'Q_1sqwT2DH8',
+    youtubeTitle: "ALDI Gives Your Quarter Back. Here's the Real Business.",
+    h1: 'ALDI Gives Your Quarter Back. Here’s the Real Business.',
+    seoTitle: 'ALDI’s Business Model: What the Quarter Cart Really Does',
+    metaDescription:
+      'ALDI’s refundable quarter gets carts returned without staff collecting them. How shipping box displays, self-bagging and skipped services shape the model.',
+    dek: 'The quarter comes back. What ALDI keeps is the deal you accepted at the door: a little less convenience in exchange for a simpler, cheaper store.',
+    uploadDate: '2026-11-02T16:00:07-08:00',
+    duration: 'PT5M15S',
+    durationLabel: '5 min 15 sec',
+    topic: 'Retail strategy',
+    subject: 'ALDI store format',
+    thumbnail: '/images/videos/aldi-quarter-cart-business-model.jpg',
+    thumbnailAlt: 'Video thumbnail: a U.S. quarter beside a row of chained ALDI shopping carts outside an ALDI store at sunset, under the words The Quarter Isn’t the Profit.',
+    sections: [
+      {
+        paragraphs: [
+          'ALDI asks for a quarter before you get through the door, then gives it back. As a way to make 25 cents, it makes no sense. The quarter is there to make something else happen: you bring the cart back, and one small job gets done without a member of staff going out to collect it.',
+          'Look inside the store and the same idea shows up everywhere: the boxes, the bags, even the services that are missing. ALDI is asking a question most retailers would rather not put on the door. How much convenience would you give up for a cheaper shopping trip?',
+        ],
+      },
+      {
+        heading: 'A $9 billion commitment',
+        paragraphs: [
+          'ALDI is putting serious money behind its answer. On January 12, 2026, it reaffirmed its commitment to invest $9 billion in the U.S. over five years through 2028, covering new stores, supply chain capacity and its online shopping experience. It plans more than 180 new stores in 2026 and has a goal of 3,200 stores by the end of 2028.',
+          'That figure is an investment commitment, not money already spent and not revenue from cart deposits. The quarter is a clue to the business ALDI wants to expand.',
+        ],
+      },
+      {
+        heading: 'The cart changes the work',
+        paragraphs: [
+          'Insert the coin, release the cart, do the shopping. Return the cart, reconnect the chain, get the coin back. In ALDI’s words, with shoppers responsible for their carts, staff can focus on important tasks inside the store.',
+          'Nobody gets rich recovering a quarter, but the cart still ends up in the right place. There is a difference between making a task cheaper and designing things so the task happens differently. ALDI uses both.',
+        ],
+      },
+      {
+        heading: 'The box is the display',
+        paragraphs: [
+          'Those cardboard cases on the shelf are not waiting for someone to finish the display. They are the display. ALDI’s history page lists everyday items displayed in their original shipping boxes to save on restocking shelves, and its supplier guidance asks for display-ready cases that can be merchandised with no repacking.',
+          'Instead of handling every package to build a perfect row, the outer container becomes part of the shelf. It is a small change in what the customer sees and a bigger one in what someone has to do repeatedly behind the scenes. Costco makes a similar trade with [pallets on the sales floor](/videos/costco-membership-fee-hot-dog). You do not eat the display. You eat what came in it.',
+        ],
+      },
+      {
+        heading: 'The brand on the shelf',
+        paragraphs: [
+          'ALDI says more than 90% of the products in its stores are exclusive brands. That does not mean ALDI manufactures everything. It means much of the assortment is sold under its own labels rather than a wall of competing national brands, which gives the retailer more control over the product and its packaging. The box on the shelf and the product in the box can be designed together.',
+          'For the shopper, there is a trade. You may find an alternative to your usual brand rather than the exact thing you came for, and a lower price on something you do not want is not much of a bargain.',
+        ],
+      },
+      {
+        heading: 'The work you take home',
+        paragraphs: [
+          'The trade gets more obvious at checkout. ALDI expects you to pack your own groceries, in bags you bring or buy there, and says self-bagging keeps lines moving and reduces costs. A store can sell you groceries and convenience. ALDI leaves some of that convenience for you to provide.',
+        ],
+      },
+      {
+        heading: 'The businesses that are missing',
+        paragraphs: [
+          'You cannot fill a prescription or do your banking here. ALDI’s description of its U.S. format explicitly leaves out add-on services like banks and pharmacies. That is a choice about what the store is trying to be. Every extra service needs space, equipment or people, and leaving one out makes the operation simpler. It can also mean another stop for someone who needs it. Saving money at one store is less exciting if the trip turns into a tour of three parking lots.',
+          'ALDI has not rejected convenience altogether. It offers curbside pickup and delivery, including through Instacart, DoorDash and Uber Eats, and its own guidance says online items may be priced higher to cover the cost of personal shopping or delivery. The work still has to happen. If you do not do it, someone else does, and the economics change.',
+        ],
+      },
+      {
+        heading: 'The unexpected aisle',
+        paragraphs: [
+          'Then there is an aisle that seems to have wandered in from another shopping trip. In the February 2026 store tour used in the video, there is a pet sofa, and a few steps away, a kit for building a little ALDI store. ALDI Finds is its rotating selection of limited-time items, and as ALDI puts it, it is not always food.',
+          'The efficient store still has room for a surprise. Whether that surprise belongs in your budget is a different question.',
+        ],
+      },
+      {
+        heading: 'The deal behind the groceries',
+        paragraphs: [
+          'The more interesting business question is whether shoppers like the whole arrangement enough to keep coming back. That is what makes the $9 billion commitment worth watching: it is a plan to repeat the system in more places while expanding the supply chain and digital shopping around it. The carts do not pay for that. They show the operating model in miniature.',
+          'The quarter, the cardboard and the bagging counter are parts of the same decision: what the retailer does, what the shopper does, and which extras neither of them has to pay for. The real transaction was never the 25 cents. It was the deal you accepted to go shopping.',
+        ],
+      },
+    ],
+    takeaways: [
+      'ALDI’s quarter is refundable. Its job is to get carts returned so staff can focus on work inside the store.',
+      'Products are displayed in their original shipping boxes to save restocking time, and ALDI asks suppliers for display-ready cases.',
+      'ALDI says more than 90% of the products in its stores are exclusive brands, giving it more control over product and packaging.',
+      'Self-bagging and the absence of banks and pharmacies simplify the store but shift some work, or another stop, to the shopper.',
+      'The $9 billion figure is a five-year U.S. investment commitment through 2028, not money already spent or revenue from carts.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The quarter that comes back' },
+      { time: '0:35', label: 'A $9 billion commitment' },
+      { time: '0:55', label: 'The cart changes the work' },
+      { time: '1:30', label: 'The box is the display' },
+      { time: '1:59', label: 'The brand on the shelf' },
+      { time: '2:37', label: 'The work you take home' },
+      { time: '2:55', label: 'The businesses that are missing' },
+      { time: '3:48', label: 'The unexpected aisle' },
+      { time: '4:18', label: 'The deal behind the groceries' },
+    ],
+    sources: [
+      {
+        label: 'ALDI 101: format and refundable cart deposit (ALDI US)',
+        date: 'Checked November 3, 2026',
+        href: 'https://corporate.aldi.us/about-us/aldi-101',
+      },
+      {
+        label: 'ALDI US Doubles Down on Growth in 2026 (ALDI US newsroom)',
+        date: 'January 12, 2026',
+        href: 'https://corporate.aldi.us/newsroom/news/aldi-us-doubles-down-on-growth-in-2026',
+      },
+      {
+        label: 'Product Safety and Quality (ALDI US)',
+        date: 'Checked November 3, 2026',
+        href: 'https://corporate.aldi.us/about-us/product-safety-and-quality',
+      },
+      {
+        label: 'In-Store Pricing vs. Online Pricing (ALDI Support)',
+        date: 'Checked November 3, 2026',
+        href: 'https://help.aldi.us/faqs/article/In-store-Pricing-vs-Online-Pricing',
+      },
+      {
+        label: 'ALDI, America’s Fastest-Growing Grocer, Expands to Portland Opening First Store in Maine (ALDI US newsroom)',
+        date: 'March 2, 2026',
+        href: 'https://corporate.aldi.us/newsroom/news/aldi-americas-fastest-growing-grocer-expands-to-portland-opening-first-store-in-maine',
+        note: 'Added on this page; not cited in the video.',
+      },
+      {
+        label: 'ALDI History (ALDI US)',
+        date: 'Checked November 3, 2026',
+        href: 'https://corporate.aldi.us/about-us/aldi-history',
+        note: 'Added on this page; not cited in the video.',
+      },
+      {
+        label: 'Supplier FAQs: Display Ready Case (ALDI US)',
+        date: 'Checked November 3, 2026',
+        href: 'https://corporate.aldi.us/suppliers/faqs',
+        note: 'Added on this page; not cited in the video.',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus three ALDI pages added here for the cart, shipping box and self-bagging details. The $9 billion figure is a five-year investment commitment through 2028. ALDI’s product page says more than 90% of products are exclusive brands; its March 2026 store announcement says nearly 90%. No cheapest-basket or shopper-savings claim is made, and prices visible in the store footage are not current offers.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'ALDI delivers through Instacart and DoorDash. The physical work of filling a grocery order is what that deal is about.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Another grocer deciding who does the picking and delivering, and how the operation pays for it.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Store-tour footage is from “Is Aldi the Place for Cheap Groceries?” by the altem life, filmed in February 2026 in Mount Dora, Florida. Cart-mechanism footage is archival, from “Jon Drinks Water #3771 Aldi Shopping Carts” by Jon Drinks Water, published in 2016. Both carry Creative Commons Attribution licences and were excerpted, reframed and muted, with original narration, captions and graphics added. Prices in the footage are not current offers. The thumbnail is a designed editorial illustration. Music: “Machina” and “Filaments” by Scott Buckley, CC BY 4.0. Coin sound: “Coins #1” by Joseph Sardin / BigSoundBank, CC0, used as editorial Foley. No endorsement by ALDI or the source creators is implied.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'ALDI Gives Your Quarter Back. Here’s the Real Business.',
+      description:
+        'ALDI asks for a quarter, then gives it back. Follow the cart, the cardboard and the bagging counter to the deal shoppers accept at the door.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'costco-membership-fee-hot-dog',
     youtubeId: 'ZM6s0gP7Rm0',
     youtubeTitle: 'Why Costco Wants You to Remember $1.50',
@@ -3147,7 +3460,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'costco-membership-fee-hot-dog'
+export const FEATURED_VIDEO_SLUG: string | null = 'amazon-robots-deepfleet-warehouse-traffic'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -3196,6 +3509,10 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'vpBgv9i2F-I', title: 'Why More Robots Can Make a Warehouse Slower', uploadDate: '2026-11-03T09:00:24-08:00', durationLabel: '0:56', thumbnail: '/images/shorts/vpBgv9i2F-I.jpg', related: ['amazon-robots-deepfleet-warehouse-traffic'] },
+  { youtubeId: 'cwpqS-oSa3k', title: 'Why ALDI Skips the Pharmacy', uploadDate: '2026-11-02T17:00:23-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/cwpqS-oSa3k.jpg', related: ['aldi-quarter-cart-business-model'] },
+  { youtubeId: 'fLn888FJHxY', title: 'Four AIs Ranked Breville First. Then Came the $500 Budget.', uploadDate: '2026-11-02T16:02:39-08:00', durationLabel: '0:57', thumbnail: '/images/shorts/fLn888FJHxY.jpg' },
+  { youtubeId: 'e2TFIeTTUxk', title: 'Why ALDI Gives Your Quarter Back', uploadDate: '2026-11-02T09:00:23-08:00', durationLabel: '0:57', thumbnail: '/images/shorts/e2TFIeTTUxk.jpg', related: ['aldi-quarter-cart-business-model'] },
   { youtubeId: 'vtWtIyGPZtg', title: "Why Costco's Giant Stores Sell So Few Choices", uploadDate: '2026-11-01T17:00:39-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/vtWtIyGPZtg.jpg', related: ['costco-membership-fee-hot-dog'] },
   { youtubeId: 'Sfvu4OZ6_8c', title: 'Costco Kept $1.50. The Other Price Changed.', uploadDate: '2026-11-01T09:00:28-08:00', durationLabel: '0:59', thumbnail: '/images/shorts/Sfvu4OZ6_8c.jpg', related: ['costco-membership-fee-hot-dog'] },
   { youtubeId: 'bYDzy0dzT3s', title: 'AI Ranked EltaMD First. Then the Budget Answers Left It Out.', uploadDate: '2026-11-01T06:49:58-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/bYDzy0dzT3s.jpg' },

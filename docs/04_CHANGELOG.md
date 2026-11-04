@@ -6,6 +6,58 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.78 - Amazon robots and ALDI documentary pages and four new Shorts (2026-11-03)
+
+**What changed.** Two new documentaries from the daily series now have
+companion pages, bringing `/videos` to 23 documentaries:
+
+- `/videos/amazon-robots-deepfleet-warehouse-traffic`, "Amazon Has 1,000,000
+  Robots. Who Directs the Traffic?" (https://youtu.be/tws-eRJddIE, uploaded
+  2026-11-03T16:00:15-08:00, PT5M7S), Delivery and logistics, about 770
+  words.
+- `/videos/aldi-quarter-cart-business-model`, "ALDI Gives Your Quarter Back.
+  Here's the Real Business." (https://youtu.be/Q_1sqwT2DH8,
+  2026-11-02T16:00:07-08:00, PT5M15S), Retail strategy, about 870 words.
+
+Each page is written against the narration, with takeaways, chapters from
+the description, the description's sources and current-standard related
+research. The homepage Featured Video now points at the Amazon video, so the
+"More documentaries" row shows ALDI, Costco and Hershey. Four Shorts from
+November 2 and 3 join the top of `SHORTS` (45 in total); the Amazon Short
+and both ALDI Shorts relate to their documentaries, and the Breville AI
+ranking Short has no related page. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.**
+- Amazon: Kiva agreement of approximately $775 million in cash (March 19,
+  2012 press release), framed as an acquisition price, not total robotics
+  spend. One millionth robot and DeepFleet from Amazon's June 30, 2025
+  announcement; the 10% figure is Amazon's claim for robot fleet travel
+  efficiency, not a delivery cost saving. Congestion from Amazon Science
+  (May 24, 2022); task assignment and congestion routing from Amazon Science
+  (August 11, 2025). OSHA ergonomics settlement (December 19, 2024; dol.gov
+  read in the browser after a 403 to curl) and Amazon's reported 34%
+  five-year RIR improvement, attributed to Amazon. Footage scope (BRS2
+  Swindon, March 2025, different stations, illustrative animations) carried
+  into the credits.
+- ALDI: $9 billion five-year U.S. investment through 2028, more than 180
+  stores in 2026 and a 3,200-store goal (January 12, 2026 release), framed
+  as a commitment, not spend or cart revenue. "More than 90%" exclusive
+  brands from the product page; the March 2, 2026 Maine release says
+  "nearly 90%", noted on the page. The narration's cart and shipping box
+  explanations are not on the pages cited in the description, so three
+  ALDI pages are added and marked as not cited in the video: the Maine
+  release (cart and self-bagging rationale), ALDI History (items displayed
+  in original shipping boxes to save on restocking) and the Supplier FAQs
+  (Display Ready Case). Online prices may be higher to cover personal
+  shopping or delivery (ALDI Support).
+
+**Impact.** Two more recent uploads get permanent, searchable pages, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** None.
+
+---
+
 ## Release 1.77 - Homepage "More documentaries" row (2026-11-02)
 
 **What changed.** The homepage Featured Video section now carries a "More
