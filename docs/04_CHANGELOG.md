@@ -6,6 +6,46 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.79 - Shopify's Q3 AI shopping disclosures as an evidence audit (2026-11-04)
+
+**What changed.** New evidence-audit article,
+`/blog/shopify-ai-shopping-traffic-orders-catalog-data` (E-commerce
+Strategy), "Shopify's AI Shopping Data Separates Performance From Scale",
+meta title "Shopify AI Traffic and Order Growth: What the Q3 Data Shows".
+1,189 source-body words, 1,228 with subheads. Four internal links (/geo,
+Google AI Mode product data test, Shopify WebMCP checkout, BCG GEO revenue
+audit), eight external links, no Key findings box. OG image pulls the
+verbatim line "Consistent is not the same as caused." AI Commerce 2027
+unchanged: its "unproven" line still holds, and agent-initiated orders as a
+share of total orders remain undisclosed. No sitemap code change (blog posts
+come from Supabase). No `POST_VIDEOS` pairing.
+
+**Sourcing and boundaries.** Q3 investor presentation, per the senior
+editor's reading: AI traffic to merchant storefronts up 2.6 times, orders
+originating from AI searches up 3.3 times, AI-referred sessions converting
+64% better than organic search, new-buyer order rate twice other online
+channels, sourced from Shopify global search API usage. The deck returned 403
+to every automated read, so it was not read directly for this release.
+Call-only figures (3x product pages, Catalog 2x general AI search, 74% and
+three-quarters outside the top 100, "the volume is still small", delegated
+purchasing) match in two transcripts and were not checked against webcast
+audio. Press release and 10-Q carry no AI commerce metrics. The article does
+not treat the Catalog result as causal, does not derive conversion from the
+order and traffic multiples, and does not call the 50%, 80% and 64%
+comparisons a trend.
+
+**Impact.** Sets a dated reference point for reading Shopify's AI metrics,
+separating direction, comparative performance and scale.
+
+**Follow-ups.** March article `shopify-agentic-merit-based-shopping` needs a
+contextual update, not a correction: a dated note giving the 14x window
+(January 2025 to January 2026) and saying it is not comparable with later
+quarterly figures, plus a check of the "agent-sourced" label and the "told
+Retail Brew" attribution. Not applied in this release. Watch for Shopify
+disclosing AI's share of GMV.
+
+---
+
 ## Release 1.78 - Amazon robots and ALDI documentary pages and four new Shorts (2026-11-03)
 
 **What changed.** Two new documentaries from the daily series now have
