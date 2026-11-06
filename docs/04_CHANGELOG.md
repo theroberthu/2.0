@@ -6,6 +6,58 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.80 - Starbucks and LEGO documentary pages and seven new Shorts (2026-11-06)
+
+**What changed.** Two new documentaries from the daily series now have
+companion pages, bringing `/videos` to 25 documentaries:
+
+- `/videos/starbucks-smart-queue-staffing-investment`, "Why Starbucks'
+  $500,000,000 Bet Starts Behind the Counter" (https://youtu.be/EuTmBRY_WP0,
+  uploaded 2026-11-05T16:00:13-08:00, PT5M9S), Retail strategy, about 800
+  words.
+- `/videos/lego-monterrey-packing-investment`, "Why LEGO Is Spending
+  $400,000,000 Behind the Box" (https://youtu.be/rKvfQy9Nge8,
+  2026-11-04T16:00:25-08:00, PT4M59S), Manufacturing, about 760 words.
+
+Each page is written against the narration, with takeaways, chapters from
+the description, the description's sources and current-standard related
+research. The homepage Featured Video now points at Starbucks, so the "More
+documentaries" row shows LEGO, Amazon and ALDI. Seven Shorts from November 3
+to 5 join the top of `SHORTS` (52 in total): two relate to Starbucks, two to
+LEGO and one to Amazon robots; the Steelcase and Purina AI ranking Shorts
+have no related page. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.**
+- Starbucks: $500 million in additional partner hours through Green Apron
+  Service (September 8, 2025 message from Brian Niccol), framed as a staffing
+  investment, not an AI budget or a verified AI saving. The April 29, 2026
+  post gives a broader "more than $500 million" invested in partners, noted
+  on the page. Smart Queue channels from the January 29, 2026 Investor Day;
+  scheduled ordering from the April 22, 2026 post (begins May 11, North
+  America, availability varies). Green Dot Assist pilot in 35 coffeehouses
+  (June 10, 2025). The AI tools page was updated in June 2026, so the page
+  says "now describes". The 80% four-minute figure is company-reported, covers
+  cafe orders only and is not credited to Smart Queue. All six Starbucks pages
+  returned 403 to curl and were read in the browser.
+- LEGO: more than US$400 million in Monterrey, September 24, 2026, framed as
+  planned investment (construction early 2027 to 2029). The page adds release
+  details not in the narration: packing hall, high bay warehouse, 62,000
+  square meters, 35% capacity and about 1,300 jobs. Patent application
+  January 28, 1958; "fully compatible" from the Company Profile; 2004 net loss
+  of DKK 1,931 million including discontinuing activities; H1 2026 revenue of
+  DKK 41.9 billion, framed as revenue and not comparable to that loss. The
+  narration says the brick's walls help create the connection; LEGO's sources
+  credit studs and tubes only, so the page follows the sources.
+
+**Impact.** Two more recent uploads get permanent, searchable pages, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** About 60 days after the first batch of daily pages, check
+indexing for `/videos/` in Search Console. If many show "Crawled, currently
+not indexed", reserve full pages for the strongest documentaries.
+
+---
+
 ## Release 1.79 - Shopify's Q3 AI shopping disclosures as an evidence audit (2026-11-04)
 
 **What changed.** New evidence-audit article,

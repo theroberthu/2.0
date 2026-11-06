@@ -74,6 +74,284 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'starbucks-smart-queue-staffing-investment',
+    youtubeId: 'EuTmBRY_WP0',
+    youtubeTitle: 'Why Starbucks’ $500,000,000 Bet Starts Behind the Counter',
+    h1: 'Why Starbucks’ $500,000,000 Bet Starts Behind the Counter',
+    seoTitle: 'Starbucks Smart Queue: Why the $500 Million Went to People',
+    metaDescription:
+      'Starbucks put $500 million into employee hours alongside Smart Queue. What the app promises, what baristas deliver and what the results cannot separate.',
+    dek: 'One person ahead of you does not always mean a short wait. Café, drive-thru, mobile and delivery orders can all feed the same bar, and someone has to turn them into cups.',
+    uploadDate: '2026-11-05T16:00:13-08:00',
+    duration: 'PT5M9S',
+    durationLabel: '5 min 9 sec',
+    topic: 'Retail strategy',
+    subject: 'Starbucks Smart Queue',
+    thumbnail: '/images/videos/starbucks-smart-queue-staffing-investment.jpg',
+    thumbnailAlt: 'Video thumbnail: a Starbucks cup under an espresso machine with four glowing order tickets for café, drive-thru, mobile and delivery, under the words Starbucks $500M, The Line You Can’t See.',
+    sections: [
+      {
+        paragraphs: [
+          'You walk into a coffee shop with one person ahead of you. Then a delivery rider arrives, a car pulls up outside and somebody on a phone orders six drinks. The line you can see has just become a terrible guide to how long your coffee will take.',
+          'Café, drive-thru, mobile and delivery orders can all feed the same coffeehouse. That is four ways to ask for a drink and one team turning those requests into actual cups. Starbucks calls its sequencing technology Smart Queue, and the interesting part is what sits beside it.',
+        ],
+      },
+      {
+        heading: 'The $500 million staffing investment',
+        paragraphs: [
+          'In a September 2025 message to employees, CEO Brian Niccol said Starbucks had invested $500 million in additional employee hours through Green Apron Service, the operating model it was rolling out nationwide. The same message listed more hours, larger rosters and Smart Queue as parts of that one model.',
+          'That figure is a staffing investment. It is not an AI software budget, and it is not a verified AI saving. It matters because it points to a more awkward story than ordering coffee: how do you make a digital promise that the real world can actually keep?',
+        ],
+      },
+      {
+        heading: 'One tap becomes real work',
+        paragraphs: [
+          'Start with that six-drink order. On a screen it arrives in one tap. Behind the bar it becomes several jobs: pull the espresso, steam the milk, build the cold drinks, finish the order. A small square on a phone can represent a surprising amount of work.',
+          'Arrival time is only part of the puzzle. The person at the counter is already waiting. The mobile customer may still be walking over. A delivery order has another journey after it leaves the store. Making everything immediately is not the same as handing everything over at the right moment. The same question sits behind [DoorDash’s Instacart deal](/videos/doordash-instacart-acquisition): software can take the request, but someone still has to do the physical work.',
+        ],
+      },
+      {
+        heading: 'What Smart Queue does',
+        paragraphs: [
+          'At its January 2026 Investor Day, Starbucks described Smart Queue as a way to sequence café, mobile, drive-thru and delivery orders. Think of it as coordinating the work entering the bar. The algorithm still depends on the people, equipment and routines that turn a sequence into drinks.',
+          'In April 2026, Starbucks announced scheduled ordering, starting May 11 at North American coffeehouses with Mobile Order & Pay. Customers can choose an available five-minute pickup window up to an hour ahead. Starbucks says those windows reflect real-time availability at each coffeehouse and are powered by Smart Queue, and that availability may vary by location.',
+          'That pickup time is a promise about future capacity. It is easy to put a time on a screen. The hard part happens between the tap and the moment a barista sets the finished drink on the counter. A better sequence can organize the machine, the pitcher, the hand and the cup. It cannot make the steam wand do two jobs at once.',
+        ],
+      },
+      {
+        heading: 'Green Dot Assist',
+        paragraphs: [
+          'Green Dot Assist does a different job. Starbucks introduced it in June 2025 as a generative AI assistant, piloted in 35 coffeehouses, that lets baristas ask questions on in-store iPads instead of flipping through manuals. Starbucks now describes it as support for questions about recipes, routines and service standards.',
+          'Smart Queue helps organize which work comes next. Green Dot Assist helps a person find information while doing the work. In both cases, the product is still made by the person at the bar.',
+        ],
+      },
+      {
+        heading: 'What the evidence does and does not show',
+        paragraphs: [
+          'Put the pieces together and the staffing figure makes more sense. Starbucks was adding employee hours while adding tools around the employees. The useful question is whether the whole operation can absorb the demand an app makes so easy to create.',
+          'In April 2026, Starbucks reported that approximately 80% of its U.S. company-operated coffeehouses delivered café orders in four minutes or less. That is an encouraging snapshot, and it is company-reported. It describes café orders within a broader operating effort, with staffing and service changes alongside the technology. It cannot tell us what Smart Queue would achieve on its own.',
+          'For a business, that distinction matters. Better software, more staffing and clearer routines arrive as a package. If sales improve at the same time, the sales number alone cannot say which ingredient deserves the credit. And if the queue looks tidy while drinks sit waiting for pickup, the customer problem is still there.',
+        ],
+      },
+      {
+        heading: 'The business takeaway',
+        paragraphs: [
+          'Go back to the person who saw one customer ahead of them. What they wanted was simple: a good drink, a reasonable wait and some confidence about when it would be ready. The work behind that experience is much less simple. Four streams of demand have to meet one physical operation.',
+          'That is the lesson I would take from Starbucks. Before making it easier for customers to ask, make sure the people delivering can keep the promise. The most useful technology may be the part you barely notice when your name is called.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Starbucks said in September 2025 that it had invested $500 million in additional employee hours through Green Apron Service. That is a staffing investment, not an AI software budget or a verified AI saving.',
+      'Smart Queue sequences café, mobile, drive-thru and delivery orders. It organizes the work. People and equipment still do it.',
+      'Scheduled ordering turns that sequencing into a customer promise: a five-minute pickup window chosen up to an hour ahead.',
+      'Green Dot Assist is a separate tool, a generative AI assistant that answers barista questions, piloted in 35 coffeehouses in June 2025.',
+      'Starbucks reported in April 2026 that approximately 80% of U.S. company-operated coffeehouses delivered café orders in four minutes or less. That result cannot be credited to Smart Queue alone.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The line you cannot see' },
+      { time: '0:32', label: 'The $500,000,000 staffing investment' },
+      { time: '1:02', label: 'One tap becomes real work' },
+      { time: '1:37', label: 'What Smart Queue does' },
+      { time: '2:45', label: 'Green Dot Assist' },
+      { time: '3:41', label: 'What the evidence does and does not show' },
+      { time: '4:23', label: 'The business takeaway' },
+    ],
+    sources: [
+      {
+        label: 'Message from Brian: Green Apron Service, one month in (Starbucks)',
+        date: 'September 8, 2025',
+        href: 'https://about.starbucks.com/press/2025/message-from-brian-green-apron-service-one-month-in/',
+      },
+      {
+        label: 'Starbucks is Back, Turning Momentum into Long-Term, Sustainable Growth (Starbucks Investor Day)',
+        date: 'January 29, 2026',
+        href: 'https://about.starbucks.com/press/2026/starbucks-is-back-turning-momentum-into-long-term-sustainable-growth/',
+      },
+      {
+        label: 'Meet Green Dot Assist: Starbucks Generative AI-Powered Coffeehouse Companion (Starbucks)',
+        date: 'June 10, 2025',
+        href: 'https://about.starbucks.com/press/2025/meet-green-dot-assist-starbucks-generative-ai-powered-coffeehouse-companion/',
+      },
+      {
+        label: 'Making it easier to plan your Starbucks visit (Starbucks)',
+        date: 'April 22, 2026',
+        href: 'https://about.starbucks.com/press/2026/making-it-easier-to-plan-your-starbucks-visit/',
+      },
+      {
+        label: 'Supporting the moments that matter with artificial intelligence (Starbucks)',
+        date: 'January 29, 2026, updated June 2026',
+        href: 'https://about.starbucks.com/press/2026/supporting-the-moments-that-matter-with-artificial-intelligence/',
+      },
+      {
+        label: 'Starbucks investments in coffeehouse partners are paying off (Starbucks)',
+        date: 'April 29, 2026',
+        href: 'https://about.starbucks.com/press/2026/starbucks-investments-in-coffeehouse-partners-are-paying-off/',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The $500 million figure is additional employee hours, not an AI budget or a verified AI saving. Starbucks’ April 2026 post gives a broader figure, more than $500 million invested in partners since the Back to Starbucks plan began. Service results are company-reported.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'A better tool in one step rarely helps when the constraint sits in the work around it.',
+      },
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'Software can take the order. Someone still has to fulfill it, and that may be where the advantage sits.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage is independently licensed Pexels material by Orhan Pergel, Kampus Production, Los Muertos Crew, fauxels and Cheng Shi Song. Generic café staff are illustrative, not Starbucks employees or pilot locations, and the Starbucks exterior location is unverified. Graphics are original concept illustrations, not actual Starbucks software or order-priority rules. The opening six-drink scenario is illustrative. No official Starbucks press video is used. The 2014 drive-through photograph is by Christopher Tran, CC BY 2.0, cropped and animated. The thumbnail is an AI-assisted editorial composite using a real Starbucks cup photograph by Cadu Barral on Pexels as reference. Music: “Wanderlust” by Scott Buckley, CC BY 4.0. Espresso-machine sound: Ohrwurm on Freesound, CC0, used as editorial sound design, not location sound. Independent commentary; no Starbucks endorsement.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Starbucks’ $500,000,000 Bet Starts Behind the Counter',
+      description:
+        'Four kinds of order, one team behind the bar. Why Starbucks paired Smart Queue with $500 million in employee hours, and what the results cannot separate.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'lego-monterrey-packing-investment',
+    youtubeId: 'rKvfQy9Nge8',
+    youtubeTitle: 'Why LEGO Is Spending $400,000,000 Behind the Box',
+    h1: 'Why LEGO Is Spending $400,000,000 Behind the Box',
+    seoTitle: 'Why LEGO Is Investing $400 Million in Packing in Mexico',
+    metaDescription:
+      'LEGO plans more than $400 million for packing and warehousing in Monterrey. How a 1958 brick design and the work behind the box explain the investment.',
+    dek: 'A LEGO brick clicks into place in a second. Getting hundreds of the right pieces into one box takes a factory, a warehouse and a plan that runs to 2029.',
+    uploadDate: '2026-11-04T16:00:25-08:00',
+    duration: 'PT4M59S',
+    durationLabel: '4 min 59 sec',
+    topic: 'Manufacturing',
+    subject: 'LEGO packing',
+    thumbnail: '/images/videos/lego-monterrey-packing-investment.jpg',
+    thumbnailAlt: 'Video thumbnail: a large red LEGO brick leaning against blue and white bricks, under the words LEGO’s $400M+ Bet, Behind the Box.',
+    sections: [
+      {
+        paragraphs: [
+          'Watch the pieces come together. The clever part is what happens when you want to build something else: you can take them apart and the pieces still have a future.',
+          'That small idea sits inside a very big business. LEGO has announced more than US$400 million for an expansion in Monterrey, Mexico, and the new space is for packing and warehousing. Why does a toy company need that much more room behind the scenes? Follow a brick and the answer starts to appear.',
+        ],
+      },
+      {
+        heading: 'Clutch power',
+        paragraphs: [
+          'LEGO has a name for the way its bricks hold together: clutch power. The studs are the part you notice, but turn a classic brick over and the underside matters too. Together, studs and tubes create the connection. Too loose and your masterpiece falls apart. Too tight and rebuilding becomes a wrestling match. The useful thing is the balance: your creation stays together and your next idea is still possible.',
+        ],
+      },
+      {
+        heading: 'The 1958 design decision',
+        paragraphs: [
+          'On January 28, 1958, LEGO applied to patent its stud and tube design. Its history describes a practical problem. Earlier bricks were hollow, which reduced the stability of models and brought complaints from the market.',
+          'That decision had a remarkably long life. LEGO says bricks produced since 1958 are fully compatible with bricks made today. Think about what that means for a customer. A new set adds possibilities to a collection they already own. The old pieces still have a job, and the product can keep changing while a familiar connection stays useful.',
+        ],
+      },
+      {
+        heading: 'Inside the factory handoff',
+        paragraphs: [
+          'Protecting a connection on a drawing is one thing. Repeating it in a factory is another. LEGO’s own archive footage shows the metal mold where an element takes shape, then a blue robot truck approaching a container station and bins moving across rollers. These scenes show molding and material movement, and they predate the newly announced expansion.',
+          'Making a piece starts a much longer journey. A pile of finished elements is still a long way from a complete set, and the handoffs matter for the same reason they do in [Amazon’s robot warehouses](/videos/amazon-robots-deepfleet-warehouse-traffic).',
+          'Imagine opening a set on a rainy afternoon. You have the instructions, a growing pile of pieces and one small decision after another. The factory’s work has to disappear into that experience. Nobody opens a LEGO box hoping for a surprise lesson in warehouse management.',
+        ],
+      },
+      {
+        heading: 'A beloved toy and a real business',
+        paragraphs: [
+          'Even a beloved toy can run into a real business problem. In 2004, the LEGO Group reported a net loss of DKK 1.931 billion, including discontinuing activities. Its annual report described a new direction, a tighter focus on the core business and substantial operational changes. A product people love still needs an operation and a business model that work.',
+          'By the first half of 2026, LEGO was reporting record revenue of DKK 41.9 billion, up 21% from a year earlier. That is revenue, not profit, and it is not directly comparable to the 2004 loss. LEGO points to demand across its range and to brand experiences, and says it is investing in factory capacity. A dependable brick connection is one part of a much bigger story, and growth brings another question: how do you get more complete sets into the markets that want them?',
+        ],
+      },
+      {
+        heading: 'The $400 million packing bet',
+        paragraphs: [
+          'On September 24, 2026, LEGO set out plans to invest more than US$400 million in its Monterrey factory. The expansion includes a new packing hall and a fully automated high bay warehouse, adding 62,000 square meters of built-up area, and LEGO says it will raise the site’s production capacity by 35%, with about 1,300 new jobs through 2029. Construction is expected to start in early 2027 and finish by 2029, so these are plans, not results already delivered.',
+          'Here is why that detail matters. A customer buys a set, and hundreds or thousands of pieces may need to arrive together in the right assortment. LEGO describes boxes gliding under bins that release the exact amount of pieces, with packing operators folding the boxes, adding instructions and checking for mistakes. A newly molded element and a set ready for someone’s table are very different stages of the job. The finished product is the whole building experience.',
+        ],
+      },
+      {
+        heading: 'The idea hiding inside the toy',
+        paragraphs: [
+          'For me, that is the business idea hiding inside the toy. You can keep offering people something new when the familiar parts remain useful and the operation can deliver the new thing reliably. The imagination can change with every box. The connection has to stay dependable.',
+          'The satisfying moment takes a second. Behind it are design choices, molding, material movement and the work of putting a complete set together. That is a lot of business hiding inside a little click.',
+        ],
+      },
+    ],
+    takeaways: [
+      'LEGO announced more than US$400 million for additional packing and warehousing in Monterrey, Mexico. It is planned investment, with construction expected from early 2027 to 2029.',
+      'Clutch power comes from studs and tubes working together. LEGO applied to patent that design in January 1958.',
+      'LEGO says bricks produced since 1958 are fully compatible with bricks made today, so a new set adds to a collection instead of replacing it.',
+      'A molded element is a long way from a finished set. Hundreds or thousands of pieces may have to arrive together in the right assortment.',
+      'LEGO’s 2004 net loss of DKK 1.931 billion and its H1 2026 revenue of DKK 41.9 billion are different measures, so they do not make a direct comparison.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A little connection, a big business' },
+      { time: '0:29', label: 'Clutch power' },
+      { time: '0:55', label: 'The 1958 design decision' },
+      { time: '1:35', label: 'Inside the factory handoff' },
+      { time: '2:28', label: 'A beloved toy and a real business' },
+      { time: '3:19', label: 'The $400,000,000 packing bet' },
+      { time: '4:05', label: 'The idea hiding inside the toy' },
+    ],
+    sources: [
+      {
+        label: 'The LEGO Group announces next phase of growth for Monterrey, Mexico manufacturing site (LEGO Group)',
+        date: 'September 24, 2026',
+        href: 'https://www.lego.com/en-us/aboutus/news/2026/september/the-lego-group-announces-next-phase-of-growth-for-monterrey-mexico-manufacturing-site',
+      },
+      {
+        label: 'Strong demand and brand relevance drive LEGO Group revenue up 21%, operating profit up 22% in H1 2026 (LEGO Group)',
+        date: 'August 25, 2026',
+        href: 'https://www.lego.com/en-us/aboutus/news/2026/august/strong-demand-and-brand-relevance-drive-lego-group-revenue-up-21-operating-profit-up-22-in-h1-2026',
+      },
+      {
+        label: 'The stud and tube principle (LEGO History)',
+        date: 'Checked November 6, 2026',
+        href: 'https://www.lego.com/en-us/history/articles/d-the-stud-and-tube-principle',
+      },
+      {
+        label: 'LEGO Group Company Profile (PDF)',
+        date: 'Checked November 6, 2026',
+        href: 'https://www.lego.com/cdn/cs/aboutus/assets/blt4ee78e0776fce92f/LEGO_Company_Profile.pdf',
+      },
+      {
+        label: 'LEGO Group Annual Report 2004 (PDF)',
+        date: 'Fiscal 2004',
+        href: 'https://www.lego.com/cdn/cs/aboutus/assets/blt07abb4b8a3da3f39/Annual_Report_2004_ENG.pdf',
+      },
+      {
+        label: 'LEGO bricks in the making (LEGO Help Topics)',
+        date: 'Checked November 6, 2026',
+        href: 'https://www.lego.com/en-us/service/help-topics/article/lego-bricks-in-the-making',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The Monterrey figure is planned US-dollar investment, with construction expected from early 2027 to 2029. The 2004 net loss includes discontinuing activities. The H1 2026 figure is revenue, not profit, and is not directly comparable to that loss.',
+    related: [
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Growth depends on the operation behind the customer experience, not only on the front end.',
+      },
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'Customers see the order. The advantage can sit in the physical work behind it.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Factory footage is ©2023 The LEGO Group, limited excerpts directly analyzed. The Monterrey archive photo is ©2026 The LEGO Group. Archive imagery does not show the newly announced expansion. Original diagrams are simplified illustrations, not engineering drawings or a live factory sequence. Building footage is by Dx21 on Pixabay and ROMAN ODINTSOV on Pexels, and the building still is by sofamuzaqi on Pexels. Stock illustrates building, not a test of vintage bricks. The thumbnail is an original AI-assisted illustration, not documentary evidence. Music: “Machina” and “Filaments” by Scott Buckley, CC BY 4.0, excerpted, mixed and faded. Original editorial sound cues. Independent editorial commentary; not sponsored by or affiliated with the LEGO Group.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why LEGO Is Spending $400,000,000 Behind the Box',
+      description:
+        'LEGO plans more than $400 million for packing and warehousing in Monterrey. Follow a brick from the 1958 design to the work behind a finished set.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'amazon-robots-deepfleet-warehouse-traffic',
     youtubeId: 'tws-eRJddIE',
     youtubeTitle: 'Amazon Has 1,000,000 Robots. Who Directs the Traffic?',
@@ -3460,7 +3738,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'amazon-robots-deepfleet-warehouse-traffic'
+export const FEATURED_VIDEO_SLUG: string | null = 'starbucks-smart-queue-staffing-investment'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -3509,6 +3787,13 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: '1_zXLV4q8s8', title: 'Starbucks’ $500,000,000 Bet Was on People', uploadDate: '2026-11-05T17:00:24-08:00', durationLabel: '0:55', thumbnail: '/images/shorts/1_zXLV4q8s8.jpg', related: ['starbucks-smart-queue-staffing-investment'] },
+  { youtubeId: 'BRly024dFAw', title: 'AI Mentioned Branch Most. Steelcase Ranked First.', uploadDate: '2026-11-05T16:19:55-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/BRly024dFAw.jpg' },
+  { youtubeId: 'L4JWyZPWrBc', title: 'The Starbucks Line You Can’t See', uploadDate: '2026-11-05T09:00:28-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/L4JWyZPWrBc.jpg', related: ['starbucks-smart-queue-staffing-investment'] },
+  { youtubeId: 'ekOpbJLPIoU', title: 'LEGO’s $400,000,000 Packing Bet', uploadDate: '2026-11-04T17:00:17-08:00', durationLabel: '0:55', thumbnail: '/images/shorts/ekOpbJLPIoU.jpg', related: ['lego-monterrey-packing-investment'] },
+  { youtubeId: 'SmOjhALD8JU', title: 'Four AIs Ranked Purina Pro Plan First. Then Came the $70 Prompt.', uploadDate: '2026-11-04T16:37:40-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/SmOjhALD8JU.jpg' },
+  { youtubeId: 'XpcMZYYE54c', title: 'A LEGO Brick From 1958 Still Fits?', uploadDate: '2026-11-04T09:00:08-08:00', durationLabel: '0:52', thumbnail: '/images/shorts/XpcMZYYE54c.jpg', related: ['lego-monterrey-packing-investment'] },
+  { youtubeId: 'TjPeCbhDH8w', title: 'This Amazon Robot Is Fast. What Happens Next?', uploadDate: '2026-11-03T17:00:11-08:00', durationLabel: '0:47', thumbnail: '/images/shorts/TjPeCbhDH8w.jpg', related: ['amazon-robots-deepfleet-warehouse-traffic'] },
   { youtubeId: 'vpBgv9i2F-I', title: 'Why More Robots Can Make a Warehouse Slower', uploadDate: '2026-11-03T09:00:24-08:00', durationLabel: '0:56', thumbnail: '/images/shorts/vpBgv9i2F-I.jpg', related: ['amazon-robots-deepfleet-warehouse-traffic'] },
   { youtubeId: 'cwpqS-oSa3k', title: 'Why ALDI Skips the Pharmacy', uploadDate: '2026-11-02T17:00:23-08:00', durationLabel: '0:53', thumbnail: '/images/shorts/cwpqS-oSa3k.jpg', related: ['aldi-quarter-cart-business-model'] },
   { youtubeId: 'fLn888FJHxY', title: 'Four AIs Ranked Breville First. Then Came the $500 Budget.', uploadDate: '2026-11-02T16:02:39-08:00', durationLabel: '0:57', thumbnail: '/images/shorts/fLn888FJHxY.jpg' },
