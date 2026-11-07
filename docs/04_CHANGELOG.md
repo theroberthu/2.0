@@ -6,6 +6,49 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.82 - Mobile article reading fixes after a GA4 review (2026-11-07)
+
+**What changed.** Three fixes to the article page on phones, refined after a
+senior UX review:
+
+- **Text sooner.** Below the `sm` breakpoint the hero featured image is
+  hidden and the hero and article padding is tighter. The image is the 1200x630
+  social card, too small to read at 375px, and it pushed the first paragraph
+  below the fold. At 375x812 the first body paragraph moved from 1025px to
+  745px. The image stays in the DOM, and from `sm` up the page is unchanged.
+- **No overlapping floating buttons.** The Subscribe pill and the global
+  BackToTop button were both pinned bottom right and overlapped. The pill stays
+  bottom right in the thumb zone. While it is visible (below `xl`), a
+  `body:has([data-floating-cta="visible"])` rule in `globals.css` lifts
+  BackToTop 72px from the bottom so it stacks above the pill with right edges
+  aligned. After dismissal it returns to its usual spot. A first pass moved the
+  pill bottom left; the review rejected that because it covers the start of
+  text lines and sits outside the right-thumb zone.
+- **Pill accessibility and icon.** The pill uses a mail icon instead of a
+  calendar, which read as a booking prompt. Its link and dismiss button get
+  `tabIndex={-1}` while the pill is hidden, so keyboard users never land on
+  invisible controls under `aria-hidden`. The link has a descriptive label
+  noting it opens in a new tab, and the dismiss label names what it dismisses.
+
+**Why.** GA4 for October 10 to November 6 showed 9 seconds average engagement
+per user and a 17.96% engagement rate, but most of that is bot traffic: about
+800 users on fixed screen sizes such as 1280x1200 with zero engaged sessions,
+and 649 users from Singapore at 0.77% engaged. Organic Search (44% engaged, 26s
+per session) and mobile (32% engaged, 22s) are the real readers, so mobile
+reading got the first fixes.
+
+**Impact.** Phone readers reach the article text one scroll sooner, and the
+two floating controls no longer cover each other.
+
+**Follow-ups (awaiting a decision, not done).** Turn on Vercel bot protection;
+add a `newsletter_click` event and mark it as a GA4 key event; move homepage
+"Recent research" higher on mobile; a compact mobile `/blog` list; title and
+meta rewrites for low-CTR pages such as personal-agent-protocol (4,316
+impressions, 0.6% CTR). The hero image `priority` preload still runs on
+phones; it is a small SVG, so it is left as is.
+
+---
+
 ## Release 1.81 - Spotify Taste Profile documentary page and three new Shorts (2026-11-07)
 
 **What changed.** One new documentary from the daily series now has a

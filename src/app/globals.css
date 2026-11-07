@@ -9,6 +9,15 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   display: none !important;
 }
 
+/* Below xl, the floating Subscribe pill sits bottom right. While it is
+   visible, lift BackToTop above it so the two buttons never overlap. */
+@media (max-width: 1279.98px) {
+  body:has([data-floating-cta="visible"]) .back-to-top {
+    bottom: 4.5rem;
+    right: 1rem;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

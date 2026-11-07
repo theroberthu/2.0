@@ -21,7 +21,7 @@ export default function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Back to top"
-      className={`fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-brand-dark/90 text-white shadow-lifted backdrop-blur-sm flex items-center justify-center hover:bg-brand-accent transition-all duration-300 ${
+      className={`back-to-top fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-brand-dark/90 text-white shadow-lifted backdrop-blur-sm flex items-center justify-center hover:bg-brand-accent transition-all duration-300 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
