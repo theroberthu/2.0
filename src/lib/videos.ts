@@ -74,6 +74,168 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'spotify-taste-profile-recommendations',
+    youtubeId: '9kcOLozDtgU',
+    youtubeTitle: 'Spotify Thinks It Knows You. What If It’s Wrong?',
+    h1: 'Spotify Thinks It Knows You. What If It’s Wrong?',
+    seoTitle: 'Spotify Taste Profile: When Recommendations Need Correcting',
+    metaDescription:
+      'Spotify now lets listeners tell it where it is wrong. What Taste Profile does, why listening history misleads and what the earnings cannot prove.',
+    dek: 'What you play and what you want next are not always the same thing. Spotify’s Taste Profile box gives listeners a way to say so.',
+    uploadDate: '2026-11-06T17:00:10-08:00',
+    duration: 'PT4M59S',
+    durationLabel: '4 min 59 sec',
+    topic: 'AI in practice',
+    subject: 'Spotify Taste Profile',
+    thumbnail: '/images/videos/spotify-taste-profile-recommendations.jpg',
+    thumbnailAlt: 'Video thumbnail: black over-ear headphones with a green glow on a dark desk, beside the Spotify logo and the words Got You Wrong?',
+    sections: [
+      {
+        paragraphs: [
+          'Spotify thinks it knows your taste. Now you can tell it where it is wrong. In Spotify’s own demonstration of Taste Profile, there is a box where you describe what you want more of, instead of hoping another skip sends the right message.',
+          'The business idea is simple: give the customer a way to correct the recommendation.',
+        ],
+      },
+      {
+        heading: 'The correction box',
+        paragraphs: [
+          'Spotify began rolling out the Taste Profile beta to Premium listeners 18 and older in the United States in September 2026, after testing in New Zealand earlier in the year. It shows Spotify’s brief interpretation of your taste across music, podcasts and audiobooks, and what you type shapes recommendations in your Home feed. Spotify says changes typically appear within a few hours.',
+          'This is not a magic switch that instantly rebuilds every playlist. So why would a company that recommends music need the listener to explain themselves? Because what you play and what you want next are not always the same thing.',
+        ],
+      },
+      {
+        heading: 'Your favorite artist is rain?',
+        paragraphs: [
+          'Picture the bedtime playlist. Rain. More rain. Eight hours of extremely committed rain. You wanted to sleep. You were not asking to become a rain enthusiast.',
+          'Spotify has acknowledged the problem. In 2023, it said listeners with playlists for activities such as sleeping or working out can see recommendations over-index on music that does not fit their general habits, and it introduced a way to reduce a playlist’s influence on your taste profile. Individual track exclusions followed in 2025. Listening is evidence. Context helps interpret it.',
+          'That problem reaches beyond music. A customer might buy a gift they would never buy for themselves. A one-off task might look like a permanent preference. A system can measure an action correctly and still misunderstand the person, which is the same doubt behind asking whether you could [trust a workout plan from ChatGPT](/videos/chatgpt-workout-plan-trust).',
+        ],
+      },
+      {
+        heading: 'The Monday listening habit',
+        paragraphs: [
+          'To see why the distinction matters, rewind to a much smaller promise. Every Monday, Discover Weekly offers 30 tracks tailored to your taste. You do not have to decide where to begin. The next listening session already has a starting point.',
+          'In June 2025, Spotify said listeners had streamed more than 100 billion tracks through Discover Weekly since its launch ten years earlier. That is plays accumulating over a decade, not 100 billion different songs. The interesting business mechanism is the recurring appointment. Discovery becomes something you can return to, and a recommendation has to earn its place in that routine one listen at a time.',
+        ],
+      },
+      {
+        heading: 'Familiar songs or new discoveries',
+        paragraphs: [
+          'Familiar is not always enough. In a 2020 engineering post, Spotify described a framework for its Home screen that balanced recommendations based on previous selections with exploration, where engagement is less certain. That explanation helps show the trade-off. It does not reveal every detail of today’s systems.',
+          'Stay too close to the past and the experience can feel repetitive. Wander too far and the listener may leave. That is my reading of the product challenge, not Spotify’s statement of it. A useful suggestion has to make the next choice easier without making every choice the same.',
+        ],
+      },
+      {
+        heading: 'Follow the money',
+        paragraphs: [
+          'In the third quarter of 2026, Spotify reported about €5 billion in revenue and €672 million in operating income. Revenue and operating income are different measures, and these are company-wide quarterly results, not earnings attributed to this feature. Spotify also reported 306 million Premium subscribers. That scale makes a small product decision interesting. It does not tell us what the new box will earn.',
+        ],
+      },
+      {
+        heading: 'What a stream pays',
+        paragraphs: [
+          'There is another business on the other side of the headphones: the musicians and songwriters whose work makes discovery worth having. Spotify says it paid out more than $11 billion to the music industry in 2025. That is an annual industry total, not what individual artists took home.',
+          'Spotify says it pays rights holders, who then pay creators according to their agreements, and that payment follows a share of total streams, not a fixed rate per stream. So a successful recommendation is not a coin dropping straight into a musician’s pocket. Contracts and the distribution of listening matter too.',
+        ],
+      },
+      {
+        heading: 'The useful feedback path',
+        paragraphs: [
+          'That makes the story more interesting than an algorithm finding the perfect song. There is a listener deciding whether to come back, a service paying to provide the experience and creators trying to turn attention into a living. The Taste Profile box addresses one part of that system. It lets a listener add information that behavior alone may miss.',
+          'The demonstration shows the control. The earnings show the scale. Neither proves the control increased profit.',
+          'My takeaway is this: when AI makes a recommendation, the next design question is how easily a person can correct it. Better predictions matter. So does a clear way to say, that’s not what I meant. The test is the next listening session. Does the person find something worth hearing and want to come back?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Taste Profile (Beta) began rolling out to U.S. Premium listeners 18 and older in September 2026, after New Zealand testing. It shapes the Home feed, and changes typically appear within a few hours.',
+      'What you play and what you want next can differ. Spotify has offered playlist exclusions since 2023 and track exclusions since 2025 for that reason.',
+      'Discover Weekly’s more than 100 billion streamed tracks are plays over ten years, not 100 billion different songs.',
+      'Spotify’s roughly €5 billion in Q3 2026 revenue and €672 million in operating income are company-wide results. Neither shows what this feature earned.',
+      'The more than $11 billion paid out in 2025 is an industry total paid to rights holders, not what individual artists took home.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'When Spotify gets your taste wrong' },
+      { time: '0:19', label: 'The correction box' },
+      { time: '0:47', label: 'Your favorite artist is rain?' },
+      { time: '1:35', label: 'The Monday listening habit' },
+      { time: '2:15', label: 'Familiar songs or new discoveries' },
+      { time: '2:50', label: 'Follow the money' },
+      { time: '3:29', label: 'What a stream pays' },
+      { time: '4:11', label: 'The useful feedback path' },
+    ],
+    sources: [
+      {
+        label: 'How to Use Our Taste Profile Feature to Shape Your Spotify Homepage (Spotify)',
+        date: 'September 23, 2026',
+        href: 'https://newsroom.spotify.com/2026-09-23/taste-profile-shape-home-feed/',
+      },
+      {
+        label: 'Discover Weekly Turns 10: Celebrating 100 Billion+ Tracks Streamed and a Decade of Personalized Discovery (Spotify)',
+        date: 'June 30, 2025',
+        href: 'https://newsroom.spotify.com/2025-06-30/discover-weekly-turns-10-celebrating-100-billion-tracks-streamed-and-a-decade-of-personalized-discovery/',
+      },
+      {
+        label: '4 Tips To Supercharge Your Discovery on Spotify in 2025 (Spotify)',
+        date: 'January 22, 2025',
+        href: 'https://newsroom.spotify.com/2025-01-22/4-tips-to-supercharge-your-discovery-on-spotify-in-2025/',
+      },
+      {
+        label: 'Spotify Reports Third Quarter 2026 Earnings (Spotify)',
+        date: 'October 22, 2026',
+        href: 'https://newsroom.spotify.com/2026-10-22/spotify-q3-2026-earnings/',
+      },
+      {
+        label: '‘Exclude From Your Taste Profile’ Will Make Your Personalized Recommendations Even Better (Spotify)',
+        date: 'February 8, 2023',
+        href: 'https://newsroom.spotify.com/2023-02-08/exclude-from-your-taste-profile-will-make-your-personalized-recommendations-even-better/',
+      },
+      {
+        label: 'Spotify Gives You Even More Control With the Ability to Exclude Tracks From Your Taste Profile (Spotify)',
+        date: 'October 1, 2025',
+        href: 'https://newsroom.spotify.com/2025-10-01/exclude-tracks-taste-profile/',
+      },
+      {
+        label: 'For Your Ears Only: Personalizing Spotify Home with Machine Learning (Spotify Engineering)',
+        date: 'January 16, 2020',
+        href: 'https://engineering.atspotify.com/2020/1/for-your-ears-only-personalizing-spotify-home-with-machine-learning',
+      },
+      {
+        label: 'I heard Spotify pays a fraction of a penny per stream. Is that true? (Loud and Clear)',
+        date: 'Checked November 7, 2026',
+        href: 'https://loudandclear.byspotify.com/faqs/i-heard-spotify-pays-a-fraction-of-a-penny-per-stream-is-that-true/',
+      },
+      {
+        label: 'How do artists and songwriters get paid? (Loud and Clear)',
+        date: 'Checked November 7, 2026',
+        href: 'https://loudandclear.byspotify.com/faqs/how-do-artists-and-songwriters-get-paid/',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. Revenue, operating income and the music-industry payout are different measures, and none shows what a recommendation feature earned. The $11 billion figure is an annual 2025 total paid to rights holders, not artist take-home income. The 2020 engineering post is an archival explanation, not a description of today’s systems.',
+    related: [
+      {
+        href: '/blog/anthropic-project-swap-agentic-commerce-shopper-preferences',
+        title: 'The Hardest Part of Agentic Commerce May Be Knowing What the Shopper Wants',
+        note: 'A system can understand the product and still misread the person. Preference is the harder half.',
+      },
+      {
+        href: '/blog/walmart-sparky-ai-personalization-pricing-governance',
+        title: 'AI Commerce Governance Is Becoming a Customer Promise',
+        note: 'What an AI system may do for a customer, and how they control it, is becoming part of the product.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. The official Spotify Taste Profile demonstration from September 2026 appears as brief muted excerpts and a cropped control detail, directly analyzed with original commentary. It is not Robert’s account or a test of his listening history. Illustrative listening footage is by Kampus Production, Ivan S, Tima Miroshnichenko, cottonbro studio and SHVETS production on Pexels. Diagrams and graphics are original. Music: “Cylinder Eight” by Chris Zabriskie, from Cylinders, CC BY 4.0, edited and mixed. The thumbnail is illustrative AI-assisted artwork; no Spotify-branded headphones are implied. Independent commentary; no Spotify endorsement.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Spotify Thinks It Knows You. What If It’s Wrong?',
+      description:
+        'Eight hours of rain can convince an algorithm you love rain. Spotify’s Taste Profile lets listeners correct it. What that shows, and what the earnings cannot.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'starbucks-smart-queue-staffing-investment',
     youtubeId: 'EuTmBRY_WP0',
     youtubeTitle: 'Why Starbucks’ $500,000,000 Bet Starts Behind the Counter',
@@ -3738,7 +3900,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'starbucks-smart-queue-staffing-investment'
+export const FEATURED_VIDEO_SLUG: string | null = 'spotify-taste-profile-recommendations'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -3787,6 +3949,9 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'O9lxTgawfvQ', title: 'Spotify’s Monday Playlist Passed 100 Billion Plays', uploadDate: '2026-11-06T18:00:03-08:00', durationLabel: '0:56', thumbnail: '/images/shorts/O9lxTgawfvQ.jpg', related: ['spotify-taste-profile-recommendations'] },
+  { youtubeId: 'kOQpEoSL6hk', title: 'AI Mentioned Brooks Every Time. First Place Was Split.', uploadDate: '2026-11-06T16:06:27-08:00', durationLabel: '0:49', thumbnail: '/images/shorts/kOQpEoSL6hk.jpg' },
+  { youtubeId: 'LyuNlrC8IHk', title: 'Spotify Got Your Taste Wrong? Tell It.', uploadDate: '2026-11-06T10:00:38-08:00', durationLabel: '0:54', thumbnail: '/images/shorts/LyuNlrC8IHk.jpg', related: ['spotify-taste-profile-recommendations'] },
   { youtubeId: '1_zXLV4q8s8', title: 'Starbucks’ $500,000,000 Bet Was on People', uploadDate: '2026-11-05T17:00:24-08:00', durationLabel: '0:55', thumbnail: '/images/shorts/1_zXLV4q8s8.jpg', related: ['starbucks-smart-queue-staffing-investment'] },
   { youtubeId: 'BRly024dFAw', title: 'AI Mentioned Branch Most. Steelcase Ranked First.', uploadDate: '2026-11-05T16:19:55-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/BRly024dFAw.jpg' },
   { youtubeId: 'L4JWyZPWrBc', title: 'The Starbucks Line You Can’t See', uploadDate: '2026-11-05T09:00:28-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/L4JWyZPWrBc.jpg', related: ['starbucks-smart-queue-staffing-investment'] },

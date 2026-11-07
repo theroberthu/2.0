@@ -6,6 +6,47 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.81 - Spotify Taste Profile documentary page and three new Shorts (2026-11-07)
+
+**What changed.** One new documentary from the daily series now has a
+companion page, bringing `/videos` to 26 documentaries:
+
+- `/videos/spotify-taste-profile-recommendations`, "Spotify Thinks It Knows
+  You. What If It's Wrong?" (https://youtu.be/9kcOLozDtgU, uploaded
+  2026-11-06T17:00:10-08:00, PT4M59S), AI in practice, about 790 words.
+
+The page is written against the narration, with takeaways, chapters from the
+description, the description's sources and current-standard related research.
+The homepage Featured Video now points at Spotify, so the "More documentaries"
+row shows Starbucks, LEGO and Amazon. Three Shorts from November 6 join the
+top of `SHORTS` (55 in total): two relate to Spotify, and the Brooks AI ranking
+Short has no related page. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.** Taste Profile (Beta) from the September 23, 2026
+post: U.S. Premium listeners 18 and older, after New Zealand testing, shaping
+the Home feed, changes typically within a few hours. The description's
+"availability may vary" is not in that post, so it is left off the page.
+Playlist exclusion (February 8, 2023) and track exclusion (October 1, 2025).
+Discover Weekly: 30 tracks (January 22, 2025 tips post) and more than 100
+billion tracks streamed (June 30, 2025), framed as plays over ten years, not
+different songs. Q3 2026 (October 22, 2026): EUR 5.0 billion revenue, EUR 672
+million operating income, 306 million Premium subscribers, framed as
+company-wide results and not attributed to the feature. Loud and Clear: $11B+
+paid out in 2025, framed as an annual total to rights holders, not artist
+take-home income; payment follows streamshare, not a fixed rate per stream.
+The January 16, 2020 engineering post is treated as archival; the page follows
+its "uncertain user engagement" wording for exploration, not the narration's
+"unfamiliar content". The rain playlist is illustrative and not attributed to
+Spotify, whose examples are white noise and sleep sounds.
+
+**Impact.** Another recent upload gets a permanent, searchable page, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** Consider removing "Availability may vary" from the YouTube
+description, or confirm its source.
+
+---
+
 ## Release 1.80 - Starbucks and LEGO documentary pages and seven new Shorts (2026-11-06)
 
 **What changed.** Two new documentaries from the daily series now have
