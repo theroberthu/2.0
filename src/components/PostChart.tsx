@@ -13,7 +13,7 @@ function total(view: ChartView): number {
 /**
  * Interactive figure placed inside a blog post (see src/lib/post-charts.ts).
  * One view at a time: a headline figure, a caption, then a stacked bar with a
- * per-segment readout or a short set of bars. Every number is also rendered
+ * per-segment readout, a set of bars or a scale with a per-row readout. Every number is also rendered
  * as text in the "Show the numbers" table, so the figure works without color,
  * without JavaScript and for search and answer engines.
  */
@@ -41,6 +41,8 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
     const row = view.rows[r]
     const series = view.series[s]
     if (row && series) readout = `${row.label}, ${series.label.toLowerCase()}: ${row.values[s]}% ${view.of}`
+  } else if (active !== null && view.kind === 'scale') {
+    readout = view.rows[Number(active)]?.detail ?? null
   }
 
   return (
@@ -165,6 +167,50 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
             ))}
           </ul>
         </>
+      ) : view.kind === 'scale' ? (
+        <>
+          <div className="space-y-2" onMouseLeave={() => setActive(null)}>
+            {view.rows.map((row, i) => {
+              const [min, max] = view.domain
+              const from = row.from ?? min
+              return (
+                <button
+                  key={row.label}
+                  type="button"
+                  aria-label={`${row.label}: ${row.value}. ${row.detail}`}
+                  onMouseEnter={() => setActive(`${i}`)}
+                  onFocus={() => setActive(`${i}`)}
+                  onBlur={() => setActive(null)}
+                  onClick={() => setActive(`${i}`)}
+                  className="block w-full text-left py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                >
+                  <span className="flex items-baseline justify-between gap-3 text-[13px] mb-1.5">
+                    <span className="text-gray-300">{row.label}</span>
+                    <span className="text-white font-semibold tabular-nums">{row.value}</span>
+                  </span>
+                  <span className="block relative h-5 rounded bg-white/[0.06] overflow-hidden">
+                    <span
+                      className="absolute inset-y-0 rounded transition-opacity duration-300"
+                      style={{
+                        left: `${(100 * (from - min)) / (max - min)}%`,
+                        width: `${(100 * (row.to - from)) / (max - min)}%`,
+                        background: SERIES_COLORS[row.series],
+                        opacity: dim(`${i}`),
+                      }}
+                    />
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+          <p className="flex justify-between gap-4 text-[12px] text-gray-500 mt-2 mb-0">
+            <span>{view.ends[0]}</span>
+            <span className="text-right">{view.ends[1]}</span>
+          </p>
+          <p className="text-[13px] leading-snug text-gray-300 min-h-[3.5rem] sm:min-h-[2.5rem] mt-3 mb-0">
+            {readout ?? <span className="text-gray-500">Hover or tap a row for what it measures.</span>}
+          </p>
+        </>
       ) : (
         <div className="space-y-3">
           {view.rows.map((row) => (
@@ -223,12 +269,19 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
                           ))}
                         </tr>
                       ))
-                    : v.rows.map((r) => (
-                        <tr key={r.label} className="border-t border-white/[0.06]">
-                          <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
-                          <td className="text-right py-1.5 tabular-nums" colSpan={2}>{r.percent.toFixed(1)}%</td>
-                        </tr>
-                      ))}
+                    : v.kind === 'scale'
+                      ? v.rows.map((r) => (
+                          <tr key={r.label} className="border-t border-white/[0.06]">
+                            <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
+                            <td className="text-right py-1.5 tabular-nums">{r.value}</td>
+                          </tr>
+                        ))
+                      : v.rows.map((r) => (
+                          <tr key={r.label} className="border-t border-white/[0.06]">
+                            <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
+                            <td className="text-right py-1.5 tabular-nums" colSpan={2}>{r.percent.toFixed(1)}%</td>
+                          </tr>
+                        ))}
               </tbody>
             </table>
           ))}

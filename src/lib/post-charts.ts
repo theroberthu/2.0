@@ -39,6 +39,19 @@ export type ChartView = {
       /** Ends the readout, e.g. "Named first, small retailers: 24% on Google AI Mode". */
       of: string
     }
+  | {
+      /**
+       * Labeled bars on a track with a meaningful start and end, for scores
+       * and for shares measured from a baseline such as chance. A row with
+       * `from` floats, which makes the view a waterfall. `value` is the figure
+       * as published; `detail` is the readout on hover, focus or tap.
+       */
+      kind: 'scale'
+      domain: [number, number]
+      /** What the two ends of the track mean. */
+      ends: [string, string]
+      rows: { label: string; value: string; from?: number; to: number; series: SeriesKey; detail: string }[]
+    }
 )
 
 export type PostChart = {
@@ -61,6 +74,10 @@ export const SERIES_COLORS = {
   large: '#3a9bbd',
   mid: '#ad8c36',
   small: '#9b6fc0',
+  // Single-series highlight and the two steps of a waterfall.
+  claude: '#3a9bbd',
+  representation: '#9b6fc0',
+  bargaining: '#ad8c36',
 } as const
 
 export type SeriesKey = keyof typeof SERIES_COLORS
@@ -225,9 +242,137 @@ const LIGHTSPEED_VAER_RETAILERS: PostChart = {
   },
 }
 
+// Values are as published in Anthropic's report: text, footnotes and the labels
+// on Figures 4 and 5. Scores are on a 0 to 1 scale, so they are kept as printed.
+const PROJECT_SWAP: PostChart = {
+  afterParagraph: 19,
+  label: 'Interactive chart',
+  title: "What limited Project Swap: the agent's read of the person",
+  views: [
+    {
+      id: 'shortfall',
+      tab: 'Where the market lost',
+      hero: '85%',
+      heroLabel: "of the shortfall came from the agent's read of the person",
+      caption:
+        'Everyone getting their top book would score 1, which is not possible when people want the same title. Replacing the haggling with Top Trading Cycles, a textbook mechanism run on Claude\'s rankings, also reached 0.60.',
+      kind: 'scale',
+      domain: [0, 1],
+      ends: ['0: last-ranked book', '1: top-ranked book'],
+      rows: [
+        {
+          label: 'Best possible assignment',
+          value: '0.89',
+          to: 0.89,
+          series: 'neutral',
+          detail: "Computed from what people actually wanted: roughly everyone's second choice out of ten.",
+        },
+        {
+          label: "Agent's read of the person",
+          value: '-0.29',
+          from: 0.6,
+          to: 0.89,
+          series: 'representation',
+          detail: "The cost of working from Claude's rankings instead of people's own: 85% of the shortfall.",
+        },
+        {
+          label: 'Agent-to-agent bargaining',
+          value: '-0.05',
+          from: 0.55,
+          to: 0.6,
+          series: 'bargaining',
+          detail: 'The cost of an open trading floor instead of a computed assignment: 15% of the shortfall.',
+        },
+        {
+          label: 'What people got',
+          value: '0.55',
+          to: 0.55,
+          series: 'claude',
+          detail: "The market outcome on people's own rankings: roughly their fifth choice out of ten.",
+        },
+      ],
+    },
+    {
+      id: 'baselines',
+      tab: 'Against the baselines',
+      hero: '61%',
+      heroLabel: 'of book pairs ordered the way the person ordered them',
+      caption:
+        'A short chat beat both standard methods. Bars start at a coin flip, the score with no information at all. In a joke-preference study, a setting Anthropic calls pretty different, an algorithm reached about 61% and people\'s friends about 57%.',
+      kind: 'scale',
+      domain: [50, 100],
+      ends: ['Coin flip: 50%', 'Perfect agreement: 100%'],
+      rows: [
+        {
+          label: 'Ranking by popularity',
+          value: '53%',
+          to: 53,
+          series: 'neutral',
+          detail: 'About 53%, ranking books by their Open Library want-to-read counts.',
+        },
+        {
+          label: 'Collaborative filtering',
+          value: '55%',
+          to: 55,
+          series: 'neutral',
+          detail: 'About 55%, ranking by which books the same readers rated in public datasets.',
+        },
+        {
+          label: 'Claude after a short chat',
+          value: '61%',
+          to: 61,
+          series: 'claude',
+          detail: 'Fable, ranking the pool from a chat of about five minutes. The median participant typed 216 words.',
+        },
+      ],
+    },
+    {
+      id: 'models',
+      tab: 'Across Claude models',
+      hero: '57% to 61%',
+      heroLabel: 'agreement, weakest result to strongest',
+      caption:
+        'Anthropic reran the same ranking exercise with other models. The whole range spans four points on a scale where a coin flip scores 50%.',
+      kind: 'scale',
+      domain: [50, 100],
+      ends: ['Coin flip: 50%', 'Perfect agreement: 100%'],
+      rows: [
+        { label: 'Haiku 4.5', value: '57%', to: 57, series: 'neutral', detail: 'Seven points above a coin flip.' },
+        { label: 'Sonnet 4.5', value: '59%', to: 59, series: 'neutral', detail: 'Nine points above a coin flip.' },
+        { label: 'Opus 4.8', value: '60%', to: 60, series: 'neutral', detail: 'Ten points above a coin flip.' },
+        { label: 'Fable', value: '61%', to: 61, series: 'claude', detail: 'Eleven points above a coin flip. This is the model used in the experiment.' },
+      ],
+    },
+    {
+      id: 'negotiators',
+      tab: 'Better negotiators',
+      hero: '0.01',
+      heroLabel: "Haiku to Opus gap on people's own rankings, down from 0.12 on Claude's",
+      caption:
+        "On Claude's rankings, floors of stronger models traded better. Scored on what people wanted, the largest model gap nearly vanished in Anthropic's regression. The bars show simple floor averages on Claude's rankings, where Haiku and Opus differ by 0.13.",
+      kind: 'scale',
+      domain: [0, 1],
+      ends: ["0: last on Claude's list", "1: top of Claude's list"],
+      rows: [
+        { label: 'Haiku floors', value: '0.75', to: 0.75, series: 'neutral', detail: 'Every agent on Haiku, averaged over 20 floors with neutral instructions.' },
+        { label: 'Sonnet floors', value: '0.80', to: 0.8, series: 'neutral', detail: 'Every agent on Sonnet, averaged over 20 floors with neutral instructions.' },
+        { label: 'Fable floors', value: '0.86', to: 0.86, series: 'neutral', detail: 'Every agent on Fable, averaged over 20 floors with neutral instructions.' },
+        { label: 'Opus floors', value: '0.88', to: 0.88, series: 'claude', detail: 'Every agent on Opus, averaged over 20 floors with neutral instructions. The highest of the four.' },
+        { label: 'Best possible', value: '0.95', to: 0.95, series: 'neutral', detail: "The best assignment available, scored on Claude's rankings." },
+      ],
+    },
+  ],
+  note: 'Run and published by Anthropic on its own models. 201 employees in six offices traded books by barter; 188 ranked books and are the base for the agreement and own-ranking results. Market scores are across 80 runs with neutral instructions and assume equal gaps between ranks. Nothing here tests a production shopping agent.',
+  source: {
+    label: 'Anthropic, Project Swap: What happens when agents trade for us?, September 24, 2026',
+    href: 'https://www.anthropic.com/research/project-swap',
+  },
+}
+
 export const POST_CHARTS: Record<string, PostChart> = {
   'visa-agentic-commerce-benchmark-ai-shopping-failures': VISA_BENCHMARK,
   'ai-shopping-retailer-recommendation-gap-lightspeed-vaer': LIGHTSPEED_VAER_RETAILERS,
+  'anthropic-project-swap-agentic-commerce-shopper-preferences': PROJECT_SWAP,
 }
 
 export function chartForPost(slug: string): PostChart | undefined {

@@ -47,7 +47,7 @@ Effort helped, modestly and with diminishing returns. The median participant typ
 
 Anthropic scores outcomes on a simple scale. Getting your top-ranked book is 1, your last-ranked book is 0. Averaged across participants, that is the market's efficiency.
 
-The best feasible assignment, computed from what people actually wanted, scores 0.89, roughly everyone's second choice. The live decentralized market scored 0.55, roughly everyone's fifth choice out of ten.
+The best feasible assignment, computed from what people actually wanted, scores 0.89, roughly everyone's second choice. The decentralized market scored 0.55, roughly everyone's fifth choice out of ten.
 
 Then the decomposition. Take the best possible assignment computed from Claude's rankings, and score it against what people actually wanted. It reaches 0.60. So the gap between 0.89 and 0.60 is the cost of working from an imperfect model of the person, and the gap between 0.60 and 0.55 is the cost of letting agents haggle instead of running a clearinghouse. That is 85% representation and 15% market design.
 

@@ -6,6 +6,54 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.86 - Interactive chart in the Project Swap article (2026-11-08)
+
+**What changed.** The Project Swap article
+(`/blog/anthropic-project-swap-agentic-commerce-shopper-preferences`) gets an
+interactive figure at the end of "Capability did not rescue it", titled "What
+limited Project Swap: the agent's read of the person". Four views: a waterfall
+of where the market lost value (0.89 best possible, -0.29 from the agent's read
+of the person, -0.05 from bargaining, 0.55 what people got), pairwise agreement
+against popularity and collaborative filtering, agreement across four Claude
+models, and floor scores by model on Claude's rankings. Hovering, tapping or
+focusing a row explains what it measures. "Show the numbers" renders all four
+views as tables in the server HTML. The note states that Anthropic ran the
+study on its own models, the barter and books scope, the 188-person base and
+that nothing tests a production shopping agent.
+
+**How it works.** `PostChart` gains a `scale` view kind: labeled bars on a track
+with a stated start and end. A row with `from` floats, which makes the view a
+waterfall. Agreement bars start at a coin flip (50%), labeled on the track and
+in the caption; score bars start at 0.
+
+**Correction.** One word in the article: "The live decentralized market scored
+0.55" is now "The decentralized market scored 0.55", approved by Robert Hu.
+Anthropic's Figure 4 reports that outcome across the 80 runs with neutral
+instructions. Applied with `scripts/correct-project-swap-live-market.mjs`; the
+content file and insert script match.
+
+**Source handling.** All figures are from Anthropic's report text, footnotes
+and the labels on Figures 4 and 5. The joke-study figures stay in a caption,
+off the bars, because Anthropic calls that setting pretty different. The Haiku
+to Opus gap is 0.12 in Anthropic's regression and 0.13 between the simple floor
+averages; the caption gives both.
+
+**Verification.** tsc, lint and build pass. Tested on a local production build
+at 1440px and 375px: placement after the intended paragraph, no horizontal
+scroll, hover and tap readouts, no layout shift from any row in any view, table
+values matched to the chart, and the Visa and Lightspeed charts unaffected.
+Focus handlers responded to synthetic focus events; real Tab key navigation was
+not tested because the preview pane lacked window focus. The waterfall colors
+use the validated palette order, in reverse, on the dark surface.
+
+**Impact.** The article's central claim, that understanding the person cost far
+more than bargaining, becomes something a reader can inspect step by step.
+
+**Follow-ups.** Watch `post_chart_view` in GA4 across the three charts. Remaining
+candidates are in the backlog.
+
+---
+
 ## Release 1.85 - Interactive retailer chart in the Lightspeed / Vaer article (2026-11-08)
 
 **What changed.** The Lightspeed / Vaer article
