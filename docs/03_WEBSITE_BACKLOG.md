@@ -16,6 +16,33 @@ risk), High (clear near-term value), Medium, Low.
 
 ## High
 
+- **Interactive charts where the data earns one.** Apply the "Interactive
+  charts" standard in [01_EDITORIAL_STYLE_GUIDE.md](01_EDITORIAL_STYLE_GUIDE.md)
+  one article per release, re-verifying every figure against the primary
+  source. The Lightspeed / Vaer retailer chart shipped in Release 1.85. Ranked
+  candidates remaining (data-density audit, 2026-11-08):
+  1. `anthropic-project-swap-agentic-commerce-shopper-preferences`: ranking
+     agreement against baselines (random 50%, popularity 53%, collaborative
+     filtering 55%, Claude models 57% to 61%). Shows how narrow the band above
+     chance is.
+  2. `agentic-commerce-adoption-definition-problem`: the autonomy ladder (53%
+     uncomfortable, 20% recommendations only, 14% approve every purchase, 7%
+     autonomous) beside the 69% spend-limit figures, showing that the two
+     instruments measure different things.
+  3. `google-ai-overviews-branded-search-brand-representation`: AI Overview
+     rate on branded vs non-branded keywords, July vs September, and the
+     daily swings, if the source publishes the daily series.
+  4. `shopify-ai-shopping-traffic-orders-catalog-data`: the conversion
+     comparison as reported three ways (about 50%, about 80%, 64%). Small;
+     possibly a stat row rather than a chart.
+  Held until their legacy sourcing pass (Tier 4) is done:
+  `prime-day-2026-record-spend-smaller-carts-essentials` (record spend vs
+  shrinking cart), `adobe-ai-traffic-393-percent-retail` (traffic growth and
+  the conversion reversal) and
+  `agentic-commerce-consensus-research-forecasts-marketplace-sellers` (forecast
+  ranges, only where scope matches). Some candidates need a grouped-bar or
+  paired-bar view kind added to `PostChart`.
+
 - **Review high-impression / low-click articles for `meta_title` optimization.**
   Change `meta_title` only. Do **not** rewrite the editorial `H1`, the article
   body, or the slug. Pull query-level Search Console data per article first and

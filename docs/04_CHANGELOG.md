@@ -6,6 +6,58 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.85 - Interactive retailer chart in the Lightspeed / Vaer article (2026-11-08)
+
+**What changed.** The Lightspeed / Vaer article
+(`/blog/ai-shopping-retailer-recommendation-gap-lightspeed-vaer`) gets an
+interactive figure after "The magnitude differs by platform. The direction
+does not.", titled "Cited is not chosen: retailer share at each step of an AI
+answer". Four views: the store named first on each platform (large retailers
+46% to 58%), then one view each for ChatGPT, Google AI Mode and Google AI
+Overviews that follows large, mid-size and small retailers from cited source
+to named in the answer to named first. Hover, tap or keyboard focus on a
+segment shows its share, and each segment of 10% or more carries its value
+directly. "Show the numbers" renders all four views as tables in the server
+HTML. The note states the scope, the revenue bands, that the research is
+sponsored and that the full report is available only on request.
+
+**How it works.** `PostChart` gains a `stackedRows` view kind: one 100% bar
+per row, split by a shared series. The chart placement code in
+`src/app/blog/[slug]/page.tsx` now marks the insertion point on the article's
+own HTML before the key findings box and inline newsletter card are added.
+Previously `afterParagraph` counted the three paragraphs inside the newsletter
+card, which would have misplaced any chart set after the second H2. The Visa
+chart stays where it was. `docs/01_EDITORIAL_STYLE_GUIDE.md` adds an
+"Interactive charts" standard, and the backlog ranks the remaining candidates.
+
+**Source handling.** All 30 values are the labeled figures in Vaer's published
+charts. Vaer's text and chart disagree in two places. Local listings in Google
+AI Mode citations are "around 58%" in the text and 50% in the chart; the chart
+uses 50% and the AI Mode caption says so. The tie among cited sources is
+"roughly 38%" in the text and about 37% on the chart; the caption gives both
+as about 37% to 38%. The article's own text is unchanged and still quotes the
+58%.
+
+**Verification.** tsc, lint and build pass. Tested on a local production build
+at 1440px and 375px: placement after the intended paragraph, no horizontal
+scroll, hover and tap readouts, all 39 mobile readouts at the reserved height
+so tapping does not shift the layout, all table values matched to Vaer's
+charts, and the Visa chart unaffected. Keyboard focus was not re-tested on the
+new view kind because the preview pane lacked window focus; it uses the same
+handlers as the Visa chart. Colors pass the palette validator on the dark
+surface, with one colorblind pair in the floor band, covered by the direct
+labels and the tables.
+
+**Impact.** The article's thesis, that being cited is not being chosen, becomes
+something a reader can trace platform by platform, and the placement fix lets
+charts sit anywhere in an article.
+
+**Follow-ups.** Decide whether to align the article's 58% sentence with Vaer's
+chart value. Watch `post_chart_view` in GA4 across both charts. Remaining
+candidates are in the backlog; some need a grouped-bar or paired-bar view kind.
+
+---
+
 ## Release 1.84 - Interactive benchmark chart in the Visa article (2026-11-08)
 
 **What changed.** The Visa benchmark article

@@ -71,12 +71,16 @@ function buildTableOfContents(html: string): {
   return { html: rewritten, items }
 }
 
+const CHART_MARKER = '<!--post-chart-->'
+
 /**
- * Split post HTML after the nth closing </p>, so an interactive chart can sit
- * between paragraphs. Returns the whole post as the first part when the post
- * has fewer paragraphs than that.
+ * Mark the point after the article's nth closing </p> where an interactive
+ * chart goes. This runs on the article's own HTML, before the key findings box
+ * and inline newsletter card (which contain paragraphs of their own) are
+ * injected, so the count matches the paragraphs the author wrote. Posts with
+ * fewer paragraphs than that get the marker at the end.
  */
-function splitAfterParagraph(html: string, n: number): [string, string] {
+function markAfterParagraph(html: string, n: number): string {
   const re = /<\/p>/gi
   let count = 0
   let match
@@ -84,10 +88,10 @@ function splitAfterParagraph(html: string, n: number): [string, string] {
     count++
     if (count === n) {
       const at = match.index + match[0].length
-      return [html.slice(0, at), html.slice(at)]
+      return html.slice(0, at) + CHART_MARKER + html.slice(at)
     }
   }
-  return [html, '']
+  return html + CHART_MARKER
 }
 
 /**
@@ -441,10 +445,9 @@ export default async function BlogPostPage(props: Props) {
 
               {post.content && chart ? (
                 (() => {
-                  const [lead, rest] = splitAfterParagraph(
-                    injectInlineCTA(injectKeyFindings(tocHtml, post.schema_json?.key_findings)),
-                    chart.afterParagraph
-                  )
+                  const [lead, rest = ''] = injectInlineCTA(
+                    injectKeyFindings(markAfterParagraph(tocHtml, chart.afterParagraph), post.schema_json?.key_findings)
+                  ).split(CHART_MARKER)
                   return (
                     <>
                       <div className="prose-custom-dark" dangerouslySetInnerHTML={{ __html: lead }} />

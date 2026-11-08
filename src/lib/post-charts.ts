@@ -27,6 +27,18 @@ export type ChartView = {
 } & (
   | { kind: 'stacked'; unit: string; segments: ChartSegment[] }
   | { kind: 'bars'; rows: { label: string; percent: number }[] }
+  | {
+      /**
+       * One 100% bar per row, each split by the same series, for shares that
+       * shift from row to row (for example, stages of a funnel). Values are
+       * percentages as published; rounded rows may sum to 99 or 101.
+       */
+      kind: 'stackedRows'
+      series: { label: string; series: SeriesKey }[]
+      rows: { label: string; values: number[] }[]
+      /** Ends the readout, e.g. "Named first, small retailers: 24% on Google AI Mode". */
+      of: string
+    }
 )
 
 export type PostChart = {
@@ -45,6 +57,10 @@ export const SERIES_COLORS = {
   noPurchase: '#9b6fc0',
   noDecision: '#c46a5a',
   neutral: '#6b7780',
+  // Retailer size bands. Same validated hues, in the same adjacent order.
+  large: '#3a9bbd',
+  mid: '#ad8c36',
+  small: '#9b6fc0',
 } as const
 
 export type SeriesKey = keyof typeof SERIES_COLORS
@@ -121,8 +137,97 @@ const VISA_BENCHMARK: PostChart = {
   },
 }
 
+const SIZE_SERIES: { label: string; series: SeriesKey }[] = [
+  { label: 'Large retailers', series: 'large' },
+  { label: 'Mid-size retailers', series: 'mid' },
+  { label: 'Small retailers', series: 'small' },
+]
+
+const FUNNEL_STAGES = ['Cited as a source', 'Named in the answer', 'Named first']
+
+// Values are the labeled figures in Vaer AI's published charts ("Recommendation
+// funnel: retailer-size share, by stage" and "... by surface"). Web search on.
+const LIGHTSPEED_VAER_RETAILERS: PostChart = {
+  afterParagraph: 12,
+  label: 'Interactive chart',
+  title: 'Cited is not chosen: retailer share at each step of an AI answer',
+  views: [
+    {
+      id: 'first',
+      tab: 'First pick, by platform',
+      hero: '46% to 58%',
+      heroLabel: 'of first-named stores were large retailers, on every platform',
+      caption:
+        'Large and small retailers were roughly even among the sources cited, at about 37% to 38% each across all three platforms. By the store named first, large retailers led small ones about two and a half to one. Each platform gets there from a different mix of sources.',
+      kind: 'stackedRows',
+      series: SIZE_SERIES,
+      rows: [
+        { label: 'All three platforms', values: [52, 28, 20] },
+        { label: 'ChatGPT', values: [58, 24, 18] },
+        { label: 'Google AI Mode', values: [46, 31, 24] },
+        { label: 'Google AI Overviews', values: [52, 31, 18] },
+      ],
+      of: 'of stores named first',
+    },
+    {
+      id: 'chatgpt',
+      tab: 'ChatGPT',
+      hero: '41% to 58%',
+      heroLabel: 'large retailers, from citations to first pick',
+      caption:
+        'ChatGPT showed the strongest pull toward large retailers once search was on. Small retailers fell from 36% of citations to 18% of first picks.',
+      kind: 'stackedRows',
+      series: SIZE_SERIES,
+      rows: [
+        { label: FUNNEL_STAGES[0], values: [41, 23, 36] },
+        { label: FUNNEL_STAGES[1], values: [52, 25, 24] },
+        { label: FUNNEL_STAGES[2], values: [58, 24, 18] },
+      ],
+      of: 'on ChatGPT',
+    },
+    {
+      id: 'aimode',
+      tab: 'Google AI Mode',
+      hero: '50% to 24%',
+      heroLabel: 'small retailers, from citations to first pick',
+      caption:
+        "AI Mode cites small retailers more than any other platform, then names them first less than half as often. Vaer's text puts local listings at about 58% of AI Mode citations; its chart labels small retailers at 50%. This chart uses the labeled chart values.",
+      kind: 'stackedRows',
+      series: SIZE_SERIES,
+      rows: [
+        { label: FUNNEL_STAGES[0], values: [29, 22, 50] },
+        { label: FUNNEL_STAGES[1], values: [45, 28, 27] },
+        { label: FUNNEL_STAGES[2], values: [46, 31, 24] },
+      ],
+      of: 'on Google AI Mode',
+    },
+    {
+      id: 'overviews',
+      tab: 'Google AI Overviews',
+      hero: '44% to 52%',
+      heroLabel: 'large retailers, from citations to first pick',
+      caption:
+        'AI Overviews cites the fewest small retailers to begin with. According to Lightspeed, 68% of its shopping answers named no local store at all.',
+      kind: 'stackedRows',
+      series: SIZE_SERIES,
+      rows: [
+        { label: FUNNEL_STAGES[0], values: [44, 32, 23] },
+        { label: FUNNEL_STAGES[1], values: [50, 30, 20] },
+        { label: FUNNEL_STAGES[2], values: [52, 31, 18] },
+      ],
+      of: 'on Google AI Overviews',
+    },
+  ],
+  note: 'Web search on, about 260,000 answers to size-neutral shopping prompts in four cities, June to August 2026. Large means over $1 billion in revenue, mid $50 million to $1 billion, small under $50 million. Sponsored research; the full report is available only on request. Rounded shares may not sum to 100.',
+  source: {
+    label: 'Vaer AI for Lightspeed Commerce, AI retailer bias study, September 29, 2026',
+    href: 'https://vaer.ai/insights/ai-retailer-bias-study/',
+  },
+}
+
 export const POST_CHARTS: Record<string, PostChart> = {
   'visa-agentic-commerce-benchmark-ai-shopping-failures': VISA_BENCHMARK,
+  'ai-shopping-retailer-recommendation-gap-lightspeed-vaer': LIGHTSPEED_VAER_RETAILERS,
 }
 
 export function chartForPost(slug: string): PostChart | undefined {

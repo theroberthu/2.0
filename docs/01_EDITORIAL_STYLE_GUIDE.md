@@ -205,6 +205,44 @@ it drives the topical cluster.
 - Every image needs descriptive `alt` text.
 - The owl logo is for nav, footer, favicon, and OG only. Never decoration.
 
+## Interactive charts
+
+An article gets an interactive chart when the data does work the prose cannot,
+never as decoration. The Visa benchmark article (Release 1.84) is the
+reference implementation.
+
+**Add a chart only when all of these hold:**
+
+- The article's argument rests on a comparison: parts of a whole, a gap
+  between two measures, a change over time, or a ranking. A single headline
+  statistic is a sentence, not a chart.
+- There are enough related figures on a shared unit or denominator to compare
+  (as a rule of thumb, six or more data points, or two or more useful views).
+  Never put figures with different units, populations or geographies on one
+  axis to make them look comparable.
+- Every figure traces to a primary source (the company's release, filing,
+  results file or report) and has been recomputed or checked against it. A
+  figure TRH derives itself is labeled as the author's calculation.
+- Pre-July 2026 posts get a chart only after their sourcing pass in the legacy
+  triage is complete.
+
+**How it is built:**
+
+- Data lives in `src/lib/post-charts.ts`, keyed by slug; the component is
+  `src/components/PostChart.tsx`. Do not embed charts in Supabase post HTML.
+- Place it after the paragraph that introduces the numbers, not above the
+  lede, so the opening text stays above the fold on mobile.
+- Each view has a headline figure, a one or two sentence caption and a
+  chart. Every number also appears in the "Show the numbers" table, which is
+  server-rendered for readers without color or JavaScript and for answer
+  engines.
+- The figcaption states scope limits (for example, simulated or surveyed
+  rather than observed) and links the source.
+- New series colors are run through the dataviz palette validator against
+  `#1a2a32` before use.
+- Verify at 1440px and 375px on a production build: no horizontal scroll,
+  hover, tap and keyboard readouts work, no layout shift on tap.
+
 ## Things to avoid
 
 - Lead forms, service CTAs, pricing, "book a call" or consultation messaging.

@@ -19,9 +19,11 @@ function total(view: ChartView): number {
  */
 export default function PostChart({ chart, slug }: { chart: PostChartData; slug: string }) {
   const [viewId, setViewId] = useState(chart.views[0].id)
-  const [active, setActive] = useState<number | null>(null)
+  // Active segment: its index in a stacked view, "row:segment" in stackedRows.
+  const [active, setActive] = useState<string | null>(null)
   const view = chart.views.find((v) => v.id === viewId) ?? chart.views[0]
   const sum = total(view)
+  const dim = (key: string) => (active === null || active === key ? 1 : 0.4)
 
   const choose = (id: string) => {
     if (id === viewId) return
@@ -30,10 +32,16 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
     trackEvent('post_chart_view', { post_slug: slug, view: id })
   }
 
-  const readout =
-    view.kind === 'stacked' && active !== null && view.segments[active]
-      ? `${view.segments[active].label}: ${view.segments[active].value.toLocaleString('en-US')} of ${sum.toLocaleString('en-US')} ${view.unit} (${pct(view.segments[active].value, sum)})`
-      : null
+  let readout: string | null = null
+  if (active !== null && view.kind === 'stacked') {
+    const seg = view.segments[Number(active)]
+    if (seg) readout = `${seg.label}: ${seg.value.toLocaleString('en-US')} of ${sum.toLocaleString('en-US')} ${view.unit} (${pct(seg.value, sum)})`
+  } else if (active !== null && view.kind === 'stackedRows') {
+    const [r, s] = active.split(':').map(Number)
+    const row = view.rows[r]
+    const series = view.series[s]
+    if (row && series) readout = `${row.label}, ${series.label.toLowerCase()}: ${row.values[s]}% ${view.of}`
+  }
 
   return (
     <figure
@@ -83,16 +91,16 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
                 key={seg.label}
                 type="button"
                 aria-label={`${seg.label}: ${seg.value} of ${sum} ${view.unit}, ${pct(seg.value, sum)}`}
-                onMouseEnter={() => setActive(i)}
-                onFocus={() => setActive(i)}
+                onMouseEnter={() => setActive(`${i}`)}
+                onFocus={() => setActive(`${i}`)}
                 onBlur={() => setActive(null)}
-                onClick={() => setActive(i)}
+                onClick={() => setActive(`${i}`)}
                 className="h-full first:rounded-l last:rounded-r transition-[flex-grow,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                 style={{
                   flexGrow: seg.value,
                   flexBasis: 0,
                   background: SERIES_COLORS[seg.series],
-                  opacity: active === null || active === i ? 1 : 0.4,
+                  opacity: dim(`${i}`),
                 }}
               />
             ))}
@@ -107,6 +115,52 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
                 <span>
                   {seg.label} <span className="text-gray-500 tabular-nums">{pct(seg.value, sum)}</span>
                 </span>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : view.kind === 'stackedRows' ? (
+        <>
+          <div className="space-y-4" onMouseLeave={() => setActive(null)}>
+            {view.rows.map((row, r) => (
+              <div key={row.label}>
+                <span className="block text-[12.5px] text-gray-300 mb-1.5">{row.label}</span>
+                <div className="flex gap-[2px] h-9 md:h-10">
+                  {row.values.map((value, s) => {
+                    const key = `${r}:${s}`
+                    const series = view.series[s]
+                    return (
+                      <button
+                        key={series.label}
+                        type="button"
+                        aria-label={`${row.label}, ${series.label.toLowerCase()}: ${value}%`}
+                        onMouseEnter={() => setActive(key)}
+                        onFocus={() => setActive(key)}
+                        onBlur={() => setActive(null)}
+                        onClick={() => setActive(key)}
+                        className="h-full min-w-0 flex items-center justify-center overflow-hidden first:rounded-l last:rounded-r transition-[flex-grow,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        style={{ flexGrow: value, flexBasis: 0, background: SERIES_COLORS[series.series], opacity: dim(key) }}
+                      >
+                        {/* Direct label: dark ink on the fill, so share is
+                            readable without hover and without color. */}
+                        <span className="text-[12px] font-semibold tabular-nums text-[#0f1a20]" aria-hidden="true">
+                          {value >= 10 ? `${value}%` : ''}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[13px] text-gray-300 min-h-[2.5rem] sm:min-h-[1.5rem] mt-3 mb-3 tabular-nums">
+            {readout ?? <span className="text-gray-500">Hover or tap a segment for its share.</span>}
+          </p>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[12.5px] text-gray-300 pl-0 my-0 list-none">
+            {view.series.map((s) => (
+              <li key={s.label} className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-sm flex-none" style={{ background: SERIES_COLORS[s.series] }} aria-hidden="true" />
+                {s.label}
               </li>
             ))}
           </ul>
@@ -139,6 +193,18 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
           {chart.views.map((v) => (
             <table key={v.id} className="w-full text-[13px] text-gray-300">
               <caption className="text-left text-[12px] font-mono uppercase tracking-[0.12em] text-gray-500 pb-2">{v.tab}</caption>
+              {v.kind === 'stackedRows' && (
+                <thead>
+                  <tr>
+                    <td />
+                    {v.series.map((s) => (
+                      <th key={s.label} scope="col" className="text-right font-normal text-gray-500 pb-1.5 pl-3">
+                        {s.label.replace(' retailers', '')}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+              )}
               <tbody>
                 {v.kind === 'stacked'
                   ? v.segments.map((s) => (
@@ -148,12 +214,21 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
                         <td className="text-right py-1.5 pl-3 tabular-nums w-16">{pct(s.value, total(v))}</td>
                       </tr>
                     ))
-                  : v.rows.map((r) => (
-                      <tr key={r.label} className="border-t border-white/[0.06]">
-                        <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
-                        <td className="text-right py-1.5 tabular-nums" colSpan={2}>{r.percent.toFixed(1)}%</td>
-                      </tr>
-                    ))}
+                  : v.kind === 'stackedRows'
+                    ? v.rows.map((r) => (
+                        <tr key={r.label} className="border-t border-white/[0.06]">
+                          <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
+                          {r.values.map((value, s) => (
+                            <td key={v.series[s].label} className="text-right py-1.5 pl-3 tabular-nums">{value}%</td>
+                          ))}
+                        </tr>
+                      ))
+                    : v.rows.map((r) => (
+                        <tr key={r.label} className="border-t border-white/[0.06]">
+                          <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
+                          <td className="text-right py-1.5 tabular-nums" colSpan={2}>{r.percent.toFixed(1)}%</td>
+                        </tr>
+                      ))}
               </tbody>
             </table>
           ))}
