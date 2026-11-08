@@ -6,6 +6,49 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.83 - Visa's AI shopping benchmark and the case for a stop rule (2026-11-08)
+
+**What changed.** New E-commerce Strategy article,
+`/blog/visa-agentic-commerce-benchmark-ai-shopping-failures`, "Visa's AI
+Shopping Benchmark Shows Why Agents Need a Stop Rule" (1,171 body words,
+1,195 with subheads). It argues that identity, shopper permission, spending
+limits and payment authorization do not establish whether an agent knows
+enough to act, and that agentic commerce needs a stop rule before payment.
+Adds the content file, insert script, OG SVG and PNG. AI Commerce 2027 gets
+one tracker row (November 5, Visa, Trust) and one sentence in Shift 05's
+"seventh question" paragraph; `LAST_UPDATED` and the sitemap date move to
+2026-11-08 together.
+
+**Sourcing.** The Visa press release (November 5), the whitepaper, the
+Payments Frontier results page and Visa's published results file. Every
+headline figure was recomputed from that file: 990 scored runs, 566 passes
+(57.2%), 229 failed purchase decisions out of 424 failures (54%), pass^3
+34.2%, the hidden-factor and cost groups (70.2/44.4, 67.1/50.2). The 46 of
+132 no-fit figure is labeled as the author's calculation, not a Visa
+headline. Visa publishes no aggregate split between failed purchases that
+violated an identified requirement and those made before every required fact
+was established, and the article says so. Every purchase is described as a
+simulated decision: no checkout, payment or order placement. The Trust Index
+(Harris Poll for Visa, May 26 to 28, 2026) is used for context only.
+
+**Editorial gates.** Senior-editor revisions applied: precise wording for the
+54% figure, the 190-run inference removed, the Walmart limit stated without
+dollar amounts, a strict-scoring limitation, a softer conclusion on payment
+governance and a revised trust sentence. Meta description replaced at ship.
+Zero em or en dashes, one question mark, four internal links, no Key findings
+box. The proposed interactive benchmark graph was not added; it stays a
+scratchpad prototype for separate evaluation.
+
+**Impact.** TRH's agent-trust thread (Know Your Agent, NPCI, Project Swap,
+Visa/BILL, Walmart) gets its first measured evidence for the layer upstream of
+payment controls.
+
+**Follow-ups.** Evaluate a reusable benchmark visualization as a separate
+release. Watch for Visa's checkout and payment phases and any independent
+reproduction.
+
+---
+
 ## Release 1.82 - Mobile article reading fixes after a GA4 review (2026-11-07)
 
 **What changed.** Three fixes to the article page on phones, refined after a

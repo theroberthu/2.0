@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-10-29'
+export const LAST_UPDATED = '2026-11-08'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -342,7 +342,7 @@ export const SHIFTS: Shift[] = [
     "evidence": "On September 20, Amazon blocked Meta's Muse agent from its store, saying the agent \"does not identify itself.\" On October 6, Meta and Sierra announced Personal Agent Protocol, in which \"consumers decide what access to give their personal agents, and companies set parameters for what those agents can do\"; its specification had not been published as of this update. Ant International, Mastercard and Visa began Know Your Agent interoperability work in September while keeping each network's own decisioning. Mastercard began United States testing of a score estimating how likely a transaction was initiated by an AI agent. Shopify's checkout documentation states that its agent signature, Web Bot Auth, does not grant permission to place an order. IDEMIA announced payment tokens restricted by merchant, amount, category and time, with proof of consent designed to survive a later dispute.",
     "why": [
       "A transaction initiated by software has to answer six questions. Who is acting: the agent's identity. Who it is acting for: the customer's identity and account. What the customer authorized: the scope of delegation. What the business will allow: merchant permission. What evidence proves it: consent records and logs. What still requires risk judgment: the issuer's or merchant's decision. Identity is not authorization. Authorization is not merchant permission. Merchant permission is not transaction legitimacy. Each layer can pass while the next one fails.",
-      "There is a seventh question upstream of all six. Anthropic's Project Swap, a controlled 201-person agent market, found its agents' rankings agreed with participants' own pairwise preferences 61% of the time, and attributed 85% of the market's shortfall to imperfect models of what people wanted rather than to negotiation. An agent can be fully authorized and still buy the wrong thing."
+      "There is a seventh question upstream of all six. Anthropic's Project Swap, a controlled 201-person agent market, found its agents' rankings agreed with participants' own pairwise preferences 61% of the time, and attributed 85% of the market's shortfall to imperfect models of what people wanted rather than to negotiation. An agent can be fully authorized and still buy the wrong thing. In Visa's November benchmark, 54% of failed simulated shopping runs still ended in a purchase decision, before any checkout or payment."
     ],
     "consequence": "Decide now what your business will allow an identified agent to do, by action: read a policy, check stock, build a cart, place an order, change an address. Retain evidence of what was authorized and what was executed, because disputes will turn on it.",
     "unproven": "Nothing published shows one network accepting another's agent verification without its own check. There is no published dispute or liability framework for an authorized agent's mistake, and no data on false declines of legitimate agent transactions. Personal Agent Protocol is a design, not a deployed standard.",
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-11-05',
+    org: 'Visa',
+    development: 'Visa Agentic Commerce Benchmark: 22 AI models from 12 labs ran 15 simulated shopping episodes three times each; 57.2% of 990 runs passed, and 54% of failed runs still ended in a simulated purchase decision. Checkout, payment and order placement were excluded',
+    affects: 'Trust',
+    evidenceType: 'Company research (whitepaper and published results)',
+    changed: 'The first published measurement of whether an agent knows enough to act before payment controls apply; simulated, first party and not independently reproduced',
+    href: '/blog/visa-agentic-commerce-benchmark-ai-shopping-failures',
+  },
   {
     date: '2026-10-29',
     org: 'DoorDash and Instacart',
