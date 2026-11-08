@@ -6,6 +6,47 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.84 - Interactive benchmark chart in the Visa article (2026-11-08)
+
+**What changed.** The Visa benchmark article
+(`/blog/visa-agentic-commerce-benchmark-ai-shopping-failures`) gets an
+interactive figure after its second paragraph, "How the 990 benchmark runs
+ended". Four views, each with a headline figure, a caption and a chart: all
+990 runs (57.2% passed), the 424 failures (54.0% still ended in a purchase
+decision), the no-fit episodes (46 of 132, 34.8%, labeled as the author's
+calculation) and repeat runs (57.2 / 41.7 / 34.2). Hover, tap or keyboard
+focus on a stacked-bar segment shows its count and share. A "Show the
+numbers" disclosure renders every view as a table in the server HTML, so the
+figures are readable without color, without JavaScript and by search and
+answer engines. The caption states that these were simulated decisions with
+no checkout, payment or order placement, and links Visa's results.
+
+**How it works.** Charts are keyed by slug in `src/lib/post-charts.ts`, the
+same pattern as videos, so the figures are reviewed and versioned as code
+rather than embedded in Supabase HTML. `src/components/PostChart.tsx` is the
+client component; `src/app/blog/[slug]/page.tsx` splits the post after the
+configured paragraph only when a chart exists, so every other post renders
+exactly as before. The chart title is a styled paragraph, not an H2, so it
+stays out of the article outline and table of contents. Series colors passed
+the dataviz palette validator against the dark surface (#1a2a32). View
+changes fire a `post_chart_view` GA4 event with the post slug and view.
+
+**Verification.** tsc, lint and build pass. Tested on a local production
+build at 1440px and 375px: no console errors (only the Vercel insights script
+404s locally), no horizontal scroll, opening paragraph still above the fold
+on mobile, all four views, hover, tap and keyboard readouts. The mobile
+readout reserves two lines so tapping a segment does not shift the legend.
+
+**Impact.** The article's two headline figures become something a reader can
+explore, and the reusable component lets future evidence articles carry a
+chart without touching post HTML.
+
+**Follow-ups.** Watch `post_chart_view` in GA4 to see whether readers use the
+views. Consider charts for future benchmark or survey articles only where the
+data supports more than one view.
+
+---
+
 ## Release 1.83 - Visa's AI shopping benchmark and the case for a stop rule (2026-11-08)
 
 **What changed.** New E-commerce Strategy article,

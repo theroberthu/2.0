@@ -16,6 +16,8 @@ import TrackedLink from '@/components/TrackedLink'
 import { SITE_URL } from '@/lib/constants'
 import { showDek } from '@/lib/blog-dek'
 import { videosForPost } from '@/lib/videos'
+import { chartForPost } from '@/lib/post-charts'
+import PostChart from '@/components/PostChart'
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -67,6 +69,25 @@ function buildTableOfContents(html: string): {
   })
 
   return { html: rewritten, items }
+}
+
+/**
+ * Split post HTML after the nth closing </p>, so an interactive chart can sit
+ * between paragraphs. Returns the whole post as the first part when the post
+ * has fewer paragraphs than that.
+ */
+function splitAfterParagraph(html: string, n: number): [string, string] {
+  const re = /<\/p>/gi
+  let count = 0
+  let match
+  while ((match = re.exec(html)) !== null) {
+    count++
+    if (count === n) {
+      const at = match.index + match[0].length
+      return [html.slice(0, at), html.slice(at)]
+    }
+  }
+  return [html, '']
 }
 
 /**
@@ -241,6 +262,7 @@ export default async function BlogPostPage(props: Props) {
   const faqSchema = generateFAQSchema(post)
   const videoSchema = generateVideoSchema(post)
   const relatedVideos = videosForPost(post.slug)
+  const chart = chartForPost(post.slug)
 
   // Build the "Related Research" cluster. Priority order:
   //   1. Curated slugs in schema_json.related_posts (author override)
@@ -417,7 +439,21 @@ export default async function BlogPostPage(props: Props) {
               {/* Mobile-only table of contents. Desktop sidebar handles xl:+ */}
               <MobileTocCard toc={sidebarToc} />
 
-              {post.content ? (
+              {post.content && chart ? (
+                (() => {
+                  const [lead, rest] = splitAfterParagraph(
+                    injectInlineCTA(injectKeyFindings(tocHtml, post.schema_json?.key_findings)),
+                    chart.afterParagraph
+                  )
+                  return (
+                    <>
+                      <div className="prose-custom-dark" dangerouslySetInnerHTML={{ __html: lead }} />
+                      <PostChart chart={chart} slug={post.slug} />
+                      {rest && <div className="prose-custom-dark" dangerouslySetInnerHTML={{ __html: rest }} />}
+                    </>
+                  )
+                })()
+              ) : post.content ? (
                 <div
                   className="prose-custom-dark"
                   dangerouslySetInnerHTML={{ __html: injectInlineCTA(injectKeyFindings(tocHtml, post.schema_json?.key_findings)) }}
