@@ -73,7 +73,7 @@ const post = {
 
 <p>Global Payments asks about comfort, category by category, with a stated ceiling. Up to $50 for cinema tickets, meal delivery, gift cards and subscriptions. Up to $100 for groceries at 69%, clothing at 69%, luxury clothing at 64%, electronics at 58%. A respondent can say yes to all of them.</p>
 
-<p>ACI asks respondents to choose one posture. Fifty-three percent uncomfortable, 20% recommendations only, 14% approval on every purchase, 7% autonomous within predefined conditions. Those four options sum to 94, so the choices compete with each other in a way a category comfort scale does not.</p>
+<p>ACI reports four positions. Fifty-three percent uncomfortable, 20% recommendations only, 14% approval on every purchase, 7% autonomous within predefined conditions. Those four sum to 94, which suggests respondents picked one, though the release does not say so. If they did, the choices compete with each other in a way a category comfort scale does not.</p>
 
 <p>Put one more way: the first instrument measures how far a willing consumer will go in a named category with a price cap. The second measures which single description a consumer picks for their overall stance on fashion. Different questions, different denominators, different answers. Both are hypothetical, and neither observes a transaction.</p>
 
@@ -85,15 +85,15 @@ const post = {
 
 <p><strong>Recommend.</strong> The agent proposes the choice. ACI puts 20% here explicitly.</p>
 
-<p><strong>Prepare.</strong> The agent assembles the cart but authorizes nothing. Neither study measures it, which matters because it is the level closest to what the platforms are actually shipping.</p>
+<p><strong>Prepare.</strong> The agent assembles the cart but authorizes nothing. Neither public release reports a figure for it, which matters because it is the level closest to what the platforms are actually shipping.</p>
 
 <p><strong>Approve.</strong> The agent initiates and the human signs off each time. Global Payments has 33% asking for exactly this. ACI has 14%.</p>
 
 <p><strong>Bounded delegation.</strong> Standing permission inside limits of category, amount, retailer or timing. This is where the 69% and the 7% both sit, and the reason they look incompatible is that they were produced by incompatible instruments.</p>
 
-<p><strong>Autonomous.</strong> No per-transaction approval and no meaningful bound. Neither study measures this cleanly either.</p>
+<p><strong>Autonomous.</strong> No per-transaction approval and no meaningful bound. Neither public release reports a clean figure for this either.</p>
 
-<p>Two of six levels are unmeasured, and one of them is the level the software is being built for.</p>
+<p>Two of six levels have no figure in either public release, and one of them is the level the software is being built for.</p>
 
 <h2>What an operator should count instead</h2>
 

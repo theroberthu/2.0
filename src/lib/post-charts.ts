@@ -52,6 +52,21 @@ export type ChartView = {
       ends: [string, string]
       rows: { label: string; value: string; from?: number; to: number; series: SeriesKey; detail: string }[]
     }
+  | {
+      /**
+       * Figures side by side in labeled columns, with no shared axis, for
+       * sources that cannot honestly be plotted against each other. A null
+       * cell means the source published no figure for that row.
+       */
+      kind: 'matrix'
+      columns: string[]
+      rows: {
+        label: string
+        highlight?: boolean
+        cells: ({ figure: string; text: string } | null)[]
+        detail: string
+      }[]
+    }
 )
 
 export type PostChart = {
@@ -62,6 +77,8 @@ export type PostChart = {
   views: ChartView[]
   note: string
   source: { label: string; href: string }
+  /** A second source, for charts that set two studies side by side. */
+  alsoSource?: { label: string; href: string }
 }
 
 export const SERIES_COLORS = {
@@ -369,10 +386,121 @@ const PROJECT_SWAP: PostChart = {
   },
 }
 
+// Figures are from the two public press releases. The framework in the first
+// view is the author's, so its rows are never plotted on a shared axis.
+const NO_FIGURE = null
+const ADOPTION_DEFINITIONS: PostChart = {
+  afterParagraph: 22,
+  label: 'Interactive chart',
+  title: 'Two numbers, six levels: what each adoption survey reported',
+  views: [
+    {
+      id: 'levels',
+      tab: 'Six levels of delegation',
+      hero: '2 of 6',
+      heroLabel: 'levels have no clean figure in either release',
+      caption:
+        "The six levels are the author's framework, mapped against what each company published. Figures in the same row come from different questions and different samples, so they sit side by side here and are not comparable.",
+      kind: 'matrix',
+      columns: ['Global Payments', 'ACI and YouGov'],
+      rows: [
+        {
+          label: 'Assist',
+          cells: [
+            { figure: '69%', text: 'use AI to find better deals' },
+            { figure: '35%', text: 'value price drop alerts' },
+          ],
+          detail: 'The agent researches, compares or hunts deals. Global Payments reports use; ACI reports which features people valued.',
+        },
+        {
+          label: 'Recommend',
+          cells: [NO_FIGURE, { figure: '20%', text: 'recommendations only' }],
+          detail: 'The agent proposes the choice. ACI reports people who would accept recommendations but not autonomous purchases.',
+        },
+        {
+          label: 'Prepare',
+          cells: [NO_FIGURE, NO_FIGURE],
+          detail: 'The agent assembles the cart and authorizes nothing. This is the level closest to what platforms are shipping.',
+        },
+        {
+          label: 'Approve',
+          cells: [
+            { figure: '33%', text: 'want to approve every transaction' },
+            { figure: '14%', text: 'require approval for every purchase' },
+          ],
+          detail: 'The agent initiates and the person signs off each time. Global Payments lists this among wanted safeguards.',
+        },
+        {
+          label: 'Bounded delegation',
+          highlight: true,
+          cells: [
+            { figure: '69%', text: 'up to $100 on groceries' },
+            { figure: '7%', text: 'under predefined conditions' },
+          ],
+          detail: 'Standing permission inside limits. Global Payments names a category and a cap; ACI reports only predefined conditions.',
+        },
+        {
+          label: 'Autonomous',
+          cells: [NO_FIGURE, NO_FIGURE],
+          detail: "No per-transaction approval and no meaningful bound. ACI's headline reads this way, but its 7% carries predefined conditions.",
+        },
+      ],
+    },
+    {
+      id: 'aci',
+      tab: 'ACI: overall stance',
+      hero: '7%',
+      heroLabel: 'would permit autonomous purchasing under predefined conditions',
+      caption:
+        'Fashion buyers in the UK and US. The four positions reported sum to 94%. The release does not say what the other 6% answered, or whether respondents could pick only one.',
+      kind: 'scale',
+      domain: [0, 100],
+      ends: ['0%', '100%'],
+      rows: [
+        { label: 'Uncomfortable with AI buying for them', value: '53%', to: 53, series: 'neutral', detail: 'Uncomfortable allowing an AI assistant to make purchases on their behalf.' },
+        { label: 'Recommendations only', value: '20%', to: 20, series: 'neutral', detail: 'Would accept recommendations from AI but not autonomous purchases.' },
+        { label: 'Manual approval every time', value: '14%', to: 14, series: 'neutral', detail: 'Would require manual approval for every purchase.' },
+        { label: 'Autonomous under predefined conditions', value: '7%', to: 7, series: 'claude', detail: 'The release also describes this 7% as trusting AI to buy, and as buying without approval.' },
+      ],
+    },
+    {
+      id: 'gp',
+      tab: 'Global Payments: by category',
+      hero: '69%',
+      heroLabel: 'would let an AI agent spend up to $100 on groceries',
+      caption:
+        'Seven markets, one category at a time, each with a stated ceiling, so the same person can say yes to several. The release does not label these figures by country.',
+      kind: 'scale',
+      domain: [0, 100],
+      ends: ['0%', '100%'],
+      rows: [
+        { label: 'Groceries, up to $100', value: '69%', to: 69, series: 'claude', detail: 'Groceries and everyday essentials, up to $100.' },
+        { label: 'Clothing, up to $100', value: '69%', to: 69, series: 'neutral', detail: 'Clothing and footwear, up to $100.' },
+        { label: 'Luxury clothing, up to $100', value: '64%', to: 64, series: 'neutral', detail: 'Luxury clothing and footwear, up to $100.' },
+        { label: 'Electronics, up to $100', value: '58%', to: 58, series: 'neutral', detail: 'Electronics and gadgets, up to $100.' },
+        { label: 'Cinema tickets, up to $50', value: '82%', to: 82, series: 'neutral', detail: 'Up from 32% in the 2025 wave.' },
+        { label: 'Meal delivery, up to $50', value: '78%', to: 78, series: 'neutral', detail: 'Delivery or pickup. Up from 30% in the 2025 wave.' },
+        { label: 'Vouchers and gift cards, up to $50', value: '77%', to: 77, series: 'neutral', detail: 'Up from 28% in the 2025 wave.' },
+        { label: 'Subscriptions, up to $50', value: '69%', to: 69, series: 'neutral', detail: 'Subscriptions and memberships. Up from 27% in the 2025 wave.' },
+      ],
+    },
+  ],
+  note: 'Stated willingness in surveys; neither observes a transaction. Global Payments: 8,027 consumers in seven markets, May 2026. ACI and YouGov: 3,194 fashion buyers from a survey of 3,328 UK and US adults aged 18 to 65, June 2026. No figure means none in the public releases; neither full report was reviewed. Both companies sell payments technology.',
+  source: {
+    label: 'Global Payments, Agentic Commerce Report release',
+    href: 'https://investors.globalpayments.com/news-events/press-releases/detail/516/consumers-expect-ai-to-make-15-of-their-purchases-within',
+  },
+  alsoSource: {
+    label: 'ACI Worldwide and YouGov release, September 16, 2026',
+    href: 'https://investor.aciworldwide.com/news-releases/news-release-details/only-7-fashion-shoppers-trust-ai-buy-them-today-showing',
+  },
+}
+
 export const POST_CHARTS: Record<string, PostChart> = {
   'visa-agentic-commerce-benchmark-ai-shopping-failures': VISA_BENCHMARK,
   'ai-shopping-retailer-recommendation-gap-lightspeed-vaer': LIGHTSPEED_VAER_RETAILERS,
   'anthropic-project-swap-agentic-commerce-shopper-preferences': PROJECT_SWAP,
+  'agentic-commerce-adoption-definition-problem': ADOPTION_DEFINITIONS,
 }
 
 export function chartForPost(slug: string): PostChart | undefined {

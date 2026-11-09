@@ -13,7 +13,7 @@ function total(view: ChartView): number {
 /**
  * Interactive figure placed inside a blog post (see src/lib/post-charts.ts).
  * One view at a time: a headline figure, a caption, then a stacked bar with a
- * per-segment readout, a set of bars or a scale with a per-row readout. Every number is also rendered
+ * per-segment readout, a set of bars, a scale or a side-by-side matrix with a per-row readout. Every number is also rendered
  * as text in the "Show the numbers" table, so the figure works without color,
  * without JavaScript and for search and answer engines.
  */
@@ -41,7 +41,7 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
     const row = view.rows[r]
     const series = view.series[s]
     if (row && series) readout = `${row.label}, ${series.label.toLowerCase()}: ${row.values[s]}% ${view.of}`
-  } else if (active !== null && view.kind === 'scale') {
+  } else if (active !== null && (view.kind === 'scale' || view.kind === 'matrix')) {
     readout = view.rows[Number(active)]?.detail ?? null
   }
 
@@ -211,6 +211,51 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
             {readout ?? <span className="text-gray-500">Hover or tap a row for what it measures.</span>}
           </p>
         </>
+      ) : view.kind === 'matrix' ? (
+        <>
+          <div className="grid grid-cols-2 sm:grid-cols-[140px_minmax(0,1fr)_minmax(0,1fr)] gap-x-2 mb-2 text-[12px] font-medium text-gray-400">
+            <span className="hidden sm:block" />
+            {view.columns.map((c) => (
+              <span key={c}>{c}</span>
+            ))}
+          </div>
+          <div className="space-y-2" onMouseLeave={() => setActive(null)}>
+            {view.rows.map((row, i) => (
+              <button
+                key={row.label}
+                type="button"
+                aria-label={`${row.label}. ${row.cells
+                  .map((cell, c) => `${view.columns[c]}: ${cell ? `${cell.figure} ${cell.text}` : 'no figure'}`)
+                  .join('. ')}. ${row.detail}`}
+                onMouseEnter={() => setActive(`${i}`)}
+                onFocus={() => setActive(`${i}`)}
+                onBlur={() => setActive(null)}
+                onClick={() => setActive(`${i}`)}
+                className={`grid w-full grid-cols-2 sm:grid-cols-[140px_minmax(0,1fr)_minmax(0,1fr)] gap-x-2 gap-y-1.5 items-stretch text-left p-1.5 -mx-1.5 box-content rounded-lg border transition-opacity duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
+                  row.highlight ? 'border-brand-accent/60 bg-brand-accent/10' : 'border-transparent'
+                }`}
+                style={{ opacity: dim(`${i}`) }}
+              >
+                <span className="col-span-2 sm:col-span-1 self-center text-[13px] font-medium text-gray-200">{row.label}</span>
+                {row.cells.map((cell, c) =>
+                  cell ? (
+                    <span key={view.columns[c]} className="block rounded-md bg-white/[0.07] px-2.5 py-2">
+                      <span className="block text-[18px] leading-tight font-bold text-white tabular-nums">{cell.figure}</span>
+                      <span className="block text-[12px] leading-snug text-gray-300">{cell.text}</span>
+                    </span>
+                  ) : (
+                    <span key={view.columns[c]} className="flex items-center rounded-md border border-dashed border-white/[0.16] px-2.5 py-2 text-[12px] text-gray-500">
+                      No figure
+                    </span>
+                  )
+                )}
+              </button>
+            ))}
+          </div>
+          <p className="text-[13px] leading-snug text-gray-300 min-h-[3.5rem] sm:min-h-[2.5rem] mt-3 mb-0">
+            {readout ?? <span className="text-gray-500">Hover or tap a row for what it measures.</span>}
+          </p>
+        </>
       ) : (
         <div className="space-y-3">
           {view.rows.map((row) => (
@@ -239,13 +284,13 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
           {chart.views.map((v) => (
             <table key={v.id} className="w-full text-[13px] text-gray-300">
               <caption className="text-left text-[12px] font-mono uppercase tracking-[0.12em] text-gray-500 pb-2">{v.tab}</caption>
-              {v.kind === 'stackedRows' && (
+              {(v.kind === 'stackedRows' || v.kind === 'matrix') && (
                 <thead>
                   <tr>
                     <td />
-                    {v.series.map((s) => (
-                      <th key={s.label} scope="col" className="text-right font-normal text-gray-500 pb-1.5 pl-3">
-                        {s.label.replace(' retailers', '')}
+                    {(v.kind === 'stackedRows' ? v.series.map((s) => s.label.replace(' retailers', '')) : v.columns).map((label) => (
+                      <th key={label} scope="col" className="text-right font-normal text-gray-500 pb-1.5 pl-3">
+                        {label}
                       </th>
                     ))}
                   </tr>
@@ -269,6 +314,15 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
                           ))}
                         </tr>
                       ))
+                    : v.kind === 'matrix'
+                      ? v.rows.map((r) => (
+                          <tr key={r.label} className="border-t border-white/[0.06]">
+                            <th scope="row" className="text-left font-normal py-1.5 pr-3">{r.label}</th>
+                            {r.cells.map((cell, c) => (
+                              <td key={v.columns[c]} className="text-right py-1.5 pl-3">{cell ? `${cell.figure} ${cell.text}` : 'No figure'}</td>
+                            ))}
+                          </tr>
+                        ))
                     : v.kind === 'scale'
                       ? v.rows.map((r) => (
                           <tr key={r.label} className="border-t border-white/[0.06]">
@@ -289,10 +343,18 @@ export default function PostChart({ chart, slug }: { chart: PostChartData; slug:
       </details>
 
       <figcaption className="mt-5 text-[12px] leading-relaxed text-gray-500">
-        {chart.note} Source:{' '}
+        {chart.note} {chart.alsoSource ? 'Sources' : 'Source'}:{' '}
         <a href={chart.source.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 underline hover:text-white">
           {chart.source.label}
         </a>
+        {chart.alsoSource && (
+          <>
+            {'; '}
+            <a href={chart.alsoSource.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 underline hover:text-white">
+              {chart.alsoSource.label}
+            </a>
+          </>
+        )}
         .
       </figcaption>
     </figure>

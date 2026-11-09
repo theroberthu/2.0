@@ -19,17 +19,13 @@ risk), High (clear near-term value), Medium, Low.
 - **Interactive charts where the data earns one.** Apply the "Interactive
   charts" standard in [01_EDITORIAL_STYLE_GUIDE.md](01_EDITORIAL_STYLE_GUIDE.md)
   one article per release, re-verifying every figure against the primary
-  source. The Lightspeed / Vaer retailer chart shipped in Release 1.85 and the
-  Project Swap chart in Release 1.86. Ranked candidates remaining (data-density
-  audit, 2026-11-08):
-  1. `agentic-commerce-adoption-definition-problem`: the autonomy ladder (53%
-     uncomfortable, 20% recommendations only, 14% approve every purchase, 7%
-     autonomous) beside the 69% spend-limit figures, showing that the two
-     instruments measure different things.
-  2. `google-ai-overviews-branded-search-brand-representation`: AI Overview
+  source. The Lightspeed / Vaer retailer chart shipped in Release 1.85, the
+  Project Swap chart in Release 1.86 and the adoption chart in Release 1.87.
+  Ranked candidates remaining (data-density audit, 2026-11-08):
+  1. `google-ai-overviews-branded-search-brand-representation`: AI Overview
      rate on branded vs non-branded keywords, July vs September, and the
      daily swings, if the source publishes the daily series.
-  3. `shopify-ai-shopping-traffic-orders-catalog-data`: the conversion
+  2. `shopify-ai-shopping-traffic-orders-catalog-data`: the conversion
      comparison as reported three ways (about 50%, about 80%, 64%). Small;
      possibly a stat row rather than a chart.
   Held until their legacy sourcing pass (Tier 4) is done:

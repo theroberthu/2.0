@@ -6,6 +6,58 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.87 - Interactive chart and wording corrections in the adoption article (2026-11-09)
+
+**What changed.** The adoption article
+(`/blog/agentic-commerce-adoption-definition-problem`) gets an interactive
+figure at the end of its six-level section, titled "Two numbers, six levels:
+what each adoption survey reported". Three views: the six levels of delegation
+as a grid with each company's figures in its own column and "No figure" where a
+release has none; ACI's overall stance (53% uncomfortable, 20% recommendations
+only, 14% manual approval, 7% autonomous under predefined conditions); and
+Global Payments by category at the $100 and $50 caps. Hovering or tapping a row
+explains what it measures. "Show the numbers" renders all three as tables in
+the server HTML.
+
+**How it works.** `PostChart` gains a `matrix` view kind for rows of labeled
+cells, with empty cells drawn as "No figure", and an optional `alsoSource` so a
+figure can cite two releases. The 69% and 7% never share an axis: the
+instruments asked different questions of different people, so they sit side by
+side in a highlighted row with a caption saying they are not comparable.
+
+**Corrections.** Five wording changes in the article, approved by Robert Hu.
+"ACI asks respondents to choose one posture" is now "ACI reports four
+positions", and the sum to 94 is described as suggesting a single choice,
+"though the release does not say so". "Neither study measures" (twice) and "Two
+of six levels are unmeasured" now refer to what the public releases report,
+because both full reports sit behind lead-capture forms and were not reviewed.
+Applied with `scripts/correct-agentic-adoption-definition.mjs`; the content
+file and insert script match.
+
+**Source handling.** All figures re-verified. Global Payments from its own
+release. ACI's investor site blocks automated requests and that was not worked
+around: the figures were checked against the Business Wire copy of the release
+on Finviz and Webull, and the chart links to ACI's original. The note states
+that both are stated-willingness surveys, that neither observes a transaction
+and that both companies sell payments technology.
+
+**Verified.** Local production build at 1440 and 375: placement, three tables,
+two source links, hover and tap readouts, no overflow, no layout shift across
+rows. The Visa, Lightspeed and Project Swap charts are unaffected. Real keyboard
+Tab navigation was not tested because the preview pane did not have window
+focus, and the matrix focus handlers were not exercised separately.
+
+**Impact.** The article's central claim, that the two numbers measure different
+things, can now be seen rather than only read, and its wording no longer goes
+further than the public releases.
+
+**Follow-ups.** Three phrases carry the same two inferences and were outside
+the approved edits: the H2 "Six levels, and the two nobody measured", "which
+single description a consumer picks" and "two of them are barely measured" in
+the excerpt. Decide whether to soften them.
+
+---
+
 ## Release 1.86 - Interactive chart in the Project Swap article (2026-11-08)
 
 **What changed.** The Project Swap article
