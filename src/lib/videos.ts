@@ -74,6 +74,298 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'dhl-stretch-robot-warehouse-handoff',
+    youtubeId: 'e4AdP-edmnQ',
+    youtubeTitle: 'DHL’s $15 Million Robot Bet Is Bigger Than the Arm',
+    h1: 'DHL’s $15 Million Robot Bet Is Bigger Than the Arm',
+    seoTitle: 'DHL’s Stretch Robots: Why the Handoff Decides the Value',
+    metaDescription:
+      'DHL’s $15 million Stretch program began with unloading boxes. What the robot does, what happens after the handoff and what the numbers cannot show.',
+    dek: 'A robot lifts a box. The more interesting business story starts when it lets go.',
+    uploadDate: '2026-11-08T17:00:20-08:00',
+    duration: 'PT4M7S',
+    durationLabel: '4 min 7 sec',
+    topic: 'Delivery and logistics',
+    subject: 'DHL warehouse robots',
+    thumbnail: '/images/videos/dhl-stretch-robot-warehouse-handoff.jpg',
+    thumbnailAlt: 'Video thumbnail: a taped cardboard box on a roller conveyor in a long warehouse, with the words DHL’s Robot Bet and Follow the Box.',
+    sections: [
+      {
+        paragraphs: [
+          'Watch a box leave a trailer. The robot grips it, lifts it and sends it onto a conveyor. It is a neat little victory for automation, and getting the box out of the trailer is only the first problem. The rest of the building still has work to do.',
+          'That is what makes DHL’s robot story more interesting than an arm that can lift things.',
+        ],
+      },
+      {
+        heading: 'A $15 million, multi-year program',
+        paragraphs: [
+          'In January 2022, DHL Supply Chain announced a $15 million investment in robotics from Boston Dynamics: a multi-year agreement beginning with Stretch, in what the companies called the first commercial purchase of the robot. That figure covered a program. There was no $15 million price tag on one machine, and the announcement did not say how many robots the money would buy.',
+        ],
+      },
+      {
+        heading: 'A wonderfully unglamorous job',
+        paragraphs: [
+          'The first task was truck unloading. Imagine your shift starts with a wall of cartons. High ones, low ones, another row behind them. Every one has to come out before the trailer is empty. Do that once and it is a lift. Do it through a shift and it becomes a very different job. Stretch was built to take on that repetitive handling.',
+        ],
+      },
+      {
+        heading: 'The gripper and the handoff',
+        paragraphs: [
+          'In Boston Dynamics’ film from January 2023, look at the business end of the arm. Suction cups form the gripper. The system takes one box at a time and places it on the conveyor. From there, the film explains, the carton travels through scan tunnels and into DHL’s system.',
+          'Pause on that handoff. The robot has finished its movement. The warehouse has only started processing the box.',
+        ],
+      },
+      {
+        heading: 'When the next step cannot keep up',
+        paragraphs: [
+          'Now imagine the first step gets faster while the next step stays the same. Cartons pile up between them. The arm is having a great day. Your delivery schedule might disagree.',
+          'That is an illustrative scenario, not evidence of a failure at any DHL site. It is why an impressive pick rate is only the opening question. How much useful work gets all the way through? The same question follows Amazon when it has [a million robots to direct](/videos/amazon-robots-deepfleet-warehouse-traffic).',
+        ],
+      },
+      {
+        heading: 'Up to 700 cases per hour',
+        paragraphs: [
+          'In May 2025, DHL reported case unloading rates of up to 700 cases per hour. Up to is doing real work in that sentence. It is a reported result, not a promise that every trailer will run at that speed. The same announcement described end-to-end automation combining conveyors and palletizers in a UK project. The arm was becoming part of a longer process.',
+        ],
+      },
+      {
+        heading: 'The people around the machine',
+        paragraphs: [
+          'There is a human story here too. In the film, an operator positions the machine, and employees describe heavy boxes and hot or cold trailers. The attraction is easy to understand: let the machine repeat the lifting while people operate and support the process. Those accounts come from a company case study. They do not tell us what happened to every job across DHL.',
+        ],
+      },
+      {
+        heading: 'The software between the machines',
+        paragraphs: [
+          'Then comes the less photogenic part of the story: getting different technologies to work together. In March 2026, DHL Supply Chain described SVT Robotics’ SOFTBOT integration platform as live at 30 sites, with more than 100 planned over the next three years. That is a separate software rollout, not a count of Stretch installations.',
+          'One useful machine is a start. Making it work in the next building, with that building’s systems and routines, is another job.',
+        ],
+      },
+      {
+        heading: 'The wider automation budget',
+        paragraphs: [
+          'The money behind that wider effort is substantial. In May 2025, DHL said it had invested more than €1 billion over the past three years in automation in its contract logistics division. That is a broad budget, and not all of it went to this robot.',
+          'The same announcement was a memorandum of understanding that, in the companies’ words, “paves the way” for more than 1,000 additional units. A plan is different from a completed fleet. None of these figures gives the payback period for one installation. For that, we would need its full costs and operating results. They do show the size of the ambition.',
+        ],
+      },
+      {
+        heading: 'Back to our box',
+        paragraphs: [
+          'Go back to the box. The interesting moment is when it leaves the robot and joins everything else.',
+          'My takeaway is this: buy a better flow of work, not just a faster movement. The arm gets the attention. The handoff decides what that movement is worth.',
+        ],
+      },
+    ],
+    takeaways: [
+      'The $15 million announced in January 2022 was a multi-year robotics program beginning with Stretch, not the price of one robot.',
+      'Stretch grips one box at a time with suction cups and places it on a conveyor. The carton then moves through scanning and into the warehouse system.',
+      'Up to 700 cases per hour is DHL’s reported 2025 result, not a speed guarantee for every trailer.',
+      'The 30 live sites and more than 100 planned belong to a separate software integration platform. They are not Stretch installation counts.',
+      'More than €1 billion is three years of contract logistics automation spending, and the more than 1,000 additional robots come from a memorandum of understanding. Neither gives a payback period.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Follow this box' },
+      { time: '0:19', label: 'The $15 million programme' },
+      { time: '0:39', label: 'A wonderfully unglamorous job' },
+      { time: '1:05', label: 'The gripper and the handoff' },
+      { time: '1:29', label: 'When the next step cannot keep up' },
+      { time: '1:50', label: 'Up to 700 cases per hour' },
+      { time: '2:16', label: 'The people around the machine' },
+      { time: '2:41', label: 'The software between the machines' },
+      { time: '3:08', label: 'The wider automation budget' },
+      { time: '3:42', label: 'Back to our box' },
+    ],
+    sources: [
+      {
+        label: 'DHL Supply Chain to invest $15 million to further automate warehousing in North America via Boston Dynamics collaboration (Boston Dynamics)',
+        date: 'January 26, 2022',
+        href: 'https://bostondynamics.com/news/dhl-supply-chain-to-invest-15-million-to-further-automate-warehousing-in-north-america-via-boston-dynamics-collaboration/',
+      },
+      {
+        label: 'DHL Group signs MoU with Boston Dynamics and accelerates cross-business automation strategy (DHL Group)',
+        date: 'May 13, 2025',
+        href: 'https://group.dhl.com/en/media-relations/press-releases/2025/dhl-group-signs-mou-with-boston-dynamics-and-accelerates-cross-business-automation-strategy.html',
+      },
+      {
+        label: 'DHL Group Signs MOU for 1,000-Robot Deployment (Boston Dynamics)',
+        date: 'May 13, 2025',
+        href: 'https://bostondynamics.com/news/dhl-signs-mou-for-additional-1000-robot-deployment/',
+      },
+      {
+        label: 'Stretch at DHL (Boston Dynamics case study)',
+        date: 'Checked November 9, 2026',
+        href: 'https://bostondynamics.com/case-studies/stretch-at-dhl/',
+      },
+      {
+        label: 'Stretch at DHL: Automated Trailer Unloading (Boston Dynamics film)',
+        date: 'January 31, 2023',
+        href: 'https://www.youtube.com/watch?v=qgGH6Vk8nY8',
+      },
+      {
+        label: 'DHL Supply Chain accelerates automation deployments with SVT Robotics SOFTBOT platform (DHL Group, PDF)',
+        date: 'March 2026',
+        href: 'https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/press-releases/2026/pr-svt-robotics-20260317.pdf',
+      },
+      {
+        label: 'DHL Supply Chain accelerates automation deployments with SVT Robotics SOFTBOT platform (Robotics 24/7)',
+        date: 'March 30, 2026',
+        href: 'https://www.robotics247.com/article/dhl-supply-chain-accelerates-automation-deployments-with-svt-robotics-softbot-platform',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, plus published copies of two DHL announcements. The case study and film are company accounts, not independent tests. The $15 million, the €1 billion and the site counts measure different things, and none gives the payback of an installation.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'A faster step rarely helps when the constraint sits in the work around it.',
+      },
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A reported gain is a starting point. The test is whether the result shows up in the operation.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Brief, muted excerpts and frame grabs from Boston Dynamics’ official January 2023 Stretch at DHL film are used only for direct analysis of the gripper, conveyor handoff and operator setup; © Boston Dynamics / DHL Supply Chain. This is archive company footage, not an independent test. Illustrative warehouse, manual-handling and parcel footage is by Tiger Lily, Tima Miroshnichenko and Erkan Avanoğlu on Pexels; these stock scenes are not DHL sites. Original diagrams are hypothetical and do not depict a measured DHL bottleneck or incident. Music: “Cylinder Eight” by Chris Zabriskie, from Cylinders, CC BY 4.0, edited and mixed. The thumbnail is an original conceptual AI illustration. Independent commentary; no endorsement implied.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'DHL’s $15 Million Robot Bet Is Bigger Than the Arm',
+      description:
+        'A robot lifts a box. The more interesting story starts when it lets go. What DHL’s Stretch program shows about handoffs, and what its numbers cannot.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'duolingo-streak-revival-comeback',
+    youtubeId: 'UwxP0CBKbUc',
+    youtubeTitle: 'Why Duolingo Gave 15.4 Million Learners a Second Chance',
+    h1: 'Why Duolingo Gave 15.4 Million Learners a Second Chance',
+    seoTitle: 'Duolingo Streak Revival: Why the Way Back Is Good Design',
+    metaDescription:
+      'Duolingo let learners restore their longest streak with three lessons, and 15.4 million did. Why the way back matters and what that count cannot show.',
+    dek: 'Lose the streak, not the language. Duolingo’s one-time comeback asked for three lessons.',
+    uploadDate: '2026-11-07T17:00:32-08:00',
+    duration: 'PT4M24S',
+    durationLabel: '4 min 24 sec',
+    topic: 'AI in practice',
+    subject: 'Duolingo streaks',
+    thumbnail: '/images/videos/duolingo-streak-revival-comeback.jpg',
+    thumbnailAlt: 'Video thumbnail: a phone showing a glowing green path to a flame, breaking out of torn calendar pages, with the words Duolingo, 15.4 Million Second Chances.',
+    sections: [
+      {
+        paragraphs: [
+          'Imagine losing a language learning streak you spent months building. Your Spanish has not suddenly disappeared. The little number has. But that number might have been the thing getting you to open the app.',
+        ],
+      },
+      {
+        heading: 'A second chance',
+        paragraphs: [
+          'In June 2026, Duolingo ran a one-time event that let eligible learners restore their longest-ever streak by opting in and completing three lessons. The company says 15.4 million learners revived their streaks, including nearly 8 million who had no active streak when the event began.',
+          'A language app famous for keeping you coming back had found another problem to solve: what happens after you stop?',
+        ],
+      },
+      {
+        heading: 'Why the celebration matters',
+        paragraphs: [
+          'Before the comeback, look at the celebration. In an older Duolingo example, three days earns a tiny owl, a spin and a screen full of orange. It is a lot of ceremony for a small daily lesson. The design turns an otherwise invisible action into something you can see and feel, and it gives you another reason to return: protect your little collection of days.',
+          'Duolingo has written openly about designing the streak around habit and loss aversion. Consider the difference between doing one more lesson and losing a streak you spent months building. The lesson is the same. The decision feels different. The owl has somehow become the most demanding appointment in your calendar.',
+        ],
+      },
+      {
+        heading: 'What happens after you stop?',
+        paragraphs: [
+          'That creates a delicate problem. The number can pull you back tomorrow. Once it is gone, you might be staring at a fresh start you did not want. Duolingo itself says breaking a streak can feel demotivating, and its system includes flexibility, such as streak freezes, so a pause does not have to become an exit.',
+          'The June revival offered a route back after the break, and it is worth noticing what the offer asked for. Three lessons. In my reading, the clever part is that returning was itself the task. You did some learning to reclaim the number, and the comeback had a small, concrete finish line.',
+          'Still, restoring a streak is not proof that someone stayed for months. The count tells us who took the offer, not their entire future. Duolingo’s letter gives participation and no retention figure for those learners.',
+        ],
+      },
+      {
+        heading: 'The business behind the habit',
+        paragraphs: [
+          'Put that small return visit next to the scale of the business. Duolingo reported about $298.5 million in revenue in the second quarter of 2026, and about $33.2 million in net income. Revenue is not profit, and both are company-wide results. We cannot assign those dollars to an owl animation or one comeback campaign.',
+          'The business question is still clear. An ongoing service needs an ongoing reason to use it, whether that is a streak or [a Monday playlist](/videos/spotify-taste-profile-recommendations). And after someone falls out of the routine, making the next visit feel possible may matter as much as making the last one feel rewarding.',
+        ],
+      },
+      {
+        heading: 'Coming back to do what?',
+        paragraphs: [
+          'A streak records consistency. It cannot tell us how a conversation will go when someone asks a question we did not prepare for.',
+          'In Duolingo’s September 2024 Video Call demonstration, a learner talks to Lily, an animated AI character. The interface presents a conversation partner rather than another row of answer choices. That is a company demonstration, not a test of the product or a guarantee of fluency.',
+          'The 2026 business decision is who gets access. Video Call was offered to Duolingo Max subscribers when it was announced. In its second quarter letter, Duolingo said most new Super Duolingo subscribers now have access, and that it expected to extend access to existing Super subscribers later in the year. The bet, as I read it, is that more useful practice gives people another reason to return. A purple-haired conversation partner is an unusual place to rehearse small talk. At least you do not also have to split the restaurant bill.',
+        ],
+      },
+      {
+        heading: 'Design the way back',
+        paragraphs: [
+          'Return to that lost streak. A reward can make the next visit attractive. A forgiving return path can make it feel achievable. The product still has to deliver something worth returning for. The celebration, the comeback and the useful practice each have a job to do.',
+          'Next time an app celebrates a tiny action, ask what it is encouraging you to do tomorrow. And if you stop, how does it help you start again?',
+        ],
+      },
+    ],
+    takeaways: [
+      'Streak Revival was a one-time June 2026 event: eligible learners opted in and completed three lessons to restore their longest-ever streak.',
+      'Duolingo reports 15.4 million revived streaks, including nearly 8 million learners with no active streak when it began.',
+      'That is participation. Duolingo’s letter gives no retention figure for those learners, and a restored streak is not proof of better learning.',
+      'Duolingo’s roughly $298.5 million in Q2 2026 revenue and $33.2 million in net income are company-wide results, not earnings from an animation or one campaign.',
+      'Video Call began with Max subscribers. Most new Super subscribers now have access, and existing Super subscribers were expected to follow later in 2026.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The little number disappears' },
+      { time: '0:12', label: 'A second chance' },
+      { time: '0:32', label: 'Why the celebration matters' },
+      { time: '1:18', label: 'What happens after you stop?' },
+      { time: '2:04', label: 'The business behind the habit' },
+      { time: '2:45', label: 'Coming back to do what?' },
+      { time: '3:42', label: 'Design the way back' },
+    ],
+    sources: [
+      {
+        label: 'Duolingo Q2 2026 shareholder letter (SEC filing)',
+        date: 'August 5, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/1562088/000162828026053299/q2fy26duolingo6-30x26share.htm',
+      },
+      {
+        label: 'The Duolingo Streak Uses Habit Research to Keep You Motivated (Duolingo Blog)',
+        date: 'January 31, 2022',
+        href: 'https://blog.duolingo.com/how-duolingo-streak-builds-habit/',
+      },
+      {
+        label: 'What is a streak? (Duolingo Help Center)',
+        date: 'Checked November 9, 2026',
+        href: 'https://www.duolingo.com/help/what-is-a-streak',
+      },
+      {
+        label: 'Duolingo’s Video Call Offers Realistic Conversation Practice (Duolingo Blog)',
+        date: 'September 24, 2024',
+        href: 'https://blog.duolingo.com/video-call/',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. Revenue and net income are separate company-wide measures, and neither is attributed to one animation or campaign. The 15.4 million is a company-reported participation count, not a retention or learning result. The Video Call material is a company demonstration, and availability was still rolling out.',
+    related: [
+      {
+        href: '/blog/agentic-commerce-adoption-definition-problem',
+        title: 'Agentic Commerce Has an Adoption Definition Problem',
+        note: 'A headline count depends on what was actually measured. Taking an offer is not the same as staying.',
+      },
+      {
+        href: '/blog/retailers-ai-traffic-customer-ownership',
+        title: 'Retailers Want AI Shopping Traffic. They Do Not Want to Lose the Customer.',
+        note: 'Who owns the repeat relationship, and what gives a customer a reason to come back.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Brief Duolingo archive excerpts and a frame grab are directly analyzed with original commentary: a streak celebration from 2022 and a Video Call company demonstration from September 2024. These are not his own product test or a guarantee of fluency; © Duolingo. Illustrative study footage is by Polina Tankilevitch and cottonbro studio on Pexels. The opening and diagrams are original illustrations, not a documented customer case. Music: “Cylinder Eight” by Chris Zabriskie, from Cylinders, CC BY 4.0, edited and mixed. The thumbnail is a conceptual AI illustration. Independent commentary; no endorsement implied.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Duolingo Gave 15.4 Million Learners a Second Chance',
+      description:
+        'Lose the streak, not the language. What Duolingo’s three-lesson comeback shows about designing the way back, and what the count cannot prove.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'spotify-taste-profile-recommendations',
     youtubeId: '9kcOLozDtgU',
     youtubeTitle: 'Spotify Thinks It Knows You. What If It’s Wrong?',
@@ -3900,7 +4192,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'spotify-taste-profile-recommendations'
+export const FEATURED_VIDEO_SLUG: string | null = 'dhl-stretch-robot-warehouse-handoff'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -3949,6 +4241,12 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: '26owiRnjwQY', title: 'This Robot’s Hand Is Made of Suction Cups', uploadDate: '2026-11-08T17:00:19-08:00', durationLabel: '0:38', thumbnail: '/images/shorts/26owiRnjwQY.jpg', related: ['dhl-stretch-robot-warehouse-handoff'] },
+  { youtubeId: 'tqyCURWJ8II', title: 'DHL’s Robot Moves the Box. What Happens Next?', uploadDate: '2026-11-08T10:00:32-08:00', durationLabel: '0:45', thumbnail: '/images/shorts/tqyCURWJ8II.jpg', related: ['dhl-stretch-robot-warehouse-handoff'] },
+  { youtubeId: 'KPvBegiLBUM', title: 'Apple Made the Top 3 in All Four AI Rankings. Never First.', uploadDate: '2026-11-08T07:00:55-08:00', durationLabel: '0:47', thumbnail: '/images/shorts/KPvBegiLBUM.jpg' },
+  { youtubeId: '8iFZfW9N_pI', title: 'Why Duolingo Is Moving AI Calls Beyond Its Top Tier', uploadDate: '2026-11-07T18:00:05-08:00', durationLabel: '0:57', thumbnail: '/images/shorts/8iFZfW9N_pI.jpg', related: ['duolingo-streak-revival-comeback'] },
+  { youtubeId: 'jRSIZ4NMo9M', title: 'AI Ranked Roborock First. The Models Still Split.', uploadDate: '2026-11-07T12:11:29-08:00', durationLabel: '0:59', thumbnail: '/images/shorts/jRSIZ4NMo9M.jpg' },
+  { youtubeId: 'VzL2gPE2jsg', title: 'Duolingo’s Streak Comeback Had One Catch: 3 Lessons', uploadDate: '2026-11-07T10:00:20-08:00', durationLabel: '0:54', thumbnail: '/images/shorts/VzL2gPE2jsg.jpg', related: ['duolingo-streak-revival-comeback'] },
   { youtubeId: 'O9lxTgawfvQ', title: 'Spotify’s Monday Playlist Passed 100 Billion Plays', uploadDate: '2026-11-06T18:00:03-08:00', durationLabel: '0:56', thumbnail: '/images/shorts/O9lxTgawfvQ.jpg', related: ['spotify-taste-profile-recommendations'] },
   { youtubeId: 'kOQpEoSL6hk', title: 'AI Mentioned Brooks Every Time. First Place Was Split.', uploadDate: '2026-11-06T16:06:27-08:00', durationLabel: '0:49', thumbnail: '/images/shorts/kOQpEoSL6hk.jpg' },
   { youtubeId: 'LyuNlrC8IHk', title: 'Spotify Got Your Taste Wrong? Tell It.', uploadDate: '2026-11-06T10:00:38-08:00', durationLabel: '0:54', thumbnail: '/images/shorts/LyuNlrC8IHk.jpg', related: ['spotify-taste-profile-recommendations'] },

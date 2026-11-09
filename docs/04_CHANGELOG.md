@@ -6,6 +6,64 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.88 - DHL and Duolingo documentary pages and six new Shorts (2026-11-09)
+
+**What changed.** Two new documentaries from the daily series get companion
+pages, bringing `/videos` to 28 documentaries:
+
+- `/videos/dhl-stretch-robot-warehouse-handoff`, "DHL's $15 Million Robot Bet Is
+  Bigger Than the Arm" (https://youtu.be/e4AdP-edmnQ, uploaded
+  2026-11-08T17:00:20-08:00, PT4M7S), Delivery and logistics, about 715 words.
+- `/videos/duolingo-streak-revival-comeback`, "Why Duolingo Gave 15.4 Million
+  Learners a Second Chance" (https://youtu.be/UwxP0CBKbUc, uploaded
+  2026-11-07T17:00:32-08:00, PT4M24S), AI in practice, about 720 words.
+
+Each page is written against the narration, with takeaways, chapters from the
+description, the description's sources and current-standard related research.
+The homepage Featured Video now points at DHL. Six Shorts from November 7 and 8
+join the top of `SHORTS` (61 in total): two relate to DHL, two to Duolingo, and
+the Apple and Roborock AI ranking Shorts have no related page. No `POST_VIDEOS`
+pairings were added.
+
+**Sourcing and boundaries.** DHL: $15 million framed as a multi-year program
+beginning with Stretch, not one robot's price (January 26, 2022). Up to 700
+cases per hour, conveyors and palletizers in a UK project, and more than EUR 1
+billion over three years in contract logistics automation, all from the May
+13, 2025 release. The page calls the more than 1,000 additional units a
+memorandum of understanding that "paves the way", which is more exact than the
+narration's "plan". SOFTBOT at 30 sites with more than 100 planned over three
+years is framed as a separate software rollout. The film's staffing accounts
+are labelled as a company case study, and no payback is asserted. DHL's own
+site timed out on automated requests and that was not worked around: the May
+2025 figures were checked against Boston Dynamics' copy of the release and the
+SOFTBOT figures against the Robotics 24/7 copy. Both DHL links and both copies
+are listed.
+
+Duolingo: Streak Revival as a one-time June event for eligible learners, 15.4
+million revived streaks and nearly 8 million with no active streak at the
+start, $298.5 million revenue and $33.2 million net income as company-wide
+Q2 2026 results, all from the shareholder letter (webcast August 5, 2026). The
+letter gives no retention figure for those learners and the page says so. Video
+Call follows the letter's wording: most new Super subscribers have access, and
+existing Super subscribers were expected to follow later in the year.
+
+**Verified.** Local production build: both pages return 200 with one H1, a
+self-canonical, VideoObject and breadcrumb data, and no horizontal scroll at
+375px. All eight images load, and `/videos`, the homepage and the sitemap carry
+the new entries.
+
+**Impact.** Two more recent uploads get permanent, searchable pages, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** Run Test Live URL and Request Indexing on both new pages. On
+2026-11-09 seven older video pages that were not indexed went through that
+process. Two of them (Bosch, Domino's) showed an unrelated betting domain as
+Google's selected canonical from crawls on October 14 and 15, while today's
+live test reads the correct self-canonical on Bosch. Re-inspect both after the
+recrawl and investigate if the domain is still named.
+
+---
+
 ## Release 1.87 - Interactive chart and wording corrections in the adoption article (2026-11-09)
 
 **What changed.** The adoption article

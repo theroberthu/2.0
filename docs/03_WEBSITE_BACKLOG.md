@@ -61,6 +61,11 @@ risk), High (clear near-term value), Medium, Low.
 
 ## Medium
 
+- **Fix the homepage Featured Video card at about 1024px wide.** The image
+  column grows with the row height and squeezes the text column, so the card
+  clips its description and "Watch the video" link. Fine at 768 and at 1120 and
+  above. Seen with both the DHL and Spotify copy. Likely fix: `minmax(0, ...)`
+  columns in `FeaturedVideo.tsx`.
 - **Reconcile or retire the legacy authoring docs.** `BLOG_STANDARDS.md` and
   `NEWS_TO_BLOG.md` at the repo root are consulting-era and are not referenced
   by `CLAUDE.md`. They still instruct linking to service pages, ending posts
