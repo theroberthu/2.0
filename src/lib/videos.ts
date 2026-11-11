@@ -74,6 +74,273 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'boston-dynamics-atlas-humanoid-twist',
+    youtubeId: 'JkKweShtJfk',
+    youtubeTitle: 'Why Atlas Moves Like That',
+    h1: 'Why Atlas Moves Like That',
+    seoTitle: 'Boston Dynamics’ Electric Atlas: Why the Twist Matters',
+    metaDescription:
+      'Electric Atlas turns in ways a person cannot. Why that design choice matters, what the engine cover demo shows and what one clip cannot prove.',
+    dek: 'A human shape does not have to move like a human. The harder test is where the part lands.',
+    uploadDate: '2026-11-10T16:00:33-08:00',
+    duration: 'PT2M50S',
+    durationLabel: '2 min 50 sec',
+    topic: 'Manufacturing',
+    subject: 'Boston Dynamics Atlas',
+    thumbnail: '/images/videos/boston-dynamics-atlas-humanoid-twist.jpg',
+    thumbnailAlt: 'Video thumbnail: Boston Dynamics’ electric Atlas robot, numbered 001, with a yellow arrow circling its waist and the words Why This Twist?',
+    sections: [
+      {
+        paragraphs: [
+          'Watch the legs. Atlas gets up from the floor, twists around and faces the camera. It has a human shape, and it is moving in a very different way.',
+          'That strange turn is the point. Getting off the floor is the easy part of this story, though. What happens when those joints have to put something in exactly the right place?',
+        ],
+      },
+      {
+        heading: 'From hydraulic to electric',
+        paragraphs: [
+          'In April 2024, Boston Dynamics retired its hydraulic Atlas and unveiled an electric successor. The old machine could already lift and maneuver heavy, irregular objects, and the company described the new one as stronger, with a broader range of motion than any previous generation. This was a change of platform with years of research behind it, not a robot that appeared from nowhere.',
+        ],
+      },
+      {
+        heading: 'A human shape with different joints',
+        paragraphs: [
+          'Freeze the robot halfway through that turn. Its body and legs point in different directions. Boston Dynamics says it is equipping Atlas to move in the most efficient way to complete a task, “rather than being constrained by a human range of motion.”',
+          'That raises an interesting question for any machine built for spaces made around people. Which parts of being human are useful, and which are just constraints? Doors and workstations can make a human-sized body useful. Our particular way of turning does not have to come with it. That is my reading of the design choice, not a claim that every unusual movement saves time. The joints themselves are becoming a business, as [Schaeffler’s humanoid bet](/videos/schaeffler-humanoid-robot-actuators) shows.',
+        ],
+      },
+      {
+        heading: 'Now watch the engine cover',
+        paragraphs: [
+          'In a separate October 2024 demonstration, Atlas moves engine covers between supplier containers and a mobile sequencing dolly. The job looks simple until the part has to meet the opening. A gripper can reach the destination and still leave the object at the wrong angle.',
+          'Moving the arm is one problem. Knowing where the object actually ended up is another.',
+        ],
+      },
+      {
+        heading: 'From a striking movement to a task',
+        paragraphs: [
+          'Boston Dynamics says there are no prescribed or teleoperated movements in that demonstration. Atlas generates its motions autonomously, using a vision model to locate fixtures and bins and a combination of vision, force and proprioceptive sensors, its sense of its own body. The film also shows it reacting when fixtures move and when an action fails, such as a cover that does not go in.',
+          'That is the important shift in what we are watching: from a striking movement to adjusting during a task.',
+        ],
+      },
+      {
+        heading: 'What one clip cannot show',
+        paragraphs: [
+          'One successful clip cannot tell us the cost per completed job, how often people intervene or how the machine holds up over months. Those are questions for deployment evidence, and they do not disappear because the robot has impressive joints.',
+        ],
+      },
+      {
+        heading: 'Same name, different robot',
+        paragraphs: [
+          'In January 2026, Boston Dynamics unveiled the product version of Atlas at CES. The announcement described three ways to control it: autonomous mode, teleoperation and a tablet steering interface. It also said all 2026 deployments were already committed, with fleets going to Hyundai’s Robotics Metaplant Application Center and to Google DeepMind.',
+          'So a familiar robot name does not tell us how a particular clip was controlled. The model and the date of the demonstration still matter. The 2024 footage shows the electric prototype. The 2026 announcement describes a product.',
+        ],
+      },
+      {
+        heading: 'Back to the twist',
+        paragraphs: [
+          'Atlas can move in ways people cannot. The next test is making that freedom serve a repeatable job.',
+          'My takeaway: watch the twist, then watch where the part lands. The first shows what the machine can do. The second is closer to what a factory would pay for.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Boston Dynamics retired hydraulic Atlas in April 2024 and designed the electric version to move beyond a human range of motion, not to copy one.',
+      'A human-sized body can suit spaces built for people. Moving exactly like a person does not have to come with it.',
+      'In the October 2024 engine cover demonstration, Boston Dynamics says every motion was generated autonomously, with vision, force and proprioceptive sensing used to react to moved fixtures and failed actions.',
+      'The January 2026 product version can run autonomously, by teleoperation or by tablet, so the robot’s name alone does not tell you how a clip was controlled.',
+      'No single demonstration shows cost per job, intervention rates or reliability over months. Those need deployment evidence.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Watch the legs' },
+      { time: '0:27', label: 'From hydraulic to electric' },
+      { time: '0:42', label: 'Freeze the turn' },
+      { time: '1:11', label: 'The engine cover' },
+      { time: '1:34', label: 'Adjusting during a task' },
+      { time: '1:57', label: 'What one clip cannot show' },
+      { time: '2:15', label: 'The product version' },
+      { time: '2:36', label: 'Back to the twist' },
+    ],
+    sources: [
+      {
+        label: 'An Electric New Era for Atlas (Boston Dynamics)',
+        date: 'April 17, 2024',
+        href: 'https://bostondynamics.com/blog/electric-new-era-for-atlas/',
+      },
+      {
+        label: 'Atlas Goes Hands On (Boston Dynamics)',
+        date: 'October 30, 2024',
+        href: 'https://bostondynamics.com/video/atlas-goes-hands-on',
+      },
+      {
+        label: 'Boston Dynamics Unveils New Atlas Robot to Revolutionize Industry (Boston Dynamics)',
+        date: 'January 5, 2026',
+        href: 'https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/',
+      },
+    ],
+    sourcesNote:
+      'The three Boston Dynamics sources cited in the video. They are company announcements and demonstrations, not independent tests, and none reports cost per job, intervention rates or long-run reliability.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A demonstration is a starting point. The test is whether the result holds up in operation.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'A capable machine still depends on the work designed around it.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage: selected 2024 archival excerpts from Boston Dynamics, used as edited commentary excerpts and analytical frame grabs with the source audio removed. Music: “Machina” by Scott Buckley, CC BY 4.0. Independent analysis; not an endorsement or a manufacturer partnership.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Atlas Moves Like That',
+      description:
+        'A human shape does not have to move like a human. What Boston Dynamics’ electric Atlas shows about range of motion, where the part lands and what one clip cannot prove.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: '1x-neo-home-robot-human-backup',
+    youtubeId: 'vzv3WJ2r740',
+    youtubeTitle: 'The $20,000 Home Robot Has a Human Backup',
+    h1: 'The $20,000 Home Robot Has a Human Backup',
+    seoTitle: '1X NEO Home Robot: Autonomous vs Expert Mode Explained',
+    metaDescription:
+      '1X’s $20,000 NEO home robot can call on a remote human expert. Why the operating-mode label matters, and what a polished demo cannot tell a buyer.',
+    dek: 'A robot loads the washing machine. The detail worth watching is the label beside it.',
+    uploadDate: '2026-11-09T16:00:21-08:00',
+    duration: 'PT3M57S',
+    durationLabel: '3 min 57 sec',
+    topic: 'AI in practice',
+    subject: '1X NEO home robot',
+    thumbnail: '/images/videos/1x-neo-home-robot-human-backup.jpg',
+    thumbnailAlt: 'Video thumbnail: a humanoid robot in a knit suit with a glowing ring on its head, reaching out a hand in a sunlit living room, under the words 1X NEO and Human Backup?',
+    sections: [
+      {
+        paragraphs: [
+          'Watch this robot load a washing machine. The important detail is the label beside the demonstration: Expert Mode. For chores NEO does not know, 1X says an owner can schedule a 1X Expert to guide the robot remotely.',
+          'So the question behind a home robot is bigger than whether its hands can move. What can it finish on its own, and what happens when it cannot?',
+        ],
+      },
+      {
+        heading: 'The $20,000 question',
+        paragraphs: [
+          'On October 28, 2025, 1X announced NEO with an Early Access purchase price of $20,000, including priority delivery in 2026, and a $499 a month subscription to ship later. That is the robot’s announced price, separate from the $200 deposit shown on its order page.',
+          'A reservation is not evidence of a delivered machine. 1X’s own FAQ says US deliveries begin in 2026, starting with Early Access buyers.',
+        ],
+      },
+      {
+        heading: 'Two operating modes',
+        paragraphs: [
+          'Now watch a different demonstration. NEO walks up to a person, takes a cup and walks away. 1X presents that sequence as autonomous. The laundry footage sits in its Expert Mode section. Same product, different descriptions of how the task gets done.',
+          'That is the first useful thing to look for in any home robot video. A smooth movement tells you something about the movement. The accompanying disclosure tells you who is in control. You need both before deciding what you just watched.',
+        ],
+      },
+      {
+        heading: 'Hands, tendons and ordinary chores',
+        paragraphs: [
+          'The physical engineering is interesting in its own right. 1X describes a patented Tendon Drive powering tendon-based transmissions, and a soft body made of 3D lattice polymer structures that cushions the machine. The friendly shape is packaging around a machine that still has to meet the world one contact at a time.',
+          'A cup has an edge. A shirt changes shape. A plate has to leave one rack and arrive on another shelf. These are ordinary chores because people have done them thousands of times. Putting them in a product film does not make them the same engineering problem.',
+        ],
+      },
+      {
+        heading: 'Beyond the selected demo',
+        paragraphs: [
+          'The interesting question is what happens outside the selected demonstration. A cupboard is in a different place. Somebody leaves something in the way. The owner asks for a task the robot has not learned. A useful product needs a way to handle that gap, and Expert Mode is 1X’s answer.',
+        ],
+      },
+      {
+        heading: 'Who gets to step in?',
+        paragraphs: [
+          'According to 1X’s FAQ, an Expert cannot connect at any time. Owners schedule a session and accept the Expert into the robot by voice or through the app, and NEO’s ear rings change color while an Expert operator is active. 1X says its Experts are employees physically present in the United States. These are the company’s stated controls, not a security audit.',
+          'That shifts the question from whether a person can help to how that help is arranged. Who can enter the session? What can they access? Can the owner tell when assistance is active? Those answers are part of what is being sold, alongside the hands and feet.',
+        ],
+      },
+      {
+        heading: 'Assisted versus independent',
+        paragraphs: [
+          'Human assistance could be valuable. If someone helps the machine complete a chore, the chore may still get done. But finishing a task with help and finishing it alone describe different capabilities, and a buyer should be able to see the difference before forming expectations.',
+        ],
+      },
+      {
+        heading: 'The missing business numbers',
+        paragraphs: [
+          'There is a business question inside that distinction too. Hardware is a product you can put in a box. Assistance needs people, availability and an operating process.',
+          'Public material does not give the staffing cost, how often Experts step in or an independently measured completion rate, so the economics of that service cannot be calculated from the outside. A polished film cannot supply those numbers.',
+        ],
+      },
+      {
+        heading: 'A useful buyer test',
+        paragraphs: [
+          'Here is the test I would use. Show me an ordinary task, tell me the operating mode and explain the fallback. Then show what happens across repeated attempts, including the times it needs help.',
+        ],
+      },
+      {
+        heading: 'Back to the washing machine',
+        paragraphs: [
+          'The impressive part is that a robot can reach into our everyday world. The useful question is how reliably the whole service finishes the job. The next big home AI product may arrive with a very human backup.',
+        ],
+      },
+    ],
+    takeaways: [
+      '$20,000 was NEO’s Early Access purchase price announced in October 2025. The $200 on the order page is a reservation deposit.',
+      '1X labels some demonstrations Autonomous and shows laundry under Expert Mode, where a remote 1X Expert can guide the robot.',
+      '1X says Expert sessions must be scheduled and accepted by the owner, and that NEO’s ear rings change color while an Expert is active. Those are company statements, not an audit.',
+      'Completing a chore with help and completing it alone are different capabilities. Buyers should know which one they are watching.',
+      'Public material does not give staffing costs, intervention rates or independently measured completion rates, so the service’s economics cannot be calculated.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The label beside the demo' },
+      { time: '0:21', label: 'The $20,000 question' },
+      { time: '0:41', label: 'Two operating modes' },
+      { time: '1:13', label: 'Hands, tendons and ordinary chores' },
+      { time: '1:49', label: 'Beyond the selected demo' },
+      { time: '2:11', label: 'Who gets to step in?' },
+      { time: '2:42', label: 'Assisted versus independent' },
+      { time: '2:59', label: 'The missing business numbers' },
+      { time: '3:23', label: 'A useful buyer test' },
+      { time: '3:35', label: 'Back to the washing machine' },
+    ],
+    sources: [
+      {
+        label: '1X NEO Home Robot launch announcement (1X)',
+        date: 'October 28, 2025',
+        href: 'https://www.1x.tech/discover/neo-home-robot',
+      },
+      {
+        label: 'NEO Home Robot product page and FAQ (1X)',
+        date: 'Checked November 11, 2026',
+        href: 'https://www.1x.tech/neo',
+      },
+    ],
+    sourcesNote:
+      'The two 1X pages cited in the video. Both are company materials: the price, operating modes and Expert controls are 1X’s descriptions, not an independent household performance or security test.',
+    related: [
+      {
+        href: '/blog/agentic-commerce-adoption-definition-problem',
+        title: 'Agentic Commerce Has an Adoption Definition Problem',
+        note: 'Assisted and independent are different levels of delegation, and headline numbers often blur them.',
+      },
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'A demonstration is a claim. The test is whether the result holds up in use.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice. Footage courtesy of 1X: brief muted editorial excerpts and analytical frame grabs from its NEO demonstrations and design film, with original commentary. Music: “Machina” by Scott Buckley, CC BY 4.0. The thumbnail is an AI-assisted editorial composition based on a real demonstration frame. This is analysis of company demonstrations and disclosures, not an independent household performance or security test.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'The $20,000 Home Robot Has a Human Backup',
+      description:
+        'A robot loads the washing machine. The detail worth watching is the label beside it. What 1X’s NEO shows about autonomy, human help and what a demo cannot prove.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'dhl-stretch-robot-warehouse-handoff',
     youtubeId: 'e4AdP-edmnQ',
     youtubeTitle: 'DHL’s $15 Million Robot Bet Is Bigger Than the Arm',
@@ -4192,7 +4459,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'dhl-stretch-robot-warehouse-handoff'
+export const FEATURED_VIDEO_SLUG: string | null = 'boston-dynamics-atlas-humanoid-twist'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -4241,6 +4508,12 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'YTNVhHycUgg', title: 'Getting Onto the Box Is Only Half the Trick', uploadDate: '2026-11-10T17:00:33-08:00', durationLabel: '0:34', thumbnail: '/images/shorts/YTNVhHycUgg.jpg', related: ['boston-dynamics-atlas-humanoid-twist'] },
+  { youtubeId: '8erxzgpG_3w', title: 'AI Tied These Desk Brands on Mentions. Only One Ranked First.', uploadDate: '2026-11-10T15:11:01-08:00', durationLabel: '0:45', thumbnail: '/images/shorts/8erxzgpG_3w.jpg' },
+  { youtubeId: 'ZukmqALUgLs', title: 'Watch Where BMW’s Humanoid Puts the Metal', uploadDate: '2026-11-10T09:00:27-08:00', durationLabel: '0:35', thumbnail: '/images/shorts/ZukmqALUgLs.jpg', related: ['boston-dynamics-atlas-humanoid-twist'] },
+  { youtubeId: 'vVVJX8tayUE', title: 'This Robot Vacuum Unfolds an Arm', uploadDate: '2026-11-09T17:00:29-08:00', durationLabel: '0:29', thumbnail: '/images/shorts/vVVJX8tayUE.jpg', related: ['1x-neo-home-robot-human-backup'] },
+  { youtubeId: 'K9JnWETbmVw', title: 'Most Mentioned. But Read the Context. | AI Protein Powder Benchmark', uploadDate: '2026-11-09T13:45:20-08:00', durationLabel: '0:55', thumbnail: '/images/shorts/K9JnWETbmVw.jpg' },
+  { youtubeId: 'jDWHodtvxkw', title: 'This Home Robot Has a Human Backup', uploadDate: '2026-11-09T09:00:13-08:00', durationLabel: '0:30', thumbnail: '/images/shorts/jDWHodtvxkw.jpg', related: ['1x-neo-home-robot-human-backup'] },
   { youtubeId: '26owiRnjwQY', title: 'This Robot’s Hand Is Made of Suction Cups', uploadDate: '2026-11-08T17:00:19-08:00', durationLabel: '0:38', thumbnail: '/images/shorts/26owiRnjwQY.jpg', related: ['dhl-stretch-robot-warehouse-handoff'] },
   { youtubeId: 'tqyCURWJ8II', title: 'DHL’s Robot Moves the Box. What Happens Next?', uploadDate: '2026-11-08T10:00:32-08:00', durationLabel: '0:45', thumbnail: '/images/shorts/tqyCURWJ8II.jpg', related: ['dhl-stretch-robot-warehouse-handoff'] },
   { youtubeId: 'KPvBegiLBUM', title: 'Apple Made the Top 3 in All Four AI Rankings. Never First.', uploadDate: '2026-11-08T07:00:55-08:00', durationLabel: '0:47', thumbnail: '/images/shorts/KPvBegiLBUM.jpg' },

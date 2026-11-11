@@ -50,9 +50,9 @@ Global Payments asks about comfort, category by category, with a stated ceiling.
 
 ACI reports four positions. Fifty-three percent uncomfortable, 20% recommendations only, 14% approval on every purchase, 7% autonomous within predefined conditions. Those four sum to 94, which suggests respondents picked one, though the release does not say so. If they did, the choices compete with each other in a way a category comfort scale does not.
 
-Put one more way: the first instrument measures how far a willing consumer will go in a named category with a price cap. The second measures which single description a consumer picks for their overall stance on fashion. Different questions, different denominators, different answers. Both are hypothetical, and neither observes a transaction.
+Put one more way: the first instrument measures how far a willing consumer will go in a named category with a price cap. The second measures which description a consumer picks for their overall stance on fashion. Different questions, different denominators, different answers. Both are hypothetical, and neither observes a transaction.
 
-### Six levels, and the two nobody measured
+### Six levels, and the two with no figure
 
 Here is the taxonomy I would use, offered as my framework rather than either company's.
 

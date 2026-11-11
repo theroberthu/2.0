@@ -28,7 +28,7 @@ const post = {
   title: 'Agentic Commerce Has an Adoption Definition Problem',
   // Query-aligned search title (drives <title>, OG and Twitter). Deliberate split.
   meta_title: 'AI Shopping Adoption: Why 69% and 7% Both Look True',
-  excerpt: "Global Payments reports 69% would let an agent spend $100 on groceries. ACI Worldwide reports 7% would allow autonomous purchasing under predefined conditions. Six levels of delegation explain the gap, and two of them are barely measured.",
+  excerpt: "Global Payments reports 69% would let an agent spend $100 on groceries. ACI Worldwide reports 7% would allow autonomous purchasing under predefined conditions. Six levels of delegation explain the gap, and two of them have no public figure.",
   meta_description: DESCRIPTION,
   og_image: '/images/blog/agentic-commerce-adoption-definition-problem.svg',
   category: 'Digital Transformation',
@@ -75,9 +75,9 @@ const post = {
 
 <p>ACI reports four positions. Fifty-three percent uncomfortable, 20% recommendations only, 14% approval on every purchase, 7% autonomous within predefined conditions. Those four sum to 94, which suggests respondents picked one, though the release does not say so. If they did, the choices compete with each other in a way a category comfort scale does not.</p>
 
-<p>Put one more way: the first instrument measures how far a willing consumer will go in a named category with a price cap. The second measures which single description a consumer picks for their overall stance on fashion. Different questions, different denominators, different answers. Both are hypothetical, and neither observes a transaction.</p>
+<p>Put one more way: the first instrument measures how far a willing consumer will go in a named category with a price cap. The second measures which description a consumer picks for their overall stance on fashion. Different questions, different denominators, different answers. Both are hypothetical, and neither observes a transaction.</p>
 
-<h2>Six levels, and the two nobody measured</h2>
+<h2>Six levels, and the two with no figure</h2>
 
 <p>Here is the taxonomy I would use, offered as my framework rather than either company's.</p>
 

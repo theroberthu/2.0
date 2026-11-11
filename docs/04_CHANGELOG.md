@@ -6,6 +6,89 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.89 - Atlas and 1X NEO documentary pages, six new Shorts and a second adoption wording pass (2026-11-11)
+
+**What changed.** Two new documentaries get companion pages, bringing
+`/videos` to 30 documentaries:
+
+- `/videos/boston-dynamics-atlas-humanoid-twist`, "Why Atlas Moves Like That"
+  (https://youtu.be/JkKweShtJfk, uploaded 2026-11-10T16:00:33-08:00, PT2M50S),
+  Manufacturing, about 600 words.
+- `/videos/1x-neo-home-robot-human-backup`, "The $20,000 Home Robot Has a Human
+  Backup" (https://youtu.be/vzv3WJ2r740, uploaded 2026-11-09T16:00:21-08:00,
+  PT3M57S), AI in practice, about 690 words.
+
+The homepage Featured Video now points at Atlas. Six Shorts from November 9 and
+10 join the top of `SHORTS` (67 in total). Pairings are by topic: the NEO
+Short and the Roborock Saros Z70 arm Short relate to NEO; the Figure 02 at BMW
+Short and the ETH Zurich ANYmal parkour Short relate to Atlas; the standing
+desk and protein powder AI ranking Shorts have no related page. No
+`POST_VIDEOS` pairings were added. The Atlas description has no chapters, so
+its eight page chapters were written from the caption timestamps of the
+creator-uploaded English track.
+
+A second wording pass on `/blog/agentic-commerce-adoption-definition-problem`,
+approved and applied to Supabase on 2026-11-09 with
+`scripts/correct-agentic-adoption-definition-2.mjs`, is recorded here with its
+source files: the H2 "Six levels, and the two nobody measured" became "Six
+levels, and the two with no figure", "which single description a consumer
+picks" became "which description a consumer picks", and the excerpt's "two of
+them are barely measured" became "two of them have no public figure". This
+closes the Release 1.87 follow-up on phrases that still carried the
+single-choice and unmeasured inferences.
+
+**Sourcing and boundaries.** Atlas: hydraulic Atlas retired and electric Atlas
+unveiled with a design not "constrained by a human range of motion" (April 17,
+2024); the engine cover demonstration with no prescribed or teleoperated
+movements, a vision model, and vision, force and proprioceptive sensing to
+react to moved fixtures and failed actions (October 30, 2024); the product
+version with autonomous, teleoperated and tablet control and 2026 deployments
+committed to Hyundai's RMAC and Google DeepMind (January 5, 2026). The page
+labels the range-of-motion reading as interpretation and says one clip cannot
+show cost per job, intervention rates or long-run reliability.
+
+NEO: $20,000 Early Access price, $499 a month subscription to ship later and
+2026 priority delivery from the October 28, 2025 announcement, kept separate
+from the $200 deposit on the order page. Autonomous and Expert Mode labels, the
+Tendon Drive and lattice body, and the FAQ's Expert controls (scheduled and
+accepted by the owner, ear rings change color, Experts are 1X employees in the
+US) are attributed to 1X and described as company statements, not a security
+audit or household test. No staffing cost, intervention rate or completion
+rate is asserted.
+
+**Verified.** Local production build: tsc, lint and build pass; both pages
+return 200 with a self-canonical, one VideoObject (8 and 10 Clip parts) and
+breadcrumb data, and no horizontal scroll at 375px. All eight images load; the
+homepage card, `/videos` (30 documentaries, 67 Shorts), the related Shorts rows
+and the sitemap carry the new entries. Zero em or en dashes.
+
+**Search Console operations (2026-11-09 to 2026-11-10, no code).** Diagnosed
+the Page indexing report: most "Not indexed" rows are expected (redirects,
+retired noindex pages, dead pre-2.0 URLs, `/api/og` images). Removed three
+stale sitemap submissions (`https://www.theroberthu.com/sitemap.xml`, 14 "URL
+not allowed" errors; and two 2019 `http://` entries flagged "Sitemap is
+HTML"), leaving only the current sitemap. Four pages showed an unrelated
+Google-selected canonical (747live.bet or marcustheatres.com) with no
+user-declared canonical recorded at crawls between October 9 and 18, although
+the templates emit a self-canonical and Google's live tests now read it. Test
+Live URL and Request Indexing ran on Bosch and Domino's (2026-11-09) and on
+`ai-shopping-assistant-retail-media-sponsored-products`,
+`geo-vs-seo-marketplace-sellers`, `amex-ai-agent-purchase-protection` and
+`starbucks-chatgpt-app-playbook` (2026-11-10), all passing with a
+self-canonical.
+
+**Impact.** Two more uploads get permanent, searchable pages, the homepage stays
+current, and the adoption article no longer implies a single-choice question or
+an unmeasured level that the public releases do not support.
+
+**Follow-ups.** Run Test Live URL and Request Indexing on both new pages.
+Re-inspect the six pages above after recrawl; if an unrelated canonical
+returns, investigate what Googlebot received. The `/generative-search-optimization`
+Redirect error (crawled 2026-11-06) passes a live test; revalidate the Redirect
+error group.
+
+---
+
 ## Release 1.88 - DHL and Duolingo documentary pages and six new Shorts (2026-11-09)
 
 **What changed.** Two new documentaries from the daily series get companion
@@ -55,7 +138,8 @@ the new entries.
 **Impact.** Two more recent uploads get permanent, searchable pages, and the
 homepage stays current with the newest documentary.
 
-**Follow-ups.** Run Test Live URL and Request Indexing on both new pages. On
+**Follow-ups.** Run Test Live URL and Request Indexing on both new pages (done
+2026-11-09; both were already indexed). On
 2026-11-09 seven older video pages that were not indexed went through that
 process. Two of them (Bosch, Domino's) showed an unrelated betting domain as
 Google's selected canonical from crawls on October 14 and 15, while today's
