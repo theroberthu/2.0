@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-jetbrains-mono)', 'monospace'],
+        sans: ['var(--font-dm-sans, system-ui)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono, ui-monospace)', 'monospace'],
       },
       colors: {
         brand: {

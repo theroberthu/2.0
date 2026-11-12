@@ -29,7 +29,7 @@ export default function NotFound() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '3rem 1.5rem',
-        fontFamily: 'var(--font-dm-sans), system-ui, sans-serif',
+        fontFamily: 'var(--font-dm-sans, system-ui), system-ui, sans-serif',
       }}
     >
       <div

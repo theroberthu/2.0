@@ -6,6 +6,35 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.90 - Font fallback so a bad build degrades to sans-serif, not Times (2026-11-12)
+
+**What happened.** On 2026-11-12 the live site was rendering every page in the
+browser's default serif (Times). The Release 1.89 production build on Vercel
+came out inconsistent: the HTML puts the next/font classes
+`__variable_231f96` and `__variable_4dc837` on `<body>`, but the served
+stylesheet (`4aba929dc5a50d5b.css`, last modified 2026-11-11 14:40 GMT) only
+defines `__variable_0d7163` and `__variable_3c557b`. With `--font-dm-sans` and
+`--font-jetbrains-mono` undefined, `font-family: var(--font-dm-sans), ...` is
+invalid at computed-value time, so the whole declaration is dropped and the
+browser default serif wins, including for mono labels. The font config in
+`src/app/layout.tsx` is unchanged since February, and a local production build
+of the same commit is consistent (HTML and CSS both `231f96`/`4dc837`), so the
+likely cause is stale Vercel build cache.
+
+**What changed.** Each font variable now carries its own fallback:
+`var(--font-dm-sans, system-ui)` and `var(--font-jetbrains-mono, ui-monospace)`
+in `tailwind.config.ts`, `src/app/globals.css` and `src/app/not-found.tsx`. When
+the variables resolve, nothing changes. If a build ever mismatches again, the
+site falls back to the system sans-serif and monospace instead of Times. No
+content or layout changes.
+
+**Verification.** tsc, lint and build pass. The built CSS emits
+`var(--font-dm-sans,system-ui)` and `var(--font-jetbrains-mono,ui-monospace)`,
+and the local build's body classes match the CSS variable classes.
+
+**Follow-ups.** Confirm the deploy for this release serves matching classes. If
+it does not, redeploy in Vercel with "Use existing Build Cache" unticked.
+
 ## Release 1.89 - Atlas and 1X NEO documentary pages, six new Shorts and a second adoption wording pass (2026-11-11)
 
 **What changed.** Two new documentaries get companion pages, bringing

@@ -26,12 +26,12 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   }
 
   body {
-    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-family: var(--font-dm-sans, system-ui), system-ui, sans-serif;
   }
 
   code,
   pre {
-    font-family: var(--font-jetbrains-mono), monospace;
+    font-family: var(--font-jetbrains-mono, ui-monospace), monospace;
   }
 
   ::selection {
@@ -98,7 +98,7 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   margin: 2rem 0;
 }
 .prose-custom code {
-  font-family: var(--font-jetbrains-mono), monospace;
+  font-family: var(--font-jetbrains-mono, ui-monospace), monospace;
   font-size: 0.875em;
   background-color: #f1f5f9;
   padding: 0.15em 0.4em;
@@ -173,7 +173,7 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   margin: 2rem 0;
 }
 .prose-custom-dark code {
-  font-family: var(--font-jetbrains-mono), monospace;
+  font-family: var(--font-jetbrains-mono, ui-monospace), monospace;
   font-size: 0.875em;
   background-color: rgba(255, 255, 255, 0.08);
   padding: 0.15em 0.4em;
@@ -271,7 +271,7 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   background: linear-gradient(90deg, #c5a94e 0%, rgba(197, 169, 78, 0.2) 100%);
 }
 .blog-inline-cta-card-label {
-  font-family: var(--font-jetbrains-mono), monospace;
+  font-family: var(--font-jetbrains-mono, ui-monospace), monospace;
   font-size: 0.6875rem !important;
   font-weight: 600;
   letter-spacing: 0.15em;
