@@ -32,8 +32,16 @@ content or layout changes.
 `var(--font-dm-sans,system-ui)` and `var(--font-jetbrains-mono,ui-monospace)`,
 and the local build's body classes match the CSS variable classes.
 
-**Follow-ups.** Confirm the deploy for this release serves matching classes. If
-it does not, redeploy in Vercel with "Use existing Build Cache" unticked.
+**Outcome.** The deploy for this release came out consistent on its own, live
+about 90 seconds after the push: body classes and CSS (`c24b330efd972b7a.css`)
+both use `231f96`/`4dc837` on /, /blog, an article, /videos, a video page,
+/about, /geo and the 404 page. In the browser, both DM Sans and both JetBrains
+Mono faces load and the h1 resolves to DM Sans. No cacheless redeploy was
+needed.
+
+**Follow-ups.** If fonts ever look off again, compare the `<body>` font classes
+with the `.__variable_*` rules in the served CSS; on a mismatch, redeploy in
+Vercel with "Use existing Build Cache" unticked.
 
 ## Release 1.89 - Atlas and 1X NEO documentary pages, six new Shorts and a second adoption wording pass (2026-11-11)
 
