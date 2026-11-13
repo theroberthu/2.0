@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-11-08'
+export const LAST_UPDATED = '2026-11-13'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-11-10',
+    org: 'OpenAI',
+    development: 'Businesses in ChatGPT beta: verified profiles, product feeds, aggregate insights, and U.S. Business Agents that cannot complete purchases',
+    affects: 'Website handoff',
+    evidenceType: 'Company announcement, terms and documentation',
+    changed: 'OpenAI is not the seller',
+    href: '/blog/openai-business-hub-chatgpt-business-agents',
+  },
   {
     date: '2026-11-05',
     org: 'Visa',

@@ -6,6 +6,64 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.91 - OpenAI Business Hub and the line between participation and influence (2026-11-13)
+
+**What changed.** New GEO & SEO article,
+`/blog/openai-business-hub-chatgpt-business-agents`, "OpenAI Business Hub
+Separates Participation From Influence" (1,159 body words, 1,189 with
+subheads). It argues that Businesses in ChatGPT gives a business bounded
+control over identity, supplied facts, a branded conversation and paid
+distribution, while ChatGPT keeps the independent recommendation. Four layers
+are kept apart (independent answer, verified profile, Business Agent, paid
+distribution), with checkout outside all four. Adds the content file, insert
+script, OG SVG and PNG. AI Commerce 2027 gets one tracker row (November 10,
+OpenAI, Website handoff); `LAST_UPDATED` and the sitemap date move to
+2026-11-13 together.
+
+**Sourcing.** Primary sources only: OpenAI's November 10 launch post, the
+Businesses in ChatGPT product page, the OpenAI Help Center setup article, the
+Businesses in ChatGPT Terms (updated November 9, 2026, re-checked at ship),
+the Businesses in ChatGPT policy, the Business Agents Policy, the November 10
+ChatGPT release notes entry, and Shopify's "Selling on ChatGPT" and Shopify
+Catalog help pages. Secondary coverage was used only to locate sources. The
+1.2 billion weekly figure is attributed to OpenAI. The article names the
+inconsistency between OpenAI's help center (blue check after Persona approval)
+and its product page (check shows the business was claimed). The product-feed
+term (crawler access; text-and-data-mining opt-outs have no effect as to
+OpenAI) is limited to feed submitters. Eight inline links point to those
+primary pages on existing phrases; the approved text is unchanged.
+
+**Editorial gates.** Research PASS, Editorial PASS, SEO/GEO PASS, Final
+WRITE after one senior-editor revision round: "submit updates" instead of
+"update", OpenAI "may supplement, edit or replace" instead of "override", the
+covenant-not-to-sue paragraph replaced by the narrower product-feed term,
+"potentially managed by different teams", and a precise claiming
+recommendation that rules out exclusive control. The article does not claim
+Shopify Catalog grounds the Business Agent. Zero em or en dashes, one question
+mark, four internal links, no Key findings box.
+
+**Held for follow-up (not in this release).** Contextual updates to "The Ad
+Click Is Becoming a Conversation" and the Shopify AI knowledge base article
+are approved in principle; their inserted copy needs senior-editor review.
+For the Ad Click article, use "Eligible Shopify products can be made
+available through Shopify Catalog, while Business Agents use information
+supplied through OpenAI's Business Hub", and do not say Sponsored Agents were
+renamed. The covenant not to sue and release (Terms sections 10.1 and 10.2),
+the perpetual license for basic business information (4.2) and the
+assistant-calls clause (4.1) stay in research notes for senior review.
+
+**Impact.** TRH's ChatGPT commercial-layer thread (self-serve ads, Amazon
+Ads, the third commercial layer, Sponsored Agents) moves from an announced
+format to the documented operating system around it, and covers OpenAI's
+first-party organic reporting and its limits.
+
+**Follow-ups.** The two held legacy updates. Request indexing for the new
+URL. Watch for the eligible-category list for Business Agents and for any
+Actions or checkout capability, which the terms anticipate but the help center
+says is not available today.
+
+---
+
 ## Release 1.90 - Font fallback so a bad build degrades to sans-serif, not Times (2026-11-12)
 
 **What happened.** On 2026-11-12 the live site was rendering every page in the
