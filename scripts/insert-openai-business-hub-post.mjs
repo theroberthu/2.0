@@ -73,6 +73,19 @@ const post = {
 
 <p>Checkout sits outside all four. The current Business Agent cannot complete purchases, make bookings or look up orders. For Shopify merchants, the purchase happens on the store's own checkout, in ChatGPT's in-app browser in the apps or in a new tab on ChatGPT web. The terms say OpenAI does not become the seller.</p>
 
+<div class="table-wrapper">
+<table>
+<thead><tr><th>Layer</th><th>What the business can do</th><th>What OpenAI keeps</th></tr></thead>
+<tbody>
+<tr><td>Independent answer</td><td>Supply information ChatGPT may use. Claiming, feeds and advertising give no direct control over recommendations.</td><td>Deciding what to mention, compare and recommend</td></tr>
+<tr><td>Verified profile</td><td>After Persona approval, submit updates to its details and connect a product feed</td><td>Reviewing and publishing changes, and the right to supplement, edit or replace submitted information using other sources</td></tr>
+<tr><td>Business Agent</td><td>Supply product knowledge, policies and guidelines, preview the agent and decide whether to publish it. The business is responsible for its outputs.</td><td>The right to modify, suspend or remove the agent at any time without notice</td></tr>
+<tr><td>Paid distribution</td><td>Sponsor its agent or make it a ChatGPT ad destination, under a separate advertising agreement</td><td>Labeling sponsored placements and keeping them separate from ChatGPT responses</td></tr>
+<tr><td>Checkout</td><td>Complete the sale on its own checkout, outside all four layers</td><td>Not the seller. The current agent links out and cannot complete purchases.</td></tr>
+</tbody>
+</table>
+</div>
+
 <h2>Responsibility runs further than control</h2>
 
 <p>The agent is where the terms ask the most. OpenAI may build and configure an agent for a business before the business elects to use it, and Shopify setup can produce a draft automatically. Once a business publishes, it is responsible for the agent's content, configuration, testing and outputs, whether or not it provided, reviewed or approved them. OpenAI does not warrant that the agent will follow instructions, and it can modify, suspend or remove the agent at any time without notice.</p>

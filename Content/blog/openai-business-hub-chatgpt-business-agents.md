@@ -1,10 +1,10 @@
 # OpenAI Business Hub Separates Participation From Influence
 
-**Status:** PUBLISH APPROVED (SHIP IT, 2026-11-13) after senior-editor review of the revised draft.
+**Status:** PUBLISH APPROVED (SHIP IT, 2026-11-13) after senior-editor review of the revised draft. Grid approved and added 2026-11-13 (Release 1.92).
 **Type:** Authority and thesis article, standalone
 **Assignment:** TRH Editorial Board, 2026-11-12
 **Gates:** Research PASS, Editorial PASS, SEO/GEO PASS, Final WRITE. No Key findings box.
-**Source-body word count:** 1,159 excluding subheads; 1,189 with subheads. Method: words in body text, link URLs not counted.
+**Source-body word count:** 1,159 excluding subheads; 1,189 with subheads. Method: words in body text, link URLs not counted. The "who controls what" grid (154 words, Release 1.92) is reference material and is not counted.
 
 ---
 
@@ -53,6 +53,14 @@ The Business Agent. A clearly labeled conversation the shopper chooses to start 
 Paid distribution. A business can sponsor its agent or make it the destination for a ChatGPT ad. That requires a separate advertising agreement, and sponsored placements stay labeled and outside ChatGPT's answers.
 
 Checkout sits outside all four. The current Business Agent cannot complete purchases, make bookings or look up orders. For Shopify merchants, the purchase happens on the store's own checkout, in ChatGPT's in-app browser in the apps or in a new tab on ChatGPT web. The terms say OpenAI does not become the seller.
+
+| Layer | What the business can do | What OpenAI keeps |
+|---|---|---|
+| Independent answer | Supply information ChatGPT may use. Claiming, feeds and advertising give no direct control over recommendations. | Deciding what to mention, compare and recommend |
+| Verified profile | After Persona approval, submit updates to its details and connect a product feed | Reviewing and publishing changes, and the right to supplement, edit or replace submitted information using other sources |
+| Business Agent | Supply product knowledge, policies and guidelines, preview the agent and decide whether to publish it. The business is responsible for its outputs. | The right to modify, suspend or remove the agent at any time without notice |
+| Paid distribution | Sponsor its agent or make it a ChatGPT ad destination, under a separate advertising agreement | Labeling sponsored placements and keeping them separate from ChatGPT responses |
+| Checkout | Complete the sale on its own checkout, outside all four layers | Not the seller. The current agent links out and cannot complete purchases. |
 
 ### Responsibility runs further than control
 

@@ -6,6 +6,40 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.92 - "Who controls what" grid in the OpenAI Business Hub article (2026-11-13)
+
+**What changed.** A five-row static table (Independent answer, Verified
+profile, Business Agent, Paid distribution, Checkout; columns "What the
+business can do" and "What OpenAI keeps") was added to
+`/blog/openai-business-hub-chatgpt-business-agents` at the end of "Four
+layers, kept apart", after the checkout paragraph. It uses the existing
+`table-wrapper` styling. No article text changed. Applied to Supabase with
+`scripts/add-business-hub-control-grid.mjs` (dry run by default, `--apply`
+writes content and `updated_at`); the content file and insert script are
+mirrored.
+
+**Why.** The article qualifies for no chart under the style guide's
+interactive-charts standard (one statistic, no comparable series), but its
+argument is structural. The grid summarizes the four layers in a form readers
+and answer engines can lift cleanly.
+
+**Sourcing.** Every cell traces to the primary sources used for Release 1.91:
+the product page and help center for the independent answer row; the help
+center and Terms section 4.1 for the profile row; the help center and Terms
+sections 5.1, 5.2 and 5.6 for the agent row; the launch post and Terms section
+5.1 for paid distribution; Shopify's "Selling on ChatGPT" page, Terms section
+5.4 and the help center for checkout. The grid does not mention Shopify
+Catalog and makes no ranking or wording-control claim.
+
+**Editorial gates.** Zero em or en dashes, no question marks (the article
+keeps its single closing question), no Key findings box. The table's 154 words
+are treated as reference material and are not counted in the source-body
+word count, which stays at 1,159.
+
+**Follow-ups.** None specific to the grid. The Release 1.91 follow-ups stand.
+
+---
+
 ## Release 1.91 - OpenAI Business Hub and the line between participation and influence (2026-11-13)
 
 **What changed.** New GEO & SEO article,
