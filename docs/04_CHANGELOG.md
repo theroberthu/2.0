@@ -63,8 +63,17 @@ homepage feature and the sitemap carry the new entries.
 **Impact.** Two more recent uploads get permanent, searchable pages, and the
 homepage stays current with the newest documentary.
 
-**Follow-ups.** Run Test Live URL and Request Indexing on the three new pages once
-Claude in Chrome is connected. The GoalDex duck Short's YouTube description
+**Follow-ups.** Test Live URL and Request Indexing ran on 2026-11-14 for the
+three new pages (none indexed yet, all passing with a self-canonical and a
+detected video) and for the Business Hub article from Release 1.91 (already
+indexed; re-requested to pick up the Release 1.92 grid). The same day, a
+re-inspection of the six pages with unrelated Google-selected canonicals found
+four fixed (`ai-shopping-assistant-retail-media-sponsored-products`,
+`geo-vs-seo-marketplace-sellers`, `amex-ai-agent-purchase-protection`,
+`starbucks-chatgpt-app-playbook`: indexed, recrawled November 10, self-canonical).
+Bosch and Domino's have not been recrawled since October 15 and 14 despite the
+November 9 requests and still show the unrelated domain; re-request or wait for
+the recrawl. The GoalDex duck Short's YouTube description
 says the matching long video comes out "November 30 at 6 PM CT", but that video
 has been public since November 11. The site is not affected.
 
