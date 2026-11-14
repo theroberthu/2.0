@@ -19,7 +19,7 @@ export type RelatedLink = { href: string; title: string; note: string }
 
 export type VideoSection = { heading?: string; paragraphs: string[] }
 
-export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice', 'Energy and infrastructure'] as const
+export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice', 'Energy and infrastructure', 'Aviation and travel'] as const
 
 export type VideoTopic = (typeof VIDEO_TOPICS)[number]
 
@@ -73,6 +73,378 @@ export function youtubeThumbnailUrl(id: string): string {
 }
 
 export const VIDEOS: VideoEntry[] = [
+  {
+    slug: 'nasa-x59-no-front-window',
+    youtubeId: 'kveJqAFXTR0',
+    youtubeTitle: 'Why NASA Built a Jet With No Front Window',
+    h1: 'Why NASA Built a Jet With No Front Window',
+    seoTitle: 'NASA’s X-59: Why the Quiet Supersonic Jet Has No Front Window',
+    metaDescription:
+      'NASA’s X-59 pilot sees ahead through cameras and a 4K screen. Why the long nose matters, what the quieter thump still has to prove and what it means for airlines.',
+    dek: 'The missing window is the visible part. The real test is what people hear on the ground.',
+    uploadDate: '2026-11-13T16:00:13-08:00',
+    duration: 'PT2M38S',
+    durationLabel: '2 min 38 sec',
+    topic: 'Aviation and travel',
+    subject: 'NASA X-59',
+    thumbnail: '/images/videos/nasa-x59-no-front-window.jpg',
+    thumbnailAlt: 'Video thumbnail: NASA’s white X-59 aircraft with its long pointed nose flying over a desert, with Robert Hu shown as an observer holding a tablet and the words No Front Window. Labeled NASA photo, editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'This jet has no front window. The pilot looks ahead through cameras and a screen, and yes, it really flies.',
+          'NASA’s X-59 has that long nose because of a problem that reaches far beyond the cockpit: what people on the ground hear when an aircraft flies faster than sound.',
+        ],
+      },
+      {
+        heading: 'Supersonic, with the hard part still ahead',
+        paragraphs: [
+          'On June 5, 2026, the X-59 flew faster than sound for the first time, reaching about Mach 1.1 over Edwards Air Force Base in California. Speed is only part of the experiment, though. NASA still has to validate what the aircraft sounds like below.',
+        ],
+      },
+      {
+        heading: 'The money behind the question',
+        paragraphs: [
+          'In April 2018, NASA awarded Lockheed Martin a contract valued at $247.5 million to design, build and test the aircraft. That is the original contract value, not the total cost of the whole mission.',
+        ],
+      },
+      {
+        heading: 'Why the nose is so long',
+        paragraphs: [
+          'NASA shaped the X-59 to keep its shock waves from combining into the loud sonic boom people associate with supersonic flight. The goal is a quieter thump, which NASA projects will sound like a car door closing about 20 feet away.',
+          'Achieving it means an aircraft that looks unusually stretched, with the cockpit tucked low into the body. That creates a very practical problem for the person flying it.',
+        ],
+      },
+      {
+        heading: 'Where does the windshield go?',
+        paragraphs: [
+          'The shape leaves no place for a forward-facing window. NASA’s answer is the eXternal Vision System: cameras send a forward view to a 4K monitor with flight information overlaid, so the pilot can see traffic ahead. The display capture in the video comes from the first supersonic flight.',
+          'A clear view ahead still does not tell NASA what people will hear below.',
+        ],
+      },
+      {
+        heading: 'What NASA still has to measure',
+        paragraphs: [
+          'In its October 28 update, NASA reported 40 additional flights since the first flight a year earlier, with speeds up to Mach 1.53 and altitudes above 56,000 feet. The team was still expanding the flight envelope and preparing to move toward acoustic validation, which focuses on the sounds the aircraft makes.',
+          'After that, NASA plans to fly over communities, survey how people respond and share the data with U.S. and international regulators as they consider acceptable noise levels for supersonic flight over land.',
+        ],
+      },
+      {
+        heading: 'What it means for airlines',
+        paragraphs: [
+          'For an airline, speed only becomes useful when there are routes it can operate and customers it can serve. A quieter thump could help with one major constraint, the rules on supersonic flight over land. It does not, by itself, prove a profitable passenger business, and the X-59 is a research aircraft, not an airliner.',
+        ],
+      },
+      {
+        heading: 'Back to the pilot’s view',
+        paragraphs: [
+          'My takeaway: the missing window is the visible consequence of a less visible problem, making faster travel fit into the world underneath it.',
+        ],
+      },
+    ],
+    takeaways: [
+      'NASA’s X-59 has no forward-facing window. Its long nose is shaped to turn a loud sonic boom into a quieter thump, and the cockpit sits low behind it.',
+      'The pilot sees ahead through the eXternal Vision System, cameras feeding a 4K display with flight information overlaid.',
+      'The X-59 first flew supersonic on June 5, 2026. By October 28, NASA reported 40 additional flights since the first flight and speeds up to Mach 1.53.',
+      'The $247.5 million figure is Lockheed Martin’s original 2018 contract, not the total cost of the mission.',
+      'The quieter thump still has to be validated acoustically and tested with communities. Even then, it would not by itself prove a profitable supersonic airline.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'No front window' },
+      { time: '0:17', label: 'The first supersonic flight' },
+      { time: '0:29', label: 'The contract behind it' },
+      { time: '0:47', label: 'Why the nose is so long' },
+      { time: '1:08', label: 'Where does the windshield go?' },
+      { time: '1:30', label: 'What NASA still has to measure' },
+      { time: '1:48', label: 'The people on the ground' },
+      { time: '2:02', label: 'What it means for airlines' },
+      { time: '2:15', label: 'Back to the pilot’s view' },
+    ],
+    sources: [
+      {
+        label: 'NASA Awards Contract to Build Quieter Supersonic Aircraft (NASA)',
+        date: 'April 3, 2018',
+        href: 'https://www.nasa.gov/news-release/nasa-awards-contract-to-build-quieter-supersonic-aircraft/',
+      },
+      {
+        label: 'NASA Completes Tests of X-59 eXternal Vision System (NASA)',
+        date: 'September 8, 2021',
+        href: 'https://www.nasa.gov/aeronautics/nasa-completes-tests-of-x-59-external-vision-system/',
+      },
+      {
+        label: 'NASA’s X-59 Aircraft Flies Supersonic for First Time (NASA)',
+        date: 'June 5, 2026',
+        href: 'https://www.nasa.gov/aeronautics/x-59-first-supersonic-flight/',
+      },
+      {
+        label: 'NASA Celebrates a Year of Progress Since First X-59 Flight (NASA)',
+        date: 'October 28, 2026',
+        href: 'https://www.nasa.gov/blogs/quesst/2026/10/28/nasa-celebrates-a-year-of-progress-since-first-x-59-flight/',
+      },
+      {
+        label: 'Quesst mission overview (NASA)',
+        date: 'Checked November 14, 2026',
+        href: 'https://www.nasa.gov/mission/quesst/',
+      },
+    ],
+    sourcesNote:
+      'The four NASA sources cited in the video, plus NASA’s June 5, 2026 report of the first supersonic flight. All are NASA material, not independent tests, and the quieter thump has not yet been validated over communities.',
+    related: [
+      {
+        href: '/blog/chatgpt-ads-billion-revenue-run-rate-distribution',
+        title: 'ChatGPT Ads Hit a $1 Billion Run Rate in 200 Days. The Audience Came First.',
+        note: 'Reading a headline figure for what it actually measures, the same discipline as separating an original contract from a total mission cost.',
+      },
+      {
+        href: '/blog/uber-chatgpt-work-enterprise-ai-adoption',
+        title: 'Uber Is Giving 30,000 Employees ChatGPT. Access Is Not Adoption.',
+        note: 'A capability becomes a business only when people use it, the same gap between flying supersonic and operating a route.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage and images: NASA, used as editorial excerpts, crops and annotations with the original source audio removed (external vision display capture, June 2026; aircraft and cockpit photos, 2025). Thumbnail: NASA aircraft imagery with Robert shown as a fictional observer, an editorial composite, not a NASA employee or an actual site visit. Music: “Cylinder Eight” by Chris Zabriskie, CC BY 4.0. No NASA endorsement implied.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why NASA Built a Jet With No Front Window',
+      description:
+        'NASA’s X-59 flies with cameras and a screen where the windshield would be. Why the long nose matters, what the quieter thump still has to prove and what it means for airlines.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'robosimstudio-robot-simulation-missing-rule',
+    youtubeId: 'q5-n7iiQ0gQ',
+    youtubeTitle: 'This Robot’s Simulation Had One Impossible Advantage',
+    h1: 'This Robot’s Simulation Had One Impossible Advantage',
+    seoTitle: 'RoboSimStudio: What a Failed Wipe Taught a Robot Simulation',
+    metaDescription:
+      'A Berkeley and NVIDIA pilot built a robot simulation from a phone video. One real failure exposed the rule it left out, and the model was revised.',
+    dek: 'The robot practiced in a world where the bar could not move. The real bar could.',
+    uploadDate: '2026-11-12T16:00:30-08:00',
+    duration: 'PT2M20S',
+    durationLabel: '2 min 20 sec',
+    topic: 'AI in practice',
+    subject: 'RoboSimStudio robot simulation',
+    thumbnail: '/images/videos/robosimstudio-robot-simulation-missing-rule.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu beside a robot arm pressing a sponge against a metal bar, with a yellow circle around the bar’s support block and the words One Missing Rule.',
+    sections: [
+      {
+        paragraphs: [
+          'Watch this robot wipe a metal bar. On the physical machine, a support shifts and the sponge loses contact.',
+          'Now imagine the robot’s practice world had one impossible advantage: the bar could not move. That was a real problem in a research pilot from UC Berkeley and NVIDIA. The original simulation held the bar’s supports fixed, so the world the machine practiced in was missing a rule that mattered.',
+        ],
+      },
+      {
+        heading: 'A practice world from a phone video',
+        paragraphs: [
+          'The researchers started with a smartphone video of a robot wiping a marker stripe off a bar with a foam sponge, with no CAD models or calibrated cameras. Off-the-shelf coding agents used a toolkit called RoboSimStudio to build a simulated version of the scene in about an hour. The paper reports that one agent built and verified a simulated wipe in 56 minutes.',
+          'Making the scene look right was only part of the job. The sponge had to bend, make contact and produce forces. A convincing picture of a sponge is not the same thing as a useful model of one.',
+        ],
+      },
+      {
+        heading: 'Improving the simulated wipe',
+        paragraphs: [
+          'Inside the simulation, the researchers varied the sponge’s stiffness and generated 30 layouts of the bar and sponge. A separate system called Graph-as-Policy used feedback from those runs to improve the wiping program, and the paper reports the simulated wiped area rising from 0% to 100% over 14 iterations.',
+          'That number belongs to the simulated task. It is not a 100% success rate for real robots.',
+        ],
+      },
+      {
+        heading: 'What the hardware exposed',
+        paragraphs: [
+          'The improved program did complete the wipe on the physical robot. But one real-world attempt exposed the missing constraint: the wiping motion pushed a bar support out of place, and the sponge lost contact. In the simulation, the supports stayed fixed. In the lab, they did not.',
+        ],
+      },
+      {
+        heading: 'Fixing the missing rule',
+        paragraphs: [
+          'Given the failure video and a description of what went wrong, the coding agent identified that the original simulation fixed the bar supports to the environment. It replaced that fixed constraint with a free rigid body, so the bar and its supports could move when pushed. The revised model reproduced the bar shifting and tipping when the sponge pressed hard enough or wiped away from the bar’s center.',
+          'That is the useful twist. A failure in the real world became evidence about what the virtual world had left out.',
+        ],
+      },
+      {
+        heading: 'What this pilot proves',
+        paragraphs: [
+          'This was one hardware task, and the paper says the match between simulated and real behavior was assessed mainly through qualitative observation. It does not establish a general household robot, and it does not show that future failures are eliminated. Robots that leave the lab still need a plan for the moments the model is wrong, as [1X’s NEO and its human backup](/videos/1x-neo-home-robot-human-backup) shows.',
+        ],
+      },
+      {
+        heading: 'What to ask of a robot demo',
+        paragraphs: [
+          'Next time a robot demonstration looks convincing, ask what its practice world left out.',
+          'My takeaway: the result worth noticing is not the 100% simulated score. It is that one failed wipe was turned into a better model of the world.',
+        ],
+      },
+    ],
+    takeaways: [
+      'UC Berkeley and NVIDIA researchers used coding agents and the RoboSimStudio toolkit to build a physics simulation of a sponge-wiping task from a smartphone video in about an hour.',
+      'The reported rise from 0% to 100% wiped area over 14 iterations is a simulated result, not a real-world success rate.',
+      'On the physical robot, one attempt failed when the sponge pushed a bar support that the simulation had held fixed.',
+      'Given the failure video, a coding agent replaced the fixed constraint with a free body, and the revised simulation reproduced the bar shifting and tipping.',
+      'The paper covers one hardware task, assessed mainly by observation. It does not prove a general household robot.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The real failure' },
+      { time: '0:07', label: 'The impossible advantage' },
+      { time: '0:24', label: 'Building a practice world' },
+      { time: '0:54', label: 'Improving the simulated wipe' },
+      { time: '1:18', label: 'What hardware exposed' },
+      { time: '1:40', label: 'Fixing the missing constraint' },
+      { time: '2:03', label: 'What this pilot proves' },
+      { time: '2:10', label: 'What to ask of a robot demo' },
+    ],
+    sources: [
+      {
+        label: 'RoboSimStudio: An Interactive Toolkit for Human and Agent Rapid Real2Sim of Robot Manipulation Tasks (arXiv)',
+        date: 'October 13, 2026',
+        href: 'https://arxiv.org/abs/2610.18835',
+      },
+      {
+        label: 'RoboSimStudio project page (UC Berkeley and NVIDIA)',
+        date: 'Checked November 13, 2026',
+        href: 'https://robosimstudio.github.io/',
+      },
+      {
+        label: 'Recent advances in AI are creating a ‘paradigm shift’ for robotics (Berkeley News)',
+        date: 'November 9, 2026',
+        href: 'https://news.berkeley.edu/2026/11/09/recent-advances-in-ai-are-creating-a-paradigm-shift-for-robotics/',
+      },
+    ],
+    sourcesNote:
+      'The three sources cited in the video. The paper and project page come from the research team, and the Berkeley News story is the university’s own coverage. None is an independent replication, and the paper evaluates a single hardware task.',
+    related: [
+      {
+        href: '/blog/noibu-ai-agents-closed-loop-ecommerce',
+        title: 'AI Gets Interesting When It Has to Prove the Change Worked',
+        note: 'The valuable loop is the one that checks whether a change held up in the real world.',
+      },
+      {
+        href: '/blog/bcg-geo-revenue-growth-evidence',
+        title: 'BCG Gives GEO a Revenue Number. It Is Not Yet a Benchmark',
+        note: 'A single pilot result is a useful hypothesis, not yet a benchmark.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage and analytical figures: selected muted excerpts and figure details from the UC Berkeley and NVIDIA RoboSimStudio research (2026), directly analyzed, with simulation and paper figures labeled. Case-specific commentary, not a footage license. Thumbnail: editorial composite using Robert’s real portrait and an illustrative treatment of a research frame. Music: “Machina” by Scott Buckley, CC BY 4.0. Independent analysis; not an endorsement or a research partnership.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'This Robot’s Simulation Had One Impossible Advantage',
+      description:
+        'A robot practiced in a simulation where the bar could not move. What a Berkeley and NVIDIA pilot shows about turning a real failure into a better model, and what one task cannot prove.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'goaldex-robot-hand-image-goal',
+    youtubeId: 'tttWsY54JpM',
+    youtubeTitle: 'This Robot Can Turn a Duck. Can It Tell When It’s Done?',
+    h1: 'This Robot Can Turn a Duck. Can It Tell When It’s Done?',
+    seoTitle: 'GoalDex: A Robot Hand That Turns Objects to Match a Photo',
+    metaDescription:
+      'ETH Zurich’s GoalDex turns an object in a robot hand to match a photo. It succeeded in 80 of 100 trials, and most failures came from calling it done too early.',
+    dek: 'Show a robot the result you want. The harder part is agreeing on when it is finished.',
+    uploadDate: '2026-11-11T16:00:00-08:00',
+    duration: 'PT2M8S',
+    durationLabel: '2 min 8 sec',
+    topic: 'AI in practice',
+    subject: 'GoalDex robot hand',
+    thumbnail: '/images/videos/goaldex-robot-hand-image-goal.jpg',
+    thumbnailAlt: 'Video thumbnail: a black multi-fingered robot hand holding a yellow rubber duck, with the words Show It a Photo and a GoalDex, ETH Zurich research demonstration label.',
+    sections: [
+      {
+        paragraphs: [
+          'Show this robot a picture, and it turns the object in its hand to match. That is a real rubber duck moving between real robot fingers, and the small image in the footage is the target.',
+          'The clever part is how the robot gets there. The catch is how it decides it is done.',
+        ],
+      },
+      {
+        heading: 'Why turning an object is hard',
+        paragraphs: [
+          'Try turning something in your own hand without putting it down. Every finger movement changes what you can see. Your fingers hide the object, then uncover a different side.',
+          'That creates a problem for a robot that first tries to calculate exactly how an object is positioned before deciding how to move it. Tracking an object’s position is hard when the hand keeps covering what it holds.',
+        ],
+      },
+      {
+        heading: 'A picture instead of coordinates',
+        paragraphs: [
+          'ETH Zurich researchers, working with NVIDIA, tested a different route called GoalDex. The controller receives the current camera image, information about its own joints and a picture of the desired orientation, and turns those inputs into finger movements without a separate object pose estimator.',
+          'The request is not simply to hold the object. It is to turn a particular side toward the camera. The controller was trained in simulation and transferred to a real robot hand, and one policy handled five tested objects: a cube, a 3D printed toy, a tablet bottle, a rubber duck and a globe.',
+        ],
+      },
+      {
+        heading: 'A prediction is not a verification',
+        paragraphs: [
+          'The green border in the demonstration footage marks a success prediction. That word matters. A prediction still needs checking.',
+          'In the researchers’ hardware evaluation, GoalDex succeeded in 80 of 100 trials, with 20 target images per object. The tablet bottle reached 13 of 20 and the cube 18. The strongest pose-based approach the researchers compared reached 27%. The most common failure was declaring success before the object was close enough to the goal. Those figures come from the paper’s evaluation, not from counting green flashes in an edited demonstration.',
+        ],
+      },
+      {
+        heading: 'What it does not show',
+        paragraphs: [
+          'This is a research result on five tested objects, not proof that a robot can handle anything in your home. The paper notes that training covered 25 objects in simulation and does not yet generalize to entirely unseen object categories.',
+          'Bigger machines face the same question. As [Atlas and the engine cover](/videos/boston-dynamics-atlas-humanoid-twist) show, moving the arm is one problem, and knowing where the object actually ended up is another.',
+        ],
+      },
+      {
+        heading: 'Whose version of done',
+        paragraphs: [
+          'The idea is still useful. Show a robot the result you want, then let it work toward that picture.',
+          'My takeaway: the next challenge is making sure the robot’s version of done matches yours.',
+        ],
+      },
+    ],
+    takeaways: [
+      'GoalDex, from ETH Zurich and NVIDIA, turns an object in a robot hand to match a goal image, using camera images and joint information instead of a separate object pose estimator.',
+      'A single policy trained in simulation transferred to a real robot hand and handled five tested objects.',
+      'In 100 hardware trials, 20 per object, it succeeded 80 times. Results ranged from 13 of 20 for a tablet bottle to 18 of 20 for a cube.',
+      'The most common failure was predicting success before the object was close enough to the goal, so the green signals in the footage are predictions, not verification.',
+      'This is research on five tested objects, not evidence of a general household robot.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Show it a picture' },
+      { time: '0:17', label: 'Why turning an object is hard' },
+      { time: '0:36', label: 'A picture instead of coordinates' },
+      { time: '0:52', label: 'Turn this side toward the camera' },
+      { time: '1:11', label: 'When it says it is done' },
+      { time: '1:21', label: '80 of 100 trials' },
+      { time: '1:46', label: 'What it does not show' },
+      { time: '1:54', label: 'Whose version of done' },
+    ],
+    sources: [
+      {
+        label: 'GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation (arXiv)',
+        date: 'November 1, 2026',
+        href: 'https://arxiv.org/abs/2611.02171',
+      },
+      {
+        label: 'GoalDex project page (ETH Zurich, CoRL 2026)',
+        date: 'Checked November 13, 2026',
+        href: 'https://rffr.leggedrobotics.com/works/goaldex/',
+      },
+    ],
+    sourcesNote:
+      'The paper and project page cited in the video. Both come from the research team. The per-object results and failure categories are from the paper’s hardware evaluation, not an independent test.',
+    related: [
+      {
+        href: '/blog/visa-agentic-commerce-benchmark-ai-shopping-failures',
+        title: 'Visa’s AI Shopping Benchmark Shows Why Agents Need a Stop Rule',
+        note: 'Systems that act need a separate check on whether they know enough to stop.',
+      },
+      {
+        href: '/blog/anthropic-project-swap-agentic-commerce-shopper-preferences',
+        title: 'The Hardest Part of Agentic Commerce May Be Knowing What the Shopper Wants',
+        note: 'Matching the result a person actually wants is often the hard part.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage: brief muted excerpts, crops and target-image insets from the GoalDex / ETH Zurich November 2026 research demonstration, directly analyzed with original commentary. Green signals in the footage are success predictions, not independent verification. No sponsorship or confirmed reuse license. Music: “Filaments” by Scott Buckley, CC BY 4.0. Independent analysis; not an endorsement or a research partnership.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'This Robot Can Turn a Duck. Can It Tell When It’s Done?',
+      description:
+        'ETH Zurich’s GoalDex turns an object to match a photo. What 80 of 100 trials show, and why knowing when it is done is the hard part.',
+      cta: 'Watch the video',
+    },
+  },
   {
     slug: 'boston-dynamics-atlas-humanoid-twist',
     youtubeId: 'JkKweShtJfk',
@@ -4459,7 +4831,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'boston-dynamics-atlas-humanoid-twist'
+export const FEATURED_VIDEO_SLUG: string | null = 'nasa-x59-no-front-window'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -4508,6 +4880,14 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: '9ub03NNYs7s', title: 'AI Ranked the Same Dog Food Top Three. Ten Days Apart.', uploadDate: '2026-11-14T07:07:44-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/9ub03NNYs7s.jpg' },
+  { youtubeId: 'v6EULJib4eM', title: 'This Robot Grips a 0.5 mm Pencil Lead', uploadDate: '2026-11-13T09:00:27-08:00', durationLabel: '0:27', thumbnail: '/images/shorts/v6EULJib4eM.jpg' },
+  { youtubeId: '7eTYTp5jrCY', title: 'AI Mentioned Levoit Every Time. Ranked It First Just Once.', uploadDate: '2026-11-13T08:47:47-08:00', durationLabel: '0:44', thumbnail: '/images/shorts/7eTYTp5jrCY.jpg' },
+  { youtubeId: 'c2c3FkSentY', title: 'This Robot Hand Walks on Its Own Fingers', uploadDate: '2026-11-12T09:00:19-08:00', durationLabel: '0:32', thumbnail: '/images/shorts/c2c3FkSentY.jpg', related: ['goaldex-robot-hand-image-goal'] },
+  { youtubeId: '-abPKAzA7MM', title: 'AI Mentioned Coway and Levoit Equally. First Choice Split.', uploadDate: '2026-11-12T08:44:25-08:00', durationLabel: '0:47', thumbnail: '/images/shorts/-abPKAzA7MM.jpg' },
+  { youtubeId: 'eAW9guT76_k', title: 'This Metal Tire Bends Around Rocks. No Air Inside.', uploadDate: '2026-11-11T17:00:08-08:00', durationLabel: '0:27', thumbnail: '/images/shorts/eAW9guT76_k.jpg' },
+  { youtubeId: '-l-umjhHs-c', title: 'Show This Robot a Picture. Watch the Duck.', uploadDate: '2026-11-11T09:00:22-08:00', durationLabel: '0:23', thumbnail: '/images/shorts/-l-umjhHs-c.jpg', related: ['goaldex-robot-hand-image-goal'] },
+  { youtubeId: 'x7VKvO0qgcY', title: 'AI Called It a $44 Skincare Routine. The Total Was $54.', uploadDate: '2026-11-11T08:32:00-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/x7VKvO0qgcY.jpg' },
   { youtubeId: 'YTNVhHycUgg', title: 'Getting Onto the Box Is Only Half the Trick', uploadDate: '2026-11-10T17:00:33-08:00', durationLabel: '0:34', thumbnail: '/images/shorts/YTNVhHycUgg.jpg', related: ['boston-dynamics-atlas-humanoid-twist'] },
   { youtubeId: '8erxzgpG_3w', title: 'AI Tied These Desk Brands on Mentions. Only One Ranked First.', uploadDate: '2026-11-10T15:11:01-08:00', durationLabel: '0:45', thumbnail: '/images/shorts/8erxzgpG_3w.jpg' },
   { youtubeId: 'ZukmqALUgLs', title: 'Watch Where BMW’s Humanoid Puts the Metal', uploadDate: '2026-11-10T09:00:27-08:00', durationLabel: '0:35', thumbnail: '/images/shorts/ZukmqALUgLs.jpg', related: ['boston-dynamics-atlas-humanoid-twist'] },

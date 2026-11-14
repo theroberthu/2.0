@@ -6,6 +6,70 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.93 - X-59, RoboSimStudio and GoalDex documentary pages and eight new Shorts (2026-11-14)
+
+**What changed.** Three new documentaries from the daily series get companion
+pages, bringing `/videos` to 33 documentaries:
+
+- `/videos/nasa-x59-no-front-window`, "Why NASA Built a Jet With No Front
+  Window" (https://youtu.be/kveJqAFXTR0, uploaded 2026-11-13T16:00:13-08:00,
+  PT2M38S), about 460 words, filed under a new `Aviation and travel` topic
+  because none of the existing five fit an aircraft.
+- `/videos/robosimstudio-robot-simulation-missing-rule`, "This Robot's
+  Simulation Had One Impossible Advantage" (https://youtu.be/q5-n7iiQ0gQ,
+  uploaded 2026-11-12T16:00:30-08:00, PT2M20S), AI in practice, about 510 words.
+- `/videos/goaldex-robot-hand-image-goal`, "This Robot Can Turn a Duck. Can It
+  Tell When It's Done?" (https://youtu.be/tttWsY54JpM, uploaded
+  2026-11-11T16:00:00-08:00, PT2M8S), AI in practice, about 440 words.
+
+Each page is written against the narration, with takeaways, the description's
+sources and current-standard related research. RoboSimStudio uses the
+description's chapters. The X-59 and GoalDex descriptions have none, so their
+chapters are taken from the caption timestamps. The homepage Featured Video now
+points at X-59, the newest upload. Eight Shorts from November 11 to 14 join the
+top of `SHORTS` (75 in total): the GoalDex duck Short and the ETH
+finger-walking hand Short relate to GoalDex, and the pencil-lead gripper, NASA
+tire and four RecoScope benchmark Shorts have no related page. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.** X-59: the $247.5 million figure is framed as the
+original April 2018 Lockheed Martin contract, not the mission cost; the
+external vision system (cameras and a 4K monitor) is from NASA's September 2021
+test release; 40 additional flights, Mach 1.53 and the move toward acoustic
+validation are from the October 28, 2026 update. The narration's June 2026
+first supersonic flight is not dated in the four cited sources, so NASA's June
+5, 2026 article (about Mach 1.1 at Edwards) is added as a fifth source. The page
+calls the X-59 a research aircraft and says a quieter thump would not by itself
+prove a profitable airline. RoboSimStudio (arXiv 2610.18835, October 13,
+2026): the one-hour build, the 56-minute verified simulated wipe, the 30
+layouts and the 0% to 100% simulated wiped area over 14 iterations all come
+from the paper, and the page labels the last as a simulated result, not a
+real-world success rate. The fixed-support failure and the free-body fix follow
+the paper's Figure 7 text. The page repeats the paper's own limits: one hardware
+task, assessed mainly by qualitative observation. Berkeley News gives a
+different cause for the trial failure (the robot did not reliably infer the
+bar's mass), so the page keeps to the paper's account. GoalDex (arXiv
+2611.02171, November 1, 2026; CoRL 2026): 80 of 100 hardware trials, 20 goals
+per object, tablet bottle 13 and cube 18, prediction failures as the most common
+failure, and the 27% strongest pose-based baseline, all from the paper. The
+training limits (25 objects in simulation, no unseen categories) come from its
+limitations section.
+
+**Verified.** Gate passes (tsc, lint, production build). On the dev server all
+three pages return 200 with one H1, a self-canonical, VideoObject and breadcrumb data,
+no broken images and no horizontal scroll at 375px. All internal link targets
+return 200, the GoalDex page shows its two related Shorts, and `/videos`, the
+homepage feature and the sitemap carry the new entries.
+
+**Impact.** Two more recent uploads get permanent, searchable pages, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** Run Test Live URL and Request Indexing on the three new pages once
+Claude in Chrome is connected. The GoalDex duck Short's YouTube description
+says the matching long video comes out "November 30 at 6 PM CT", but that video
+has been public since November 11. The site is not affected.
+
+---
+
 ## Release 1.92 - "Who controls what" grid in the OpenAI Business Hub article (2026-11-13)
 
 **What changed.** A five-row static table (Independent answer, Verified
