@@ -66,6 +66,17 @@ or review counts, and is captioned "Illustration: TRH."
 catalog to relationships across retailers, and the Alexa for Shopping hub now
 reflects that the assistant shops beyond Amazon's own store.
 
+**Verified.** Type check, lint and production build passed before the insert.
+Commit `4eedbdb`, pushed to `main`; the article was inserted to Supabase
+immediately before the push. Live: the article and hub return 200; title, meta
+description, canonical and OG image match the approved package; one H1; Article
+and BreadcrumbList JSON-LD parse; four internal and eight external links, all
+resolving 200; zero dashes and one question mark in the rendered body; the
+figure serves the desktop SVG at 1280px and the mobile SVG at 375px with no
+horizontal overflow and no console errors. The sitemap lists the new URL
+(2026-11-15) and the hub at 2026-11-15; AI Commerce 2027 stays at 2026-11-13
+and does not mention World Product Graph.
+
 **Follow-ups.** Request indexing for the new URL and the hub. Watch for any
 Amazon confirmation, launch or abandonment of World Product Graph, for how
 crawling and permissions would work, and for whether graph-derived
