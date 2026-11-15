@@ -16,7 +16,7 @@ const STATIC_LAST_MODIFIED = {
   about: new Date('2025-12-01'),
   blog: new Date('2026-03-18'),
   geo: new Date('2026-06-22'),
-  geoAlexaForShopping: new Date('2026-05-24'),
+  geoAlexaForShopping: new Date('2026-11-15'),
   geoWalmartSparky: new Date('2026-06-22'),
   aeo: new Date('2026-03-19'),
   // Living research page: bump this whenever LAST_UPDATED in

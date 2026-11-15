@@ -52,7 +52,7 @@ const articleSchema = {
     },
   },
   datePublished: '2026-05-24',
-  dateModified: '2026-05-24',
+  dateModified: '2026-11-15',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/geo/alexa-for-shopping`,
@@ -267,6 +267,10 @@ export default function AlexaForShoppingPage() {
               <p className="text-[15px] text-gray-400 leading-relaxed">
                 Three things changed on May 13, 2026 that matter for optimization. First, voice. Alexa for Shopping handles spoken queries across Echo devices and the Alexa app, and spoken queries run longer and more conversational than typed ones, which raises the premium on natural-language listing content. Second, cross-device context. A shopping conversation started on an Echo Show carries to the Amazon app and the desktop site, so the assistant accumulates context about the buyer across sessions and devices instead of starting cold each time. Third, the agentic action layer: auto-restock, price-triggered purchases, and scheduled deliveries. The assistant no longer just recommends. It transacts on the buyer&apos;s behalf, which creates the reorder optimization problem covered below. The full rebrand analysis is in{' '}
                 <Link href="/blog/rufus-alexa-for-shopping-rebrand-marketplace-sellers" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">the Alexa for Shopping rebrand post</Link>.
+              </p>
+              <p className="text-[15px] text-gray-400 leading-relaxed mt-4">
+                Alexa for Shopping also reaches beyond Amazon&apos;s own store. Amazon says customers can shop other retailers across the web through Shop Direct, compare features, prices and reviews across Amazon and the web, and, for eligible items, use Buy for Me to have Amazon complete the purchase on the merchant&apos;s site. Since November 4, merchants can join Shop Direct through a self-service Merchant Workspace that accepts standard shopping feeds. Separately, Reuters has reported an internal Amazon proposal called World Product Graph. It is unlaunched and is not a current Alexa feature.{' '}
+                <Link href="/blog/amazon-world-product-graph-ai-shopping" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">What the proposal would change</Link>.
               </p>
             </div>
           </div>

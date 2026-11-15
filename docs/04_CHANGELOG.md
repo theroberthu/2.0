@@ -6,6 +6,74 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.94 - Amazon World Product Graph article and Alexa for Shopping hub update (2026-11-15)
+
+**What changed.** New E-commerce Strategy article,
+`/blog/amazon-world-product-graph-ai-shopping`, "Amazon's World Product Graph
+Shows Why Product Feeds Are Not Enough" (1,154 body words, 1,199 with
+subheads). It reads Reuters' November 13 report on an internal Amazon proposal
+as a claim about product relationships, not listings: a feed describes one
+merchant's offers, a graph reconciles identities and relationships across
+sources, and whoever does that reconciling shapes the choice before any
+retailer competes on price. Adds the content file, insert script
+(`scripts/insert-amazon-world-product-graph-post.mjs`, dry run by default,
+`--apply` inserts), hero SVG and PNG, and one original inline illustration
+(desktop SVG, mobile SVG served at 640px and below, PNG fallback) placed after
+the paragraph ending "That reconciliation is the graph."
+
+`/geo/alexa-for-shopping` gets a 95-word paragraph at the end of "What the
+rebrand added" covering the cross-web capabilities Amazon documents (Shop
+Direct, Buy for Me, comparisons across Amazon and the web, the Shop Direct
+Merchant Workspace) and stating that World Product Graph is an unlaunched
+reported proposal, not a current Alexa feature, with a link to the new
+article. The hub's `dateModified` and its sitemap date move to 2026-11-15
+together. AI Commerce 2027 is unchanged: an unlaunched proposal does not enter
+the evidence tracker.
+
+**Sourcing.** Reuters (Greg Bensinger, November 13, 2026), read in full
+through licensed syndication and linked through Yahoo Finance because
+reuters.com blocks automated retrieval. Amazon primary sources: the Alexa for
+Shopping page (updated November 13), the Shop Direct Merchant Workspace
+announcement (November 4), the Selection and Catalog Systems careers page, the
+Selling Partner API Catalog Items reference and the 2020 Amazon Science post
+on product graphs. Google primary sources: the Shopping Graph launch post
+(May 18, 2021) and the AI Mode shopping post (May 20, 2025). Eight external
+links sit on existing phrases; no claim was added during templating.
+
+**Boundaries held.** The article does not say World Product Graph has
+launched, that October 1, 2027 is confirmed, that it powers Alexa for
+Shopping (labeled as inference), that outside agents can access it, or that
+Coca-Cola, Bayer or P&G confirmed anything. Amazon's statement that the
+document is outdated is included. Robert Tekiela's title rests on the document
+as Reuters reports it.
+
+**Editorial gates.** Research PASS, Editorial PASS, SEO/GEO STRONG, Final
+WRITE after two senior-editor revision rounds and one final edit: the outside
+agent sentence now says a fuller record "could make Amazon's interpretation of
+products harder for competing agents to ignore", the subhead reads "A graph
+determines how products relate", the brand site is "one of the reference
+records platforms reconcile", and the reported motive is attributed to people
+familiar with the plan. Zero em or en dashes, one question mark, four internal
+links, no Key findings box.
+
+**Visuals.** The supplied Amazon, Walmart and Target comparison image was not
+used: it appears to be an annotated social-video frame or mockup, and its
+creator, reuse rights and authenticity could not be established. The inline
+illustration is original, uses no logos, retailer interface, prices, ratings
+or review counts, and is captioned "Illustration: TRH."
+
+**Impact.** TRH's product-data thread moves from attributes inside one
+catalog to relationships across retailers, and the Alexa for Shopping hub now
+reflects that the assistant shops beyond Amazon's own store.
+
+**Follow-ups.** Request indexing for the new URL and the hub. Watch for any
+Amazon confirmation, launch or abandonment of World Product Graph, for how
+crawling and permissions would work, and for whether graph-derived
+relationships appear in sponsored placements. If Amazon launches it, revisit
+the AI Commerce 2027 signals table.
+
+---
+
 ## Release 1.93 - X-59, RoboSimStudio and GoalDex documentary pages and eight new Shorts (2026-11-14)
 
 **What changed.** Three new documentaries from the daily series get companion
