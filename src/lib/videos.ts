@@ -74,6 +74,259 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'nike-aero-fit-jersey-textile-waste',
+    youtubeId: 'VUuo4jBFsc0',
+    youtubeTitle: 'Why Nike’s $175 Match Jersey Starts With Textile Waste',
+    h1: 'Why Nike’s $175 Match Jersey Starts With Textile Waste',
+    seoTitle: 'Nike Aero-FIT: Why a $175 Match Jersey Starts With Textile Waste',
+    metaDescription:
+      'Nike says Aero-FIT turns textile waste into match kit with more than double the airflow. What the knit shows, and what a $175 list price does not tell us.',
+    dek: 'Recycled describes where the material came from. The knit is what Nike says moves the air, and the price shows where it is positioning both.',
+    uploadDate: '2026-11-15T16:00:35-08:00',
+    duration: 'PT2M19S',
+    durationLabel: '2 min 19 sec',
+    topic: 'Manufacturing',
+    subject: 'Nike Aero-FIT',
+    thumbnail: '/images/videos/nike-aero-fit-jersey-textile-waste.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu resting a hand on a roll of purple open-mesh knit fabric in a design studio, under the words Waste to Match Kit, Nike Aero-FIT. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'A blade is cutting football apparel from material Nike says began as textile waste. The fabric is Aero-FIT, which combines more open areas with denser ones. Nike says the textured construction lifts fabric away from the skin and channels air around the body.',
+          'The company claims more than double the airflow of its legacy athletic fabrics. Airflow is the comparison. It does not mean a player becomes twice as cool or runs twice as fast.',
+        ],
+      },
+      {
+        heading: 'The fans are a metaphor',
+        paragraphs: [
+          'Nike’s launch image shows tiny fans. They are a visual metaphor, not motors inside the jersey. The real design is in the yarn and stitches, and that changes what to look for: where the fabric opens, how it sits and what happens to that structure when it becomes a finished shirt.',
+        ],
+      },
+      {
+        heading: 'Premium kit, and two different ideas',
+        paragraphs: [
+          'This is premium kit. The U.S. men’s 2026 Match home jersey has a list price of $175. Nike.com displayed a $131.97 sale price when checked on November 2, 2026, and again on November 16.',
+          'There are two different ideas here. Nike says advanced chemical recycling turns textile waste into polyester yarn. Then the knit gives that material a particular structure. Recycled describes where the material came from. It does not, by itself, explain the airflow.',
+        ],
+      },
+      {
+        heading: 'Follow the panel',
+        paragraphs: [
+          'In Nike’s factory film from Thailand, people cut, stitch and inspect the garment. The camera shows the handling and alignment that sit behind a finished product. It does not show the waste being chemically recycled.',
+          'This is where the business question becomes practical: whether a promising material can become a product people choose, then be made consistently. A clever sample is something you can show. A repeatable product is something you can sell. Those are different achievements.',
+        ],
+      },
+      {
+        heading: 'What the price can tell us',
+        paragraphs: [
+          'The list price tells us where Nike is positioning this jersey. It does not reveal its margin, recycling costs or environmental footprint, and we do not have those product-level numbers. It does reveal the ambition: give recovered material a role in a product sold on performance.',
+        ],
+      },
+      {
+        heading: 'A reason to choose',
+        paragraphs: [
+          'The story starts with textile waste, but the customer is being asked to choose a shirt. The challenge is making the second reason to buy strong enough that the first becomes a bonus.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Nike says Aero-FIT is its first elite performance apparel made from 100 percent textile waste, turned into polyester yarn through advanced chemical recycling.',
+      'The airflow claim, more than double that of Nike’s legacy fabrics, is a company figure, not an independent test. It is a claim about airflow, not about cooling or speed.',
+      'Recycled content and airflow are separate ideas. The first is where the material came from. The second comes from a textured knit of open and denser zones.',
+      'The $175 figure is the U.S. list price of the USMNT 2026 Match home jersey. It is not manufacturing cost, margin or profit.',
+      'Nike’s factory material from Thailand shows cutting, stitching and inspection. It does not show the chemical recycling step.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Textile waste meets match kit' },
+      { time: '0:46', label: 'Premium kit and list price' },
+      { time: '1:12', label: 'Follow the panel' },
+      { time: '1:43', label: 'What the price can tell us' },
+      { time: '2:01', label: 'Give customers a reason to choose' },
+    ],
+    sources: [
+      {
+        label: 'The Making of Aero-FIT: The Material Innovation Keeping Footballers Cooler on the Pitch (Nike)',
+        date: 'July 10, 2026',
+        href: 'https://about.nike.com/en/magazine/aerofit-football-jersey-photo-essay',
+      },
+      {
+        label: 'Nike Unveils Aero-FIT Performance Apparel Innovation: Cooling Technology for a Hotter World (Nike)',
+        date: 'October 23, 2025',
+        href: 'https://about.nike.com/en/newsroom/releases/nike-aero-fit-official-images',
+      },
+      {
+        label: 'Nike Football Unveils 2026 Federation Kits, Engineered With Aero-FIT for the World’s Greatest Stage (Nike)',
+        date: 'March 16, 2026, updated March 23, 2026',
+        href: 'https://about.nike.com/en/newsroom/collections/nike-football-unveils-2026-federation-kits-featuring-aero-fit-performance-cooling-technology',
+      },
+      {
+        label: 'USMNT 2026 Match Home Men’s Nike Aero-FIT Soccer Authentic Jersey, style IB5183-133 (Nike.com)',
+        date: 'Checked November 16, 2026',
+        href: 'https://www.nike.com/t/usmnt-2026-match-home-mens-aero-fit-soccer-authentic-jersey-6KUd6sio/IB5183-133',
+      },
+    ],
+    sourcesNote:
+      'The four sources cited in the video, all Nike material. The airflow and textile-waste statements are company claims, not independent tests. The $175 figure is the U.S. list price; retail price is not manufacturing cost or profit.',
+    related: [
+      {
+        href: '/blog/bcg-geo-revenue-growth-evidence',
+        title: 'BCG Gives GEO a Revenue Number. It Is Not Yet a Benchmark',
+        note: 'A company’s own figure is a claim to read carefully, the same care the airflow number needs.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'A sample you can show and a product you can make consistently are different achievements.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage and images: Nike company material published in 2025 and 2026, used as selected muted excerpts and stills with crops and annotations, directly analyzed in independent commentary. The thumbnail is an original concept illustration using Robert’s portrait in an AI-assisted editorial composite. It is not an actual Nike product photograph and does not show him at a company facility. Music: “Filaments” by Scott Buckley, CC BY 4.0, edited and mixed under the narration. Additional sound accents are original. No sponsorship or endorsement implied.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Nike’s $175 Match Jersey Starts With Textile Waste',
+      description:
+        'Nike says this match jersey began as textile waste and moves more than double the air. What the knit shows, and what a $175 list price can and cannot tell us.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'chipotle-chipotlane-pickup-lane',
+    youtubeId: 'tLymwKHa6kc',
+    youtubeTitle: 'Why Chipotle Built a Drive-Thru That Won’t Take Your Order',
+    h1: 'Why Chipotle Built a Drive-Thru That Won’t Take Your Order',
+    seoTitle: 'Chipotlane: Why Chipotle’s Drive-Thru Won’t Take Your Order',
+    metaDescription:
+      'Chipotle’s pickup lane moves ordering and payment to the phone. Why the kitchen still sets the pace, and what $1.27 billion in digital revenue does not show.',
+    dek: 'Moving the order to the phone removes a conversation, not the cooking. The kitchen and the arriving car still have to meet at the window.',
+    uploadDate: '2026-11-14T16:00:18-08:00',
+    duration: 'PT3M',
+    durationLabel: '3 min',
+    topic: 'Retail strategy',
+    subject: 'Chipotle Chipotlane',
+    thumbnail: '/images/videos/chipotle-chipotlane-pickup-lane.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu beside a pickup window where a hand passes out a paper bag with a Chipotle logo, under the words No Orders. Just Pickup. An editorial composite; the handoff is illustrative.',
+    sections: [
+      {
+        paragraphs: [
+          'This drive-thru will not take your order. Choose the food, pay ahead, then collect it at the window. It sounds like a small change, but it moves the decision out of the car queue and into your phone.',
+          'Chipotle calls the format a Chipotlane, a drive-thru pickup lane for digital orders.',
+        ],
+      },
+      {
+        heading: 'Two different clocks',
+        paragraphs: [
+          'Here is the catch. Removing the ordering conversation does not automatically make lunch ready. The kitchen and the arriving car are running on different clocks. If those clocks do not line up, a pickup window can become another place to wait. That is the coordination problem this format has to solve.',
+        ],
+      },
+      {
+        heading: 'Moving the ordering conversation',
+        paragraphs: [
+          'Think about the usual drive-thru conversation: what you would like, which size, anything else. Then payment, then the food. The pickup lane rearranges the sequence. The customer has already made those choices, so the window becomes a handoff point. Your burrito has not learned to teleport. The decision just happened somewhere else.',
+          'That changes the question inside the restaurant. Instead of only asking what the person in front wants, a digital operation also has to manage orders that are already coming in. The preparation still takes real work. Ingredients need preparing, food needs assembling and the right bag has to reach the right customer.',
+        ],
+      },
+      {
+        heading: 'A different kind of restaurant',
+        paragraphs: [
+          'Chipotle has also experimented with a more radical format. In December 2021 it announced its first Chipotlane Digital Kitchen, a prototype in Cuyahoga Falls, Ohio. Pickup windows replace the usual trip inside. Chipotle designed it with no dining room access for guests and no front ordering line, and with a make line dedicated to digital orders.',
+          'That was a specific prototype, not a description of every restaurant with a pickup lane. What it shows is how moving the order online can change the building around it.',
+        ],
+      },
+      {
+        heading: 'The digital business in dollars',
+        paragraphs: [
+          'The business behind that change is already enormous. In the third quarter of 2026, digital sales represented 38.8% of Chipotle’s food and beverage revenue. Applied to the $3,277,942,000 of food and beverage revenue the company reported, that works out to roughly $1.27 billion in one quarter.',
+          'That is a derived estimate, and the percentage is rounded. It includes orders through the app, the website and third-party delivery platforms. It is not all pickup-lane sales, and it is revenue, not profit. Still, that is a lot of lunches that begin before someone reaches a counter.',
+        ],
+      },
+      {
+        heading: 'The pickup-lane footprint',
+        paragraphs: [
+          'The format has kept expanding. Chipotle announced its 1,500th Chipotlane on September 29, 2026, in Bradenton, Florida. In its third-quarter results, it reported opening 84 company-owned restaurants, 53 of them with a Chipotlane.',
+          'Those are real expansion figures. Chipotle says the format delivers higher volumes and returns than its traditional restaurants, which is the company’s own account. The figures do not prove that removing an order speaker by itself caused higher profits.',
+        ],
+      },
+      {
+        heading: 'Follow the order to the handoff',
+        paragraphs: [
+          'What interests me is the redesign. The app, the kitchen and the window are parts of the same service. Improving just one can leave the next step doing all the waiting.',
+          'The next time an app promises convenience, follow the order all the way to the handoff. That is where the promise has to become real.',
+        ],
+      },
+    ],
+    takeaways: [
+      'A Chipotlane is a pickup lane for digital orders. Ordering and payment happen before arrival, so the window is a handoff point, not an order point.',
+      'Moving the order to the phone does not make the food ready. The kitchen and the arriving car have to be coordinated, or the window becomes another place to wait.',
+      'Digital sales were 38.8% of Chipotle’s food and beverage revenue in Q3 2026, roughly $1.27 billion by a derived estimate. That covers app, website and third-party orders. It is revenue, not profit, and not pickup-lane sales alone.',
+      'Chipotle opened its 1,500th Chipotlane in September 2026, and 53 of the 84 company-owned restaurants it opened in Q3 included one.',
+      'The 2021 Digital Kitchen in Cuyahoga Falls, Ohio, with no guest dining room access or front line, was a prototype, not the standard format.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The window that will not take your order' },
+      { time: '0:12', label: 'The kitchen and the car run on different clocks' },
+      { time: '0:31', label: 'Moving the ordering conversation' },
+      { time: '1:12', label: 'A different kind of restaurant' },
+      { time: '1:40', label: 'The digital business in dollars' },
+      { time: '2:15', label: 'The pickup-lane footprint' },
+      { time: '2:38', label: 'Follow the service to the handoff' },
+    ],
+    sources: [
+      {
+        label: 'Chipotle Announces Third Quarter 2026 Results (Chipotle)',
+        date: 'October 28, 2026',
+        href: 'https://newsroom.chipotle.com/2026-10-28-CHIPOTLE-ANNOUNCES-THIRD-QUARTER-2026-RESULTS',
+      },
+      {
+        label: 'Chipotle Reaches 1,500 Chipotlanes, Advancing North American Growth Strategy (Chipotle)',
+        date: 'September 29, 2026',
+        href: 'https://ir.chipotle.com/2026-09-29-CHIPOTLE-REACHES-1%2C500-CHIPOTLANES%2C-ADVANCING-NORTH-AMERICAN-GROWTH-STRATEGY',
+      },
+      {
+        label: 'Chipotle to Open First Chipotlane Digital Kitchen (Chipotle)',
+        date: 'December 16, 2021',
+        href: 'https://newsroom.chipotle.com/2021-12-16-CHIPOTLE-TO-OPEN-FIRST-CHIPOTLANE-DIGITAL-KITCHEN',
+      },
+      {
+        label: 'Chipotle Opens Its 4,000th Restaurant, Located in Manhattan, Kansas (Chipotle)',
+        date: 'December 12, 2025',
+        href: 'https://ir.chipotle.com/2025-12-12-BIG-MILESTONE-IN-THE-LITTLE-APPLE-CHIPOTLE-OPENS-ITS-4%2C000TH-RESTAURANT%2C-LOCATED-IN-MANHATTAN%2C-KANSAS',
+      },
+      {
+        label: 'Chipotle Reaches 1,000th Chipotlane Milestone (Chipotle)',
+        date: 'November 20, 2024',
+        href: 'https://newsroom.chipotle.com/2024-11-20-CHIPOTLE-REACHES-1%2C000TH-CHIPOTLANE-MILESTONE',
+      },
+    ],
+    sourcesNote:
+      'The five primary sources cited in the video, all Chipotle releases. The roughly $1.27 billion figure is derived: 38.8% of $3,277,942,000 in Q3 2026 food and beverage revenue, using a rounded percentage. It is company-wide digital revenue, not profit, incremental sales or Chipotlane-only revenue.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'Software can take the order. Someone still has to make it and hand it over.',
+      },
+      {
+        href: '/blog/ai-checkout-interface-commerce-infrastructure',
+        title: 'If Checkout Disappears, What Does the Retailer Still Own?',
+        note: 'When ordering and payment move ahead of the visit, what remains is the operation that fulfills the promise.',
+      },
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Speeding up one step can leave the next one doing all the waiting.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Chipotle press photos of Olathe, Kansas (2024) and the Cuyahoga Falls, Ohio Digital Kitchen prototype (2021) appear briefly, annotated, during direct design analysis. Preparation and phone footage are licensed Pexels illustrations, not Chipotle kitchens, staff, products or app. Workflow graphics are conceptual, not measured wait-time data. Restaurant photos by Rick Obst (Albany, Oregon, July 2026), CC BY 4.0, cropped, darkened and annotated, are general brand context, not a verified Chipotlane. The thumbnail is an editorial composite with Robert’s portrait; the pickup handoff is illustrative. Music: “Filaments” by Scott Buckley, CC BY 4.0. Independent commentary; no sponsorship or endorsement implied.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Chipotle Built a Drive-Thru That Won’t Take Your Order',
+      description:
+        'Chipotle’s pickup lane moves the order to your phone. Follow it from the app to the kitchen and the window, and see why a faster screen still needs an operation behind it.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'nasa-x59-no-front-window',
     youtubeId: 'kveJqAFXTR0',
     youtubeTitle: 'Why NASA Built a Jet With No Front Window',
@@ -4831,7 +5084,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'nasa-x59-no-front-window'
+export const FEATURED_VIDEO_SLUG: string | null = 'nike-aero-fit-jersey-textile-waste'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -4880,6 +5133,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'UlUlSyybL5s', title: 'This Robot Vacuum Grew Legs. Watch the Stairs.', uploadDate: '2026-11-15T09:00:36-08:00', durationLabel: '0:31', thumbnail: '/images/shorts/UlUlSyybL5s.jpg', related: ['1x-neo-home-robot-human-backup'] },
+  { youtubeId: 'slhqOt0-HsI', title: 'One Robot Gets Stuck. The Other Changes Its Stance.', uploadDate: '2026-11-14T09:00:10-08:00', durationLabel: '0:30', thumbnail: '/images/shorts/slhqOt0-HsI.jpg' },
   { youtubeId: '9ub03NNYs7s', title: 'AI Ranked the Same Dog Food Top Three. Ten Days Apart.', uploadDate: '2026-11-14T07:07:44-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/9ub03NNYs7s.jpg' },
   { youtubeId: 'v6EULJib4eM', title: 'This Robot Grips a 0.5 mm Pencil Lead', uploadDate: '2026-11-13T09:00:27-08:00', durationLabel: '0:27', thumbnail: '/images/shorts/v6EULJib4eM.jpg' },
   { youtubeId: '7eTYTp5jrCY', title: 'AI Mentioned Levoit Every Time. Ranked It First Just Once.', uploadDate: '2026-11-13T08:47:47-08:00', durationLabel: '0:44', thumbnail: '/images/shorts/7eTYTp5jrCY.jpg' },

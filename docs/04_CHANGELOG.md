@@ -6,6 +6,64 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.95 - Nike Aero-FIT and Chipotle Chipotlane documentary pages and two new Shorts (2026-11-16)
+
+**What changed.** Two new documentaries from the daily series get companion
+pages, bringing `/videos` to 35 documentaries:
+
+- `/videos/nike-aero-fit-jersey-textile-waste`, "Why Nike's $175 Match Jersey
+  Starts With Textile Waste" (https://youtu.be/VUuo4jBFsc0, uploaded
+  2026-11-15T16:00:35-08:00, PT2M19S), Manufacturing, about 360 words.
+- `/videos/chipotle-chipotlane-pickup-lane`, "Why Chipotle Built a Drive-Thru
+  That Won't Take Your Order" (https://youtu.be/tLymwKHa6kc, uploaded
+  2026-11-14T16:00:18-08:00, PT3M), Retail strategy, about 510 words.
+
+Each page is written against the narration from the uploaded captions, with
+takeaways, the description's chapters and sources, and current-standard related
+research. The homepage Featured Video now points at Nike, the newest upload.
+Two Shorts from November 14 and 15 join the top of `SHORTS` (77 in total): the
+Roborock Saros Rover stair-climbing vacuum Short relates to the 1X NEO page,
+matching the earlier robot-vacuum Short, and the six-legged research robot Short
+has no related page. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.** Nike: all four sources are Nike material. The
+100 percent textile waste statement, advanced chemical recycling and "more than
+double the airflow of legacy fabrics" are framed as company claims, not
+independent tests, and the page keeps the narration's point that airflow is not
+cooling or speed. The Thailand factory material is Nike's July 10, 2026 photo
+essay; the page says it does not show the chemical recycling step. The $175
+figure is the U.S. list price of the USMNT 2026 Match home jersey (style
+IB5183-133). Nike.com showed a $131.97 sale price on November 2 (per the
+description) and again when checked on November 16, and the page says so. The
+page states that list price is not cost, margin or profit. Chipotle: all five
+sources are Chipotle releases. The roughly $1.27 billion figure is labelled a
+derived estimate, 38.8% of $3,277,942,000 in Q3 2026 food and beverage revenue,
+covering app, website and third-party orders, and is not profit or
+Chipotlane-only revenue. The 1,500th Chipotlane (Bradenton, Florida, September
+29, 2026) and the 53 Chipotlane openings in Q3 are from the releases. The 2021
+Cuyahoga Falls Digital Kitchen is described as a prototype with no guest dining
+room access or front line. Three details go beyond the narration and come from
+the cited releases: the format's name, the 84 total company-owned openings
+beside the 53, and one sentence noting that Chipotle reports higher volumes and
+returns for the format, framed as the company's own account. The page keeps the
+narration's limit that the figures do not prove the format caused higher
+profits.
+
+**Verified.** Gate passes (tsc, lint, production build). On the dev server both
+pages return 200 with one H1, a self-canonical, VideoObject and breadcrumb data,
+no broken images, no console errors and no horizontal scroll at 375px. All
+related-article links return 200, the 1X NEO page shows the new related Short,
+and `/videos`, the homepage feature and the sitemap carry the new entries.
+
+**Impact.** Two more recent uploads get permanent, searchable pages, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** Request indexing for the two new pages when asked. Carried
+over: indexing for the World Product Graph article and the Alexa hub (Release
+1.94), and the Bosch and Domino's canonical recrawl.
+
+---
+
 ## Release 1.94 - Amazon World Product Graph article and Alexa for Shopping hub update (2026-11-15)
 
 **What changed.** New E-commerce Strategy article,
