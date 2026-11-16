@@ -63,9 +63,15 @@ Shorts; the homepage features the Nike video; the sitemap lists both pages
 **Impact.** Two more recent uploads get permanent, searchable pages, and the
 homepage stays current with the newest documentary.
 
-**Follow-ups.** Request indexing for the two new pages when asked. Carried
-over: indexing for the World Product Graph article and the Alexa hub (Release
-1.94), and the Bosch and Domino's canonical recrawl.
+**Follow-ups.** Test Live URL and Request Indexing ran on 2026-11-16 for four
+pages, all passing the live test with a self-canonical, and all four requests
+were accepted. The Nike and Chipotle pages were not yet indexed and both had a
+video detected. The World Product Graph article (Release 1.94) was already
+indexed. `/geo/alexa-for-shopping` (updated in Release 1.94) is not indexed:
+Search Console reports "Crawled - currently not indexed" with a last crawl of
+July 5, 2026, so Google has not seen any version of the hub since then. Check
+it again after the recrawl. Carried over: the Bosch and Domino's canonical
+recrawl.
 
 ---
 
