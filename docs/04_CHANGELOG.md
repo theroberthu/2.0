@@ -54,6 +54,11 @@ pages return 200 with one H1, a self-canonical, VideoObject and breadcrumb data,
 no broken images, no console errors and no horizontal scroll at 375px. All
 related-article links return 200, the 1X NEO page shows the new related Short,
 and `/videos`, the homepage feature and the sitemap carry the new entries.
+Live after deploy (commit `eca0fde`): both pages return 200 with the correct
+title, description, self-canonical, thumbnail OG image and VideoObject data;
+the four new images return 200; `/videos` lists both documentaries and both
+Shorts; the homepage features the Nike video; the sitemap lists both pages
+(174 URLs).
 
 **Impact.** Two more recent uploads get permanent, searchable pages, and the
 homepage stays current with the newest documentary.
