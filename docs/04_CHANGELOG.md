@@ -54,7 +54,12 @@ data; the three new images return 200; `/videos` lists the documentary and
 both Shorts; the homepage features it; the sitemap lists it (175 URLs). Test
 Live URL and Request Indexing ran on 2026-11-17: not yet indexed, live test
 passed with a self-canonical and a detected video, and the request was
-accepted.
+accepted. The same day, Test Live URL and Request Indexing also ran for the
+other pages the release changed: `/videos` (not yet indexed), the homepage and
+`/videos/amazon-robots-deepfleet-warehouse-traffic` (both already indexed). All
+three passed with a self-canonical and all requests were accepted. The new page
+was tested and requested a second time; its Google index view still reads
+"URL is unknown to Google", which is expected until Googlebot crawls it.
 
 **Impact.** The newest upload gets a permanent, searchable page, and the
 homepage stays current with the newest documentary.
