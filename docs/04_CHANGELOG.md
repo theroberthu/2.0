@@ -6,6 +6,60 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.96 - Amazon returns documentary page and two new Shorts (2026-11-17)
+
+**What changed.** One new documentary from the daily series gets a companion
+page, bringing `/videos` to 36 documentaries:
+
+- `/videos/amazon-returns-after-refund`, "What Happens to Your Amazon Return
+  After the Refund?" (https://youtu.be/eg1qCVF-Sqk, uploaded
+  2026-11-16T16:00:00-08:00, PT3M11S), Delivery and logistics, about 510 words.
+
+The page is written against the narration from the uploaded captions, with
+takeaways, the description's chapters and sources, and current-standard related
+research. The homepage Featured Video now points at it, the newest upload. Two
+Shorts from November 16 and 17 join the top of `SHORTS` (79 in total): the
+Amazon Vulcan conveyor-belt hand Short relates to the Amazon warehouse robots
+page, and the UNIQLO RFID checkout Short has no related page. Its description
+links a "Full story" video (`CfjYocKKIlc`) that is still private, so the Short
+is not linked to anything yet. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.** All five sources are Amazon material. Return
+centers by category and the inspection steps are from Amazon's returns page
+(updated February 20, 2026); the second inspection and four Resale conditions
+are from the Amazon Resale page. The JB Tools figures (7,137 units sold,
+$545,640 net recovered value, about 79% net recovery on sold units) are from
+the 2025 Amazon-published case study PDF, framed as one seller's reported
+result. The page states that net recovered value is not profit and that the
+study gives no complete profit calculation. The 5% to 10% gross recovery
+before fees, and the warning that net recovery can be negative, are from the
+U.S. FBA Liquidations help page. The page names its two fees (a per-item
+processing fee and a 15% referral fee), which goes slightly beyond the
+narration's "deducts fees", and keeps the narration's point that the case
+study and the liquidation range describe different programs and populations.
+Returnless Resolutions for participating U.S. FBA sellers and FBA Donations
+through Good360 are from the August 2024 seller returns post. The page uses
+the description's footage and thumbnail disclosures: licensed Pexels
+illustration, not Amazon or JB Tools facilities, and a composite thumbnail
+that does not document Amazon employment.
+
+**Verified.** Gate passes (tsc, lint, production build). On the dev server the
+page returns 200 with one H1, a self-canonical, VideoObject and breadcrumb data,
+no broken images, no console errors and no horizontal scroll at 375px. Both
+related-article links return 200, the Amazon robots page shows the new related
+Short, and `/videos`, the homepage feature and the sitemap carry the new
+entries.
+
+**Impact.** The newest upload gets a permanent, searchable page, and the
+homepage stays current with the newest documentary.
+
+**Follow-ups.** Request indexing for the new page. When `CfjYocKKIlc` goes
+public, build its page and set it as the UNIQLO Short's related page. Carried
+over: recheck `/geo/alexa-for-shopping` after Google recrawls it, and the Bosch
+and Domino's canonical recrawl.
+
+---
+
 ## Release 1.95 - Nike Aero-FIT and Chipotle Chipotlane documentary pages and two new Shorts (2026-11-16)
 
 **What changed.** Two new documentaries from the daily series get companion

@@ -74,6 +74,137 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'amazon-returns-after-refund',
+    youtubeId: 'eg1qCVF-Sqk',
+    youtubeTitle: 'What Happens to Your Amazon Return After the Refund?',
+    h1: 'What Happens to Your Amazon Return After the Refund?',
+    seoTitle: 'What Happens to Amazon Returns After the Refund',
+    metaDescription:
+      'Your refund is done. The product still needs a next use. How Amazon routes returns to resale, liquidation or donation, and what one seller recovered.',
+    dek: 'The refund reverses the payment. It cannot reverse what happened to the product, so someone still has to decide where the item goes next.',
+    uploadDate: '2026-11-16T16:00:00-08:00',
+    duration: 'PT3M11S',
+    durationLabel: '3 min 11 sec',
+    topic: 'Delivery and logistics',
+    subject: 'Amazon returns',
+    thumbnail: '/images/videos/amazon-returns-after-refund.jpg',
+    thumbnailAlt: 'Video thumbnail: a large cardboard box with an Amazon smile and a red Return label in a warehouse, Robert Hu shown as a worker scanning a box at a packing table, under the words Refunded. Now What? Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'You get your Amazon refund and the box leaves your house. The question the refund does not answer is what that box is worth now.',
+        ],
+      },
+      {
+        heading: 'Where inspection leads',
+        paragraphs: [
+          'Amazon says returned items are consolidated and routed to return centers that handle different product categories, such as clothing, electronics or furniture and appliances. Then comes the inspection: the packaging and its seals, the item itself, signs of use and damage.',
+          'An item that meets Amazon’s standards can be relisted as new. One that cannot may qualify for Amazon Resale, where it gets a second inspection and one of four conditions, from Like New to Acceptable. That description has to tell the next customer what condition they are buying.',
+        ],
+      },
+      {
+        heading: 'The seller facing the pile',
+        paragraphs: [
+          'One seller faced the problem as a daily pile of work. In a 2025 case study published by Amazon, the power tools seller JB Tools described growing return volume, limited warehouse space and the judgment needed to grade individual items. With hundreds of suppliers, each with different return terms, sending everything back was often not possible.',
+          'The company enrolled in Amazon’s Grade and Resell program. Eligible returns could be evaluated and sold as used without passing through the seller’s own warehouse.',
+        ],
+      },
+      {
+        heading: 'The reported recovery',
+        paragraphs: [
+          'The case study reports 7,137 units sold through the program, with $545,640 in net recovered value and a net recovery rate of roughly 79% on those sold units. That is a reported result from one seller, published by Amazon, not a guarantee for every return. Net recovered value is not profit, and the study does not give a complete profit calculation.',
+          'It does make the decision tangible: who should do the inspection, and where should the item’s next sale happen?',
+        ],
+      },
+      {
+        heading: 'A different recovery route',
+        paragraphs: [
+          'Amazon’s U.S. guidance for FBA Liquidations describes a gross recovery of about 5% to 10% of a product’s value before fees. On an illustrative $100 value, that is $5 to $10. Amazon then deducts a per-item processing fee and a 15% referral fee, so the amount reaching the seller is lower, and the guidance warns that net recovery can be negative in some circumstances.',
+          'This is one inventory route, not the fate of every return. The JB Tools case and the liquidation range describe different programs and populations. They are not competing offers for the same box. The route depends on the item, its eligibility and what can realistically be recovered.',
+        ],
+      },
+      {
+        heading: 'When the item never makes the trip',
+        paragraphs: [
+          'Sometimes the product never comes back at all. Amazon offers participating U.S. FBA sellers Returnless Resolutions, a refund without requiring the item back. Eligibility and seller participation matter, so customers cannot assume that every return qualifies. When collecting an item creates more work than the recovery justifies, skipping the journey can be a business decision too.',
+          'Other eligible products can be donated through Amazon’s partnership with the nonprofit Good360, and some items can be repaired or recycled.',
+        ],
+      },
+      {
+        heading: 'The best next use',
+        paragraphs: [
+          'There is no single destination behind the return button. The customer asks whether they can get their money back. The seller has to ask what the best next use is for this particular item. The refund reverses the payment. It cannot reverse what happened to the product.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Amazon routes returns to category-specific return centers, where packaging, seals, the item and any signs of use or damage are inspected.',
+      'Items that meet Amazon’s standard can be relisted as new. Others may be graded into one of four used conditions and sold through Amazon Resale.',
+      'In a 2025 case study published by Amazon, JB Tools reported 7,137 units sold through Grade and Resell and $545,640 in net recovered value, roughly 79% on those sold units. That is one seller’s reported result, not profit or a guarantee.',
+      'Amazon’s U.S. liquidation guidance describes gross recovery of about 5% to 10% of a product’s value before fees, and net recovery can be negative. It describes a different route and population from the JB Tools case.',
+      'Some items never return: participating U.S. FBA sellers can grant Returnless Resolutions, and eligible items can be donated through Good360, repaired or recycled.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Refund, box, value question' },
+      { time: '0:06', label: 'Where inspection leads' },
+      { time: '0:32', label: 'The seller facing the pile' },
+      { time: '1:00', label: 'The reported recovery' },
+      { time: '1:29', label: 'A different recovery route' },
+      { time: '2:09', label: 'When the item need not return' },
+      { time: '2:44', label: 'The best next use' },
+    ],
+    sources: [
+      {
+        label: 'Amazon gives an inside look at what happens to returns (Amazon)',
+        date: 'December 21, 2023, updated February 20, 2026',
+        href: 'https://www.aboutamazon.com/news/retail/what-happens-to-amazon-returns',
+      },
+      {
+        label: 'What is Amazon Resale? (Amazon)',
+        date: 'August 12, 2024, updated November 20, 2024',
+        href: 'https://www.aboutamazon.com/news/retail/amazon-resale-discounts',
+      },
+      {
+        label: 'FBA Liquidations (Amazon Seller Central help, U.S.)',
+        date: 'Checked November 17, 2026',
+        href: 'https://sellercentral.amazon.com/help/hub/reference/external/GYVCG5Q3BEJ6MLMF?local=en-US',
+      },
+      {
+        label: 'JB Tools Drives Growth through Returns Transformation (Amazon seller case study, PDF)',
+        date: '2025',
+        href: 'https://m.media-amazon.com/images/G/01/sell/pdf/JB-Tools-case-study-2025.pdf',
+      },
+      {
+        label: 'Amazon expands options for sellers to handle customer returns (Amazon)',
+        date: 'August 13, 2024, updated September 19, 2024',
+        href: 'https://www.aboutamazon.com/news/small-business/amazon-return-options-sellers',
+      },
+    ],
+    sourcesNote:
+      'The five sources cited in the video, all Amazon material. The JB Tools figures are one seller’s reported result in an Amazon-published case study; net recovered value is not profit. The 5% to 10% figure is gross recovery before fees under U.S. FBA Liquidations and describes a different program from the case study.',
+    related: [
+      {
+        href: '/blog/ai-checkout-interface-commerce-infrastructure',
+        title: 'If Checkout Disappears, What Does the Retailer Still Own?',
+        note: 'Every order carries a fulfillment path and a return policy, and post-purchase is where much of the operating work still sits.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Deciding where the work happens, in your own building or someone else’s, is an operating choice, not only a cost line.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Footage is licensed illustrative Pexels material by Kampus Production, Tima Miroshnichenko, Pavel Danilyuk, Kaboompics and Kindel Media. It does not show Amazon or JB Tools facilities or a documented returned item. Graphics are original. The thumbnail is an AI-assisted editorial composite with Robert depicted as a fictional warehouse worker; it does not document Amazon employment, a facility visit or a product test. Music: “Filaments” by Scott Buckley, CC BY 4.0. Independent commentary; no sponsorship or endorsement.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'What Happens to Your Amazon Return After the Refund?',
+      description:
+        'The refund is complete, but the product still needs a next destination. Follow a return through inspection, resale, liquidation and the routes where it never comes back.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'nike-aero-fit-jersey-textile-waste',
     youtubeId: 'VUuo4jBFsc0',
     youtubeTitle: 'Why Nike’s $175 Match Jersey Starts With Textile Waste',
@@ -5084,7 +5215,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'nike-aero-fit-jersey-textile-waste'
+export const FEATURED_VIDEO_SLUG: string | null = 'amazon-returns-after-refund'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -5133,6 +5264,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'DjszChlH95Y', title: 'How UNIQLO Counts Your Basket Without Scanning Every Barcode', uploadDate: '2026-11-17T14:00:33-08:00', durationLabel: '0:35', thumbnail: '/images/shorts/DjszChlH95Y.jpg' },
+  { youtubeId: 'NfPeoFW86Ko', title: 'Amazon Put Conveyor Belts on a Robot Hand', uploadDate: '2026-11-16T09:00:23-08:00', durationLabel: '0:31', thumbnail: '/images/shorts/NfPeoFW86Ko.jpg', related: ['amazon-robots-deepfleet-warehouse-traffic'] },
   { youtubeId: 'UlUlSyybL5s', title: 'This Robot Vacuum Grew Legs. Watch the Stairs.', uploadDate: '2026-11-15T09:00:36-08:00', durationLabel: '0:31', thumbnail: '/images/shorts/UlUlSyybL5s.jpg', related: ['1x-neo-home-robot-human-backup'] },
   { youtubeId: 'slhqOt0-HsI', title: 'One Robot Gets Stuck. The Other Changes Its Stance.', uploadDate: '2026-11-14T09:00:10-08:00', durationLabel: '0:30', thumbnail: '/images/shorts/slhqOt0-HsI.jpg' },
   { youtubeId: '9ub03NNYs7s', title: 'AI Ranked the Same Dog Food Top Three. Ten Days Apart.', uploadDate: '2026-11-14T07:07:44-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/9ub03NNYs7s.jpg' },
