@@ -48,12 +48,18 @@ page returns 200 with one H1, a self-canonical, VideoObject and breadcrumb data,
 no broken images, no console errors and no horizontal scroll at 375px. Both
 related-article links return 200, the Amazon robots page shows the new related
 Short, and `/videos`, the homepage feature and the sitemap carry the new
-entries.
+entries. Live after deploy (commit `aa133ca`): the page returns 200 with the
+correct title, description, self-canonical, thumbnail OG image and VideoObject
+data; the three new images return 200; `/videos` lists the documentary and
+both Shorts; the homepage features it; the sitemap lists it (175 URLs). Test
+Live URL and Request Indexing ran on 2026-11-17: not yet indexed, live test
+passed with a self-canonical and a detected video, and the request was
+accepted.
 
 **Impact.** The newest upload gets a permanent, searchable page, and the
 homepage stays current with the newest documentary.
 
-**Follow-ups.** Request indexing for the new page. When `CfjYocKKIlc` goes
+**Follow-ups.** When `CfjYocKKIlc` goes
 public, build its page and set it as the UNIQLO Short's related page. Carried
 over: recheck `/geo/alexa-for-shopping` after Google recrawls it, and the Bosch
 and Domino's canonical recrawl.
