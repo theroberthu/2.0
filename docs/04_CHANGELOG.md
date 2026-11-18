@@ -39,7 +39,13 @@ labels and all article text are unchanged. No SEO-relevant markup changed.
 
 **Verified.** Gate passes (tsc, lint, production build). On the dev server at
 1024px and 375px: the new header fits, the name shows on mobile, button and link
-colors compute to the new values, no horizontal scroll, no dashes added.
+colors compute to the new values, no horizontal scroll, no dashes added. Live
+after deploy (commit `c26ca7c`): the homepage serves the new header label,
+"Revised as new evidence arrives." and no hero pill or dot grid; the live CSS
+defines `text-brand-link` (rgb 92 184 214); in Chrome the gold buttons compute
+to navy text, the name shows in the header, and a fresh reload logs no console
+errors. The homepage, `/blog`, an article page and `/ai-commerce-2027` return
+200, and the title and self-canonical are unchanged.
 
 **Impact.** Primary buttons and links meet WCAG AA contrast, and the hero reads
 cleaner with less template decoration.
