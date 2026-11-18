@@ -64,7 +64,7 @@ export default function FloatingBookCta() {
           rel="noopener noreferrer"
           tabIndex={visible ? 0 : -1}
           aria-label="Subscribe to Hu's Weekly Hoot on LinkedIn (opens in a new tab)"
-          className="flex items-center gap-2 pl-4 pr-3 py-3 text-white font-semibold text-[13px] hover:bg-brand-gold/90 rounded-full transition-colors duration-150"
+          className="flex items-center gap-2 pl-4 pr-3 py-3 text-brand-dark font-semibold text-[13px] hover:bg-brand-gold/90 rounded-full transition-colors duration-150"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -76,7 +76,7 @@ export default function FloatingBookCta() {
           onClick={handleDismiss}
           tabIndex={visible ? 0 : -1}
           aria-label="Dismiss subscribe prompt"
-          className="flex items-center justify-center w-9 h-9 mr-1 rounded-full text-white/80 hover:text-white hover:bg-black/15 transition-colors duration-150"
+          className="flex items-center justify-center w-9 h-9 mr-1 rounded-full text-brand-dark/80 hover:text-brand-dark hover:bg-black/15 transition-colors duration-150"
         >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />

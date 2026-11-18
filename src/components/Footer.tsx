@@ -98,7 +98,7 @@ export default function Footer() {
             </p>
             <Link
               href="/blog"
-              className="inline-block border border-brand-gold text-brand-gold text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold hover:text-white transition-all duration-200"
+              className="inline-block border border-brand-gold text-brand-gold text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-gold hover:text-brand-dark transition-all duration-200"
             >
               Read the research
             </Link>

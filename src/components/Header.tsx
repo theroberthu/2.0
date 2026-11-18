@@ -20,7 +20,7 @@ export default function Header() {
             className="rounded-sm"
             priority
           />
-          <span className="hidden sm:inline-block text-[17px] font-bold text-white tracking-tight">
+          <span className="inline-block text-[17px] font-bold text-white tracking-tight">
             Robert Hu
           </span>
         </Link>
@@ -40,9 +40,9 @@ export default function Header() {
             href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[13px] font-semibold bg-brand-gold text-white px-5 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-sm hover:shadow-md"
+            className="text-[13px] font-semibold bg-brand-gold text-brand-dark px-5 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
           >
-            Subscribe
+            Subscribe on LinkedIn
           </a>
         </nav>
 
@@ -87,9 +87,9 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="block text-[15px] font-semibold bg-brand-gold text-white px-5 py-3 rounded-md text-center hover:bg-brand-gold/85 transition-all duration-200"
+                className="block text-[15px] font-semibold bg-brand-gold text-brand-dark px-5 py-3 rounded-md text-center hover:bg-brand-gold/85 transition-all duration-200"
               >
-                Subscribe to the Newsletter
+                Subscribe to the Newsletter on LinkedIn
               </a>
             </div>
           </div>

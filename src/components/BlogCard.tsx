@@ -30,12 +30,12 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       <div className="p-6">
         {/* Category tag */}
         {post.category && post.category !== 'general' && (
-          <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full mb-3">
+          <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-link bg-brand-accent/[0.1] px-2.5 py-1 rounded-full mb-3">
             {post.category}
           </span>
         )}
 
-        <h3 className="text-lg font-semibold text-white mt-1 mb-2 group-hover:text-brand-accent transition-colors duration-200 leading-snug">
+        <h3 className="text-lg font-semibold text-white mt-1 mb-2 group-hover:text-brand-link transition-colors duration-200 leading-snug">
           {post.title}
         </h3>
 
@@ -67,7 +67,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             )}
           </div>
 
-          <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent group-hover:gap-2.5 transition-all duration-200">
+          <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-link group-hover:gap-2.5 transition-all duration-200">
             Read
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

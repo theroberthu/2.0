@@ -16,6 +16,9 @@ const config: Config = {
         brand: {
           deep: '#1a3a4a',
           accent: '#2d7d9a',
+          // Text-link blue for dark backgrounds: 6.5:1 on brand-dark, 5.1:1 on glass-card pills.
+          // Use brand-accent for fills and borders, brand-link for link text.
+          link: '#5cb8d6',
           bg: '#f7f9fb',
           dark: '#1a2a32',
           muted: '#8a9aa2',

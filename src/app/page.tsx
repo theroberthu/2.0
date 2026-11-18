@@ -102,7 +102,6 @@ export default async function HomePage() {
 
       {/* ───────────────────── Section 1: Hero ───────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #f7f9fb 1px, transparent 0)', backgroundSize: '32px 32px' }} />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/[0.06] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-accent/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
 
@@ -110,10 +109,6 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left - Text */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-brand-gold/[0.12] text-brand-gold text-[11px] font-semibold uppercase tracking-[0.15em] px-3.5 py-1.5 rounded-full mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-                Research Notebook
-              </div>
               <h1 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-bold text-white leading-[1.15] tracking-tight mb-5">
                 How technology changes commerce.
               </h1>
@@ -126,7 +121,7 @@ export default async function HomePage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/blog"
-                  className="bg-brand-gold text-white font-semibold px-7 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center"
+                  className="bg-brand-gold text-brand-dark font-semibold px-7 py-3.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center"
                 >
                   Read the research
                 </Link>
@@ -217,15 +212,15 @@ export default async function HomePage() {
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-2 block">
                 Flagship research
               </span>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-[#42a5c8] transition-colors duration-200">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-brand-link transition-colors duration-200">
                 AI Commerce 2027
               </h3>
               <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl">
                 How the commerce operating model changes when software can act: nine shifts, the evidence behind
-                them, and what remains unproven. Updated through 2027 as evidence arrives.
+                them, and what remains unproven. Revised as new evidence arrives.
               </p>
             </div>
-            <span className="text-[13px] font-semibold text-[#42a5c8] whitespace-nowrap">Read the outlook</span>
+            <span className="text-[13px] font-semibold text-brand-link whitespace-nowrap">Read the outlook</span>
           </Link>
         </div>
       </section>
@@ -265,12 +260,12 @@ export default async function HomePage() {
                   </span>
 
                   {featured.category && featured.category !== 'general' && (
-                    <span className="inline-block self-start text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent bg-brand-accent/[0.1] px-2.5 py-1 rounded-full mb-4">
+                    <span className="inline-block self-start text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-link bg-brand-accent/[0.1] px-2.5 py-1 rounded-full mb-4">
                       {featured.category}
                     </span>
                   )}
 
-                  <h2 className="text-2xl md:text-3xl lg:text-[2.25rem] font-bold text-white leading-[1.15] tracking-tight mb-4 group-hover:text-brand-accent transition-colors duration-200">
+                  <h2 className="text-2xl md:text-3xl lg:text-[2.25rem] font-bold text-white leading-[1.15] tracking-tight mb-4 group-hover:text-brand-link transition-colors duration-200">
                     {featured.title}
                   </h2>
 
@@ -294,7 +289,7 @@ export default async function HomePage() {
                         </>
                       )}
                     </div>
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent group-hover:gap-2.5 transition-all duration-200">
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-link group-hover:gap-2.5 transition-all duration-200">
                       Read article
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                     </span>
@@ -315,7 +310,7 @@ export default async function HomePage() {
                 <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-3 block">The Notebook</span>
                 <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">Recent research</h2>
               </div>
-              <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-accent hover:gap-2.5 transition-all duration-200">
+              <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand-link hover:gap-2.5 transition-all duration-200">
                 View all
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </Link>

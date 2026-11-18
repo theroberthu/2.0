@@ -6,6 +6,50 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.97 - Homepage contrast, header labels and hero cleanup (2026-11-18)
+
+**What changed.** A small readability and polish pass, chosen from an outside
+site review (slop.ooo) after checking each finding against the code and
+measuring contrast:
+
+- Gold buttons now use dark navy text instead of white (2.29:1 to 6.44:1):
+  the hero "Read the research" button, the header Subscribe button (desktop and
+  mobile), the footer button's hover state and the floating Subscribe pill on
+  article pages.
+- New `brand-link` color (`#5cb8d6`) for link text on dark backgrounds: 6.5:1
+  on the page background and 5.1:1 in card labels, where the previous
+  `brand-accent` text measured 2.7 to 3.2:1. Applied to the homepage links
+  ("Read article", "View all", "Read the outlook"), category labels, card hover
+  states and `BlogCard` (so `/blog` cards too). `brand-accent` stays for fills
+  and borders.
+- The desktop header button reads "Subscribe on LinkedIn" and the mobile menu
+  button "Subscribe to the Newsletter on LinkedIn", so the destination is named.
+- The mobile header shows "Robert Hu" next to the logo (it was hidden below
+  640px).
+- The AI Commerce 2027 homepage card ends "Revised as new evidence arrives."
+  instead of "Updated through 2027 as evidence arrives."
+- The hero's "Research Notebook" pill and dotted background grid are removed;
+  the soft background glows stay.
+
+**Deliberately not changed.** The review's main recommendation (rebuild the
+homepage headline and order around the featured Amazon listing audit article)
+was declined: the featured slot rotates and the site is a publication, not a
+single tool. The headline, intro copy, featured research slot, section eyebrow
+labels and all article text are unchanged. No SEO-relevant markup changed.
+
+**Verified.** Gate passes (tsc, lint, production build). On the dev server at
+1024px and 375px: the new header fits, the name shows on mobile, button and link
+colors compute to the new values, no horizontal scroll, no dashes added.
+
+**Impact.** Primary buttons and links meet WCAG AA contrast, and the hero reads
+cleaner with less template decoration.
+
+**Follow-ups.** The "Watch the video" and "All 36 documentaries and 79 Shorts"
+links in `FeaturedVideo.tsx` still use `brand-accent` text (about 2.7 to 3.2:1);
+switching them to `brand-link` needs the file's commit exclusion lifted.
+
+---
+
 ## Release 1.96 - Amazon returns documentary page and two new Shorts (2026-11-17)
 
 **What changed.** One new documentary from the daily series gets a companion
