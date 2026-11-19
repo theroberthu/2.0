@@ -53,7 +53,12 @@ VideoObject and breadcrumb data, meta descriptions of 156 to 159 characters
 and no dashes; all related links and images return 200; the sitemap lists all
 three; `/videos` shows 39 documentaries, 80 Shorts and the new topic; the
 UNIQLO page shows its Short; no broken images, console errors or horizontal
-scroll at 375px.
+scroll at 375px. Live after deploy (commit `0b04772`): all three pages return
+200 with one H1, the correct title, a self-canonical, the thumbnail OG image,
+VideoObject and breadcrumb data, and no dashes; the four new images return
+200; `/videos` reads "39 documentaries ... plus 80 one-minute Shorts", lists
+Games and entertainment and the new Short; the homepage features the GTA page;
+the UNIQLO page shows its Short; the sitemap lists all three (178 URLs).
 
 **Impact.** Three new uploads get permanent, searchable pages, the homepage
 features the newest documentary on GTA VI's release day, and the UNIQLO Short
