@@ -19,7 +19,7 @@ export type RelatedLink = { href: string; title: string; note: string }
 
 export type VideoSection = { heading?: string; paragraphs: string[] }
 
-export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice', 'Energy and infrastructure', 'Aviation and travel'] as const
+export const VIDEO_TOPICS = ['Retail strategy', 'Delivery and logistics', 'Manufacturing', 'AI in practice', 'Energy and infrastructure', 'Aviation and travel', 'Games and entertainment'] as const
 
 export type VideoTopic = (typeof VIDEO_TOPICS)[number]
 
@@ -73,6 +73,357 @@ export function youtubeThumbnailUrl(id: string): string {
 }
 
 export const VIDEOS: VideoEntry[] = [
+  {
+    slug: 'gta-online-business-model-gta-6',
+    youtubeId: '9DtidHsFhQw',
+    youtubeTitle: 'What GTA 5 Reveals About GTA 6’s Business',
+    h1: 'What GTA 5 Reveals About GTA 6’s Business',
+    seoTitle: 'What GTA Online Reveals About GTA 6’s Business Model',
+    metaDescription:
+      'Shark Cards, GTA+ and continuing updates show why a world players return to matters to Rockstar. What GTA Online explains about GTA 6, and what it does not.',
+    dek: 'Selling the game earns the first purchase. Keeping the world worth returning to creates the chance for another.',
+    uploadDate: '2026-11-18T16:14:41-08:00',
+    duration: 'PT3M9S',
+    durationLabel: '3 min 9 sec',
+    topic: 'Games and entertainment',
+    subject: 'GTA Online',
+    thumbnail: '/images/videos/gta-online-business-model-gta-6.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu composited into the passenger seat of a car beside a bearded GTA VI character at the wheel, under the words GTA 5 to GTA 6, After You Buy.',
+    sections: [
+      {
+        paragraphs: [
+          'You already paid for the game. So why is Rockstar still selling you something? GTA Online sells Shark Cards, optional cash packs that turn real money into GTA dollars. Players can also earn GTA dollars by playing. That choice is the start of a much longer business, and the clearest way to understand the opportunity around GTA VI.',
+        ],
+      },
+      {
+        heading: 'Earn it or buy it',
+        paragraphs: [
+          'Start with something a player wants, such as a car for the garage. In GTA Online the price is in virtual currency. Earning that currency gives the player a reason to take on another job. Buying a Shark Card is an optional way to add to the balance.',
+          'Those are different routes. A car in a trailer is not proof that anyone paid real money for it, and a virtual dollar is not a dollar of Rockstar revenue. What a cash pack does create is something a boxed game alone does not: another purchase opportunity inside a game the player already owns.',
+        ],
+      },
+      {
+        heading: 'A reason to come back',
+        paragraphs: [
+          'The harder question is what happens after the car. Rockstar’s Money Fronts update, released in June 2025, lets players buy the Hands On Car Wash, which opens up a money-laundering operation where legal work lowers the heat from criminal work. That is fictional money laundering inside the game. The business story sits outside it: one location connects activities, rewards and another reason to play.',
+          'An update can give an existing player a new goal. That goal can create another session, and another session gives the publisher another chance to offer something the player values. It does not guarantee another sale.',
+        ],
+      },
+      {
+        heading: 'Three commercial relationships',
+        paragraphs: [
+          'GTA+ adds a second kind of offer, an optional monthly membership with rotating benefits, and Rockstar built a members’ car club around its vehicles. A single game purchase, an optional cash pack and a recurring membership are three different commercial relationships around the same world.',
+          'The important word is optional. Returning players can keep playing without buying every offer, so the business needs a world people want to return to, not another button asking them to pay. New activities and rewards have to compete with everything else a player could do tonight.',
+        ],
+      },
+      {
+        heading: 'Longevity as strategy',
+        paragraphs: [
+          'Take-Two’s quarterly report for the period ended September 30, 2026 describes Rockstar’s strategy as a limited number of titles known for quality and longevity, with incremental revenue opportunities through virtual currency, add-on content and in-game purchases. The same filing says Grand Theft Auto V has sold in over 230 million units and includes access to GTA Online. Longevity is part of the commercial strategy, not an extra after launch.',
+        ],
+      },
+      {
+        heading: 'What it says about GTA VI',
+        paragraphs: [
+          'This explains why the opportunity around GTA VI is bigger than an opening weekend. Take-Two’s filing set the release for November 19, 2026. It does not confirm GTA VI’s online features, prices or membership offers, and GTA Online here is an established model, not a preview of the next game’s details.',
+          'Come back to the car. The first question was whether to earn the currency or buy it. The deeper one is whether the world gives a player a reason to want anything else afterward.',
+        ],
+      },
+    ],
+    takeaways: [
+      'GTA Online prices items in virtual currency that players can earn by playing or add to with optional Shark Cards. Virtual currency is not publisher revenue.',
+      'Updates such as Money Fronts (June 2025) give existing players new goals and reasons to return. That creates more chances to offer something, not a guaranteed sale.',
+      'A game purchase, an optional cash pack and the GTA+ membership are three different commercial relationships around one world.',
+      'Take-Two describes Rockstar’s strategy in terms of quality, longevity and incremental revenue from virtual currency, add-on content and in-game purchases.',
+      'GTA Online is context for GTA VI, not confirmation of its online features, prices or memberships.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Already paid, still selling' },
+      { time: '0:21', label: 'Earn it or buy it' },
+      { time: '0:52', label: 'A reason to come back' },
+      { time: '1:34', label: 'GTA+ and the car club' },
+      { time: '1:44', label: 'Three commercial relationships' },
+      { time: '2:30', label: 'What it says about GTA 6' },
+      { time: '2:48', label: 'Back to the car' },
+    ],
+    sources: [
+      {
+        label: 'Shark Cards (Rockstar Games Store)',
+        date: 'Checked November 19, 2026',
+        href: 'https://store.rockstargames.com/buy-gta-v-shark-cash-cards',
+      },
+      {
+        label: 'GTA+ guide (Rockstar Games)',
+        date: 'Cited in the video',
+        href: 'https://www.rockstargames.com/gta-online/guides/7539',
+      },
+      {
+        label: 'GTA Online: Money Fronts (Rockstar Games video)',
+        date: 'June 17, 2025',
+        href: 'https://www.rockstargames.com/videos/334ek667',
+      },
+      {
+        label: 'GTA Online: The Vinewood Car Club (Rockstar Games video)',
+        date: 'June 9, 2023',
+        href: 'https://www.rockstargames.com/videos/4681r7aa',
+      },
+      {
+        label: 'Experience GTA Online (Rockstar Games video)',
+        date: 'October 29, 2025',
+        href: 'https://www.rockstargames.com/videos/2aks43mo',
+      },
+      {
+        label: 'Take-Two Interactive quarterly report, Form 10-Q (SEC)',
+        date: 'Quarter ended September 30, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/946581/000162828026072254/ttwo-20260930.htm',
+      },
+      {
+        label: 'Grand Theft Auto VI, Trailer 2 (Rockstar Games)',
+        date: 'May 2025',
+        href: 'https://www.rockstargames.com/VI',
+      },
+    ],
+    sourcesNote:
+      'The seven sources cited in the video. GTA Online’s established model is used as context for GTA VI; nothing here confirms GTA VI’s online features, prices, memberships or revenue. Earning GTA dollars and buying cash packs are different routes, and virtual currency is not publisher revenue.',
+    related: [
+      {
+        href: '/blog/chatgpt-ads-billion-revenue-run-rate-distribution',
+        title: 'ChatGPT Ads Hit a $1 Billion Run Rate in 200 Days. The Audience Came First.',
+        note: 'The same order of operations in a different business: build the audience people return to, then sell inside it.',
+      },
+      {
+        href: '/blog/amazon-alexa-shopping-search-anticipation',
+        title: 'Amazon Is Extending the Shopping Journey Beyond the Search',
+        note: 'Another way to stay involved between purchases: an assistant that keeps working while no shopping is happening.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Official Rockstar Games footage is dated and labelled in the video; excerpts are muted and used with original commentary, and no Rockstar trailer music is included. The selected footage is not independently captured gameplay, and the illustrated journey is not an individual player’s purchase history. The thumbnail is an editorial composite placing Robert in a GTA VI scene. Music: “Filaments” by Scott Buckley, CC BY 4.0. Independent commentary; no paid promotion, sponsorship or endorsement.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'What GTA 5 Reveals About GTA 6’s Business',
+      description:
+        'You already paid for the game, so why is Rockstar still selling you something? What Shark Cards, GTA+ and continuing updates explain about GTA 6.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'meta-ray-ban-display-grocery-list',
+    youtubeId: 'ImyyJ3R0nZQ',
+    youtubeTitle: '$799 to Remember Milk? The Real Test for Meta’s AI Glasses',
+    h1: '$799 to Remember Milk? The Real Test for Meta’s AI Glasses',
+    seoTitle: 'Meta Ray-Ban Display: The Real Test for $799 AI Glasses',
+    metaDescription:
+      'A free list app checks off milk on Meta Ray-Ban Display glasses. What the $799 glasses and wristband add, and the everyday test the hardware still has to pass.',
+    dek: 'The app is free. The glasses and wristband are not. The question is whether they remove an interruption from an ordinary day.',
+    uploadDate: '2026-11-18T16:00:38-08:00',
+    duration: 'PT1M23S',
+    durationLabel: '1 min 23 sec',
+    topic: 'AI in practice',
+    subject: 'Meta Ray-Ban Display',
+    thumbnail: '/images/videos/meta-ray-ban-display-grocery-list.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu looking at a carton of milk beside oversized black display glasses and a wristband on a grocery store counter, under the words Meta Display, $799, Worth Wearing? Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'A carton of milk is on the shelf, then in hand, then checked off a list that sits in the shopper’s view. The app doing the checking is free. The glasses launched at $799. So what are you paying for?',
+        ],
+      },
+      {
+        heading: 'The list, not the choice',
+        paragraphs: [
+          'Start with the bottle. The shopper still chooses it. The useful change is what happens to the list while they shop.',
+          'The demonstration comes from DisplayList, a free list app by independent developer Michael Cummings of Don’t Stop LLC. You write a list on your phone or on the web, and it appears in the glasses. According to the developer, you can check items off with Meta’s wristband, and the change syncs back to your phone.',
+        ],
+      },
+      {
+        heading: 'Information in view, a way to act',
+        paragraphs: [
+          'Watch the sequence: milk on the shelf, milk in hand, milk checked off. One small job, handled in the middle of another. The glasses put the information in view. The wristband gives a way to act on it.',
+          'Meta describes the Meta Neural Band as an EMG wristband that reads the signals created by muscle activity and translates them into commands for the glasses. See the item, make the selection, keep going.',
+        ],
+      },
+      {
+        heading: 'What the price covers',
+        paragraphs: [
+          'Meta’s announced U.S. starting price of $799, from September 2025, includes both the Meta Ray-Ban Display glasses and the Neural Band. A free list app is one use for that hardware, not a verdict on everything it can do, and this is not a hands-on product test.',
+        ],
+      },
+      {
+        heading: 'What the demonstration does not show',
+        paragraphs: [
+          'The shopper still decides what to buy. Nothing here shows AI choosing groceries or completing a purchase. The demonstration is about removing a phone check, not about handing the shopping to software.',
+        ],
+      },
+      {
+        heading: 'The everyday test',
+        paragraphs: [
+          'The test is simple. Does this remove a phone check without becoming another interruption? A free app demonstrates the task. The hardware still has to earn its place in the day.',
+        ],
+      },
+    ],
+    takeaways: [
+      'In the DisplayList demonstration, a grocery list written on a phone or the web appears in Meta Ray-Ban Display glasses and items are checked off with the Meta Neural Band. The sync and wristband operation are described by the developer.',
+      'Meta’s announced U.S. starting price of $799 covers both the display glasses and the Neural Band.',
+      'Meta says the Neural Band is an EMG wristband that translates signals from muscle activity into commands.',
+      'The shopper still chooses the products. The demonstration does not show AI selecting groceries or checking out.',
+      'The real test is whether the hardware removes a phone check without adding a new interruption.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Milk checked off, $799 question' },
+      { time: '0:13', label: 'DisplayList puts the list in view' },
+      { time: '0:27', label: 'The sequence, step by step' },
+      { time: '0:35', label: 'Glasses and wristband' },
+      { time: '0:51', label: 'What the price covers' },
+      { time: '1:01', label: 'What the demo does not show' },
+    ],
+    sources: [
+      {
+        label: 'DisplayList press kit (Don’t Stop LLC)',
+        date: 'Checked November 19, 2026',
+        href: 'https://displaylist.fun/press',
+      },
+      {
+        label: 'Meta Ray-Ban Display: AI Glasses With an EMG Wristband (Meta)',
+        date: 'September 17, 2025, updated September 30, 2025',
+        href: 'https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/',
+      },
+    ],
+    sourcesNote:
+      'The two sources cited in the video. DisplayList’s phone sync and wristband operation are described by its developer. The $799 figure is Meta’s announced U.S. starting price for the glasses and Neural Band together, not a current retail price check.',
+    related: [
+      {
+        href: '/blog/meta-muse-shopping-agent-commerce-adoption',
+        title: 'Meta Muse Has Shopping Demand. Retailer Permission Is Now the Constraint',
+        note: 'Meta’s other shopping surface: an assistant people already use for purchases, and the retailer permission it still needs.',
+      },
+      {
+        href: '/blog/anthropic-project-swap-agentic-commerce-shopper-preferences',
+        title: 'The Hardest Part of Agentic Commerce May Be Knowing What the Shopper Wants',
+        note: 'Why keeping the shopper in the decision matters: understanding the person is the harder problem.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. The DisplayList demonstration and screenshots were supplied by the developer for coverage; source audio is absent and brief sequences are replayed for analysis. The phone and glasses screenshots include a separately labelled packing-list example. Meta product stills and launch details are discussed directly. No Meta licence, sponsorship or endorsement is claimed, and this is not a hands-on test. The thumbnail is AI-assisted editorial artwork featuring Robert’s likeness, not a photograph of him using the product. Music: “Filaments” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: '$799 to Remember Milk? The Real Test for Meta’s AI Glasses',
+      description:
+        'A free app checks milk off a list on $799 glasses. What the display and wristband add, and the everyday test the hardware still has to pass.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'uniqlo-rfid-checkout',
+    youtubeId: 'CfjYocKKIlc',
+    youtubeTitle: 'Why UNIQLO Doesn’t Make You Scan Every Shirt',
+    h1: 'Why UNIQLO Doesn’t Make You Scan Every Shirt',
+    seoTitle: 'UNIQLO RFID Checkout: Why You Don’t Scan Every Shirt',
+    metaDescription:
+      'UNIQLO’s checkout reads a basket of RFID-tagged clothes at once. How the tags connect checkout to inventory, and which jobs still belong to shoppers and staff.',
+    dek: 'The basket removes the hunt for each barcode. The more useful idea is the question behind it: does this step need to exist in its current form?',
+    uploadDate: '2026-11-17T16:00:29-08:00',
+    duration: 'PT1M42S',
+    durationLabel: '1 min 42 sec',
+    topic: 'Retail strategy',
+    subject: 'UNIQLO RFID checkout',
+    thumbnail: '/images/videos/uniqlo-rfid-checkout.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu leaning on a black shopping basket of folded sweaters with a tag at a store checkout, UNIQLO signage behind, under the words One Basket. One Read. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'The clothes go into the basket. A list of items appears on the screen. Nobody scans each garment’s barcode.',
+        ],
+      },
+      {
+        heading: 'How the basket gets read',
+        paragraphs: [
+          'The method is radio frequency identification, or RFID. Tags on the products carry identifiers that a reader can pick up by radio, so the checkout can identify tagged items without anyone finding and turning a printed label. The video follows an imagined black shirt in your size through that process. It is an illustration, not a tracked customer order.',
+        ],
+      },
+      {
+        heading: 'The tag starts before checkout',
+        paragraphs: [
+          'A store full of shirts is no comfort if nobody can find the right one. The same identification can help the business know which items it has and where they are. In an October 2018 presentation, Fast Retailing’s Takuya Jimbo described attaching RFID tags to all products at the point of manufacture, to see inventory across factories, warehouses and stores. He also said the tags had greatly improved the cash desk and made instant inventory counts possible in stores and warehouses.',
+          'Checkout is the moment the customer notices. The inventory information is useful long before it.',
+        ],
+      },
+      {
+        heading: 'What a tag cannot fix',
+        paragraphs: [
+          'Someone still has to attach the tag, connect its identifier to the right product and handle the exception when the information is wrong. RFID changes where the work sits. It does not remove the need for accurate product data.',
+        ],
+      },
+      {
+        heading: 'The barcode hunt',
+        paragraphs: [
+          'Compare ordinary self-checkout. Find the label, turn the item, find the next label, repeat. The shopper becomes the cashier, without the employee discount.',
+          'In UNIQLO Indonesia’s March 2024 demonstration, the shopper still checks the list and pays. The barcode shown on the phone is the membership code, a separate job from identifying each garment.',
+        ],
+      },
+      {
+        heading: 'The part worth borrowing',
+        paragraphs: [
+          'The clever move is removing a repeated task while keeping the decisions that still need to happen. Before buying a faster machine, ask whether the step needs to exist in its current form. That question travels further than the hardware.',
+        ],
+      },
+    ],
+    takeaways: [
+      'UNIQLO’s checkout reads RFID tags on the items in a basket, so the shopper does not find and scan each garment’s barcode.',
+      'In 2018 Fast Retailing said it attaches RFID tags to all products at the point of manufacture, to see inventory across factories, warehouses and stores.',
+      'The same tags support instant inventory counts, so the information is useful long before the customer reaches checkout.',
+      'Tags still have to be attached, matched to the right product and corrected when the data is wrong. Shoppers still review the list and pay.',
+      'The transferable lesson is to redesign the repeated task before buying a faster machine.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Clothes in, list appears' },
+      { time: '0:15', label: 'One imagined shirt and its tag' },
+      { time: '0:46', label: 'When the information is wrong' },
+      { time: '0:55', label: 'The barcode hunt' },
+      { time: '1:06', label: 'What shoppers still do' },
+      { time: '1:21', label: 'Return to the checkout' },
+    ],
+    sources: [
+      {
+        label: 'Supply chain reform presentation by Takuya Jimbo (Fast Retailing, PDF)',
+        date: 'October 11, 2018',
+        href: 'https://www.fastretailing.com/eng/ir/library/pdf/20181011_jimbo_en.pdf',
+      },
+      {
+        label: 'About RFID technology (Impinj)',
+        date: 'Cited in the video',
+        href: 'https://www.impinj.com/products/technology/about-rfid',
+      },
+      {
+        label: 'UNIQLO Indonesia RFID checkout demonstration (YouTube)',
+        date: 'March 2024',
+        href: 'https://www.youtube.com/watch?v=8UOV_sCMm04',
+      },
+    ],
+    sourcesNote:
+      'The three sources cited in the video. The Fast Retailing presentation is from 2018 and describes the supply chain reforms of that time, not current operations in every market. The checkout analysis is based on UNIQLO Indonesia’s March 2024 demonstration, and no speed or savings figure is claimed.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'The same argument from the inside: redesign the work before pointing new technology at the part that already works.',
+      },
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'Technology changes where the work sits. People still own the decisions and the exceptions.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Brief muted excerpts and frames from UNIQLO Indonesia’s March 2024 demonstration are shown with original commentary. Store photographs come from the UNIQLO / Fast Retailing Photo Library, offered for free use. Illustrative shopping footage by Ron Lach and Anvar Tushakov on Pexels does not show UNIQLO stores, employees or a documented customer journey. Tag and workflow graphics are simplified original illustrations, not drawings of proprietary equipment. The thumbnail is an AI-assisted editorial composite with Robert depicted in a fictional retail setting; it does not document a store visit, employment or a product test. Music: “Filaments” by Scott Buckley, CC BY 4.0. Independent commentary; no sponsorship or endorsement.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why UNIQLO Doesn’t Make You Scan Every Shirt',
+      description:
+        'The clothes go in and a list appears. Follow one imagined shirt through RFID checkout, and see which jobs still belong to shoppers and staff.',
+      cta: 'Watch the video',
+    },
+  },
   {
     slug: 'amazon-returns-after-refund',
     youtubeId: 'eg1qCVF-Sqk',
@@ -5215,7 +5566,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'amazon-returns-after-refund'
+export const FEATURED_VIDEO_SLUG: string | null = 'gta-online-business-model-gta-6'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -5264,7 +5615,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
-  { youtubeId: 'DjszChlH95Y', title: 'How UNIQLO Counts Your Basket Without Scanning Every Barcode', uploadDate: '2026-11-17T14:00:33-08:00', durationLabel: '0:35', thumbnail: '/images/shorts/DjszChlH95Y.jpg' },
+  { youtubeId: 'lfrtq6TGSus', title: 'GTA 6’s Free Rent Comes With a Catch', uploadDate: '2026-11-18T14:00:11-08:00', durationLabel: '0:32', thumbnail: '/images/shorts/lfrtq6TGSus.jpg' },
+  { youtubeId: 'DjszChlH95Y', title: 'How UNIQLO Counts Your Basket Without Scanning Every Barcode', uploadDate: '2026-11-17T14:00:33-08:00', durationLabel: '0:35', thumbnail: '/images/shorts/DjszChlH95Y.jpg', related: ['uniqlo-rfid-checkout'] },
   { youtubeId: 'NfPeoFW86Ko', title: 'Amazon Put Conveyor Belts on a Robot Hand', uploadDate: '2026-11-16T09:00:23-08:00', durationLabel: '0:31', thumbnail: '/images/shorts/NfPeoFW86Ko.jpg', related: ['amazon-robots-deepfleet-warehouse-traffic'] },
   { youtubeId: 'UlUlSyybL5s', title: 'This Robot Vacuum Grew Legs. Watch the Stairs.', uploadDate: '2026-11-15T09:00:36-08:00', durationLabel: '0:31', thumbnail: '/images/shorts/UlUlSyybL5s.jpg', related: ['1x-neo-home-robot-human-backup'] },
   { youtubeId: 'slhqOt0-HsI', title: 'One Robot Gets Stuck. The Other Changes Its Stance.', uploadDate: '2026-11-14T09:00:10-08:00', durationLabel: '0:30', thumbnail: '/images/shorts/slhqOt0-HsI.jpg' },

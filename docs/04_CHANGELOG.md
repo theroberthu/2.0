@@ -6,6 +6,68 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.98 - GTA Online, Meta Ray-Ban Display and UNIQLO RFID documentary pages and a new Short (2026-11-19)
+
+**What changed.** Three new documentaries from the daily series get companion
+pages, bringing `/videos` to 39 documentaries:
+
+- `/videos/gta-online-business-model-gta-6`, "What GTA 5 Reveals About GTA 6's
+  Business" (https://youtu.be/9DtidHsFhQw, uploaded 2026-11-18T16:14:41-08:00,
+  PT3M9S), in a new topic, Games and entertainment.
+- `/videos/meta-ray-ban-display-grocery-list`, "$799 to Remember Milk? The Real
+  Test for Meta's AI Glasses" (https://youtu.be/ImyyJ3R0nZQ, uploaded
+  2026-11-18T16:00:38-08:00, PT1M23S), AI in practice.
+- `/videos/uniqlo-rfid-checkout`, "Why UNIQLO Doesn't Make You Scan Every
+  Shirt" (https://youtu.be/CfjYocKKIlc, uploaded 2026-11-17T16:00:29-08:00,
+  PT1M42S), Retail strategy.
+
+Each page is written against the narration from the uploaded captions, with
+takeaways, chapters, the description's sources and two current-standard
+related research links. The UNIQLO chapters come from the description; the GTA
+and Meta descriptions have none, so their chapters are set from caption
+timings. The homepage Featured Video now points at the GTA page, the newest
+upload. One Short from November 18, "GTA 6's Free Rent Comes With a Catch"
+(`lfrtq6TGSus`), joins the top of `SHORTS` (80 in total) with no related page,
+since it covers a character's backstory rather than the business. The UNIQLO
+RFID Short (`DjszChlH95Y`) now relates to the new UNIQLO page, closing the
+Release 1.96 follow-up. No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.** GTA: Shark Card, GTA+, Money Fronts (June 17,
+2025), Vinewood Car Club (June 9, 2023) and Experience GTA Online (October 29,
+2025) figures and features are from Rockstar pages; the GTA V unit figure
+(over 230 million) and the November 19, 2026 GTA VI release date are from
+Take-Two's 10-Q for the quarter ended September 30, 2026; the trailer is
+Rockstar's May 2025 GTA VI Trailer 2. The page presents GTA VI's business model
+as an open question and claims nothing unannounced. Meta: the $799 price
+covers the glasses with the Meta Neural Band, per Meta's September 17, 2025
+announcement (updated September 30); the grocery list app is from the
+DisplayList press kit. The page does not claim AI chooses or buys the
+groceries. UNIQLO: the RFID rollout is from Fast Retailing's October 11, 2018
+presentation and the self-checkout demonstration from UNIQLO Indonesia's March
+2024 video. Impinj's RFID page returned 403 to a direct fetch, so it is listed
+as cited in the video without a checked date.
+
+**Verified.** Gate passes (tsc, lint, production build). On the dev server
+each page returns 200 with one H1, the correct title, a self-canonical,
+VideoObject and breadcrumb data, meta descriptions of 156 to 159 characters
+and no dashes; all related links and images return 200; the sitemap lists all
+three; `/videos` shows 39 documentaries, 80 Shorts and the new topic; the
+UNIQLO page shows its Short; no broken images, console errors or horizontal
+scroll at 375px.
+
+**Impact.** Three new uploads get permanent, searchable pages, the homepage
+features the newest documentary on GTA VI's release day, and the UNIQLO Short
+now leads to its full story.
+
+**Follow-ups.** Possible `POST_VIDEOS` pairing, not added: the UNIQLO page
+with "AI Won't Fix Broken Work". The gold "Watch on YouTube" button on video
+pages still uses white text (about 2.3:1); the Release 1.97 fix (navy text)
+would apply. Carried over: `FeaturedVideo.tsx` link contrast, recheck
+`/geo/alexa-for-shopping` after Google recrawls it, and the Bosch and Domino's
+canonical recrawl.
+
+---
+
 ## Release 1.97 - Homepage contrast, header labels and hero cleanup (2026-11-18)
 
 **What changed.** A small readability and polish pass, chosen from an outside
