@@ -6,6 +6,57 @@ thematic, not strict semver.
 
 ---
 
+## Release 1.99 - Ask Target article and the measurement ladder for AI shopping assistants (2026-11-20)
+
+**What changed.** New E-commerce Strategy article,
+`/blog/target-ask-target-ai-shopping-assistant-purchase-rate`, "Target Says
+Ask Target Shoppers Move to Purchase at Twice the Rate. That Is Not Yet
+Incrementality" (search title "Ask Target: Does Target's AI Shopping Assistant
+Increase Purchases?"; 1,142 body words, 1,178 with subheads). It argues that
+Target's November 18 disclosure moves the evidence for a retailer-owned
+assistant from traffic to in-funnel behavior, but not to incrementality or
+economics, and sets out a five-rung measurement ladder (traffic, engagement,
+assisted purchase rate, incrementality, economics) and a holdout design. Adds
+the content file, insert script, OG SVG and PNG. AI Commerce 2027 gets one
+Measurement tracker row (November 18, Target); `LAST_UPDATED` and the sitemap
+date move to 2026-11-20 together.
+
+**Sourcing.** Primary sources: Target's LSEG transcript of the Q3 2026 call,
+hosted on Target's investor relations site (the CEO's "move to purchase at
+about twice the rate" sentence, compared with "elsewhere", is on page 15; the
+"volumes aren't high yet" remark on page 14), the Q3 2026 earnings release
+(SEC 8-K Exhibit 99, which does not mention Ask Target), Target's October 21
+holiday release (beta on Target.com and the Target app), Target's
+conversational AI fact sheet (updated June 18, 2026) and Amazon's Q3 2025
+earnings release and call for the Rufus comparison. Retail Dive, CIO Dive and
+Retail TouchPoints were secondary confirmation only. Five inline links point
+to the primary pages on existing phrases; the approved text is unchanged.
+
+**Editorial gates.** Research PASS, Editorial PASS, SEO/GEO PASS, Corpus
+advancement PASS, Final WRITE. Senior-editor round: the specific H1 that keeps
+Target's wording, the Business Insider basket-size line removed and folded
+into the disclosure sentence, the traffic row reworded so "volumes" is not
+defined for Target, the Amazon sentence without the rebrand clause, and a
+softer sentence on Target's ability to run an experiment. One consistency edit
+followed: the volumes remark is attributed to agentic commerce generally, not
+to the named partners. The article does not say Ask Target doubled
+conversion, caused the difference, generated incremental revenue, can buy on
+a shopper's behalf, or is available to every customer. Zero em or en dashes,
+one closing question, four internal links, no Key findings box.
+
+**Verified.** Gate passes (tsc, lint, production build).
+
+**Impact.** The measurement thread (NIQ and Similarweb, BCG, the AI Commerce
+2027 measurement split) extends from outside platforms to an assistant the
+retailer owns, where conversation, cart and order sit in one system.
+
+**Follow-ups.** Request indexing for the new URL. Legacy triage candidates,
+not changed: "Macy's AI Users Spend 4.75x More" and "Rufus Is Driving $10B"
+present user comparisons at face value. Watch for Target defining "move to
+purchase", Ask Target leaving beta, or any holdout result.
+
+---
+
 ## Release 1.98 - GTA Online, Meta Ray-Ban Display and UNIQLO RFID documentary pages and a new Short (2026-11-19)
 
 **What changed.** Three new documentaries from the daily series get companion

@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-11-13'
+export const LAST_UPDATED = '2026-11-20'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-11-18',
+    org: 'Target',
+    development: 'CEO said shoppers using Ask Target, an AI shopping assistant in beta on Target.com and the Target app since October 21, move to purchase at about twice the rate seen elsewhere; comparison group, unit, period and sample size not disclosed',
+    affects: 'Measurement',
+    evidenceType: 'Earnings call (CEO remarks)',
+    changed: 'A retailer reported its own assistant as an in-funnel behavioral metric; a comparison of users with everyone else, not an incrementality result',
+    href: '/blog/target-ask-target-ai-shopping-assistant-purchase-rate',
+  },
   {
     date: '2026-11-10',
     org: 'OpenAI',
