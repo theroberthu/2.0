@@ -29,7 +29,8 @@ commit.
 
 **Verified.** Local at 1280px and 375px: Georgia italic renders, gradient
 applies, no horizontal scroll on mobile. Gate: tsc, lint, production build
-clean.
+clean. Live (fd3c3a9): homepage returns 200 with one H1, and a headless 1280px
+capture shows the band as approved.
 
 **Impact.** Visual only. No change to copy, links, metadata or structured data.
 
