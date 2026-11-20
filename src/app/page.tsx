@@ -68,6 +68,10 @@ const organizationSchema = {
     'Research on how technology changes commerce, covering AI Commerce, digital transformation, and product discovery.',
 }
 
+// Fine fractal-noise grain for the "Why This Site Exists" band (inline SVG, no image request).
+const GRAIN =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")"
+
 export default async function HomePage() {
   // Featured post: the most recent post manually flagged featured: true.
   // Set featured = true on whichever post should hold the slot (Supabase
@@ -325,15 +329,24 @@ export default async function HomePage() {
       )}
 
       {/* ───────────────────── Section 4: Why This Site Exists ───────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark py-20 md:py-28 border-t border-white/[0.06]">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-deep/60 via-brand-dark to-brand-dark" />
-        <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/[0.06] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+      {/* The one premium band on the homepage: deep navy gradient, a faint
+          grain, gold hairlines and the Georgia italic used on the share cards. */}
+      <section
+        className="relative overflow-hidden py-20 md:py-28 border-y border-brand-gold/30"
+        style={{ background: 'linear-gradient(135deg, #1a3a4a 0%, #142a36 55%, #10212a 100%)' }}
+      >
+        <div className="absolute inset-0 opacity-[0.07] mix-blend-overlay" style={{ backgroundImage: GRAIN }} aria-hidden="true" />
 
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-5 block">Why This Site Exists</span>
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold mb-6 block">Why This Site Exists</span>
+          <div className="mx-auto mb-8 h-px w-16 bg-brand-gold/60" aria-hidden="true" />
+          <p
+            className="text-xl md:text-[1.6rem] text-gray-100 leading-relaxed italic"
+            style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+          >
             This is not an AI news site. It is a public notebook for understanding how technology changes commerce. The goal is to compound knowledge, connect ideas across disciplines, and document the questions, experiments, and patterns that help operators make better decisions.
           </p>
+          <div className="mx-auto mt-8 h-px w-16 bg-brand-gold/60" aria-hidden="true" />
         </div>
       </section>
     </>

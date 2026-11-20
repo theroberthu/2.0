@@ -6,6 +6,35 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.01 - Premium treatment for the homepage "Why This Site Exists" band (2026-11-20)
+
+**What changed.** The closing homepage section, "Why This Site Exists", now
+uses a deep navy diagonal gradient (`#1a3a4a` to `#10212a`), a faint inline
+SVG fractal-noise grain at 7% opacity, gold hairline borders top and bottom,
+short gold rules above and below the statement, and the statement itself
+centered in Georgia italic (the serif used on the blog share cards) at
+`text-xl md:text-[1.6rem]` in `text-gray-100`. Copy unchanged. Only
+`src/app/page.tsx` changed; every other homepage section is untouched.
+
+**Why.** Robert asked for a classier feel and proposed a blue leather
+background on several sections. Six variants were mocked locally on a
+throwaway route and compared as screenshots: the supplied leather as is, the
+leather darkened 55%, leather behind the glass research cards, and grain-based
+alternatives. Leather as supplied made the gray text hard to read and turned
+the glass cards into a smudge; darkened, it read as generic texture. The
+chosen option gets the premium feel from type and gold on one band rather than
+a photographic texture on several, adds no image request, and keeps contrast
+high. The mockup route and its copy of the leather image were deleted before
+commit.
+
+**Verified.** Local at 1280px and 375px: Georgia italic renders, gradient
+applies, no horizontal scroll on mobile. Gate: tsc, lint, production build
+clean.
+
+**Impact.** Visual only. No change to copy, links, metadata or structured data.
+
+---
+
 ## Release 2.00 - Newsletter card moved to article end, banner removed, recirculation click tracking (2026-11-20)
 
 **What changed.** On blog posts:
