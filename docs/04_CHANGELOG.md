@@ -37,7 +37,10 @@ traffic pulling the site-wide average down.
 **Verified.** Local: one card per post, outside the article prose, on a plain
 post, a post with a chart and a post with a video pairing; Related Research
 follows directly with no banner. With gtag stubbed, every placement fired the
-expected event and params. Gate: tsc, lint, production build clean.
+expected event and params. Gate: tsc, lint, production build clean. Live
+(eac59f9): three posts (a plain post, one with a chart, one with a video
+pairing) return 200 with one H1, exactly one newsletter card placed after the
+last article section and before Related Research, and no bottom banner.
 
 **Impact.** Expect a small rise in average engagement time and views per
 session from search readers, and the first data on which next-read and which
