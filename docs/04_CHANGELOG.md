@@ -55,13 +55,17 @@ The OG SVG, PNG and `/api/og` image return 200, and `og:image` and
 source links are present, and the internal targets return 200. `/blog` and the
 homepage list the article; the sitemap lists it (179 URLs) with the AI
 Commerce 2027 lastmod at 2026-11-20; the AI Commerce 2027 tracker shows the
-Target row linking to the article.
+Target row linking to the article. Test Live URL and Request Indexing ran on
+2026-11-20: the Google index view read "URL is unknown to Google" (expected
+for a new page), the live test passed ("URL is available to Google", page can
+be indexed, one valid breadcrumb item) and the request was accepted into the
+priority crawl queue.
 
 **Impact.** The measurement thread (NIQ and Similarweb, BCG, the AI Commerce
 2027 measurement split) extends from outside platforms to an assistant the
 retailer owns, where conversation, cart and order sit in one system.
 
-**Follow-ups.** Request indexing for the new URL. Legacy triage candidates,
+**Follow-ups.** Legacy triage candidates,
 not changed: "Macy's AI Users Spend 4.75x More" and "Rufus Is Driving $10B"
 present user comparisons at face value. Watch for Target defining "move to
 purchase", Ask Target leaving beta, or any holdout result.
