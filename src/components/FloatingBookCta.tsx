@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { trackEvent } from '@/lib/analytics'
 
 const DISMISS_KEY = 'floating-cta-dismissed'
 
@@ -12,7 +13,7 @@ const DISMISS_KEY = 'floating-cta-dismissed'
  * with the X button. Dismissal persists for the browser session only.
  * Hidden on xl: and up because the sticky sidebar serves that role.
  */
-export default function FloatingBookCta() {
+export default function FloatingBookCta({ postSlug }: { postSlug?: string }) {
   const [visible, setVisible] = useState(false)
   const [dismissed, setDismissed] = useState(false)
 
@@ -63,6 +64,7 @@ export default function FloatingBookCta() {
           target="_blank"
           rel="noopener noreferrer"
           tabIndex={visible ? 0 : -1}
+          onClick={() => trackEvent('newsletter_click', { post_slug: postSlug ?? '', location: 'floating_pill' })}
           aria-label="Subscribe to Hu's Weekly Hoot on LinkedIn (opens in a new tab)"
           className="flex items-center gap-2 pl-4 pr-3 py-3 text-brand-dark font-semibold text-[13px] hover:bg-brand-gold/90 rounded-full transition-colors duration-150"
         >

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { trackEvent } from '@/lib/analytics'
 
 interface TocItem {
   id: string
@@ -9,9 +10,10 @@ interface TocItem {
 
 interface BlogSidebarProps {
   toc?: TocItem[]
+  postSlug?: string
 }
 
-export default function BlogSidebar({ toc = [] }: BlogSidebarProps) {
+export default function BlogSidebar({ toc = [], postSlug = '' }: BlogSidebarProps) {
   const [visible, setVisible] = useState(false)
   const [activeId, setActiveId] = useState<string | null>(null)
 
@@ -67,6 +69,7 @@ export default function BlogSidebar({ toc = [] }: BlogSidebarProps) {
             href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('newsletter_click', { post_slug: postSlug, location: 'blog_sidebar' })}
             className="block w-full text-center bg-brand-gold text-white font-semibold text-sm px-4 py-2.5 rounded-md hover:bg-brand-gold/85 transition-all duration-200 shadow hover:shadow-md hover:-translate-y-0.5"
           >
             Subscribe to Hu&apos;s Weekly Hoot

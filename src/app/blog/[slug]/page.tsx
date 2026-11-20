@@ -6,13 +6,14 @@ import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import BlogCard from '@/components/BlogCard'
-import CTABanner from '@/components/CTABanner'
 import BlogSidebar from '@/components/BlogSidebar'
 import MobileTocCard from '@/components/MobileTocCard'
 import FloatingBookCta from '@/components/FloatingBookCta'
 import ReadingProgress from '@/components/ReadingProgress'
 import RelatedVideoCard from '@/components/RelatedVideoCard'
 import TrackedLink from '@/components/TrackedLink'
+import TrackClicks from '@/components/TrackClicks'
+import NewsletterEndCard from '@/components/NewsletterEndCard'
 import { SITE_URL } from '@/lib/constants'
 import { showDek } from '@/lib/blog-dek'
 import { videosForPost } from '@/lib/videos'
@@ -28,8 +29,6 @@ import {
 export const revalidate = 60
 export const dynamicParams = true
 
-
-// Category-specific inline CTA copy
 /**
  * Walk every <h2> in the HTML, slugify its text, inject an id attribute,
  * and return both the rewritten HTML and a TOC items array. Idempotent:
@@ -92,41 +91,6 @@ function markAfterParagraph(html: string, n: number): string {
     }
   }
   return html + CHART_MARKER
-}
-
-/**
- * Split HTML content at the Nth <h2> tag and inject an inline CTA card.
- * Uses category to generate contextual copy.
- */
-function injectInlineCTA(html: string, afterH2Index = 1): string {
-  const h2Regex = /<h2[\s>]/gi
-  let match
-  let count = 0
-  let insertAt = -1
-
-  while ((match = h2Regex.exec(html)) !== null) {
-    count++
-    if (count === afterH2Index + 1) {
-      insertAt = match.index
-      break
-    }
-  }
-
-  if (insertAt === -1 && count >= 1) {
-    insertAt = Math.floor(html.length * 0.55)
-  }
-
-  if (insertAt === -1) return html
-
-  const callout = `<div class="blog-inline-cta-card">
-  <div class="blog-inline-cta-card-accent"></div>
-  <p class="blog-inline-cta-card-label">Newsletter</p>
-  <p class="blog-inline-cta-card-headline">Follow the research</p>
-  <p class="blog-inline-cta-card-sub">Research notes and analysis on how AI, digital transformation, product discovery, and customer behavior are changing commerce.</p>
-  <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232" class="blog-inline-cta-card-btn" target="_blank" rel="noopener noreferrer">Subscribe to Hu's Weekly Hoot</a>
-</div>`
-
-  return html.slice(0, insertAt) + callout + html.slice(insertAt)
 }
 
 function escapeHtml(text: string): string {
@@ -242,18 +206,6 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
-// Invitation to follow Robert's research. Newsletter functionality unchanged.
-function getCTAProps() {
-  return {
-    heading: 'Follow the research',
-    subtext:
-      'I publish research notes and analysis on how AI, digital transformation, product discovery, and customer behavior are changing commerce.',
-    buttonText: "Subscribe to Hu's Weekly Hoot",
-    buttonHref: 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270286787502047232',
-    external: true,
-  }
-}
-
 export default async function BlogPostPage(props: Props) {
   const params = await props.params
   const post = await getPost(params.slug)
@@ -323,8 +275,6 @@ export default async function BlogPostPage(props: Props) {
       .limit(RELATED_LIMIT + seenSlugs.size)
     addPosts(data)
   }
-
-  const ctaProps = getCTAProps()
 
   // Auto-generate table of contents from H2 headings. Only surface it in the
   // sidebar when the post has enough structure to benefit (3+ sections).
@@ -445,8 +395,9 @@ export default async function BlogPostPage(props: Props) {
 
               {post.content && chart ? (
                 (() => {
-                  const [lead, rest = ''] = injectInlineCTA(
-                    injectKeyFindings(markAfterParagraph(tocHtml, chart.afterParagraph), post.schema_json?.key_findings)
+                  const [lead, rest = ''] = injectKeyFindings(
+                    markAfterParagraph(tocHtml, chart.afterParagraph),
+                    post.schema_json?.key_findings
                   ).split(CHART_MARKER)
                   return (
                     <>
@@ -459,7 +410,7 @@ export default async function BlogPostPage(props: Props) {
               ) : post.content ? (
                 <div
                   className="prose-custom-dark"
-                  dangerouslySetInnerHTML={{ __html: injectInlineCTA(injectKeyFindings(tocHtml, post.schema_json?.key_findings)) }}
+                  dangerouslySetInnerHTML={{ __html: injectKeyFindings(tocHtml, post.schema_json?.key_findings) }}
                 />
               ) : (
                 <p className="text-gray-500 text-center py-12">Content coming soon.</p>
@@ -467,10 +418,15 @@ export default async function BlogPostPage(props: Props) {
 
               {relatedVideos.length > 0 && <RelatedVideoCard videos={relatedVideos} />}
 
+              {/* Newsletter card at the end of the article. It used to sit
+                  after the second section, where it opened LinkedIn in a new
+                  tab mid-read. Here it asks readers who have finished. */}
+              {post.content && <NewsletterEndCard postSlug={post.slug} />}
+
             </div>
 
             {/* Sticky sidebar - desktop only */}
-            <BlogSidebar toc={sidebarToc} />
+            <BlogSidebar toc={sidebarToc} postSlug={post.slug} />
           </div>
         </div>
       </article>
@@ -489,9 +445,14 @@ export default async function BlogPostPage(props: Props) {
                 keeps all three next-reads visible in about a quarter of that
                 height. Desktop keeps the card grid unchanged. */}
             <ul className="md:hidden border-t border-white/[0.06]">
-              {relatedPosts.map((rp) => (
+              {relatedPosts.map((rp, i) => (
                 <li key={rp.id} className="border-b border-white/[0.06]">
-                  <Link href={`/blog/${rp.slug}`} className="group flex items-start justify-between gap-4 py-4">
+                  <TrackedLink
+                    href={`/blog/${rp.slug}`}
+                    event="related_post_click"
+                    params={{ post_slug: post.slug, target_slug: rp.slug, position: String(i + 1), location: 'related_research' }}
+                    className="group flex items-start justify-between gap-4 py-4"
+                  >
                     <span className="min-w-0">
                       {rp.category && rp.category !== 'general' && (
                         <span className="block text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-brand-accent mb-1.5">
@@ -510,26 +471,31 @@ export default async function BlogPostPage(props: Props) {
                     <svg className="w-4 h-4 text-gray-600 mt-1 shrink-0 group-hover:text-brand-accent transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </TrackedLink>
                 </li>
               ))}
             </ul>
 
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedPosts.map((rp) => (
-                <BlogCard key={rp.id} post={rp} />
+              {relatedPosts.map((rp, i) => (
+                <TrackClicks
+                  key={rp.id}
+                  event="related_post_click"
+                  params={{ post_slug: post.slug, target_slug: rp.slug, position: String(i + 1), location: 'related_research' }}
+                  className="h-full"
+                >
+                  <BlogCard post={rp} />
+                </TrackClicks>
               ))}
             </div>
           </div>
         </section>
       )}
 
-      <CTABanner {...ctaProps} />
-
       {/* Mobile-only chrome. Progress bar gives a completion signal on a long
           phone scroll; the floating pill is the newsletter follow. */}
       <ReadingProgress />
-      <FloatingBookCta />
+      <FloatingBookCta postSlug={post.slug} />
     </>
   )
 }

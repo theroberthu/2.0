@@ -252,7 +252,7 @@ body.hide-global-chrome > button[aria-label="Back to top"] {
   border: 0;
 }
 
-/* Inline CTA card injected into blog post content */
+/* Newsletter card at the end of blog post content (NewsletterEndCard) */
 .blog-inline-cta-card {
   position: relative;
   background: #1a3a4a;

@@ -6,6 +6,53 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.00 - Newsletter card moved to article end, banner removed, recirculation click tracking (2026-11-20)
+
+**What changed.** On blog posts:
+- The inline "Follow the research" newsletter card no longer sits after the
+  second H2. It now renders once after the article body (and after any
+  related-documentary card), just before Related Research
+  (`src/components/NewsletterEndCard.tsx`). `injectInlineCTA` is removed.
+- The bottom `CTABanner` ("Follow the research") is removed from posts, so the
+  end card is the one closing newsletter ask. `CTABanner` itself is unchanged.
+- New GA4 events through the existing gtag (`trackEvent`), no new vendor, no
+  personal data:
+  - `related_post_click` (`post_slug`, `target_slug`, `position` 1 to 3,
+    `location: related_research`) on both the mobile list and the desktop
+    cards. Desktop `BlogCard`s are wrapped in a new capture-phase
+    `TrackClicks` component.
+  - `newsletter_click` (`post_slug`, `location`: `blog_post_end`,
+    `blog_sidebar`, `floating_pill`).
+
+**Why.** GA (last 28 days, Singapore and China excluded) shows readers from
+Google spend about 25 to 45 seconds on an article and most leave after one
+page. The mid-article card opened LinkedIn in a new tab halfway through, which
+pulls the reader off the page and stops GA engagement time. Only
+`related_video_click` was tracked, so there was no way to tell whether Related
+Research or any newsletter placement gets clicks. Alongside this, a saved GA
+comparison "Excl. Singapore and China (bot traffic)" was created: Singapore
+(625 Direct sessions, 0.5% engaged, 0s) and China (77, 0s) were automated
+traffic pulling the site-wide average down.
+
+**Verified.** Local: one card per post, outside the article prose, on a plain
+post, a post with a chart and a post with a video pairing; Related Research
+follows directly with no banner. With gtag stubbed, every placement fired the
+expected event and params. Gate: tsc, lint, production build clean.
+
+**Impact.** Expect a small rise in average engagement time and views per
+session from search readers, and the first data on which next-read and which
+newsletter placement works.
+
+**Follow-ups.** Register `post_slug`, `target_slug` and `position` as GA4
+custom dimensions (and `location` if not yet done). After three to four
+weeks, compare `related_post_click` by position and `newsletter_click` by
+location, and engagement time for Organic Search before and after this
+release. Other automated Direct traffic remains outside the comparison (for
+example 82 Direct sessions at 0s landing on
+`/blog/doordash-ai-shopping-messy-middle-discovery` and 55 on `/blog`).
+
+---
+
 ## Release 1.99 - Ask Target article and the measurement ladder for AI shopping assistants (2026-11-20)
 
 **What changed.** New E-commerce Strategy article,
