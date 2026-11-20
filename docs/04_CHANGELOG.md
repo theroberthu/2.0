@@ -46,8 +46,10 @@ last article section and before Related Research, and no bottom banner.
 session from search readers, and the first data on which next-read and which
 newsletter placement works.
 
-**Follow-ups.** Register `post_slug`, `target_slug` and `position` as GA4
-custom dimensions (and `location` if not yet done). After three to four
+**Follow-ups.** Done 2026-11-20: `post_slug`, `target_slug`, `position` and
+`location` registered as event-scoped GA4 custom dimensions (Post slug, Target
+slug, Position, Click location); they report from that date forward.
+`video_slug`, `short_id` and `chapter` remain unregistered. After three to four
 weeks, compare `related_post_click` by position and `newsletter_click` by
 location, and engagement time for Organic Search before and after this
 release. Other automated Direct traffic remains outside the comparison (for
