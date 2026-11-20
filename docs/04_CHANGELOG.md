@@ -44,7 +44,18 @@ conversion, caused the difference, generated incremental revenue, can buy on
 a shopper's behalf, or is available to every customer. Zero em or en dashes,
 one closing question, four internal links, no Key findings box.
 
-**Verified.** Gate passes (tsc, lint, production build).
+**Verified.** Gate passes (tsc, lint, production build). Inserted into
+Supabase (published 2026-11-20). Live after deploy (commit `6f70af4`): the
+article returns 200 with one H1 (the editorial title), the search title in
+`<title>` and `og:title`, a self-canonical, the 156-character description,
+Article JSON-LD with the editorial headline and BreadcrumbList, the measurement
+table, all five editor and merge edits in the rendered text, and no dashes.
+The OG SVG, PNG and `/api/og` image return 200, and `og:image` and
+`twitter:image` point at `/api/og`. The four internal links and five primary
+source links are present, and the internal targets return 200. `/blog` and the
+homepage list the article; the sitemap lists it (179 URLs) with the AI
+Commerce 2027 lastmod at 2026-11-20; the AI Commerce 2027 tracker shows the
+Target row linking to the article.
 
 **Impact.** The measurement thread (NIQ and Similarweb, BCG, the AI Commerce
 2027 measurement split) extends from outside platforms to an assistant the
