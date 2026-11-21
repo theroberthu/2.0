@@ -59,7 +59,11 @@ sitemap lists both pages (181 URLs).
 **Impact.** Two new uploads get permanent, searchable pages, and the Target
 Short now leads to its full story.
 
-**Follow-ups.** Possible `POST_VIDEOS` pairing, not added: the Target page
+**Follow-ups.** Test Live URL and Request Indexing ran on 2026-11-21 for both
+pages: neither was on Google yet (URL unknown to Google); both live tests
+passed (page can be indexed, video detected, 1 valid Breadcrumbs item, 1 valid
+Videos item) and both requests were accepted into the priority crawl queue.
+Possible `POST_VIDEOS` pairing, not added: the Target page
 with "DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce".
 Carried over: white text on the gold "Watch on YouTube" button (about 2.3:1),
 `FeaturedVideo.tsx` link contrast, the UNIQLO pairing suggestion from Release
