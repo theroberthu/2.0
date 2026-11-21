@@ -48,7 +48,13 @@ VideoObject and breadcrumb data, 157-character meta descriptions and no
 dashes; all related links and the four new images return 200; `/videos` reads
 "41 documentaries ... plus 82 one-minute Shorts"; the homepage features the GE
 page; the Target page shows its Short; the sitemap lists both pages (181
-URLs); no broken images, console errors or horizontal scroll at 375px.
+URLs); no broken images, console errors or horizontal scroll at 375px. Live
+after deploy (commit `dad16a4`): both pages return 200 with one H1, the
+correct title, a self-canonical, the thumbnail OG image, VideoObject and
+breadcrumb data, and no dashes; the four new images return 200; `/videos`
+reads "41 documentaries ... plus 82 one-minute Shorts" with both new Shorts;
+the homepage features the GE page; the Target page shows its Short; the
+sitemap lists both pages (181 URLs).
 
 **Impact.** Two new uploads get permanent, searchable pages, and the Target
 Short now leads to its full story.
