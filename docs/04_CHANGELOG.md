@@ -6,6 +6,61 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.02 - GE Aerospace engine services and Target sortation documentary pages and two new Shorts (2026-11-21)
+
+**What changed.** Two new documentaries from the daily series get companion
+pages, bringing `/videos` to 41 documentaries:
+
+- `/videos/ge-aerospace-engine-services-after-sale`, "Why GE’s Bigger
+  Business Starts After the Engine Sale" (https://youtu.be/zLecQgr6DwQ,
+  uploaded 2026-11-20T16:00:07-08:00, PT2M23S), Aviation and travel.
+- `/videos/target-sortation-center-extra-stop`, "Why Target Gives Your
+  Package an Extra Stop" (https://youtu.be/fSKmzUjnfLs, uploaded
+  2026-11-19T16:00:21-08:00, PT1M29S), Delivery and logistics.
+
+Each page is written against the narration from the uploaded captions, with
+takeaways, chapters, the description's sources and two current-standard
+related research links. The GE chapters come from the description; the Target
+description has none, so its chapters are set from caption timings. The
+homepage Featured Video now points at the GE page, the newest upload. Two
+Shorts join the top of `SHORTS` (82 in total): "Xbox Put a Working Console
+Inside This Fake Alligator" (`M9lUn02J0-c`, no related page) and "Why Your
+Target Package Takes an Extra Stop" (`fjbUpdIUO8g`, related to the new Target
+page). No `POST_VIDEOS` pairings were added.
+
+**Sourcing and boundaries.** GE: the $7,735 million services and $2,607
+million equipment revenue for Commercial Engines & Services are from GE
+Aerospace's 10-Q for the quarter ended September 30, 2026 (signed October 20,
+2026); payment "per engine flight hour or cycle" is from GE's TrueChoice
+Flight Hour page; the Hawaiian Airlines agreement is dated October 1, 2018,
+separates covered from supplemental work, provides for rate adjustments and
+redacts the rate; the combustor repair archive is dated August 31, 2016. The
+page states that services revenue is not profit or flight hour fees alone and
+that the 2018 contract is not presented as current. Target: the sort, batch
+and route process, the 30 to 40 stores per market and the cost and speed claim
+are from Target's sortation fact sheet (updated August 23, 2024), attributed
+to Target and not presented as an independent timing test; the press reel
+carries a June 11, 2024 creation timestamp.
+
+**Verified.** Gate passes (tsc, lint, production build). On the dev server
+both pages return 200 with one H1, the correct title, a self-canonical,
+VideoObject and breadcrumb data, 157-character meta descriptions and no
+dashes; all related links and the four new images return 200; `/videos` reads
+"41 documentaries ... plus 82 one-minute Shorts"; the homepage features the GE
+page; the Target page shows its Short; the sitemap lists both pages (181
+URLs); no broken images, console errors or horizontal scroll at 375px.
+
+**Impact.** Two new uploads get permanent, searchable pages, and the Target
+Short now leads to its full story.
+
+**Follow-ups.** Possible `POST_VIDEOS` pairing, not added: the Target page
+with "DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce".
+Carried over: white text on the gold "Watch on YouTube" button (about 2.3:1),
+`FeaturedVideo.tsx` link contrast, the UNIQLO pairing suggestion from Release
+1.98.
+
+---
+
 ## Release 2.01 - Premium treatment for the homepage "Why This Site Exists" band (2026-11-20)
 
 **What changed.** The closing homepage section, "Why This Site Exists", now

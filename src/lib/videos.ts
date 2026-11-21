@@ -74,6 +74,232 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'ge-aerospace-engine-services-after-sale',
+    youtubeId: 'zLecQgr6DwQ',
+    youtubeTitle: 'Why GE’s Bigger Business Starts After the Engine Sale',
+    h1: 'Why GE’s Bigger Business Starts After the Engine Sale',
+    seoTitle: 'GE Aerospace Engine Services: Why the Sale Is Only the Start',
+    metaDescription:
+      'GE’s engine segment booked $7.7 billion in services revenue in Q3 2026, against $2.6 billion in equipment. How flight hour deals move the bill, not the work.',
+    dek: 'The engine sale gets the photograph. The repair work, and the agreements that decide who pays for it, run for years afterward.',
+    uploadDate: '2026-11-20T16:00:07-08:00',
+    duration: 'PT2M23S',
+    durationLabel: '2 min 23 sec',
+    topic: 'Aviation and travel',
+    subject: 'GE Aerospace engine services',
+    thumbnail: '/images/videos/ge-aerospace-engine-services-after-sale.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu holding a clipboard beside a large jet engine in an aircraft hangar, under the words GE Aerospace, The Sale Is the Start. Labeled editorial composite with an illustrative engine.',
+    sections: [
+      {
+        paragraphs: [
+          'An engine component moves from technicians to specialized machinery and back again. GE does not need to sell another engine to get paid again.',
+        ],
+      },
+      {
+        heading: 'Nearly three service dollars for every equipment dollar',
+        paragraphs: [
+          'In the third quarter of 2026, GE Aerospace’s Commercial Engines and Services segment reported $7.7 billion in services revenue and $2.6 billion in equipment revenue, according to its Form 10-Q. That is nearly three service dollars for every equipment dollar.',
+          'The services figure is broad revenue. Repairs and spare parts are part of it, and it is not profit or the fees from any one type of maintenance contract.',
+        ],
+      },
+      {
+        heading: 'A different clock on the bill',
+        paragraphs: [
+          'An airline can pay for engine work as it is performed. Or it can sign a tailored agreement that transfers specified maintenance risks to a service provider. GE calls one family of these arrangements TrueChoice Flight Hour. GE’s page lists full risk transfer engine maintenance paid as a dollar rate per engine flight hour or cycle, and the exact coverage is negotiated.',
+          'Picture two meters. One records how much the engine is used. The other records the work the provider has promised to cover. The airline pays according to the agreement.',
+        ],
+      },
+      {
+        heading: 'Moving the bill does not move the work',
+        paragraphs: [
+          'The physical repair still needs people, parts and equipment. If a provider carries the cost of covered maintenance, avoiding an expensive engine removal helps its own economics, and a more dependable engine can be useful to both sides. That is the logic of the arrangement, not a guarantee that every contract saves every airline money.',
+        ],
+      },
+      {
+        heading: 'Hourly does not mean unlimited',
+        paragraphs: [
+          'A 2018 TrueChoice Flight Hour agreement between GE Engine Services and Hawaiian Airlines, filed with Hawaiian’s annual report, separates covered services from supplemental work and provides for rate adjustments. The published version redacts the actual rate. The details decide which risks move to the provider and which stay with the airline. The agreement is historical and is not presented as a current contract.',
+        ],
+      },
+      {
+        heading: 'The capacity behind the promise',
+        paragraphs: [
+          'GE’s filing also describes investment in overhaul facilities and a wider maintenance network. Those facilities have to support the promises being sold. A contract can allocate responsibility for the work. It cannot replace the work.',
+        ],
+      },
+      {
+        heading: 'The sale is the start',
+        paragraphs: [
+          'The original sale gets the photograph. Keeping engines working in the years that follow helps explain why the services business brings in so much more revenue.',
+        ],
+      },
+    ],
+    takeaways: [
+      'In Q3 2026, GE Aerospace’s Commercial Engines and Services segment reported $7.735 billion in services revenue and $2.607 billion in equipment revenue, nearly three to one.',
+      'Services revenue is broad. It includes repairs and spare parts and is not profit or flight hour agreement fees alone.',
+      'GE says TrueChoice Flight Hour maintenance can be paid as a dollar rate per engine flight hour or cycle, with coverage tailored to each customer.',
+      'A 2018 Hawaiian Airlines agreement separates covered services from supplemental work and provides for rate adjustments. The published rate is redacted.',
+      'A contract changes who pays for covered maintenance. The repair work, and the capacity to do it, still has to exist.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Repair work behind the sale' },
+      { time: '0:38', label: 'Tailored engine-care agreements' },
+      { time: '1:13', label: 'Who carries the covered cost?' },
+      { time: '1:32', label: 'The historical contract' },
+      { time: '1:48', label: 'Work and capacity' },
+      { time: '2:07', label: 'The sale is the start' },
+    ],
+    sources: [
+      {
+        label: 'GE Aerospace Form 10-Q for the quarter ended September 30, 2026 (SEC)',
+        date: 'October 20, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/40545/000004054526000064/ge-20260930.htm',
+      },
+      {
+        label: 'TrueChoice Flight Hour (GE Aerospace)',
+        date: 'Checked November 21, 2026',
+        href: 'https://www.geaerospace.com/commercial/services/true-choice/flight-hour',
+      },
+      {
+        label: 'TrueChoice Flight Hour Agreement, GE Engine Services and Hawaiian Airlines (exhibit to Hawaiian’s 2018 Form 10-K, SEC)',
+        date: 'Dated October 1, 2018',
+        href: 'https://www.sec.gov/Archives/edgar/data/1172222/000117222219000012/a10k2018exhibit1038.htm',
+      },
+      {
+        label: 'Come along for a combustor repair! (GE Aerospace archive)',
+        date: 'August 31, 2016',
+        href: 'https://www.geaerospace.com/news/articles/technology/come-along-combustor-repair',
+      },
+    ],
+    sourcesNote:
+      'The four sources cited in the video. The services figure is one quarter’s segment revenue, not profit or flight hour agreement fees. The Hawaiian Airlines agreement is historical, its rate is redacted, and it is not presented as a current contract or universal coverage. The 2016 repair video is archive footage from GE’s Cincinnati component repair facility.',
+    related: [
+      {
+        href: '/blog/ai-wont-fix-broken-work',
+        title: 'AI Won’t Fix Broken Work',
+        note: 'Changing who is responsible for a task does not remove the work. The same point, inside a company.',
+      },
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'Technology changes where the work sits. People still own the decisions and the exceptions.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Brief muted GE archive excerpts, including the 2016 Cincinnati combustor repair video, are analyzed with original commentary and archive labels; no GE reuse licence, sponsorship or endorsement is claimed. Pexels aviation footage by Asko, Pixabay and Joerg Mangelsen is illustrative and does not identify an exact engine model, airline agreement or customer repair. Original graphics illustrate contract logic, not a quoted hourly rate. The thumbnail places Robert’s portrait beside an illustrative engine in an AI-assisted editorial composite; it does not show him at a GE facility. Music: “Filaments” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why GE’s Bigger Business Starts After the Engine Sale',
+      description:
+        'GE’s commercial engine business booked nearly three service dollars for every equipment dollar last quarter. What flight hour agreements move, and what they cannot.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'target-sortation-center-extra-stop',
+    youtubeId: 'fSKmzUjnfLs',
+    youtubeTitle: 'Why Target Gives Your Package an Extra Stop',
+    h1: 'Why Target Gives Your Package an Extra Stop',
+    seoTitle: 'Target Sortation Centers: Why Your Package Takes an Extra Stop',
+    metaDescription:
+      'Target sends packed store orders through a sortation center before delivery. Why the detour can pay off, what Target claims and what the footage cannot show.',
+    dek: 'The detour looks like wasted handling. The real change is which orders travel together.',
+    uploadDate: '2026-11-19T16:00:21-08:00',
+    duration: 'PT1M29S',
+    durationLabel: '1 min 29 sec',
+    topic: 'Delivery and logistics',
+    subject: 'Target sortation centers',
+    thumbnail: '/images/videos/target-sortation-center-extra-stop.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu leaning on a red cart carrying a large box with a Target bullseye outside a Target store at dusk, a line of loaded carts behind him, under the words One Extra Stop. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'The box is already packed. Then Target gives it another stop. At first that looks like a detour. Why handle a parcel again when it could already be on its way?',
+        ],
+      },
+      {
+        heading: 'The handoff',
+        paragraphs: [
+          'In Target’s archive footage, a worker scans the parcel, carries it over and places it on a cart with others. Then the loaded cart moves on. The box has not changed. The group around it has.',
+        ],
+      },
+      {
+        heading: 'What the sortation center does',
+        paragraphs: [
+          'Target says its sortation centers bring together packages from local stores, then sort, batch and route them for delivery to nearby neighborhoods. In its fact sheet, updated August 23, 2024, Target says it collects packages from 30 to 40 local stores, depending on the market.',
+        ],
+      },
+      {
+        heading: 'Three starting points or one',
+        paragraphs: [
+          'Picture three stores with orders going to the same area. Sent out separately, their parcels leave from three starting points. Brought together first, they give the delivery operation a chance to group that work. The video’s diagram is a simplified illustration, not a real route or a measured saving for any parcel.',
+        ],
+      },
+      {
+        heading: 'The tradeoff',
+        paragraphs: [
+          'Collecting, scanning and sorting all take work. The extra stop has to justify itself through the journey that follows. Target describes the approach as a way to lower delivery costs and increase speed. That is the company’s account of its process, not an independent timing test.',
+        ],
+      },
+      {
+        heading: 'Who travels together',
+        paragraphs: [
+          'The box began as one order. The next decision is how it should travel with other orders. The detour earns its place when the whole journey works better.',
+        ],
+      },
+    ],
+    takeaways: [
+      'After a store packs an online order, Target can send it through a sortation center before final delivery.',
+      'Target says its sortation centers collect packages from 30 to 40 local stores, depending on the market, then sort, batch and route them by neighborhood.',
+      'The extra handling is a cost. It pays off only if grouping orders makes the rest of the journey cheaper or faster.',
+      'Target says the approach lowers delivery costs and increases speed. The video does not independently test timing or savings.',
+      'The footage shows a handling process, not one parcel’s documented journey.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The box gets another stop' },
+      { time: '0:12', label: 'The handoff in Target’s footage' },
+      { time: '0:22', label: 'Why group the parcels' },
+      { time: '0:33', label: 'Three stores, one neighborhood' },
+      { time: '0:52', label: 'The tradeoff' },
+      { time: '1:11', label: 'Who travels together' },
+    ],
+    sources: [
+      {
+        label: 'How Target’s Sortation Centers Deliver Joy for Guests and Efficiencies for Our Business (Target fact sheet)',
+        date: 'Updated August 23, 2024',
+        href: 'https://corporate.target.com/press/fact-sheet/2023/02/sortation-centers',
+      },
+      {
+        label: 'Sortation center b-roll operations (Target press video)',
+        date: 'Reel created June 11, 2024',
+        href: 'https://corporate.target.com/media/video/press/sortation-center-b-roll-operations',
+      },
+    ],
+    sourcesNote:
+      'The two sources cited in the video. The process description is Target’s own account. The archive reel carries a June 11, 2024 creation timestamp and shows a handling process, not a single parcel’s journey or a current facility audit.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'Customers see the order. The advantage can sit in the physical work behind it.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Another retailer deciding how orders move from store to door, and how the operation pays for it.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Selected muted excerpts from Target’s sortation press reel are replayed for analysis; they represent a handling process, not one parcel’s uninterrupted journey, a current facility audit or Chicago pilot footage. No Target reuse licence, sponsorship or endorsement is claimed. The diagram is a simplified illustration, not an actual delivery route or a measured saving. The thumbnail is AI-assisted editorial artwork featuring Robert’s likeness, not a photograph of him at a Target facility. Music: “Filaments” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Target Gives Your Package an Extra Stop',
+      description:
+        'A packed parcel gets one more stop before delivery. Why Target groups orders at sortation centers, and what has to be true for the detour to pay off.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'gta-online-business-model-gta-6',
     youtubeId: '9DtidHsFhQw',
     youtubeTitle: 'What GTA 5 Reveals About GTA 6’s Business',
@@ -5566,7 +5792,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'gta-online-business-model-gta-6'
+export const FEATURED_VIDEO_SLUG: string | null = 'ge-aerospace-engine-services-after-sale'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -5615,6 +5841,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'M9lUn02J0-c', title: 'Xbox Put a Working Console Inside This Fake Alligator', uploadDate: '2026-11-20T14:00:31-08:00', durationLabel: '0:34', thumbnail: '/images/shorts/M9lUn02J0-c.jpg' },
+  { youtubeId: 'fjbUpdIUO8g', title: 'Why Your Target Package Takes an Extra Stop', uploadDate: '2026-11-19T14:00:06-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/fjbUpdIUO8g.jpg', related: ['target-sortation-center-extra-stop'] },
   { youtubeId: 'lfrtq6TGSus', title: 'GTA 6’s Free Rent Comes With a Catch', uploadDate: '2026-11-18T14:00:11-08:00', durationLabel: '0:32', thumbnail: '/images/shorts/lfrtq6TGSus.jpg' },
   { youtubeId: 'DjszChlH95Y', title: 'How UNIQLO Counts Your Basket Without Scanning Every Barcode', uploadDate: '2026-11-17T14:00:33-08:00', durationLabel: '0:35', thumbnail: '/images/shorts/DjszChlH95Y.jpg', related: ['uniqlo-rfid-checkout'] },
   { youtubeId: 'NfPeoFW86Ko', title: 'Amazon Put Conveyor Belts on a Robot Hand', uploadDate: '2026-11-16T09:00:23-08:00', durationLabel: '0:31', thumbnail: '/images/shorts/NfPeoFW86Ko.jpg', related: ['amazon-robots-deepfleet-warehouse-traffic'] },
