@@ -48,10 +48,13 @@ risk), High (clear near-term value), Medium, Low.
 - **AI Commerce hub page.** Build a `/ai-commerce` flagship that anchors the
   domain and routes into GEO, AEO, and platform clusters. AI Commerce is
   currently a theme with no home.
-- **Standardize the flagship pages.** Reconcile `/geo` and `/aeo` to one
-  standard: rename `/geo`'s "Related reading" ending to "Continue Exploring AI
-  Commerce", add an "In Short" primer to `/geo`, and use `Article` schema on
-  both (`/aeo` currently uses `WebPage`).
+- **Standardize the flagship pages.** `/geo` is done (Release 2.05: In Short
+  primer, "Continue exploring AI Commerce" ending, `Article` schema). Remaining:
+  move `/aeo` from `WebPage` to `Article` schema.
+- **Refresh the `/geo` RecoScope table monthly.** `CATEGORY_DATA` and the hero
+  callout in `src/app/geo/page.tsx` cite the November 17 to 22, 2026 snapshots
+  by date. Refresh from getrecoscope.com/tracker when new snapshots publish, and
+  keep the dated caption and `dateModified` in step.
 - **Homepage audit.** Confirm the homepage reflects the publication direction
   end to end and links cleanly into the flagship clusters.
 - **Blog taxonomy review.** `BLOG_CATEGORIES` still uses consulting-era labels

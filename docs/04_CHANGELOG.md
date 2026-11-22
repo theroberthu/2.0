@@ -6,6 +6,59 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.05 - /geo flagship revision: sourced figures, current RecoScope data, flagship structure (2026-11-22)
+
+**What changed.** A full editorial revision of `/geo`, drafted for review and
+approved by Robert:
+
+- **Naming.** Amazon Alexa for Shopping is the primary name throughout, per the
+  style guide; "Rufus" appears only as history.
+- **Figures re-sourced to primary documents.** Amazon's Q3 2026 release (more
+  than 400 million Alexa for Shopping customers in the last 12 months,
+  interactions up 570%), Walmart's Q3 FY27 release (U.S. Sparky usage up 129%
+  year over year) and its technology page (announced ChatGPT and Gemini
+  integrations), the April 24, 2026 Universal Commerce Protocol Tech Council
+  release, and Google's May 20, 2025 AI Mode shopping post (Shopping Graph,
+  50 billion listings). Walmart's 35% order-value figure is now described as a
+  user vs non-user comparison, not a measured effect.
+- **Removed unsourced or outdated claims.** Rufus at 13% of Amazon searches,
+  ChatGPT at about 21% of Walmart referral traffic, OpenAI Operator and
+  Perplexity Comet, the 1 to 3 week (Sparky) and 3 to 6 week (Rufus) timings,
+  Sparky weighting attributes more than Rufus, and RecoScope Rufus/Sparky
+  trackers that no longer exist.
+- **RecoScope section rebuilt.** RecoScope now publishes dated monthly
+  snapshots (12 answers: 3 prompts x ChatGPT, Claude, Gemini, Perplexity) that
+  count mentions separately from first place. The retired "top 5 placements"
+  numbers were replaced with an eight-category table from the November 17 to
+  22, 2026 snapshots. Lead finding, now the hero callout: Brooks appeared in all
+  12 running-shoe answers while all four assistants ranked ASICS first.
+- **Consulting-era copy removed.** The "$500K to $5M" brand-owner framing, the
+  "Can I do GEO myself?" FAQ, the "Which brands need GEO right now?" urgency
+  section and the RecoScope sales line. A new section, "What the evidence
+  shows, and what it does not", links the BCG, Search Console and
+  Lightspeed/Vaer analyses and states that the causal payoff of listing changes
+  is not yet proven, consistent with `/ai-commerce-2027`.
+- **Flagship standard.** In Short primer; "Continue exploring AI Commerce" with
+  11 real internal links (was 4 under "Related reading"); FAQ reworked to 10
+  questions; `og:type` article; `dateModified`, visible "Last updated" and the
+  sitemap date all 2026-11-22.
+
+**Why.** The page was last updated in July, carried figures with no source,
+used a retired product name against the style guide, described a RecoScope
+metric that no longer exists, and read as a seller pitch rather than research.
+
+**Verification.** Local: one H1, 11 H2s, Article/FAQPage/BreadcrumbList/HowTo
+JSON-LD parse, zero dashes, no console errors, no horizontal scroll at 375px,
+all internal links 200, external sources open (Amazon IR and Newsfile block
+scripts but open in a browser). Gate clean. Live after deploy (`7e44ab6`): new
+content, `dateModified` 2026-11-22, sitemap lastmod 2026-11-22, all internal
+links 200. IndexNow: `/geo` submitted (200).
+
+**Follow-ups.** Refresh the RecoScope table monthly (backlog). `/aeo` still
+uses `WebPage` schema. Google Request Indexing for `/geo` not yet requested.
+
+---
+
 ## Release 2.04 - Instacart Caper Cart and Las Vegas F1 bridge documentary pages and a Chipotle Short (2026-11-22)
 
 **What changed.** Two new documentaries get companion pages, bringing `/videos`

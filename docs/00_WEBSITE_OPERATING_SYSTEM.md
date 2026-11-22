@@ -142,9 +142,8 @@ shape:
 10. **Structured data:** `Article` + `FAQPage` + `BreadcrumbList` (add `HowTo`
     when the page contains a genuine step-by-step framework)
 
-Known variance to reconcile (see backlog): `/geo` currently labels its ending
-"Related reading" and uses `Article` + `HowTo`; `/aeo` uses "Continue exploring
-AI Commerce" and `WebPage`. The target is the standard above for both.
+Known variance to reconcile (see backlog): `/geo` now follows the standard
+(Release 2.05). `/aeo` still uses `WebPage` schema instead of `Article`.
 
 ## Living research pages
 
