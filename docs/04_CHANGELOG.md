@@ -53,7 +53,10 @@ from Release 2.03 is now validated.
 
 **Follow-ups.** Possible `POST_VIDEOS` pairing, not added: the Instacart page
 with "DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce".
-Search Console Request Indexing for the two new pages if wanted.
+Test Live URL and Request Indexing ran on 2026-11-22 for both pages: neither
+was on Google yet (URL unknown to Google); both live tests passed (page can be
+indexed, video detected, 1 valid Breadcrumbs item, 1 valid Videos item) and
+both requests were accepted into the priority crawl queue.
 
 ---
 
