@@ -74,6 +74,269 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'instacart-caper-cart-wind-down',
+    youtubeId: 'oXWKqcF8xaM',
+    youtubeTitle: 'Why Instacart Is Winding Down Its AI Shopping Cart',
+    h1: 'Why Instacart Is Winding Down Its AI Shopping Cart',
+    seoTitle: 'Instacart Caper Cart: Why the AI Cart Is Winding Down',
+    metaDescription:
+      'Instacart is winding down Caper Cart after retailer adoption fell short. What the $55 million to $80 million charge covers, and what a demo cannot prove.',
+    dek: 'The demonstration had an audience. The business needed enough retailers willing to invest.',
+    uploadDate: '2026-11-21T16:00:36-08:00',
+    duration: 'PT2M24S',
+    durationLabel: '2 min 24 sec',
+    topic: 'Retail strategy',
+    subject: 'Instacart Caper Cart',
+    thumbnail: '/images/videos/instacart-caper-cart-wind-down.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu crouching beside a Caper smart cart in a dim grocery aisle, under the words Instacart’s AI Cart, Why Stop? Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'Instacart’s Caper Cart recognizes groceries as they go into the basket. In October 2026, Instacart said it would wind the business down. The shopper enjoying the trip is not the person signing the deal. A grocery business has to decide whether to put the system into its stores.',
+        ],
+      },
+      {
+        heading: 'The estimated cost of leaving',
+        paragraphs: [
+          'Instacart’s parent company, Maplebear, expects pre-tax charges of about $55 million to $80 million from the wind-down, mostly in the fourth quarter of 2026, according to its Form 8-K. The filing splits the estimate into contract termination costs, impairments of Caper Cart assets and employee termination costs.',
+          'These are forward-looking estimates of the cost of exiting. They are not final bills, and they are not Caper’s lifetime loss.',
+        ],
+      },
+      {
+        heading: 'The screen was also an advertising surface',
+        paragraphs: [
+          'In the official demonstration, the cart registers a product, then the screen offers something else to buy. That second action matters. The screen reached shoppers while they were still choosing their groceries. When Weis Markets launched Caper Carts in June 2026, the announcement included on-cart advertising for brands.',
+        ],
+      },
+      {
+        heading: 'The store has to make it work',
+        paragraphs: [
+          'Putting the cart into a store means connecting it to checkout and loyalty systems, training staff, installing signs and preparing a launch. Each of those steps belongs to the retailer’s investment decision. A compelling screen has to fit an entire store operation.',
+        ],
+      },
+      {
+        heading: 'Adoption and the exit plan',
+        paragraphs: [
+          'Instacart gave its answer on October 26. It said retailer adoption had not scaled quickly enough to justify continued investment. That explains the decision. It is not a per-cart profit calculation.',
+          'The board approved the wind-down on October 25, and the filing targets substantial completion by the end of the second quarter of 2027. Of the estimated charges, $30 million to $50 million is expected to become future cash spending. The two figures measure different things, and both are estimates.',
+        ],
+      },
+      {
+        heading: 'The next in-store strategy',
+        paragraphs: [
+          'In a transaction FAQ filed on October 29, Instacart described the Caper wind-down as a completely separate business decision from the proposed DoorDash acquisition. Its next in-store strategy focuses on software, data and AI: tools for understanding what is on store shelves and for managing prepared food orders. It is still pursuing technology inside grocery stores.',
+        ],
+      },
+      {
+        heading: 'A demonstration needs a buyer',
+        paragraphs: [
+          'The demonstration shows the product can make a shopping moment look easier. The wind-down asks whether enough retailers will invest to make the business worth scaling. An AI demo has an audience. A business needs a buyer.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Maplebear, Instacart’s parent, expects about $55 million to $80 million in pre-tax charges from winding down Caper Cart, mostly in Q4 2026, with $30 million to $50 million expected to become future cash spending.',
+      'Instacart said retailer adoption had not scaled quickly enough to justify continued investment. It did not publish per-cart economics.',
+      'The cart screen doubled as an advertising surface. The June 2026 Weis Markets launch included on-cart advertising for brands.',
+      'Instacart says the wind-down was separate from the proposed DoorDash acquisition. Its in-store focus moves to shelf intelligence and prepared food software.',
+      'Substantial completion is targeted for the end of Q2 2027.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A clever cart, a retailer’s decision' },
+      { time: '0:19', label: 'The estimated cost of leaving' },
+      { time: '0:32', label: 'The advertising screen' },
+      { time: '0:49', label: 'The store has to make it work' },
+      { time: '1:05', label: 'Adoption and the exit plan' },
+      { time: '1:31', label: 'Cash spending within the charges' },
+      { time: '1:47', label: 'The next in-store strategy' },
+      { time: '1:59', label: 'A demonstration needs a buyer' },
+    ],
+    sources: [
+      {
+        label: 'Focusing our in-store strategy (Instacart company update)',
+        date: 'October 26, 2026',
+        href: 'https://company.instacart.com/updates/focusing-our-in-store-strategy',
+      },
+      {
+        label: 'Maplebear Inc. Form 8-K, Item 2.05 Costs Associated with Exit or Disposal Activities (SEC)',
+        date: 'Filed October 26, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/1579091/000157909126000050/cart-20261025.htm',
+      },
+      {
+        label: 'Instacart and Weis Markets Launch AI-Powered Caper Carts (Instacart press release)',
+        date: 'June 4, 2026',
+        href: 'https://company.instacart.com/pressreleases/instacart-and-weis-markets-launch-ai-powered-caper-carts-to-transform-in-store-shopping',
+      },
+      {
+        label: 'Transaction FAQ, Maplebear Rule 425 filing (SEC)',
+        date: 'October 29, 2026',
+        href: 'https://www.sec.gov/Archives/edgar/data/1579091/000119312526439149/d346005d425.htm',
+      },
+    ],
+    sourcesNote:
+      'The four sources cited in the video. The charge and cash figures are forward-looking company estimates, not final costs or Caper’s lifetime loss. The adoption explanation is Instacart’s own account and does not include per-cart economics.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'The proposed acquisition Instacart says was separate from the Caper decision.',
+      },
+      {
+        href: '/blog/instacart-gopuff-carrot-ads-retail-media-infrastructure',
+        title: 'Retail Media Is Becoming Infrastructure, Not a Network Every Retailer Builds',
+        note: 'Caper’s screen was also an ad placement. The retail media infrastructure Instacart sells to other retailers.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Brief official Caper demonstrations and analytical frame grabs are shown with original commentary and archive labels; official interfaces are illustrative, and no Instacart sponsorship or endorsement is claimed. Generic grocery footage by Engin Akyurt and Jack Sparrow (Pexels) is labeled as context, not footage of a named retailer or the wind-down. The thumbnail is an editorial photo composite featuring Robert; it does not document a visit, interview or product test. Music: “Signal to Noise” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Instacart Is Winding Down Its AI Shopping Cart',
+      description:
+        'Instacart is winding down its AI shopping cart after retailer adoption fell short. Why a convincing demo is not the same as a retailer willing to invest.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'las-vegas-f1-temporary-bridge',
+    youtubeId: 'lqJ2q4J5GNo',
+    youtubeTitle: 'Why Las Vegas Builds This F1 Bridge, Then Takes It Apart',
+    h1: 'Why Las Vegas Builds This F1 Bridge, Then Takes It Apart',
+    seoTitle: 'Las Vegas Grand Prix Bridge: Why It Goes Up and Comes Down',
+    metaDescription:
+      'A temporary steel bridge carries Flamingo Road over the Las Vegas F1 circuit, then comes out again. Why the crossing exists and why it is not permanent.',
+    dek: 'A race can take over a road. The city around it still needs a way across.',
+    uploadDate: '2026-11-21T15:42:16-08:00',
+    duration: 'PT5M35S',
+    durationLabel: '5 min 35 sec',
+    topic: 'Energy and infrastructure',
+    subject: 'Las Vegas Grand Prix bridge',
+    thumbnail: '/images/videos/las-vegas-f1-temporary-bridge.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu holding plans beside a temporary steel truss bridge over a barricaded Las Vegas street, with the Paris Las Vegas tower and the Bellagio behind, under the words Built to Come Down, F1 Las Vegas. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'Las Vegas builds a bridge for Formula One, then takes it apart. Why not leave it there? Start with the road underneath it.',
+        ],
+      },
+      {
+        heading: 'Why the crossing exists',
+        paragraphs: [
+          'Koval Lane is part of the Las Vegas race circuit, and Flamingo Road needs to cross it. While the circuit is operating, those two movements cannot share a green light, so a bridge separates them. Clark County footage from the inaugural event shows a fire engine using the crossing. A race can take over a road. It cannot make the places on the other side stop needing access.',
+          'Beyond the racing line are workplaces, hotels and ordinary journeys. Not everyone approaching this crossing is going to the Grand Prix. The city has to support two jobs at once: an arrangement built around racing, and a street network that still works.',
+        ],
+      },
+      {
+        heading: 'A reusable kit of parts',
+        paragraphs: [
+          'Temporary does not mean flimsy. Acrow, the bridge supplier, says its bridges for the 2024 event were two-lane modular steel structures designed to carry heavy emergency response vehicles. The 605-foot bridge at Koval Lane and Flamingo Road was one of three. Components were pre-assembled at a staging yard, moved to the sites in sections overnight in early October, and lifted into place by cranes.',
+          'Think of a reusable kit of parts rather than a bridge that gets thrown away. The steelwork comes and goes. Some parts of the venue stay.',
+        ],
+      },
+      {
+        heading: 'Building around everyday traffic',
+        paragraphs: [
+          'The crossing has to be built where people already travel. Footage from October 2026 shows a crane beside the intersection, barriers, road-closed signs and a detour. For the crew, it is a worksite. For someone trying to reach a nearby business, it is the route they have to navigate.',
+          'The official 2026 transportation site tracks the work in stages, from track build through race week to dismantling. It is a sequence of changing restrictions, not one switch that turns the Strip off for months.',
+        ],
+      },
+      {
+        heading: 'Who benefits, who deals with the disruption?',
+        paragraphs: [
+          'Liberty Media’s annual report for 2025 says the Las Vegas Grand Prix was the only Formula 1 event that Formula 1 directly promoted in 2023, 2024 and 2025. That made Formula 1 responsible for the circuit and paddock, and it received the ticket revenue and other commercial income from the event. Visitor-facing businesses have their own interests, and road users need their trips to work.',
+          'Those results are not interchangeable. A busy grandstand does not show that every nearby shop benefited. Visitor spending is not the event operator’s profit. And a difficult journey does not, on its own, establish the total cost or value of the race.',
+        ],
+      },
+      {
+        heading: 'Why not leave the bridge there?',
+        paragraphs: [
+          'Clark County studied the question in April 2024. Its study looked at the traffic disruption from erecting, operating and dismantling the temporary bridge, and evaluated a permanent four-lane Flamingo Road bridge over Koval Lane as an alternative, including the disruption its construction would cause.',
+          'A permanent crossing has to make sense as a permanent part of the road network. Avoiding repeated installation is a benefit to weigh. So are the consequences of building and keeping a different kind of intersection. A temporary structure can be removed and reused. A permanent one commits the location for the long term.',
+        ],
+      },
+      {
+        heading: 'Giving the streets back',
+        paragraphs: [
+          'Reopening a road is not the same as finishing the removal work. The 2026 race timetable schedules the track to open to local traffic after each night’s sessions, while the dismantling program continues in stages. Traffic can return to one section while temporary structures and restrictions remain elsewhere.',
+          'So there are two clocks. One counts down to the race. The other counts through the work of returning the area to everyday use. The television audience mostly sees the first. The people using these streets live with both.',
+        ],
+      },
+      {
+        heading: 'One crossing, two jobs',
+        paragraphs: [
+          'Formula One needs a way across its own circuit. Las Vegas needs an intersection that works beyond the event. The bridge is a compromise between those two jobs, not a way to erase the conflict. For the city, the finish line is when the streets work as streets again.',
+        ],
+      },
+    ],
+    takeaways: [
+      'The Flamingo Road bridge over Koval Lane lets cross traffic, including emergency vehicles, get over the circuit while it is operating.',
+      'Acrow says the 2024 crossing was a 605-foot, two-lane modular steel bridge, one of three, pre-assembled at a staging yard and lifted into place by cranes.',
+      'Clark County’s April 2024 study evaluated a permanent four-lane bridge as an alternative to putting up and taking down the temporary one each year.',
+      'Formula 1 directly promoted the Las Vegas Grand Prix in 2023, 2024 and 2025, so it ran the circuit and received the ticket revenue, according to Liberty Media’s 2025 annual report.',
+      'Reopening a road to traffic and finishing the dismantling are separate milestones.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The race and the bridge' },
+      { time: '0:21', label: 'Why the crossing exists' },
+      { time: '1:16', label: 'A reusable kit of parts' },
+      { time: '2:02', label: 'Building around everyday traffic' },
+      { time: '2:43', label: 'Who benefits, who deals with disruption?' },
+      { time: '3:40', label: 'Why not leave the bridge there?' },
+      { time: '4:22', label: 'Giving the streets back' },
+      { time: '5:08', label: 'One crossing, two jobs' },
+    ],
+    sources: [
+      {
+        label: 'Flamingo Road at Koval Lane Bridge Study (Clark County Public Works)',
+        date: 'April 2024',
+        href: 'https://www.clarkcountynv.gov/assets/documents/government/departments/public_works_department/flamingo-koval-bridge-final-study.pdf',
+      },
+      {
+        label: 'Acrow Bridges Provide Temporary Access During the Las Vegas Grand Prix (Acrow case study)',
+        date: 'Covers the 2024 event',
+        href: 'https://acrowbridge.co.uk/case-studies/acrow-bridges-provide-temporary-access-during-the-las-vegas-grand-prix/',
+      },
+      {
+        label: 'Las Vegas Strip Circuit 2026 build and dismantle updates (Las Vegas Grand Prix)',
+        date: 'Checked November 22, 2026',
+        href: 'https://transportation.f1lasvegasgp.com/',
+      },
+      {
+        label: '2026 Las Vegas Grand Prix Timetable V3 (FIA stewards document)',
+        date: 'November 19, 2026',
+        href: 'https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_timetable_v3.pdf',
+      },
+      {
+        label: 'Liberty Media Corporation Form 10-K for 2025',
+        date: 'Fiscal year 2025',
+        href: 'https://www.libertymedia.com/investors/financial-information/sec-filings/content/0001104659-26-020653/0001104659-26-020653.pdf',
+      },
+    ],
+    sourcesNote:
+      'The five sources cited in the video. The 2024 study and the 2023 to 2025 business structure are historical, not measurements of 2026 outcomes. Reopening is described as scheduled in the 2026 plans, not as verified completion. No standalone 2026 event profit figure is asserted.',
+    related: [
+      {
+        href: '/blog/bcg-geo-revenue-growth-evidence',
+        title: 'BCG Gives GEO a Revenue Number. It Is Not Yet a Benchmark',
+        note: 'One headline number cannot stand in for every party’s result. The same caution as visitor spending versus operator profit.',
+      },
+      {
+        href: '/blog/retailers-ai-traffic-customer-ownership',
+        title: 'Retailers Want AI Shopping Traffic. They Do Not Want to Lose the Customer.',
+        note: 'A shared route only works if each side keeps what it needs. Retailers and AI platforms face the same compromise.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his saved AI voice. Brief muted excerpts from Formula 1’s official 2025 Las Vegas race highlights, a Clark County documentary on the inaugural event and FOX5 Las Vegas reporting from October 2026, plus an Acrow bridge photograph, are paired with original commentary; credits do not imply a reuse licence or endorsement. Archive footage is labeled. Diagrams are conceptual and not to scale. The thumbnail is an AI-assisted editorial composite placing Robert in a conceptual bridge scene, not a photograph of an actual visit or employment.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Las Vegas Builds This F1 Bridge, Then Takes It Apart',
+      description:
+        'A temporary steel bridge carries Flamingo Road over the Las Vegas circuit for race week, then comes out. Why the crossing exists, and why it is not permanent.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'ge-aerospace-engine-services-after-sale',
     youtubeId: 'zLecQgr6DwQ',
     youtubeTitle: 'Why GE’s Bigger Business Starts After the Engine Sale',
@@ -5792,7 +6055,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'ge-aerospace-engine-services-after-sale'
+export const FEATURED_VIDEO_SLUG: string | null = 'instacart-caper-cart-wind-down'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -5841,6 +6104,7 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'WroPbI1ohsw', title: 'This Chipotle Drive-Thru Won’t Take Your Order', uploadDate: '2026-11-21T14:00:30-08:00', durationLabel: '0:42', thumbnail: '/images/shorts/WroPbI1ohsw.jpg', related: ['chipotle-chipotlane-pickup-lane'] },
   { youtubeId: 'M9lUn02J0-c', title: 'Xbox Put a Working Console Inside This Fake Alligator', uploadDate: '2026-11-20T14:00:31-08:00', durationLabel: '0:34', thumbnail: '/images/shorts/M9lUn02J0-c.jpg' },
   { youtubeId: 'fjbUpdIUO8g', title: 'Why Your Target Package Takes an Extra Stop', uploadDate: '2026-11-19T14:00:06-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/fjbUpdIUO8g.jpg', related: ['target-sortation-center-extra-stop'] },
   { youtubeId: 'lfrtq6TGSus', title: 'GTA 6’s Free Rent Comes With a Catch', uploadDate: '2026-11-18T14:00:11-08:00', durationLabel: '0:32', thumbnail: '/images/shorts/lfrtq6TGSus.jpg' },
