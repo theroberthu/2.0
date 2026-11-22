@@ -15,7 +15,7 @@ const STATIC_LAST_MODIFIED = {
   home: new Date('2026-03-01'),
   about: new Date('2025-12-01'),
   blog: new Date('2026-03-18'),
-  geo: new Date('2026-06-22'),
+  geo: new Date('2026-11-22'),
   geoAlexaForShopping: new Date('2026-11-15'),
   geoWalmartSparky: new Date('2026-06-22'),
   aeo: new Date('2026-03-19'),
