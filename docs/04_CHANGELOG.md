@@ -28,6 +28,11 @@ Claude-SearchBot, Google-Extended all return 200).
 **Impact.** Faster discovery of new pages in Bing, and through it ChatGPT search
 and Copilot. No change for Google, which does not use IndexNow.
 
+**Verification.** Gate clean (tsc, lint, build). Live after deploy (commit
+`d1146f6`): the key file returns 200 as text/plain with the matching key. First
+submission on 2026-11-22: `--sitemap`, 181 URLs, IndexNow returned 202
+(accepted, key validation pending, the normal response for a new key).
+
 **Follow-ups.** Run the script after every release with the new or updated
 URLs. Check Bing Webmaster Tools for the IndexNow submissions and the sitemap
 status in a few days.
