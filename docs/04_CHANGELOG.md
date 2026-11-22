@@ -55,7 +55,10 @@ content, `dateModified` 2026-11-22, sitemap lastmod 2026-11-22, all internal
 links 200. IndexNow: `/geo` submitted (200).
 
 **Follow-ups.** Refresh the RecoScope table monthly (backlog). `/aeo` still
-uses `WebPage` schema. Google Request Indexing for `/geo` not yet requested.
+uses `WebPage` schema. Search Console on 2026-11-22: `/geo` was already indexed
+(last crawl November 18, before the revision); the live test passed (page can
+be indexed, 1 valid Breadcrumbs item) and Request Indexing was accepted into
+the priority crawl queue.
 
 ---
 
