@@ -6,6 +6,34 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.03 - IndexNow for Bing and AI search (2026-11-22)
+
+**What changed.** IndexNow support. A key file,
+`public/d3a82084dd4d4675ec56f88d69479330.txt`, is served at the site root, and
+`scripts/indexnow.mjs` submits URLs to `api.indexnow.org` (paths or full URLs,
+or `--sitemap` for every sitemap URL; `--dry-run` prints the payload). The
+script accepts only theroberthu.com URLs and confirms the live key file matches
+before it sends anything. The release workflow in the Operating System now
+includes running it after each deploy.
+
+**Why.** A GA4 check (Oct 24 to Nov 20) found 45 AI Assistant sessions: 25 from
+ChatGPT, landing almost entirely on `/videos/` pages, and 20 from Gemini,
+landing mostly on blog posts. ChatGPT search and Copilot draw on Bing's index,
+and the site had no Bing Webmaster Tools setup. Robert verified the site in
+Bing Webmaster Tools on 2026-11-22; IndexNow tells Bing about new pages the
+moment they ship instead of waiting for a crawl. robots.txt already allows all
+AI crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot,
+Claude-SearchBot, Google-Extended all return 200).
+
+**Impact.** Faster discovery of new pages in Bing, and through it ChatGPT search
+and Copilot. No change for Google, which does not use IndexNow.
+
+**Follow-ups.** Run the script after every release with the new or updated
+URLs. Check Bing Webmaster Tools for the IndexNow submissions and the sitemap
+status in a few days.
+
+---
+
 ## Release 2.02 - GE Aerospace engine services and Target sortation documentary pages and two new Shorts (2026-11-21)
 
 **What changed.** Two new documentaries from the daily series get companion

@@ -106,7 +106,10 @@ rather than through promotion or lead capture.
 4. Validate: `npx tsc --noEmit`, `npx next lint`, `npx next build`.
 5. Verify observable behavior (redirects, renders, links resolve 200, JSON-LD
    validates from the rendered HTML).
-6. Commit with a clear message; push to `main` (Vercel deploys).
+6. Commit with a clear message; push to `main` (Vercel deploys). Once the
+   deploy is live, submit new or materially updated URLs to IndexNow (Bing and
+   other participating engines): `node scripts/indexnow.mjs /path/one /path/two`.
+   Google does not use IndexNow; Search Console Request Indexing stays separate.
 7. **Living research gate.** If the change is a new AI commerce article, check
    whether it materially updates one of the eight shifts on
    [/ai-commerce-2027](../src/app/ai-commerce-2027/page.tsx). If it does, update
