@@ -144,7 +144,11 @@ newsletter placement works.
 **Follow-ups.** Done 2026-11-20: `post_slug`, `target_slug`, `position` and
 `location` registered as event-scoped GA4 custom dimensions (Post slug, Target
 slug, Position, Click location); they report from that date forward.
-`video_slug`, `short_id` and `chapter` remain unregistered. After three to four
+Done 2026-11-22: `video_slug`, `short_id` and `chapter` registered the same way
+(Video slug, Short ID, Chapter), after a GA4 check showed ChatGPT referrals
+land almost entirely on `/videos/` pages; video pages link out to YouTube
+rather than embed, so `watch_on_youtube_click` by Video slug is the measure of
+whether those visitors watch. After three to four
 weeks, compare `related_post_click` by position and `newsletter_click` by
 location, and engagement time for Organic Search before and after this
 release. Other automated Direct traffic remains outside the comparison (for
