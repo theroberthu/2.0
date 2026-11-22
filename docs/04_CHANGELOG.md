@@ -6,6 +6,57 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.04 - Instacart Caper Cart and Las Vegas F1 bridge documentary pages and a Chipotle Short (2026-11-22)
+
+**What changed.** Two new documentaries get companion pages, bringing `/videos`
+to 43 documentaries:
+
+- `/videos/instacart-caper-cart-wind-down` ("Why Instacart Is Winding Down Its
+  AI Shopping Cart", `oXWKqcF8xaM`, 2:24, Retail strategy). Now the homepage
+  Featured Video. Related research: the DoorDash/Instacart physical layer
+  article and the Carrot Ads retail media infrastructure article.
+- `/videos/las-vegas-f1-temporary-bridge` ("Why Las Vegas Builds This F1
+  Bridge, Then Takes It Apart", `lqJ2q4J5GNo`, 5:35, Energy and
+  infrastructure). Related research links on shared reasoning (BCG GEO revenue
+  number, retailers and AI shopping traffic), as with the TOMRA and Three Mile
+  Island pages, since no article covers event infrastructure.
+
+New Short at the top of `SHORTS`: "This Chipotle Drive-Thru Won't Take Your
+Order" (`WroPbI1ohsw`, 0:42), related to `chipotle-chipotlane-pickup-lane`,
+which its description links as the full story. `/videos` now lists 83 Shorts.
+
+**Sources verified.** Instacart: the Form 8-K (charges of about $55 million to
+$80 million, mostly Q4 2026, split into contract, asset and employee costs;
+$30 million to $50 million future cash; substantial completion by end of Q2
+2027), the October 26 company update (retailer adoption did not scale quickly
+enough), the June 4 Weis launch (on-cart advertising) and the October 29 Rule
+425 FAQ (wind-down "a completely separate business decision" from the DoorDash
+deal). The video's reference to Caper's rollout guide is not among the cited
+sources, so the page describes store setup in general terms. Las Vegas: Acrow
+case study (605-foot two-lane modular bridge at Koval and Flamingo for the 2024
+event, HL-93 loading for emergency vehicles, staging yard and crane lifts),
+Clark County April 2024 study (permanent four-lane bridge evaluated as an
+alternative), Liberty Media 2025 Form 10-K (Las Vegas the only directly
+promoted F1 event in 2023 to 2025), FIA Timetable V3 (track opens to local
+traffic after sessions) and the 2026 build and dismantle site.
+
+**Verification.** Local: one H1 each, correct titles and canonicals, thumbnail
+OG images, VideoObject and BreadcrumbList, no dashes, no broken images or
+console errors, no horizontal scroll at 375px; sitemap 183 URLs. Gate clean.
+Live after deploy (commit `fdbf483`): both pages return 200 with the same
+checks passing; the three new images return 200; `/videos` reads "43
+documentaries ... plus 83 one-minute Shorts" with the Chipotle Short; the
+homepage features the Instacart page; the Chipotle page shows the new Short;
+the sitemap lists 183 URLs. IndexNow: both new pages, the Chipotle page,
+`/videos` and the homepage submitted; IndexNow returned 200, confirming the key
+from Release 2.03 is now validated.
+
+**Follow-ups.** Possible `POST_VIDEOS` pairing, not added: the Instacart page
+with "DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce".
+Search Console Request Indexing for the two new pages if wanted.
+
+---
+
 ## Release 2.03 - IndexNow for Bing and AI search (2026-11-22)
 
 **What changed.** IndexNow support. A key file,
