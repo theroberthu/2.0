@@ -6077,7 +6077,7 @@ export const POST_VIDEOS: Record<string, string[]> = {
   'retailers-ai-traffic-customer-ownership': ['royal-caribbean-sandals-vacation-strategy'],
   'walmart-sparky-ai-personalization-pricing-governance': ['chatgpt-workout-plan-trust'],
   'anthropic-project-swap-agentic-commerce-shopper-preferences': ['chatgpt-workout-plan-trust'],
-  'doordash-instacart-physical-layer-ai-commerce': ['doordash-instacart-acquisition'],
+  'doordash-instacart-physical-layer-ai-commerce': ['doordash-instacart-acquisition', 'instacart-caper-cart-wind-down'],
 }
 
 export function videosForPost(postSlug: string): VideoEntry[] {
