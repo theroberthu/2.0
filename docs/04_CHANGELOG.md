@@ -51,8 +51,12 @@ the sitemap lists 183 URLs. IndexNow: both new pages, the Chipotle page,
 `/videos` and the homepage submitted; IndexNow returned 200, confirming the key
 from Release 2.03 is now validated.
 
-**Follow-ups.** Possible `POST_VIDEOS` pairing, not added: the Instacart page
-with "DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce".
+**Follow-ups.** The `POST_VIDEOS` pairing for the Instacart page shipped on
+2026-11-22 (`dc8eaa1`) at Robert's request: it is the second video on "DoorDash
+Is Buying Instacart to Win the Physical Layer of AI Commerce", after the
+acquisition documentary, so the byline link is unchanged and the Caper Cart
+video joins the end-of-article "Related documentaries" cards. Gate clean; live
+article links both video pages (both 200); article submitted to IndexNow (200).
 Test Live URL and Request Indexing ran on 2026-11-22 for both pages: neither
 was on Google yet (URL unknown to Google); both live tests passed (page can be
 indexed, video detected, 1 valid Breadcrumbs item, 1 valid Videos item) and
