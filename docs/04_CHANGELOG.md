@@ -6,6 +6,63 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.06 - AWS Marketplace agentic payments article: governed procurement (2026-11-23)
+
+**What changed.** New E-commerce Strategy article,
+`/blog/aws-marketplace-agentcore-agentic-payments-x402`, "AWS Treats Agentic
+Commerce as Governed Procurement" (search title "AWS Lets AI Agents Buy Through
+Marketplace With AgentCore"; 1,199 body words). It argues that AWS's November 19
+launch makes purchasing a configurable permission: a person approves the
+boundary (account, session budget, eligible catalog) rather than each purchase,
+and the agent chooses a paid input inside it. Compared with the Visa, BILL and
+Billtrust pilot, where a person approves a specific invoice. Adds the content
+file, insert script, OG SVG and PNG. AI Commerce 2027 gets one Governance
+tracker row (November 19, AWS) and no change to Shift 09 text;
+`LAST_UPDATED` and the sitemap date move to 2026-11-23 together.
+
+**Sourcing.** Primary sources:
+- AWS What's New and the AWS ML Blog walkthrough (both Nov 19).
+- The AWS Marketplace launch post (Nov 19).
+- The Buyer Guide pages on AI agent products, the AgentCore payments service-linked role and paying for products.
+- The AgentCore Developer Guide pages on Process a payment, concepts, IAM roles, security best practices, sessions, framework integrations, the Gateway Marketplace connector, the Region table and the release notes.
+- The Seller Guide page on Agentic Commerce.
+- The AgentCore payments GA post (Aug 18).
+- The x402 Foundation launch (Jul 14), for the protocol's origin only.
+
+Secondary coverage (Constellation Research, dev.to) was used only to surface questions. A dev.to claim of a 24-hour refund escrow is not supported by AWS documentation and is excluded. Eight inline source links sit on existing phrases.
+
+**Editorial gates.** Research PASS, Editorial PASS, SEO/GEO PASS, Corpus advancement PASS (narrowed: Walmart's Agent Profiles already covers consumer spending limits), Final WRITE.
+
+Senior-editor round (EDIT, THEN PUBLISH):
+- The H1 changed from "Turns" to "Treats".
+- The thesis is qualified to a configurable permission.
+- The session cap is described as optional in the API, recommended by AWS, and enforced outside the model when configured.
+- The unsupported "nobody approved that seller" inference is replaced.
+- One scaling condition now reads "the organization can impose a defined spending ceiling".
+- AI Commerce 2027 gets a tracker row only.
+
+The article does not say:
+- that agents can buy every Marketplace product, or that the capability is global;
+- that x402 requires crypto or that AWS invented it;
+- that there is no human authorization, or that every purchase is approved;
+- that contracts or procurement disappear, or that sellers are paid instantly;
+- that the launch shows ROI, or that the $10,000 ceiling is a normal budget.
+
+Zero em or en dashes, one closing question, three internal links, no Key findings box.
+
+**Verified.** Gate passes (tsc, lint, production build).
+
+**Impact.** The agent-payments thread (NPCI, Know Your Agent, Ant, Visa and BILL, Walmart Agent Profiles) gains its first documented mid-task purchasing loop. The agent chooses the input, while a budget it cannot raise in AWS's recommended pattern, a signed fixed price and the existing bill bound the choice.
+
+**Follow-ups.**
+- Request indexing for the new URL.
+- Open questions, if AWS documents them:
+  - how the approved-seller policy binds the paid call;
+  - whether an AWS Billing session can run without a cap;
+  - whether a service-level per-transaction cap exists.
+
+---
+
 ## Release 2.05 - /geo flagship revision: sourced figures, current RecoScope data, flagship structure (2026-11-22)
 
 **What changed.** A full editorial revision of `/geo`, drafted for review and

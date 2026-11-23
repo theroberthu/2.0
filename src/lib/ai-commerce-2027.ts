@@ -10,7 +10,7 @@
  */
 
 export const PUBLISHED = '2026-09-21'
-export const LAST_UPDATED = '2026-11-20'
+export const LAST_UPDATED = '2026-11-23'
 export const READING_MINUTES = 25
 
 export const HEADLINE = 'AI Commerce 2027'
@@ -722,6 +722,15 @@ export type TrackerEntry = {
  * the top of this array.
  */
 export const EVIDENCE_TRACKER: TrackerEntry[] = [
+  {
+    date: '2026-11-19',
+    org: 'AWS',
+    development: 'AgentCore agents can buy select x402-enabled AWS Marketplace products per request in USD, billed to the existing AWS account; fixed signed quotes, optional session spending caps, Private Marketplace limits, CloudTrail audit',
+    affects: 'Governance',
+    evidenceType: 'Company announcement and documentation',
+    changed: "Companies can approve a budget and an eligible catalog rather than each purchase; in AWS's recommended pattern the agent's role cannot create or expand its own payment session; no volume or adoption disclosed",
+    href: '/blog/aws-marketplace-agentcore-agentic-payments-x402',
+  },
   {
     date: '2026-11-18',
     org: 'Target',
