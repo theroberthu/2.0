@@ -50,7 +50,15 @@ The article does not say:
 
 Zero em or en dashes, one closing question, three internal links, no Key findings box.
 
-**Verified.** Gate passes (tsc, lint, production build).
+**Verified.** Gate passes (tsc, lint, production build). Supabase id `ee5a5896-4f44-4c19-8ae6-5d50da081414`, commit 3e95858. Live checks after deploy:
+- Article returns 200, with the split title, meta description, canonical, Article and BreadcrumbList JSON-LD, and one H1.
+- The senior-editor wording is present.
+- Zero dashes in the rendered page.
+- The three internal links and the eight source links resolve.
+- The OG image returns 200 as an SVG and as a PNG at `/api/og/[slug]`.
+- AI Commerce 2027 shows the AWS tracker row, "Updated November 23, 2026" and `dateModified` 2026-11-23, with `datePublished` unchanged.
+- The sitemap lists the article and shows ai-commerce-2027 lastmod 2026-11-23.
+- IndexNow returned 200 for the article and /ai-commerce-2027.
 
 **Impact.** The agent-payments thread (NPCI, Know Your Agent, Ant, Visa and BILL, Walmart Agent Profiles) gains its first documented mid-task purchasing loop. The agent chooses the input, while a budget it cannot raise in AWS's recommended pattern, a signed fixed price and the existing bill bound the choice.
 
