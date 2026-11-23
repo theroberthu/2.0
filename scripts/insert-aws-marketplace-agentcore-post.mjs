@@ -94,6 +94,17 @@ const post = {
 
 <p>On the same day, AWS placed approval differently for a different purchase. Its <a href="https://aws.amazon.com/blogs/awsmarketplace/aws-marketplace-helps-humans-and-agents-buy-deploy-and-transact/" ${EXT}>conversational checkout in Marketplace agent mode</a>, which covers pricing, license terms and purchase-order thresholds, requires human confirmation before a purchase completes. Human approval did not disappear. It was placed according to what is being bought.</p>
 
+<div class="table-wrapper">
+<table>
+<thead><tr><th>Decision point</th><th>Visa, BILL and Billtrust pilot</th><th>AWS agentic payments</th><th>AWS agent-mode checkout</th></tr></thead>
+<tbody>
+<tr><td>What a person approves</td><td>The specific invoice payment</td><td>The boundary: the account, a session budget, the products the organization allows</td><td>Each purchase, before it completes</td></tr>
+<tr><td>What the agent decides</td><td>How to submit an already-approved payment, not whether, to whom or how much</td><td>Which permitted paid input to buy, mid-task</td><td>Nothing final. It walks the buyer through pricing, license terms and purchase-order thresholds</td></tr>
+<tr><td>What limits the agent</td><td>Controls tied to the approved instruction</td><td>A seller-signed fixed price, a session cap when one is configured, and Private Marketplace where it is used</td><td>Human confirmation</td></tr>
+</tbody>
+</table>
+</div>
+
 <h2>Why this may work before consumer shopping</h2>
 
 <p>Agentic purchasing may scale first where most of the hard questions are already answered:</p>

@@ -60,6 +60,8 @@ Zero em or en dashes, one closing question, three internal links, no Key finding
 - The sitemap lists the article and shows ai-commerce-2027 lastmod 2026-11-23.
 - IndexNow returned 200 for the article and /ai-commerce-2027.
 
+**Follow-up (2026-11-23): comparison table.** With Robert's approval, a three-row table was added at the end of "What changes compared with Visa and BILL". It compares what a person approves, what the agent decides and what limits the agent across the Visa, BILL and Billtrust pilot, AWS agentic payments and AWS agent-mode checkout. It uses only facts already in the article. It went in through `scripts/update-aws-agentcore-add-approval-table.mjs`, which has a copy guard: the prose stays byte-identical once the table is removed. No chart, because the article's figures do not share a unit. No screenshots, because AWS's interface and diagrams are AWS's own material. The content file and insert script are synced.
+
 **Impact.** The agent-payments thread (NPCI, Know Your Agent, Ant, Visa and BILL, Walmart Agent Profiles) gains its first documented mid-task purchasing loop. The agent chooses the input, while a budget it cannot raise in AWS's recommended pattern, a signed fixed price and the existing bill bound the choice.
 
 **Follow-ups.**

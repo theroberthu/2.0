@@ -72,6 +72,12 @@ That is more freedom than the Visa pilot grants, and less than it sounds. NPCI's
 
 On the same day, AWS placed approval differently for a different purchase. Its conversational checkout in Marketplace agent mode, which covers pricing, license terms and purchase-order thresholds, requires human confirmation before a purchase completes. Human approval did not disappear. It was placed according to what is being bought.
 
+| Decision point | Visa, BILL and Billtrust pilot | AWS agentic payments | AWS agent-mode checkout |
+| --- | --- | --- | --- |
+| What a person approves | The specific invoice payment | The boundary: the account, a session budget, the products the organization allows | Each purchase, before it completes |
+| What the agent decides | How to submit an already-approved payment, not whether, to whom or how much | Which permitted paid input to buy, mid-task | Nothing final. It walks the buyer through pricing, license terms and purchase-order thresholds |
+| What limits the agent | Controls tied to the approved instruction | A seller-signed fixed price, a session cap when one is configured, and Private Marketplace where it is used | Human confirmation |
+
 ### Why this may work before consumer shopping
 
 Agentic purchasing may scale first where most of the hard questions are already answered:
@@ -104,7 +110,7 @@ If your agents could buy the inputs they need tomorrow, who in your organization
 
 ## SOURCE-BODY WORD COUNT
 
-1,199 words: the DRAFT BODY without the H1, with headings and list items included and link URLs excluded (same convention as the Visa, BILL and Billtrust file). Zero em dashes, zero en dashes, one closing question, no Key findings box.
+1,199 words of prose at publication, plus a 3-row comparison table added after publication with Robert's approval (2026-11-23), about 1,290 with the table: the DRAFT BODY without the H1, with headings and list items included and link URLs excluded (same convention as the Visa, BILL and Billtrust file). Zero em dashes, zero en dashes, one closing question, no Key findings box.
 
 ---
 
