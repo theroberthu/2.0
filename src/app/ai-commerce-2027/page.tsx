@@ -2,8 +2,13 @@ import { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import AuthorityLadder from '@/components/ac27/AuthorityLadder'
+import TrustChain from '@/components/ac27/TrustChain'
+import EvidenceTrackerTable from '@/components/ac27/EvidenceTrackerTable'
 import { SITE_URL } from '@/lib/constants'
 import {
+  AUTHORITY_STEPS,
+  CHECKOUT_POSTURES,
   CLOSING_QUESTION,
   CONCLUSION,
   COUNTER_INTRO,
@@ -18,6 +23,8 @@ import {
   HEADLINE,
   INTERFACES,
   LAST_UPDATED,
+  MEASUREMENT_STAGES,
+  MEASUREMENT_TOOLS,
   METHOD,
   PROTECTED_LINE,
   PUBLISHED,
@@ -31,9 +38,13 @@ import {
   STACK,
   STACK_AFTER,
   STACK_INTRO,
+  TRUST_CASES,
+  TRUST_CHECKS,
+  TRUST_UPSTREAM,
   UPDATE_NOTES,
   type Ref,
   type Shift,
+  type SignalStatus,
 } from '@/lib/ai-commerce-2027'
 
 const TITLE = 'AI Commerce 2027: Agentic Commerce Trends and Operating Model'
@@ -141,6 +152,106 @@ function ShiftBlock({ label, children }: { label: string; children: ReactNode })
   )
 }
 
+function FigureLabel({ eyebrow, title }: { eyebrow: string; title: string }) {
+  return (
+    <>
+      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-brand-gold mb-2">{eyebrow}</p>
+      <p className="text-lg font-bold text-white tracking-tight leading-snug mb-5">{title}</p>
+    </>
+  )
+}
+
+/** Shift 02: four checkout postures. The merchant stays merchant of record in all of them. */
+function CheckoutPostures() {
+  return (
+    <figure className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 md:p-7">
+      <FigureLabel eyebrow="Four postures per surface" title="Who shows the checkout changes. Who owns the order does not." />
+      <ul className="grid md:grid-cols-2 gap-3">
+        {CHECKOUT_POSTURES.map((p, i) => (
+          <li key={p.posture} className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 flex flex-col">
+            <p className="flex items-baseline gap-2.5 mb-3">
+              <span className="text-[11px] font-mono text-[#42a5c8]">{String(i + 1).padStart(2, '0')}</span>
+              <span className="text-[15px] font-semibold text-white leading-snug">{p.posture}</span>
+            </p>
+            <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-[13px] mb-3">
+              <dt className="text-gray-500">Checkout shown by</dt>
+              <dd className="text-gray-200">{p.renders}</dd>
+              <dt className="text-gray-500">Conversation held by</dt>
+              <dd className="text-gray-200">{p.conversation}</dd>
+              <dt className="text-gray-500">Merchant of record</dt>
+              <dd className="text-brand-gold font-semibold">The merchant</dd>
+            </dl>
+            <p className="text-[12.5px] text-gray-400 leading-relaxed mt-auto pt-3 border-t border-white/[0.06]">{p.examples}</p>
+          </li>
+        ))}
+      </ul>
+    </figure>
+  )
+}
+
+/** Shift 04: which instrument covers which stage of an AI shopping journey. */
+function MeasurementMap() {
+  const n = MEASUREMENT_STAGES.length
+  return (
+    <figure className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 md:p-7">
+      <FigureLabel eyebrow="What gets measured" title="Purchases now have instruments. What the AI rejected has none." />
+
+      {/* Wide layout: stages as columns, instruments as bars spanning the stages they cover. */}
+      <div className="hidden sm:block">
+        <div className="grid gap-2 mb-3" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>
+          {MEASUREMENT_STAGES.map((st, i) => (
+            <div key={st.stage} className="border-t-2 border-white/[0.14] pt-2">
+              <p className="text-[11px] font-mono text-[#42a5c8] mb-0.5">{String(i + 1).padStart(2, '0')}</p>
+              <p className="text-[14px] font-semibold text-white leading-snug">{st.stage}</p>
+              <p className="text-[12px] text-gray-500 leading-snug mt-0.5">{st.question}</p>
+            </div>
+          ))}
+        </div>
+        <div className="space-y-2">
+          {MEASUREMENT_TOOLS.map((t) => (
+            <div key={t.name} className="grid gap-2" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>
+              <div
+                style={{ gridColumn: `${t.covers[0] + 1} / ${t.covers[1] + 2}` }}
+                className={`rounded-lg px-3 py-2.5 ${
+                  t.gap ? 'border border-dashed border-brand-gold/60 bg-brand-gold/[0.06]' : 'bg-brand-accent/20 border border-[#42a5c8]/30'
+                }`}
+              >
+                <p className={`text-[13px] font-semibold leading-snug ${t.gap ? 'text-brand-gold' : 'text-white'}`}>{t.name}</p>
+                <p className="text-[12px] text-gray-300 leading-snug mt-0.5">{t.reports}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Narrow layout: one card per instrument, naming the stages it covers. */}
+      <ul className="sm:hidden space-y-2">
+        {MEASUREMENT_TOOLS.map((t) => (
+          <li
+            key={t.name}
+            className={`rounded-lg px-4 py-3 ${t.gap ? 'border border-dashed border-brand-gold/60 bg-brand-gold/[0.06]' : 'bg-brand-accent/20 border border-[#42a5c8]/30'}`}
+          >
+            <p className="text-[10.5px] font-mono uppercase tracking-[0.12em] text-gray-400 mb-1">
+              {MEASUREMENT_STAGES.slice(t.covers[0], t.covers[1] + 1).map((st) => st.stage).join(' to ')}
+            </p>
+            <p className={`text-[14px] font-semibold ${t.gap ? 'text-brand-gold' : 'text-white'}`}>{t.name}</p>
+            <p className="text-[13px] text-gray-300 leading-snug mt-0.5">{t.reports}</p>
+          </li>
+        ))}
+      </ul>
+      <figcaption className="text-[12px] text-gray-500 leading-relaxed mt-4">
+        The instruments shown are Google&apos;s. Each reports first-party data about the merchant&apos;s own pages and orders.
+      </figcaption>
+    </figure>
+  )
+}
+
+const SHIFT_FIGURES: Record<string, () => ReactNode> = {
+  'website-handoff': () => <CheckoutPostures />,
+  'measurement-split': () => <MeasurementMap />,
+  'trust-operating-layer': () => <TrustChain checks={TRUST_CHECKS} cases={TRUST_CASES} upstream={TRUST_UPSTREAM} />,
+}
+
 function ShiftArticle({ shift }: { shift: Shift }) {
   return (
     <article id={shift.id} className="scroll-mt-[128px]">
@@ -155,7 +266,14 @@ function ShiftArticle({ shift }: { shift: Shift }) {
         </ShiftBlock>
 
         <ShiftBlock label="Evidence">
-          <p className="text-base text-gray-300 leading-relaxed">{shift.evidence}</p>
+          <ul className="space-y-2.5">
+            {shift.evidence.map((item) => (
+              <li key={item.slice(0, 40)} className="flex gap-3 text-[15px] text-gray-300 leading-relaxed">
+                <span className="block w-1 h-1 rounded-full bg-[#42a5c8]/70 mt-[0.7em] shrink-0" aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </ShiftBlock>
 
         <ShiftBlock label="Why it matters">
@@ -167,6 +285,8 @@ function ShiftArticle({ shift }: { shift: Shift }) {
             ))}
           </div>
         </ShiftBlock>
+
+        {SHIFT_FIGURES[shift.id]?.()}
 
         <ShiftBlock label="Operator consequence">
           <p className="text-base text-gray-300 leading-relaxed">{shift.consequence}</p>
@@ -192,6 +312,54 @@ function ShiftArticle({ shift }: { shift: Shift }) {
         </div>
       </div>
     </article>
+  )
+}
+
+const STATUS_STYLE: Record<SignalStatus, { cls: string; mark: string }> = {
+  Seen: { cls: 'bg-brand-accent/25 border-[#42a5c8]/60 text-white', mark: '●' },
+  Partly: { cls: 'bg-brand-gold/10 border-brand-gold/60 text-brand-gold', mark: '◐' },
+  'Not yet': { cls: 'border-white/[0.14] text-gray-400', mark: '○' },
+}
+
+function StatusPill({ status }: { status: SignalStatus }) {
+  const st = STATUS_STYLE[status]
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[12px] whitespace-nowrap ${st.cls}`}>
+      <span aria-hidden="true">{st.mark}</span>
+      {status}
+    </span>
+  )
+}
+
+/** One square per signal, so the share that has fired is visible at a glance. */
+function SignalSummary() {
+  const order: SignalStatus[] = ['Seen', 'Partly', 'Not yet']
+  const counts = order.map((s) => [s, SIGNALS.filter((x) => x.status === s).length] as const)
+  return (
+    <div className="mb-8 bg-white/[0.03] border border-white/[0.08] rounded-xl p-5">
+      <div className="flex flex-wrap gap-1.5 mb-3" aria-hidden="true">
+        {order.flatMap((s) =>
+          SIGNALS.filter((x) => x.status === s).map((x) => (
+            <span
+              key={x.signal}
+              title={`${x.signal}: ${s}`}
+              className={`block w-6 h-6 rounded-md border ${
+                s === 'Seen' ? 'bg-[#42a5c8] border-[#42a5c8]' : s === 'Partly' ? 'bg-brand-gold/40 border-brand-gold' : 'border-white/[0.18]'
+              }`}
+            />
+          )),
+        )}
+      </div>
+      <p className="text-[13px] text-gray-300">
+        {counts.map(([s, n], i) => (
+          <span key={s}>
+            <strong className="text-white font-semibold">{n}</strong> {s.toLowerCase()}
+            {i < counts.length - 1 ? ', ' : ''}
+          </span>
+        ))}{' '}
+        of {SIGNALS.length} signals, as of <time dateTime={LAST_UPDATED}>{formatDate(LAST_UPDATED)}</time>.
+      </p>
+    </div>
   )
 }
 
@@ -273,7 +441,7 @@ export default function AiCommerce2027Page() {
       <section className="py-14 md:py-16 bg-[#1a2d37] border-y border-white/[0.08]">
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-brand-gold mb-8">
-            What the record actually shows
+            What the record shows
           </p>
           <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-9">
             {EVIDENCE_NUMBERS.map((n) => (
@@ -313,16 +481,18 @@ export default function AiCommerce2027Page() {
           </div>
           <div className="space-y-5 max-w-3xl">
             {DEFINITION_AFTER.map((p, i) => (
-              <p
-                key={i}
-                className={
-                  i === 0
-                    ? 'text-xl md:text-2xl font-semibold text-white leading-snug border-l-2 border-brand-gold pl-5 py-1'
-                    : 'text-base text-gray-300 leading-relaxed'
-                }
-              >
-                {p}
-              </p>
+              <div key={i} className="space-y-5">
+                <p
+                  className={
+                    i === 0
+                      ? 'text-xl md:text-2xl font-semibold text-white leading-snug border-l-2 border-brand-gold pl-5 py-1'
+                      : 'text-base text-gray-300 leading-relaxed'
+                  }
+                >
+                  {p}
+                </p>
+                {i === 1 && <AuthorityLadder steps={AUTHORITY_STEPS} />}
+              </div>
             ))}
           </div>
         </div>
@@ -336,9 +506,16 @@ export default function AiCommerce2027Page() {
           </span>
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-6">What changed in this update</h2>
           <div className="space-y-5 text-base text-gray-300 leading-relaxed">
-            {UPDATE_NOTES.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+            {UPDATE_NOTES.map((p, i) => {
+              const cut = p.indexOf('. ') + 1
+              if (i === 0 || cut <= 0) return <p key={i}>{p}</p>
+              return (
+                <p key={i}>
+                  <strong className="font-semibold text-white">{p.slice(0, cut)}</strong>
+                  {p.slice(cut)}
+                </p>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -354,7 +531,18 @@ export default function AiCommerce2027Page() {
               <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-gray-400">The flow</p>
               <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-brand-gold">Authority increases ↓</p>
             </div>
-            <ol className="space-y-2 mb-10">
+            <div className="flex gap-3 sm:gap-4 mb-10">
+              <div className="flex flex-col items-center w-3 shrink-0 py-1" aria-hidden="true">
+                <span className="block w-2 h-2 rounded-full bg-[#42a5c8]/60" />
+                <span className="block flex-1 w-px my-1 bg-gradient-to-b from-[#42a5c8]/40 to-brand-gold/80" />
+                <span className="block w-2 h-2 rounded-full bg-brand-gold" />
+              </div>
+              <div className="flex-1 min-w-0">
+            <p className="text-[12px] text-gray-400 mb-2">
+              <span className="font-mono uppercase tracking-[0.12em] text-[10.5px] text-[#42a5c8] mr-2">Top</span>
+              A mistake is a suggestion someone can ignore
+            </p>
+            <ol className="space-y-2">
               {STACK.map((stage, i) => (
                 <li key={stage.layer} className="relative">
                   <div
@@ -374,11 +562,22 @@ export default function AiCommerce2027Page() {
                     <span className="text-[13px] text-gray-400 leading-relaxed">
                       <span className="sm:hidden text-[10.5px] font-mono uppercase tracking-[0.12em] text-gray-500 block">Authority needed</span>
                       {stage.authority}
+                      {stage.see && (
+                        <a href={stage.see.href} className="block mt-0.5 text-[11px] font-mono uppercase tracking-[0.12em] text-[#42a5c8] hover:text-white transition-colors duration-200">
+                          {stage.see.label} →
+                        </a>
+                      )}
                     </span>
                   </div>
                 </li>
               ))}
             </ol>
+            <p className="text-[12px] text-gray-400 mt-2">
+              <span className="font-mono uppercase tracking-[0.12em] text-[10.5px] text-brand-gold mr-2">Bottom</span>
+              A mistake is an action someone has to reverse
+            </p>
+              </div>
+            </div>
 
             <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-gray-400 mb-5">
               The foundations underneath
@@ -402,8 +601,8 @@ export default function AiCommerce2027Page() {
           <div className="mt-14">
             <h3 className="text-lg md:text-xl font-bold text-white tracking-tight mb-3">One storefront, two front doors</h3>
             <p className="text-base text-gray-300 leading-relaxed mb-7 max-w-3xl">
-              Not a website replaced by an agent. One product record serving two interfaces, maintained by the same
-              team.
+              The website is not replaced. One product record serves two interfaces, and the same team maintains
+              both.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {INTERFACES.map((pane) => (
@@ -491,12 +690,13 @@ export default function AiCommerce2027Page() {
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-4">2027 signal tracker</h2>
           <p className="text-base text-gray-300 leading-relaxed mb-8 max-w-3xl">{SIGNALS_INTRO}</p>
+          <SignalSummary />
           <div className="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
-            <table className="w-full min-w-[760px] text-left border-collapse">
+            <table className="w-full min-w-[860px] text-left border-collapse">
               <caption className="sr-only">Developments that would change confidence in the AI Commerce 2027 thesis</caption>
               <thead>
                 <tr className="border-b border-white/[0.12]">
-                  {['Signal to watch', 'Why it matters', 'What it would change in the thesis'].map((h) => (
+                  {['Signal to watch', 'Status', 'Why it matters', 'What it would change in the thesis'].map((h) => (
                     <th
                       key={h}
                       scope="col"
@@ -513,6 +713,10 @@ export default function AiCommerce2027Page() {
                     <th scope="row" className="py-4 pr-5 text-[14px] font-semibold text-white leading-snug">
                       {row.signal}
                     </th>
+                    <td className="py-4 pr-5 text-[13px] leading-relaxed min-w-[160px]">
+                      <StatusPill status={row.status} />
+                      {row.statusNote && <span className="block text-[12px] text-gray-500 mt-1.5">{row.statusNote}</span>}
+                    </td>
                     <td className="py-4 pr-5 text-[13px] text-gray-400 leading-relaxed">{row.why}</td>
                     <td className="py-4 pr-5 text-[13px] text-gray-300 leading-relaxed">{row.changes}</td>
                   </tr>
@@ -533,48 +737,7 @@ export default function AiCommerce2027Page() {
             Verified developments, newest first, updated through 2027. Entries record what changed, not what was
             promised, and link forward to the full analysis where one exists.
           </p>
-          <div className="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
-            <table className="w-full min-w-[880px] text-left border-collapse">
-              <caption className="sr-only">Tracker of verified AI commerce developments, newest first</caption>
-              <thead>
-                <tr className="border-b border-white/[0.12]">
-                  {['Date', 'Company', 'Development', 'Affects', 'Evidence type', 'What changed'].map((h) => (
-                    <th
-                      key={h}
-                      scope="col"
-                      className="py-3 pr-5 text-[11px] font-mono uppercase tracking-[0.15em] text-gray-400 font-semibold"
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {EVIDENCE_TRACKER.map((row, i) => (
-                  <tr key={`${row.date}-${row.org}-${i}`} className="border-b border-white/[0.06] align-top">
-                    <td className="py-4 pr-5 text-[13px] font-mono text-gray-400 whitespace-nowrap">
-                      {formatDate(row.date)}
-                    </td>
-                    <td className="py-4 pr-5 text-[13px] font-semibold text-white">{row.org}</td>
-                    <td className="py-4 pr-5 text-[13px] text-gray-300 leading-relaxed">
-                      {row.development}
-                      {row.href && (
-                        <Link
-                          href={row.href}
-                          className="block mt-1 text-[12px] text-[#42a5c8] hover:text-white transition-colors duration-200"
-                        >
-                          Read the analysis
-                        </Link>
-                      )}
-                    </td>
-                    <td className="py-4 pr-5 text-[13px] text-gray-400 whitespace-nowrap">{row.affects}</td>
-                    <td className="py-4 pr-5 text-[13px] text-gray-400 leading-relaxed">{row.evidenceType}</td>
-                    <td className="py-4 pr-5 text-[13px] text-gray-400 leading-relaxed">{row.changed}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <EvidenceTrackerTable entries={EVIDENCE_TRACKER} />
         </div>
       </section>
 

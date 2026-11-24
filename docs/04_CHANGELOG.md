@@ -6,6 +6,51 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.11 - AI Commerce 2027: evidence refresh, diagrams and copy pass (2026-11-24)
+
+**What changed.** `/ai-commerce-2027` updated in three parts.
+- **Evidence.** Personal Agent Protocol 1.0 was published and frozen on
+  November 14 (102 named design partners, no production implementation found),
+  so the "specification not published" lines in Shift 05 and Shift 03 and the
+  v0.1 signal were corrected. DoorDash's CEO said on the October 29 call that
+  third-party agents produced "maybe several hundred orders in total" and called
+  it "a fairly low use case" (993 million Total Orders in the quarter, per the
+  8-K). The six claims that no platform publishes agent transaction volume now
+  say no platform reports agent orders as a share of its total, and cite the
+  DoorDash count as the one exception. Walmart let Meta's Muse shop through the
+  Agent Gateway on November 24, with Agent Profiles live (spending limit,
+  purchase approval, agent order history, card saved in the Walmart account);
+  added to Shift 05 evidence and updated view, and to the Agent Gateway
+  counterargument. Three tracker rows added (Walmart and Meta Nov 24, Sierra
+  and Meta Nov 14, DoorDash Oct 29); earlier rows left as dated records. The
+  protected sentence is unchanged and still holds.
+- **Diagrams.** Authority ladder (definition, interactive), stack rail from
+  "a mistake someone can ignore" to "an action someone has to reverse" with
+  links to each shift, checkout postures (Shift 02), measurement coverage map
+  (Shift 04), trust chain with "Muse at Amazon" and "Muse at Walmart" views
+  (Shift 05, interactive), signal status board (0 seen, 1 partly, 11 not yet)
+  and a filterable evidence tracker. Diagram data lives in
+  `src/lib/ai-commerce-2027.ts`; client components in `src/components/ac27/`.
+- **Copy pass.** Removed "X is not Y. It is Z." pairs, fragments and filler
+  without changing facts, sources or framework lines ("Identity is not
+  authorization", "Interface ownership is not transaction ownership"). Shift
+  evidence paragraphs became bulleted lists; update-note lead sentences are
+  bold. Shift 02 retitled "The merchant website becomes optional, not obsolete".
+
+**Sourcing.** DoorDash quotes checked against the full call transcript
+(Fortune/Quartr) and the order total against the SEC 8-K. Walmart's
+announcement read directly. Personal Agent Protocol status from
+personalagentprotocol.org and its repository. Not used: a secondary-only
+Mastercard figure and Forter vendor-network figures.
+
+**Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` set to
+2026-11-24; `datePublished` stays 2026-09-21.
+
+**Follow-ups.** Watch for the first production Personal Agent Protocol
+implementation and any platform reporting agent orders as a share.
+
+---
+
 ## Release 2.10 - Etsy AI terms article: ownership is not permission (2026-11-24)
 
 **What changed.** New E-commerce Strategy article,

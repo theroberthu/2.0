@@ -22,7 +22,7 @@ const STATIC_LAST_MODIFIED = {
   aeo: new Date('2026-11-24'),
   // Living research page: bump this whenever LAST_UPDATED in
   // src/lib/ai-commerce-2027.ts changes.
-  aiCommerce2027: new Date('2026-11-23'),
+  aiCommerce2027: new Date('2026-11-24'),
 }
 
 function latestVideoDate(): Date {
