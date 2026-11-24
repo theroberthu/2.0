@@ -46,7 +46,11 @@ JSON-LD matches), six Continue links, "Last updated: November 2026", the new
 timeline milestone, and no horizontal scroll at 375px. Zero em or en dashes.
 
 **Follow-ups.** Open editorial questions are in the backlog ("`/aeo` open
-editorial questions"). Request Indexing in Search Console only on instruction.
+editorial questions"). IndexNow returned 200 for `/aeo`. Search Console
+Request Indexing submitted 2026-11-24 on instruction: the URL was already
+indexed (last crawl Nov 23, 2026, 10:19 AM, Googlebot smartphone, before
+Releases 2.07 and 2.08), the live test passed, and the URL was added to the
+priority crawl queue.
 
 ---
 
