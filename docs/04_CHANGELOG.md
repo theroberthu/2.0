@@ -36,6 +36,11 @@ bans seller use of AI; it reaches no legal conclusion and treats departures as
 examples only. Zero em or en dashes, one closing question, four internal links,
 no Key findings box.
 
+**Follow-up (2026-11-24): indexing requested.**
+- Search Console showed the URL as unknown to Google, as expected for a new page.
+- Test Live URL ran first and passed: the page can be indexed and has 1 valid Breadcrumbs item.
+- Request Indexing was then accepted into the priority crawl queue.
+
 **Follow-ups.** None required. Revisit if Etsy publishes vendor terms, a
 training opt-out or a further revision before December 16.
 
