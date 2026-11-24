@@ -6,6 +6,36 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.07 - /aeo flagship: social card, Article schema, consistent dates (2026-11-24)
+
+**What changed.** Technical fixes only. No page copy changed.
+- New 1200x630 social card, `public/images/aeo/aeo.svg` with its PNG
+  (`aeo.png`), in the house colors. The pull quote is the page's own line,
+  "GEO is about being mentioned. AEO is about being selected." The live page
+  previously had no `og:image` or `twitter:image` at all, although its
+  Twitter card type was `summary_large_image`.
+- Structured data moved from `WebPage` to `Article`, with `headline`, `image`
+  and timestamped `datePublished`/`dateModified`, matching `/geo`. Open Graph
+  type is now `article`, with published and modified times.
+- Dates reconciled. The sitemap said 2026-03-19, the schema said 2026-10-03,
+  and the page showed "October 2026". The sitemap now uses 2026-10-03, the
+  date of the last material content change. `dateModified` was not moved to
+  today because no content changed (date discipline in the Operating System).
+- Meta description cut from about 300 characters to 155. It no longer says
+  Alexa for Shopping "goes live".
+
+**Why.** `/aeo` was the only flagship without a social image and the last one
+on `WebPage` schema (backlog: "Standardize the flagship pages").
+
+**Verified.** Type check, lint and production build passed. The built HTML
+carries `og:image`, `twitter:image`, `og:type` article, and an `Article`
+JSON-LD block with `image` and both dates.
+
+**Follow-ups.** Copy corrections for `/aeo` are drafted and awaiting
+senior-editor review (see backlog, "Revise `/aeo` copy").
+
+---
+
 ## Release 2.06 - AWS Marketplace agentic payments article: governed procurement (2026-11-23)
 
 **What changed.** New E-commerce Strategy article,

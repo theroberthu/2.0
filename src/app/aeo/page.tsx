@@ -5,7 +5,14 @@ import AEOTimeline from '@/components/AEOTimeline'
 import { SITE_URL } from '@/lib/constants'
 
 const AEO_DESCRIPTION =
-  'Research on Agentic Engine Optimization (AEO): how AI shopping agents evaluate and buy products on behalf of customers as Alexa for Shopping goes live and Sparky drives reorder behavior. SEO makes products found, GEO makes them recommended, AEO makes them chosen.'
+  'Agentic Engine Optimization (AEO) explained: how AI shopping agents evaluate, compare and choose products, what sellers control, and how AEO builds on GEO.'
+
+// datePublished never changes. MODIFIED, the visible "Last updated" note and
+// STATIC_LAST_MODIFIED.aeo in src/app/sitemap.ts move together, and only when
+// the page's content materially changes.
+const PUBLISHED = '2026-03-19T12:00:00-07:00'
+const MODIFIED = '2026-10-03T12:00:00-07:00'
+const OG_IMAGE = '/images/aeo/aeo.png'
 
 export const metadata: Metadata = {
   title: 'Agentic Engine Optimization (AEO): How AI Agents Buy',
@@ -15,8 +22,18 @@ export const metadata: Metadata = {
     title: 'Agentic Engine Optimization (AEO): How AI Agents Buy | Robert Hu',
     description: AEO_DESCRIPTION,
     url: `${SITE_URL}/aeo`,
-    type: 'website',
+    type: 'article',
     siteName: 'Robert Hu',
+    publishedTime: PUBLISHED,
+    modifiedTime: MODIFIED,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Agentic Engine Optimization - Robert Hu',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -24,18 +41,20 @@ export const metadata: Metadata = {
     creator: '@theroberthu',
     title: 'Agentic Engine Optimization (AEO): How AI Agents Buy | Robert Hu',
     description: AEO_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 }
 
 const pageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Agentic Engine Optimization (AEO) and AI Commerce',
+  '@type': 'Article',
+  headline: 'Agentic Engine Optimization (AEO) and AI Commerce',
   description:
     'Research on Agentic Engine Optimization (AEO): how AI shopping agents evaluate and buy products on behalf of customers. SEO makes products found, GEO makes them recommended, AEO makes them chosen.',
+  image: `${SITE_URL}${OG_IMAGE}`,
   url: `${SITE_URL}/aeo`,
-  datePublished: '2026-03-19',
-  dateModified: '2026-10-03',
+  datePublished: PUBLISHED,
+  dateModified: MODIFIED,
   mainEntityOfPage: `${SITE_URL}/aeo`,
   isPartOf: {
     '@type': 'WebSite',

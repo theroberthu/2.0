@@ -18,7 +18,8 @@ const STATIC_LAST_MODIFIED = {
   geo: new Date('2026-11-22'),
   geoAlexaForShopping: new Date('2026-11-15'),
   geoWalmartSparky: new Date('2026-06-22'),
-  aeo: new Date('2026-03-19'),
+  // Move with MODIFIED in src/app/aeo/page.tsx.
+  aeo: new Date('2026-10-03'),
   // Living research page: bump this whenever LAST_UPDATED in
   // src/lib/ai-commerce-2027.ts changes.
   aiCommerce2027: new Date('2026-11-23'),
