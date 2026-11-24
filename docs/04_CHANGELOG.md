@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.09 - Videos: Disney Olaf robot and Schneider Electric liquid cooling (2026-11-24)
+
+**What changed.** Two new companion pages and two new Shorts in
+`src/lib/videos.ts`:
+- `/videos/disney-olaf-robot-walking` ("Disney Built Olaf. Then Physics Got
+  Involved.", 2:24, AI in practice). Now the homepage featured video
+  (`FEATURED_VIDEO_SLUG`). Related research: the AWS Marketplace governed
+  procurement article and the Ask Target article.
+- `/videos/schneider-motivair-ai-liquid-cooling` ("The $850 Million Bet Behind
+  AI Cooling", 3:19, Energy and infrastructure). Related research: the
+  DoorDash / Instacart physical-layer article and the BCG GEO revenue article.
+- Shorts added to the top of the row: "Why Disney Taught a Robot to Walk Like
+  Olaf" (linked to the Olaf page) and "Walmart Plans Your Groceries Before the
+  Truck Leaves" (unlinked until its long-form video publishes).
+- Four thumbnails under `public/images/videos/` and `public/images/shorts/`.
+- `/videos` now reads 45 documentaries plus 85 Shorts; the sitemap has 186 URLs.
+
+**Why.** Four new uploads on the channel. Every page fact was checked against
+the primary sources the videos cite (Disney Research paper and film, Disney's
+announcements, both Schneider press releases, White Paper 220, NVIDIA, DOE
+FEMP). Two places follow the sources rather than the narration: the Olaf page
+describes a risk of motor overheating, as the paper does, not overheated
+motors; the cooling page omits factory locations, which the cited sources do
+not name, and its source note says so.
+
+**Expected impact.** Two indexable companion pages in topics the site covers
+lightly, and a fresh homepage feature.
+
+**Follow-ups.**
+- When the Walmart long-form video (`jC72R19scGI`) publishes, build its page
+  and add `related` to the Walmart Short.
+- No POST_VIDEOS pairing suggested for either video.
+
+---
+
 ## Release 2.08 - /aeo copy revision: evidence standard aligned with /ai-commerce-2027 (2026-11-24)
 
 **What changed.** The 13 edits in

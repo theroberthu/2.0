@@ -74,6 +74,260 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'disney-olaf-robot-walking',
+    youtubeId: 'BRD_7XiskNk',
+    youtubeTitle: 'Disney Built Olaf. Then Physics Got Involved.',
+    h1: 'Disney Built Olaf. Then Physics Got Involved.',
+    seoTitle: 'Disney’s Olaf Robot: How Imagineering Made Olaf Walk',
+    metaDescription:
+      'Disney’s robotic Olaf walks with learned control guided by animation. How it handles balance, overheating neck motors and loud footsteps, and its limits.',
+    dek: 'The walk had to look like the film. The machine underneath had to keep up.',
+    uploadDate: '2026-11-23T16:00:06-08:00',
+    duration: 'PT2M24S',
+    durationLabel: '2 min 24 sec',
+    topic: 'AI in practice',
+    subject: 'Disney Olaf robot',
+    thumbnail: '/images/videos/disney-olaf-robot-walking.jpg',
+    thumbnailAlt: 'Video thumbnail: a close-up of Disney’s robotic Olaf beside a Disney Research cutaway of the mechanism inside its head, under the words Not a Costume. Disney Research archive images in an editorial layout.',
+    sections: [
+      {
+        paragraphs: [
+          'Disney built a walking Olaf. Watch the heel-toe movement from the film. Animators already know how Olaf walks. The harder job was making the engineering behind the walk disappear, so a robot could carry the character into the real world.',
+        ],
+      },
+      {
+        heading: 'Underneath the costume',
+        paragraphs: [
+          'Disney Research’s paper describes a robot 88.7 centimeters tall that weighs 14.9 kilograms. Olaf’s legs have to hide inside a small body, so the team used an asymmetric leg mechanism with six degrees of freedom and concealed it under a soft foam skirt. The skirt keeps the silhouette and creates the illusion that Olaf’s feet move freely beneath him. Linkages let small motors drive the arms, mouth and eyes from wherever there is room.',
+        ],
+      },
+      {
+        heading: 'Balance and human-directed performance',
+        paragraphs: [
+          'The round body, small feet and enormous head make Olaf recognizable. They also make him hard to balance. Imagineering uses deep reinforcement learning to teach the robot to imitate artist-provided motion in simulation, so the machine stays upright while keeping the familiar rhythm.',
+          'A person still directs the performance. In the research system, Olaf is puppeteered through a remote interface, and an animation engine turns those commands into inputs for the learned controllers, along with triggered animations and audio. The movement is learned. The performance is human-directed.',
+        ],
+      },
+      {
+        heading: 'A snowman’s heat problem',
+        paragraphs: [
+          'Olaf’s large head sits on a slim neck, and the small motors holding it up work hard as the character looks around. That creates a real risk of overheating, which the costume makes worse. A winter character has a very practical heat problem.',
+          'The researchers fed actuator temperatures into the control policy and rewarded thermal safety, so as heat builds the robot can shift its posture to reduce the load. The paper reports that in extended deployments the thermal reward prevented overheating with no noticeable effect on the performance. Keeping the character convincing means respecting the machinery’s limits.',
+        ],
+      },
+      {
+        heading: 'The quieter-footstep tradeoff',
+        paragraphs: [
+          'A machine can make the right movement and still sound mechanical. Because harsh footsteps break the illusion, the researchers added a training reward for gentler foot impacts. Over a five-minute hardware run, it cut the mean sound level by 13.5 decibels while largely preserving how closely the robot followed the animation. Shape, motion, heat and sound all have to work together.',
+        ],
+      },
+      {
+        heading: 'A park appearance has operating limits',
+        paragraphs: [
+          'World of Frozen opened at Disney Adventure World, the reimagined second park at Disneyland Paris, on March 29, 2026. Olaf appears in A Celebration in Arendelle, a daytime show on Arendelle Bay, as a robotic character created by Walt Disney Imagineering. Disney’s own opening announcement adds the caveat: depending on weather or technical constraints, Olaf may appear as a puppet.',
+          'A successful walking demonstration is one piece of the experience. Delivering it reliably, show after show, is the next challenge. The research footage in the video includes archive and pre-opening material, so it does not show what any given visit will include.',
+        ],
+      },
+      {
+        heading: 'Back to that first step',
+        paragraphs: [
+          'For Olaf, even a footstep has to stay in character. The engineering only succeeds when nobody notices it.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Disney Research’s Olaf hides an asymmetric six-degree-of-freedom leg mechanism under a soft foam skirt so the robot keeps the character’s proportions.',
+      'Reinforcement learning teaches the robot to imitate artist-provided animation, while a person directs the performance through a remote interface.',
+      'Actuator temperatures feed into the control policy, so the robot can change its posture before the small neck motors overheat.',
+      'A footstep-impact reward cut the mean sound level by 13.5 dB in a five-minute hardware test.',
+      'Disney says Olaf may appear as a puppet in the park, depending on weather or technical constraints.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'A familiar walk, a physical machine' },
+      { time: '0:12', label: 'Underneath the costume' },
+      { time: '0:22', label: 'Balance and human-directed performance' },
+      { time: '0:56', label: 'A snowman’s heat problem' },
+      { time: '1:26', label: 'The quieter-footstep tradeoff' },
+      { time: '1:42', label: 'A park appearance has operating limits' },
+      { time: '2:10', label: 'Back to that first step' },
+    ],
+    sources: [
+      {
+        label: 'Olaf: Bringing an Animated Character to Life in the Physical World (DisneyResearchHub research film)',
+        date: 'December 19, 2025',
+        href: 'https://www.youtube.com/watch?v=-L8OFMTteOo',
+      },
+      {
+        label: 'Olaf: Bringing an Animated Character to Life in the Physical World (Disney Research paper, arXiv)',
+        date: 'Version 2, April 2, 2026',
+        href: 'https://arxiv.org/html/2512.16705v2',
+      },
+      {
+        label: 'Walt Disney Imagineering Brings ‘Frozen’ Olaf Robotic Character to Life (The Walt Disney Company)',
+        date: 'November 24, 2025',
+        href: 'https://thewaltdisneycompany.com/news/olaf-robotic-character/',
+      },
+      {
+        label: 'Disneyland Paris Unveils Disney Adventure World and Opens World of Frozen (The Walt Disney Company)',
+        date: 'March 29, 2026',
+        href: 'https://thewaltdisneycompany.com/news/disneyland-paris-adventure-world-opening/',
+      },
+    ],
+    sourcesNote:
+      'The four sources cited in the video. The 13.5 dB footstep result comes from the research paper’s hardware test, not a park measurement. The research footage includes archive and pre-opening material and does not guarantee what appears in the park.',
+    related: [
+      {
+        href: '/blog/aws-marketplace-agentcore-agentic-payments-x402',
+        title: 'AWS Treats Agentic Commerce as Governed Procurement',
+        note: 'Learned control acts, but inside limits set elsewhere. The same split between what an agent decides and what the system allows.',
+      },
+      {
+        href: '/blog/target-ask-target-ai-shopping-assistant-purchase-rate',
+        title: 'Target Says Ask Target Shoppers Move to Purchase at Twice the Rate. That Is Not Yet Incrementality',
+        note: 'A convincing demonstration is not the same as reliable results at scale. The same gap, in a retailer’s AI assistant.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice. Brief official DisneyResearchHub research excerpts and analytical frames are used with original commentary, with source audio removed. Mechanical cutaways and research comparisons are labeled. Archive demonstrations do not guarantee park availability. Independent analysis, with no Disney endorsement. The thumbnail uses Disney Research archive images in an editorial layout; it does not document a visit, interview or product test. Music: “Filaments” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Disney Built Olaf. Then Physics Got Involved.',
+      description:
+        'Disney’s robotic Olaf walks like the film. How learned control, a human puppeteer, heat limits and quieter footsteps keep the character convincing.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'schneider-motivair-ai-liquid-cooling',
+    youtubeId: '0wgh3WPZddI',
+    youtubeTitle: 'The $850 Million Bet Behind AI Cooling',
+    h1: 'The $850 Million Bet Behind AI Cooling',
+    seoTitle: 'Schneider Electric and Motivair: The AI Liquid Cooling Bet',
+    metaDescription:
+      'Why AI chips can be cooled with warm liquid, what Schneider Electric’s $850 million Motivair deal bought, and the tradeoff in its 100 MW cooling study.',
+    dek: 'The operator does not need the coldest liquid. It needs a reliable path for the heat to leave.',
+    uploadDate: '2026-11-22T16:00:32-08:00',
+    duration: 'PT3M19S',
+    durationLabel: '3 min 19 sec',
+    topic: 'Energy and infrastructure',
+    subject: 'Schneider Electric liquid cooling',
+    thumbnail: '/images/videos/schneider-motivair-ai-liquid-cooling.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu standing in a factory aisle beside rows of Motivair cooling units, under the words $850M Cooling Bet, 2024 Deal, Initial 75% Stake. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'Why would you cool a hot AI chip with liquid that is already warm? In a system built for it, that liquid is still cool enough to collect heat from the chips, and a warmer coolant loop makes the heat easier to release outdoors. NVIDIA says its newest AI servers can run on coolant up to 45 degrees Celsius, or 113 degrees Fahrenheit.',
+        ],
+      },
+      {
+        heading: 'The announced $850 million deal',
+        paragraphs: [
+          'That is where an AI story turns into an equipment business. On October 17, 2024, Schneider Electric announced it would acquire an initial 75% controlling interest in Motivair, a liquid cooling specialist based in Buffalo, New York, for $850 million in cash. The figure includes the value of a tax step-up. The deal closed on February 28, 2025, and Schneider expects to buy the remaining 25% in 2028.',
+          'Motivair’s range includes coolant distribution units, rear-door heat exchangers, cold plates and heat dissipation units, alongside chillers.',
+        ],
+      },
+      {
+        heading: 'Follow one hose',
+        paragraphs: [
+          'In a common direct-to-chip design, coolant passes through a metal cold plate on a processor, picks up heat and carries it away. A coolant distribution unit helps manage that circuit. In a liquid-to-liquid arrangement, a heat exchanger passes the heat into a separate facility loop.',
+          'The heat has moved, but it still has to leave the building. Outdoor equipment can release it into the air. Some designs use evaporating water to help, and some conditions require mechanical refrigeration. The answer depends on the equipment, the weather and the temperatures the computing system can safely accept. So the word liquid does not tell you how much water a whole site consumes. You have to follow the heat all the way outside.',
+        ],
+      },
+      {
+        heading: 'Real manufacturing and the buying question',
+        paragraphs: [
+          'Behind the AI boom sits a physical business of pumps, heat exchangers and controls, built in factories. Schneider’s bet was on the machinery that keeps powerful computers working. For the customer, it raises a harder question: how much cooling should you buy?',
+        ],
+      },
+      {
+        heading: 'A supplier’s simulated design tradeoff',
+        paragraphs: [
+          'Schneider’s White Paper 220, released in September 2026, simulated four designs for a 100 MW data center using weather profiles for Dallas and Paris. It is a supplier model, not a measurement of customer sites.',
+          'One scenario raised the liquid supply temperature from 32 to 45 degrees Celsius while keeping the same cooling equipment. It produced the largest modeled water and energy reductions, but left about 33% of the cooling capacity unused under the study’s assumptions. Spare capacity can offer flexibility. It also means owning equipment.',
+          'Another scenario sized the equipment for 45 degrees instead. That reduced the capital requirement while still cutting modeled water use by about half, and PUE by about 0.5%, against the 32-degree liquid cooling baseline. The most water-efficient option and the smaller equipment bill were different choices.',
+        ],
+      },
+      {
+        heading: 'Reliability and approved limits',
+        paragraphs: [
+          'Warmer coolant has to stay within the computing system’s approved limits. Schneider’s paper notes that supply temperature can affect IT performance, reliability, lifespan and even warranty. Operators still need redundancy, stable controls and a plan for hot weather. Turning up a thermostat is not a universal retrofit recipe.',
+        ],
+      },
+      {
+        heading: 'Power in, heat out',
+        paragraphs: [
+          'The operator does not need the coldest possible liquid. It needs a reliable path for heat to leave, at a cost the site can justify. Schneider’s business bet is to sell more of that path, from the power coming in to the heat going out.',
+        ],
+      },
+    ],
+    takeaways: [
+      'NVIDIA says its newest AI servers can run on liquid coolant up to 45°C (113°F), which makes heat easier to release outdoors.',
+      'Schneider Electric announced an all-cash $850 million deal in October 2024 for an initial 75% of Motivair, including the value of a tax step-up. It closed in February 2025, and Schneider expects to buy the remaining 25% in 2028.',
+      'Liquid cooling alone does not determine a site’s water use. That depends on how the heat finally leaves the building.',
+      'In Schneider’s 100 MW simulations, raising the supply temperature with unchanged equipment gave the largest water and energy reductions but left about 33% of cooling capacity unused. Right-sizing the equipment cut capital cost while keeping water and energy gains over the 32°C baseline.',
+      'The results are a supplier’s modeled scenarios, not measured customer savings, and warmer coolant must stay within approved equipment limits.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Why warm liquid can cool a hot chip' },
+      { time: '0:22', label: 'The announced $850 million deal' },
+      { time: '0:39', label: 'Follow one hose' },
+      { time: '1:25', label: 'Real manufacturing and the buying question' },
+      { time: '1:49', label: 'A supplier’s simulated design tradeoff' },
+      { time: '2:37', label: 'Reliability and approved limits' },
+      { time: '2:53', label: 'Power in, heat out' },
+    ],
+    sources: [
+      {
+        label: 'Schneider Electric strengthens its leading position in Data Centers by acquiring Motivair Corporation (press release)',
+        date: 'October 17, 2024',
+        href: 'https://www.se.com/ww/en/assets/564/document/492190/Schneider-Electric-acquires-Motivair-Corporation.pdf',
+      },
+      {
+        label: 'Schneider Electric completes transaction to acquire Motivair Corporation (press release)',
+        date: 'February 28, 2025',
+        href: 'https://www.se.com/ww/en/assets/564/document/506659/Schneider%20Electric-completes-acquisition-of-Motivair-Corporation.pdf',
+      },
+      {
+        label: 'Hotter Than a Hot Tub: The 45°C Breakthrough to Cool AI’s Biggest Machines (NVIDIA Blog)',
+        date: 'June 21, 2026',
+        href: 'https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/',
+      },
+      {
+        label: 'Water Usage at AI Scale: Insights from a 100 MW Comparative Analysis, White Paper 220 (Schneider Electric)',
+        date: 'Version 1, released September 21, 2026',
+        href: 'https://www.se.com/us/en/download/document/SPD_WP220_EN/',
+      },
+      {
+        label: 'Cooling Water Efficiency Opportunities for Federal Data Centers (U.S. Department of Energy, FEMP)',
+        date: 'Checked November 24, 2026',
+        href: 'https://www.energy.gov/cmei/femp/cooling-water-efficiency-opportunities-federal-data-centers',
+      },
+    ],
+    sourcesNote:
+      'The five sources cited in the video. The design results are Schneider’s supplier simulations; the roughly 33% unused-capacity figure belongs to its unchanged-equipment scenario and is not measured customer waste or a savings audit. The cited sources do not name the factory locations shown in the video, so this page does not list them.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'AI runs on physical systems someone has to build and own. The same point, in grocery fulfillment.',
+      },
+      {
+        href: '/blog/bcg-geo-revenue-growth-evidence',
+        title: 'BCG Gives GEO a Revenue Number. It Is Not Yet a Benchmark',
+        note: 'A modeled result is a useful number, not a measured one. The same caution, applied to a revenue estimate.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice. Source excerpts and analytical frames from NVIDIA and Schneider Electric / Motivair are paired with original commentary and labeled in the video. Original diagrams are illustrative. Generic electrical and older-server footage by Andrey Kirievskiy and ALL IZ Well (Pexels). No scene is presented as a visit or interview by Robert. The thumbnail is an editorial photo composite featuring Robert; it does not document a visit, interview or product test. Music: “Signal to Noise” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'The $850 Million Bet Behind AI Cooling',
+      description:
+        'Why AI chips can be cooled with warm liquid, and what Schneider Electric bought with its $850 million Motivair deal.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'instacart-caper-cart-wind-down',
     youtubeId: 'oXWKqcF8xaM',
     youtubeTitle: 'Why Instacart Is Winding Down Its AI Shopping Cart',
@@ -6055,7 +6309,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'instacart-caper-cart-wind-down'
+export const FEATURED_VIDEO_SLUG: string | null = 'disney-olaf-robot-walking'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -6104,6 +6358,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
+  { youtubeId: 'jvr8p2nf02I', title: 'Walmart Plans Your Groceries Before the Truck Leaves', uploadDate: '2026-11-23T14:00:32-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/jvr8p2nf02I.jpg' },
+  { youtubeId: 'HAOH0eDCKG8', title: 'Why Disney Taught a Robot to Walk Like Olaf', uploadDate: '2026-11-22T14:00:20-08:00', durationLabel: '0:52', thumbnail: '/images/shorts/HAOH0eDCKG8.jpg', related: ['disney-olaf-robot-walking'] },
   { youtubeId: 'WroPbI1ohsw', title: 'This Chipotle Drive-Thru Won’t Take Your Order', uploadDate: '2026-11-21T14:00:30-08:00', durationLabel: '0:42', thumbnail: '/images/shorts/WroPbI1ohsw.jpg', related: ['chipotle-chipotlane-pickup-lane'] },
   { youtubeId: 'M9lUn02J0-c', title: 'Xbox Put a Working Console Inside This Fake Alligator', uploadDate: '2026-11-20T14:00:31-08:00', durationLabel: '0:34', thumbnail: '/images/shorts/M9lUn02J0-c.jpg' },
   { youtubeId: 'fjbUpdIUO8g', title: 'Why Your Target Package Takes an Extra Stop', uploadDate: '2026-11-19T14:00:06-08:00', durationLabel: '0:50', thumbnail: '/images/shorts/fjbUpdIUO8g.jpg', related: ['target-sortation-center-extra-stop'] },
