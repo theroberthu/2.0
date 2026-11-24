@@ -6,6 +6,41 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.10 - Etsy AI terms article: ownership is not permission (2026-11-24)
+
+**What changed.** New E-commerce Strategy article,
+`/blog/etsy-ai-terms-seller-content-training`, "Etsy's New AI Terms Show Why
+Ownership Is Not Enough" (search title "Etsy AI Terms: Why Seller Ownership Is
+Not Enough"; 1,135 words all-in). It separates Etsy's long-standing content
+license from the AI clause newly explicit in the December 16 terms, credits the
+November 23 revision as a meaningful clarification, and distinguishes what the
+terms say (model design, Etsy's purpose with vendors) from what they do not
+disclose (model outputs, vendor contracts, seller controls). A six-question
+permission model is applied to one listing photo. Adds the content file, insert
+script, OG SVG and PNG. AI Commerce 2027: no change.
+
+**Sourcing.** Primary: the December 16 Terms of Use, the version in effect
+through December 15, the October wording via Wayback captures, the dated US
+English Privacy Policy PDF, the US Regional Privacy Policy, Etsy's November 23
+forum posts and the October 22 Seller Handbook article. Secondary (reaction
+only): Inc. and The New York Times. No general opt-out from training on seller
+content was found in the policies reviewed; personal data objection rights are
+kept separate from content permissions. Eight inline source links sit on
+existing phrases.
+
+**Editorial gates.** Research PASS, Editorial PASS, SEO/GEO PASS, Corpus
+advancement PASS, Final WRITE. Two senior-editor rounds, then PUBLISH. The
+article does not say Etsy owns or took copyright in seller work, sells seller
+data, will copy seller products, lets vendors use content for any purpose, or
+bans seller use of AI; it reaches no legal conclusion and treats departures as
+examples only. Zero em or en dashes, one closing question, four internal links,
+no Key findings box.
+
+**Follow-ups.** None required. Revisit if Etsy publishes vendor terms, a
+training opt-out or a further revision before December 16.
+
+---
+
 ## Release 2.09 - Videos: Disney Olaf robot and Schneider Electric liquid cooling (2026-11-24)
 
 **What changed.** Two new companion pages and two new Shorts in
