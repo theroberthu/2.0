@@ -46,6 +46,11 @@ Mastercard figure and Forter vendor-network figures.
 **Dates.** `LAST_UPDATED` and `STATIC_LAST_MODIFIED.aiCommerce2027` set to
 2026-11-24; `datePublished` stays 2026-09-21.
 
+**Follow-up (2026-11-24): indexing requested.**
+- Search Console showed the URL as already on Google (indexed).
+- Test Live URL ran first and passed: the URL is available to Google and the page can be indexed.
+- Request Indexing was then accepted into the priority crawl queue.
+
 **Follow-ups.** Watch for the first production Personal Agent Protocol
 implementation and any platform reporting agent orders as a share.
 
