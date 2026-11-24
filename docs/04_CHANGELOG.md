@@ -6,6 +6,50 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.08 - /aeo copy revision: evidence standard aligned with /ai-commerce-2027 (2026-11-24)
+
+**What changed.** The 13 edits in
+[Content/pages/aeo-copy-revision-2026-11.md](../Content/pages/aeo-copy-revision-2026-11.md),
+applied as drafted:
+- Adoption claims ("Yes, and at scale", "the forecast risk has collapsed")
+  now say the infrastructure is live and agent purchase volume is not yet
+  measured, matching the protected sentence on `/ai-commerce-2027`.
+- The Sparky 35% AOV figure is worded as Walmart's comparison of Sparky users
+  with other shoppers, not as something Sparky caused.
+- "Agents ignore ads" is replaced with the site's own evidence that ads are
+  moving into assistants (Criteo, ChatGPT). The unsourced "20 to 40% of
+  revenue" figure and the unsourced review-parsing claim are removed.
+- Signal Observatory brought to November 2026: Walmart Agent Profiles, Google
+  Universal Cart, OpenAI Businesses in ChatGPT, Meta Muse, Ask Target and AWS
+  Marketplace added; the OpenClaw wording, the May Hatch card and the unsourced
+  Apple card removed. Every card but Perplexity links a TRH article.
+- The boundary box adds authorization (Walmart Agent Profiles, AWS) as a second
+  boundary beside product readiness and shopper representation.
+- The overlapping "How the Shift Unfolds" timeline is removed; its
+  default-reorder point moves into "Already Doing GEO?". The Arc's 2026/27
+  milestone (`AEOTimeline.tsx`) is rewritten.
+- FAQ: two consulting-era questions reframed for readers, one duplicate
+  removed, OpenClaw and an unsourced outside-agent claim dropped.
+- Key takeaways #2, #3 and #5 revised. Continue exploring now links
+  `/ai-commerce-2027` and the adoption-definition article in place of two
+  GEO-leaning links `/geo` already carries.
+- Dates moved together: `MODIFIED`, "Last updated: November 2026" and the
+  sitemap `lastmod` are 2026-11-24.
+
+**Why.** `/aeo` still carried May 2026 framing and claims that later TRH
+articles and `/ai-commerce-2027` contradict. Two flagships disagreeing on the
+state of adoption undermines both.
+
+**Verified.** Type check, lint and production build passed. On a local
+production server: all H2s, nine Signal cards, nine FAQ entries (FAQPage
+JSON-LD matches), six Continue links, "Last updated: November 2026", the new
+timeline milestone, and no horizontal scroll at 375px. Zero em or en dashes.
+
+**Follow-ups.** Open editorial questions are in the backlog ("`/aeo` open
+editorial questions"). Request Indexing in Search Console only on instruction.
+
+---
+
 ## Release 2.07 - /aeo flagship: social card, Article schema, consistent dates (2026-11-24)
 
 **What changed.** Technical fixes only. No page copy changed.

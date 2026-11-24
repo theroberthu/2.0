@@ -48,16 +48,11 @@ risk), High (clear near-term value), Medium, Low.
 - **AI Commerce hub page.** Build a `/ai-commerce` flagship that anchors the
   domain and routes into GEO, AEO, and platform clusters. AI Commerce is
   currently a theme with no home.
-- **Revise `/aeo` copy.** The structure and schema now match `/geo` (Release
-  2.07). Still open, and needing senior-editor review because they change page
-  text: adoption claims ("at scale", "the forecast risk has collapsed") that
-  conflict with `/ai-commerce-2027`; the hero's causal Sparky AOV claim; the
-  "agents ignore ads" FAQ and Provocation section; the Q2 2026 "this quarter"
-  framing; the two unsourced figures; the OpenClaw wording; a Signal
-  Observatory that stops at May 2026; no link to `/ai-commerce-2027`; the two
-  consulting-era FAQs; and the overlapping second timeline. When the copy
-  ships, move `MODIFIED`, the visible "Last updated" note and
-  `STATIC_LAST_MODIFIED.aeo` together.
+- **`/aeo` open editorial questions.** The copy revision shipped in Release
+  2.08 with the draft's defaults. Still open: source or remove the unlinked
+  Perplexity Shopping card; decide whether to add a Sources block; decide
+  whether the authorization box should add Visa/BILL or NPCI UPI. Keep the
+  Signal Observatory current as new agentic commerce articles publish.
 - **Refresh the `/geo` RecoScope table monthly.** `CATEGORY_DATA` and the hero
   callout in `src/app/geo/page.tsx` cite the November 17 to 22, 2026 snapshots
   by date. Refresh from getrecoscope.com/tracker when new snapshots publish, and

@@ -11,7 +11,7 @@ const AEO_DESCRIPTION =
 // STATIC_LAST_MODIFIED.aeo in src/app/sitemap.ts move together, and only when
 // the page's content materially changes.
 const PUBLISHED = '2026-03-19T12:00:00-07:00'
-const MODIFIED = '2026-10-03T12:00:00-07:00'
+const MODIFIED = '2026-11-24T12:00:00-08:00'
 const OG_IMAGE = '/images/aeo/aeo.png'
 
 export const metadata: Metadata = {
@@ -94,35 +94,31 @@ const FAQS = [
   },
   {
     q: 'Are AI shopping agents actually buying products today?',
-    a: 'Yes, and at scale. Amazon launched Alexa for Shopping on May 13, 2026 with auto-restock, price-triggered purchases, and scheduled deliveries shipping today. Walmart\'s Sparky drove 35% higher AOV for users in Q1 FY27 with usage shifting toward reorder. Perplexity, OpenAI\'s OpenClaw, and Google AI Mode are all live. The early-version framing is outdated.',
+    a: 'Yes, but nobody has measured how much. Alexa for Shopping runs auto-restock, price-triggered purchases and scheduled deliveries. Walmart reports that Sparky users spend 35% more per order than other shoppers, and Meta says shopping is Muse\'s most common use. None of these companies has disclosed agent purchase volume in a comparable form, and adoption surveys disagree because they measure different behaviors.',
   },
   {
-    q: 'Do AI agents ignore paid ads?',
-    a: 'Generally, yes. Agents optimize for product fit, not ad placement. They evaluate structured data, reviews, pricing, and fulfillment, not sponsored positions. This doesn\'t mean ads are dead, but it means your organic product data needs to be strong enough to win without them.',
+    q: 'Do ads still matter when an AI agent is shopping?',
+    a: 'Yes, but they do a different job. Ads are moving into AI shopping: Criteo sells Sponsored Products inside retailers\' AI assistants, and ChatGPT carries ads. What an ad cannot do is supply the structured data, fulfillment clarity and review quality an agent uses to judge fit. Paid placement can put a product in front of an agent. Product data decides whether it qualifies.',
   },
   {
     q: 'What\'s the difference between AEO and Answer Engine Optimization?',
     a: 'Different things, same acronym. Answer Engine Optimization focuses on featured snippets and voice search answers. Agentic Engine Optimization (what this page is about) focuses on AI agents that evaluate, compare, and purchase products on behalf of users. We\'re talking about agents that shop, not search engines that answer questions.',
   },
   {
-    q: 'When should a $500K-5M brand start thinking about AEO?',
-    a: 'Sooner than most brands assume. The window for treating this as theoretical has closed: Alexa for Shopping is live with auto-restock, and Sparky shifted from discovery to reorder in Q1 FY27. Five major research firms (Morgan Stanley, McKinsey, Gartner, IDC, Juniper) agree agentic commerce reaches 10 to 20 percent of US e-commerce by 2030. Because the foundation work is the same data discipline GEO already requires, preparing for AEO does not compete with the rest of the roadmap.',
+    q: 'When should a seller start preparing for AEO?',
+    a: 'Before the volume is visible. Alexa for Shopping already reorders for households, and a default reorder position gets harder to dislodge once an agent has purchase history to lean on. The foundation work is the same data discipline GEO already requires, so preparing for agents does not compete with the rest of the roadmap.',
   },
   {
-    q: 'Can I do AEO myself?',
-    a: 'The foundational work, yes. Start by checking your structured data completeness: does every listing carry the attributes an agent needs to make a confident purchase decision? From there the fuller picture spans trust signals, pricing context, fulfillment clarity, review quality, and cross-platform consistency. The same data discipline that improves GEO is what prepares a catalog for agents, so most of the work compounds across both.',
+    q: 'Where should a seller start?',
+    a: 'With structured data completeness: does every listing carry the attributes an agent needs to make a confident purchase decision? From there the fuller picture spans trust signals, pricing context, fulfillment clarity, review quality, and cross-platform consistency. The same data discipline that improves GEO is what prepares a catalog for agents, so most of the work compounds across both.',
   },
   {
     q: 'What if I only sell on Amazon?',
-    a: 'AEO applies more directly now. Alexa for Shopping (the new name for Rufus post May 13, 2026) is the agent buying on Amazon\'s behalf. Auto-restock, price-triggered purchases, and scheduled deliveries are live. How your listings are structured (attributes, fulfillment signals, review quality) directly determines whether the agent reorders your product or a competitor\'s. Agents outside Amazon (Perplexity, OpenClaw, Google AI Mode) can still evaluate your Amazon listings.',
+    a: 'AEO applies more directly now. Alexa for Shopping (the new name for Rufus post May 13, 2026) is the agent buying on the shopper\'s behalf inside Amazon. Auto-restock, price-triggered purchases, and scheduled deliveries are live. How your listings are structured (attributes, fulfillment signals, review quality) directly determines whether the agent reorders your product or a competitor\'s.',
   },
   {
     q: 'How is AEO different from just having good product listings?',
     a: 'Good listings are necessary but not sufficient. AEO goes beyond accurate titles and bullet points. It requires machine-readable structured data across every attribute an agent might evaluate, explicit fulfillment and return policy signals, cross-platform data consistency, and review quality that holds up under sentiment analysis. A listing that looks good to a human shopper may still be missing what an agent needs to make a confident purchase decision.',
-  },
-  {
-    q: 'Will AEO make SEO and GEO obsolete?',
-    a: 'No. Think of it as a stack. SEO ensures your brand exists in traditional search. GEO ensures AI recommends you. AEO ensures agents choose you. Remove any layer and the ones above it weaken. The brands that win will be the ones optimized across all three.',
   },
   {
     q: 'How do I know if my products are ready for AEO?',
@@ -162,6 +158,8 @@ const breadcrumbSchema = {
   ],
 }
 
+// Every card links to a published TRH article that carries its sources.
+// Revised 2026-11-24.
 const SIGNALS: { name: string; description: string; status: string; href?: string }[] = [
   {
     name: 'Alexa for Shopping (formerly Rufus)',
@@ -171,37 +169,50 @@ const SIGNALS: { name: string; description: string; status: string; href?: strin
   },
   {
     name: 'Walmart Sparky',
-    description: 'Live with cross-platform reach (ChatGPT + Gemini), now driving 35% higher AOV. Usage shifting from discovery to reorder per Q1 FY27 earnings.',
+    description: "Live on walmart.com and inside ChatGPT and Gemini. In Q1 FY27, Walmart reported Sparky users' average order value at 35% above other shoppers', with usage shifting from discovery to reorder.",
     status: 'Live',
     href: '/blog/walmart-sparky-q1-earnings-replenishment-shift',
   },
   {
-    name: 'OpenAI ChatGPT + OpenClaw',
-    description: 'ChatGPT Ads went self-serve May 5, 2026, crossing $100M in annualized revenue in six weeks of pilot. OpenClaw agent in beta.',
-    status: 'Live',
-    href: '/blog/chatgpt-ads-self-serve-geo-still-wins-marketplace-sellers',
+    name: 'Walmart Agent Profiles + Agent Gateway',
+    description: 'Announced October 21, 2026. Each outside agent a customer authorizes gets its own profile in the account, set either to approve every purchase or to buy within a spending limit, with an invitation-only Agent Gateway beta.',
+    status: 'Building',
+    href: '/blog/walmart-agent-gateway-agent-profiles',
   },
   {
-    name: 'Google AI Mode + Gemini',
-    description: 'AI Mode now processes 1B+ queries per month. Gemini writes shopping ad copy from product data. AI Mode rebranded to "Ask Google" on Android (April 29, 2026).',
+    name: 'Google Universal Cart + AI Mode',
+    description: "Universal Cart launched in the U.S. on October 15, 2026, in Search and the Gemini app. Shoppers save products from many retailers in one cart, then pay with Google Pay on Google or move the items to the retailer's cart.",
     status: 'Live',
-    href: '/blog/google-gemini-writes-ads-product-data-marketplace-sellers',
+    href: '/blog/google-universal-cart-retailers-ucp-checkout',
+  },
+  {
+    name: 'OpenAI ChatGPT',
+    description: "ChatGPT Ads went self-serve on May 5, 2026. Since November 10, Businesses in ChatGPT (beta) lets companies verify their profile, connect a product feed and publish a branded Business Agent. None of it buys a place in ChatGPT's independent answers.",
+    status: 'Live',
+    href: '/blog/openai-business-hub-chatgpt-business-agents',
+  },
+  {
+    name: 'Meta Muse',
+    description: "More than 10 million people in the US and Canada set up Muse, Meta's personal AI agent, in about six weeks, and Meta says shopping is its most common use. Setups are not active users, and Meta has not disclosed how many people shop with it.",
+    status: 'Live',
+    href: '/blog/meta-muse-shopping-agent-commerce-adoption',
+  },
+  {
+    name: 'Target Ask Target',
+    description: 'In beta since October 21, 2026. Target says shoppers using it move to purchase at about twice the rate it sees elsewhere. Target has not shown how much of that difference the assistant caused.',
+    status: 'Live',
+    href: '/blog/target-ask-target-ai-shopping-assistant-purchase-rate',
+  },
+  {
+    name: 'AWS Marketplace agentic payments',
+    description: 'Since November 19, 2026, AgentCore agents can buy selected x402-enabled AWS Marketplace products per request, billed to the existing AWS account, within the budgets and product limits an organization configures.',
+    status: 'Live',
+    href: '/blog/aws-marketplace-agentcore-agentic-payments-x402',
   },
   {
     name: 'Perplexity Shopping',
     description: 'AI-generated product recommendations with direct purchase capability. The user asks, the AI shops.',
     status: 'Live',
-  },
-  {
-    name: 'Meta Hatch + Instagram Agent',
-    description: 'Announced May 5, 2026. In internal testing. Hatch is Meta\'s consumer version of OpenAI\'s OpenClaw, with a separate agentic shopping tool inside Instagram.',
-    status: 'Building',
-    href: '/blog/meta-hatch-instagram-shopping-agent-marketplace-sellers',
-  },
-  {
-    name: 'Apple Intelligence + Siri',
-    description: 'Apple\'s AI layer is being built to act on behalf of users across their device ecosystem, including commerce.',
-    status: 'Building',
   },
 ]
 
@@ -220,7 +231,7 @@ const EVALUATION_FACTORS = [
   },
   {
     title: 'Review Quality & Sentiment',
-    description: 'Not just star ratings. Agents run sentiment analysis across review text. They can parse thousands of reviews in seconds and identify patterns humans would miss.',
+    description: 'Not just star ratings. AI shopping assistants read and summarize review text, so a recurring complaint can outweigh a strong average.',
   },
   {
     title: 'Cross-Platform Consistency',
@@ -234,10 +245,10 @@ const EVALUATION_FACTORS = [
 
 const KEY_TAKEAWAYS = [
   'Agentic Engine Optimization (AEO) is the practice of structuring your products and data so AI shopping agents can evaluate, compare, and buy them on behalf of customers.',
-  'It is operational now, not a 2030 forecast. Amazon Alexa for Shopping is live with auto-restock and scheduled purchases, and Walmart Sparky users show 35% higher average order values with usage shifting toward reorder.',
-  'Agents ignore hero images, ad placements, and clever copy. They evaluate structured data, pricing context, fulfillment signals, review sentiment, and cross-platform consistency.',
+  "The infrastructure is operational now, not a 2030 forecast. Alexa for Shopping runs auto-restock and scheduled purchases, Walmart is opening customer accounts to outside agents, and Google's Universal Cart reaches checkout. Purchase volume through agents is not yet measured.",
+  'Agents look past hero images and clever copy. They evaluate structured data, pricing context, fulfillment signals, review sentiment, and cross-platform consistency.',
   'AEO sits on top of GEO, which sits on top of SEO. SEO makes products found, GEO makes them recommended, AEO makes them chosen. Skip a layer and the ones above it weaken.',
-  'Five major research firms converge on agentic commerce reaching 10 to 20 percent of US ecommerce by 2030, so the forecast risk has collapsed.',
+  'Five major research firms converge on agentic commerce reaching 10 to 20 percent of US e-commerce by 2030. Forecasts agree on direction; comparable measures of adoption do not exist yet.',
   'The work that wins agentic visibility is the same data discipline that wins organic AI recommendation, so a strong GEO foundation is already AEO preparation.',
 ]
 
@@ -250,6 +261,11 @@ const CONTINUE_EXPLORING: { title: string; desc: string; href: string }[] = [
     href: '/geo',
   },
   {
+    title: 'AI Commerce 2027',
+    desc: 'The living outlook: what is live, what is announced, and what the evidence does not yet show.',
+    href: '/ai-commerce-2027',
+  },
+  {
     title: 'Amazon Alexa for Shopping',
     desc: 'How Amazon’s AI shopping agent evaluates, recommends, and reorders products.',
     href: '/geo/alexa-for-shopping',
@@ -260,19 +276,14 @@ const CONTINUE_EXPLORING: { title: string; desc: string; href: string }[] = [
     href: '/geo/walmart-sparky',
   },
   {
-    title: 'GEO vs SEO for marketplace sellers',
-    desc: 'The five SEO tactics that actively hurt AI visibility in 2026.',
-    href: '/blog/geo-vs-seo-marketplace-sellers',
-  },
-  {
-    title: 'Google AI Mode',
-    desc: 'How Google’s AI Mode cites and surfaces products in AI answers.',
-    href: '/blog/google-ai-overview-ai-mode-citation-teardown-geo',
-  },
-  {
     title: 'The Agentic Commerce Consensus',
     desc: 'What five major research firms forecast for AI shopping agents.',
     href: '/blog/agentic-commerce-consensus-research-forecasts-marketplace-sellers',
+  },
+  {
+    title: 'Why AI shopping adoption numbers disagree',
+    desc: 'Two surveys, 69% and 7%, and the six behaviors hiding under one word.',
+    href: '/blog/agentic-commerce-adoption-definition-problem',
   },
 ]
 
@@ -302,10 +313,12 @@ export default function AEOPage() {
             The Shopper Is Becoming the Algorithm
           </h1>
           <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-12">
-            AI agents are buying on behalf of your customers right now. Alexa
-            for Shopping launched May 13, 2026. Sparky drove 35% higher AOV in
-            Q1 FY27. The brands acting this quarter compound a structural
-            advantage. The ones waiting will not know what happened.
+            AI agents can now shop on a customer&apos;s behalf. Alexa for
+            Shopping runs auto-restock and scheduled deliveries, Walmart has
+            announced profiles and spending limits for outside agents, and
+            Google&apos;s Universal Cart carries a shopper from Search to
+            checkout. The infrastructure is live. How much buying runs through
+            it is not yet measured. This page tracks both.
           </p>
 
           {/* Tagline progression. Each sentence is its own line with real
@@ -330,7 +343,7 @@ export default function AEOPage() {
               <strong className="text-white font-semibold">Agentic Engine Optimization (AEO)</strong> is the practice of structuring your products, listings, and data so AI shopping agents can evaluate, compare, and buy them on behalf of customers.
             </p>
             <p>
-              It matters because those agents are already live and transacting. Amazon Alexa for Shopping is buying with auto-restock and scheduled deliveries, and Walmart Sparky users show 35% higher average order values. When the shopper is an algorithm, your product data, not your ad budget, decides whether you win the sale.
+              It matters because those agents are live. Amazon Alexa for Shopping runs auto-restock and scheduled deliveries, and Walmart reports that Sparky users spend 35% more per order than other shoppers. When an agent narrows the choice, your product data decides whether you make the list it chooses from. Advertising is starting to appear inside AI shopping assistants too, so data does not replace ads. It decides whether you qualify without them.
             </p>
             <p>
               Where <Link href="/geo" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">GEO</Link> gets your product recommended inside an AI answer, AEO gets it chosen and purchased by the agent. GEO is discovery. AEO is the transaction.
@@ -346,7 +359,7 @@ export default function AEOPage() {
             The Shift
           </span>
           <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-8">
-            The Assumption That Just Broke
+            The Assumption That Is Breaking
           </h2>
 
           <div className="space-y-5 text-base text-gray-300 leading-relaxed">
@@ -356,21 +369,22 @@ export default function AEOPage() {
               strategy, from SEO to PPC to listing optimization, is built
               around human attention and human decision-making.
             </p>
-            <p>That assumption broke this quarter.</p>
+            <p>That assumption is starting to break.</p>
             <p>
               AI shopping agents are now live that don&apos;t browse like humans.
               They don&apos;t see your hero image. They don&apos;t read your
-              clever headline. They don&apos;t click your sponsored ad. They
-              parse structured data, evaluate trust signals, compare attributes,
+              clever headline. They parse structured data, evaluate trust
+              signals, compare attributes,
               and make purchase decisions (or recommendations so strong
               they&apos;re functionally decisions) on behalf of the user.
             </p>
           </div>
 
           <p className="mt-8 text-sm text-brand-accent/80 font-medium border-l-2 border-brand-accent pl-4">
-            This is not a prediction about 2030. Alexa for Shopping is live.
-            Sparky is operational. The trajectory has become a current quarter
-            results story.
+            This is not a prediction about 2030. Alexa for Shopping is live,
+            Sparky is operational, and Walmart, Google, OpenAI and Meta have
+            each shipped or announced ways for agents to shop. What is still
+            missing is reliable data on how much buying agents do.
           </p>
         </div>
       </section>
@@ -390,7 +404,7 @@ export default function AEOPage() {
               Every Major Platform Is Building Toward the Same Future
             </h2>
             <p className="text-sm text-gray-400 max-w-xl mx-auto">
-              These aren&apos;t isolated experiments. They&apos;re waypoints on a trajectory.
+              These aren&apos;t isolated experiments. They&apos;re waypoints on a trajectory. Updated November 2026.
             </p>
           </div>
 
@@ -453,13 +467,15 @@ export default function AEOPage() {
             <p>
               AEO is no longer a single-source forecast. Morgan Stanley,
               McKinsey, Gartner, IDC, and Juniper Research have all published
-              agentic commerce forecasts in the last six months. They converge
+              agentic commerce forecasts. They converge
               on 10 to 20 percent of US e-commerce by 2030, with McKinsey
               projecting $900 billion in US B2C agentic opportunity and Gartner
               reporting that 48% of retailers plan to deploy agentic AI in 2026.
             </p>
             <p className="text-brand-gold/90 font-medium border-l-2 border-brand-gold pl-4">
-              The forecast risk has collapsed.
+              Forecasts agree on direction. Measured adoption does not: two
+              September surveys put AI shopping delegation at 69% and 7%,
+              because they measured different behaviors.
             </p>
           </div>
 
@@ -468,6 +484,15 @@ export default function AEOPage() {
             className="inline-flex items-center gap-2 mt-8 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
           >
             Read the full synthesis: The Agentic Commerce Consensus
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+          <Link
+            href="/blog/agentic-commerce-adoption-definition-problem"
+            className="flex w-fit items-center gap-2 mt-3 text-[13px] font-semibold text-brand-accent hover:text-white transition-colors duration-200"
+          >
+            Why adoption numbers disagree
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -490,13 +515,19 @@ export default function AEOPage() {
 
           <div className="space-y-5 text-base text-gray-300 leading-relaxed">
             <p>
-              Right now, most e-commerce brands spend 20 to 40% of revenue on
-              paid advertising. That spend assumes a human shopper will see the
+              Most e-commerce advertising assumes a human shopper will see the
               ad, click it, and convert.
             </p>
             <p>
-              AI agents don&apos;t click ads. They don&apos;t see sponsored
-              placements. They evaluate product data.
+              Agents change where that happens, not whether ads exist.{' '}
+              <Link href="/blog/ai-shopping-assistant-retail-media-sponsored-products" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                Criteo now sells Sponsored Products inside retailers&apos; AI
+                shopping assistants
+              </Link>
+              , and ChatGPT carries ads. But an ad can only put a product in
+              front of an agent. It cannot make a listing with missing
+              attributes, unclear fulfillment or weak reviews look like a
+              confident match.
             </p>
             <p>
               If 10% of your sales eventually come through agent-mediated
@@ -552,13 +583,14 @@ export default function AEOPage() {
             , with usage shifting from discovery to reorder. Five major research
             firms (Morgan Stanley, McKinsey, Gartner, IDC, Juniper Research) now
             agree agentic commerce will represent 10 to 20 percent of US
-            e-commerce by 2030. The forecast risk has collapsed.
+            e-commerce by 2030. What none of them yet measures well is how much
+            buying agents actually do.
           </p>
 
-          {/* Product readiness vs shopper representation. Added 2026-10-03 */}
+          {/* Product readiness vs shopper representation (added 2026-10-03) and authorization (added 2026-11-24) */}
           <div className="border-l-2 border-brand-gold/50 pl-5 mb-8">
             <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-gold/80 mb-3">
-              One boundary worth naming
+              Two boundaries worth naming
             </span>
             <p className="text-base text-gray-300 leading-relaxed">
               Everything above, and every evaluation factor below, is{' '}
@@ -580,6 +612,24 @@ export default function AEOPage() {
               available moved the human result by 0.01. Product readiness is
               necessary. On that evidence it is not sufficient, and the second
               half is one merchants do not control and cannot observe.
+            </p>
+            <p className="text-base text-gray-300 leading-relaxed mt-4">
+              The second boundary is{' '}
+              <span className="text-white font-medium">authorization</span>: who
+              allowed the agent to spend, on what, and up to how much.
+              Increasingly the platform answers that, not the agent.
+              Walmart&apos;s{' '}
+              <Link href="/blog/walmart-agent-gateway-agent-profiles" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                Agent Profiles
+              </Link>{' '}
+              let a customer require approval for every purchase or set a
+              spending limit, and{' '}
+              <Link href="/blog/aws-marketplace-agentcore-agentic-payments-x402" className="text-brand-accent hover:text-white transition-colors underline underline-offset-2">
+                AWS
+              </Link>{' '}
+              lets an organization bound an agent with a budget and a permitted
+              catalog. Merchants do not set those limits. They do decide whether
+              their product qualifies inside them.
             </p>
           </div>
 
@@ -716,104 +766,6 @@ export default function AEOPage() {
         </div>
       </section>
 
-      {/* ───────────────────── How the Shift Unfolds ───────────────────── */}
-      <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8">
-          <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-accent mb-4">
-            Timeline
-          </span>
-          <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight mb-10">
-            How the Shift Unfolds
-          </h2>
-
-          <div className="space-y-6">
-            {/* Phase 1 */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-emerald-400/20 rounded-xl p-6 md:p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-emerald-400/80 bg-emerald-400/[0.1] px-2.5 py-1 rounded-full">
-                  Right Now
-                </span>
-                <span className="text-[13px] font-semibold text-white">
-                  Q2 2026: Foundation Work Compounds Immediately
-                </span>
-              </div>
-              <p className="text-sm text-gray-400 leading-relaxed mb-3">
-                Agent-mediated shopping is operational. Sparky users drive 35%
-                higher AOV. Alexa for Shopping is shipping auto-restock,
-                price-triggered purchases, and scheduled deliveries today. The
-                brands that started the GEO foundation in Q1 2026 are already
-                90 days ahead. The work that wins agentic visibility is the
-                same work that wins organic AI recommendation: structured data
-                completeness, review quality, entity clarity, cross-platform
-                consistency.
-              </p>
-              <p className="text-sm text-brand-accent/80 font-medium">
-                GEO is AEO preparation. The compounding has already started.
-              </p>
-            </div>
-
-            {/* Phase 2 */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-brand-gold/20 rounded-xl p-6 md:p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-brand-gold/80 bg-brand-gold/[0.1] px-2.5 py-1 rounded-full">
-                  Next 6-12 Months
-                </span>
-                <span className="text-[13px] font-semibold text-white">
-                  Default-Reorder Positions Lock In
-                </span>
-              </div>
-              <p className="text-sm text-gray-400 leading-relaxed mb-3">
-                As Alexa for Shopping auto-restock and Sparky reorder behavior
-                accumulate purchase history per household, the agent&apos;s
-                default reorder choice gets harder to dislodge each cycle.
-                Subscription enrollment, consumption-cadence data, in-stock
-                consistency, and pricing stability become the operational
-                levers. AEO-specific moves around machine-readable fulfillment
-                and return policy signals start mattering directly to
-                conversion.
-              </p>
-              <p className="text-sm text-brand-gold/80 font-medium">
-                The brands acting this quarter own the default-reorder position
-                a year from now.
-              </p>
-            </div>
-
-            {/* Phase 3 */}
-            <div className="bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl p-6 md:p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-gray-400/80 bg-gray-400/[0.1] px-2.5 py-1 rounded-full">
-                  2027+
-                </span>
-                <span className="text-[13px] font-semibold text-white">
-                  Consolidation: AEO Becomes the Competitive Differentiator
-                </span>
-              </div>
-              <p className="text-sm text-gray-400 leading-relaxed mb-3">
-                Agent-mediated shopping reaches the 10 to 20 percent share the
-                research consensus projects. The brands that built the GEO
-                foundation early and layered AEO preparation on top will own
-                structural advantages that are expensive to reverse: default
-                reorder positions, subscription enrollment depth, and clean
-                data feeding both paid and organic AI surfaces.
-              </p>
-              <p className="text-sm text-gray-500 font-medium">
-                The brands that waited will be playing catch-up across two
-                layers of optimization simultaneously.
-              </p>
-            </div>
-          </div>
-
-          {/* Key message */}
-          <div className="mt-8 py-5 border-l-2 border-brand-gold pl-4">
-            <p className="text-sm text-brand-gold/90 font-medium leading-relaxed">
-              The window for treating this as theoretical has closed. The
-              foundation work is the same data discipline that GEO already
-              requires, so the two compound together.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ───────────────────── The GEO to AEO Bridge ───────────────────── */}
       <section className="py-20 md:py-28 bg-brand-dark border-t border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
@@ -828,10 +780,18 @@ export default function AEOPage() {
             top.
           </p>
 
-          <p className="text-base text-gray-300 leading-relaxed mb-8">
+          <p className="text-base text-gray-300 leading-relaxed mb-5">
             The risk: if you&apos;ve been ignoring GEO, you now have two layers
             of optimization to catch up on. And the brands that started with GEO
             early are already closer to AEO readiness than you are.
+          </p>
+
+          <p className="text-base text-gray-300 leading-relaxed mb-8">
+            One effect worth watching: as Alexa for Shopping auto-restock and
+            Sparky reorders build up purchase history per household, an
+            agent&apos;s default reorder choice may get harder to dislodge.
+            In-stock consistency, subscription enrollment and pricing stability
+            become the levers.
           </p>
 
           <Link
@@ -924,7 +884,7 @@ export default function AEOPage() {
 
           {/* Update note */}
           <div className="pt-2">
-            <p className="text-[13px] text-gray-500">Last updated: October 2026</p>
+            <p className="text-[13px] text-gray-500">Last updated: November 2026</p>
             <p className="text-[13px] text-gray-500 mt-1">
               This guide is updated as AI commerce platforms continue to evolve.
             </p>

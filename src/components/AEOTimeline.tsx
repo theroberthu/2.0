@@ -125,7 +125,7 @@ const MILESTONES: Milestone[] = [
     year: '2026/27',
     title: 'Agent Shopping Gains Volume',
     description:
-      'Agent-mediated shopping grows from novelty to meaningful channel. Early adopter brands with strong structured data start seeing agent-driven purchases. Brands reliant on paid ads begin feeling the gap.',
+      'Platforms open carts, checkout and accounts to agents: Alexa for Shopping auto-restock, Walmart Agent Profiles, Google Universal Cart and agent payments on AWS Marketplace. The open question is volume, which no platform has yet disclosed in a comparable way.',
     era: 'aeo',
     projected: true,
   },
