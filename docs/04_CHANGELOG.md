@@ -6,6 +6,43 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.14 - Video: Walmart store-ready grocery pallets (2026-11-25)
+
+**What changed.** In `src/lib/videos.ts`:
+- New companion page `/videos/walmart-store-ready-grocery-pallets` ("Why
+  Walmart Cares Which Groceries Go on Top", 2:34, Delivery and logistics).
+  Search title "Walmart's Automated Grocery Pallets: Why Eggs Go on Top". Seven
+  sections matching the chapters, five takeaways, two sources. Related
+  research: the Walmart people-led operating model article and the Kroger
+  operating model article. Now the homepage featured video
+  (`FEATURED_VIDEO_SLUG`, was the Disney Olaf page).
+- New Short at the top of the row: "Your Parcel Travels Inside a Much Bigger
+  Box" (0:38). Unlinked; it teases a long-form video not yet published.
+- The Short "Walmart Plans Your Groceries Before the Truck Leaves" now links to
+  the new page.
+- Two thumbnails: `public/images/videos/walmart-store-ready-grocery-pallets.jpg`
+  (1280x720) and `public/images/shorts/VLixKsRUKc0.jpg` (540x960).
+- `/videos` now reads 46 documentaries plus 86 Shorts; the sitemap has 188 URLs.
+
+**Why.** Two new uploads on the channel (November 24). Page facts were checked
+against Walmart's July 10, 2024 grocery network post (department-built pallets,
+eggs and fruit on top, more than twice the volume) and Walmart's September 4,
+2025 Business Wire release (Wellford opening, 180 stores). The claim that the
+system weighs item weight, dimensions and packaging type is not in either
+written source; the sources note attributes it to Walmart's explainer footage
+shown in the video.
+
+**Expected impact.** Closes the Release 2.09 follow-up for `jC72R19scGI` and
+gives the homepage a fresh feature.
+
+**Follow-ups.**
+- When the parcel long-form video (`AWNFwWWEdxU`, scheduled for November 25 at
+  6 PM CT) publishes, build its page and add `related` to the parcel Short.
+- Not done, needs approval: a POST_VIDEOS pairing on the Walmart people-led
+  operating model article.
+
+---
+
 ## Release 2.13 - Search titles for three low-CTR pages (2026-11-25)
 
 **What changed.** Title and description only; no page text changed beyond one

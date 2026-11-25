@@ -74,6 +74,119 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'walmart-store-ready-grocery-pallets',
+    youtubeId: 'jC72R19scGI',
+    youtubeTitle: 'Why Walmart Cares Which Groceries Go on Top',
+    h1: 'Why Walmart Cares Which Groceries Go on Top',
+    seoTitle: 'Walmart’s Automated Grocery Pallets: Why Eggs Go on Top',
+    metaDescription:
+      'Walmart’s high-tech perishable centers build store-ready pallets by department, with eggs and fruit on top. How it works, and what the volume claim leaves out.',
+    dek: 'A fast robot is only half the job. The pallet also has to make the next person’s work simpler.',
+    uploadDate: '2026-11-24T16:00:30-08:00',
+    duration: 'PT2M34S',
+    durationLabel: '2 min 34 sec',
+    topic: 'Delivery and logistics',
+    subject: 'Walmart perishable distribution',
+    thumbnail: '/images/videos/walmart-store-ready-grocery-pallets.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu in a safety vest beside an automated case-handling line in a grocery distribution center, under the words Don’t Crush It. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'A fast robot can still build a very expensive mistake. Watch a grocery pallet in Walmart’s perishable system. It is built around a store’s departments, with fragile items such as eggs and fruit toward the top. The destination helps decide the stack before the truck leaves.',
+        ],
+      },
+      {
+        heading: 'Back to the incoming case',
+        paragraphs: [
+          'A supplier sends in a pallet of products. The store needs a different combination. Somewhere between those two points, the load has to be taken apart and rebuilt. Walmart says cases arriving from farmers and suppliers are inspected for quality and de-palletized. In its official footage, an associate measures a carton, and the company’s explainer identifies weight, dimensions and packaging type as inputs.',
+        ],
+      },
+      {
+        heading: 'Storage and the cold-food constraint',
+        paragraphs: [
+          'Then the cases enter the automated network. Conveyors move them into storage, and retrieval equipment reaches through tall racks when the products are needed.',
+          'This warehouse has another constraint: the products are food. The footage shows separate temperature zones, because fresh produce, dairy and frozen goods cannot be treated as identical freight. The path through the building has to respect the product’s condition as well as its destination.',
+        ],
+      },
+      {
+        heading: 'Build for the next person',
+        paragraphs: [
+          'At the pallet builder, cases arrive in a planned sequence and the machine places them into a store-bound load. Fragility, space and the work waiting at the store all become part of the packing problem.',
+          'Think about the person opening the shipment. A load can be tightly packed and still take extra sorting. Walmart says its store-ready pallets are built by department to make them easier to unload at the store, and wrapping keeps the assembled load together for the trip. A person still moves the finished pallet toward the truck, and the footage shows people operating and monitoring the system throughout.',
+        ],
+      },
+      {
+        heading: 'The real Wellford site',
+        paragraphs: [
+          'Walmart celebrated the opening of its perishable distribution center in Wellford, South Carolina, on September 4, 2025, and said the site was designed to serve 180 stores. It followed earlier high-tech perishable centers in Shafter, California, and Lancaster, Texas.',
+        ],
+      },
+      {
+        heading: 'Capacity is not a return calculation',
+        paragraphs: [
+          'Walmart also says its high-tech perishable centers can process more than twice the volume of a traditional facility. That is the company’s capability claim. It does not tell us the cost of each pallet, or the financial return after equipment, refrigeration and maintenance.',
+        ],
+      },
+      {
+        heading: 'Back to the handoff',
+        paragraphs: [
+          'The case’s journey ends on a shelf, not at the edge of the conveyor. The clever part of the automation is planning for the work that comes next. A faster machine becomes more valuable when it hands the next person a simpler job.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Walmart’s high-tech perishable centers take supplier pallets apart and rebuild them into store-ready loads, built by department.',
+      'Fragile items such as eggs and fruit go toward the top, so the destination shapes the stack before the truck leaves.',
+      'Food adds a constraint ordinary freight does not have: produce, dairy and frozen goods move through separate temperature zones.',
+      'The Wellford, South Carolina, center opened on September 4, 2025, and was designed to serve 180 stores.',
+      'Walmart’s claim that these centers process more than twice the volume of a traditional one describes capacity, not cost per pallet or return.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Watch the pallet' },
+      { time: '0:17', label: 'Back to the incoming case' },
+      { time: '0:40', label: 'Storage and the cold-food constraint' },
+      { time: '1:08', label: 'Build for the next person' },
+      { time: '1:47', label: 'The real Wellford site' },
+      { time: '2:00', label: 'Capacity is not a return calculation' },
+      { time: '2:12', label: 'Back to the handoff' },
+    ],
+    sources: [
+      {
+        label: 'Walmart’s Grocery Network Transformation: The Next Steps on Our Supply Chain Modernization Journey (Walmart)',
+        date: 'July 10, 2024',
+        href: 'https://corporate.walmart.com/news/2024/07/10/walmarts-grocery-network-transformation-the-next-steps-on-our-supply-chain-modernization-journey',
+      },
+      {
+        label: 'Walmart Celebrates Grand Opening of High-Tech Perishable Distribution Center in Wellford (Walmart, via Business Wire)',
+        date: 'September 4, 2025',
+        href: 'https://www.businesswire.com/news/home/20250904682927/en/Walmart-Celebrates-Grand-Opening-of-High-Tech-Perishable-Distribution-Center-in-Wellford',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video, alongside Walmart’s official perishable footage. The more-than-2x processing comparison is Walmart’s capability claim, not an audited return. The weight, dimensions and packaging-type inputs come from Walmart’s explainer footage shown in the video.',
+    related: [
+      {
+        href: '/blog/walmart-people-led-tech-powered-operating-model',
+        title: 'Walmart Is Showing What People-Led, Tech-Powered Actually Looks Like',
+        note: 'The automation moves the cases. People still operate the system and handle what comes next.',
+      },
+      {
+        href: '/blog/kroger-ecommerce-operating-model',
+        title: 'Kroger’s Ecommerce Reset Is Becoming an Operating Model',
+        note: 'Another grocer deciding where fulfillment work sits, and whether the operation pays for itself.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice. Brief muted Walmart archive excerpts and analytical frames are directly analyzed with original narration and labeled explanations. No Walmart sponsorship or confirmed footage license. The thumbnail is an editorial composite with Robert Hu, not an on-site visit, employee portrait, interview or independent product test. Music: “Filaments” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Walmart Cares Which Groceries Go on Top',
+      description:
+        'Walmart’s automated perishable centers build store-ready pallets by department, with eggs on top. Why the next person’s job shapes the stack.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'disney-olaf-robot-walking',
     youtubeId: 'BRD_7XiskNk',
     youtubeTitle: 'Disney Built Olaf. Then Physics Got Involved.',
@@ -6309,7 +6422,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'disney-olaf-robot-walking'
+export const FEATURED_VIDEO_SLUG: string | null = 'walmart-store-ready-grocery-pallets'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -6358,7 +6471,8 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
-  { youtubeId: 'jvr8p2nf02I', title: 'Walmart Plans Your Groceries Before the Truck Leaves', uploadDate: '2026-11-23T14:00:32-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/jvr8p2nf02I.jpg' },
+  { youtubeId: 'VLixKsRUKc0', title: 'Your Parcel Travels Inside a Much Bigger Box', uploadDate: '2026-11-24T14:00:32-08:00', durationLabel: '0:38', thumbnail: '/images/shorts/VLixKsRUKc0.jpg' },
+  { youtubeId: 'jvr8p2nf02I', title: 'Walmart Plans Your Groceries Before the Truck Leaves', uploadDate: '2026-11-23T14:00:32-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/jvr8p2nf02I.jpg', related: ['walmart-store-ready-grocery-pallets'] },
   { youtubeId: 'HAOH0eDCKG8', title: 'Why Disney Taught a Robot to Walk Like Olaf', uploadDate: '2026-11-22T14:00:20-08:00', durationLabel: '0:52', thumbnail: '/images/shorts/HAOH0eDCKG8.jpg', related: ['disney-olaf-robot-walking'] },
   { youtubeId: 'WroPbI1ohsw', title: 'This Chipotle Drive-Thru Won’t Take Your Order', uploadDate: '2026-11-21T14:00:30-08:00', durationLabel: '0:42', thumbnail: '/images/shorts/WroPbI1ohsw.jpg', related: ['chipotle-chipotlane-pickup-lane'] },
   { youtubeId: 'M9lUn02J0-c', title: 'Xbox Put a Working Console Inside This Fake Alligator', uploadDate: '2026-11-20T14:00:31-08:00', durationLabel: '0:34', thumbnail: '/images/shorts/M9lUn02J0-c.jpg' },
