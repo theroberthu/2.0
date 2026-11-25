@@ -6,6 +6,43 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.13 - Search titles for three low-CTR pages (2026-11-25)
+
+**What changed.** Title and description only; no page text changed beyond one
+source-check date.
+- `/videos/walmart-wing-drone-delivery-economics`: seoTitle "Walmart Drone
+  Delivery Cost: $0 for Walmart+, So Who Pays?" and a description that answers
+  the cost question first. The $0 member fee was rechecked on Walmart's drone
+  delivery help page on November 25 ("Walmart+ members pay zero fees on drone
+  deliveries (limited time)"), and the sources note now records both check
+  dates. H1 and YouTube title unchanged.
+- `/videos/meta-ray-ban-display-grocery-list`: seoTitle "Meta Ray-Ban Display
+  Glasses: What $799 Buys in Daily Use" and a description naming the in-lens
+  screen and wristband.
+- `/blog/target-ask-target-ai-shopping-assistant-purchase-rate`: Supabase
+  `meta_title` only, from 79 to 52 characters ("Ask Target AI Assistant: Does It
+  Increase Purchases?") so Google stops truncating it. Script:
+  `scripts/set-ask-target-meta-title.mjs`.
+
+**Why.** Search Console, October 27 to November 23 (baseline for comparison):
+
+| Page | Impressions | Clicks | CTR | Avg position |
+|---|---|---|---|---|
+| Walmart drone video | 4,330 | 28 | 0.6% | 6.0 |
+| Meta glasses video | 1,830 | 7 | 0.4% | 2.7 |
+| Ask Target article | 70 | 0 | 0% | 5.3 |
+
+The drone page's impressions are 96% video results for cost queries ("walmart
+drone delivery cost", "how much does walmart drone delivery cost", "wing drone
+delivery cost") while the old title asked a different question. The Meta page
+draws mostly generic "meta glasses" queries, many about the standard Ray-Ban
+Meta, so expect a small gain at most. The Target sample is too small to judge.
+
+**Follow-ups.**
+- Compare the same 28-day metrics on or after December 23, 2026.
+- Not done, needs approval: a sourced non-member drone fee on the drone page.
+  Walmart's help page does not state one; secondary sources cite $19.99.
+
 ## Release 2.12 - AEO pillar: three diagrams (2026-11-25)
 
 **What changed.** `/aeo` gained three figures. No existing copy or facts

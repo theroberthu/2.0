@@ -955,9 +955,9 @@ export const VIDEOS: VideoEntry[] = [
     youtubeId: 'ImyyJ3R0nZQ',
     youtubeTitle: '$799 to Remember Milk? The Real Test for Meta’s AI Glasses',
     h1: '$799 to Remember Milk? The Real Test for Meta’s AI Glasses',
-    seoTitle: 'Meta Ray-Ban Display: The Real Test for $799 AI Glasses',
+    seoTitle: 'Meta Ray-Ban Display Glasses: What $799 Buys in Daily Use',
     metaDescription:
-      'A free list app checks off milk on Meta Ray-Ban Display glasses. What the $799 glasses and wristband add, and the everyday test the hardware still has to pass.',
+      'What Meta Ray-Ban Display’s in-lens screen and wristband do on a grocery run, what $799 buys, and the everyday test the glasses still have to pass.',
     dek: 'The app is free. The glasses and wristband are not. The question is whether they remove an interruption from an ordinary day.',
     uploadDate: '2026-11-18T16:00:38-08:00',
     duration: 'PT1M23S',
@@ -4966,9 +4966,9 @@ export const VIDEOS: VideoEntry[] = [
     youtubeId: 'i1BGeCRMuqE',
     youtubeTitle: 'Walmart’s $0 Drone Delivery: Who Pays for the Flight?',
     h1: 'Walmart Drone Delivery: Who Pays for the $0 Flight?',
-    seoTitle: 'Walmart Drone Delivery: Who Pays for the $0 Flight?',
+    seoTitle: 'Walmart Drone Delivery Cost: $0 for Walmart+, So Who Pays?',
     metaDescription:
-      'Walmart+ members pay $0 for drone delivery in select markets. What Wing’s AutoLoader, shared pilots and small urgent orders mean for who covers the cost.',
+      'How much does Walmart drone delivery cost? $0 for eligible Walmart+ members in select markets, for a limited time. Why the flight still isn’t free.',
     dek: 'A $0 delivery fee does not make a flight free. Someone packs the order, buys the aircraft and supervises the system, and the economics depend on which trips drones can win.',
     uploadDate: '2026-10-20T16:00:32-07:00',
     duration: 'PT4M46S',
@@ -5083,7 +5083,7 @@ export const VIDEOS: VideoEntry[] = [
       },
     ],
     sourcesNote:
-      'The sources cited in the video. The $0 offer was checked on October 19, 2026. The $1.40 figure is a historical modeled marginal delivery cost, not Wing’s verified current cost, total operating cost or profit. Walmart’s delivery total includes multiple providers, and planned locations are not completed deployments.',
+      'The sources cited in the video. The $0 offer was checked on October 19, 2026, and again on November 25, 2026. The $1.40 figure is a historical modeled marginal delivery cost, not Wing’s verified current cost, total operating cost or profit. Walmart’s delivery total includes multiple providers, and planned locations are not completed deployments.',
     related: [
       {
         href: '/blog/kroger-ecommerce-operating-model',
