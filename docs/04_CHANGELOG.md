@@ -38,6 +38,11 @@ delivery cost") while the old title asked a different question. The Meta page
 draws mostly generic "meta glasses" queries, many about the standard Ray-Ban
 Meta, so expect a small gain at most. The Target sample is too small to judge.
 
+**Follow-up (2026-11-25): indexing requested.** For all three URLs, Test Live
+URL passed ("URL is available to Google", "Page can be indexed"; video detected
+on both video pages), then Request Indexing returned "URL was added to a
+priority crawl queue". IndexNow was submitted for all three.
+
 **Follow-ups.**
 - Compare the same 28-day metrics on or after December 23, 2026.
 - Not done, needs approval: a sourced non-member drone fee on the drone page.
