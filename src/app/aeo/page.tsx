@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import AEOTimeline from '@/components/AEOTimeline'
+import AgentNarrowing from '@/components/aeo/AgentNarrowing'
+import ListingTwoReads from '@/components/aeo/ListingTwoReads'
 import { SITE_URL } from '@/lib/constants'
 
 const AEO_DESCRIPTION =
@@ -287,6 +289,71 @@ const CONTINUE_EXPLORING: { title: string; desc: string; href: string }[] = [
   },
 ]
 
+// Definition figure: the three things that decide an agent purchase, in the
+// order they apply, and who controls each. Restates the "Two boundaries" text.
+const CONTROL_MAP: { name: string; side: string; question: string; controls: string; evidence: string; merchant: boolean }[] = [
+  {
+    name: 'Shopper representation',
+    side: 'Agent side',
+    question: 'Has the agent understood the person?',
+    controls: 'The agent and whoever builds it. Merchants cannot see it.',
+    evidence: "In Anthropic's controlled Project Swap market, imperfect preference representation caused 85% of the gap from the best outcome.",
+    merchant: false,
+  },
+  {
+    name: 'Authorization',
+    side: 'Shopper side',
+    question: 'What is the agent allowed to spend, and on what?',
+    controls: 'The shopper, through the platform. Merchants work inside it.',
+    evidence: 'Walmart Agent Profiles: approve every purchase or set a limit. AWS: a budget and a permitted catalog.',
+    merchant: false,
+  },
+  {
+    name: 'Product readiness',
+    side: 'Merchant side',
+    question: 'Can the agent confirm and compare the product?',
+    controls: 'The merchant.',
+    evidence: 'The six evaluation factors further down this page.',
+    merchant: true,
+  },
+]
+
+function ControlMap() {
+  return (
+    <figure className="mb-10 bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 md:p-7" aria-labelledby="control-map-title">
+      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-brand-gold mb-2">Three things decide an agent purchase</p>
+      <p id="control-map-title" className="text-lg font-bold text-white tracking-tight leading-snug mb-5">
+        A merchant controls one of them. AEO is that one.
+      </p>
+      <ol className="grid gap-3 md:grid-cols-3">
+        {CONTROL_MAP.map((c, i) => (
+          <li
+            key={c.name}
+            className={`flex flex-col rounded-xl border p-4 ${
+              c.merchant ? 'border-brand-gold/40 bg-brand-gold/[0.06]' : 'border-dashed border-white/[0.16] bg-transparent'
+            }`}
+          >
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <span className="text-[11px] font-mono text-[#42a5c8]">{String(i + 1).padStart(2, '0')}</span>
+              <span
+                className={`whitespace-nowrap text-[10px] font-mono font-semibold uppercase tracking-[0.12em] px-2 py-0.5 rounded-full ${
+                  c.merchant ? 'text-brand-gold bg-brand-gold/[0.15]' : 'text-gray-500 bg-white/[0.05]'
+                }`}
+              >
+                {c.side}
+              </span>
+            </div>
+            <p className="text-[15px] font-semibold text-white leading-snug">{c.name}</p>
+            <p className="text-[13px] text-gray-300 leading-snug mt-1">{c.question}</p>
+            <p className="text-[12.5px] text-gray-400 leading-relaxed mt-3">{c.controls}</p>
+            <p className="text-[12.5px] text-gray-500 leading-relaxed mt-2 pt-2 border-t border-white/[0.06]">{c.evidence}</p>
+          </li>
+        ))}
+      </ol>
+    </figure>
+  )
+}
+
 export default function AEOPage() {
   return (
     <>
@@ -537,6 +604,8 @@ export default function AEOPage() {
             </p>
           </div>
 
+          <AgentNarrowing />
+
           {/* Pull quote */}
           <div className="my-10 py-6 border-y border-white/[0.08]">
             <p className="text-lg md:text-xl font-semibold text-brand-gold leading-snug">
@@ -633,6 +702,8 @@ export default function AEOPage() {
             </p>
           </div>
 
+          <ControlMap />
+
           {/* SEO / GEO / AEO visual progression */}
           <div className="relative mb-10">
             {/* Connecting line */}
@@ -720,6 +791,8 @@ export default function AEOPage() {
               What Agents Actually Evaluate
             </h2>
           </div>
+
+          <ListingTwoReads />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {EVALUATION_FACTORS.map((factor, i) => (

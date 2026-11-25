@@ -6,6 +6,38 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.12 - AEO pillar: three diagrams (2026-11-25)
+
+**What changed.** `/aeo` gained three figures. No existing copy or facts
+changed.
+- **Three things decide an agent purchase** (Definition section, after "Two
+  boundaries worth naming"). Static cards for shopper representation (agent
+  side), authorization (shopper side) and product readiness (merchant side),
+  with the merchant card marked as the part AEO covers. Evidence lines restate
+  sources the page already cites (Project Swap, Walmart Agent Profiles, AWS
+  budgets).
+- **Where the ad stops working** (`src/components/aeo/AgentNarrowing.tsx`,
+  Provocation section). Five clickable stages from Considered to Allowed, each
+  with its question, what decides it and who controls it. Captioned as a
+  simplified model, not any platform's ranking system, with widths not measured.
+- **One listing, read two ways** (`src/components/aeo/ListingTwoReads.tsx`,
+  top of "What Agents Actually Evaluate"). An illustrative listing as a person
+  sees it beside the nine fields an agent reads, each marked stated, vague,
+  missing, conflicting or a risk. Chips numbered to the six factor cards
+  highlight the fields behind each factor.
+
+**Why.** The page was almost entirely text. The figures show the page's three
+arguments (what a merchant controls, where ads stop helping, how an agent reads
+a listing) without adding claims.
+
+**Impact.** Clicks fire the GA event `aeo_diagram`. Both views render on the
+server, so crawlers see all content. Checked on a production build: no console
+errors, no horizontal scroll at 375px, zero dashes.
+
+**Dates.** `MODIFIED`, the visible "Last updated" note and
+`STATIC_LAST_MODIFIED.aeo` are unchanged (no facts changed; they moved to
+November 24 the day before).
+
 ## Release 2.11 - AI Commerce 2027: evidence refresh, diagrams and copy pass (2026-11-24)
 
 **What changed.** `/ai-commerce-2027` updated in three parts.
