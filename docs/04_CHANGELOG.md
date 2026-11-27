@@ -47,6 +47,13 @@ thematic, not strict semver.
 **Expected impact.** Two indexable logistics pages timed to Black Friday and a
 fresh homepage feature.
 
+**Follow-up (2026-11-27): indexing requested.** For both pages, Test Live URL
+passed ("URL is available to Google", "Page can be indexed", video detected,
+one valid breadcrumb and one valid video item), then Request Indexing returned
+"URL was added to a priority crawl queue". Done in the built-in browser at the
+user's request, signed in by the user, because Claude in Chrome was not
+connected.
+
 **Follow-ups.**
 - No POST_VIDEOS pairing suggested for either video.
 
