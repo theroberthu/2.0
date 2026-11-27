@@ -74,6 +74,238 @@ export function youtubeThumbnailUrl(id: string): string {
 
 export const VIDEOS: VideoEntry[] = [
   {
+    slug: 'amazon-inventory-placement-black-friday-delivery',
+    youtubeId: 'DKhGZ8dUnwY',
+    youtubeTitle: 'Why Your Black Friday Order Can Arrive So Fast',
+    h1: 'Why Your Black Friday Order Can Arrive So Fast',
+    seoTitle: 'How Amazon Ships Fast: Stock Placed Before You Click Buy',
+    metaDescription:
+      'Amazon forecasts demand from sales history, weather and holiday schedules to place stock before you click Buy. Why that speeds delivery, and the risk.',
+    dek: 'The click starts your order. It does not start the whole journey.',
+    uploadDate: '2026-11-26T16:00:09-08:00',
+    duration: 'PT2M',
+    durationLabel: '2 min',
+    topic: 'Delivery and logistics',
+    subject: 'Amazon inventory placement',
+    thumbnail: '/images/videos/amazon-inventory-placement-black-friday-delivery.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu holding a cardboard box in a warehouse aisle, under the words Before You Buy. AI-generated editorial concept.',
+    sections: [
+      {
+        paragraphs: [
+          'You click Buy and the delivery clock starts. But the product’s journey may have begun long before that click. Before your order, the product is still inventory. It has not been packed for you or given your address, yet the retailer has already had to decide where that stock should wait.',
+        ],
+      },
+      {
+        heading: 'Preparing for Black Friday',
+        paragraphs: [
+          'Before Black Friday, retailers have to prepare for purchases that have not happened yet. Amazon says its forecasting adds time-bound data such as weather patterns and holiday schedules to sales history, to predict what customers will want, where and when. It says those forecasts help it put the right products in the right locations.',
+          'Amazon says the model is designed to forecast for hundreds of millions of products a day, and reports a 20% improvement in regional forecasts for millions of popular items. Those are the company’s figures, not an independent measurement.',
+        ],
+      },
+      {
+        heading: 'Where the stock waits',
+        paragraphs: [
+          'Put a product far from the people who buy it, and their orders inherit a longer journey. Position stock closer to demand, and there can be less distance left after checkout.',
+        ],
+      },
+      {
+        heading: 'When the forecast misses',
+        paragraphs: [
+          'The difficult word is demand. Imagine sending too many units to one region while shoppers elsewhere buy up their local stock. Products wait in one place and customers wait in another. More inventory has not solved the problem. It is waiting in the wrong place.',
+          'The retailer cannot know every future purchase. It still has to make its placement decisions while you are deciding whether you need another kitchen gadget.',
+        ],
+      },
+      {
+        heading: 'Back to checkout and fulfillment',
+        paragraphs: [
+          'At the click, an available unit can be selected from stock, then picked, packed and labeled for an order. The product is no longer simply waiting for a buyer. The package has somewhere specific to go, and it still needs sorting, loading and delivery. People and machinery have real work left to do.',
+          'The warehouse footage in the video was recorded at Amazon’s BRS2 fulfillment center in Swindon, England, in March 2025. It does not show Black Friday 2026 operations.',
+        ],
+      },
+      {
+        heading: 'What fast delivery hides',
+        paragraphs: [
+          'Then the doorbell rings, and the familiar question comes back: how did it get here so fast? The wait was measured from checkout, but the preparation began before that. Fast delivery can mean moving a parcel quickly. It can also mean leaving it less distance to travel once it becomes your parcel.',
+        ],
+      },
+    ],
+    takeaways: [
+      'Fast delivery can start before checkout. The retailer has to decide where stock waits before anyone orders it.',
+      'Amazon says its forecasts add weather patterns and holiday schedules to sales history to predict what customers will want, where and when.',
+      'Placing stock closer to demand leaves less distance to travel after the click.',
+      'A forecast miss leaves products waiting in one region while customers wait in another. More inventory does not fix stock in the wrong place.',
+      'After checkout, the order still has to be picked, packed, labeled, sorted, loaded and delivered.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'The head start before you order' },
+      { time: '0:21', label: 'Preparing for Black Friday' },
+      { time: '0:37', label: 'Where the stock waits' },
+      { time: '0:49', label: 'When the forecast misses' },
+      { time: '1:11', label: 'Back to checkout and fulfillment' },
+      { time: '1:36', label: 'What fast delivery hides' },
+    ],
+    sources: [
+      {
+        label: 'Amazon announces 3 AI-powered innovations to get packages to customers faster (Amazon)',
+        date: 'June 11, 2025',
+        href: 'https://www.aboutamazon.com/news/operations/amazon-ai-innovations-delivery-forecasting-robotics',
+      },
+      {
+        label: 'Amazon uses robots that sort, lift, and carry packages (Amazon)',
+        date: 'Updated June 4, 2026',
+        href: 'https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. Amazon’s forecasting and inventory-planning descriptions, including the forecast figures, are company-attributed. The video is an illustrative explanation, not a tracked customer order, an independent timing test or a delivery guarantee.',
+    related: [
+      {
+        href: '/blog/amazon-alexa-shopping-search-anticipation',
+        title: 'Amazon Is Extending the Shopping Journey Beyond the Search',
+        note: 'Another place Amazon works ahead of the shopper: anticipating the need before the search.',
+      },
+      {
+        href: '/blog/albertsons-ai-planning-task-depth',
+        title: 'Albertsons’ AI Results Suggest the Real Value Is in Planning, Not Search',
+        note: 'A grocer finding that the value of AI sits in planning ahead, where fast delivery starts too.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice. Warehouse footage: Marc Auledas Noguera (Auledas), BRS2 fulfillment center, Swindon, March 26, 2025, CC BY 4.0, trimmed, muted and reframed with commentary, captions and graphics; no endorsement implied. Illustrative stock footage by Kindel Media, Tima Miroshnichenko, Gustavo Fring and ArtHouse Studio on Pexels; these are not verified customers or employees. Original explanatory graphics and an illustrative parcel. Music and warehouse sound design were generated with ElevenLabs; source audio is excluded. The thumbnail is an AI-generated editorial concept with Robert Hu, not a photograph of an on-site visit or employment.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'Why Your Black Friday Order Can Arrive So Fast',
+      description:
+        'Before you click Buy, the retailer has already decided where the stock should wait. How inventory placement shortens the trip, and what happens when the forecast misses.',
+      cta: 'Watch the video',
+    },
+  },
+  {
+    slug: 'ups-worldport-holiday-package-connections',
+    youtubeId: 'AWNFwWWEdxU',
+    youtubeTitle: 'The Deadline Your Holiday Package Has to Beat',
+    h1: 'The Deadline Your Holiday Package Has to Beat',
+    seoTitle: 'UPS Worldport and the Holiday Shipping Deadline Explained',
+    metaDescription:
+      'How UPS’s Worldport air hub turns containers into outbound loads, why a missed connection matters more than conveyor speed, and how to check your cutoff.',
+    dek: 'A package can move fast and still miss its deadline. The first deadline is the connection, not your door.',
+    uploadDate: '2026-11-25T16:00:09-08:00',
+    duration: 'PT2M9S',
+    durationLabel: '2 min 9 sec',
+    topic: 'Delivery and logistics',
+    subject: 'UPS Worldport air hub',
+    thumbnail: '/images/videos/ups-worldport-holiday-package-connections.jpg',
+    thumbnailAlt: 'Video thumbnail: Robert Hu in a safety vest with a cart of parcels beside a UPS 747 freighter on an airport apron, under the words Beat the Cutoff. Labeled editorial composite.',
+    sections: [
+      {
+        paragraphs: [
+          'Watch a UPS aircraft container open. A package can be moving fast and still miss its deadline, because the next deadline is not your front door. It is the connection.',
+        ],
+      },
+      {
+        heading: 'Parcels need different next destinations',
+        paragraphs: [
+          'Individual parcels come out of the container, travel through the building and become outbound loads. The container makes a big load manageable. IATA describes these unit load devices as a way to group and restrain cargo, mail and baggage for a flight.',
+          'The building is Worldport, UPS’s air hub in Louisville, Kentucky, shown in a 2016 archive time-lapse. Not every UPS package flies or passes through this hub.',
+          'Packages that arrive together do not need the same next destination, so keeping the original load together would miss the point. The sort gives each parcel its next direction, and the parcels are regrouped for what comes next.',
+        ],
+      },
+      {
+        heading: 'When a connection has already gone',
+        paragraphs: [
+          'The handoff has to happen while the next connection is still available. Put the illustrated gift on the wrong side of a cutoff and its planned departure has already left. Now the question changes: which available connection can still meet the delivery commitment? A faster conveyor cannot bring back a departed flight.',
+        ],
+      },
+      {
+        heading: 'The historical expansion investment',
+        paragraphs: [
+          'That coordination took serious investment. In its 2010 annual report, UPS said the final phase of the Worldport expansion was completed that year. It added two aircraft load and unload wings, followed by high-speed conveyor and computer control systems, at a total cost of over $1 billion. The same report put the hub’s sorting capacity at approximately 416,000 packages per hour.',
+          'That is the historical expansion cost. It is not this year’s holiday budget, profit or measured savings.',
+        ],
+      },
+      {
+        heading: 'The holiday calendar',
+        paragraphs: [
+          'Sometimes the calendar removes an option altogether. For Thanksgiving, November 26, 2026, UPS listed no regular pickup or delivery in the United States, with UPS Express Critical as a separate exception.',
+        ],
+      },
+      {
+        heading: 'Check your route, service and local cutoff',
+        paragraphs: [
+          'There is no single holiday shipping deadline for every box. The origin, destination, selected service and local acceptance cutoff all matter. Before you send a gift, check the current UPS delivery estimate and the cutoff where you hand it over.',
+        ],
+      },
+      {
+        heading: 'The connections around an ordinary box',
+        paragraphs: [
+          'Look back at that ordinary cardboard box. The impressive part is not the cardboard. It is all the connections that have to line up around it. An overnight promise begins with a deadline long before your door.',
+        ],
+      },
+    ],
+    takeaways: [
+      'At an air hub such as UPS’s Worldport, parcels that arrive in the same aircraft container are sorted and regrouped into outbound loads for different next destinations.',
+      'The first deadline a package has to meet is the next connection. A faster conveyor cannot bring back a flight that has already left.',
+      'UPS reported that the Worldport expansion completed in 2010 cost over $1 billion and added two aircraft load and unload wings plus conveyor and control systems. That is a historical cost, not 2026 holiday spending.',
+      'For Thanksgiving, November 26, 2026, UPS listed no regular US pickup or delivery, with UPS Express Critical as a separate exception.',
+      'Holiday delivery depends on origin, destination, service and the local acceptance cutoff, so check the current UPS estimate before shipping.',
+    ],
+    chapters: [
+      { time: '0:00', label: 'Watch the aircraft container' },
+      { time: '0:11', label: 'Parcels need different next destinations' },
+      { time: '0:44', label: 'When a connection has already gone' },
+      { time: '1:03', label: 'The historical expansion investment' },
+      { time: '1:21', label: 'The holiday calendar' },
+      { time: '1:38', label: 'Check your route, service and local cutoff' },
+      { time: '1:54', label: 'The connections around an ordinary box' },
+    ],
+    sources: [
+      {
+        label: 'UPS 2010 Annual Report (PDF)',
+        date: 'Fiscal 2010',
+        href: 'https://investors.ups.com/_assets/_38a7be0fe723e82f71770a340fe02964/ups/db/1110/9425/annual_report/UPS_AnnlRprt_2010.pdf',
+        note: 'Worldport expansion cost, scope and sorting capacity, printed page 17.',
+      },
+      {
+        label: 'UPS Holiday Schedule (UPS)',
+        date: 'Holiday season 2026',
+        href: 'https://www.ups.com/us/en/support/shipping-support/shipping-services/holiday-shipping-schedule',
+      },
+      {
+        label: 'Air Freight Shipping Guide (UPS)',
+        date: 'Current page',
+        href: 'https://www.ups.com/us/en/supplychain/freight/air-freight/air-freight-shipping-guide',
+      },
+      {
+        label: 'What Is Aircraft ULD in Air Transport? (IATA)',
+        date: 'August 13, 2021',
+        href: 'https://www.iata.org/en/publications/newsletters/iata-knowledge-hub/what-is-aircraft-uld-in-air-transport/',
+      },
+    ],
+    sourcesNote:
+      'The sources cited in the video. The over $1 billion figure is the Worldport expansion cost UPS reported for the project completed in 2010, not 2026 holiday spending, profit or measured savings. The Thanksgiving schedule applies to November 26, 2026; use UPS’s current tools for your own route and service.',
+    related: [
+      {
+        href: '/blog/doordash-instacart-physical-layer-ai-commerce',
+        title: 'DoorDash Is Buying Instacart to Win the Physical Layer of AI Commerce',
+        note: 'Why the physical network behind the promise is becoming the part worth owning.',
+      },
+      {
+        href: '/blog/ai-checkout-interface-commerce-infrastructure',
+        title: 'If Checkout Disappears, What Does the Retailer Still Own?',
+        note: 'Wherever the order is placed, someone still has to keep the delivery commitment.',
+      },
+    ],
+    credits:
+      'Written by Robert Hu; narration uses his authorized AI voice clone. Brief muted excerpts of UPS Airlines’ Worldport Time Lapse (July 12, 2016) are directly analyzed with original narration and graphics, with archive labels visible. No UPS sponsorship or confirmed footage license. Additional footage: Erkan Avanoğlu on Pexels (generic logistics illustration, not UPS) and PDX Aviation’s 2012 UPS A300 arrival at Portland, CC BY 3.0, source audio excluded. Thumbnail and backgrounds use Frank Kovalchek’s photo of UPS 747 N581UP, CC BY 2.0, with crop, color, typography and a fictional ground-crew character; the thumbnail is an editorial composite with Robert Hu, not an on-site visit, employee portrait or actual UPS employment. Music: “Filaments” by Scott Buckley, CC BY 4.0.',
+    feature: {
+      eyebrow: 'Featured Video',
+      title: 'The Deadline Your Holiday Package Has to Beat',
+      description:
+        'Inside UPS’s Worldport air hub, a parcel’s first deadline is the next connection, not your door. Why a faster conveyor cannot bring back a departed flight.',
+      cta: 'Watch the video',
+    },
+  },
+  {
     slug: 'walmart-store-ready-grocery-pallets',
     youtubeId: 'jC72R19scGI',
     youtubeTitle: 'Why Walmart Cares Which Groceries Go on Top',
@@ -6422,7 +6654,7 @@ export const VIDEOS: VideoEntry[] = [
 ]
 
 /** Slug of the video shown in the homepage Featured Video slot, or null to hide it. */
-export const FEATURED_VIDEO_SLUG: string | null = 'walmart-store-ready-grocery-pallets'
+export const FEATURED_VIDEO_SLUG: string | null = 'amazon-inventory-placement-black-friday-delivery'
 
 export function getVideo(slug: string): VideoEntry | undefined {
   return VIDEOS.find((v) => v.slug === slug)
@@ -6471,7 +6703,9 @@ export type ShortEntry = {
 }
 
 export const SHORTS: ShortEntry[] = [
-  { youtubeId: 'VLixKsRUKc0', title: 'Your Parcel Travels Inside a Much Bigger Box', uploadDate: '2026-11-24T14:00:32-08:00', durationLabel: '0:38', thumbnail: '/images/shorts/VLixKsRUKc0.jpg' },
+  { youtubeId: 'yPc-7grgczM', title: 'GE’s $7,735,000,000 Business After the Engine Sale', uploadDate: '2026-11-26T14:00:20-08:00', durationLabel: '0:51', thumbnail: '/images/shorts/yPc-7grgczM.jpg', related: ['ge-aerospace-engine-services-after-sale'] },
+  { youtubeId: 'kPpU2z2mZfY', title: 'This Tiny Robot Folds Into a Gripper', uploadDate: '2026-11-25T14:00:37-08:00', durationLabel: '0:33', thumbnail: '/images/shorts/kPpU2z2mZfY.jpg' },
+  { youtubeId: 'VLixKsRUKc0', title: 'Your Parcel Travels Inside a Much Bigger Box', uploadDate: '2026-11-24T14:00:32-08:00', durationLabel: '0:38', thumbnail: '/images/shorts/VLixKsRUKc0.jpg', related: ['ups-worldport-holiday-package-connections'] },
   { youtubeId: 'jvr8p2nf02I', title: 'Walmart Plans Your Groceries Before the Truck Leaves', uploadDate: '2026-11-23T14:00:32-08:00', durationLabel: '0:48', thumbnail: '/images/shorts/jvr8p2nf02I.jpg', related: ['walmart-store-ready-grocery-pallets'] },
   { youtubeId: 'HAOH0eDCKG8', title: 'Why Disney Taught a Robot to Walk Like Olaf', uploadDate: '2026-11-22T14:00:20-08:00', durationLabel: '0:52', thumbnail: '/images/shorts/HAOH0eDCKG8.jpg', related: ['disney-olaf-robot-walking'] },
   { youtubeId: 'WroPbI1ohsw', title: 'This Chipotle Drive-Thru Won’t Take Your Order', uploadDate: '2026-11-21T14:00:30-08:00', durationLabel: '0:42', thumbnail: '/images/shorts/WroPbI1ohsw.jpg', related: ['chipotle-chipotlane-pickup-lane'] },

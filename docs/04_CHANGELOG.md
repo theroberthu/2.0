@@ -6,6 +6,52 @@ thematic, not strict semver.
 
 ---
 
+## Release 2.15 - Videos: Amazon inventory placement and UPS Worldport (2026-11-27)
+
+**What changed.** In `src/lib/videos.ts`:
+- `/videos/amazon-inventory-placement-black-friday-delivery` ("Why Your Black
+  Friday Order Can Arrive So Fast", 2:00, Delivery and logistics). Search title
+  "How Amazon Ships Fast: Stock Placed Before You Click Buy". Now the homepage
+  featured video (`FEATURED_VIDEO_SLUG`, was the Walmart pallets page). Related
+  research: the Amazon Alexa anticipation article and the Albertsons planning
+  article.
+- `/videos/ups-worldport-holiday-package-connections` ("The Deadline Your
+  Holiday Package Has to Beat", 2:09, Delivery and logistics). Search title
+  "UPS Worldport and the Holiday Shipping Deadline Explained". Related research:
+  the DoorDash / Instacart physical-layer article and the AI checkout interface
+  article.
+- Shorts added to the top of the row: "GE's $7,735,000,000 Business After the
+  Engine Sale" (linked to the GE engine services page) and "This Tiny Robot
+  Folds Into a Gripper" (unlinked; no matching page).
+- The parcel Short ("Your Parcel Travels Inside a Much Bigger Box") now links to
+  the UPS page, closing the Release 2.14 follow-up.
+- Four thumbnails under `public/images/videos/` and `public/images/shorts/`.
+- `/videos` now reads 48 documentaries plus 88 Shorts; the sitemap has 190 URLs.
+
+**Why.** Four new uploads on the channel (November 25 and 26). Checks:
+- Amazon: both cited Amazon pages support the forecasting signals (sales
+  history, weather patterns, holiday schedules) and the placement claim; dates
+  confirmed (June 11, 2025; updated June 4, 2026). The page adds Amazon's own
+  forecast figures, labeled as company-attributed.
+- UPS: the 2010 annual report confirms the Worldport expansion completed in
+  2010, two aircraft load / unload wings, high-speed conveyor and computer
+  control systems, a cost of over $1 billion and about 416,000 packages per
+  hour. UPS's holiday and air freight pages refused automated reads; the
+  Thanksgiving closure (November 26, Express Critical excepted) was confirmed
+  from search results quoting UPS's holiday page. The narration's line that
+  regular service resumed on Black Friday could not be confirmed from UPS and
+  is not on the page.
+- Transcripts were read in the built-in browser with the user's explicit
+  approval, because Claude in Chrome was not connected.
+
+**Expected impact.** Two indexable logistics pages timed to Black Friday and a
+fresh homepage feature.
+
+**Follow-ups.**
+- No POST_VIDEOS pairing suggested for either video.
+
+---
+
 ## Release 2.14 - Video: Walmart store-ready grocery pallets (2026-11-25)
 
 **What changed.** In `src/lib/videos.ts`:
